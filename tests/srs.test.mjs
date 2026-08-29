@@ -4,6 +4,7 @@ import {
   completeComic,
   createSrsState,
   getCardProgress,
+  getLearnedTodayCardIds,
   hydrateSrsState,
   recordCardHelp,
   selectNextComic,
@@ -13,6 +14,121 @@ import {
 const comicA = { id: "a", cardIds: ["one", "two", "shared"] };
 const comicB = { id: "b", cardIds: ["shared", "three"] };
 const comicC = { id: "c", cardIds: ["one", "two", "three", "shared"] };
+
+// A word hotspot can offer its own vocabulary card plus expression and grammar
+// cards. Repeated IDs model one expression being attached to several words.
+const wordMappedComic = {
+  id: "word-mapped",
+  cardIds: [
+    "word-vienes",
+    "phrase-venir-a-la-cama",
+    "grammar-present-for-plan",
+    "word-cama",
+    "phrase-venir-a-la-cama",
+  ],
+};
+const secondWordMappedComic = {
+  id: "word-mapped-two",
+  cardIds: ["word-otra", "phrase-venir-a-la-cama"],
+};
+
+test("opening a word or phrase without choosing a card records zero learned cards", () => {
+  const state = startComic(createSrsState(), wordMappedComic);
+
+  // Opening a hotspot is UI-only state. No SRS API is called until the learner
+  // explicitly chooses one of that hotspot's related cards.
+  assert.deepEqual(state.activeSession?.clickedCardIds, []);
+  assert.deepEqual(getLearnedTodayCardIds(state), []);
+  assert.equal(state.history.length, 0);
+});
+
+test("choosing one card related to a word records exactly one learned card", () => {
+  let state = startComic(createSrsState(), wordMappedComic);
+  state = recordCardHelp(state, "word-vienes");
+
+  assert.deepEqual(state.activeSession?.clickedCardIds, ["word-vienes"]);
+  assert.deepEqual(getLearnedTodayCardIds(state), ["word-vienes"]);
+  assert.deepEqual(
+    state.history.map((event) => [event.cardId, event.event]),
+    [["word-vienes", "help"]],
+  );
+});
+
+test("choosing the same related card twice still records one learned card", () => {
+  let state = startComic(createSrsState(), wordMappedComic);
+  state = recordCardHelp(state, "phrase-venir-a-la-cama");
+  state = recordCardHelp(state, "phrase-venir-a-la-cama");
+
+  assert.deepEqual(state.activeSession?.clickedCardIds, ["phrase-venir-a-la-cama"]);
+  assert.deepEqual(getLearnedTodayCardIds(state), ["phrase-venir-a-la-cama"]);
+  assert.equal(state.history.length, 1);
+  assert.equal(getCardProgress(state, "phrase-venir-a-la-cama").encounters, 1);
+});
+
+test("choosing two different cards through one word records two learned cards", () => {
+  let state = startComic(createSrsState(), wordMappedComic);
+  state = recordCardHelp(state, "word-vienes");
+  state = recordCardHelp(state, "grammar-present-for-plan");
+
+  assert.deepEqual(
+    new Set(state.activeSession?.clickedCardIds),
+    new Set(["word-vienes", "grammar-present-for-plan"]),
+  );
+  assert.deepEqual(
+    new Set(getLearnedTodayCardIds(state)),
+    new Set(["word-vienes", "grammar-present-for-plan"]),
+  );
+  assert.equal(state.history.filter((event) => event.event === "help").length, 2);
+});
+
+test("finishing masters untouched eligible word cards but not selected related cards", () => {
+  let state = startComic(createSrsState(), wordMappedComic);
+  state = recordCardHelp(state, "phrase-venir-a-la-cama");
+  state = completeComic(state);
+
+  assert.equal(getCardProgress(state, "phrase-venir-a-la-cama").status, "learning");
+  assert.equal(getCardProgress(state, "word-vienes").status, "mastered");
+  assert.equal(getCardProgress(state, "word-cama").status, "mastered");
+  assert.equal(getCardProgress(state, "grammar-present-for-plan").status, "mastered");
+  assert.equal(
+    state.history.filter(
+      (event) =>
+        event.cardId === "phrase-venir-a-la-cama" &&
+        event.event === "independent-success",
+    ).length,
+    0,
+  );
+});
+
+test("cards shared by several words and comics stay deduplicated", () => {
+  let state = startComic(createSrsState(), wordMappedComic);
+  assert.equal(
+    state.activeSession?.eligibleCardIds.filter(
+      (id) => id === "phrase-venir-a-la-cama",
+    ).length,
+    1,
+  );
+
+  state = recordCardHelp(state, "phrase-venir-a-la-cama");
+  state = completeComic(state);
+  state = startComic(state, secondWordMappedComic);
+  state = recordCardHelp(state, "phrase-venir-a-la-cama");
+
+  assert.equal(getCardProgress(state, "phrase-venir-a-la-cama").encounters, 1);
+  assert.equal(
+    state.history.filter(
+      (event) =>
+        event.cardId === "phrase-venir-a-la-cama" && event.event === "help",
+    ).length,
+    1,
+  );
+  assert.equal(
+    getLearnedTodayCardIds(state).filter(
+      (id) => id === "phrase-venir-a-la-cama",
+    ).length,
+    1,
+  );
+});
 
 test("asking for help creates a one-day learning review and is idempotent", () => {
   let state = startComic(createSrsState(), comicA);
@@ -123,4 +239,27 @@ test("restored active sessions are deduplicated and constrained to their comic",
 test("hydration rejects malformed state without throwing", () => {
   assert.deepEqual(hydrateSrsState("not json"), createSrsState());
   assert.deepEqual(hydrateSrsState({ schemaVersion: 99 }), createSrsState());
+});
+
+test("the atomic-card curriculum does not resume legacy schema-one sessions", () => {
+  const legacy = {
+    ...createSrsState(),
+    schemaVersion: 1,
+    cards: {
+      "legacy-bubble-card": {
+        ...getCardProgress(createSrsState(), "legacy-bubble-card"),
+        status: "learning",
+        dueDay: 1,
+        lastHelpDay: 1,
+      },
+    },
+    activeSession: {
+      comicId: "a",
+      startedDay: 1,
+      eligibleCardIds: ["legacy-bubble-card"],
+      clickedCardIds: ["legacy-bubble-card"],
+    },
+  };
+
+  assert.deepEqual(hydrateSrsState(legacy), createSrsState());
 });

@@ -16,10 +16,10 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
-  const title = "Tira — español, viñeta a viñeta";
+  const title = "Tira — learn Spanish, one comic at a time";
   const description =
-    "Aprende español descubriendo XKCD con una memoria que elige la siguiente tira por ti.";
-  const socialImage = `${origin}/og.png`;
+    "Learn Spanish through translated xkcd comics, with a spaced-repetition memory that chooses what you read next.";
+  const socialImage = `${origin}/og-en.png`;
 
   return {
     metadataBase: new URL(origin),
@@ -29,12 +29,12 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: { canonical: origin },
     openGraph: {
       type: "website",
-      locale: "es_ES",
+      locale: "en_US",
       url: origin,
       siteName: "Tira",
       title,
       description,
-      images: [{ url: socialImage, width: 1200, height: 630, alt: "Tira — Español, viñeta a viñeta" }],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: "Tira — learn Spanish, one comic at a time" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );

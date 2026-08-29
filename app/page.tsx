@@ -27,23 +27,50 @@ import {
   type SrsState,
 } from "../lib/srs";
 
-const SRS_STORAGE_KEY = "tira:srs:v1";
-const UI_STORAGE_KEY = "tira:ui:v1";
+const SRS_STORAGE_KEY = "tira:srs:v2";
+const UI_STORAGE_KEY = "tira:ui:v2";
 const CURRICULUM_CARD_IDS = CARDS.map((card) => card.id);
 
 const KIND_LABELS: Record<LearningCard["kind"], string> = {
-  word: "palabra",
-  phrase: "frase",
-  grammar: "gramática",
+  word: "word",
+  phrase: "phrase",
+  grammar: "grammar",
   concept: "idea",
 };
+
+const KIND_GROUPS: readonly {
+  kind: LearningCard["kind"];
+  label: string;
+  description: string;
+}[] = [
+  {
+    kind: "word",
+    label: "Word meaning",
+    description: "What this individual word means here",
+  },
+  {
+    kind: "phrase",
+    label: "Expression or phrase",
+    description: "Meaning created by words used together",
+  },
+  {
+    kind: "grammar",
+    label: "Grammar lesson",
+    description: "A reusable pattern behind this form",
+  },
+  {
+    kind: "concept",
+    label: "Idea or context",
+    description: "Cultural, technical, or contextual knowledge",
+  },
+];
 
 type LibraryFilter = "today" | "next" | "mastered" | "all";
 type OpenedByComic = Record<string, string[]>;
 
 interface Summary {
   completedTitle: string;
-  learnedCount: number;
+  helpCardCount: number;
   masteredCount: number;
   nextComic: Comic;
   overlapCardIds: string[];
@@ -57,26 +84,19 @@ function unique<T>(values: readonly T[]): T[] {
   return [...new Set(values)];
 }
 
-function cardsForRegion(region: RevealRegion | null): LearningCard[] {
-  if (!region) return [];
-  return region.cardIds
-    .map((id) => lookupCard(id))
-    .filter((card): card is LearningCard => card !== null);
-}
-
 function lookupCard(cardId: string): LearningCard | null {
   return (CARD_BY_ID.get(cardId as CardId) as LearningCard | undefined) ?? null;
 }
 
 function statusLabel(progress: CardProgress, studyDay: number): string {
-  if (progress.lastHelpDay === studyDay) return "aprendiendo hoy";
-  if (progress.status === "unseen") return "nueva";
-  if (progress.dueDay !== null && progress.dueDay <= studyDay) return "para ahora";
+  if (progress.lastHelpDay === studyDay) return "learned today";
+  if (progress.status === "unseen") return "new";
+  if (progress.dueDay !== null && progress.dueDay <= studyDay) return "due now";
   if (progress.dueDay !== null) {
     const days = progress.dueDay - studyDay;
-    return days === 1 ? "mañana" : `en ${days} días`;
+    return days === 1 ? "tomorrow" : `in ${days} days`;
   }
-  return progress.status === "mastered" ? "dominada" : "en curso";
+  return progress.status === "mastered" ? "mastered" : "in progress";
 }
 
 function readOpenedRegions(): OpenedByComic {
@@ -123,7 +143,8 @@ export default function Home() {
   const [currentComicId, setCurrentComicId] = useState(initialSelection.comic.id);
   const [openedByComic, setOpenedByComic] = useState<OpenedByComic>({});
   const [selectedRegionId, setSelectedRegionId] = useState<string | null>(null);
-  const [selectedCardIndex, setSelectedCardIndex] = useState(-1);
+  const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
+  const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
   const [showPins, setShowPins] = useState(true);
   const [showTitleText, setShowTitleText] = useState(false);
   const [showLibrary, setShowLibrary] = useState(false);
@@ -143,14 +164,26 @@ export default function Home() {
   const openedRegionIds = openedByComic[currentComic.id] ?? [];
   const selectedRegion =
     currentComic.regions.find((region) => region.id === selectedRegionId) ?? null;
-  const selectedCards = cardsForRegion(selectedRegion);
-  const selectedCard =
-    selectedCardIndex >= 0 ? selectedCards[selectedCardIndex] ?? null : null;
+  const selectedWord =
+    selectedRegion?.words.find((word) => word.id === selectedWordId) ?? null;
+  const candidateCards = selectedWord
+    ? unique(selectedWord.cardIds)
+        .map((id) => lookupCard(id))
+        .filter((card): card is LearningCard => card !== null)
+    : [];
+  const selectedCard = selectedCardId ? lookupCard(selectedCardId) : null;
   const dueCardIds = getDueCardIds(srs, CURRICULUM_CARD_IDS);
-  const learnedTodayIds = getLearnedTodayCardIds(srs);
+  const learnedTodayIds = getLearnedTodayCardIds(srs).filter((cardId) =>
+    CARD_BY_ID.has(cardId as CardId),
+  );
   const activeSession = srs.activeSession;
   const clickedCardIds = activeSession?.clickedCardIds ?? [];
   const eligibleCardIds = activeSession?.eligibleCardIds ?? [];
+  const selectedWordLearnedTodayCount = selectedWord
+    ? unique(selectedWord.cardIds).filter((cardId) =>
+        learnedTodayIds.includes(cardId),
+      ).length
+    : 0;
   const currentIndex = COMICS.findIndex((comic) => comic.id === currentComic.id);
   const currentDueCount = unique(currentComic.cardIds).filter((cardId) =>
     dueCardIds.includes(cardId),
@@ -187,16 +220,17 @@ export default function Home() {
     if (hydrated) persist(nextState, nextOpened);
   }
 
-  function openRegion(region: RevealRegion) {
+  function openWord(region: RevealRegion, wordId: string) {
     setSelectedRegionId(region.id);
-    setSelectedCardIndex(-1);
+    setSelectedWordId(wordId);
+    setSelectedCardId(null);
     if (!openedRegionIds.includes(region.id)) {
       const nextOpened = {
         ...openedByComic,
         [currentComic.id]: [...openedRegionIds, region.id],
       };
       commit(srs, nextOpened);
-      setToast("Frase abierta · elige exactamente qué necesitabas");
+      setToast("Word opened · no cards added");
     }
     if (window.matchMedia("(max-width: 900px)").matches) {
       window.requestAnimationFrame(() => {
@@ -210,12 +244,22 @@ export default function Home() {
     }
   }
 
-  function learnCard(cardId: string, index: number) {
-    setSelectedCardIndex(index);
-    if (clickedCardIds.includes(cardId)) return;
+  function learnCard(cardId: string) {
+    setSelectedCardId(cardId);
+    const wasAlreadyLearnedToday = learnedTodayIds.includes(cardId);
     const nextState = recordCardHelp(srs, cardId);
     commit(nextState);
-    setToast("1 tarjeta guardada para repasar");
+    setToast(
+      wasAlreadyLearnedToday
+        ? "This card was already learned today"
+        : "1 card learned today · saved for review",
+    );
+  }
+
+  function closeRegion() {
+    setSelectedRegionId(null);
+    setSelectedWordId(null);
+    setSelectedCardId(null);
   }
 
   function finishComic() {
@@ -234,7 +278,7 @@ export default function Home() {
 
     setSummary({
       completedTitle: currentComic.titleEs,
-      learnedCount: clicked.size,
+      helpCardCount: clicked.size,
       masteredCount: independentlyUnderstood,
       nextComic: next.comic,
       overlapCardIds: next.overlapCardIds,
@@ -242,8 +286,7 @@ export default function Home() {
       reason: next.reason,
     });
     setCurrentComicId(next.comic.id);
-    setSelectedRegionId(null);
-    setSelectedCardIndex(-1);
+    closeRegion();
     setShowTitleText(false);
     commit(next.state, nextOpened);
   }
@@ -252,15 +295,14 @@ export default function Home() {
     const fresh = selectNextComic(COMICS, createSrsState());
     const nextOpened: OpenedByComic = {};
     setCurrentComicId(fresh.comic.id);
-    setSelectedRegionId(null);
-    setSelectedCardIndex(-1);
+    closeRegion();
     setSummary(null);
     setShowLibrary(false);
     setShowAbout(false);
     setShowReset(false);
     commit(fresh.state, nextOpened);
     persist(fresh.state, nextOpened);
-    setToast("Tu progreso empezó de nuevo");
+    setToast("Your progress has been reset");
   }
 
   useEffect(() => {
@@ -272,18 +314,20 @@ export default function Home() {
         setShowLibrary(false);
         setShowAbout(false);
         setShowReset(false);
-        setSelectedRegionId(null);
+        closeRegion();
         return;
       }
       if (summary || showLibrary || showAbout || showReset) return;
       const regionIndex = Number(event.key) - 1;
       if (Number.isInteger(regionIndex) && currentComic.regions[regionIndex]) {
-        openRegion(currentComic.regions[regionIndex]);
+        const region = currentComic.regions[regionIndex];
+        const firstWord = region.words[0];
+        if (firstWord) openWord(region, firstWord.id);
       }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-    // openRegion intentionally uses the current render's state snapshot.
+    // openWord intentionally uses the current render's state snapshot.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentComic, summary, showLibrary, showAbout, showReset, srs, openedByComic]);
 
@@ -349,7 +393,7 @@ export default function Home() {
       return (
         (first.dueDay ?? Number.MAX_SAFE_INTEGER) -
           (second.dueDay ?? Number.MAX_SAFE_INTEGER) ||
-        a.answerEs.localeCompare(b.answerEs, "es")
+        a.promptEs.localeCompare(b.promptEs, "es")
       );
     });
   }, [libraryFilter, srs]);
@@ -357,26 +401,28 @@ export default function Home() {
   const targetCards = unique(eligibleCardIds)
     .map((id) => lookupCard(id))
     .filter((card): card is LearningCard => card !== null);
-  const targetWidth = Math.min(
-    700,
-    Math.max(320, Math.round(currentComic.image.aspectRatio * 520)),
-  );
+  const targetWidth = Math.min(760, Math.max(320, currentComic.image.width));
 
   return (
     <main className="app-shell" data-ready={hydrated ? "true" : "false"}>
       <header className="topbar">
-        <button className="brand brand-button" onClick={() => setShowAbout(true)} aria-label="Acerca de Tira">
+        <button className="brand brand-button" onClick={() => setShowAbout(true)} aria-label="About Tira">
           <span className="brand-mark">t</span>
           <span>tira</span>
         </button>
         <div className="session-note">
-          <span className="pulse-dot" /> sesión · día {srs.studyDay}
+          <span className="pulse-dot" /> session · day {srs.studyDay}
         </div>
-        <nav className="top-actions" aria-label="Navegación principal">
-          <button className="text-nav active" aria-current="page">Aprender</button>
-          <button className="text-nav" onClick={() => setShowLibrary(true)}>Mis tarjetas</button>
-          <div className="top-stat"><strong>{dueCardIds.length}</strong> por repasar</div>
-          <button className="avatar" onClick={() => setShowLibrary(true)} aria-label="Abrir tu memoria">
+        <nav className="top-actions" aria-label="Main navigation">
+          <button className="text-nav active" aria-current="page">Learn</button>
+          <button className="text-nav" onClick={() => setShowLibrary(true)}>My cards</button>
+          <div className="top-stat"><strong>{dueCardIds.length}</strong> to review</div>
+          <button
+            className="avatar"
+            onClick={() => setShowLibrary(true)}
+            aria-label={`Open your cards. ${learnedTodayIds.length} ${learnedTodayIds.length === 1 ? "card" : "cards"} learned today`}
+            title={`${learnedTodayIds.length} learned today`}
+          >
             {learnedTodayIds.length}
           </button>
         </nav>
@@ -384,16 +430,16 @@ export default function Home() {
 
       <section className="learning-layout" id="top">
         <aside className="lesson-rail">
-          <div className="eyebrow">TIRA {currentIndex + 1} DE {COMICS.length}</div>
-          <h1>Primero,<br />solo mira.</h1>
+          <div className="eyebrow">COMIC {currentIndex + 1} OF {COMICS.length}</div>
+          <h1>First,<br />just look.</h1>
           <p>
-            Toca una frase únicamente cuando necesites ayuda. Recordaremos lo
-            que descubras.
+            Tap a Spanish word in the comic only when you need help. Then
+            choose the exact card you want to reveal.
           </p>
 
-          <div className="rail-progress" aria-label="Progreso de la tira">
+          <div className="rail-progress" aria-label="Comic progress">
             <div className="progress-copy">
-              <span>Exploradas</span>
+              <span>Explored</span>
               <strong>{openedRegionIds.length} / {currentComic.regions.length}</strong>
             </div>
             <div className="progress-track">
@@ -402,36 +448,36 @@ export default function Home() {
           </div>
 
           <div className="target-summary">
-            <div className="target-label">POR QUÉ ESTA TIRA</div>
+            <div className="target-label">WHY THIS COMIC</div>
             {currentDueCount > 0 ? (
-              <div className="target-row"><span className="target-dot due" /> <strong>{currentDueCount}</strong> coincidencias para repasar</div>
+              <div className="target-row"><span className="target-dot due" /> <strong>{currentDueCount}</strong> review matches</div>
             ) : null}
             {currentNewCount > 0 ? (
-              <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> ideas nuevas</div>
+              <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> new cards</div>
             ) : null}
             {currentDueCount === 0 && currentNewCount === 0 ? (
-              <div className="target-row"><span className="target-dot revisit" /> una vuelta de consolidación</div>
+              <div className="target-row"><span className="target-dot revisit" /> a consolidation pass</div>
             ) : null}
           </div>
 
           <div className="target-peek">
             {targetCards.slice(0, 3).map((card) => (
-              <span key={card.id}>{card.answerEs}</span>
+              <span key={card.id} lang="es">{card.promptEs}</span>
             ))}
             {targetCards.length > 3 ? <em>+{targetCards.length - 3}</em> : null}
           </div>
 
           <div className="tiny-tip">
             <span>?</span>
-            <p>Puedes abrir una frase sin guardar todo. Elige solo las tarjetas concretas que te faltaban.</p>
+            <p>Opening a word adds 0 cards. A card is learned only when you choose it from the sidebar.</p>
           </div>
         </aside>
 
         <article className="comic-stage">
           <div className="comic-heading">
             <div>
-              <div className="comic-number">XKCD · {currentComic.xkcdNumber}</div>
-              <h2>{currentComic.titleEs}</h2>
+              <div className="comic-number">xkcd · {currentComic.xkcdNumber}</div>
+              <h2 lang="es">{currentComic.titleEs}</h2>
               <span className="original-title">{currentComic.title}</span>
             </div>
             <div className="comic-tools">
@@ -439,13 +485,14 @@ export default function Home() {
                 className={`tool-button ${showPins ? "is-active" : ""}`}
                 onClick={() => setShowPins((visible) => !visible)}
                 aria-pressed={showPins}
+                aria-label={showPins ? "Hide clickable word markers" : "Show clickable word markers"}
               >
-                <span className="pin-mini">1</span>{showPins ? "Ocultar zonas" : "Mostrar zonas"}
+                <span className="pin-mini" aria-hidden="true">Aa</span>{showPins ? "Hide words" : "Show words"}
               </button>
               <button
                 className={`icon-button ${showTitleText ? "is-active" : ""}`}
                 onClick={() => setShowTitleText((visible) => !visible)}
-                aria-label="Ver el texto oculto de xkcd"
+                aria-label="Show xkcd title text"
                 aria-pressed={showTitleText}
               >
                 i
@@ -455,9 +502,10 @@ export default function Home() {
 
           {showTitleText ? (
             <div className="title-text" role="note">
-              <span>TEXTO OCULTO</span>
-              <p>{currentComic.titleText.es}</p>
-              {currentComic.titleText.adaptationNoteEs ? <small>{currentComic.titleText.adaptationNoteEs}</small> : null}
+              <span>SPANISH TITLE TEXT</span>
+              <p lang="es">{currentComic.titleText.es}</p>
+              <small>English: {currentComic.titleText.en}</small>
+              {currentComic.titleText.noteEn ? <small>{currentComic.titleText.noteEn}</small> : null}
             </div>
           ) : null}
 
@@ -474,41 +522,67 @@ export default function Home() {
                 src={currentComic.image.src}
                 width={currentComic.image.width}
                 height={currentComic.image.height}
-                alt={currentComic.image.altEs}
+                alt={currentComic.image.altEn}
               />
-              {currentComic.regions.map((region, index) => {
-                const wasOpened = openedRegionIds.includes(region.id);
-                const isSelected = selectedRegionId === region.id;
-                return (
-                  <button
-                    key={region.id}
-                    className={`hotspot ${wasOpened ? "is-opened" : ""} ${isSelected ? "is-selected" : ""}`}
-                    style={{
-                      left: `${region.bounds.x}%`,
-                      top: `${region.bounds.y}%`,
-                      width: `${region.bounds.width}%`,
-                      height: `${region.bounds.height}%`,
-                    }}
-                    aria-label={`Explicar: ${region.labelEn}`}
-                    onClick={() => openRegion(region)}
-                  >
-                    <span>{wasOpened ? "✓" : index + 1}</span>
-                  </button>
-                );
-              })}
+              {currentComic.regions.flatMap((region) =>
+                region.words.flatMap((word) => {
+                  const isSelected =
+                    selectedRegionId === region.id && selectedWordId === word.id;
+                  return word.bounds.map((bounds, fragmentIndex) => {
+                    const hotspotStyle = {
+                      left: `${bounds.x}%`,
+                      top: `${bounds.y}%`,
+                      width: `${bounds.width}%`,
+                      height: `${bounds.height}%`,
+                    };
+                    const hotspotClass = `word-hotspot ${isSelected ? "is-selected" : ""}`;
+                    if (fragmentIndex > 0) {
+                      return (
+                        <span
+                          key={`${word.id}-fragment-${fragmentIndex + 1}`}
+                          className={`${hotspotClass} is-continuation`}
+                          data-word-id={word.id}
+                          data-word-fragment={fragmentIndex + 1}
+                          lang="es"
+                          style={hotspotStyle}
+                          aria-hidden="true"
+                          title={`Show cards for “${word.text}”`}
+                          onClick={() => openWord(region, word.id)}
+                        />
+                      );
+                    }
+                    return (
+                      <button
+                        key={`${word.id}-fragment-1`}
+                        type="button"
+                        className={hotspotClass}
+                        data-word-id={word.id}
+                        data-word-fragment="1"
+                        lang="es"
+                        style={hotspotStyle}
+                        aria-label={`Open cards for Spanish word: ${word.text}. Opening adds no cards.`}
+                        aria-pressed={isSelected}
+                        title={`Show cards for “${word.text}”`}
+                        onClick={() => openWord(region, word.id)}
+                      />
+                    );
+                  });
+                }),
+              )}
             </div>
           </div>
 
           <div className="comic-footer">
             <div>
-              <a href={currentComic.source.pageUrl} target="_blank" rel="noreferrer">
-                “{currentComic.title}” · xkcd #{currentComic.xkcdNumber} ↗
+              <a href={currentComic.source.translationPageUrl} target="_blank" rel="noreferrer">
+                “{currentComic.titleEs}” · Spanish edition ↗
               </a>
-              <span> por Randall Munroe</span>
+              <span> by {currentComic.source.translationCredit}</span>
             </div>
             <div>
+              <a href={currentComic.source.originalPageUrl} target="_blank" rel="noreferrer">Original xkcd #{currentComic.xkcdNumber}</a>
+              <span> · Randall Munroe · </span>
               <a href={currentComic.source.licenseUrl} target="_blank" rel="noreferrer">CC BY-NC 2.5</a>
-              <span> · adaptación y notas no oficiales</span>
             </div>
           </div>
         </article>
@@ -517,64 +591,119 @@ export default function Home() {
           {selectedRegion ? (
             <div className="reveal-scroll">
               <div className="reveal-meta">
-                <span>DESCUBRIMIENTO {openedRegionIds.indexOf(selectedRegion.id) + 1}</span>
-                <button onClick={() => setSelectedRegionId(null)} aria-label="Cerrar explicación">×</button>
+                <span>DISCOVERY {openedRegionIds.indexOf(selectedRegion.id) + 1}</span>
+                <button onClick={closeRegion} aria-label="Close explanation">×</button>
               </div>
 
-              <div className="phrase-original">“{selectedRegion.labelEn}”</div>
-              <div className="translation-label">UNA FORMA NATURAL DE DECIRLO</div>
-              <h3>{selectedRegion.translationEs}</h3>
-              <div className="note-card">
-                <span className="note-spark">✦</span>
-                <p>{selectedRegion.noteEs}</p>
+              <div className="selected-word-kicker">SELECTED SPANISH WORD</div>
+              <div className="phrase-original" lang="es">“{selectedWord?.text ?? selectedRegion.labelEs}”</div>
+              <div className="phrase-context">From: <span lang="es">“{selectedRegion.labelEs}”</span></div>
+              <div className={`zero-card-callout ${selectedWordLearnedTodayCount > 0 ? "has-learned" : ""}`} role="status">
+                <strong>
+                  {selectedWordLearnedTodayCount > 0
+                    ? `${selectedWordLearnedTodayCount} related ${selectedWordLearnedTodayCount === 1 ? "card" : "cards"} learned today`
+                    : "Word opened · no cards selected"}
+                </strong>
+                <span>
+                  {selectedWordLearnedTodayCount > 0
+                    ? "These may include shared cards learned elsewhere today; only explicit card choices are scheduled."
+                    : "Choose a card below. Opening the word alone changes nothing."}
+                </span>
               </div>
 
-              <div className="cards-heading">
-                <span>¿QUÉ NECESITABAS?</span>
-                <strong>{selectedCards.filter((card) => clickedCardIds.includes(card.id)).length} / {selectedCards.length}</strong>
-              </div>
-              <p className="cards-instruction">Elige solo la palabra, regla o idea que te faltaba. Cada elección se guarda por separado.</p>
-              <div className="card-switcher" aria-label="Conceptos de la frase">
-                {selectedCards.map((card, index) => (
-                  <button
-                    key={card.id}
-                    className={`${selectedCardIndex === index ? "active" : ""} ${clickedCardIds.includes(card.id) ? "is-learned" : ""}`}
-                    onClick={() => learnCard(card.id, index)}
-                    aria-pressed={selectedCardIndex === index}
-                  >
-                    <span>{clickedCardIds.includes(card.id) ? "✓" : index + 1}</span>{KIND_LABELS[card.kind]}
-                  </button>
-                ))}
-              </div>
+              {selectedWord ? (
+                <section className="candidate-section" aria-labelledby="candidate-title">
+                  <div className="cards-heading">
+                    <span>CHOOSE A FLASHCARD</span>
+                    <strong>{candidateCards.filter((card) => learnedTodayIds.includes(card.id)).length} / {candidateCards.length} learned today</strong>
+                  </div>
+                  <h4 id="candidate-title">
+                    Cards related to <span lang="es">“{selectedWord.text}”</span>
+                  </h4>
+                  <p className="cards-instruction">
+                    Previewing this list adds nothing. Select only a card whose answer you want to see.
+                  </p>
+
+                  <div className="candidate-groups">
+                    {KIND_GROUPS.map((group) => {
+                      const groupCards = candidateCards.filter((card) => card.kind === group.kind);
+                      if (groupCards.length === 0) return null;
+                      return (
+                        <section className="card-kind-group" key={group.kind} aria-label={group.label}>
+                          <div className="card-kind-heading">
+                            <span className={`kind-badge kind-${group.kind}`}>{group.label}</span>
+                            <small>{group.description}</small>
+                          </div>
+                          <div className="candidate-list">
+                            {groupCards.map((card) => {
+                              const isSelected = selectedCardId === card.id;
+                              const isLearned = learnedTodayIds.includes(card.id);
+                              const candidateId = `candidate-${encodeURIComponent(card.id)}`;
+                              return (
+                                <button
+                                  key={card.id}
+                                  className={`${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""}`}
+                                  onClick={() => learnCard(card.id)}
+                                  aria-pressed={isSelected}
+                                  aria-labelledby={`${candidateId}-prompt`}
+                                  aria-describedby={`${candidateId}-status`}
+                                >
+                                  <span className="candidate-state" aria-hidden="true">{isLearned ? "✓" : "→"}</span>
+                                  <span className="candidate-copy">
+                                    <strong id={`${candidateId}-prompt`} lang="es">{card.promptEs}</strong>
+                                    <small id={`${candidateId}-status`}>{isLearned ? "Learned today; reveal again" : "Reveal answer + add to review"}</small>
+                                  </span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </section>
+                      );
+                    })}
+                  </div>
+                </section>
+              ) : (
+                <div className="choose-word-prompt"><span>↖</span> Choose a highlighted word directly in the comic. This still adds 0 cards.</div>
+              )}
 
               {selectedCard ? (
-                <div className="learning-card-detail">
-                  <div className={`kind-badge kind-${selectedCard.kind}`}>{KIND_LABELS[selectedCard.kind]}</div>
-                  <div className="card-prompt">{selectedCard.promptEn}</div>
-                  <div className="card-answer">{selectedCard.answerEs}</div>
-                  <p>{selectedCard.noteEs}</p>
+                <section className="learning-card-detail" aria-label={`Revealed ${KIND_LABELS[selectedCard.kind]} card`}>
+                  <div className="detail-heading">
+                    <div className={`kind-badge kind-${selectedCard.kind}`}>{KIND_LABELS[selectedCard.kind]}</div>
+                    <span>LEARNED TODAY</span>
+                  </div>
+                  <div className="card-answer" lang="es">{selectedCard.promptEs}</div>
+                  <div className="card-prompt">{selectedCard.answerEn}</div>
+                  <p>{selectedCard.noteEn}</p>
                   <div className="card-tags">
                     {selectedCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
                   </div>
-                  <div className="memory-copy"><span>✓</span> vuelve en el día {srs.studyDay + 1}</div>
+                  <div className="memory-copy"><span>✓</span> This specific card returns on day {srs.studyDay + 1}</div>
+                </section>
+              ) : selectedWord ? (
+                <div className="choose-card-prompt"><span>↑</span> Choose a card to reveal its answer and count it as learned today.</div>
+              ) : null}
+
+              {selectedCard ? (
+                <div className="bubble-context">
+                  <div className="translation-label">WHOLE-BUBBLE CONTEXT · NOT AN EXTRA CARD</div>
+                  <strong>{selectedRegion.translationEn}</strong>
+                  <p>{selectedRegion.noteEn}</p>
                 </div>
-              ) : (
-                <div className="choose-card-prompt"><span>↑</span> Elige una tarjeta para ver el detalle y añadirla al repaso.</div>
-              )}
+              ) : null}
             </div>
           ) : (
             <div className="empty-reveal">
               <div className="empty-glyph">1</div>
-              <h3>La tira habla primero.</h3>
+              <h3>Let the comic speak first.</h3>
               <p>
-                Toca una frase marcada para ver su español; después elige la
-                palabra, regla o idea concreta que necesitabas.
+                Choose a word whenever you need help. Tap any marked Spanish word in the picture; its meaning, expression, grammar, and idea cards will appear here.
               </p>
-              <div className="gesture-line"><span>↖</span> prueba con cualquier número</div>
+              <div className="gesture-line"><span>↖</span> try any highlighted Spanish word</div>
               <div className="today-mini">
-                <span>HOY</span>
+                <span>TODAY</span>
                 <strong>{learnedTodayIds.length}</strong>
-                <p>{learnedTodayIds.length === 1 ? "tarjeta aprendida" : "tarjetas aprendidas"}</p>
+                <p>{learnedTodayIds.length === 1 ? "card learned" : "cards learned"}</p>
               </div>
             </div>
           )}
@@ -584,13 +713,13 @@ export default function Home() {
       <footer className="action-bar">
         <div className="action-hint">
           <span className="keycap">1–{currentComic.regions.length}</span>
-          <span>atajos para explorar</span>
+          <span>shortcuts to each text group’s first word</span>
         </div>
         <button className="finish-button" onClick={finishComic}>
-          Ya entendí la tira <span>→</span>
+          I understand this comic <span>→</span>
         </button>
         <div className="review-preview">
-          <strong>{clickedCardIds.length}</strong> con ayuda · <strong>{Math.max(0, eligibleCardIds.length - clickedCardIds.length)}</strong> ya sabías
+          <strong>{clickedCardIds.length}</strong> help cards this comic · <strong>{eligibleCardIds.filter((cardId) => !clickedCardIds.includes(cardId)).length}</strong> understood independently
         </div>
       </footer>
 
@@ -598,28 +727,28 @@ export default function Home() {
         <div className="modal-backdrop" role="presentation">
           <section ref={summaryRef} className="summary-modal" role="dialog" aria-modal="true" aria-labelledby="summary-title">
             <div className="success-orbit"><span>✓</span></div>
-            <div className="summary-eyebrow">TIRA ENTENDIDA</div>
-            <h2 id="summary-title">{summary.completedTitle}</h2>
-            <p>La tira ya hizo su trabajo. Tu próxima elección viene del calendario, no del azar.</p>
+            <div className="summary-eyebrow">COMIC UNDERSTOOD</div>
+            <h2 id="summary-title" lang="es">{summary.completedTitle}</h2>
+            <p>The comic did its job. Your next one comes from your review schedule, not from chance.</p>
 
             <div className="grade-grid">
-              <div><strong>{summary.learnedCount}</strong><span>necesitaron ayuda</span><small>vuelven pronto</small></div>
-              <div><strong>{summary.masteredCount}</strong><span>entendidas sin ayuda</span><small>graduadas</small></div>
+              <div><strong>{summary.helpCardCount}</strong><span>help used this comic</span><small>return soon</small></div>
+              <div><strong>{summary.masteredCount}</strong><span>understood unaided</span><small>graduated</small></div>
             </div>
 
             {summary.advancedDays > 0 ? (
-              <div className="time-jump">El simulador avanzó <strong>{summary.advancedDays} días</strong> hasta el próximo repaso.</div>
+              <div className="time-jump">The simulation advanced <strong>{summary.advancedDays} days</strong> to your next review.</div>
             ) : null}
 
             <div className="next-comic-card">
               <img src={summary.nextComic.image.src} alt="" />
               <div>
-                <span>LA SIGUIENTE</span>
-                <strong>{summary.nextComic.titleEs}</strong>
+                <span>UP NEXT</span>
+                <strong lang="es">{summary.nextComic.titleEs}</strong>
                 <p>
                   {summary.reason === "due"
-                    ? `${summary.overlapCardIds.length} coincidencias con tu repaso`
-                    : "abre una parte nueva del vocabulario"}
+                    ? `${summary.overlapCardIds.length} matches with your review set`
+                    : "opens a new part of the Spanish curriculum"}
                 </p>
               </div>
             </div>
@@ -627,12 +756,12 @@ export default function Home() {
               <div className="overlap-chips">
                 {summary.overlapCardIds.slice(0, 4).map((id) => {
                   const card = CARD_BY_ID.get(id as CardId);
-                  return card ? <span key={id}>{card.answerEs}</span> : null;
+                  return card ? <span key={id} lang="es">{card.promptEs}</span> : null;
                 })}
               </div>
             ) : null}
-            <button className="primary-wide" onClick={() => setSummary(null)}>Seguir con la próxima tira <span>→</span></button>
-            <button className="secondary-link" onClick={() => { setSummary(null); setShowLibrary(true); }}>Ver mis tarjetas</button>
+            <button className="primary-wide" onClick={() => setSummary(null)}>Continue to the next comic <span>→</span></button>
+            <button className="secondary-link" onClick={() => { setSummary(null); setShowLibrary(true); }}>View my cards</button>
           </section>
         </div>
       ) : null}
@@ -641,20 +770,20 @@ export default function Home() {
         <div className="drawer-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setShowLibrary(false); }}>
           <aside ref={libraryRef} className="memory-drawer" role="dialog" aria-modal="true" aria-labelledby="memory-title">
             <div className="drawer-header">
-              <div><span>TU MEMORIA</span><h2 id="memory-title">Mis tarjetas</h2></div>
-              <button onClick={() => setShowLibrary(false)} aria-label="Cerrar tarjetas">×</button>
+              <div><span>YOUR MEMORY</span><h2 id="memory-title">My cards</h2></div>
+              <button onClick={() => setShowLibrary(false)} aria-label="Close cards">×</button>
             </div>
             <div className="memory-overview">
-              <div><strong>{learnedTodayIds.length}</strong><span>hoy</span></div>
-              <div><strong>{dueCardIds.length}</strong><span>ahora</span></div>
-              <div><strong>{masteredCount}</strong><span>dominadas</span></div>
+              <div><strong>{learnedTodayIds.length}</strong><span>today</span></div>
+              <div><strong>{dueCardIds.length}</strong><span>due now</span></div>
+              <div><strong>{masteredCount}</strong><span>mastered</span></div>
             </div>
-            <div className="memory-tabs" aria-label="Filtros de tarjetas">
+            <div className="memory-tabs" aria-label="Card filters">
               {([
-                ["today", "Hoy"],
-                ["next", "Próximas"],
-                ["mastered", "Dominadas"],
-                ["all", "Todas"],
+                ["today", "Today"],
+                ["next", "Upcoming"],
+                ["mastered", "Mastered"],
+                ["all", "All"],
               ] as const).map(([filter, label]) => (
                 <button key={filter} className={libraryFilter === filter ? "active" : ""} onClick={() => setLibraryFilter(filter)} aria-pressed={libraryFilter === filter}>{label}</button>
               ))}
@@ -665,17 +794,17 @@ export default function Home() {
                 return (
                   <article className="memory-row" key={card.id}>
                     <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
-                    <div><strong>{card.answerEs}</strong><p>{card.promptEn}</p></div>
+                    <div><strong lang="es">{card.promptEs}</strong><p>{card.answerEn}</p></div>
                     <span className={`status-pill status-${progress.status}`}>{statusLabel(progress, srs.studyDay)}</span>
                   </article>
                 );
               }) : (
-                <div className="empty-list"><span>○</span><h3>Aún no hay nada aquí.</h3><p>Abre una frase en la tira y aparecerá en tu memoria.</p></div>
+                <div className="empty-list"><span>○</span><h3>Nothing here yet.</h3><p>Open a word in the comic, then reveal a specific card to add it here.</p></div>
               )}
             </div>
             <div className="drawer-footer">
-              <button onClick={() => { setShowLibrary(false); setShowAbout(true); }}>Cómo funciona</button>
-              <button className="danger-link" onClick={() => setShowReset(true)}>Reiniciar progreso</button>
+              <button onClick={() => { setShowLibrary(false); setShowAbout(true); }}>How it works</button>
+              <button className="danger-link" onClick={() => setShowReset(true)}>Reset progress</button>
             </div>
           </aside>
         </div>
@@ -684,22 +813,22 @@ export default function Home() {
       {showAbout ? (
         <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setShowAbout(false); }}>
           <section ref={aboutRef} className="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
-            <button className="modal-close" onClick={() => setShowAbout(false)} aria-label="Cerrar">×</button>
+            <button className="modal-close" onClick={() => setShowAbout(false)} aria-label="Close">×</button>
             <div className="brand about-brand"><span className="brand-mark">t</span><span>tira</span></div>
-            <div className="summary-eyebrow">CÓMO FUNCIONA</div>
-            <h2 id="about-title">Español, viñeta a viñeta.</h2>
-            <p>Tira convierte el contexto real de un cómic en una sesión de memoria, sin examen aparte.</p>
+            <div className="summary-eyebrow">HOW IT WORKS</div>
+            <h2 id="about-title">Learn Spanish, one comic at a time.</h2>
+            <p>Tira turns the real context of a Spanish comic into a memory session—without a separate quiz.</p>
             <ol className="method-steps">
-              <li><span>1</span><div><strong>Mira antes de traducir</strong><p>La imagen y el chiste te dan una oportunidad real de inferir.</p></div></li>
-              <li><span>2</span><div><strong>Pide ayuda solo cuando haga falta</strong><p>Cada frase abierta guarda palabras, gramática e ideas para repasarlas.</p></div></li>
-              <li><span>3</span><div><strong>Termina con honestidad</strong><p>Lo que entendiste sin ayuda se gradúa; lo que abriste vuelve pronto.</p></div></li>
-              <li><span>4</span><div><strong>Deja que el solapamiento elija</strong><p>La siguiente tira contiene la mayor cantidad posible de tarjetas pendientes.</p></div></li>
+              <li><span>1</span><div><strong>Read before translating</strong><p>The Spanish artwork and the joke give you a real chance to infer meaning.</p></div></li>
+              <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. Opening it saves nothing; reveal only the meaning, expression, grammar, or idea you needed.</p></div></li>
+              <li><span>3</span><div><strong>Finish honestly</strong><p>What you understood unaided graduates; what needed help returns soon.</p></div></li>
+              <li><span>4</span><div><strong>Let overlap choose</strong><p>Your next comic contains as many of your due cards as possible.</p></div></li>
             </ol>
             <div className="license-note">
-              <strong>Sobre los cómics</strong>
-              <p>Obra original de Randall Munroe, publicada en xkcd bajo <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" rel="noreferrer">CC BY-NC 2.5</a>. Traducciones y notas son adaptaciones no oficiales. Tira es un prototipo gratuito y no está afiliado con xkcd.</p>
+              <strong>About the comics</strong>
+              <p>Original work by Randall Munroe, published by xkcd under <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" rel="noreferrer">CC BY-NC 2.5</a>. Spanish translations by <a href="https://es.xkcd.com/" target="_blank" rel="noreferrer">Gabriel Rodríguez Alberich / xkcd en español</a>. Interactive word markers and learning notes are unofficial adaptations. Tira is free, noncommercial, and not affiliated with xkcd.</p>
             </div>
-            <button className="primary-wide" onClick={() => setShowAbout(false)}>Volver a la tira</button>
+            <button className="primary-wide" onClick={() => setShowAbout(false)}>Back to the comic</button>
           </section>
         </div>
       ) : null}
@@ -708,11 +837,11 @@ export default function Home() {
         <div className="modal-backdrop reset-layer" role="presentation">
           <section ref={resetRef} className="reset-modal" role="alertdialog" aria-modal="true" aria-labelledby="reset-title">
             <div className="warning-glyph">↺</div>
-            <h2 id="reset-title">¿Empezar de cero?</h2>
-            <p>Se borrarán las tarjetas, los intervalos y el historial guardado en este dispositivo.</p>
+            <h2 id="reset-title">Start over?</h2>
+            <p>This removes every card, interval, and history entry saved on this device.</p>
             <div className="reset-actions">
-              <button onClick={() => setShowReset(false)}>Cancelar</button>
-              <button onClick={resetProgress}>Sí, reiniciar</button>
+              <button onClick={() => setShowReset(false)}>Cancel</button>
+              <button onClick={resetProgress}>Yes, reset</button>
             </div>
           </section>
         </div>

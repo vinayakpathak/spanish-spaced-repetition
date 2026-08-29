@@ -34,7 +34,7 @@ export interface ReviewEvent {
 }
 
 export interface SrsState {
-  schemaVersion: 1;
+  schemaVersion: 2;
   studyDay: number;
   cards: Record<string, CardProgress>;
   comics: Record<string, ComicProgress>;
@@ -92,7 +92,7 @@ const DEFAULT_COMIC_PROGRESS: Readonly<ComicProgress> = {
 
 export function createSrsState(): SrsState {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     studyDay: 1,
     cards: {},
     comics: {},
@@ -498,7 +498,7 @@ function nullableNumber(value: unknown): number | null {
 export function hydrateSrsState(value: unknown): SrsState {
   try {
     const parsed = typeof value === "string" ? JSON.parse(value) : value;
-    if (!isRecord(parsed) || parsed.schemaVersion !== 1) return createSrsState();
+    if (!isRecord(parsed) || parsed.schemaVersion !== 2) return createSrsState();
 
     const cards: Record<string, CardProgress> = {};
     if (isRecord(parsed.cards)) {
@@ -593,7 +593,7 @@ export function hydrateSrsState(value: unknown): SrsState {
       : [];
 
     return {
-      schemaVersion: 1,
+      schemaVersion: 2,
       studyDay: Math.max(1, numberOr(parsed.studyDay, 1)),
       cards,
       comics,

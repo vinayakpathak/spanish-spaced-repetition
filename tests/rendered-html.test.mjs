@@ -19,26 +19,49 @@ test("server-renders the Tira learning experience", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Tira — español, viñeta a viñeta<\/title>/i);
-  assert.match(html, /Primero,/i);
+  assert.match(html, /<html[^>]+lang="en"/i);
+  assert.match(html, /<title>Tira — learn Spanish, one comic at a time<\/title>/i);
+  assert.match(html, /First,/i);
   assert.match(html, /El deber llama/i);
-  assert.match(html, /Ya entendí la tira/i);
+  assert.match(html, /I understand this comic/i);
+  assert.match(html, /Tap any marked Spanish word in the picture/i);
+  assert.match(html, /meaning, expression, grammar, and idea cards/i);
+  assert.match(html, /Spanish edition/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 
-test("starter preview artifacts are gone", async () => {
-  const [page, layout, packageJson] = await Promise.all([
+test("the curriculum stays Spanish-first and starter artifacts are gone", async () => {
+  const [page, layout, content, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/content.ts", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
   assert.match(page, /selectNextComic/);
   assert.match(page, /recordCardHelp/);
-  assert.match(layout, /Tira — español, viñeta a viñeta/);
+  assert.match(page, /Word opened · no cards selected/);
+  assert.match(page, /selectedWord\.cardIds/);
+  assert.match(layout, /Tira — learn Spanish, one comic at a time/);
+  assert.match(content, /interface WordOccurrence/);
+  assert.match(content, /promptEs:\s*"¿Vienes a la cama\?"/);
+  assert.match(content, /translationEn:\s*"Are you coming to bed\?"/);
+  assert.match(content, /https:\/\/es\.xkcd\.com\/strips\//);
+  assert.doesNotMatch(content, /promptEn:|answerEs:|noteEs:|labelEn:|translationEs:/);
   assert.doesNotMatch(page + layout + packageJson, /_sites-preview|react-loading-skeleton|codex-preview/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
-  await assert.doesNotReject(access(new URL("../public/og.png", import.meta.url)));
-  await assert.doesNotReject(access(new URL("../public/comics/duty-calls.png", import.meta.url)));
+  await assert.doesNotReject(access(new URL("../public/og-en.png", import.meta.url)));
+  await Promise.all(
+    [
+      "duty-calls-es.png",
+      "python-es.png",
+      "exploits-of-a-mom-es.png",
+      "correlation-es.png",
+      "tech-support-es.png",
+      "photos-es.png",
+    ].map((asset) =>
+      access(new URL(`../public/comics/${asset}`, import.meta.url)),
+    ),
+  );
   await assert.doesNotReject(access(new URL("../.openai/hosting.json", import.meta.url)));
 });
