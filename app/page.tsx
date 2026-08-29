@@ -792,15 +792,15 @@ export default function Home() {
           </div>
 
           <div className="target-summary">
-            <div className="target-label">CURRENT SCHEDULER FIT</div>
+            <div className="target-label">CURRENT CARD-PRIORITY FIT</div>
             {currentHighPriorityCount > 0 ? (
               <div className="target-row"><span className="target-dot priority" /> <strong>{currentHighPriorityCount}</strong> high-priority cards</div>
             ) : null}
             {currentNewCount > 0 ? (
               <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> not yet observed</div>
             ) : null}
-            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking?.score ?? 0)}</strong> combined fit</div>
-            <div className="target-row"><span className="target-dot" /> {formatPriority(currentRanking?.normalizedCardPriority ?? 0)} card need · {formatPriority(currentRanking?.normalizedImportance ?? 0)} importance</div>
+            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking?.score ?? 0)}</strong> relative priority fit</div>
+            <div className="target-row"><span className="target-dot" /> {currentRanking?.cardPrioritySum.toFixed(2) ?? "0.00"} total card priority across {currentRanking?.cardPriorities.length ?? 0} exact cards</div>
           </div>
 
           <div className="target-peek">
@@ -837,8 +837,8 @@ export default function Home() {
                   className="importance-badge"
                   type="button"
                   onClick={() => setShowRankings(true)}
-                  aria-label={`Comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive score is provisional because generated contextual senses remain unreviewed. Review-needed cards are included. Open comic rankings.`}
-                  title="PageRank-style recursive importance. Review-needed cards are included, generated contextual senses remain unreviewed, and analytics grouping never merges SRS progress."
+                  aria-label={`Informational comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive analysis does not affect scheduling and is provisional because generated contextual senses remain unreviewed. Review-needed cards are included. Open comic rankings.`}
+                  title="Informational PageRank-style recursive importance; it does not affect scheduling. Review-needed cards are included, generated contextual senses remain unreviewed, and analytics grouping never merges SRS progress."
                 >
                   <span>IMPORTANCE</span>
                   <strong>{formatImportanceScore(currentManifestEntry.importance.score)}</strong>
@@ -1261,7 +1261,7 @@ export default function Home() {
                   <span>UP NEXT</span>
                   <strong lang="es">{summary.nextComic.titleEs}</strong>
                   <p>
-                    {formatPriority(summary.ranking.score)} combined fit · {formatPriority(summary.ranking.normalizedCardPriority)} card need · {formatPriority(summary.ranking.normalizedImportance)} importance
+                    {formatPriority(summary.ranking.score)} relative priority fit · {summary.ranking.cardPrioritySum.toFixed(2)} total card priority across {summary.ranking.cardPriorities.length} exact cards
                   </p>
                 </div>
               </div>
@@ -1387,7 +1387,7 @@ export default function Home() {
             </div>
             <div className="rankings-intro" id="rankings-description">
               <p>
-                This PageRank-style recursive importance uses damped two-way comic–target centrality: comics raise their linked targets, and targets raise every linked comic. An 85% linked influence plus a 15% baseline/reset keeps disconnected and zero-target comics from vanishing. The calculation repeats until stable; comic scores below sum to 100%.
+                This informational PageRank-style recursive importance does not affect scheduling. It uses damped two-way comic–target centrality: comics raise their linked targets, and targets raise every linked comic. An 85% linked influence plus a 15% baseline/reset keeps disconnected and zero-target comics from vanishing. The calculation repeats until stable; comic scores below sum to 100%.
               </p>
               <p className="rankings-caveat">
                 <strong>Current limitation:</strong> word targets are grouped for analytics when their normalized Spanish prompt and English answer match across reviewed and generated cards. Higher-level targets use exact card IDs. Review-needed cards are included, so the scores remain provisional until their contextual senses are checked. Analytics grouping never merges SRS card IDs or progress.
@@ -1465,13 +1465,13 @@ export default function Home() {
               <li><span>1</span><div><strong>Read before translating</strong><p>The Spanish artwork and the joke give you a real chance to infer meaning.</p></div></li>
               <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. That records nothing; reveal only the exact word meaning, expression, grammar lesson, or context card you needed.</p></div></li>
               <li><span>3</span><div><strong>Finish honestly</strong><p>The app records which exact cards you opened and which displayed cards you understood without help.</p></div></li>
-              <li><span>4</span><div><strong>Recalculate every time</strong><p>Every Next action combines live card priorities with comic importance to choose the strongest follow-up.</p></div></li>
+              <li><span>4</span><div><strong>Recalculate every time</strong><p>Every Next action chooses the unread comic with the largest sum of live exact-card priorities.</p></div></li>
             </ol>
             <div className="license-note">
               <strong>About continuous scheduling</strong>
-              <p>Each card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. The next comic score is 80% normalized exact-card priority coverage and 20% normalized corpus importance. Any comic already finished is permanently excluded, so the collection ends after every comic has been read once. Progress from the earlier simulated-day prototype is not imported; this continuous history starts fresh.</p>
+              <p>Each card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. For every unread comic, Tira sums the priorities of its distinct exact cards; the comic with the largest sum comes next. Corpus importance is not part of this decision. Any comic already finished is permanently excluded, so the collection ends after every comic has been read once. Progress from the earlier simulated-day prototype is not imported; this continuous history starts fresh.</p>
               <strong>About comic importance</strong>
-              <p>Importance is PageRank-style recursive importance—a damped two-way comic–target centrality calculation. Comics raise linked targets; targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Review-needed cards are included, so these scores remain provisional until the draft meanings are checked.</p>
+              <p>Importance is an informational PageRank-style analysis and does not influence which comic is scheduled. It uses a damped two-way comic–target centrality calculation: comics raise linked targets, and targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Review-needed cards are included, so these scores remain provisional until the draft meanings are checked.</p>
               <strong>About the 258-comic corpus</strong>
               <p>Six lessons are fully reviewed. The remaining archive entries are an authoring draft built from image OCR and conservative dictionary matches. Every draft card participates in scheduling and is visibly labeled “Review needed,” including words whose English meaning has not been resolved. Treat that content as provisional and report anything that should be corrected. Generated grammar or expression lessons still require human authoring.</p>
               <strong>About the comics</strong>

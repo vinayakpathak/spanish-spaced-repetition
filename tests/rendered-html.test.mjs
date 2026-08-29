@@ -45,6 +45,8 @@ test("comic importance is visible as a normalized badge and accessible ranking d
 
   assert.match(page, /formatImportanceScore\(currentManifestEntry\.importance\.score\)/);
   assert.match(page, /currentManifestEntry\.importance\.rank/);
+  assert.match(page, /Informational comic importance/);
+  assert.match(page, /PageRank-style recursive analysis does not affect scheduling/);
   assert.match(page, /corpusManifest\.comics\.length/);
   assert.match(page, /first\.importance\.rank - second\.importance\.rank/);
   assert.match(page, /aria-labelledby="rankings-title"/);
@@ -68,6 +70,7 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(page, /importanceModel\.cardNodeCount\.toLocaleString\("en"\)/);
   assert.match(page, /Review-needed cards are included/i);
   assert.match(page, /never merges SRS card IDs or progress/i);
+  assert.match(page, /informational PageRank-style recursive importance does not affect scheduling/i);
   assert.match(styles, /\.importance-badge\s*\{/);
   assert.match(styles, /\.importance-badge\s*\{[\s\S]*?min-height:\s*44px/);
   assert.match(styles, /\.rankings-drawer\s*\{/);
@@ -77,6 +80,7 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(styles, /\.ranking-comic strong\s*\{\s*overflow:\s*visible;\s*white-space:\s*normal/);
   assert.doesNotMatch(page + readme, /standard PageRank/i);
   assert.match(readme, /PageRank-style recursive importance/);
+  assert.match(readme, /visible in the Rankings view but does not influence scheduling/);
   assert.match(readme, /damped two-way comic–target centrality/);
   assert.match(readme, /15% baseline\/reset prevents disconnected components and zero-target comics from vanishing/);
   assert.match(readme, /all 258 comic scores sum to 100%/);
@@ -101,7 +105,13 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   assert.match(page, /selectNextComic/);
   assert.match(page, /recordCardOpen/);
   assert.match(page, /scoreCardPriority/);
-  assert.match(page, /80% normalized exact-card priority coverage/);
+  assert.match(page, /chooses the unread comic with the largest sum of live exact-card priorities/);
+  assert.match(page, /Corpus importance is not part of this decision/);
+  assert.match(page, /CURRENT CARD-PRIORITY FIT/);
+  assert.match(page, /relative priority fit/);
+  assert.match(page, /total card priority across/);
+  assert.match(page, /cardPrioritySum\.toFixed\(2\)/);
+  assert.doesNotMatch(page, /combined fit|normalizedImportance/);
   assert.match(page, /reason === "complete"/);
   assert.match(page, /You’ve read every comic/);
   assert.match(page, /Tira will not repeat them/);

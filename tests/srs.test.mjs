@@ -201,11 +201,11 @@ test("well-spaced successes grow stability more than massed successes", () => {
   assert.ok(massedScore.stabilityDays < 1.01);
 });
 
-test("comic ranking uses max-normalized priority and importance at 80/20", () => {
+test("comic ranking uses only the max-normalized sum of exact card priorities", () => {
   const state = repeatOutcomes([true, true, true, true, true]);
   const candidates = [
     comic("hard", ["target"], 0),
-    comic("important", ["easy"], 1),
+    comic("important", ["easy"], Number.MAX_VALUE),
   ];
   let withEasy = state;
   const easyComic = comic("easy-source", ["easy"]);
@@ -213,24 +213,41 @@ test("comic ranking uses max-normalized priority and importance at 80/20", () =>
     withEasy = expose(withEasy, easyComic, NOW - (4 - index) * DAY);
   }
   const ranked = rankComics(candidates, withEasy, NOW);
+  const selected = selectNextComic(candidates, withEasy, NOW);
 
   assert.equal(ranked[0].comic.id, "hard");
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "hard");
   assert.equal(ranked[0].normalizedCardPriority, 1);
-  assert.equal(ranked[0].normalizedImportance, 0);
-  assert.equal(ranked[0].score, 0.8);
-  assert.equal(ranked[1].normalizedImportance, 1);
+  assert.equal(ranked[0].score, 1);
+  assert.equal(ranked[1].score, ranked[1].normalizedCardPriority);
+  assert.ok(ranked[0].cardPrioritySum > ranked[1].cardPrioritySum);
 });
 
-test("comic importance breaks equal-priority ties deterministically", () => {
+test("equal card-priority sums ignore importance and break ties by comic ID", () => {
   const ranked = rankComics(
-    [comic("low", ["a"], 0.1), comic("high", ["b"], 0.9)],
+    [
+      comic("z-enormous-importance", ["a"], Number.MAX_VALUE),
+      comic("a-zero-importance", ["b"], 0),
+    ],
     createSrsState(),
     NOW,
   );
-  assert.equal(ranked[0].comic.id, "high");
+  assert.deepEqual(ranked.map((entry) => entry.comic.id), [
+    "a-zero-importance",
+    "z-enormous-importance",
+  ]);
+  assert.equal(ranked[0].score, ranked[1].score);
+  const selected = selectNextComic(
+    ranked.map((entry) => entry.comic),
+    createSrsState(),
+    NOW,
+  );
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "a-zero-importance");
 
   const lexical = rankComics(
-    [comic("z", ["same"], 1), comic("a", ["same"], 1)],
+    [comic("z", ["same"], 1), comic("a", ["same"], 0)],
     createSrsState(),
     NOW,
   );
@@ -247,13 +264,13 @@ test("duplicate exact card IDs contribute once to a comic", () => {
   assert.deepEqual(ranked.cardPriorities.map((entry) => entry.cardId), ["shared"]);
 });
 
-test("zero-card comics are finite and can be selected by importance", () => {
+test("zero-card comics have finite zero scores and sort by comic ID", () => {
   const ranked = rankComics(
-    [comic("low", [], 0.1), comic("high", [], 1)],
+    [comic("z-high", [], Number.MAX_VALUE), comic("a-low", [], 0)],
     createSrsState(),
     NOW,
   );
-  assert.equal(ranked[0].comic.id, "high");
+  assert.equal(ranked[0].comic.id, "a-low");
   assert.equal(ranked[0].cardPrioritySum, 0);
   assert.equal(ranked[0].normalizedCardPriority, 0);
   assert.ok(ranked.every((entry) => Number.isFinite(entry.score)));

@@ -37,15 +37,13 @@ P = 1 − (1 − H) × (1 − G)
 
 ### Choosing the next comic
 
-For each unread comic, the scheduler sums `P` over all of its unique exact card IDs, including review-needed drafts. It does not use or merge the provisional analytics target IDs described below. Both the largest card-priority sum and the largest corpus importance score among unread comics are normalized to `1`, then combined:
+For each unread comic, the scheduler sums `P` over all of its unique exact card IDs, including review-needed drafts. That raw sum is the selection score (`x`):
 
 ```text
-cardAxis       = comicCardPrioritySum / largestComicCardPrioritySum
-importanceAxis = comicImportance / largestComicImportance
-selectionScore = 0.80 × cardAxis + 0.20 × importanceAxis
+x(comic) = Σ P(card) for each distinct exact card in the comic
 ```
 
-Thus 80% of selection follows the learner's live exact-card needs and 20% favors comics that connect important recurring material. This calculation runs for every Next action, not once per calendar day. Card priorities can recur through other unread comics that share those cards, but a read comic itself never returns.
+The unread comic with the largest `x` is selected; comic ID is only a deterministic tie-breaker. This calculation runs for every Next action, not once per calendar day. Card priorities can recur through other unread comics that share those cards, but a read comic itself never returns. Corpus importance/PageRank is not part of scheduling—not even as a tie-breaker—and its provisional analytics target IDs are never used or merged into exact SRS card IDs.
 
 ### Persistence and research basis
 
@@ -55,7 +53,7 @@ The model is a deliberately explainable adaptation rather than an implementation
 
 ## Comic importance
 
-Every comic also has a corpus-wide score computed as **PageRank-style recursive importance**, or damped two-way comic–target centrality. One node set contains comics, the other contains connected learning targets, and an edge means that a comic uses that target. Comics raise the targets they link to, and targets raise every comic that links to them. On each iteration, 85% of influence follows these links while a 15% baseline/reset prevents disconnected components and zero-target comics from vanishing. Iteration continues until the change is below `1e-12` or 1,000 iterations have run.
+Every comic also has an informational corpus-wide score computed as **PageRank-style recursive importance**, or damped two-way comic–target centrality. This analysis is visible in the Rankings view but does not influence scheduling. One node set contains comics, the other contains connected learning targets, and an edge means that a comic uses that target. Comics raise the targets they link to, and targets raise every comic that links to them. On each iteration, 85% of influence follows these links while a 15% baseline/reset prevents disconnected components and zero-target comics from vanishing. Iteration continues until the change is below `1e-12` or 1,000 iterations have run.
 
 The published centrality is normalized across the comic partition, so all 258 comic scores sum to 100%. Rank uses descending score with comic ID as the deterministic tie-breaker. For this analytics graph, reviewed and generated word cards—including unresolved review-needed cards—map to one canonical target when their normalized Spanish prompt and English answer match; higher-level grammar, expression, and concept cards use exact IDs. This grouping is analytics-only: it never merges SRS card IDs or progress. Because generated contextual senses have not been reviewed, their relationships and resulting scores remain provisional.
 

@@ -45,7 +45,6 @@ export interface SrsState {
 export interface ComicLike {
   id: string;
   cardIds: readonly string[];
-  importance?: number | { score: number };
 }
 
 export interface SchedulerConfig {
@@ -57,8 +56,6 @@ export interface SchedulerConfig {
   minStabilityDays: number;
   maxLapseStabilityDays: number;
   maxStabilityDays: number;
-  cardPriorityWeight: number;
-  comicImportanceWeight: number;
 }
 
 export interface CardPriorityDiagnostics {
@@ -83,11 +80,10 @@ export interface CardPriorityDiagnostics {
 
 export interface RankedComic<T extends ComicLike> {
   comic: T;
+  /** Max-normalized cardPrioritySum. Corpus importance never affects this. */
   score: number;
   cardPrioritySum: number;
   normalizedCardPriority: number;
-  importanceScore: number;
-  normalizedImportance: number;
   cardPriorities: CardPriorityDiagnostics[];
 }
 
@@ -124,8 +120,6 @@ export const DEFAULT_SCHEDULER_CONFIG: Readonly<SchedulerConfig> = {
   minStabilityDays: 0.25,
   maxLapseStabilityDays: 1,
   maxStabilityDays: 365,
-  cardPriorityWeight: 0.8,
-  comicImportanceWeight: 0.2,
 };
 
 const DEFAULT_COMIC_PROGRESS: Readonly<ComicProgress> = {
@@ -182,11 +176,7 @@ function configWithDefaults(
       throw new RangeError(`${key} must be greater than zero.`);
     }
   }
-  for (const key of [
-    "untouchedPriorityIndex",
-    "cardPriorityWeight",
-    "comicImportanceWeight",
-  ] as const) {
+  for (const key of ["untouchedPriorityIndex"] as const) {
     if (!Number.isFinite(config[key]) || config[key] < 0) {
       throw new RangeError(`${key} must be a finite, non-negative number.`);
     }
@@ -203,9 +193,6 @@ function configWithDefaults(
     throw new RangeError(
       "maxStabilityDays cannot be below maxLapseStabilityDays.",
     );
-  }
-  if (config.cardPriorityWeight + config.comicImportanceWeight <= 0) {
-    throw new RangeError("At least one comic score weight must be positive.");
   }
   return config;
 }
@@ -631,14 +618,6 @@ export function completeComic(state: SrsState, nowMs: number): SrsState {
   };
 }
 
-function comicImportance(comic: ComicLike): number {
-  const raw =
-    typeof comic.importance === "number"
-      ? comic.importance
-      : comic.importance?.score ?? 0;
-  return Number.isFinite(raw) ? Math.max(0, raw) : 0;
-}
-
 export function rankComics<T extends ComicLike>(
   comics: readonly T[],
   state: SrsState,
@@ -662,42 +641,25 @@ export function rankComics<T extends ComicLike>(
         (sum, card) => sum + card.priorityIndex,
         0,
       ),
-      importanceScore: comicImportance(comic),
     };
   });
   const maxCardPriority = Math.max(
     0,
     ...unnormalized.map((comic) => comic.cardPrioritySum),
   );
-  const maxImportance = Math.max(
-    0,
-    ...unnormalized.map((comic) => comic.importanceScore),
-  );
-  const totalScoreWeight =
-    config.cardPriorityWeight + config.comicImportanceWeight;
-
   return unnormalized
     .map((comic) => {
       const normalizedCardPriority =
         maxCardPriority > 0 ? comic.cardPrioritySum / maxCardPriority : 0;
-      const normalizedImportance =
-        maxImportance > 0 ? comic.importanceScore / maxImportance : 0;
-      const score =
-        (config.cardPriorityWeight * normalizedCardPriority +
-          config.comicImportanceWeight * normalizedImportance) /
-        totalScoreWeight;
       return {
         ...comic,
-        score,
+        score: normalizedCardPriority,
         normalizedCardPriority,
-        normalizedImportance,
       };
     })
     .sort(
       (left, right) =>
-        right.score - left.score ||
         right.cardPrioritySum - left.cardPrioritySum ||
-        right.importanceScore - left.importanceScore ||
         left.comic.id.localeCompare(right.comic.id),
     );
 }
