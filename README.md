@@ -4,16 +4,54 @@ Tira is a Spanish-learning prototype for English speakers that turns translated 
 
 ## Learning model
 
-- Every reviewed word—and every Latin-script word recovered by the draft OCR pipeline—is a direct click target. Choosing a word is only navigation: it records zero learned cards.
+- Every reviewed word—and every Latin-script word recovered by the draft OCR pipeline—is a direct click target. Choosing a word is only navigation: it records no learning event or card timestamp.
 - The sidebar then shows that word's meaning card plus any reusable expression, grammar, or necessary context cards connected to that exact occurrence.
 - All 48 reusable grammar and expression cards use plain-English questions, beginner explanations, and generic bilingual examples. A separate display-only “In this comic” note explains the current occurrence; the shared card itself remains reusable across strips.
-- Choosing one of those individual cards means “I needed help with this.” Only that exact card enters learning, increments “learned today,” and becomes due after one simulated day.
-- Finishing a comic means “I understand the whole strip.” Eligible cards not chosen for help are graded as independent successes. New cards graduate with a 14-day interval.
-- A help grade always wins over an implicit success on the same study day.
-- The next comic maximizes distinct overlap with due cards, then urgency. When nothing is due, unseen curriculum comes next. Once all material has been seen, the demo advances its clock to the earliest due review.
-- Progress, the active comic, and opened regions are stored in IndexedDB on the device and survive reloads without consuming the much smaller localStorage quota. Existing `tira:srs:v3` and `tira:ui:v3` localStorage records are migrated once, then removed after a successful IndexedDB write.
+- Loading a comic starts a pending timestamped exposure for every unique, exact schedulable card connected to that strip. Opening one specific card records the answer-opening timestamp for that exact card. Reopening it may preserve additional timestamps, but still counts as one help outcome for that comic exposure. Preview-only cards never enter this history.
+- Finishing a comic means “I understand the whole strip” and turns the pending exposure into a completed one. A card opened at least once is evidence that help was needed; a card left unopened is evidence of independent understanding. An unfinished comic never turns its unopened cards into successes, and resuming it after a reload does not create a duplicate exposure.
+- Completed exposures retain their comic-display, completion, and exact-card opening timestamps. The full history is preserved rather than truncated to a recent event window, so every new selection can be evaluated against the learner's complete record.
+- There are no simulated days, due dates, or fixed review intervals. After every completed comic, the scheduler recalculates every card's current priority and chooses the next comic immediately. The just-completed comic is excluded when any alternative exists, providing a one-comic cooldown without preventing the same learning target from appearing in another strip.
+- Progress, the active pending exposure, and opened regions are stored in IndexedDB on the device and survive reloads without consuming the much smaller localStorage quota.
 
-The simplified schedule is intentionally transparent: help → 1 day; first independent recall → 3 days; later successes grow by the card’s ease factor; unseen material understood without help → 14 days.
+### Continuous card priority
+
+The scheduler combines two signals. **Help need** (`H`) asks how often the learner has opened a card in recent completed exposures, plus any still-active exposure whose answer has already been opened. A pending unopened exposure remains neutral until the comic is finished. For effective exposure `i`, its evidence weight halves every 14 days:
+
+```text
+wᵢ = 2 ^ (−ageDaysᵢ / 14)
+F  = Σ wᵢ for exposures where the card was opened
+S  = Σ wᵢ for exposures where the card was not opened
+H  = (0.35 + F) / (1 + F + S)
+```
+
+The `0.35` numerator and one unit of prior evidence give an unseen card a 35% help-need baseline without letting a single observation force the score to zero or one. Frequent recent opens push `H` upward; frequent recent displays without an open push it downward.
+
+**Forgetting risk** (`G`) uses an exponential forgetting curve. A card begins with one day of memory stability. Before a later successful exposure, its predicted retrievability is `R = 2 ^ (−gapDays / stabilityDays)`; success then multiplies stability by `1 + 1.5 × (1 − R)`, capped at 365 days. This gives little long-term benefit to massed repetition and more benefit to a successful recall after a useful delay. An opened exposure is treated as a lapse and changes stability to `max(0.25, min(1, 0.4 × stabilityDays))`. At the instant comics are ranked:
+
+```text
+G = 1 − 2 ^ (−elapsedDays / stabilityDays)
+P = 1 − (1 − H) × (1 − G)
+```
+
+`P` is a bounded priority index, not a calibrated probability. It stays high for cards that repeatedly require help even immediately after exposure, stays low for cards repeatedly understood without help, and rises as any card has time to be forgotten. The constants—14-day evidence half-life, 35% unseen baseline, one-day initial stability, `1.5` success gain, `0.4` lapse multiplier, 0.25-day floor, and 365-day ceiling—are transparent version-one defaults that can later be fitted to the learner's history.
+
+### Choosing the next comic
+
+For each comic, the scheduler sums `P` over its unique exact schedulable card IDs. It does not use or merge the provisional analytics target IDs described below. Both the largest card-priority sum and the largest corpus importance score are normalized to `1`, then combined:
+
+```text
+cardAxis       = comicCardPrioritySum / largestComicCardPrioritySum
+importanceAxis = comicImportance / largestComicImportance
+selectionScore = 0.80 × cardAxis + 0.20 × importanceAxis
+```
+
+Thus 80% of selection follows the learner's live exact-card needs and 20% favors comics that connect important recurring material. This calculation runs for every Next action, not once per calendar day.
+
+### Persistence migration and research basis
+
+Schema-v3 progress recorded simulated day numbers and retained only a capped review history, so it cannot be converted into exact historical timestamps. Migration preserves its aggregate learning evidence as a bounded legacy prior without inventing dates; complete timestamp history begins with the continuous scheduler. Existing `tira:srs:v3` and `tira:ui:v3` localStorage records are still imported once and removed only after a successful IndexedDB write.
+
+The model is a deliberately explainable adaptation rather than an implementation of any one published scheduler. Its exponential retrievability curve and history features follow [Half-Life Regression for language learning](https://aclanthology.org/P16-1174/); its use of item difficulty plus the amount, timing, and outcome of practice follows the [DASH personalized-review model](https://doi.org/10.1177/0956797613504302); and its separate stability, difficulty, and retrievability signals follow the [official FSRS algorithm description](https://github.com/open-spaced-repetition/awesome-fsrs/wiki/The-Algorithm).
 
 ## Comic importance
 

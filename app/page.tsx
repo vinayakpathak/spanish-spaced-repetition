@@ -22,15 +22,15 @@ import {
 import {
   completeComic,
   createSrsState,
-  getCardProgress,
-  getDueCardIds,
-  getLearnedTodayCardIds,
+  getRecentlyOpenedCardIds,
   hydrateSrsState,
   reconcileSrsState,
-  recordCardHelp,
+  recordCardOpen,
+  scoreCardPriority,
   selectNextComic,
   serializeSrsState,
-  type CardProgress,
+  type CardPriorityDiagnostics,
+  type RankedComic,
   type SrsState,
 } from "../lib/srs";
 import {
@@ -66,21 +66,21 @@ const KIND_GROUPS: readonly {
   },
 ];
 
-type LibraryFilter = "today" | "next" | "mastered" | "all";
+type LibraryFilter = "recent" | "priority" | "strong" | "all";
 
 interface Summary {
   completedTitle: string;
   helpCardCount: number;
-  masteredCount: number;
+  independentCount: number;
   nextComic: Comic;
-  overlapCardIds: string[];
-  advancedDays: number;
-  reason: "due" | "new" | "revisit";
+  priorityCardIds: string[];
+  ranking: RankedComic<CorpusManifest["comics"][number]>;
 }
 
 const initialSelection = selectNextComic(
   REVIEWED_CORPUS_MANIFEST.comics,
   createSrsState(),
+  0,
 );
 
 const DEGRADED_CORPUS_WARNING =
@@ -90,15 +90,35 @@ function unique<T>(values: readonly T[]): T[] {
   return [...new Set(values)];
 }
 
-function statusLabel(progress: CardProgress, studyDay: number): string {
-  if (progress.lastHelpDay === studyDay) return "learned today";
+/** Capture the clock only at interaction/effect boundaries, never in render. */
+function captureTimestamp(): number {
+  return Date.now();
+}
+
+function priorityBand(progress: CardPriorityDiagnostics):
+  | "new"
+  | "high"
+  | "medium"
+  | "strong" {
   if (progress.status === "unseen") return "new";
-  if (progress.dueDay !== null && progress.dueDay <= studyDay) return "due now";
-  if (progress.dueDay !== null) {
-    const days = progress.dueDay - studyDay;
-    return days === 1 ? "tomorrow" : `in ${days} days`;
-  }
-  return progress.status === "mastered" ? "mastered" : "in progress";
+  if (progress.priorityIndex >= 0.6) return "high";
+  if (progress.priorityIndex >= 0.25) return "medium";
+  return "strong";
+}
+
+function statusLabel(progress: CardPriorityDiagnostics): string {
+  const band = priorityBand(progress);
+  if (band === "new") return "not seen";
+  if (band === "high") return "high priority";
+  if (band === "medium") return "medium priority";
+  return "strong";
+}
+
+function formatPriority(value: number): string {
+  return new Intl.NumberFormat("en", {
+    style: "percent",
+    maximumFractionDigits: 0,
+  }).format(value);
 }
 
 function formatImportanceScore(score: number): string {
@@ -111,6 +131,8 @@ function formatImportanceScore(score: number): string {
 
 export default function Home() {
   const [srs, setSrs] = useState<SrsState>(initialSelection.state);
+  const [schedulerNow, setSchedulerNow] = useState(0);
+  const [currentRanking, setCurrentRanking] = useState(initialSelection.ranking);
   const [currentComicId, setCurrentComicId] = useState(initialSelection.comic.id);
   const [corpusManifest, setCorpusManifest] = useState<CorpusManifest>(
     REVIEWED_CORPUS_MANIFEST,
@@ -132,7 +154,7 @@ export default function Home() {
   const [showRankings, setShowRankings] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showReset, setShowReset] = useState(false);
-  const [libraryFilter, setLibraryFilter] = useState<LibraryFilter>("today");
+  const [libraryFilter, setLibraryFilter] = useState<LibraryFilter>("recent");
   const [libraryLimit, setLibraryLimit] = useState(200);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [toast, setToast] = useState<string | null>(null);
@@ -173,30 +195,53 @@ export default function Home() {
   const selectedWordSchedulableCardCount = candidateCards.filter(
     (card) => card.schedulable !== false,
   ).length;
-  const dueCardIds = getDueCardIds(srs, curriculumCardIds);
-  const learnedTodayIds = getLearnedTodayCardIds(srs).filter((cardId) =>
-    curriculumCardIdSet.has(cardId),
+  const recentlyOpenedIds = useMemo(
+    () =>
+      getRecentlyOpenedCardIds(srs, schedulerNow).filter((cardId) =>
+        curriculumCardIdSet.has(cardId),
+      ),
+    [curriculumCardIdSet, schedulerNow, srs],
+  );
+  const cardProgressById = useMemo(
+    () =>
+      new Map(
+        curriculumCardIds.map((cardId) => [
+          cardId,
+          scoreCardPriority(srs, cardId, schedulerNow),
+        ]),
+      ),
+    [curriculumCardIds, schedulerNow, srs],
+  );
+  const highPriorityIds = curriculumCardIds.filter(
+    (cardId) => (cardProgressById.get(cardId)?.priorityIndex ?? 0) >= 0.6,
   );
   const activeSession = srs.activeSession;
-  const clickedCardIds = activeSession?.clickedCardIds ?? [];
-  const eligibleCardIds = activeSession?.eligibleCardIds ?? [];
-  const selectedWordLearnedTodayCount = selectedWord
+  const openedCardIds = activeSession?.openedCardIds ?? [];
+  const displayedCardIds = activeSession?.cardIds ?? [];
+  const selectedWordOpenedRecentlyCount = selectedWord
     ? unique(selectedWord.cardIds).filter((cardId) =>
-        learnedTodayIds.includes(cardId),
+        recentlyOpenedIds.includes(cardId),
       ).length
     : 0;
   const currentIndex = corpusManifest.comics.findIndex(
     (comic) => comic.id === currentComic.id,
   );
   const currentManifestEntry = corpusManifest.comics[currentIndex];
-  const currentDueCount = unique(currentComic.cardIds).filter((cardId) =>
-    dueCardIds.includes(cardId),
+  const currentHighPriorityCount = unique(currentComic.cardIds).filter(
+    (cardId) => (cardProgressById.get(cardId)?.priorityIndex ?? 0) >= 0.6,
   ).length;
   const currentNewCount = unique(currentComic.cardIds).filter(
-    (cardId) => getCardProgress(srs, cardId).status === "unseen",
+    (cardId) => cardProgressById.get(cardId)?.status === "unseen",
   ).length;
-  const masteredCount = curriculumCardIds.filter(
-    (cardId) => getCardProgress(srs, cardId).status === "mastered",
+  const strongCount = curriculumCardIds.filter(
+    (cardId) => {
+      const progress = cardProgressById.get(cardId);
+      return (
+        progress !== undefined &&
+        progress.status !== "unseen" &&
+        progress.priorityIndex < 0.2
+      );
+    },
   ).length;
   const rankedComics = useMemo(
     () =>
@@ -233,21 +278,26 @@ export default function Home() {
     let cancelled = false;
 
     async function hydrate() {
+      const nowMs = captureTimestamp();
       const progressStore = createBrowserProgressStore();
       progressStoreRef.current = progressStore;
       const [storedProgress, manifestLoad] = await Promise.all([
         progressStore.load(),
         loadCorpusManifest(),
       ]);
-      const persistedState = hydrateSrsState(storedProgress.serializedSrs);
+      const persistedState = hydrateSrsState(
+        storedProgress.serializedSrs,
+        nowMs,
+      );
       let persistenceEnabled = canPersistCorpusProgress(manifestLoad);
       let manifest = manifestLoad.manifest;
       let restored = reconcileSrsState(
         persistedState,
         manifest.comics,
+        nowMs,
       );
       const restoredOpened = storedProgress.openedByComic;
-      let selected = selectNextComic(manifest.comics, restored);
+      let selected = selectNextComic(manifest.comics, restored, nowMs);
       let bundle: CorpusComicBundle;
 
       try {
@@ -258,8 +308,12 @@ export default function Home() {
         // checked-in reviewed curriculum without persisting this reduced view.
         persistenceEnabled = canPersistCorpusProgress(manifestLoad, true);
         manifest = REVIEWED_CORPUS_MANIFEST;
-        restored = reconcileSrsState(persistedState, manifest.comics);
-        selected = selectNextComic(manifest.comics, restored);
+        restored = reconcileSrsState(
+          persistedState,
+          manifest.comics,
+          nowMs,
+        );
+        selected = selectNextComic(manifest.comics, restored, nowMs);
         bundle = await loadComicBundle(selected.comic);
       }
       if (cancelled) return;
@@ -288,6 +342,8 @@ export default function Home() {
         if (cancelled) return;
         setCorpusManifest(manifest);
         setSrs(selected.state);
+        setSchedulerNow(nowMs);
+        setCurrentRanking(selected.ranking);
         setCurrentComicId(selected.comic.id);
         setOpenedByComic(restoredOpened);
         setStorageWarning(persistenceWarning);
@@ -375,13 +431,19 @@ export default function Home() {
       setToast("Preview only · this meaning still needs review");
       return;
     }
-    const wasAlreadyLearnedToday = learnedTodayIds.includes(cardId);
-    const nextState = recordCardHelp(srs, cardId);
+    if (!srs.activeSession) {
+      setToast("Answer shown · this comic is already complete");
+      return;
+    }
+    const nowMs = captureTimestamp();
+    const wasOpenedRecently = recentlyOpenedIds.includes(cardId);
+    const nextState = recordCardOpen(srs, cardId, nowMs);
+    setSchedulerNow(nowMs);
     commit(nextState);
     setToast(
-      wasAlreadyLearnedToday
-        ? "This card was already learned today"
-        : "1 card learned today · saved for review",
+      wasOpenedRecently
+        ? "Opening recorded again · priority updated"
+        : "Card opening recorded · priority updated",
     );
   }
 
@@ -393,21 +455,25 @@ export default function Home() {
 
   async function finishComic() {
     const sessionBefore = srs.activeSession;
-    if (!sessionBefore || comicLoading) return;
+    if (comicLoading) return;
 
-    const clicked = new Set(sessionBefore.clickedCardIds);
-    const independentlyUnderstood = sessionBefore.eligibleCardIds.filter(
-      (cardId) =>
-        !clicked.has(cardId) &&
-        getCardProgress(srs, cardId).lastHelpDay !== srs.studyDay,
-    ).length;
-    const completed = completeComic(srs);
-    const next = selectNextComic(corpusManifest.comics, completed);
+    const nowMs = captureTimestamp();
+    const opened = new Set(sessionBefore?.openedCardIds ?? []);
+    const independentlyUnderstood =
+      sessionBefore?.cardIds.filter((cardId) => !opened.has(cardId)).length ?? 0;
+    const completed = sessionBefore ? completeComic(srs, nowMs) : srs;
+    const next = selectNextComic(
+      corpusManifest.comics,
+      completed,
+      nowMs,
+    );
     setComicLoading(true);
     let nextBundle: CorpusComicBundle;
     try {
       nextBundle = await loadComicBundle(next.comic);
     } catch {
+      setSchedulerNow(nowMs);
+      commit(completed);
       setToast("That comic could not be loaded. Your current progress is safe.");
       setComicLoading(false);
       return;
@@ -415,15 +481,21 @@ export default function Home() {
     const nextOpened = { ...openedByComic, [next.comic.id]: [] };
 
     cacheBundle(nextBundle);
-    setSummary({
-      completedTitle: currentComic.titleEs,
-      helpCardCount: clicked.size,
-      masteredCount: independentlyUnderstood,
-      nextComic: nextBundle.comic,
-      overlapCardIds: next.overlapCardIds,
-      advancedDays: next.advancedDays,
-      reason: next.reason,
-    });
+    if (sessionBefore) {
+      setSummary({
+        completedTitle: currentComic.titleEs,
+        helpCardCount: opened.size,
+        independentCount: independentlyUnderstood,
+        nextComic: nextBundle.comic,
+        priorityCardIds: next.overlapCardIds,
+        ranking: next.ranking,
+      });
+    } else {
+      setSummary(null);
+      setToast("Next comic loaded");
+    }
+    setSchedulerNow(nowMs);
+    setCurrentRanking(next.ranking);
     setCurrentComicId(next.comic.id);
     closeRegion();
     setShowTitleText(false);
@@ -434,9 +506,11 @@ export default function Home() {
 
   async function resetProgress() {
     if (comicLoading) return;
+    const nowMs = captureTimestamp();
     const fresh = selectNextComic(
       corpusManifest.comics,
       createSrsState(),
+      nowMs,
     );
     setComicLoading(true);
     let freshBundle: CorpusComicBundle;
@@ -449,6 +523,8 @@ export default function Home() {
     }
     const nextOpened: OpenedByComic = {};
     cacheBundle(freshBundle);
+    setSchedulerNow(nowMs);
+    setCurrentRanking(fresh.ranking);
     setCurrentComicId(fresh.comic.id);
     closeRegion();
     setComicZoomed(false);
@@ -556,24 +632,43 @@ export default function Home() {
   const libraryCards = useMemo(() => {
     const filtered = [...cardsById.values()].filter((card) => {
       if (card.schedulable === false) return false;
-      const progress = getCardProgress(srs, card.id);
-      if (libraryFilter === "today") return progress.lastHelpDay === srs.studyDay;
-      if (libraryFilter === "next") return progress.dueDay !== null;
-      if (libraryFilter === "mastered") return progress.status === "mastered";
-      return progress.status !== "unseen";
+      const progress = cardProgressById.get(card.id);
+      if (!progress) return false;
+      if (libraryFilter === "recent") {
+        return recentlyOpenedIds.includes(card.id);
+      }
+      if (libraryFilter === "priority") return progress.priorityIndex >= 0.6;
+      if (libraryFilter === "strong") {
+        return progress.status !== "unseen" && progress.priorityIndex < 0.2;
+      }
+      return progress.displayCount > 0;
     });
     return [...filtered].sort((a, b) => {
-      const first = getCardProgress(srs, a.id);
-      const second = getCardProgress(srs, b.id);
+      const first = cardProgressById.get(a.id);
+      const second = cardProgressById.get(b.id);
+      if (!first || !second) return a.id.localeCompare(b.id);
+      if (libraryFilter === "recent") {
+        return (
+          (second.lastOpenedAtMs ?? 0) - (first.lastOpenedAtMs ?? 0) ||
+          a.promptEs.localeCompare(b.promptEs, "es")
+        );
+      }
+      if (libraryFilter === "strong") {
+        return (
+          first.priorityIndex - second.priorityIndex ||
+          a.promptEs.localeCompare(b.promptEs, "es")
+        );
+      }
       return (
-        (first.dueDay ?? Number.MAX_SAFE_INTEGER) -
-          (second.dueDay ?? Number.MAX_SAFE_INTEGER) ||
+        second.priorityIndex - first.priorityIndex ||
         a.promptEs.localeCompare(b.promptEs, "es")
       );
     });
-  }, [cardsById, libraryFilter, srs]);
+  }, [cardProgressById, cardsById, libraryFilter, recentlyOpenedIds]);
 
-  const targetCards = unique(eligibleCardIds)
+  const targetCards = currentRanking.cardPriorities
+    .filter((priority) => priority.priorityIndex >= 0.35)
+    .map((priority) => priority.cardId)
     .map((id) => lookupCard(id))
     .filter((card): card is LearningCard => card !== null);
   const targetWidth = Math.min(760, Math.max(320, currentComic.image.width));
@@ -586,7 +681,7 @@ export default function Home() {
           <span>tira</span>
         </button>
         <div className="session-note">
-          <span className="pulse-dot" /> session · day {srs.studyDay}
+          <span className="pulse-dot" /> continuous scheduler
         </div>
         <nav className="top-actions" aria-label="Main navigation">
           <button className="text-nav active" aria-current="page">Learn</button>
@@ -598,14 +693,14 @@ export default function Home() {
           >
             Rankings
           </button>
-          <div className="top-stat"><strong>{dueCardIds.length}</strong> to review</div>
+          <div className="top-stat"><strong>{highPriorityIds.length}</strong> high priority</div>
           <button
             className="avatar"
             onClick={() => setShowLibrary(true)}
-            aria-label={`Open your cards. ${learnedTodayIds.length} ${learnedTodayIds.length === 1 ? "card" : "cards"} learned today`}
-            title={`${learnedTodayIds.length} learned today`}
+            aria-label={`Open your cards. ${recentlyOpenedIds.length} ${recentlyOpenedIds.length === 1 ? "card" : "cards"} opened in the last 24 hours`}
+            title={`${recentlyOpenedIds.length} opened in the last 24 hours`}
           >
-            {learnedTodayIds.length}
+            {recentlyOpenedIds.length}
           </button>
         </nav>
       </header>
@@ -632,16 +727,15 @@ export default function Home() {
           </div>
 
           <div className="target-summary">
-            <div className="target-label">WHY THIS COMIC</div>
-            {currentDueCount > 0 ? (
-              <div className="target-row"><span className="target-dot due" /> <strong>{currentDueCount}</strong> review matches</div>
+            <div className="target-label">CURRENT SCHEDULER FIT</div>
+            {currentHighPriorityCount > 0 ? (
+              <div className="target-row"><span className="target-dot priority" /> <strong>{currentHighPriorityCount}</strong> high-priority cards</div>
             ) : null}
             {currentNewCount > 0 ? (
-              <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> new cards</div>
+              <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> not yet observed</div>
             ) : null}
-            {currentDueCount === 0 && currentNewCount === 0 ? (
-              <div className="target-row"><span className="target-dot revisit" /> a consolidation pass</div>
-            ) : null}
+            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking.score)}</strong> combined fit</div>
+            <div className="target-row"><span className="target-dot" /> {formatPriority(currentRanking.normalizedCardPriority)} card need · {formatPriority(currentRanking.normalizedImportance)} importance</div>
           </div>
 
           <div className="target-peek">
@@ -653,7 +747,7 @@ export default function Home() {
 
           <div className="tiny-tip">
             <span>?</span>
-            <p>Opening a word adds 0 cards. A card is learned only when you choose it from the sidebar.</p>
+            <p>Opening a word records nothing. Revealing one exact card adds an opening timestamp to its history.</p>
           </div>
         </aside>
 
@@ -818,19 +912,19 @@ export default function Home() {
 
               <div className="selected-word-kicker">SELECTED SPANISH WORD</div>
               <div className="phrase-original" lang="es">“{selectedWord?.text ?? selectedRegion.labelEs}”</div>
-              <div className={`zero-card-callout ${selectedWordLearnedTodayCount > 0 ? "has-learned" : ""}`} role="status">
+              <div className={`zero-card-callout ${selectedWordOpenedRecentlyCount > 0 ? "has-learned" : ""}`} role="status">
                 <strong>
-                  {selectedWordLearnedTodayCount > 0
-                    ? `${selectedWordLearnedTodayCount} related ${selectedWordLearnedTodayCount === 1 ? "card" : "cards"} learned today`
+                  {selectedWordOpenedRecentlyCount > 0
+                    ? `${selectedWordOpenedRecentlyCount} related ${selectedWordOpenedRecentlyCount === 1 ? "card" : "cards"} opened recently`
                     : selectedWordSchedulableCardCount > 0
                       ? "Word opened · no cards selected"
                       : "Translation draft · preview only"}
                 </strong>
                 <span>
-                  {selectedWordLearnedTodayCount > 0
-                    ? "These may include shared cards learned elsewhere today; only explicit card choices are scheduled."
+                  {selectedWordOpenedRecentlyCount > 0
+                    ? "These may include shared cards opened elsewhere in the last 24 hours; only explicit answer reveals change their history."
                     : selectedWordSchedulableCardCount > 0
-                      ? "Choose a card below. Opening the word alone changes nothing."
+                      ? "Choose a card below. Opening the word alone records no learning event."
                       : "No reviewed-safe English match is available yet, so this word cannot enter spaced repetition."}
                 </span>
               </div>
@@ -841,7 +935,7 @@ export default function Home() {
                     <span>CHOOSE A FLASHCARD</span>
                     <strong>
                       {selectedWordSchedulableCardCount > 0
-                        ? `${candidateCards.filter((card) => learnedTodayIds.includes(card.id)).length} / ${selectedWordSchedulableCardCount} review cards learned today`
+                        ? `${candidateCards.filter((card) => recentlyOpenedIds.includes(card.id)).length} / ${selectedWordSchedulableCardCount} opened in 24 hours`
                         : "Preview only"}
                     </strong>
                   </div>
@@ -872,9 +966,13 @@ export default function Home() {
                           <div className="candidate-list">
                             {groupCards.map((card) => {
                               const isSelected = selectedCardId === card.id;
-                              const isLearned = learnedTodayIds.includes(card.id);
+                              const isLearned = recentlyOpenedIds.includes(card.id);
                               const isProvisional = card.reviewStatus === "needs-review";
                               const isSchedulable = card.schedulable !== false;
+                              const cardPriority = isSchedulable
+                                ? cardProgressById.get(card.id) ??
+                                  scoreCardPriority(srs, card.id, schedulerNow)
+                                : null;
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
                               const frontId = `${candidateId}-front`;
                               const answerId = `${candidateId}-answer`;
@@ -929,8 +1027,8 @@ export default function Home() {
                                       <small id={`${candidateId}-status`}>
                                         {!isSchedulable
                                           ? isSelected
-                                            ? "Preview shown · not added to review"
-                                            : "Preview only · not ready for review"
+                                            ? "Preview shown · no history recorded"
+                                            : "Preview only · not ready for scheduling"
                                           : isSelected
                                           ? card.kind === "word"
                                             ? isProvisional
@@ -939,13 +1037,13 @@ export default function Home() {
                                             : "Answer shown · tap to close"
                                           : isLearned
                                             ? card.kind === "word"
-                                              ? "Learned today · show meaning"
-                                              : "Learned today · show answer"
+                                              ? "Opened recently · show meaning"
+                                              : "Opened recently · show answer"
                                             : card.kind === "word"
                                               ? isProvisional
-                                                ? "Reveal candidate + add to review"
-                                                : "Reveal meaning + add to review"
-                                              : "Reveal answer + add to review"}
+                                                ? "Reveal candidate + record opening"
+                                                : "Reveal meaning + record opening"
+                                              : "Reveal answer + record opening"}
                                       </small>
                                     </span>
                                   </button>
@@ -1032,7 +1130,7 @@ export default function Home() {
                                         </div>
                                       ) : null}
                                       {isSchedulable ? (
-                                        <div className="candidate-memory"><span>✓</span> Returns on day {srs.studyDay + 1}</div>
+                                        <div className="candidate-memory"><span>✓</span> Priority now {formatPriority(cardPriority?.priorityIndex ?? 0)} · reconsidered on every Next</div>
                                       ) : (
                                         <div className="candidate-memory is-preview"><span>○</span> Not scheduled · translation needs review</div>
                                       )}
@@ -1061,9 +1159,9 @@ export default function Home() {
               </p>
               <div className="gesture-line"><span>↖</span> try any highlighted Spanish word</div>
               <div className="today-mini">
-                <span>TODAY</span>
-                <strong>{learnedTodayIds.length}</strong>
-                <p>{learnedTodayIds.length === 1 ? "card learned" : "cards learned"}</p>
+                <span>LAST 24 HOURS</span>
+                <strong>{recentlyOpenedIds.length}</strong>
+                <p>{recentlyOpenedIds.length === 1 ? "card opened" : "cards opened"}</p>
               </div>
             </div>
           )}
@@ -1076,10 +1174,14 @@ export default function Home() {
           <span>shortcuts to each text group’s first word</span>
         </div>
         <button className="finish-button" onClick={finishComic} disabled={comicLoading}>
-          {comicLoading ? "Loading the next comic…" : "I understand this comic"} <span>→</span>
+          {comicLoading
+            ? "Loading the next comic…"
+            : activeSession
+              ? "I understand this comic"
+              : "Try the next comic again"} <span>→</span>
         </button>
         <div className="review-preview">
-          <strong>{clickedCardIds.length}</strong> help cards this comic · <strong>{eligibleCardIds.filter((cardId) => !clickedCardIds.includes(cardId)).length}</strong> understood independently
+          <strong>{openedCardIds.length}</strong> help cards this comic · <strong>{displayedCardIds.filter((cardId) => !openedCardIds.includes(cardId)).length}</strong> understood independently
         </div>
       </footer>
 
@@ -1089,16 +1191,12 @@ export default function Home() {
             <div className="success-orbit"><span>✓</span></div>
             <div className="summary-eyebrow">COMIC UNDERSTOOD</div>
             <h2 id="summary-title" lang="es">{summary.completedTitle}</h2>
-            <p>The comic did its job. Your next one comes from your review schedule, not from chance.</p>
+            <p>Your timestamps are recorded. Every card priority was recalculated before choosing what comes next.</p>
 
             <div className="grade-grid">
-              <div><strong>{summary.helpCardCount}</strong><span>help used this comic</span><small>return soon</small></div>
-              <div><strong>{summary.masteredCount}</strong><span>understood unaided</span><small>graduated</small></div>
+              <div><strong>{summary.helpCardCount}</strong><span>help cards opened</span><small>help need rises</small></div>
+              <div><strong>{summary.independentCount}</strong><span>understood unaided</span><small>stability grows</small></div>
             </div>
-
-            {summary.advancedDays > 0 ? (
-              <div className="time-jump">The simulation advanced <strong>{summary.advancedDays} days</strong> to your next review.</div>
-            ) : null}
 
             <div className="next-comic-card">
               <img src={summary.nextComic.image.src} alt="" />
@@ -1106,15 +1204,13 @@ export default function Home() {
                 <span>UP NEXT</span>
                 <strong lang="es">{summary.nextComic.titleEs}</strong>
                 <p>
-                  {summary.reason === "due"
-                    ? `${summary.overlapCardIds.length} matches with your review set`
-                    : "opens a new part of the Spanish curriculum"}
+                  {formatPriority(summary.ranking.score)} combined fit · {formatPriority(summary.ranking.normalizedCardPriority)} card need · {formatPriority(summary.ranking.normalizedImportance)} importance
                 </p>
               </div>
             </div>
-            {summary.overlapCardIds.length > 0 ? (
+            {summary.priorityCardIds.length > 0 ? (
               <div className="overlap-chips">
-                {summary.overlapCardIds.slice(0, 4).map((id) => {
+                {summary.priorityCardIds.slice(0, 4).map((id) => {
                   const card = cardsById.get(id);
                   return card ? <span key={id} lang="es">{card.promptEs}</span> : null;
                 })}
@@ -1134,15 +1230,15 @@ export default function Home() {
               <button onClick={() => setShowLibrary(false)} aria-label="Close cards">×</button>
             </div>
             <div className="memory-overview">
-              <div><strong>{learnedTodayIds.length}</strong><span>today</span></div>
-              <div><strong>{dueCardIds.length}</strong><span>due now</span></div>
-              <div><strong>{masteredCount}</strong><span>mastered</span></div>
+              <div><strong>{recentlyOpenedIds.length}</strong><span>opened · 24h</span></div>
+              <div><strong>{highPriorityIds.length}</strong><span>high priority</span></div>
+              <div><strong>{strongCount}</strong><span>strong</span></div>
             </div>
             <div className="memory-tabs" aria-label="Card filters">
               {([
-                ["today", "Today"],
-                ["next", "Upcoming"],
-                ["mastered", "Mastered"],
+                ["recent", "Opened"],
+                ["priority", "Priority"],
+                ["strong", "Strong"],
                 ["all", "All"],
               ] as const).map(([filter, label]) => (
                 <button
@@ -1162,12 +1258,15 @@ export default function Home() {
               {libraryCards.length > 0 ? (
                 <>
                   {libraryCards.slice(0, libraryLimit).map((card) => {
-                    const progress = getCardProgress(srs, card.id);
+                    const progress =
+                      cardProgressById.get(card.id) ??
+                      scoreCardPriority(srs, card.id, schedulerNow);
+                    const band = priorityBand(progress);
                     return (
                       <article className="memory-row" key={card.id}>
                         <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
                         <div><strong lang="es">{card.promptEs}</strong><p>{card.answerEn}</p></div>
-                        <span className={`status-pill status-${progress.status}`}>{statusLabel(progress, srs.studyDay)}</span>
+                        <span className={`status-pill status-${band}`}>{statusLabel(progress)} · {formatPriority(progress.priorityIndex)}</span>
                       </article>
                     );
                   })}
@@ -1292,11 +1391,13 @@ export default function Home() {
             <p>Tira turns the real context of a Spanish comic into a memory session—without a separate quiz.</p>
             <ol className="method-steps">
               <li><span>1</span><div><strong>Read before translating</strong><p>The Spanish artwork and the joke give you a real chance to infer meaning.</p></div></li>
-              <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. Opening it saves nothing; reveal only the word meaning, reusable expression, grammar lesson, or context card you needed.</p></div></li>
-              <li><span>3</span><div><strong>Finish honestly</strong><p>What you understood unaided graduates; what needed help returns soon.</p></div></li>
-              <li><span>4</span><div><strong>Let overlap choose</strong><p>Your next comic contains as many of your due cards as possible.</p></div></li>
+              <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. That records nothing; reveal only the exact word meaning, expression, grammar lesson, or context card you needed.</p></div></li>
+              <li><span>3</span><div><strong>Finish honestly</strong><p>The app records which exact cards you opened and which displayed cards you understood without help.</p></div></li>
+              <li><span>4</span><div><strong>Recalculate every time</strong><p>Every Next action combines live card priorities with comic importance to choose the strongest follow-up.</p></div></li>
             </ol>
             <div className="license-note">
+              <strong>About continuous scheduling</strong>
+              <p>Each schedulable card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. The next comic score is 80% normalized exact-card priority coverage and 20% normalized corpus importance; the comic just completed gets a one-step cooldown.</p>
               <strong>About comic importance</strong>
               <p>Importance is PageRank-style recursive importance—a damped two-way comic–target centrality calculation. Comics raise linked targets; targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated schedulable word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Generated contextual senses are unreviewed, so scores are provisional, and unresolved previews are excluded.</p>
               <strong>About the 258-comic corpus</strong>
@@ -1314,7 +1415,7 @@ export default function Home() {
           <section ref={resetRef} className="reset-modal" role="alertdialog" aria-modal="true" aria-labelledby="reset-title">
             <div className="warning-glyph">↺</div>
             <h2 id="reset-title">Start over?</h2>
-            <p>This removes every card, interval, and history entry saved on this device.</p>
+            <p>This removes every display timestamp, opening timestamp, priority history, and comic session saved on this device.</p>
             <div className="reset-actions">
               <button onClick={() => setShowReset(false)}>Cancel</button>
               <button onClick={resetProgress} disabled={comicLoading}>Yes, reset</button>

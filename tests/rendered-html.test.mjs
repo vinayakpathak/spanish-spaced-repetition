@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
+import { COMICS } from "../lib/content.ts";
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -22,8 +23,12 @@ test("server-renders the Tira learning experience", async () => {
   assert.match(html, /<html[^>]+lang="en"/i);
   assert.match(html, /<title>Tira — learn Spanish, one comic at a time<\/title>/i);
   assert.match(html, /First,/i);
-  assert.match(html, /El deber llama/i);
+  assert.ok(
+    COMICS.some((comic) => html.includes(comic.titleEs)),
+    "the continuously selected reviewed comic is rendered",
+  );
   assert.match(html, /I understand this comic/i);
+  assert.match(html, /continuous scheduler/i);
   assert.match(html, />Rankings</i);
   assert.match(html, /Tap any marked Spanish word in the picture/i);
   assert.match(html, /word meaning, reusable expression, grammar, and necessary context cards/i);
@@ -91,7 +96,10 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   ]);
 
   assert.match(page, /selectNextComic/);
-  assert.match(page, /recordCardHelp/);
+  assert.match(page, /recordCardOpen/);
+  assert.match(page, /scoreCardPriority/);
+  assert.match(page, /80% normalized exact-card priority coverage/);
+  assert.doesNotMatch(page, /studyDay|dueDay|advancedDays/);
   assert.match(page, /Word opened · no cards selected/);
   assert.match(page, /selectedWord\.cardIds/);
   assert.match(page, /createBrowserProgressStore/);

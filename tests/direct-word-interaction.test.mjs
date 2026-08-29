@@ -35,29 +35,54 @@ test("direct word clicks only choose a word; exact card clicks schedule review",
   const learnCardBody = functionBody(page, "learnCard");
 
   assert.match(openWordBody, /setSelectedWordId\(wordId\)/);
-  assert.doesNotMatch(openWordBody, /recordCardHelp/);
+  assert.doesNotMatch(openWordBody, /recordCardOpen/);
   assert.match(page, /onClick=\{\(\) => openWord\(region, word\.id\)\}/);
 
-  assert.match(learnCardBody, /recordCardHelp\(srs, cardId\)/);
+  assert.match(learnCardBody, /recordCardOpen\(srs, cardId, nowMs\)/);
   assert.match(learnCardBody, /card\?\.schedulable === false/);
   assert.ok(
     learnCardBody.indexOf("card?.schedulable === false") <
-      learnCardBody.indexOf("recordCardHelp(srs, cardId)"),
+      learnCardBody.indexOf("recordCardOpen(srs, cardId, nowMs)"),
     "preview-only generated cards return before the SRS grade",
   );
   assert.match(page, /onClick=\{\(\) => learnCard\(card\.id\)\}/);
   assert.doesNotMatch(learnCardBody, /selectedWord\.cardIds\[0\]/);
 });
 
+test("a failed next-comic load preserves completion without fabricating a retry summary", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const finishComicBody = functionBody(page, "finishComic");
+  const failureStart = finishComicBody.indexOf("catch {");
+  const summaryGuard = finishComicBody.indexOf("if (sessionBefore)");
+
+  assert.ok(failureStart >= 0, "next-comic loading has a failure path");
+  assert.ok(
+    finishComicBody.indexOf("commit(completed)", failureStart) > failureStart,
+    "the completed exposure is saved when the next bundle fails",
+  );
+  assert.ok(summaryGuard >= 0, "only a real completion may open the summary");
+  assert.ok(
+    finishComicBody.indexOf("setSummary({", summaryGuard) > summaryGuard,
+    "retrying a completed comic cannot fabricate zero-card completion results",
+  );
+});
+
 test("the initial comic server-renders every printed word as an accessible image overlay", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  const expectedWords = COMICS[0].regions.flatMap((region) => region.words);
   const buttonTags = [...html.matchAll(/<button\b[^>]*data-word-id="([^"]+)"[^>]*>/g)];
   const overlayTags = [
     ...html.matchAll(/<(?:button|span)\b[^>]*data-word-id="([^"]+)"[^>]*>/g),
   ];
+  assert.ok(buttonTags.length > 0, "the selected comic has clickable words");
+  const displayedComic = COMICS.find((comic) =>
+    comic.regions.some((region) =>
+      region.words.some((word) => word.id === buttonTags[0][1]),
+    ),
+  );
+  assert.ok(displayedComic, "the rendered word belongs to a reviewed comic");
+  const expectedWords = displayedComic.regions.flatMap((region) => region.words);
   const expectedById = new Map(expectedWords.map((word) => [word.id, word]));
 
   assert.deepEqual(
