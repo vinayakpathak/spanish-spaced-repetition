@@ -2,17 +2,23 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-  CARDS,
-  CARD_BY_ID,
-  COMICS,
-  COMIC_BY_ID,
-  type CardId,
   type Comic,
   type LearningCard,
   type RevealRegion,
 } from "../lib/content";
+import {
+  canPersistCorpusProgress,
+  loadComicBundle,
+  loadCorpusManifest,
+  REVIEWED_CARD_BY_ID,
+  REVIEWED_COMICS,
+  REVIEWED_COMIC_BY_ID,
+  REVIEWED_CORPUS_MANIFEST,
+  type CorpusComicBundle,
+  type CorpusManifest,
+} from "../lib/corpus";
 import {
   completeComic,
   createSrsState,
@@ -20,16 +26,18 @@ import {
   getDueCardIds,
   getLearnedTodayCardIds,
   hydrateSrsState,
+  reconcileSrsState,
   recordCardHelp,
   selectNextComic,
   serializeSrsState,
   type CardProgress,
   type SrsState,
 } from "../lib/srs";
-
-const SRS_STORAGE_KEY = "tira:srs:v3";
-const UI_STORAGE_KEY = "tira:ui:v3";
-const CURRICULUM_CARD_IDS = CARDS.map((card) => card.id);
+import {
+  createBrowserProgressStore,
+  type OpenedByComic,
+  type ProgressStore,
+} from "../lib/progress-store";
 
 const KIND_GROUPS: readonly {
   kind: LearningCard["kind"];
@@ -59,7 +67,6 @@ const KIND_GROUPS: readonly {
 ];
 
 type LibraryFilter = "today" | "next" | "mastered" | "all";
-type OpenedByComic = Record<string, string[]>;
 
 interface Summary {
   completedTitle: string;
@@ -71,14 +78,16 @@ interface Summary {
   reason: "due" | "new" | "revisit";
 }
 
-const initialSelection = selectNextComic(COMICS, createSrsState());
+const initialSelection = selectNextComic(
+  REVIEWED_CORPUS_MANIFEST.comics,
+  createSrsState(),
+);
+
+const DEGRADED_CORPUS_WARNING =
+  "The full comic collection is temporarily unavailable. Your existing saved progress is preserved; changes in this fallback session will not be saved.";
 
 function unique<T>(values: readonly T[]): T[] {
   return [...new Set(values)];
-}
-
-function lookupCard(cardId: string): LearningCard | null {
-  return (CARD_BY_ID.get(cardId as CardId) as LearningCard | undefined) ?? null;
 }
 
 function statusLabel(progress: CardProgress, studyDay: number): string {
@@ -92,68 +101,55 @@ function statusLabel(progress: CardProgress, studyDay: number): string {
   return progress.status === "mastered" ? "mastered" : "in progress";
 }
 
-function readOpenedRegions(): OpenedByComic {
-  try {
-    const raw = window.localStorage.getItem(UI_STORAGE_KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as { openedByComic?: unknown };
-    if (!parsed.openedByComic || typeof parsed.openedByComic !== "object") return {};
-    return Object.fromEntries(
-      Object.entries(parsed.openedByComic).map(([comicId, regionIds]) => [
-        comicId,
-        Array.isArray(regionIds)
-          ? regionIds.filter((id): id is string => typeof id === "string")
-          : [],
-      ]),
-    );
-  } catch {
-    return {};
-  }
-}
-
-function persist(nextState: SrsState, openedByComic: OpenedByComic) {
-  try {
-    window.localStorage.setItem(SRS_STORAGE_KEY, serializeSrsState(nextState));
-    window.localStorage.setItem(
-      UI_STORAGE_KEY,
-      JSON.stringify({ openedByComic }),
-    );
-  } catch {
-    // Storage can be unavailable in privacy modes. The in-memory session keeps working.
-  }
-}
-
-function readStoredSrs(): string | null {
-  try {
-    return window.localStorage.getItem(SRS_STORAGE_KEY);
-  } catch {
-    return null;
-  }
-}
-
 export default function Home() {
   const [srs, setSrs] = useState<SrsState>(initialSelection.state);
   const [currentComicId, setCurrentComicId] = useState(initialSelection.comic.id);
+  const [corpusManifest, setCorpusManifest] = useState<CorpusManifest>(
+    REVIEWED_CORPUS_MANIFEST,
+  );
+  const [comicsById, setComicsById] = useState<ReadonlyMap<string, Comic>>(
+    () => new Map(REVIEWED_COMIC_BY_ID),
+  );
+  const [cardsById, setCardsById] = useState<
+    ReadonlyMap<string, LearningCard>
+  >(() => new Map(REVIEWED_CARD_BY_ID));
   const [openedByComic, setOpenedByComic] = useState<OpenedByComic>({});
   const [selectedRegionId, setSelectedRegionId] = useState<string | null>(null);
   const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
   const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
   const [showPins, setShowPins] = useState(true);
+  const [comicZoomed, setComicZoomed] = useState(false);
   const [showTitleText, setShowTitleText] = useState(false);
   const [showLibrary, setShowLibrary] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showReset, setShowReset] = useState(false);
   const [libraryFilter, setLibraryFilter] = useState<LibraryFilter>("today");
+  const [libraryLimit, setLibraryLimit] = useState(200);
   const [summary, setSummary] = useState<Summary | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [storageWarning, setStorageWarning] = useState<string | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [comicLoading, setComicLoading] = useState(false);
+  const progressStoreRef = useRef<ProgressStore | null>(null);
+  const persistenceEnabledRef = useRef(false);
   const revealPanelRef = useRef<HTMLElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   const libraryRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const resetRef = useRef<HTMLElement>(null);
 
-  const currentComic = COMIC_BY_ID.get(currentComicId) ?? COMICS[0];
+  const curriculumCardIds = useMemo(
+    () => unique(corpusManifest.comics.flatMap((comic) => comic.cardIds)),
+    [corpusManifest],
+  );
+  const curriculumCardIdSet = useMemo(
+    () => new Set(curriculumCardIds),
+    [curriculumCardIds],
+  );
+  const currentComic =
+    comicsById.get(currentComicId) ?? REVIEWED_COMICS[0];
+  const lookupCard = (cardId: string): LearningCard | null =>
+    cardsById.get(cardId) ?? null;
   const openedRegionIds = openedByComic[currentComic.id] ?? [];
   const selectedRegion =
     currentComic.regions.find((region) => region.id === selectedRegionId) ?? null;
@@ -164,9 +160,12 @@ export default function Home() {
         .map((id) => lookupCard(id))
         .filter((card): card is LearningCard => card !== null)
     : [];
-  const dueCardIds = getDueCardIds(srs, CURRICULUM_CARD_IDS);
+  const selectedWordSchedulableCardCount = candidateCards.filter(
+    (card) => card.schedulable !== false,
+  ).length;
+  const dueCardIds = getDueCardIds(srs, curriculumCardIds);
   const learnedTodayIds = getLearnedTodayCardIds(srs).filter((cardId) =>
-    CARD_BY_ID.has(cardId as CardId),
+    curriculumCardIdSet.has(cardId),
   );
   const activeSession = srs.activeSession;
   const clickedCardIds = activeSession?.clickedCardIds ?? [];
@@ -176,29 +175,112 @@ export default function Home() {
         learnedTodayIds.includes(cardId),
       ).length
     : 0;
-  const currentIndex = COMICS.findIndex((comic) => comic.id === currentComic.id);
+  const currentIndex = corpusManifest.comics.findIndex(
+    (comic) => comic.id === currentComic.id,
+  );
+  const currentManifestEntry = corpusManifest.comics[currentIndex];
   const currentDueCount = unique(currentComic.cardIds).filter((cardId) =>
     dueCardIds.includes(cardId),
   ).length;
   const currentNewCount = unique(currentComic.cardIds).filter(
     (cardId) => getCardProgress(srs, cardId).status === "unseen",
   ).length;
-  const masteredCount = CARDS.filter(
-    (card) => getCardProgress(srs, card.id).status === "mastered",
+  const masteredCount = curriculumCardIds.filter(
+    (cardId) => getCardProgress(srs, cardId).status === "mastered",
   ).length;
 
-  useEffect(() => {
-    const restored = hydrateSrsState(readStoredSrs());
-    const selected = selectNextComic(COMICS, restored);
-    const restoredOpened = readOpenedRegions();
-    persist(selected.state, restoredOpened);
-    queueMicrotask(() => {
-      setSrs(selected.state);
-      setCurrentComicId(selected.comic.id);
-      setOpenedByComic(restoredOpened);
-      setHydrated(true);
+  const cacheCards = useCallback((cards: readonly LearningCard[]) => {
+    setCardsById((current) => {
+      const next = new Map(current);
+      for (const card of cards) {
+        // The reviewed seed is initialized first and remains authoritative for
+        // any shared target also emitted by generated corpus data.
+        if (!next.has(card.id)) next.set(card.id, card);
+      }
+      return next;
     });
   }, []);
+
+  const cacheBundle = useCallback((bundle: CorpusComicBundle) => {
+    setComicsById((current) => {
+      const next = new Map(current);
+      next.set(bundle.comic.id, bundle.comic);
+      return next;
+    });
+    cacheCards(bundle.cards);
+  }, [cacheCards]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function hydrate() {
+      const progressStore = createBrowserProgressStore();
+      progressStoreRef.current = progressStore;
+      const [storedProgress, manifestLoad] = await Promise.all([
+        progressStore.load(),
+        loadCorpusManifest(),
+      ]);
+      const persistedState = hydrateSrsState(storedProgress.serializedSrs);
+      let persistenceEnabled = canPersistCorpusProgress(manifestLoad);
+      let manifest = manifestLoad.manifest;
+      let restored = reconcileSrsState(
+        persistedState,
+        manifest.comics,
+      );
+      const restoredOpened = storedProgress.openedByComic;
+      let selected = selectNextComic(manifest.comics, restored);
+      let bundle: CorpusComicBundle;
+
+      try {
+        bundle = await loadComicBundle(selected.comic);
+      } catch {
+        // A stale or partially deployed generated corpus must never strand the
+        // learner or overwrite their complete saved state. Resume against the
+        // checked-in reviewed curriculum without persisting this reduced view.
+        persistenceEnabled = canPersistCorpusProgress(manifestLoad, true);
+        manifest = REVIEWED_CORPUS_MANIFEST;
+        restored = reconcileSrsState(persistedState, manifest.comics);
+        selected = selectNextComic(manifest.comics, restored);
+        bundle = await loadComicBundle(selected.comic);
+      }
+      if (cancelled) return;
+
+      cacheCards(manifest.cardCatalog);
+      cacheBundle(bundle);
+      persistenceEnabledRef.current = persistenceEnabled;
+      let persistenceWarning = persistenceEnabled
+        ? storedProgress.warning
+        : DEGRADED_CORPUS_WARNING;
+      if (persistenceEnabled) {
+        try {
+          await progressStore.save({
+            serializedSrs: serializeSrsState(selected.state),
+            openedByComic: restoredOpened,
+          });
+          persistenceWarning = null;
+        } catch {
+          persistenceWarning =
+            persistenceWarning ??
+            "Progress could not be saved. Changes will last only until this tab closes.";
+        }
+      }
+      if (cancelled) return;
+      queueMicrotask(() => {
+        if (cancelled) return;
+        setCorpusManifest(manifest);
+        setSrs(selected.state);
+        setCurrentComicId(selected.comic.id);
+        setOpenedByComic(restoredOpened);
+        setStorageWarning(persistenceWarning);
+        setHydrated(true);
+      });
+    }
+
+    void hydrate();
+    return () => {
+      cancelled = true;
+    };
+  }, [cacheBundle, cacheCards]);
 
   useEffect(() => {
     if (!toast) return;
@@ -224,7 +306,19 @@ export default function Home() {
   function commit(nextState: SrsState, nextOpened = openedByComic) {
     setSrs(nextState);
     setOpenedByComic(nextOpened);
-    if (hydrated) persist(nextState, nextOpened);
+    const progressStore = progressStoreRef.current;
+    if (!hydrated || !progressStore || !persistenceEnabledRef.current) return;
+    void progressStore
+      .save({
+        serializedSrs: serializeSrsState(nextState),
+        openedByComic: nextOpened,
+      })
+      .then(() => setStorageWarning(null))
+      .catch(() =>
+        setStorageWarning(
+          "Progress could not be saved. Changes will last only until this tab closes.",
+        ),
+      );
   }
 
   function openWord(region: RevealRegion, wordId: string) {
@@ -257,6 +351,11 @@ export default function Home() {
       return;
     }
     setSelectedCardId(cardId);
+    const card = lookupCard(cardId);
+    if (card?.schedulable === false) {
+      setToast("Preview only · this meaning still needs review");
+      return;
+    }
     const wasAlreadyLearnedToday = learnedTodayIds.includes(cardId);
     const nextState = recordCardHelp(srs, cardId);
     commit(nextState);
@@ -273,9 +372,9 @@ export default function Home() {
     setSelectedCardId(null);
   }
 
-  function finishComic() {
+  async function finishComic() {
     const sessionBefore = srs.activeSession;
-    if (!sessionBefore) return;
+    if (!sessionBefore || comicLoading) return;
 
     const clicked = new Set(sessionBefore.clickedCardIds);
     const independentlyUnderstood = sessionBefore.eligibleCardIds.filter(
@@ -284,14 +383,24 @@ export default function Home() {
         getCardProgress(srs, cardId).lastHelpDay !== srs.studyDay,
     ).length;
     const completed = completeComic(srs);
-    const next = selectNextComic(COMICS, completed);
+    const next = selectNextComic(corpusManifest.comics, completed);
+    setComicLoading(true);
+    let nextBundle: CorpusComicBundle;
+    try {
+      nextBundle = await loadComicBundle(next.comic);
+    } catch {
+      setToast("That comic could not be loaded. Your current progress is safe.");
+      setComicLoading(false);
+      return;
+    }
     const nextOpened = { ...openedByComic, [next.comic.id]: [] };
 
+    cacheBundle(nextBundle);
     setSummary({
       completedTitle: currentComic.titleEs,
       helpCardCount: clicked.size,
       masteredCount: independentlyUnderstood,
-      nextComic: next.comic,
+      nextComic: nextBundle.comic,
       overlapCardIds: next.overlapCardIds,
       advancedDays: next.advancedDays,
       reason: next.reason,
@@ -299,21 +408,52 @@ export default function Home() {
     setCurrentComicId(next.comic.id);
     closeRegion();
     setShowTitleText(false);
+    setComicZoomed(false);
     commit(next.state, nextOpened);
+    setComicLoading(false);
   }
 
-  function resetProgress() {
-    const fresh = selectNextComic(COMICS, createSrsState());
+  async function resetProgress() {
+    if (comicLoading) return;
+    const fresh = selectNextComic(
+      corpusManifest.comics,
+      createSrsState(),
+    );
+    setComicLoading(true);
+    let freshBundle: CorpusComicBundle;
+    try {
+      freshBundle = await loadComicBundle(fresh.comic);
+    } catch {
+      setToast("That comic could not be loaded. Your current progress is safe.");
+      setComicLoading(false);
+      return;
+    }
     const nextOpened: OpenedByComic = {};
+    cacheBundle(freshBundle);
     setCurrentComicId(fresh.comic.id);
     closeRegion();
+    setComicZoomed(false);
     setSummary(null);
     setShowLibrary(false);
     setShowAbout(false);
     setShowReset(false);
-    commit(fresh.state, nextOpened);
-    persist(fresh.state, nextOpened);
-    setToast("Your progress has been reset");
+    setSrs(fresh.state);
+    setOpenedByComic(nextOpened);
+    try {
+      const progressStore =
+        progressStoreRef.current ?? createBrowserProgressStore();
+      progressStoreRef.current = progressStore;
+      await progressStore.clear();
+      setStorageWarning(
+        persistenceEnabledRef.current ? null : DEGRADED_CORPUS_WARNING,
+      );
+      setToast("Your progress has been reset");
+    } catch {
+      setStorageWarning(
+        "Progress was reset in this tab, but saved progress could not be cleared. A reload may restore it.",
+      );
+    }
+    setComicLoading(false);
   }
 
   useEffect(() => {
@@ -391,7 +531,8 @@ export default function Home() {
   }, [summary, showLibrary, showAbout, showReset]);
 
   const libraryCards = useMemo(() => {
-    const filtered = CARDS.filter((card) => {
+    const filtered = [...cardsById.values()].filter((card) => {
+      if (card.schedulable === false) return false;
       const progress = getCardProgress(srs, card.id);
       if (libraryFilter === "today") return progress.lastHelpDay === srs.studyDay;
       if (libraryFilter === "next") return progress.dueDay !== null;
@@ -407,7 +548,7 @@ export default function Home() {
         a.promptEs.localeCompare(b.promptEs, "es")
       );
     });
-  }, [libraryFilter, srs]);
+  }, [cardsById, libraryFilter, srs]);
 
   const targetCards = unique(eligibleCardIds)
     .map((id) => lookupCard(id))
@@ -441,7 +582,9 @@ export default function Home() {
 
       <section className="learning-layout" id="top">
         <aside className="lesson-rail">
-          <div className="eyebrow">COMIC {currentIndex + 1} OF {COMICS.length}</div>
+          <div className="eyebrow">
+            COMIC {Math.max(0, currentIndex) + 1} OF {corpusManifest.comics.length}
+          </div>
           <h1>First,<br />just look.</h1>
           <p>
             Tap a Spanish word in the comic only when you need help. Then
@@ -489,7 +632,17 @@ export default function Home() {
             <div>
               <div className="comic-number">xkcd · {currentComic.xkcdNumber}</div>
               <h2 lang="es">{currentComic.titleEs}</h2>
-              <span className="original-title">{currentComic.title}</span>
+              {currentComic.title !== currentComic.titleEs ? (
+                <span className="original-title">{currentComic.title}</span>
+              ) : null}
+              {currentManifestEntry?.reviewStatus === "needs-review" ? (
+                <span
+                  className="review-status"
+                  title="Words and meanings on this comic were extracted automatically and may contain mistakes."
+                >
+                  Machine-extracted · needs review
+                </span>
+              ) : null}
             </div>
             <div className="comic-tools">
               <button
@@ -499,6 +652,13 @@ export default function Home() {
                 aria-label={showPins ? "Hide clickable word markers" : "Show clickable word markers"}
               >
                 <span className="pin-mini" aria-hidden="true">Aa</span>{showPins ? "Hide words" : "Show words"}
+              </button>
+              <button
+                className={`tool-button ${comicZoomed ? "is-active" : ""}`}
+                onClick={() => setComicZoomed((zoomed) => !zoomed)}
+                aria-pressed={comicZoomed}
+              >
+                {comicZoomed ? "Fit image" : "Zoom words"}
               </button>
               <button
                 className={`icon-button ${showTitleText ? "is-active" : ""}`}
@@ -515,16 +675,23 @@ export default function Home() {
             <div className="title-text" role="note">
               <span>SPANISH TITLE TEXT</span>
               <p lang="es">{currentComic.titleText.es}</p>
-              <small>English: {currentComic.titleText.en}</small>
+              {currentComic.titleText.en ? (
+                <small>English: {currentComic.titleText.en}</small>
+              ) : (
+                <small>English title-text translation has not been reviewed yet.</small>
+              )}
               {currentComic.titleText.noteEn ? <small>{currentComic.titleText.noteEn}</small> : null}
             </div>
           ) : null}
 
-          <div className="comic-paper">
+          <div className={`comic-paper ${comicZoomed ? "is-zoomed" : ""}`}>
             <div
               className={`comic-image-wrap ${showPins ? "show-pins" : "hide-pins"}`}
               style={{
-                width: `min(100%, ${targetWidth}px)`,
+                width: comicZoomed
+                  ? `${Math.min(1200, Math.max(720, targetWidth * 1.65))}px`
+                  : `min(100%, ${targetWidth}px)`,
+                maxWidth: comicZoomed ? "none" : "100%",
                 aspectRatio: `${currentComic.image.width} / ${currentComic.image.height}`,
               }}
             >
@@ -608,17 +775,20 @@ export default function Home() {
 
               <div className="selected-word-kicker">SELECTED SPANISH WORD</div>
               <div className="phrase-original" lang="es">“{selectedWord?.text ?? selectedRegion.labelEs}”</div>
-              <div className="phrase-context">From: <span lang="es">“{selectedRegion.labelEs}”</span></div>
               <div className={`zero-card-callout ${selectedWordLearnedTodayCount > 0 ? "has-learned" : ""}`} role="status">
                 <strong>
                   {selectedWordLearnedTodayCount > 0
                     ? `${selectedWordLearnedTodayCount} related ${selectedWordLearnedTodayCount === 1 ? "card" : "cards"} learned today`
-                    : "Word opened · no cards selected"}
+                    : selectedWordSchedulableCardCount > 0
+                      ? "Word opened · no cards selected"
+                      : "Translation draft · preview only"}
                 </strong>
                 <span>
                   {selectedWordLearnedTodayCount > 0
                     ? "These may include shared cards learned elsewhere today; only explicit card choices are scheduled."
-                    : "Choose a card below. Opening the word alone changes nothing."}
+                    : selectedWordSchedulableCardCount > 0
+                      ? "Choose a card below. Opening the word alone changes nothing."
+                      : "No reviewed-safe English match is available yet, so this word cannot enter spaced repetition."}
                 </span>
               </div>
 
@@ -626,7 +796,11 @@ export default function Home() {
                 <section className="candidate-section" aria-labelledby="candidate-title">
                   <div className="cards-heading">
                     <span>CHOOSE A FLASHCARD</span>
-                    <strong>{candidateCards.filter((card) => learnedTodayIds.includes(card.id)).length} / {candidateCards.length} learned today</strong>
+                    <strong>
+                      {selectedWordSchedulableCardCount > 0
+                        ? `${candidateCards.filter((card) => learnedTodayIds.includes(card.id)).length} / ${selectedWordSchedulableCardCount} review cards learned today`
+                        : "Preview only"}
+                    </strong>
                   </div>
                   <h4 id="candidate-title">
                     Cards related to <span lang="es">“{selectedWord.text}”</span>
@@ -639,16 +813,25 @@ export default function Home() {
                     {KIND_GROUPS.map((group) => {
                       const groupCards = candidateCards.filter((card) => card.kind === group.kind);
                       if (groupCards.length === 0) return null;
+                      const hasProvisionalCards = groupCards.some(
+                        (card) => card.reviewStatus === "needs-review",
+                      );
                       return (
                         <section className="card-kind-group" key={group.kind} aria-label={group.label}>
                           <div className="card-kind-heading">
                             <span className={`kind-badge kind-${group.kind}`}>{group.label}</span>
-                            <small>{group.description}</small>
+                            <small>
+                              {group.kind === "word" && hasProvisionalCards
+                                ? "Machine-extracted dictionary candidates; contextual senses still need review"
+                                : group.description}
+                            </small>
                           </div>
                           <div className="candidate-list">
                             {groupCards.map((card) => {
                               const isSelected = selectedCardId === card.id;
                               const isLearned = learnedTodayIds.includes(card.id);
+                              const isProvisional = card.reviewStatus === "needs-review";
+                              const isSchedulable = card.schedulable !== false;
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
                               const frontId = `${candidateId}-front`;
                               const answerId = `${candidateId}-answer`;
@@ -673,7 +856,7 @@ export default function Home() {
                                 <article
                                   key={card.id}
                                   id={`flashcard-${encodeURIComponent(card.id)}`}
-                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
+                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isProvisional ? "is-provisional" : ""} ${!isSchedulable ? "is-preview-only" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
                                 >
                                   <button
                                     type="button"
@@ -695,17 +878,30 @@ export default function Home() {
                                           {card.promptEs}
                                         </strong>
                                       )}
+                                      {isProvisional ? (
+                                        <span className="candidate-review-flag">
+                                          Needs human review
+                                        </span>
+                                      ) : null}
                                       <small id={`${candidateId}-status`}>
-                                        {isSelected
+                                        {!isSchedulable
+                                          ? isSelected
+                                            ? "Preview shown · not added to review"
+                                            : "Preview only · not ready for review"
+                                          : isSelected
                                           ? card.kind === "word"
-                                            ? "Meaning shown · tap to close"
+                                            ? isProvisional
+                                              ? "Dictionary candidate shown · tap to close"
+                                              : "Meaning shown · tap to close"
                                             : "Answer shown · tap to close"
                                           : isLearned
                                             ? card.kind === "word"
                                               ? "Learned today · show meaning"
                                               : "Learned today · show answer"
                                             : card.kind === "word"
-                                              ? "Reveal meaning + add to review"
+                                              ? isProvisional
+                                                ? "Reveal candidate + add to review"
+                                                : "Reveal meaning + add to review"
                                               : "Reveal answer + add to review"}
                                       </small>
                                     </span>
@@ -719,9 +915,21 @@ export default function Home() {
                                       aria-labelledby={frontId}
                                     >
                                       <div className="candidate-answer-label">
-                                        {card.kind === "word" ? "MEANING HERE" : "SHORT ANSWER"}
+                                        {card.kind === "word"
+                                          ? isProvisional
+                                            ? "PROVISIONAL DICTIONARY MATCH"
+                                            : "MEANING HERE"
+                                          : "SHORT ANSWER"}
                                       </div>
                                       <div className="candidate-answer">{card.answerEn}</div>
+
+                                      {isProvisional ? (
+                                        <p className="candidate-provisional-note">
+                                          {isSchedulable
+                                            ? "This is a machine-extracted dictionary match. Its meaning in this exact comic has not been reviewed yet."
+                                            : "No safe English match is available yet. This preview is not added to spaced repetition."}
+                                        </p>
+                                      ) : null}
 
                                       {card.questionEn ? (
                                         <section
@@ -780,7 +988,11 @@ export default function Home() {
                                           {card.tags.map((tag) => <span key={tag}>{tag}</span>)}
                                         </div>
                                       ) : null}
-                                      <div className="candidate-memory"><span>✓</span> Returns on day {srs.studyDay + 1}</div>
+                                      {isSchedulable ? (
+                                        <div className="candidate-memory"><span>✓</span> Returns on day {srs.studyDay + 1}</div>
+                                      ) : (
+                                        <div className="candidate-memory is-preview"><span>○</span> Not scheduled · translation needs review</div>
+                                      )}
                                     </div>
                                   ) : null}
                                 </article>
@@ -820,8 +1032,8 @@ export default function Home() {
           <span className="keycap">1–{currentComic.regions.length}</span>
           <span>shortcuts to each text group’s first word</span>
         </div>
-        <button className="finish-button" onClick={finishComic}>
-          I understand this comic <span>→</span>
+        <button className="finish-button" onClick={finishComic} disabled={comicLoading}>
+          {comicLoading ? "Loading the next comic…" : "I understand this comic"} <span>→</span>
         </button>
         <div className="review-preview">
           <strong>{clickedCardIds.length}</strong> help cards this comic · <strong>{eligibleCardIds.filter((cardId) => !clickedCardIds.includes(cardId)).length}</strong> understood independently
@@ -860,7 +1072,7 @@ export default function Home() {
             {summary.overlapCardIds.length > 0 ? (
               <div className="overlap-chips">
                 {summary.overlapCardIds.slice(0, 4).map((id) => {
-                  const card = CARD_BY_ID.get(id as CardId);
+                  const card = cardsById.get(id);
                   return card ? <span key={id} lang="es">{card.promptEs}</span> : null;
                 })}
               </div>
@@ -890,20 +1102,42 @@ export default function Home() {
                 ["mastered", "Mastered"],
                 ["all", "All"],
               ] as const).map(([filter, label]) => (
-                <button key={filter} className={libraryFilter === filter ? "active" : ""} onClick={() => setLibraryFilter(filter)} aria-pressed={libraryFilter === filter}>{label}</button>
+                <button
+                  key={filter}
+                  className={libraryFilter === filter ? "active" : ""}
+                  onClick={() => {
+                    setLibraryFilter(filter);
+                    setLibraryLimit(200);
+                  }}
+                  aria-pressed={libraryFilter === filter}
+                >
+                  {label}
+                </button>
               ))}
             </div>
             <div className="memory-list">
-              {libraryCards.length > 0 ? libraryCards.map((card) => {
-                const progress = getCardProgress(srs, card.id);
-                return (
-                  <article className="memory-row" key={card.id}>
-                    <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
-                    <div><strong lang="es">{card.promptEs}</strong><p>{card.answerEn}</p></div>
-                    <span className={`status-pill status-${progress.status}`}>{statusLabel(progress, srs.studyDay)}</span>
-                  </article>
-                );
-              }) : (
+              {libraryCards.length > 0 ? (
+                <>
+                  {libraryCards.slice(0, libraryLimit).map((card) => {
+                    const progress = getCardProgress(srs, card.id);
+                    return (
+                      <article className="memory-row" key={card.id}>
+                        <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
+                        <div><strong lang="es">{card.promptEs}</strong><p>{card.answerEn}</p></div>
+                        <span className={`status-pill status-${progress.status}`}>{statusLabel(progress, srs.studyDay)}</span>
+                      </article>
+                    );
+                  })}
+                  {libraryCards.length > libraryLimit ? (
+                    <button
+                      className="library-more"
+                      onClick={() => setLibraryLimit((limit) => limit + 200)}
+                    >
+                      Show 200 more · {libraryCards.length - libraryLimit} remaining
+                    </button>
+                  ) : null}
+                </>
+              ) : (
                 <div className="empty-list"><span>○</span><h3>Nothing here yet.</h3><p>Open a word in the comic, then reveal a specific card to add it here.</p></div>
               )}
             </div>
@@ -930,6 +1164,8 @@ export default function Home() {
               <li><span>4</span><div><strong>Let overlap choose</strong><p>Your next comic contains as many of your due cards as possible.</p></div></li>
             </ol>
             <div className="license-note">
+              <strong>About the 258-comic corpus</strong>
+              <p>Six lessons are fully reviewed. The remaining archive entries are an authoring preview built from image OCR and conservative dictionary matches. They are labeled “needs review”; unresolved previews are never added to spaced repetition, and generated grammar or expression lessons still require human authoring.</p>
               <strong>About the comics</strong>
               <p>Original work by Randall Munroe, published by xkcd under <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" rel="noreferrer">CC BY-NC 2.5</a>. Spanish translations by <a href="https://es.xkcd.com/" target="_blank" rel="noreferrer">Gabriel Rodríguez Alberich / xkcd en español</a>. Interactive word markers and learning notes are unofficial adaptations. Tira is free, noncommercial, and not affiliated with xkcd.</p>
             </div>
@@ -946,13 +1182,17 @@ export default function Home() {
             <p>This removes every card, interval, and history entry saved on this device.</p>
             <div className="reset-actions">
               <button onClick={() => setShowReset(false)}>Cancel</button>
-              <button onClick={resetProgress}>Yes, reset</button>
+              <button onClick={resetProgress} disabled={comicLoading}>Yes, reset</button>
             </div>
           </section>
         </div>
       ) : null}
 
-      {toast ? <div className="toast" role="status"><span>✓</span>{toast}</div> : null}
+      {storageWarning ? (
+        <div className="toast" role="alert"><span aria-hidden="true">!</span>{storageWarning}</div>
+      ) : toast ? (
+        <div className="toast" role="status"><span>✓</span>{toast}</div>
+      ) : null}
     </main>
   );
 }

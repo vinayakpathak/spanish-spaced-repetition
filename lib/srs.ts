@@ -48,6 +48,7 @@ export interface SrsState {
 export interface ComicLike {
   id: string;
   cardIds: readonly string[];
+  reviewStatus?: "reviewed" | "needs-review";
 }
 
 export interface RankedComic<T extends ComicLike> {
@@ -136,6 +137,63 @@ export function getLearnedTodayCardIds(state: SrsState): string[] {
   return Object.entries(state.cards)
     .filter(([, progress]) => progress.lastHelpDay === state.studyDay)
     .map(([cardId]) => cardId);
+}
+
+/**
+ * Remove progress that no longer belongs to the active corpus revision.
+ * Generated curricula can replace provisional card IDs; keeping those ghosts
+ * would waste browser storage and could make old reviews appear in summaries.
+ */
+export function reconcileSrsState<T extends ComicLike>(
+  state: SrsState,
+  comics: readonly T[],
+): SrsState {
+  const allowedComicIds = new Set(comics.map((comic) => comic.id));
+  const allowedCardIds = new Set(
+    comics.flatMap((comic) => [...comic.cardIds]),
+  );
+  const filterRecord = <Value>(
+    record: Record<string, Value>,
+    allowed: ReadonlySet<string>,
+  ): Record<string, Value> =>
+    Object.fromEntries(
+      Object.entries(record).filter(([id]) => allowed.has(id)),
+    );
+  const activeSession =
+    state.activeSession && allowedComicIds.has(state.activeSession.comicId)
+      ? {
+          ...state.activeSession,
+          eligibleCardIds: [...new Set(state.activeSession.eligibleCardIds)].filter(
+            (cardId) => allowedCardIds.has(cardId),
+          ),
+          clickedCardIds: [...new Set(state.activeSession.clickedCardIds)].filter(
+            (cardId) => allowedCardIds.has(cardId),
+          ),
+        }
+      : null;
+
+  return {
+    ...state,
+    cards: filterRecord(state.cards, allowedCardIds),
+    comics: filterRecord(state.comics, allowedComicIds),
+    dayBaselines: Object.fromEntries(
+      Object.entries(state.dayBaselines).filter(([baselineKey]) => {
+        const separator = baselineKey.indexOf(":");
+        if (separator < 1) return false;
+        const day = Number(baselineKey.slice(0, separator));
+        const cardId = baselineKey.slice(separator + 1);
+        return day === state.studyDay && allowedCardIds.has(cardId);
+      }),
+    ),
+    recentComicIds: state.recentComicIds.filter((comicId) =>
+      allowedComicIds.has(comicId),
+    ),
+    history: state.history.filter(
+      (event) =>
+        allowedComicIds.has(event.comicId) && allowedCardIds.has(event.cardId),
+    ),
+    activeSession,
+  };
 }
 
 export function startComic<T extends ComicLike>(
@@ -449,8 +507,13 @@ export function selectNextComic<T extends ComicLike>(
 
   if (dueCardIds.length === 0) {
     const newCandidates = rankComics(comics, workingState, [])
-      .filter((ranked) => ranked.unseenCount > 0)
+      // A visual-only comic can legitimately have no language cards. It still
+      // belongs in the curriculum and should be shown once before the demo
+      // starts advancing its clock for reviews.
+      .filter((ranked) => ranked.unseenCount > 0 || ranked.views === 0)
       .sort((a, b) =>
+        Number(a.comic.reviewStatus !== "reviewed") -
+          Number(b.comic.reviewStatus !== "reviewed") ||
         Number(a.views > 0) - Number(b.views > 0) ||
         a.views - b.views ||
         comics.indexOf(a.comic) - comics.indexOf(b.comic),

@@ -7,6 +7,7 @@ import {
   getLearnedTodayCardIds,
   hydrateSrsState,
   recordCardHelp,
+  reconcileSrsState,
   selectNextComic,
   startComic,
 } from "../lib/srs.ts";
@@ -168,6 +169,7 @@ test("same-day help wins over a later independent success", () => {
 test("later same-day help fully replaces an earlier independent success", () => {
   let state = startComic(createSrsState(), comicA);
   state = completeComic(state);
+  state = reconcileSrsState(state, [comicA, comicB]);
   state = startComic(state, comicB);
   state = recordCardHelp(state, "shared");
 
@@ -189,6 +191,14 @@ test("selection maximizes distinct due-card overlap before tie-breakers", () => 
   state = recordCardHelp(state, "two");
   state = recordCardHelp(state, "three");
   state = completeComic(state);
+  for (const comicId of ["a", "b"]) {
+    state.comics[comicId] = {
+      views: 1,
+      completions: 0,
+      lastViewedDay: 1,
+      lastCompletedDay: null,
+    };
+  }
   const selected = selectNextComic([comicA, comicB, comicC], state);
   assert.equal(selected.advancedDays, 1);
   assert.equal(selected.comic.id, "c");
@@ -202,6 +212,34 @@ test("selection prefers unviewed curriculum material before simulating time", ()
   assert.equal(selected.comic.id, "b");
   assert.equal(selected.reason, "new");
   assert.equal(selected.advancedDays, 0);
+});
+
+test("selection still visits a new visual-only comic with no cards", () => {
+  const visualOnly = { id: "visual-only", cardIds: [] };
+  let state = startComic(createSrsState(), comicA);
+  state = completeComic(state);
+
+  const selected = selectNextComic([comicA, visualOnly], state);
+  assert.equal(selected.comic.id, "visual-only");
+  assert.equal(selected.reason, "new");
+  assert.deepEqual(selected.overlapCardIds, []);
+  assert.equal(selected.advancedDays, 0);
+});
+
+test("new selection starts with reviewed comics before machine drafts", () => {
+  const reviewed = {
+    id: "reviewed",
+    cardIds: ["reviewed-card"],
+    reviewStatus: "reviewed",
+  };
+  const draft = {
+    id: "draft",
+    cardIds: ["draft-card"],
+    reviewStatus: "needs-review",
+  };
+
+  const selected = selectNextComic([draft, reviewed], createSrsState());
+  assert.equal(selected.comic.id, "reviewed");
 });
 
 test("orphan due cards cannot block unseen curriculum selection", () => {
@@ -237,6 +275,47 @@ test("restored active sessions add newly eligible curriculum and remove ghost ca
     ["one", "two", "shared"],
   );
   assert.deepEqual(selected.state.activeSession?.clickedCardIds, ["shared"]);
+});
+
+test("curriculum reconciliation prunes stale generated progress and history", () => {
+  const state = createSrsState();
+  state.cards.one = { ...getCardProgress(state, "one"), status: "mastered" };
+  state.cards.orphan = { ...getCardProgress(state, "orphan"), status: "learning" };
+  state.dayBaselines["1:one"] = { ...getCardProgress(state, "one") };
+  state.dayBaselines["1:orphan"] = { ...getCardProgress(state, "orphan") };
+  state.dayBaselines["2:one"] = { ...getCardProgress(state, "one") };
+  state.comics.a = {
+    views: 1,
+    completions: 1,
+    lastViewedDay: 1,
+    lastCompletedDay: 1,
+  };
+  state.comics.removed = {
+    views: 1,
+    completions: 0,
+    lastViewedDay: 1,
+    lastCompletedDay: null,
+  };
+  state.recentComicIds = ["removed", "a"];
+  state.history = [
+    { comicId: "a", cardId: "one", day: 1, event: "independent-success" },
+    { comicId: "removed", cardId: "orphan", day: 1, event: "help" },
+  ];
+  state.activeSession = {
+    comicId: "a",
+    startedDay: 1,
+    eligibleCardIds: ["one", "orphan"],
+    clickedCardIds: ["orphan"],
+  };
+
+  const reconciled = reconcileSrsState(state, [comicA]);
+  assert.deepEqual(Object.keys(reconciled.cards), ["one"]);
+  assert.deepEqual(Object.keys(reconciled.dayBaselines), ["1:one"]);
+  assert.deepEqual(Object.keys(reconciled.comics), ["a"]);
+  assert.deepEqual(reconciled.recentComicIds, ["a"]);
+  assert.deepEqual(reconciled.history.map((event) => event.cardId), ["one"]);
+  assert.deepEqual(reconciled.activeSession?.eligibleCardIds, ["one"]);
+  assert.deepEqual(reconciled.activeSession?.clickedCardIds, []);
 });
 
 test("hydration rejects malformed state without throwing", () => {

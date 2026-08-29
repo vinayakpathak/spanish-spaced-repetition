@@ -12,7 +12,13 @@
     "test": "npm run typecheck && npm run build && node --test tests/*.test.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "corpus:source": "node scripts/import-es-xkcd.mjs",
+    "corpus:ocr": "node scripts/build-generated-corpus.mjs --manifest data/source/es-xkcd.json --output-dir data/generated/ocr",
+    "corpus:glossary": "node scripts/build-provisional-glossary.mjs --ocr-dir /tmp/tira-spanish-corpus-cache/vision-v1",
+    "corpus:runtime": "node scripts/build-runtime-corpus.mjs",
+    "corpus:validate-ocr": "node scripts/build-generated-corpus.mjs --output-dir data/generated/ocr --validate-only",
+    "corpus:validate-runtime": "node scripts/build-runtime-corpus.mjs --validate-only"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

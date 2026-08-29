@@ -31,10 +31,11 @@ test("server-renders the Tira learning experience", async () => {
 });
 
 test("the curriculum stays Spanish-first and starter artifacts are gone", async () => {
-  const [page, layout, content, packageJson] = await Promise.all([
+  const [page, layout, content, progressStore, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../lib/content.ts", import.meta.url), "utf8"),
+    readFile(new URL("../lib/progress-store.ts", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
@@ -42,9 +43,12 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   assert.match(page, /recordCardHelp/);
   assert.match(page, /Word opened · no cards selected/);
   assert.match(page, /selectedWord\.cardIds/);
-  assert.match(page, /tira:srs:v3/);
-  assert.match(page, /tira:ui:v3/);
-  assert.doesNotMatch(page, /tira:(?:srs|ui):v2/);
+  assert.match(page, /createBrowserProgressStore/);
+  assert.match(progressStore, /tira:srs:v3/);
+  assert.match(progressStore, /tira:ui:v3/);
+  assert.match(progressStore, /indexedDB/i);
+  assert.doesNotMatch(page, /localStorage\.setItem/);
+  assert.doesNotMatch(page + progressStore, /tira:(?:srs|ui):v2/);
   assert.match(layout, /Tira — learn Spanish, one comic at a time/);
   assert.match(content, /interface WordOccurrence/);
   assert.match(content, /interface CardApplication/);

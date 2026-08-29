@@ -64,6 +64,35 @@ When an exact sentence contains a useful pattern, generalize it. For example, pr
 - In the UI, show contextual application copy only after that shared card is opened, under “In this comic.” Never reveal the entire sentence or bubble translation.
 - Give each card a stable, target-specific ID and an occurrence pattern that identifies the exact participating tokens.
 
+#### Required shape for reusable language cards
+
+Apply this full teaching structure to both `grammar` and `phrase` cards. Do not give expression cards a lower standard merely because their stored kind is `phrase`.
+
+1. **Front (`questionEn`)** — Ask one natural English question that states what the learner is trying to express or understand. Assume the learner knows no Spanish grammar terminology. Do not use raw notation such as `volver a + infinitivo` as the front.
+2. **Short answer (`answerEn`)** — Give the usable rule or meaning in one or two plain sentences. For a productive construction, tell the learner what pieces to combine rather than only supplying an English translation.
+3. **Explanation (`noteEn`)** — Explain why the construction works, which part changes, which part stays unchanged, and any important contrast or usage limit. Keep it reusable across comics.
+4. **General example (`example`)** — Invent one short Spanish example that isolates this lesson, then provide its natural English translation. It must not be copied from a comic or depend on comic characters or events.
+5. **Occurrence application (`CardApplication`)** — Separately store the smallest relevant Spanish fragment from the current comic and explain only how this shared lesson applies there. Do not translate or paraphrase the containing sentence or bubble.
+
+Treat the learner as a complete beginner:
+
+- Prefer ordinary descriptions such as “the verb's dictionary form” before introducing a label such as “infinitive.”
+- Whenever a term such as *infinitive*, *subjunctive*, *preterite*, *imperfect*, *participle*, *conditional*, *pronoun*, *subject*, *object*, or *conjugate* is unavoidable, define it on that card and show a concrete Spanish form change.
+- Never use a grammar term as its own explanation. For example, “use the subjunctive” is incomplete unless the card also explains why that form appears here and shows how an ordinary verb form changes.
+- Explain notation in words. A learner should understand every `+`, arrow, slash, abbreviation, and placeholder used in the Spanish pattern after reading the card.
+- Keep one card focused on one decision or reusable pattern. If the explanation needs two unrelated rules, split the card.
+- Keep the answer short enough to recall; put teaching detail in the explanation rather than compressing it into dense jargon on the answer line.
+
+For example, a `volver a + infinitivo` card should not stop at “to do something again” and “marks repetition.” Use this shape instead:
+
+- Question: “How do you say that someone does something again?”
+- Answer: “Use a form of `volver`, then `a`, then the action verb in its dictionary form.”
+- Explanation: Define the dictionary form as the unchanged form ending in `-ar`, `-er`, or `-ir`; explain that only `volver` changes for the person and time.
+- General example: `Marta vuelve a llamar.` — “Marta calls again.”
+- Comic application: show only a relevant fragment such as `vuelve a ser` and explain how it instantiates the shared pattern; do not reveal the full bubble's meaning.
+
+Straightforward word cards are the exception to this full shape: keep `cama → bed` compact. Add the full explanation/example treatment only when a word's contextual meaning hides grammar, morphology, idiomatic use, or a surprising difference from English.
+
 Before adding or retaining a higher-level card, ask:
 
 1. Will the learner encounter or reuse this target beyond this sentence?

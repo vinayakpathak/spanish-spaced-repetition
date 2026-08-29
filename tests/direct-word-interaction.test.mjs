@@ -39,6 +39,12 @@ test("direct word clicks only choose a word; exact card clicks schedule review",
   assert.match(page, /onClick=\{\(\) => openWord\(region, word\.id\)\}/);
 
   assert.match(learnCardBody, /recordCardHelp\(srs, cardId\)/);
+  assert.match(learnCardBody, /card\?\.schedulable === false/);
+  assert.ok(
+    learnCardBody.indexOf("card?.schedulable === false") <
+      learnCardBody.indexOf("recordCardHelp(srs, cardId)"),
+    "preview-only generated cards return before the SRS grade",
+  );
   assert.match(page, /onClick=\{\(\) => learnCard\(card\.id\)\}/);
   assert.doesNotMatch(learnCardBody, /selectedWord\.cardIds\[0\]/);
 });
@@ -138,6 +144,9 @@ test("a revealed answer expands inside its clicked flashcard", async () => {
   assert.doesNotMatch(page, /card\.kind === "grammar" && card\.questionEn/);
   assert.match(page, /SPANISH EXPRESSION/);
   assert.match(page, /aria-controls=\{isSelected \? answerId : undefined\}/);
+  assert.match(page, /PROVISIONAL DICTIONARY MATCH/);
+  assert.match(page, /No safe English match is available yet/);
+  assert.match(page, /Not scheduled · translation needs review/);
   assert.match(
     page.slice(revealStart, cardEnd),
     /candidate-pattern[\s\S]*card\.promptEs/,

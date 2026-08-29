@@ -22,6 +22,15 @@ export interface LearningCard {
   /** A reusable example invented for the lesson, never copied from a comic. */
   example?: { es: string; en: string };
   tags: readonly string[];
+  /** Generated cards remain provisional until a human reviews the OCR and sense. */
+  reviewStatus?: "reviewed" | "needs-review";
+  /** False keeps an unresolved authoring card visible without adding it to SRS. */
+  schedulable?: boolean;
+  /** Build provenance is intentionally display metadata, never an SRS identity. */
+  provenance?: {
+    contextualSenseReviewed?: boolean;
+    [key: string]: unknown;
+  };
 }
 
 // Authoring templates and region-group aliases inherited from the first seed
