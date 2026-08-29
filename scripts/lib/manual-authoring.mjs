@@ -21,8 +21,22 @@ const LANGUAGE_CARD_KINDS = new Set(["grammar", "phrase"]);
 const APPLICATION_CARD_KINDS = new Set(["word", "grammar", "phrase"]);
 const REGION_GEOMETRY_SOURCES = new Set(["ocr-line", "override-line"]);
 const WORD_GEOMETRY_SOURCES = new Set(["ocr-token", "override-token"]);
+const EXCLUDED_UNIT_GEOMETRY_SOURCES = new Set([
+  "ocr-line",
+  "ocr-token",
+  "override-line",
+  "override-token",
+]);
+const EXCLUDED_UNIT_REASONS = new Set([
+  "number",
+  "measurement",
+  "equation",
+  "non-spanish-text",
+  "symbol",
+]);
 const PLACEHOLDER_PATTERN =
-  /\b(?:meaning needs review|needs[ -]review|pending review|placeholder|unresolved|machine[ -](?:generated|extracted)|dictionary candidate|tbd|todo)\b/i;
+  /\b(?:meaning needs review|needs[ -]review|pending review|placeholder|unresolved|machine[ -](?:generated|extracted)|dictionary candidate|tbd)\b/i;
+const EXPLICIT_TODO_MARKER_PATTERN = /(?:\[TODO\]|<TODO>|TODO:)/;
 const WHOLE_SENTENCE_AID_PATTERN =
   /\b(?:the (?:whole |full )?(?:sentence|bubble|region)|this (?:sentence|bubble)|full translation|sentence translation|bubble translation|translates? the (?:whole )?(?:sentence|bubble))\b/i;
 
@@ -57,6 +71,7 @@ const REGION_KEYS = new Set([
   "explicitBounds",
   "geometryRationale",
   "words",
+  "excludedUnits",
   "applications",
 ]);
 const WORD_KEYS = new Set([
@@ -77,6 +92,16 @@ const APPLICATION_KEYS = new Set([
 ]);
 const GEOMETRY_REF_KEYS = new Set(["source", "id"]);
 const BOUNDS_KEYS = new Set(["x", "y", "width", "height"]);
+const EXCLUDED_UNIT_KEYS = new Set([
+  "id",
+  "text",
+  "reason",
+  "rationale",
+  "occurrence",
+  "geometryRefs",
+  "explicitBounds",
+  "geometryRationale",
+]);
 
 export class ManualAuthoringError extends Error {
   constructor(errors) {
@@ -102,6 +127,12 @@ function reportUnknownKeys(value, allowed, label, errors) {
 
 function nonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+function containsAuthoringPlaceholder(value) {
+  return (
+    PLACEHOLDER_PATTERN.test(value) || EXPLICIT_TODO_MARKER_PATTERN.test(value)
+  );
 }
 
 function normalizedText(value) {
@@ -193,7 +224,7 @@ function validateSemanticText(value, label, errors, { allowEmpty = false } = {})
     errors.push(`${label} must be ${allowEmpty ? "a string" : "a non-empty string"}`);
     return;
   }
-  if (PLACEHOLDER_PATTERN.test(value)) {
+  if (containsAuthoringPlaceholder(value)) {
     errors.push(`${label} contains a bulk-draft placeholder`);
   }
 }
@@ -338,6 +369,101 @@ function validateApplicationShape(application, label, errors) {
   }
 }
 
+function matchingTokenStarts(tokens, fragmentTokens) {
+  if (fragmentTokens.length === 0) return [];
+  return tokens
+    .map((_, index) => index)
+    .filter(
+      (index) =>
+        index + fragmentTokens.length <= tokens.length &&
+        fragmentTokens.every(
+          (fragment, offset) => tokens[index + offset].text === fragment.text,
+        ),
+    );
+}
+
+function validateExcludedUnits(region, regionLabel, errors) {
+  const labelTokens = tokenizeAuthoredSpanish(region.labelEs);
+  const coveredTokenIndexes = new Set();
+  const excludedIds = new Set();
+  if (region.excludedUnits === undefined) return { labelTokens, coveredTokenIndexes };
+  if (!Array.isArray(region.excludedUnits)) {
+    errors.push(`${regionLabel}.excludedUnits must be an array`);
+    return { labelTokens, coveredTokenIndexes };
+  }
+  for (const [unitIndex, unit] of region.excludedUnits.entries()) {
+    const unitLabel = `${regionLabel}.excludedUnits[${unitIndex}]`;
+    if (!isRecord(unit)) {
+      errors.push(`${unitLabel} must be an object`);
+      continue;
+    }
+    reportUnknownKeys(unit, EXCLUDED_UNIT_KEYS, unitLabel, errors);
+    validateSemanticText(unit.id, `${unitLabel}.id`, errors);
+    if (excludedIds.has(unit.id)) errors.push(`${regionLabel} has duplicate excluded-unit ID ${unit.id}`);
+    excludedIds.add(unit.id);
+    if (nonEmptyString(unit.id) && !unit.id.startsWith(`${region.id}:`)) {
+      errors.push(`${unitLabel}.id must be namespaced by ${region.id}:`);
+    }
+    validateSemanticText(unit.text, `${unitLabel}.text`, errors);
+    if (nonEmptyString(unit.text) && !region.labelEs.includes(unit.text)) {
+      errors.push(`${unitLabel}.text must be an exact visible fragment of labelEs`);
+    }
+    if (!EXCLUDED_UNIT_REASONS.has(unit.reason)) {
+      errors.push(
+        `${unitLabel}.reason must be number, measurement, equation, non-spanish-text, or symbol`,
+      );
+    }
+    if (!nonEmptyString(unit.rationale) || unit.rationale.trim().length < 20) {
+      errors.push(`${unitLabel}.rationale must explain why this visible unit is not a Spanish word card`);
+    }
+    if (
+      unit.occurrence !== undefined &&
+      (!Number.isSafeInteger(unit.occurrence) || unit.occurrence < 1)
+    ) {
+      errors.push(`${unitLabel}.occurrence must be a positive one-based integer`);
+    }
+    validateGeometryShape(
+      unit,
+      EXCLUDED_UNIT_GEOMETRY_SOURCES,
+      unitLabel,
+      errors,
+    );
+
+    const fragmentTokens = tokenizeAuthoredSpanish(unit.text);
+    if (fragmentTokens.length === 0) {
+      if (unit.reason !== "symbol") {
+        errors.push(`${unitLabel}.text has no lexical token and must use reason symbol`);
+      }
+      continue;
+    }
+    const starts = matchingTokenStarts(labelTokens, fragmentTokens);
+    if (starts.length === 0) {
+      errors.push(`${unitLabel}.text does not match labelEs tokenization`);
+      continue;
+    }
+    if (starts.length > 1 && unit.occurrence === undefined) {
+      errors.push(`${unitLabel}.occurrence is required because its text repeats in labelEs`);
+      continue;
+    }
+    const selectedStart = starts[(unit.occurrence ?? 1) - 1];
+    if (selectedStart === undefined) {
+      errors.push(`${unitLabel}.occurrence exceeds the matching fragments in labelEs`);
+      continue;
+    }
+    for (
+      let tokenIndex = selectedStart;
+      tokenIndex < selectedStart + fragmentTokens.length;
+      tokenIndex += 1
+    ) {
+      if (coveredTokenIndexes.has(tokenIndex)) {
+        errors.push(`${unitLabel} overlaps another excluded lexical unit in labelEs`);
+      }
+      coveredTokenIndexes.add(tokenIndex);
+    }
+  }
+  return { labelTokens, coveredTokenIndexes };
+}
+
 function validateArtifactShape(artifact, label, errors) {
   if (!isRecord(artifact)) {
     errors.push(`${label} must be an object`);
@@ -414,7 +540,7 @@ function validateArtifactShape(artifact, label, errors) {
     }
     if (typeof region.labelEs !== "string") {
       errors.push(`${regionLabel}.labelEs must be a string`);
-    } else if (PLACEHOLDER_PATTERN.test(region.labelEs)) {
+    } else if (containsAuthoringPlaceholder(region.labelEs)) {
       errors.push(`${regionLabel}.labelEs contains placeholder copy`);
     }
     validateGeometryShape(region, REGION_GEOMETRY_SOURCES, regionLabel, errors);
@@ -422,7 +548,14 @@ function validateArtifactShape(artifact, label, errors) {
       errors.push(`${regionLabel}.words must be an array`);
       continue;
     }
-    const expectedTokens = tokenizeAuthoredSpanish(region.labelEs);
+    const { labelTokens, coveredTokenIndexes } = validateExcludedUnits(
+      region,
+      regionLabel,
+      errors,
+    );
+    const expectedTokens = labelTokens.filter(
+      (_, tokenIndex) => !coveredTokenIndexes.has(tokenIndex),
+    );
     if (region.words.length !== expectedTokens.length) {
       errors.push(
         `${regionLabel} has ${region.words.length} word occurrences for ${expectedTokens.length} printed tokens`,
@@ -580,6 +713,20 @@ function validateCardLinks(artifacts, registry, errors) {
     for (const region of artifact.regions) {
       if (!isRecord(region) || !Array.isArray(region.words)) continue;
       const wordsById = new Map(region.words.map((word) => [word?.id, word]));
+      const { labelTokens, coveredTokenIndexes } = validateExcludedUnits(
+        region,
+        `${artifact.id}/${region.id}`,
+        [],
+      );
+      const wordLabelTokenIndexes = labelTokens
+        .map((_, tokenIndex) => tokenIndex)
+        .filter((tokenIndex) => !coveredTokenIndexes.has(tokenIndex));
+      const labelTokenIndexByWordId = new Map(
+        region.words.map((word, wordIndex) => [
+          word?.id,
+          wordLabelTokenIndexes[wordIndex],
+        ]),
+      );
       const linkUseCounts = new Map();
       for (const word of region.words) {
         if (!isRecord(word) || !Array.isArray(word.cardIds)) continue;
@@ -635,7 +782,7 @@ function validateCardLinks(artifacts, registry, errors) {
             errors.push(`${artifact.id}/${application.id} references unknown word ${wordId}`);
             continue;
           }
-          participantIndexes.push(region.words.indexOf(word));
+          participantIndexes.push(labelTokenIndexByWordId.get(wordId));
           const correctlyLinked =
             entry.card.kind === "word"
               ? application.participantWordIds.length === 1 &&
@@ -652,7 +799,7 @@ function validateCardLinks(artifacts, registry, errors) {
           }
         }
         const exampleTokens = normalizedTokenSequence(application.exampleEs ?? "");
-        const regionTokens = region.words.map((word) => word.normalized);
+        const regionTokens = labelTokens.map((token) => token.normalized);
         const possibleStarts = regionTokens
           .map((_, index) => index)
           .filter((index) => sequenceStartsAt(regionTokens, exampleTokens, index));
@@ -853,6 +1000,29 @@ function compileArtifact(artifact, sourceComic, registry, geometryRegistry) {
         cardIds: [...word.cardIds],
       };
     });
+    const excludedUnits = (region.excludedUnits ?? []).map((unit) => {
+      for (const ref of unit.geometryRefs ?? []) {
+        const key = geometryKey(ref);
+        if (usedGeometryRefs.has(key)) {
+          errors.push(
+            `${artifact.id} reuses lexical geometry ${key} for a word and/or excluded unit`,
+          );
+        }
+        usedGeometryRefs.add(key);
+      }
+      return {
+        id: unit.id,
+        text: unit.text,
+        reason: unit.reason,
+        rationale: unit.rationale,
+        bounds: resolveGeometry(
+          unit,
+          geometryRegistry,
+          `${artifact.id}/${unit.id}`,
+          errors,
+        ),
+      };
+    });
     const bounds = regionBoxes.length > 0 ? unionBounds(regionBoxes) : null;
     if (bounds) {
       for (const word of words) {
@@ -878,6 +1048,7 @@ function compileArtifact(artifact, sourceComic, registry, geometryRegistry) {
       noteEn: "",
       bounds,
       words,
+      excludedUnits,
       applications: region.applications.map((application) => ({
         id: application.id,
         cardId: application.cardId,
@@ -909,6 +1080,10 @@ function compileArtifact(artifact, sourceComic, registry, geometryRegistry) {
       id: region.id,
       bounds: region.bounds,
       words: region.words.map((word) => ({ id: word.id, bounds: word.bounds })),
+      excludedUnits: region.excludedUnits.map((unit) => ({
+        id: unit.id,
+        bounds: unit.bounds,
+      })),
     })),
   };
   const revision = `authored-${hash(stableJSON(revisionInput)).slice(0, 16)}`;

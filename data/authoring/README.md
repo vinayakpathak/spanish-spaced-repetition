@@ -134,6 +134,72 @@ characters:
 The fallback is for geometry only. It is not permission to skip the visual
 transcription or semantic pass.
 
+### Visible units that are not Spanish words
+
+Keep numerals, measurements, equations, symbols, and standalone non-Spanish
+text in `labelEs`, but do not invent Spanish flashcards for them. Account for
+each such exact fragment in the region's optional `excludedUnits` array:
+
+```json
+{
+  "labelEs": "1. ACELERACIÓN: 4 m/s^2 — MR. MUNROE",
+  "words": [
+    {
+      "id": "es-xkcd-example:exam-line:word-aceleracion",
+      "text": "ACELERACIÓN",
+      "normalized": "aceleración",
+      "geometryRefs": [
+        { "source": "ocr-token", "id": "es-xkcd-example:ocr-token-00002" }
+      ],
+      "cardIds": ["word-aceleración"]
+    }
+  ],
+  "excludedUnits": [
+    {
+      "id": "es-xkcd-example:exam-line:excluded-question-number",
+      "text": "1",
+      "reason": "number",
+      "rationale": "This is an exercise number, not a Spanish lexical word.",
+      "geometryRefs": [
+        { "source": "ocr-token", "id": "es-xkcd-example:ocr-token-00001" }
+      ]
+    },
+    {
+      "id": "es-xkcd-example:exam-line:excluded-measurement",
+      "text": "4 m/s^2",
+      "reason": "measurement",
+      "rationale": "This is a numerical physics measurement, not Spanish vocabulary.",
+      "geometryRefs": [
+        { "source": "ocr-token", "id": "es-xkcd-example:ocr-token-00003" }
+      ]
+    },
+    {
+      "id": "es-xkcd-example:exam-line:excluded-english-label",
+      "text": "MR. MUNROE",
+      "reason": "non-spanish-text",
+      "rationale": "This standalone chalkboard label is English, not Spanish curriculum text.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-example:ocr-line-0002" }
+      ]
+    }
+  ]
+}
+```
+
+Allowed reasons are `number`, `measurement`, `equation`, `non-spanish-text`,
+and `symbol`. Each entry needs a substantive editorial rationale plus ordinary
+geometry refs (line or token refs are both accepted). An explicit-bounds
+fallback still requires `geometryRationale`. When the same exact fragment
+appears more than once in a region, add a one-based `occurrence` to identify
+which match the exclusion covers.
+
+The validator tokenizes each excluded fragment, removes only that exact span
+from card coverage, and then requires `words` to cover every remaining Spanish
+token in order. Punctuation-only symbols can use `reason: "symbol"`; punctuation
+is otherwise preserved in `labelEs` without becoming a word card. Missing OCR
+geometry for a genuine Spanish phrase is not an exclusion—author the Spanish
+words normally and give each one explicit bounds with a rationale.
+
 ### Stable card definitions and ownership
 
 `cardDefinitions` contains every new shared card first introduced by this
@@ -188,6 +254,9 @@ Every grammar or expression link has exactly one reverse-linked application
 for that occurrence. The application names every and only the participating
 word IDs, uses the smallest contiguous Spanish fragment that contains them,
 and explains how the reusable lesson applies without translating the bubble.
+If a visible excluded unit falls between participating words, keep it in the
+exact fragment (for example, `tardan 5 minutos en abrir`); it remains visible
+context but is not a participant and receives no card.
 
 ```json
 {

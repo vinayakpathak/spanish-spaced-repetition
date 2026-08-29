@@ -257,6 +257,23 @@ test("bulk placeholders and false review claims are rejected", () => {
   assert.ok(errors.some((error) => /unsupported field reviewStatus/.test(error)));
 });
 
+test("ordinary Spanish todo is not mistaken for an authoring marker", () => {
+  const inputs = validInputs();
+  inputs.artifacts[0].titleText.es = "Y todo el montaje queda estable.";
+  inputs.artifacts[0].titleText.en = "And the entire setup remains stable.";
+  inputs.sourceComics[0].titleText = "Y todo el montaje queda estable.";
+  assert.deepEqual(validateManualAuthoringCorpus(inputs), []);
+
+  inputs.artifacts[0].titleText.es = "[TODO] Add the source title text.";
+  inputs.sourceComics[0].titleText = "[TODO] Add the source title text.";
+  assert.ok(
+    validateManualAuthoringCorpus(inputs).some((error) =>
+      /bulk-draft placeholder/.test(error),
+    ),
+    "an explicit bracketed TODO remains invalid",
+  );
+});
+
 test("every manually transcribed token needs a matching contextual word card first", () => {
   const missingOccurrence = validInputs();
   missingOccurrence.artifacts[0].regions[0].words.pop();
@@ -274,6 +291,55 @@ test("every manually transcribed token needs a matching contextual word card fir
   const errors = validateManualAuthoringCorpus(grammarFirst);
   assert.ok(errors.some((error) => /does not put a word-meaning card first/.test(error)));
   assert.ok(errors.some((error) => /links a second word-meaning card/.test(error)));
+});
+
+test("explicit exclusions preserve numbers, equations, and non-Spanish text without cards", () => {
+  const inputs = validInputs();
+  const region = inputs.artifacts[0].regions[0];
+  region.labelEs = "SI 4 m/s^2 LLUEVE MR. MUNROE";
+  region.applications[0].exampleEs = "SI 4 m/s^2 LLUEVE";
+  region.excludedUnits = [
+    {
+      id: "comic-one:bubble-1:excluded-measurement",
+      text: "4 m/s^2",
+      reason: "measurement",
+      rationale: "This is a numerical physics measurement, not a Spanish lexical word.",
+      explicitBounds: [{ x: 40, y: 10, width: 15, height: 5 }],
+      geometryRationale: "The synthetic fixture has no OCR geometry for this measurement.",
+    },
+    {
+      id: "comic-one:bubble-1:excluded-english-name",
+      text: "MR. MUNROE",
+      reason: "non-spanish-text",
+      rationale: "This standalone English chalkboard label is not Spanish curriculum text.",
+      explicitBounds: [{ x: 56, y: 10, width: 20, height: 5 }],
+      geometryRationale: "The synthetic fixture has no OCR geometry for this English label.",
+    },
+  ];
+  assert.deepEqual(
+    validateManualAuthoringCorpus(inputs),
+    [],
+    "an exact application fragment may span an explicitly excluded visible unit",
+  );
+  const compiled = compileManualAuthoringCorpus(inputs);
+  const outputRegion = compiled.bundles[0].bundle.comic.regions[0];
+  assert.equal(outputRegion.words.length, 2);
+  assert.deepEqual(
+    outputRegion.excludedUnits.map(({ text, reason }) => ({ text, reason })),
+    [
+      { text: "4 m/s^2", reason: "measurement" },
+      { text: "MR. MUNROE", reason: "non-spanish-text" },
+    ],
+  );
+
+  const unexplained = validInputs();
+  unexplained.artifacts[0].regions[0].labelEs = "SI LLUEVE 40";
+  assert.ok(
+    validateManualAuthoringCorpus(unexplained).some((error) =>
+      /word occurrences for 3 printed tokens/.test(error),
+    ),
+    "unlisted visible numerals cannot silently disappear from the authored audit",
+  );
 });
 
 test("whole-sentence aids are structurally absent and application copy stays local", () => {
