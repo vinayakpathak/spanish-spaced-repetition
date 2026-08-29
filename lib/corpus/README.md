@@ -7,12 +7,12 @@ while retaining the generated manifest's full-corpus importance score. The
 merge requires exact reviewed `cardIds` and analytics-target parity; a stale or
 mismatched manifest is rejected and the app uses its degraded fallback.
 
-The generated manifest stays compact when transferred (about 317 KB gzipped).
 Each comic's `cardIds` is its complete **schedulable** index for the SRS overlap
-algorithm. `cardCatalog` contains compact copy for those schedulable generated
-cards so the My cards drawer can restore history without fetching every old
-comic bundle. Regions, word bounds, preview-only cards, and explanations stay
-in per-comic files.
+algorithm. Every clickable generated word has one exact ID in that index,
+including cards whose English meaning still needs human review. `cardCatalog`
+contains compact copy for all generated cards so the My cards drawer can
+restore history without fetching every old comic bundle. Regions, word bounds,
+and explanations stay in per-comic files.
 
 `importanceTargetIds` is a separate, analytics-only graph index. Every
 schedulable word card maps provisionally to a normalized Spanish-prompt and
@@ -39,12 +39,12 @@ word cards have been reviewed and merged.
     "damping": 0.85,
     "tolerance": 1e-12,
     "maxIterations": 1000,
-    "iterations": 17,
+    "iterations": 13,
     "converged": true,
-    "nodeCount": 1492,
+    "nodeCount": 5211,
     "comicNodeCount": 258,
-    "cardNodeCount": 1234,
-    "edgeCount": 4354
+    "cardNodeCount": 4953,
+    "edgeCount": 11758
   },
   "comics": [
     {
@@ -86,9 +86,11 @@ word cards have been reviewed and merged.
 Selecting an unloaded entry requests
 `/corpus/comics/{loadKey}.json?v={revision}`. The file must be self-contained:
 `comic.cardIds` must equal the manifest entry's schedulable `cardIds`, and
-`cards` must define every referenced ID. A bundle may additionally contain
-preview-only cards with `schedulable: false`; these remain clickable through a
-word occurrence but never enter the comic index, completion grades, or SRS.
+`cards` must define every referenced ID. Generated bundles do not have a
+preview-only tier: even a card whose `answerEn` is `Meaning needs review` has
+`reviewStatus: needs-review`, `schedulable: true`, and participates in exact
+display/open history. This does not claim that its contextual sense was
+reviewed or invent an English translation.
 
 ```json
 {

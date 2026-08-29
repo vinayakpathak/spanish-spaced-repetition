@@ -26,9 +26,15 @@ const comic = (id, cardIds, importance = 0) => ({
 });
 
 function expose(state, targetComic, displayedAtMs, openedAtMs = []) {
-  let next = startComic(state, targetComic, displayedAtMs);
+  // A card can recur across the corpus, but a completed comic cannot. Give
+  // repeated synthetic observations distinct comic IDs to mirror production.
+  const sourceComic =
+    state.comics[targetComic.id]?.completions > 0
+      ? { ...targetComic, id: `${targetComic.id}-${state.nextSessionId}` }
+      : targetComic;
+  let next = startComic(state, sourceComic, displayedAtMs);
   for (const openedAt of openedAtMs) {
-    next = recordCardOpen(next, targetComic.cardIds[0], openedAt);
+    next = recordCardOpen(next, sourceComic.cardIds[0], openedAt);
   }
   return completeComic(next, Math.max(displayedAtMs, ...openedAtMs));
 }
@@ -252,7 +258,7 @@ test("zero-card comics are finite and can be selected by importance", () => {
   assert.ok(ranked.every((entry) => Number.isFinite(entry.score)));
 });
 
-test("the just-completed comic is excluded before axis normalization", () => {
+test("every completed comic is permanently excluded before axis normalization", () => {
   const excluded = comic(
     "excluded",
     Array.from({ length: 10 }, (_, index) => `e${index}`),
@@ -260,21 +266,89 @@ test("the just-completed comic is excluded before axis normalization", () => {
   );
   const priorityCandidate = comic("priority", ["p"], 0);
   const importanceCandidate = comic("importance", [], 1);
-  const state = { ...createSrsState(), lastCompletedComicId: "excluded" };
+  const previouslyRead = comic("previously-read", ["old"], 1);
+  let state = expose(createSrsState(), excluded, NOW - 2 * DAY);
+  state = expose(state, previouslyRead, NOW - DAY);
 
   const selected = selectNextComic(
-    [excluded, priorityCandidate, importanceCandidate],
+    [excluded, previouslyRead, priorityCandidate, importanceCandidate],
     state,
     NOW,
   );
+  assert.equal(selected.reason, "priority");
   assert.equal(selected.comic.id, "priority");
   assert.equal(selected.ranking.normalizedCardPriority, 1);
 });
 
-test("the only comic remains eligible after it was just completed", () => {
+test("a completed single-comic curriculum returns an explicit complete state", () => {
   const only = comic("only", ["word"], 1);
-  const state = { ...createSrsState(), lastCompletedComicId: "only" };
-  assert.equal(selectNextComic([only], state, NOW).comic.id, "only");
+  const state = expose(createSrsState(), only, NOW);
+  const selected = selectNextComic([only], state, NOW + 1);
+
+  assert.deepEqual(selected, {
+    comic: null,
+    state,
+    ranking: null,
+    overlapCardIds: [],
+    reason: "complete",
+  });
+});
+
+test("startComic rejects a comic that has already been completed", () => {
+  const only = comic("only", ["word"], 1);
+  const state = expose(createSrsState(), only, NOW);
+
+  assert.throws(
+    () => startComic(state, only, NOW + 1),
+    /completed comic cannot be started again/i,
+  );
+});
+
+test("completion eligibility survives serialization and schema-four hydration", () => {
+  const read = comic("read", ["shared"], 1);
+  const unread = comic("unread", ["shared"], 0);
+  const completed = expose(createSrsState(), read, NOW);
+  const restored = hydrateSrsState(
+    serializeSrsState(completed),
+    NOW + DAY,
+  );
+  const selected = selectNextComic([read, unread], restored, NOW + DAY);
+
+  assert.equal(restored.comics.read.completions, 1);
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "unread");
+});
+
+test("a stale active session for a completed comic is abandoned, not resumed", () => {
+  const read = comic("read", ["opened", "unopened"], 1);
+  const unread = comic("unread", ["next"], 0);
+  let state = startComic(createSrsState(), read, NOW);
+  state = recordCardOpen(state, "opened", NOW + 10);
+  state = {
+    ...state,
+    comics: {
+      ...state.comics,
+      read: {
+        ...state.comics.read,
+        completions: 1,
+        lastCompletedAtMs: NOW + 20,
+      },
+    },
+  };
+
+  const reconciled = reconcileSrsState(state, [read, unread], NOW + 25);
+
+  assert.equal(reconciled.activeSession, null);
+  assert.equal(
+    getCardHistory(reconciled, "opened").exposures[0].completedAtMs,
+    NOW + 10,
+  );
+  assert.equal(reconciled.cards.unopened, undefined);
+
+  const selected = selectNextComic([read, unread], reconciled, NOW + 30);
+
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "unread");
 });
 
 test("reconciliation adds new active cards and preserves opened abandoned evidence", () => {
@@ -299,11 +373,19 @@ test("reconciliation adds new active cards and preserves opened abandoned eviden
   assert.equal(scoreCardPriority(reconciled, "shared", NOW + 20).status, "learning");
 });
 
-test("reconciliation removes exact cards that left the entire curriculum", () => {
+test("reconciliation removes orphan cards but retains completed-comic tombstones", () => {
   let state = expose(createSrsState(), comic("old", ["kept", "orphan"]), NOW);
   state = reconcileSrsState(state, [comic("new", ["kept"])], NOW + 1);
   assert.deepEqual(Object.keys(state.cards), ["kept"]);
-  assert.deepEqual(Object.keys(state.comics), []);
+  assert.equal(state.comics.old.completions, 1);
+
+  const selected = selectNextComic(
+    [comic("old", ["kept", "orphan"], 1), comic("new", ["kept"], 0)],
+    state,
+    NOW + 2,
+  );
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "new");
 });
 
 test("all timestamped exposure history survives beyond the old 500-event cap", () => {
@@ -402,6 +484,13 @@ test("schema-three migration keeps only bounded aggregate evidence without fake 
     scoreCardPriority(migrated, "hard", NOW).priorityIndex >
       scoreCardPriority(migrated, "known", NOW).priorityIndex,
   );
+
+  const oldComic = comic("old", ["hard"], 1);
+  const newComic = comic("new", ["known"], 0);
+  const selected = selectNextComic([oldComic, newComic], migrated, NOW);
+  assert.equal(selected.reason, "priority");
+  assert.equal(selected.comic.id, "new");
+  assert.equal(selectNextComic([oldComic], migrated, NOW).reason, "complete");
 });
 
 test("a schema-three active session restarts timestamping at migration", () => {

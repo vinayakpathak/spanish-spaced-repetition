@@ -76,7 +76,7 @@ export interface CorpusManifest {
   revision: string;
   importanceModel: ComicImportanceModel;
   comics: readonly CorpusManifestEntry[];
-  /** Compact copy for schedulable cards so history survives lazy bundle loads. */
+  /** Compact copy for every generated exact card so history survives lazy loads. */
   cardCatalog: readonly LearningCard[];
 }
 

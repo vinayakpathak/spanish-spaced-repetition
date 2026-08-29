@@ -72,9 +72,9 @@ interface Summary {
   completedTitle: string;
   helpCardCount: number;
   independentCount: number;
-  nextComic: Comic;
+  nextComic: Comic | null;
   priorityCardIds: string[];
-  ranking: RankedComic<CorpusManifest["comics"][number]>;
+  ranking: RankedComic<CorpusManifest["comics"][number]> | null;
 }
 
 const initialSelection = selectNextComic(
@@ -82,6 +82,11 @@ const initialSelection = selectNextComic(
   createSrsState(),
   0,
 );
+if (initialSelection.reason === "complete") {
+  throw new Error("The initial comic curriculum cannot be empty or complete.");
+}
+const initialComic = initialSelection.comic;
+const initialRanking = initialSelection.ranking;
 
 const DEGRADED_CORPUS_WARNING =
   "The full comic collection is temporarily unavailable. Your existing saved progress is preserved; changes in this fallback session will not be saved.";
@@ -132,8 +137,11 @@ function formatImportanceScore(score: number): string {
 export default function Home() {
   const [srs, setSrs] = useState<SrsState>(initialSelection.state);
   const [schedulerNow, setSchedulerNow] = useState(0);
-  const [currentRanking, setCurrentRanking] = useState(initialSelection.ranking);
-  const [currentComicId, setCurrentComicId] = useState(initialSelection.comic.id);
+  const [currentRanking, setCurrentRanking] = useState<
+    RankedComic<CorpusManifest["comics"][number]> | null
+  >(initialRanking);
+  const [currentComicId, setCurrentComicId] = useState(initialComic.id);
+  const [allComicsRead, setAllComicsRead] = useState(false);
   const [corpusManifest, setCorpusManifest] = useState<CorpusManifest>(
     REVIEWED_CORPUS_MANIFEST,
   );
@@ -192,9 +200,7 @@ export default function Home() {
         .map((id) => lookupCard(id))
         .filter((card): card is LearningCard => card !== null)
     : [];
-  const selectedWordSchedulableCardCount = candidateCards.filter(
-    (card) => card.schedulable !== false,
-  ).length;
+  const selectedWordCardCount = candidateCards.length;
   const recentlyOpenedIds = useMemo(
     () =>
       getRecentlyOpenedCardIds(srs, schedulerNow).filter((cardId) =>
@@ -242,6 +248,9 @@ export default function Home() {
         progress.priorityIndex < 0.2
       );
     },
+  ).length;
+  const readComicCount = corpusManifest.comics.filter(
+    (comic) => (srs.comics[comic.id]?.completions ?? 0) > 0,
   ).length;
   const rankedComics = useMemo(
     () =>
@@ -298,28 +307,32 @@ export default function Home() {
       );
       const restoredOpened = storedProgress.openedByComic;
       let selected = selectNextComic(manifest.comics, restored, nowMs);
-      let bundle: CorpusComicBundle;
+      let bundle: CorpusComicBundle | null = null;
 
-      try {
-        bundle = await loadComicBundle(selected.comic);
-      } catch {
-        // A stale or partially deployed generated corpus must never strand the
-        // learner or overwrite their complete saved state. Resume against the
-        // checked-in reviewed curriculum without persisting this reduced view.
-        persistenceEnabled = canPersistCorpusProgress(manifestLoad, true);
-        manifest = REVIEWED_CORPUS_MANIFEST;
-        restored = reconcileSrsState(
-          persistedState,
-          manifest.comics,
-          nowMs,
-        );
-        selected = selectNextComic(manifest.comics, restored, nowMs);
-        bundle = await loadComicBundle(selected.comic);
+      if (selected.reason !== "complete") {
+        try {
+          bundle = await loadComicBundle(selected.comic);
+        } catch {
+          // A stale or partially deployed generated corpus must never strand the
+          // learner or overwrite their complete saved state. Resume against the
+          // checked-in reviewed curriculum without persisting this reduced view.
+          persistenceEnabled = canPersistCorpusProgress(manifestLoad, true);
+          manifest = REVIEWED_CORPUS_MANIFEST;
+          restored = reconcileSrsState(
+            persistedState,
+            manifest.comics,
+            nowMs,
+          );
+          selected = selectNextComic(manifest.comics, restored, nowMs);
+          if (selected.reason !== "complete") {
+            bundle = await loadComicBundle(selected.comic);
+          }
+        }
       }
       if (cancelled) return;
 
       cacheCards(manifest.cardCatalog);
-      cacheBundle(bundle);
+      if (bundle) cacheBundle(bundle);
       persistenceEnabledRef.current = persistenceEnabled;
       let persistenceWarning = persistenceEnabled
         ? storedProgress.warning
@@ -344,7 +357,8 @@ export default function Home() {
         setSrs(selected.state);
         setSchedulerNow(nowMs);
         setCurrentRanking(selected.ranking);
-        setCurrentComicId(selected.comic.id);
+        if (selected.comic) setCurrentComicId(selected.comic.id);
+        setAllComicsRead(selected.reason === "complete");
         setOpenedByComic(restoredOpened);
         setStorageWarning(persistenceWarning);
         setHydrated(true);
@@ -426,11 +440,6 @@ export default function Home() {
       return;
     }
     setSelectedCardId(cardId);
-    const card = lookupCard(cardId);
-    if (card?.schedulable === false) {
-      setToast("Preview only · this meaning still needs review");
-      return;
-    }
     if (!srs.activeSession) {
       setToast("Answer shown · this comic is already complete");
       return;
@@ -468,6 +477,27 @@ export default function Home() {
       nowMs,
     );
     setComicLoading(true);
+    if (next.reason === "complete") {
+      if (sessionBefore) {
+        setSummary({
+          completedTitle: currentComic.titleEs,
+          helpCardCount: opened.size,
+          independentCount: independentlyUnderstood,
+          nextComic: null,
+          priorityCardIds: [],
+          ranking: null,
+        });
+      }
+      setSchedulerNow(nowMs);
+      setCurrentRanking(null);
+      setAllComicsRead(true);
+      closeRegion();
+      setShowTitleText(false);
+      setComicZoomed(false);
+      commit(next.state);
+      setComicLoading(false);
+      return;
+    }
     let nextBundle: CorpusComicBundle;
     try {
       nextBundle = await loadComicBundle(next.comic);
@@ -497,6 +527,7 @@ export default function Home() {
     setSchedulerNow(nowMs);
     setCurrentRanking(next.ranking);
     setCurrentComicId(next.comic.id);
+    setAllComicsRead(false);
     closeRegion();
     setShowTitleText(false);
     setComicZoomed(false);
@@ -512,6 +543,9 @@ export default function Home() {
       createSrsState(),
       nowMs,
     );
+    if (fresh.reason === "complete") {
+      throw new Error("A fresh non-empty curriculum cannot already be complete.");
+    }
     setComicLoading(true);
     let freshBundle: CorpusComicBundle;
     try {
@@ -526,6 +560,7 @@ export default function Home() {
     setSchedulerNow(nowMs);
     setCurrentRanking(fresh.ranking);
     setCurrentComicId(fresh.comic.id);
+    setAllComicsRead(false);
     closeRegion();
     setComicZoomed(false);
     setSummary(null);
@@ -631,7 +666,6 @@ export default function Home() {
 
   const libraryCards = useMemo(() => {
     const filtered = [...cardsById.values()].filter((card) => {
-      if (card.schedulable === false) return false;
       const progress = cardProgressById.get(card.id);
       if (!progress) return false;
       if (libraryFilter === "recent") {
@@ -666,7 +700,7 @@ export default function Home() {
     });
   }, [cardProgressById, cardsById, libraryFilter, recentlyOpenedIds]);
 
-  const targetCards = currentRanking.cardPriorities
+  const targetCards = (currentRanking?.cardPriorities ?? [])
     .filter((priority) => priority.priorityIndex >= 0.35)
     .map((priority) => priority.cardId)
     .map((id) => lookupCard(id))
@@ -693,6 +727,7 @@ export default function Home() {
           >
             Rankings
           </button>
+          <div className="top-stat"><strong>{readComicCount}</strong> / {corpusManifest.comics.length} read</div>
           <div className="top-stat"><strong>{highPriorityIds.length}</strong> high priority</div>
           <button
             className="avatar"
@@ -705,7 +740,23 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="learning-layout" id="top">
+      {allComicsRead ? (
+        <section className="collection-complete" id="top" aria-labelledby="collection-complete-title">
+          <div className="collection-complete-mark" aria-hidden="true">✓</div>
+          <div className="summary-eyebrow">COLLECTION COMPLETE</div>
+          <h1 id="collection-complete-title">You’ve read every comic.</h1>
+          <p>
+            All {readComicCount} comics in this collection are marked read. Tira will not repeat them.
+            Your exact card-display and answer-opening history remains saved in My cards.
+          </p>
+          <div className="collection-complete-actions">
+            <button className="primary-wide" onClick={() => setShowLibrary(true)}>View my cards</button>
+            <button className="secondary-link" onClick={() => setShowReset(true)}>Reset and read the collection again</button>
+          </div>
+        </section>
+      ) : null}
+
+      <section className={`learning-layout ${allComicsRead ? "is-hidden" : ""}`} id={allComicsRead ? undefined : "top"}>
         <aside className="lesson-rail">
           <div className="eyebrow">
             COMIC {Math.max(0, currentIndex) + 1} OF {corpusManifest.comics.length}
@@ -734,8 +785,8 @@ export default function Home() {
             {currentNewCount > 0 ? (
               <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> not yet observed</div>
             ) : null}
-            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking.score)}</strong> combined fit</div>
-            <div className="target-row"><span className="target-dot" /> {formatPriority(currentRanking.normalizedCardPriority)} card need · {formatPriority(currentRanking.normalizedImportance)} importance</div>
+            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking?.score ?? 0)}</strong> combined fit</div>
+            <div className="target-row"><span className="target-dot" /> {formatPriority(currentRanking?.normalizedCardPriority ?? 0)} card need · {formatPriority(currentRanking?.normalizedImportance ?? 0)} importance</div>
           </div>
 
           <div className="target-peek">
@@ -764,7 +815,7 @@ export default function Home() {
                   className="review-status"
                   title="Words and meanings on this comic were extracted automatically and may contain mistakes."
                 >
-                  Machine-extracted · needs review
+                  Machine-extracted · Review needed
                 </span>
               ) : null}
               {hydrated && currentManifestEntry?.importance ? (
@@ -772,8 +823,8 @@ export default function Home() {
                   className="importance-badge"
                   type="button"
                   onClick={() => setShowRankings(true)}
-                  aria-label={`Comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive score is provisional because generated contextual senses remain unreviewed; unresolved previews are excluded. Open comic rankings.`}
-                  title="PageRank-style recursive importance. Generated contextual senses remain unreviewed, unresolved previews are excluded, and analytics grouping never merges SRS progress."
+                  aria-label={`Comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive score is provisional because generated contextual senses remain unreviewed. Review-needed cards are included. Open comic rankings.`}
+                  title="PageRank-style recursive importance. Review-needed cards are included, generated contextual senses remain unreviewed, and analytics grouping never merges SRS progress."
                 >
                   <span>IMPORTANCE</span>
                   <strong>{formatImportanceScore(currentManifestEntry.importance.score)}</strong>
@@ -916,16 +967,16 @@ export default function Home() {
                 <strong>
                   {selectedWordOpenedRecentlyCount > 0
                     ? `${selectedWordOpenedRecentlyCount} related ${selectedWordOpenedRecentlyCount === 1 ? "card" : "cards"} opened recently`
-                    : selectedWordSchedulableCardCount > 0
+                    : selectedWordCardCount > 0
                       ? "Word opened · no cards selected"
-                      : "Translation draft · preview only"}
+                      : "No flashcards linked"}
                 </strong>
                 <span>
                   {selectedWordOpenedRecentlyCount > 0
                     ? "These may include shared cards opened elsewhere in the last 24 hours; only explicit answer reveals change their history."
-                    : selectedWordSchedulableCardCount > 0
+                    : selectedWordCardCount > 0
                       ? "Choose a card below. Opening the word alone records no learning event."
-                      : "No reviewed-safe English match is available yet, so this word cannot enter spaced repetition."}
+                      : "This word has no card data yet. Opening the word alone records no learning event."}
                 </span>
               </div>
 
@@ -934,16 +985,16 @@ export default function Home() {
                   <div className="cards-heading">
                     <span>CHOOSE A FLASHCARD</span>
                     <strong>
-                      {selectedWordSchedulableCardCount > 0
-                        ? `${candidateCards.filter((card) => recentlyOpenedIds.includes(card.id)).length} / ${selectedWordSchedulableCardCount} opened in 24 hours`
-                        : "Preview only"}
+                      {selectedWordCardCount > 0
+                        ? `${candidateCards.filter((card) => recentlyOpenedIds.includes(card.id)).length} / ${selectedWordCardCount} opened in 24 hours`
+                        : "No linked cards"}
                     </strong>
                   </div>
                   <h4 id="candidate-title">
                     Cards related to <span lang="es">“{selectedWord.text}”</span>
                   </h4>
                   <p className="cards-instruction">
-                    Previewing this list adds nothing. Select only a card whose answer you want to see.
+                    Viewing this list adds nothing. Select only a card whose answer you want to see.
                   </p>
 
                   <div className="candidate-groups">
@@ -959,7 +1010,7 @@ export default function Home() {
                             <span className={`kind-badge kind-${group.kind}`}>{group.label}</span>
                             <small>
                               {group.kind === "word" && hasProvisionalCards
-                                ? "Machine-extracted dictionary candidates; contextual senses still need review"
+                                ? "Machine-extracted drafts that participate in scheduling; verify before trusting"
                                 : group.description}
                             </small>
                           </div>
@@ -968,11 +1019,8 @@ export default function Home() {
                               const isSelected = selectedCardId === card.id;
                               const isLearned = recentlyOpenedIds.includes(card.id);
                               const isProvisional = card.reviewStatus === "needs-review";
-                              const isSchedulable = card.schedulable !== false;
-                              const cardPriority = isSchedulable
-                                ? cardProgressById.get(card.id) ??
-                                  scoreCardPriority(srs, card.id, schedulerNow)
-                                : null;
+                              const cardPriority = cardProgressById.get(card.id) ??
+                                scoreCardPriority(srs, card.id, schedulerNow);
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
                               const frontId = `${candidateId}-front`;
                               const answerId = `${candidateId}-answer`;
@@ -997,7 +1045,7 @@ export default function Home() {
                                 <article
                                   key={card.id}
                                   id={`flashcard-${encodeURIComponent(card.id)}`}
-                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isProvisional ? "is-provisional" : ""} ${!isSchedulable ? "is-preview-only" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
+                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isProvisional ? "is-provisional" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
                                 >
                                   <button
                                     type="button"
@@ -1021,18 +1069,14 @@ export default function Home() {
                                       )}
                                       {isProvisional ? (
                                         <span className="candidate-review-flag">
-                                          Needs human review
+                                          Review needed
                                         </span>
                                       ) : null}
                                       <small id={`${candidateId}-status`}>
-                                        {!isSchedulable
-                                          ? isSelected
-                                            ? "Preview shown · no history recorded"
-                                            : "Preview only · not ready for scheduling"
-                                          : isSelected
+                                        {isSelected
                                           ? card.kind === "word"
                                             ? isProvisional
-                                              ? "Dictionary candidate shown · tap to close"
+                                              ? "Draft shown and opening recorded · tap to close"
                                               : "Meaning shown · tap to close"
                                             : "Answer shown · tap to close"
                                           : isLearned
@@ -1041,7 +1085,7 @@ export default function Home() {
                                               : "Opened recently · show answer"
                                             : card.kind === "word"
                                               ? isProvisional
-                                                ? "Reveal candidate + record opening"
+                                                ? "Reveal draft + record opening"
                                                 : "Reveal meaning + record opening"
                                               : "Reveal answer + record opening"}
                                       </small>
@@ -1058,7 +1102,7 @@ export default function Home() {
                                       <div className="candidate-answer-label">
                                         {card.kind === "word"
                                           ? isProvisional
-                                            ? "PROVISIONAL DICTIONARY MATCH"
+                                            ? "REVIEW NEEDED"
                                             : "MEANING HERE"
                                           : "SHORT ANSWER"}
                                       </div>
@@ -1066,9 +1110,7 @@ export default function Home() {
 
                                       {isProvisional ? (
                                         <p className="candidate-provisional-note">
-                                          {isSchedulable
-                                            ? "This is a machine-extracted dictionary match. Its meaning in this exact comic has not been reviewed yet."
-                                            : "No safe English match is available yet. This preview is not added to spaced repetition."}
+                                          This is machine-extracted draft content. The Spanish token or English meaning may be wrong; its opening is still recorded so it participates in scheduling.
                                         </p>
                                       ) : null}
 
@@ -1129,11 +1171,7 @@ export default function Home() {
                                           {card.tags.map((tag) => <span key={tag}>{tag}</span>)}
                                         </div>
                                       ) : null}
-                                      {isSchedulable ? (
-                                        <div className="candidate-memory"><span>✓</span> Priority now {formatPriority(cardPriority?.priorityIndex ?? 0)} · reconsidered on every Next</div>
-                                      ) : (
-                                        <div className="candidate-memory is-preview"><span>○</span> Not scheduled · translation needs review</div>
-                                      )}
+                                      <div className="candidate-memory"><span>✓</span> Priority now {formatPriority(cardPriority.priorityIndex)} · reconsidered on every Next</div>
                                     </div>
                                   ) : null}
                                 </article>
@@ -1168,7 +1206,7 @@ export default function Home() {
         </aside>
       </section>
 
-      <footer className="action-bar">
+      <footer className={`action-bar ${allComicsRead ? "is-hidden" : ""}`}>
         <div className="action-hint">
           <span className="keycap">1–{currentComic.regions.length}</span>
           <span>shortcuts to each text group’s first word</span>
@@ -1191,23 +1229,34 @@ export default function Home() {
             <div className="success-orbit"><span>✓</span></div>
             <div className="summary-eyebrow">COMIC UNDERSTOOD</div>
             <h2 id="summary-title" lang="es">{summary.completedTitle}</h2>
-            <p>Your timestamps are recorded. Every card priority was recalculated before choosing what comes next.</p>
+            <p>
+              {summary.nextComic
+                ? "Your timestamps are recorded. Every card priority was recalculated before choosing what comes next."
+                : "Your timestamps are recorded, and every comic in this collection is now marked read."}
+            </p>
 
             <div className="grade-grid">
               <div><strong>{summary.helpCardCount}</strong><span>help cards opened</span><small>help need rises</small></div>
               <div><strong>{summary.independentCount}</strong><span>understood unaided</span><small>stability grows</small></div>
             </div>
 
-            <div className="next-comic-card">
-              <img src={summary.nextComic.image.src} alt="" />
-              <div>
-                <span>UP NEXT</span>
-                <strong lang="es">{summary.nextComic.titleEs}</strong>
-                <p>
-                  {formatPriority(summary.ranking.score)} combined fit · {formatPriority(summary.ranking.normalizedCardPriority)} card need · {formatPriority(summary.ranking.normalizedImportance)} importance
-                </p>
+            {summary.nextComic && summary.ranking ? (
+              <div className="next-comic-card">
+                <img src={summary.nextComic.image.src} alt="" />
+                <div>
+                  <span>UP NEXT</span>
+                  <strong lang="es">{summary.nextComic.titleEs}</strong>
+                  <p>
+                    {formatPriority(summary.ranking.score)} combined fit · {formatPriority(summary.ranking.normalizedCardPriority)} card need · {formatPriority(summary.ranking.normalizedImportance)} importance
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="collection-finished-summary" role="status">
+                <strong>All {readComicCount} comics read</strong>
+                <span>No previously completed comic will be scheduled again.</span>
+              </div>
+            )}
             {summary.priorityCardIds.length > 0 ? (
               <div className="overlap-chips">
                 {summary.priorityCardIds.slice(0, 4).map((id) => {
@@ -1216,7 +1265,9 @@ export default function Home() {
                 })}
               </div>
             ) : null}
-            <button className="primary-wide" onClick={() => setSummary(null)}>Continue to the next comic <span>→</span></button>
+            <button className="primary-wide" onClick={() => setSummary(null)}>
+              {summary.nextComic ? <>Continue to the next comic <span>→</span></> : "See collection summary"}
+            </button>
             <button className="secondary-link" onClick={() => { setSummary(null); setShowLibrary(true); }}>View my cards</button>
           </section>
         </div>
@@ -1265,7 +1316,13 @@ export default function Home() {
                     return (
                       <article className="memory-row" key={card.id}>
                         <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
-                        <div><strong lang="es">{card.promptEs}</strong><p>{card.answerEn}</p></div>
+                        <div>
+                          <strong lang="es">{card.promptEs}</strong>
+                          {card.reviewStatus === "needs-review" ? (
+                            <span className="memory-review-flag">Review needed</span>
+                          ) : null}
+                          <p>{card.answerEn}</p>
+                        </div>
                         <span className={`status-pill status-${band}`}>{statusLabel(progress)} · {formatPriority(progress.priorityIndex)}</span>
                       </article>
                     );
@@ -1319,7 +1376,7 @@ export default function Home() {
                 This PageRank-style recursive importance uses damped two-way comic–target centrality: comics raise their linked targets, and targets raise every linked comic. An 85% linked influence plus a 15% baseline/reset keeps disconnected and zero-target comics from vanishing. The calculation repeats until stable; comic scores below sum to 100%.
               </p>
               <p className="rankings-caveat">
-                <strong>Current limitation:</strong> word targets are grouped for analytics when their normalized Spanish prompt and English answer match across reviewed and generated schedulable cards. Higher-level targets use exact card IDs. Generated contextual senses remain unreviewed, so these scores are provisional; unresolved preview cards are excluded. Analytics grouping never merges SRS card IDs or progress.
+                <strong>Current limitation:</strong> word targets are grouped for analytics when their normalized Spanish prompt and English answer match across reviewed and generated cards. Higher-level targets use exact card IDs. Review-needed cards are included, so the scores remain provisional until their contextual senses are checked. Analytics grouping never merges SRS card IDs or progress.
               </p>
               <div className="rankings-model" aria-label="Importance model details">
                 <span>{Math.round(corpusManifest.importanceModel.damping * 100)}% linked influence</span>
@@ -1343,17 +1400,18 @@ export default function Home() {
             >
               <ol className="rankings-list">
                 {rankedComics.map((comic) => {
-                  const isCurrent = comic.id === currentComic.id;
+                  const isCurrent = !allComicsRead && comic.id === currentComic.id;
+                  const isRead = (srs.comics[comic.id]?.completions ?? 0) > 0;
                   return (
                     <li
-                      className={isCurrent ? "is-current" : undefined}
+                      className={`${isCurrent ? "is-current" : ""} ${isRead ? "is-read" : ""}`.trim() || undefined}
                       key={comic.id}
                       aria-current={isCurrent ? "true" : undefined}
                     >
                       <span className="ranking-number">#{comic.importance.rank}</span>
                       <div className="ranking-comic">
                         <strong lang="es">{comic.titleEs}</strong>
-                        <span>xkcd · {comic.xkcdNumber}{isCurrent ? " · reading now" : ""}</span>
+                        <span>xkcd · {comic.xkcdNumber}{isCurrent && !isRead ? " · reading now" : ""}{isRead ? " · ✓ read" : ""}</span>
                       </div>
                       <strong className="ranking-score">
                         {formatImportanceScore(comic.importance.score)}
@@ -1397,11 +1455,11 @@ export default function Home() {
             </ol>
             <div className="license-note">
               <strong>About continuous scheduling</strong>
-              <p>Each schedulable card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. The next comic score is 80% normalized exact-card priority coverage and 20% normalized corpus importance; the comic just completed gets a one-step cooldown.</p>
+              <p>Each card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. The next comic score is 80% normalized exact-card priority coverage and 20% normalized corpus importance. Any comic already finished is permanently excluded, so the collection ends after every comic has been read once.</p>
               <strong>About comic importance</strong>
-              <p>Importance is PageRank-style recursive importance—a damped two-way comic–target centrality calculation. Comics raise linked targets; targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated schedulable word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Generated contextual senses are unreviewed, so scores are provisional, and unresolved previews are excluded.</p>
+              <p>Importance is PageRank-style recursive importance—a damped two-way comic–target centrality calculation. Comics raise linked targets; targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Review-needed cards are included, so these scores remain provisional until the draft meanings are checked.</p>
               <strong>About the 258-comic corpus</strong>
-              <p>Six lessons are fully reviewed. The remaining archive entries are an authoring preview built from image OCR and conservative dictionary matches. They are labeled “needs review”; unresolved previews are never added to spaced repetition, and generated grammar or expression lessons still require human authoring.</p>
+              <p>Six lessons are fully reviewed. The remaining archive entries are an authoring draft built from image OCR and conservative dictionary matches. Every draft card participates in scheduling and is visibly labeled “Review needed,” including words whose English meaning has not been resolved. Treat that content as provisional and report anything that should be corrected. Generated grammar or expression lessons still require human authoring.</p>
               <strong>About the comics</strong>
               <p>Original work by Randall Munroe, published by xkcd under <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" rel="noreferrer">CC BY-NC 2.5</a>. Spanish translations by <a href="https://es.xkcd.com/" target="_blank" rel="noreferrer">Gabriel Rodríguez Alberich / xkcd en español</a>. Interactive word markers and learning notes are unofficial adaptations. Tira is free, noncommercial, and not affiliated with xkcd.</p>
             </div>

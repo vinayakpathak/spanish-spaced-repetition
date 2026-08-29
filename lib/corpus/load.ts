@@ -83,7 +83,7 @@ export function parseComicBundle(
       throw new Error(`Corpus bundle is missing ${cardId} for ${entry.id}.`);
     }
     if (card.schedulable === false) {
-      throw new Error(`Corpus bundle schedules preview-only ${cardId} for ${entry.id}.`);
+      throw new Error(`Corpus bundle schedules unschedulable ${cardId} for ${entry.id}.`);
     }
   }
 

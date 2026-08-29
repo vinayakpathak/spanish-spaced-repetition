@@ -24,7 +24,7 @@ export interface LearningCard {
   tags: readonly string[];
   /** Generated cards remain provisional until a human reviews the OCR and sense. */
   reviewStatus?: "reviewed" | "needs-review";
-  /** False keeps an unresolved authoring card visible without adding it to SRS. */
+  /** Exceptional opt-out; never set false merely because content needs review. */
   schedulable?: boolean;
   /** Build provenance is intentionally display metadata, never an SRS identity. */
   provenance?: {

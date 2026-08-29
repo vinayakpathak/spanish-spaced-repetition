@@ -94,7 +94,7 @@ test("all 258 manifest comics carry deterministic normalized graph importance", 
   assert.deepEqual(reordered, expected, "ranking is independent of input order");
   assert.equal(manifest.schemaVersion, 2);
   assert.equal(expected.comics.length, 258);
-  assert.equal(expected.comics[0].comicId, "tech-support");
+  assert.equal(expected.comics[0].comicId, "es-xkcd-quince-años");
   assert.equal(expected.comics[0].rank, 1);
 
   const storedById = new Map(
@@ -142,9 +142,9 @@ test("all 258 manifest comics carry deterministic normalized graph importance", 
     cardNodeCount: expected.cardNodeCount,
     edgeCount: expected.edgeCount,
   });
-  assert.equal(expected.cardNodeCount, 1_234);
-  assert.equal(expected.edgeCount, 4_354);
-  assert.equal(expected.iterations, 17);
+  assert.equal(expected.cardNodeCount, 4_953);
+  assert.equal(expected.edgeCount, 11_758);
+  assert.equal(expected.iterations, 13);
 });
 
 test("analytics targets canonically connect schedulable cards without aliasing SRS IDs", async () => {
@@ -182,15 +182,19 @@ test("analytics targets canonically connect schedulable cards without aliasing S
     }
   }
 
-  assert.equal(targetFrequency.size, 1_234);
+  assert.equal(targetFrequency.size, 4_953);
   assert.equal(
     [...targetFrequency.values()].reduce((sum, count) => sum + count, 0),
-    4_354,
+    11_758,
   );
   assert.equal(targetFrequency.get("word:en|in%3B%20on"), 145);
   assert.equal(
+    targetFrequency.get("word:de|meaning%20needs%20review"),
+    202,
+  );
+  assert.equal(
     [...targetFrequency.values()].filter((comicCount) => comicCount > 1).length,
-    375,
+    1_205,
   );
 });
 
@@ -209,7 +213,7 @@ test("the browser manifest parser accepts the complete corpus, including its Uni
       ?.loadKey,
     "es-xkcd-quince-años",
   );
-  assert.equal(parsed.cardCatalog.length, 5_019);
+  assert.equal(parsed.cardCatalog.length, 14_485);
   for (const reviewed of COMICS) {
     assert.deepEqual(
       merged.comics.find((comic) => comic.id === reviewed.id)?.importance,
@@ -353,17 +357,13 @@ test("every generated OCR word is directly clickable and schedules only its exac
       assert.equal(card?.promptEs, word.normalized);
       assert.equal(card.reviewStatus, "needs-review");
       assert.equal(card.provenance.contextualSenseReviewed, false);
-      assert.equal(typeof card.schedulable, "boolean");
-      if (card.schedulable) {
-        assert.notEqual(card.answerEn, "Meaning needs review");
-        assert.ok(entry.cardIds.includes(card.id));
-        assert.deepEqual(catalogById.get(card.id), card);
-        globalSchedulableCardIds.add(card.id);
-      } else {
+      assert.equal(card.schedulable, true);
+      assert.ok(entry.cardIds.includes(card.id));
+      assert.ok(bundle.comic.cardIds.includes(card.id));
+      assert.deepEqual(catalogById.get(card.id), card);
+      globalSchedulableCardIds.add(card.id);
+      if (card.answerEn === "Meaning needs review") {
         unresolvedCardCount += 1;
-        assert.equal(card.answerEn, "Meaning needs review");
-        assert.equal(entry.cardIds.includes(card.id), false);
-        assert.equal(bundle.comic.cardIds.includes(card.id), false);
       }
       assert.equal(globalGeneratedCardIds.has(card.id), false, card.id);
       globalGeneratedCardIds.add(card.id);
@@ -372,7 +372,7 @@ test("every generated OCR word is directly clickable and schedules only its exac
 
   assert.equal(generatedComicCount, 252);
   assert.equal(generatedWordCount, 14_485);
-  assert.equal(globalSchedulableCardIds.size, 5_019);
+  assert.equal(globalSchedulableCardIds.size, 14_485);
   assert.equal(unresolvedCardCount, 9_466);
   assert.equal(globalGeneratedCardIds.size, generatedWordCount);
   assert.equal(manifest.counts.generatedCards, generatedWordCount);
@@ -382,7 +382,7 @@ test("every generated OCR word is directly clickable and schedules only its exac
   );
 
   const catalogIds = manifest.cardCatalog.map((card) => card.id);
-  assert.equal(manifest.cardCatalog.length, 5_019);
+  assert.equal(manifest.cardCatalog.length, 14_485);
   assert.equal(new Set(catalogIds).size, catalogIds.length);
   assert.ok(sameSet(catalogIds, [...globalSchedulableCardIds]));
   for (const card of manifest.cardCatalog) {
@@ -390,8 +390,13 @@ test("every generated OCR word is directly clickable and schedules only its exac
     assert.equal(card.reviewStatus, "needs-review");
     assert.equal(card.schedulable, true);
     assert.equal(card.provenance.contextualSenseReviewed, false);
-    assert.notEqual(card.answerEn, "Meaning needs review");
   }
+  assert.equal(
+    manifest.cardCatalog.filter(
+      (card) => card.answerEn === "Meaning needs review",
+    ).length,
+    9_466,
+  );
 });
 
 test("manual overrides recover the only two visibly textual zero-OCR comics", async () => {

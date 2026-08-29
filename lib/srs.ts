@@ -96,7 +96,7 @@ export interface RankedComic<T extends ComicLike> {
   cardPriorities: CardPriorityDiagnostics[];
 }
 
-export interface NextComicResult<T extends ComicLike> {
+export interface SelectedComicResult<T extends ComicLike> {
   comic: T;
   state: SrsState;
   ranking: RankedComic<T>;
@@ -104,6 +104,19 @@ export interface NextComicResult<T extends ComicLike> {
   overlapCardIds: string[];
   reason: "priority" | "resume";
 }
+
+export interface CompletedCurriculumResult {
+  comic: null;
+  state: SrsState;
+  ranking: null;
+  overlapCardIds: [];
+  /** Every comic in the current curriculum has already been completed. */
+  reason: "complete";
+}
+
+export type NextComicResult<T extends ComicLike> =
+  | SelectedComicResult<T>
+  | CompletedCurriculumResult;
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -423,11 +436,14 @@ export function reconcileSrsState<T extends ComicLike>(
   );
   const oldSession = state.activeSession;
   const activeComic = oldSession ? comicById.get(oldSession.comicId) : null;
+  const activeComicWasCompleted = oldSession
+    ? getComicProgress(state, oldSession.comicId).completions > 0
+    : false;
   const activeCardIds = new Set(
     activeComic ? uniqueStrings(activeComic.cardIds) : [],
   );
   const activeSession =
-    oldSession && activeComic
+    oldSession && activeComic && !activeComicWasCompleted
       ? {
           ...oldSession,
           cardIds: [...activeCardIds],
@@ -484,8 +500,9 @@ export function reconcileSrsState<T extends ComicLike>(
     }
   }
   const comicsProgress = Object.fromEntries(
-    Object.entries(state.comics).filter(([comicId]) =>
-      allowedComicIds.has(comicId),
+    Object.entries(state.comics).filter(
+      ([comicId, progress]) =>
+        allowedComicIds.has(comicId) || progress.completions > 0,
     ),
   );
 
@@ -508,6 +525,9 @@ export function startComic<T extends ComicLike>(
   nowMs: number,
 ): SrsState {
   const now = finiteTimestamp(nowMs, "nowMs");
+  if (getComicProgress(state, comic.id).completions > 0) {
+    throw new Error("A completed comic cannot be started again.");
+  }
   if (state.activeSession?.comicId === comic.id) return state;
   if (state.activeSession) {
     throw new Error("Complete the active comic before starting another one.");
@@ -709,7 +729,7 @@ export function rankComics<T extends ComicLike>(
     );
 }
 
-function abandonMissingActiveSession(state: SrsState): SrsState {
+function abandonActiveSession(state: SrsState): SrsState {
   const session = state.activeSession;
   if (!session) return state;
   const cards: Record<string, CardHistory> = {};
@@ -748,8 +768,13 @@ export function selectNextComic<T extends ComicLike>(
     const activeComic = comics.find(
       (comic) => comic.id === state.activeSession?.comicId,
     );
-    if (activeComic) {
-      const ranking = rankComics(comics, state, now, partialConfig).find(
+    const activeComicWasCompleted =
+      getComicProgress(state, state.activeSession.comicId).completions > 0;
+    if (activeComic && !activeComicWasCompleted) {
+      const unreadComics = comics.filter(
+        (comic) => getComicProgress(state, comic.id).completions === 0,
+      );
+      const ranking = rankComics(unreadComics, state, now, partialConfig).find(
         (candidate) => candidate.comic.id === activeComic.id,
       );
       if (!ranking) throw new Error("The active comic could not be ranked.");
@@ -763,19 +788,20 @@ export function selectNextComic<T extends ComicLike>(
     }
   }
 
-  const workingState = abandonMissingActiveSession(state);
-  const eligibleComics =
-    comics.length > 1 && workingState.lastCompletedComicId
-      ? comics.filter(
-          (comic) => comic.id !== workingState.lastCompletedComicId,
-        )
-      : comics;
-  const ranked = rankComics(
-    eligibleComics.length > 0 ? eligibleComics : comics,
-    workingState,
-    now,
-    partialConfig,
+  const workingState = abandonActiveSession(state);
+  const eligibleComics = comics.filter(
+    (comic) => getComicProgress(workingState, comic.id).completions === 0,
   );
+  if (eligibleComics.length === 0) {
+    return {
+      comic: null,
+      state: workingState,
+      ranking: null,
+      overlapCardIds: [],
+      reason: "complete",
+    };
+  }
+  const ranked = rankComics(eligibleComics, workingState, now, partialConfig);
   const choice = ranked[0];
   const nextState = startComic(workingState, choice.comic, now);
   return {

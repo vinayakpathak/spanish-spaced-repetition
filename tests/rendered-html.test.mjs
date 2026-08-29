@@ -66,7 +66,7 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(page, /Higher-level targets use exact card IDs/);
   assert.match(page, /cross-comic targets/);
   assert.match(page, /importanceModel\.cardNodeCount\.toLocaleString\("en"\)/);
-  assert.match(page, /unresolved preview cards are excluded/i);
+  assert.match(page, /Review-needed cards are included/i);
   assert.match(page, /never merges SRS card IDs or progress/i);
   assert.match(styles, /\.importance-badge\s*\{/);
   assert.match(styles, /\.importance-badge\s*\{[\s\S]*?min-height:\s*44px/);
@@ -83,7 +83,7 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(readme, /normalized Spanish prompt and English answer match/);
   assert.match(readme, /higher-level grammar, expression, and concept cards use exact IDs/);
   assert.match(readme, /never merges SRS card IDs or progress/);
-  assert.match(readme, /9,466 unresolved clickable previews are excluded entirely/);
+  assert.match(readme, /All 14,485 enter SRS and the importance graph/);
 });
 
 test("the curriculum stays Spanish-first and starter artifacts are gone", async () => {
@@ -99,6 +99,12 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   assert.match(page, /recordCardOpen/);
   assert.match(page, /scoreCardPriority/);
   assert.match(page, /80% normalized exact-card priority coverage/);
+  assert.match(page, /reason === "complete"/);
+  assert.match(page, /You’ve read every comic/);
+  assert.match(page, /Tira will not repeat them/);
+  assert.match(page, /memory-review-flag/);
+  assert.match(page, /Review needed/);
+  assert.doesNotMatch(page, /one-step cooldown|unresolved previews are excluded/i);
   assert.doesNotMatch(page, /studyDay|dueDay|advancedDays/);
   assert.match(page, /Word opened · no cards selected/);
   assert.match(page, /selectedWord\.cardIds/);

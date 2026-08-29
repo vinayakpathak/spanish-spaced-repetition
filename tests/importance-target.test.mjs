@@ -48,12 +48,12 @@ test("encoded namespaces remain collision-free and higher cards keep exact IDs",
   assert.equal(isImportanceTargetId("card:%zz"), false);
 });
 
-test("comic target indexes exclude preview-only cards and deduplicate targets", () => {
+test("comic target indexes exclude explicitly unschedulable cards and deduplicate targets", () => {
   assert.deepEqual(
     importanceTargetIdsForCards([
       card({ id: "first", promptEs: "Cama", answerEn: "Bed" }),
       card({ id: "second", promptEs: " cama ", answerEn: " BED " }),
-      card({ id: "preview", schedulable: false }),
+      card({ id: "disabled", schedulable: false }),
       card({ id: "concept-python", kind: "concept" }),
     ]),
     ["card:concept-python", "word:cama|bed"],

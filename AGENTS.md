@@ -4,7 +4,7 @@
 
 - Tira teaches Spanish to English speakers with Spanish-language xkcd comics.
 - Keep the application UI and explanations in English. Keep comic text and Spanish learning prompts in Spanish.
-- A learner schedules a card only by opening that specific card. Merely selecting a word or reading a sentence must not schedule anything.
+- A learner records a help/open event only by opening that specific card. Merely selecting a word or reading a sentence must not record a card opening.
 
 ## Flashcard curriculum
 
@@ -117,11 +117,12 @@ If the answer to a relevant question is no, omit or refactor the card.
 ## Continuous scheduling
 
 - Scheduling is timestamp-based, not organized around simulated study days or daily due queues.
-- Starting a successfully loaded comic creates one pending exposure for every distinct schedulable exact card ID in that comic. Resuming the same active comic must not create another exposure.
-- Selecting a word or viewing its candidate-card list records no learning event. Expanding a specific schedulable card records that exact card's open timestamp. Preview-only cards never enter scheduling history.
+- Starting a successfully loaded comic creates one pending exposure for every distinct exact card ID in that comic. Resuming the same active comic must not create another exposure.
+- Selecting a word or viewing its candidate-card list records no learning event. Expanding a specific card records that exact card's open timestamp.
+- Machine-generated and unresolved cards participate fully in exposure history, priority scoring, comic selection, and importance scoring. Never exclude a card because its content still needs review. Mark it clearly as **Review needed** everywhere it appears, and do not imply that its Spanish token, English gloss, or contextual sense has been verified.
 - Preserve every display and open timestamp. Repeated openings may remain in the audit history, but one comic exposure is one binary help outcome for priority scoring.
 - An unopened exposure becomes successful only when the learner finishes the comic. Never infer success from an abandoned or merely restored session; an answer opened before abandonment remains valid difficulty evidence.
 - Compute card priority continuously from recency-weighted help evidence, estimated memory stability, and forgetting risk. Keep formula constants named, documented, bounded, and covered by deterministic fixed-clock tests.
 - Rank every genuinely new comic selection from the sum of its distinct exact-card priorities plus its normalized corpus importance score. Analytics target IDs used by comic importance must never replace or alias exact SRS card IDs.
-- Normalize the two axes before combining them, expose the score breakdown in the UI, and prevent an immediate repeat of the just-finished comic when another candidate exists.
+- Normalize the two axes before combining them and expose the score breakdown in the UI. Permanently exclude every completed comic from later selection; completion is a read tombstone, not a one-step cooldown. When no unread comic remains, return and display an explicit collection-complete state instead of repeating a comic.
 - Inject the current timestamp into pure scheduler functions; do not call the clock internally. Migrate older persisted schemas explicitly and state the limits of any legacy day-to-time conversion.

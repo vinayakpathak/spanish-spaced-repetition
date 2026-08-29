@@ -40,7 +40,7 @@ import {
 
 const INPUT_SCHEMA_VERSION = 1;
 const RUNTIME_SCHEMA_VERSION = 2;
-const COMPILER_REVISION = "runtime-corpus-v4-provisional-centrality";
+const COMPILER_REVISION = "runtime-corpus-v5-all-cards-schedulable";
 const DEFAULT_EXPECTED_COUNT = 258;
 const PROJECT_ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -569,7 +569,6 @@ function buildGeneratedBundle(
       fail(`${sourceComic.id} token “${token.text}” is missing from the glossary`);
     }
     const cardId = generatedCardId(sourceComic.id, token, tokenOrder);
-    const schedulable = token.manualAnswerEn !== null || glossary.answerEn !== null;
     const answer =
       token.manualAnswerEn ?? glossary?.answerEn?.trim() ?? "Meaning needs review";
     const card = {
@@ -580,7 +579,10 @@ function buildGeneratedBundle(
       noteEn: "",
       tags: ["word", "machine extracted", "needs review"],
       reviewStatus: "needs-review",
-      schedulable,
+      // Every clickable word participates in exact-card scheduling. An
+      // unresolved answer stays visibly provisional instead of disappearing
+      // from the learning history, so the learner can flag it for review.
+      schedulable: true,
       provenance: {
         method: token.method,
         sourceTokenId: token.id,
@@ -649,10 +651,10 @@ function buildGeneratedBundle(
     });
   }
 
-  // Region/word indexes drive the clickable discovery UI and therefore include
-  // unresolved cards. The comic and manifest indexes drive the scheduler and
-  // include only cards with an explicit usable answer.
-  const cardIds = cards.filter((card) => card.schedulable).map((card) => card.id);
+  // Region, comic, and manifest indexes all contain the same exact generated
+  // word-card IDs. Cards without a provisional gloss remain marked
+  // `needs-review`, but they still participate in scheduling.
+  const cardIds = cards.map((card) => card.id);
   const comic = {
     id: sourceComic.id,
     xkcdNumber: sourceComic.number,
@@ -733,11 +735,8 @@ function validateRuntimeCard(card, label) {
   if (typeof card.schedulable !== "boolean") {
     fail(`${label}.schedulable must be a boolean`);
   }
-  if (!card.schedulable && card.answerEn !== "Meaning needs review") {
-    fail(`${label} has an unresolved answer but is not marked as such`);
-  }
-  if (card.schedulable && card.answerEn === "Meaning needs review") {
-    fail(`${label} cannot schedule an unresolved answer`);
+  if (!card.schedulable) {
+    fail(`${label} must be schedulable even when its answer needs review`);
   }
   if (card.provenance?.contextualSenseReviewed !== false) {
     fail(`${label} must not claim contextual review`);
@@ -780,9 +779,7 @@ function validateGeneratedBundle(bundle, entry) {
   for (const cardId of entry.cardIds) {
     const card = cards.get(cardId);
     if (!card) fail(`${entry.id} bundle is missing scheduled card ${cardId}`);
-    if (!card.schedulable) {
-      fail(`${entry.id} indexes unresolved card ${cardId} for scheduling`);
-    }
+    if (!card.schedulable) fail(`${entry.id} indexes unschedulable card ${cardId}`);
   }
   const schedulableCardIds = bundle.cards
     .filter((card) => card.schedulable)
