@@ -1,0 +1,766 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-pong",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Pong",
+  "titleEs": "Pong",
+  "titleText": {
+    "es": "Tras esto, la paleta de pong fue a destruir el cuartel general de Atari pero, por error, se metió en el juego The Matrix Reloaded. Joder, qué difícil fue explicárselo.",
+    "en": "After this, the Pong paddle went to destroy Atari headquarters, but by mistake it ended up inside the game The Matrix Reloaded. Damn, that was hard to explain to him.",
+    "noteEn": "The Spanish translation uses Joder, a stronger exclamation than the original xkcd title text's “Boy.”"
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-hariamos--conditional",
+      "kind": "word",
+      "promptEs": "haríamos",
+      "answerEn": "we would do; we would make",
+      "noteEn": "Haríamos is the conditional form of hacer for nosotros, or “we.” The conditional often describes what would happen in an imagined situation.",
+      "example": {
+        "es": "Lo haríamos mañana.",
+        "en": "We would do it tomorrow."
+      },
+      "tags": ["word", "conditional", "hacer"]
+    },
+    {
+      "id": "word-oponentes",
+      "kind": "word",
+      "promptEs": "oponentes",
+      "answerEn": "opponents",
+      "noteEn": "",
+      "tags": ["word", "people and roles"]
+    },
+    {
+      "id": "word-ia--artificial-intelligence",
+      "kind": "word",
+      "promptEs": "ia",
+      "answerEn": "AI (artificial intelligence)",
+      "noteEn": "IA is the Spanish abbreviation for inteligencia artificial. The initials appear in the opposite order from English because inteligencia comes before artificial.",
+      "example": {
+        "es": "La IA analiza los datos.",
+        "en": "AI analyzes the data."
+      },
+      "tags": ["word", "abbreviation", "technology"]
+    },
+    {
+      "id": "word-videojuegos",
+      "kind": "word",
+      "promptEs": "videojuegos",
+      "answerEn": "video games",
+      "noteEn": "",
+      "tags": ["word", "technology", "games"]
+    },
+    {
+      "id": "word-se--volverse-change",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "marks a change affecting them (part of volverse, “to become”)",
+      "noteEn": "",
+      "tags": ["word", "short pronoun", "change of state"]
+    },
+    {
+      "id": "word-volviesen--hypothetical-change",
+      "kind": "word",
+      "promptEs": "volviesen",
+      "answerEn": "they became; they were to become (in an imagined situation)",
+      "noteEn": "Volviesen is a plural hypothetical past form of volverse, “to become.” The equivalent -ra form, volvieran, has the same meaning here.",
+      "example": {
+        "es": "Si se volviesen famosos, viajarían más.",
+        "en": "If they became famous, they would travel more."
+      },
+      "tags": ["word", "hypothetical", "volverse"]
+    },
+    {
+      "id": "word-inteligentes",
+      "kind": "word",
+      "promptEs": "inteligentes",
+      "answerEn": "intelligent; smart (plural)",
+      "noteEn": "",
+      "tags": ["word", "description"]
+    },
+    {
+      "id": "word-para--degree-consequence",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "to; enough to (as part of como para)",
+      "noteEn": "",
+      "tags": ["word", "degree", "connector"]
+    },
+    {
+      "id": "word-cuestionarse--reflective-questioning",
+      "kind": "word",
+      "promptEs": "cuestionarse",
+      "answerEn": "to question; to ask oneself about",
+      "noteEn": "The ending -se points the questioning back toward the person doing it. Cuestionarse algo means to question something for oneself rather than simply asking another person a question.",
+      "example": {
+        "es": "Empezó a cuestionarse sus decisiones.",
+        "en": "She began to question her decisions."
+      },
+      "tags": ["word", "reflexive verb", "thinking"]
+    },
+    {
+      "id": "word-matrix--film-title",
+      "kind": "word",
+      "promptEs": "matrix",
+      "answerEn": "The Matrix",
+      "noteEn": "",
+      "tags": ["word", "proper name", "film"]
+    },
+    {
+      "id": "word-la--relative-article",
+      "kind": "word",
+      "promptEs": "la",
+      "answerEn": "the feminine article used in la que (“which”)",
+      "noteEn": "",
+      "tags": ["word", "relative clause", "article"]
+    },
+    {
+      "id": "word-estan--location",
+      "kind": "word",
+      "promptEs": "están",
+      "answerEn": "they are (in a place or state)",
+      "noteEn": "",
+      "tags": ["word", "estar", "location"]
+    },
+    {
+      "id": "word-nada--none-of",
+      "kind": "word",
+      "promptEs": "nada",
+      "answerEn": "nothing; none",
+      "noteEn": "Before de plus a thing or situation, nada can mean “none” or “nothing” out of that set. This use does not need a separate no before it when nada itself comes before the verb.",
+      "example": {
+        "es": "Nada de eso importa.",
+        "en": "None of that matters."
+      },
+      "tags": ["word", "quantity", "negative word"]
+    },
+    {
+      "id": "word-de--partitive",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of (introducing what “none” applies to)",
+      "noteEn": "",
+      "tags": ["word", "partitive", "preposition"]
+    },
+    {
+      "id": "word-real--genuine",
+      "kind": "word",
+      "promptEs": "real",
+      "answerEn": "real; genuine",
+      "noteEn": "",
+      "tags": ["word", "description"]
+    },
+    {
+      "id": "word-a--through-expression",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word here; part of a través de (“through”)",
+      "noteEn": "",
+      "tags": ["word", "fixed expression", "preposition"]
+    },
+    {
+      "id": "word-traves--through-expression",
+      "kind": "word",
+      "promptEs": "través",
+      "answerEn": "part of a través de, “through” or “across”",
+      "noteEn": "",
+      "tags": ["word", "fixed expression", "preposition"]
+    },
+    {
+      "id": "word-codigo--computer-code",
+      "kind": "word",
+      "promptEs": "código",
+      "answerEn": "code; computer instructions",
+      "noteEn": "",
+      "tags": ["word", "technology", "programming"]
+    },
+    {
+      "id": "word-soy--identity",
+      "kind": "word",
+      "promptEs": "soy",
+      "answerEn": "I am",
+      "noteEn": "",
+      "tags": ["word", "ser", "identity"]
+    },
+    {
+      "id": "word-elegido--chosen-one",
+      "kind": "word",
+      "promptEs": "elegido",
+      "answerEn": "chosen; the chosen one",
+      "noteEn": "Elegido is the describing form made from elegir, “to choose.” With an article, el elegido or la elegida can name the person who was chosen.",
+      "example": {
+        "es": "Ella fue la elegida.",
+        "en": "She was the chosen one."
+      },
+      "tags": ["word", "description", "elegir"]
+    },
+    {
+      "id": "grammar-si-imperfect-subjunctive-conditional",
+      "kind": "grammar",
+      "promptEs": "si + imperfecto de subjuntivo, condicional",
+      "questionEn": "How do you describe an imagined “if…, …would…” situation?",
+      "answerEn": "Use si followed by a hypothetical past verb form for the condition, and use a “would” form for the result.",
+      "noteEn": "Spanish calls the condition's verb form the imperfect subjunctive. It often ends in -ra or -se, as in tuviera or tuviese. The result uses the conditional, often ending in -ría, as in haría. In this pattern, do not put the conditional directly after si.",
+      "example": {
+        "es": "Si tuviera tiempo, viajaría más.",
+        "en": "If I had time, I would travel more."
+      },
+      "tags": ["B1", "grammar", "hypothetical", "conditional"]
+    },
+    {
+      "id": "grammar-volverse-adjective",
+      "kind": "grammar",
+      "promptEs": "volverse + adjetivo",
+      "questionEn": "How do you say that someone or something becomes a certain way?",
+      "answerEn": "Use a form of volverse followed by a describing word for the new state.",
+      "noteEn": "The short part of volverse changes to me, te, se, nos, os, or se to match who changes, and volver changes for the person and time. The describing word—called an adjective—can also change for gender or number. Volver without the short pronoun usually means “to return.”",
+      "example": {
+        "es": "Con el tiempo, se volvieron pacientes.",
+        "en": "Over time, they became patient."
+      },
+      "tags": ["A2", "grammar", "change of state", "reflexive verb"]
+    },
+    {
+      "id": "grammar-tan-como-para-infinitive",
+      "kind": "grammar",
+      "promptEs": "tan + adjetivo + como para + infinitivo",
+      "questionEn": "How can Spanish say that someone is kind enough to help, or so kind that they help?",
+      "answerEn": "Put tan before the describing word, then como para, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form—called the infinitive—is the unchanged verb ending in -ar, -er, or -ir. This pattern says that a quality reaches the degree needed for the following action. It is different from the ordinary comparison tan… como, which means “as… as.”",
+      "example": {
+        "es": "Fue tan generosa como para ayudarnos.",
+        "en": "She was generous enough to help us."
+      },
+      "tags": ["B1", "grammar", "degree", "result"]
+    },
+    {
+      "id": "phrase-un-momento-interruption",
+      "kind": "phrase",
+      "promptEs": "¡Un momento!",
+      "questionEn": "What does ¡Un momento! mean when someone interrupts or suddenly realizes something?",
+      "answerEn": "It means “Wait a moment!” or “Hold on!”",
+      "noteEn": "This fixed conversational interruption can ask someone to pause, or it can announce that the speaker has just noticed something important. Its function is broader than literally measuring one moment.",
+      "example": {
+        "es": "¡Un momento! Creo que tengo la llave.",
+        "en": "Hold on! I think I have the key."
+      },
+      "tags": ["A1", "phrase", "conversation", "interruption"]
+    },
+    {
+      "id": "phrase-a-traves-de",
+      "kind": "phrase",
+      "promptEs": "a través de",
+      "questionEn": "How do you say that something goes or can be seen through something?",
+      "answerEn": "Use a través de before the thing: it means “through” or “across.”",
+      "noteEn": "Keep all three parts together. Before masculine singular el, de and el combine as del: a través del bosque. Before a feminine noun, use a través de la, as in a través de la ventana. The expression can describe literal passage or a figurative means.",
+      "example": {
+        "es": "La luz entra a través de la ventana.",
+        "en": "The light comes in through the window."
+      },
+      "tags": ["A2", "phrase", "preposition", "movement"]
+    },
+    {
+      "id": "grammar-preposition-article-que-relative",
+      "kind": "grammar",
+      "promptEs": "preposición + el/la/los/las que",
+      "questionEn": "How do you say “in which,” “with which,” or “for which” when referring back to a thing?",
+      "answerEn": "Put the needed preposition before el que, la que, los que, or las que, matching the earlier thing.",
+      "noteEn": "A preposition is a short relationship word such as en (“in”), con (“with”), or para (“for”). Choose el, la, los, or las to match the gender and number of the thing being described; que itself does not change.",
+      "example": {
+        "es": "Esta es la silla en la que me siento.",
+        "en": "This is the chair that I sit in."
+      },
+      "tags": ["B1", "grammar", "relative clause", "preposition"]
+    },
+    {
+      "id": "grammar-ser-identity-estar-location",
+      "kind": "grammar",
+      "promptEs": "ser para identidad · estar para ubicación",
+      "questionEn": "Which Spanish “to be” verb says what something is, and which says where it is?",
+      "answerEn": "Use ser for identity or a defining description; use estar for the location of a person or thing.",
+      "noteEn": "This contrast is not simply permanent versus temporary. Forms of ser such as soy and es identify or describe what something is. Forms of estar such as están normally locate people and things. Events are a common exception: Spanish uses ser to say where or when an event takes place.",
+      "example": {
+        "es": "El museo es famoso y está en Madrid.",
+        "en": "The museum is famous and is in Madrid."
+      },
+      "tags": ["A1", "grammar", "ser", "estar", "location"]
+    },
+    {
+      "id": "concept-the-matrix",
+      "kind": "concept",
+      "promptEs": "Matrix · código · el Elegido",
+      "answerEn": "references The Matrix, where Neo discovers a simulated world and becomes “the One”",
+      "noteEn": "In The Matrix, computer code underlies the world people perceive. Neo learns to see that code and bend the simulation's physical rules. The joke gives a Pong paddle the same awakening inside its much simpler game world.",
+      "tags": ["film", "science fiction", "technology", "joke reference"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-pong:question",
+      "labelEs": "¿QUÉ HARÍAMOS SI LOS OPONENTES DE IA DE LOS VIDEOJUEGOS SE VOLVIESEN TAN INTELIGENTES COMO PARA CUESTIONARSE LA \"MATRIX\" EN LA QUE ESTÁN?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0009" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-pong:question:word-00001",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00001" }],
+          "cardIds": ["word-qué--interrogative", "question-words"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00002",
+          "text": "HARÍAMOS",
+          "normalized": "haríamos",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00002" }],
+          "cardIds": ["word-hariamos--conditional", "grammar-si-imperfect-subjunctive-conditional"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00003",
+          "text": "SI",
+          "normalized": "si",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00003" }],
+          "cardIds": ["word-si", "grammar-si-imperfect-subjunctive-conditional"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00004",
+          "text": "LOS",
+          "normalized": "los",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00004" }],
+          "cardIds": ["word-los"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00012",
+          "text": "OPONENTES",
+          "normalized": "oponentes",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00012" }],
+          "cardIds": ["word-oponentes"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00013",
+          "text": "DE",
+          "normalized": "de",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00013" }],
+          "cardIds": ["word-de--of"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00014",
+          "text": "IA",
+          "normalized": "ia",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00014" }],
+          "cardIds": ["word-ia--artificial-intelligence"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00015",
+          "text": "DE",
+          "normalized": "de",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00015" }],
+          "cardIds": ["word-de--of"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00016",
+          "text": "LOS",
+          "normalized": "los",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00016" }],
+          "cardIds": ["word-los"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00017",
+          "text": "VIDEOJUEGOS",
+          "normalized": "videojuegos",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00017" }],
+          "cardIds": ["word-videojuegos"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00018",
+          "text": "SE",
+          "normalized": "se",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00018" }],
+          "cardIds": ["word-se--volverse-change", "grammar-volverse-adjective"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00019",
+          "text": "VOLVIESEN",
+          "normalized": "volviesen",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00019" }],
+          "cardIds": ["word-volviesen--hypothetical-change", "grammar-volverse-adjective", "grammar-si-imperfect-subjunctive-conditional"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00026",
+          "text": "TAN",
+          "normalized": "tan",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00026" }],
+          "cardIds": ["word-tan", "grammar-tan-como-para-infinitive"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00027",
+          "text": "INTELIGENTES",
+          "normalized": "inteligentes",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00027" }],
+          "cardIds": ["word-inteligentes", "grammar-volverse-adjective", "grammar-tan-como-para-infinitive"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00028",
+          "text": "COMO",
+          "normalized": "como",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00028" }],
+          "cardIds": ["word-como", "grammar-tan-como-para-infinitive"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00029",
+          "text": "PARA",
+          "normalized": "para",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00029" }],
+          "cardIds": ["word-para--degree-consequence", "grammar-tan-como-para-infinitive"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00030",
+          "text": "CUESTIONARSE",
+          "normalized": "cuestionarse",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00030" }],
+          "cardIds": ["word-cuestionarse--reflective-questioning", "grammar-tan-como-para-infinitive"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00031",
+          "text": "LA",
+          "normalized": "la",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00031" }],
+          "cardIds": ["word-la--article"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00032",
+          "text": "MATRIX",
+          "normalized": "matrix",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00032" }],
+          "cardIds": ["word-matrix--film-title", "concept-the-matrix"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00037",
+          "text": "EN",
+          "normalized": "en",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00037" }],
+          "cardIds": ["word-en", "grammar-preposition-article-que-relative"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00038",
+          "text": "LA",
+          "normalized": "la",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00038" }],
+          "cardIds": ["word-la--relative-article", "grammar-preposition-article-que-relative"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00039",
+          "text": "QUE",
+          "normalized": "que",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00039" }],
+          "cardIds": ["word-que--relative", "grammar-preposition-article-que-relative"]
+        },
+        {
+          "id": "es-xkcd-pong:question:word-00040",
+          "text": "ESTÁN",
+          "normalized": "están",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00040" }],
+          "cardIds": ["word-estan--location", "grammar-ser-identity-estar-location"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-pong:question:application-question-word",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-pong:question:word-00001"],
+          "exampleEs": "¿QUÉ",
+          "explanationEn": "Qué carries a written accent because it directly asks what. The unaccented connector que has a different job."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-hypothetical-result",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-pong:question:word-00002"],
+          "exampleEs": "HARÍAMOS",
+          "explanationEn": "Haríamos is the conditional, or “would,” form of hacer for we. It supplies the imagined result."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-hypothetical-if",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-pong:question:word-00003"],
+          "exampleEs": "SI",
+          "explanationEn": "Si introduces the imagined condition. It has no accent when it means “if.”"
+        },
+        {
+          "id": "es-xkcd-pong:question:application-hypothetical-condition",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-pong:question:word-00019"],
+          "exampleEs": "VOLVIESEN",
+          "explanationEn": "Volviesen is the plural -se form used for the imagined condition; the equally valid -ra form would be volvieran."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-volverse",
+          "cardId": "grammar-volverse-adjective",
+          "participantWordIds": [
+            "es-xkcd-pong:question:word-00018",
+            "es-xkcd-pong:question:word-00019",
+            "es-xkcd-pong:question:word-00027"
+          ],
+          "exampleEs": "SE VOLVIESEN TAN INTELIGENTES",
+          "explanationEn": "Se and volviesen form volverse for a plural subject, while inteligentes names the new quality. Tan only adds the degree of that quality."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-degree-result",
+          "cardId": "grammar-tan-como-para-infinitive",
+          "participantWordIds": [
+            "es-xkcd-pong:question:word-00026",
+            "es-xkcd-pong:question:word-00027",
+            "es-xkcd-pong:question:word-00028",
+            "es-xkcd-pong:question:word-00029",
+            "es-xkcd-pong:question:word-00030"
+          ],
+          "exampleEs": "TAN INTELIGENTES COMO PARA CUESTIONARSE",
+          "explanationEn": "Tan gives the degree, como para introduces what that degree makes possible, and cuestionarse remains in its dictionary form."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-relative-preposition",
+          "cardId": "grammar-preposition-article-que-relative",
+          "participantWordIds": [
+            "es-xkcd-pong:question:word-00037",
+            "es-xkcd-pong:question:word-00038",
+            "es-xkcd-pong:question:word-00039"
+          ],
+          "exampleEs": "EN LA QUE",
+          "explanationEn": "En supplies “in,” la matches the feminine name Matrix, and que links back to that name. Together they introduce its location."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-estar-location",
+          "cardId": "grammar-ser-identity-estar-location",
+          "participantWordIds": ["es-xkcd-pong:question:word-00040"],
+          "exampleEs": "ESTÁN",
+          "explanationEn": "Están is a plural form of estar because it locates the people or things being discussed."
+        },
+        {
+          "id": "es-xkcd-pong:question:application-cuestionarse",
+          "cardId": "word-cuestionarse--reflective-questioning",
+          "participantWordIds": ["es-xkcd-pong:question:word-00030"],
+          "exampleEs": "CUESTIONARSE",
+          "explanationEn": "The attached se points the questioning back toward the plural opponents rather than toward a separate listener."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-pong:paddle-thought",
+      "labelEs": "¡UN MOMENTO! ¡NADA DE ESTO ES REAL! ¡PUEDO VER A TRAVÉS DEL MUNDO! ¡PUEDO VER EL CÓDIGO! ¡SOY EL ELEGIDO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-pong:ocr-line-0010" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00005",
+          "text": "UN",
+          "normalized": "un",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00005" }],
+          "cardIds": ["word-un", "phrase-un-momento-interruption"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00006",
+          "text": "MOMENTO",
+          "normalized": "momento",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00006" }],
+          "cardIds": ["word-momento", "phrase-un-momento-interruption"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00007",
+          "text": "NADA",
+          "normalized": "nada",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00007" }],
+          "cardIds": ["word-nada--none-of"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00008",
+          "text": "DE",
+          "normalized": "de",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00008" }],
+          "cardIds": ["word-de--partitive"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00009",
+          "text": "ESTO",
+          "normalized": "esto",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00009" }],
+          "cardIds": ["word-esto"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00010",
+          "text": "ES",
+          "normalized": "es",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00010" }],
+          "cardIds": ["word-es", "grammar-ser-identity-estar-location"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00011",
+          "text": "REAL",
+          "normalized": "real",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00011" }],
+          "cardIds": ["word-real--genuine"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00020",
+          "text": "PUEDO",
+          "normalized": "puedo",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00020" }],
+          "cardIds": ["word-puedo"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00021",
+          "text": "VER",
+          "normalized": "ver",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00021" }],
+          "cardIds": ["word-ver"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00022",
+          "text": "A",
+          "normalized": "a",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00022" }],
+          "cardIds": ["word-a--through-expression", "phrase-a-traves-de"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00023",
+          "text": "TRAVÉS",
+          "normalized": "través",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00023" }],
+          "cardIds": ["word-traves--through-expression", "phrase-a-traves-de"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00024",
+          "text": "DEL",
+          "normalized": "del",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00024" }],
+          "cardIds": ["word-del", "phrase-a-traves-de"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00025",
+          "text": "MUNDO",
+          "normalized": "mundo",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00025" }],
+          "cardIds": ["word-mundo"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00033",
+          "text": "PUEDO",
+          "normalized": "puedo",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00033" }],
+          "cardIds": ["word-puedo"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00034",
+          "text": "VER",
+          "normalized": "ver",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00034" }],
+          "cardIds": ["word-ver"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00035",
+          "text": "EL",
+          "normalized": "el",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00035" }],
+          "cardIds": ["word-el--article"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00036",
+          "text": "CÓDIGO",
+          "normalized": "código",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00036" }],
+          "cardIds": ["word-codigo--computer-code", "concept-the-matrix"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00041",
+          "text": "SOY",
+          "normalized": "soy",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00041" }],
+          "cardIds": ["word-soy--identity", "grammar-ser-identity-estar-location"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00042",
+          "text": "EL",
+          "normalized": "el",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00042" }],
+          "cardIds": ["word-el--article"]
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:word-00043",
+          "text": "ELEGIDO",
+          "normalized": "elegido",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pong:ocr-token-00043" }],
+          "cardIds": ["word-elegido--chosen-one", "concept-the-matrix"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-un-momento",
+          "cardId": "phrase-un-momento-interruption",
+          "participantWordIds": [
+            "es-xkcd-pong:paddle-thought:word-00005",
+            "es-xkcd-pong:paddle-thought:word-00006"
+          ],
+          "exampleEs": "UN MOMENTO",
+          "explanationEn": "The fixed exclamation signals a sudden interruption or realization rather than merely counting one unit of time."
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-nada",
+          "cardId": "word-nada--none-of",
+          "participantWordIds": ["es-xkcd-pong:paddle-thought:word-00007"],
+          "exampleEs": "NADA DE ESTO",
+          "explanationEn": "Nada comes before de esto, so it means none or nothing out of the situation being considered."
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-ser-description",
+          "cardId": "grammar-ser-identity-estar-location",
+          "participantWordIds": ["es-xkcd-pong:paddle-thought:word-00010"],
+          "exampleEs": "ES",
+          "explanationEn": "Es is a form of ser used for a claim about what the surrounding situation is."
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-a-traves-de",
+          "cardId": "phrase-a-traves-de",
+          "participantWordIds": [
+            "es-xkcd-pong:paddle-thought:word-00022",
+            "es-xkcd-pong:paddle-thought:word-00023",
+            "es-xkcd-pong:paddle-thought:word-00024"
+          ],
+          "exampleEs": "A TRAVÉS DEL",
+          "explanationEn": "A través de forms the reusable expression, and de combines with the masculine article el to make del."
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-ser-identity",
+          "cardId": "grammar-ser-identity-estar-location",
+          "participantWordIds": ["es-xkcd-pong:paddle-thought:word-00041"],
+          "exampleEs": "SOY",
+          "explanationEn": "Soy is the first-person form of ser because the speaker is declaring an identity."
+        },
+        {
+          "id": "es-xkcd-pong:paddle-thought:application-elegido",
+          "cardId": "word-elegido--chosen-one",
+          "participantWordIds": ["es-xkcd-pong:paddle-thought:word-00043"],
+          "exampleEs": "EL ELEGIDO",
+          "explanationEn": "The article el turns the describing word elegido into a name for the chosen person: “the chosen one.”"
+        }
+      ]
+    }
+  ]
+}
