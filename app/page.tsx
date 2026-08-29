@@ -1,6 +1,6 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element, jsx-a11y/no-noninteractive-tabindex */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -101,6 +101,14 @@ function statusLabel(progress: CardProgress, studyDay: number): string {
   return progress.status === "mastered" ? "mastered" : "in progress";
 }
 
+function formatImportanceScore(score: number): string {
+  return new Intl.NumberFormat("en", {
+    style: "percent",
+    minimumFractionDigits: 3,
+    maximumFractionDigits: 4,
+  }).format(score);
+}
+
 export default function Home() {
   const [srs, setSrs] = useState<SrsState>(initialSelection.state);
   const [currentComicId, setCurrentComicId] = useState(initialSelection.comic.id);
@@ -121,6 +129,7 @@ export default function Home() {
   const [comicZoomed, setComicZoomed] = useState(false);
   const [showTitleText, setShowTitleText] = useState(false);
   const [showLibrary, setShowLibrary] = useState(false);
+  const [showRankings, setShowRankings] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showReset, setShowReset] = useState(false);
   const [libraryFilter, setLibraryFilter] = useState<LibraryFilter>("today");
@@ -135,6 +144,7 @@ export default function Home() {
   const revealPanelRef = useRef<HTMLElement>(null);
   const summaryRef = useRef<HTMLElement>(null);
   const libraryRef = useRef<HTMLElement>(null);
+  const rankingsRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const resetRef = useRef<HTMLElement>(null);
 
@@ -188,6 +198,15 @@ export default function Home() {
   const masteredCount = curriculumCardIds.filter(
     (cardId) => getCardProgress(srs, cardId).status === "mastered",
   ).length;
+  const rankedComics = useMemo(
+    () =>
+      [...corpusManifest.comics].sort(
+        (first, second) =>
+          first.importance.rank - second.importance.rank ||
+          first.id.localeCompare(second.id),
+      ),
+    [corpusManifest],
+  );
 
   const cacheCards = useCallback((cards: readonly LearningCard[]) => {
     setCardsById((current) => {
@@ -435,6 +454,7 @@ export default function Home() {
     setComicZoomed(false);
     setSummary(null);
     setShowLibrary(false);
+    setShowRankings(false);
     setShowAbout(false);
     setShowReset(false);
     setSrs(fresh.state);
@@ -463,12 +483,13 @@ export default function Home() {
       if (event.key === "Escape") {
         setSummary(null);
         setShowLibrary(false);
+        setShowRankings(false);
         setShowAbout(false);
         setShowReset(false);
         closeRegion();
         return;
       }
-      if (summary || showLibrary || showAbout || showReset) return;
+      if (summary || showLibrary || showRankings || showAbout || showReset) return;
       const regionIndex = Number(event.key) - 1;
       if (Number.isInteger(regionIndex) && currentComic.regions[regionIndex]) {
         const region = currentComic.regions[regionIndex];
@@ -480,7 +501,7 @@ export default function Home() {
     return () => window.removeEventListener("keydown", onKeyDown);
     // openWord intentionally uses the current render's state snapshot.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentComic, summary, showLibrary, showAbout, showReset, srs, openedByComic]);
+  }, [currentComic, summary, showLibrary, showRankings, showAbout, showReset, srs, openedByComic]);
 
   useEffect(() => {
     const dialog = showReset
@@ -489,6 +510,8 @@ export default function Home() {
         ? summaryRef.current
         : showLibrary
           ? libraryRef.current
+          : showRankings
+            ? rankingsRef.current
           : showAbout
             ? aboutRef.current
             : null;
@@ -528,7 +551,7 @@ export default function Home() {
       background.forEach((element) => element.removeAttribute("inert"));
       previousFocus?.focus();
     };
-  }, [summary, showLibrary, showAbout, showReset]);
+  }, [summary, showLibrary, showRankings, showAbout, showReset]);
 
   const libraryCards = useMemo(() => {
     const filtered = [...cardsById.values()].filter((card) => {
@@ -568,6 +591,13 @@ export default function Home() {
         <nav className="top-actions" aria-label="Main navigation">
           <button className="text-nav active" aria-current="page">Learn</button>
           <button className="text-nav" onClick={() => setShowLibrary(true)}>My cards</button>
+          <button
+            className="text-nav importance-nav"
+            onClick={() => setShowRankings(true)}
+            disabled={!hydrated}
+          >
+            Rankings
+          </button>
           <div className="top-stat"><strong>{dueCardIds.length}</strong> to review</div>
           <button
             className="avatar"
@@ -642,6 +672,19 @@ export default function Home() {
                 >
                   Machine-extracted · needs review
                 </span>
+              ) : null}
+              {hydrated && currentManifestEntry?.importance ? (
+                <button
+                  className="importance-badge"
+                  type="button"
+                  onClick={() => setShowRankings(true)}
+                  aria-label={`Comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive score is provisional because generated contextual senses remain unreviewed; unresolved previews are excluded. Open comic rankings.`}
+                  title="PageRank-style recursive importance. Generated contextual senses remain unreviewed, unresolved previews are excluded, and analytics grouping never merges SRS progress."
+                >
+                  <span>IMPORTANCE</span>
+                  <strong>{formatImportanceScore(currentManifestEntry.importance.score)}</strong>
+                  <small>#{currentManifestEntry.importance.rank} / {corpusManifest.comics.length}</small>
+                </button>
               ) : null}
             </div>
             <div className="comic-tools">
@@ -1149,6 +1192,96 @@ export default function Home() {
         </div>
       ) : null}
 
+      {showRankings ? (
+        <div
+          className="drawer-backdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setShowRankings(false);
+          }}
+        >
+          <aside
+            ref={rankingsRef}
+            className="memory-drawer rankings-drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="rankings-title"
+            aria-describedby="rankings-description"
+          >
+            <div className="drawer-header rankings-header">
+              <div>
+                <span>COMIC–TARGET GRAPH</span>
+                <h2 id="rankings-title">Comic importance</h2>
+              </div>
+              <button onClick={() => setShowRankings(false)} aria-label="Close comic rankings">×</button>
+            </div>
+            <div className="rankings-intro" id="rankings-description">
+              <p>
+                This PageRank-style recursive importance uses damped two-way comic–target centrality: comics raise their linked targets, and targets raise every linked comic. An 85% linked influence plus a 15% baseline/reset keeps disconnected and zero-target comics from vanishing. The calculation repeats until stable; comic scores below sum to 100%.
+              </p>
+              <p className="rankings-caveat">
+                <strong>Current limitation:</strong> word targets are grouped for analytics when their normalized Spanish prompt and English answer match across reviewed and generated schedulable cards. Higher-level targets use exact card IDs. Generated contextual senses remain unreviewed, so these scores are provisional; unresolved preview cards are excluded. Analytics grouping never merges SRS card IDs or progress.
+              </p>
+              <div className="rankings-model" aria-label="Importance model details">
+                <span>{Math.round(corpusManifest.importanceModel.damping * 100)}% linked influence</span>
+                <span>{Math.round((1 - corpusManifest.importanceModel.damping) * 100)}% baseline/reset</span>
+                <span>{corpusManifest.importanceModel.cardNodeCount.toLocaleString("en")} targets</span>
+                <span>{corpusManifest.importanceModel.edgeCount.toLocaleString("en")} links</span>
+                <span>{corpusManifest.importanceModel.iterations} iterations</span>
+              </div>
+            </div>
+            <div className="rankings-columns" aria-hidden="true">
+              <span>Rank &amp; comic</span>
+              <span>Importance</span>
+              <span>Connected targets</span>
+            </div>
+            {/* A named, independently scrolling region must be keyboard-focusable. */}
+            <div
+              className="rankings-list-region"
+              role="region"
+              tabIndex={0}
+              aria-label="Comic importance rankings; scroll to view all comics"
+            >
+              <ol className="rankings-list">
+                {rankedComics.map((comic) => {
+                  const isCurrent = comic.id === currentComic.id;
+                  return (
+                    <li
+                      className={isCurrent ? "is-current" : undefined}
+                      key={comic.id}
+                      aria-current={isCurrent ? "true" : undefined}
+                    >
+                      <span className="ranking-number">#{comic.importance.rank}</span>
+                      <div className="ranking-comic">
+                        <strong lang="es">{comic.titleEs}</strong>
+                        <span>xkcd · {comic.xkcdNumber}{isCurrent ? " · reading now" : ""}</span>
+                      </div>
+                      <strong className="ranking-score">
+                        {formatImportanceScore(comic.importance.score)}
+                      </strong>
+                      <div
+                        className="ranking-card-counts"
+                        role="group"
+                        aria-label={`${comic.importance.cardCount} connected targets; ${comic.importance.sharedCardCount} cross-comic targets`}
+                      >
+                        <strong aria-hidden="true">{comic.importance.cardCount}</strong>
+                        <span className="ranking-card-label" aria-hidden="true">targets</span>
+                        <span className="ranking-shared-count" aria-hidden="true">
+                          {comic.importance.sharedCardCount} cross-comic
+                        </span>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+            <div className="rankings-footnote">
+              “Cross-comic” means one analytics target connects to more than one comic. Word targets use normalized Spanish-prompt + English-answer matching; higher-level targets use exact IDs. This grouping never merges occurrence-specific SRS cards.
+            </div>
+          </aside>
+        </div>
+      ) : null}
+
       {showAbout ? (
         <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setShowAbout(false); }}>
           <section ref={aboutRef} className="about-modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
@@ -1164,6 +1297,8 @@ export default function Home() {
               <li><span>4</span><div><strong>Let overlap choose</strong><p>Your next comic contains as many of your due cards as possible.</p></div></li>
             </ol>
             <div className="license-note">
+              <strong>About comic importance</strong>
+              <p>Importance is PageRank-style recursive importance—a damped two-way comic–target centrality calculation. Comics raise linked targets; targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated schedulable word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Generated contextual senses are unreviewed, so scores are provisional, and unresolved previews are excluded.</p>
               <strong>About the 258-comic corpus</strong>
               <p>Six lessons are fully reviewed. The remaining archive entries are an authoring preview built from image OCR and conservative dictionary matches. They are labeled “needs review”; unresolved previews are never added to spaced repetition, and generated grammar or expression lessons still require human authoring.</p>
               <strong>About the comics</strong>

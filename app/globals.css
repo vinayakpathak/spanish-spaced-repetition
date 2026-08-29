@@ -87,6 +87,7 @@ button:focus-visible, a:focus-visible {
 .text-nav { padding: 6px 0; border: 0; border-bottom: 1px solid transparent; background: transparent; color: var(--muted); font-size: 11px; cursor: pointer; }
 .text-nav:hover, .text-nav.active { color: var(--ink); }
 .text-nav.active { border-bottom-color: var(--ink); }
+.importance-nav { min-height: 44px; }
 .top-stat { padding-left: 18px; border-left: 1px solid var(--line); color: var(--muted); font-size: 11px; white-space: nowrap; }
 .top-stat strong { color: var(--ink); }
 .avatar {
@@ -151,6 +152,23 @@ button:focus-visible, a:focus-visible {
 .comic-heading h2 { margin: 3px 0 0; font: 500 25px/1.15 Georgia, serif; letter-spacing: -.5px; }
 .original-title { display: inline-block; margin-top: 3px; color: var(--faint); font-size: 9px; }
 .review-status { display: inline-block; margin: 8px 0 0 8px; padding: 4px 7px; border: 1px solid #c99642; color: #78511c; background: #fff7e4; font: 700 10px/1.2 Arial, sans-serif; letter-spacing: .055em; text-transform: uppercase; }
+.importance-badge {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 8px 0 0 8px;
+  padding: 7px 9px;
+  border: 1px solid rgba(103,87,216,.34);
+  border-radius: 3px;
+  background: rgba(103,87,216,.055);
+  color: var(--violet);
+  cursor: pointer;
+}
+.importance-badge:hover { border-color: var(--violet); background: rgba(103,87,216,.1); }
+.importance-badge > span { font: 700 9px/1.2 var(--font-geist-mono), monospace; letter-spacing: .6px; }
+.importance-badge strong { color: var(--ink); font: 750 11px/1.2 var(--font-geist-mono), monospace; }
+.importance-badge small { color: #5f5a52; font: 650 9px/1.2 var(--font-geist-mono), monospace; }
 .comic-tools { display: flex; align-items: center; gap: 8px; }
 .tool-button {
   height: 33px;
@@ -406,6 +424,8 @@ button:focus-visible, a:focus-visible {
 
 .drawer-backdrop { padding: 0; place-items: stretch end; }
 .memory-drawer { width: min(100%, 520px); height: 100%; display: flex; flex-direction: column; background: var(--paper); border-left: 1px solid var(--line); box-shadow: -16px 0 60px rgba(37,35,31,.18); animation: drawer-in .3s cubic-bezier(.2,.8,.2,1); }
+.rankings-drawer { width: min(100%, 720px); }
+.rankings-header > button { width: 44px; height: 44px; margin: -7px -7px 0 0; }
 .drawer-header { padding: 27px 29px 19px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--line); }
 .drawer-header > div > span { color: var(--violet); }
 .drawer-header h2 { margin: 4px 0 0; font: 500 29px/1 Georgia, serif; }
@@ -438,6 +458,30 @@ button:focus-visible, a:focus-visible {
 .drawer-footer button { padding: 3px 0; border: 0; background: transparent; color: var(--muted); font-size: 8px; cursor: pointer; }
 .drawer-footer .danger-link { color: #b95645; }
 
+.rankings-intro { padding: 18px 29px 15px; border-bottom: 1px solid var(--line); background: #f7f4ed; }
+.rankings-intro p { max-width: 630px; margin: 0; color: #5f5a52; font-size: 12px; line-height: 1.58; }
+.rankings-intro .rankings-caveat { margin-top: 10px; padding: 10px 11px; border-left: 3px solid var(--amber); background: #fff9ec; color: #554d42; }
+.rankings-caveat strong { color: var(--ink); }
+.rankings-model { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 6px; }
+.rankings-model span { padding: 5px 8px; border: 1px solid var(--line-dark); border-radius: 99px; background: var(--paper); color: #5f5a52; font: 650 10px/1.2 var(--font-geist-mono), monospace; }
+.rankings-columns { display: grid; grid-template-columns: minmax(0,1fr) 90px 112px; gap: 14px; padding: 12px 29px 9px 76px; border-bottom: 1px solid var(--line); color: #625d55; font: 700 9px/1.25 var(--font-geist-mono), monospace; letter-spacing: .55px; text-transform: uppercase; }
+.rankings-columns span:nth-child(n + 2) { text-align: right; }
+.rankings-list-region { flex: 1; min-height: 0; overflow: auto; }
+.rankings-list-region:focus-visible { outline: 3px solid var(--violet); outline-offset: -4px; }
+.rankings-list { margin: 0; padding: 0 29px 20px; list-style: none; }
+.rankings-list li { display: grid; grid-template-columns: 37px minmax(0,1fr) 90px 112px; gap: 10px; align-items: center; min-height: 64px; padding: 11px 8px; border-bottom: 1px solid #ddd7cc; }
+.rankings-list li.is-current { margin: 0 -8px; padding-left: 16px; padding-right: 16px; border-color: rgba(103,87,216,.25); background: rgba(103,87,216,.055); box-shadow: inset 3px 0 var(--violet); }
+.ranking-number { color: #625d55; font: 700 10px/1 var(--font-geist-mono), monospace; }
+.ranking-comic { min-width: 0; }
+.ranking-comic strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 500 16px/1.3 Georgia, serif; }
+.ranking-comic span { display: block; margin-top: 4px; color: #625d55; font-size: 10px; }
+.ranking-score { text-align: right; color: #5041bd; font: 700 12px/1.2 var(--font-geist-mono), monospace; }
+.ranking-card-counts { display: grid; justify-items: end; }
+.ranking-card-counts strong { font: 500 17px/1 Georgia, serif; }
+.ranking-card-counts span { margin-top: 4px; color: #625d55; font-size: 10px; white-space: nowrap; }
+.ranking-card-label { display: none; }
+.rankings-footnote { padding: 13px 29px 15px; border-top: 1px solid var(--line); color: #625d55; font-size: 10px; line-height: 1.55; }
+
 .about-modal { width: min(100%, 590px); padding: 34px 42px 31px; text-align: left; }
 .modal-close { position: absolute; right: 18px; top: 16px; }
 .about-brand { margin-bottom: 26px; }
@@ -450,6 +494,7 @@ button:focus-visible, a:focus-visible {
 .method-steps p { margin: 3px 0 0; color: var(--muted); font-size: 8px; line-height: 1.45; }
 .license-note { margin-top: 19px; padding: 13px 15px; border: 1px solid var(--line); background: #f5f2eb; }
 .license-note strong { font-size: 9px; }
+.license-note strong:not(:first-child) { display: block; margin-top: 11px; }
 .license-note p { margin: 4px 0 0; color: var(--muted); font-size: 8px; line-height: 1.5; }
 .license-note a { text-underline-offset: 2px; }
 .about-modal .primary-wide { margin-top: 15px; }
@@ -478,6 +523,7 @@ button:focus-visible, a:focus-visible {
   .comic-stage { padding-left: 24px; padding-right: 24px; }
   .reveal-panel { padding-left: 22px; padding-right: 22px; }
   .text-nav { display: none; }
+  .importance-nav { display: block; }
 }
 
 @media (max-width: 900px) {
@@ -524,13 +570,37 @@ button:focus-visible, a:focus-visible {
   .next-comic-card { grid-template-columns: 70px 1fr; }
   .next-comic-card img { width: 70px; }
   .memory-drawer { width: 100%; }
+  .rankings-columns { grid-template-columns: minmax(0,1fr) 82px 104px; padding-left: 67px; }
+  .rankings-list li { grid-template-columns: 32px minmax(0,1fr) 82px 104px; gap: 7px; }
   .drawer-header, .memory-list { padding-left: 20px; padding-right: 20px; }
   .memory-overview { margin-left: 20px; margin-right: 20px; }
   .memory-tabs { padding: 0 20px; gap: 14px; }
   .drawer-footer { padding-left: 20px; padding-right: 20px; }
   .memory-row { grid-template-columns: 30px minmax(0, 1fr); }
   .status-pill { grid-column: 2; width: fit-content; }
+  .rankings-header, .rankings-intro, .rankings-list, .rankings-footnote { padding-left: 20px; padding-right: 20px; }
   .toast { bottom: 80px; width: max-content; max-width: calc(100% - 26px); }
+}
+
+@media (max-width: 480px) {
+  .importance-badge { margin-left: 0; }
+  .rankings-columns { grid-template-columns: minmax(0,1fr) 78px; padding-left: 63px; }
+  .rankings-columns span:nth-child(3) { display: none; }
+  .rankings-list li {
+    grid-template-columns: 32px minmax(0,1fr) 78px;
+    grid-template-areas:
+      "rank comic score"
+      "rank cards cards";
+    min-height: 76px;
+  }
+  .ranking-number { grid-area: rank; align-self: start; padding-top: 5px; }
+  .ranking-comic { grid-area: comic; }
+  .ranking-comic strong { overflow: visible; white-space: normal; }
+  .ranking-score { grid-area: score; align-self: start; padding-top: 4px; }
+  .ranking-card-counts { grid-area: cards; display: flex; align-items: baseline; justify-content: flex-start; gap: 4px; }
+  .ranking-card-counts strong { font-size: 14px; }
+  .ranking-card-label { display: inline; }
+  .ranking-shared-count { display: none; }
 }
 
 @media (pointer: coarse) {

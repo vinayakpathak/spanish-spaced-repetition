@@ -28,9 +28,19 @@ import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { rankComicsByCardGraph } from "../lib/comic-importance.ts";
+import {
+  IMPORTANCE_TARGET_CARD_SCOPE,
+  IMPORTANCE_TARGET_EDGE_POLICY,
+  IMPORTANCE_TARGET_IDENTITY_POLICY,
+  IMPORTANCE_TARGET_REVIEW_STATUS,
+  importanceTargetIdsForCards,
+  isImportanceTargetId,
+} from "../lib/importance-target.ts";
 
-const SCHEMA_VERSION = 1;
-const COMPILER_REVISION = "runtime-corpus-v2";
+const INPUT_SCHEMA_VERSION = 1;
+const RUNTIME_SCHEMA_VERSION = 2;
+const COMPILER_REVISION = "runtime-corpus-v4-provisional-centrality";
 const DEFAULT_EXPECTED_COUNT = 258;
 const PROJECT_ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -174,6 +184,59 @@ function rounded(value) {
   return Number(value.toFixed(4));
 }
 
+function scoreManifestEntries(entries) {
+  const result = rankComicsByCardGraph(
+    entries.map(({ id, importanceTargetIds }) => ({
+      id,
+      cardIds: importanceTargetIds,
+    })),
+  );
+  if (!result.converged) {
+    fail(
+      `comic importance did not converge after ${result.maxIterations} iterations`,
+    );
+  }
+  const importanceByComicId = new Map(
+    result.comics.map(({ comicId, ...importance }) => [comicId, importance]),
+  );
+  const comics = entries.map((entry) => {
+    const importance = importanceByComicId.get(entry.id);
+    if (!importance) fail(`comic importance is missing ${entry.id}`);
+    return { ...entry, importance };
+  });
+  return {
+    comics,
+    importanceModel: {
+      algorithm: result.algorithm,
+      normalization: result.normalization,
+      identityPolicy: IMPORTANCE_TARGET_IDENTITY_POLICY,
+      edgePolicy: IMPORTANCE_TARGET_EDGE_POLICY,
+      cardScope: IMPORTANCE_TARGET_CARD_SCOPE,
+      includesSchedulableOnly: true,
+      reviewStatus: IMPORTANCE_TARGET_REVIEW_STATUS,
+      provisional: true,
+      contextualSensesReviewed: false,
+      damping: result.damping,
+      tolerance: result.tolerance,
+      maxIterations: result.maxIterations,
+      iterations: result.iterations,
+      converged: result.converged,
+      nodeCount: result.nodeCount,
+      comicNodeCount: result.comicNodeCount,
+      cardNodeCount: result.cardNodeCount,
+      edgeCount: result.edgeCount,
+    },
+  };
+}
+
+function sameFields(actual, expected, fields) {
+  return (
+    isRecord(actual) &&
+    isRecord(expected) &&
+    fields.every((field) => Object.is(actual[field], expected[field]))
+  );
+}
+
 function validateBounds(bounds, label) {
   if (!isRecord(bounds)) fail(`${label} must be an object`);
   for (const key of ["x", "y", "width", "height"]) {
@@ -196,7 +259,7 @@ function validateBounds(bounds, label) {
 }
 
 function validateSourceManifest(value, expectedCount) {
-  if (!isRecord(value) || value.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(value) || value.schemaVersion !== INPUT_SCHEMA_VERSION) {
     fail("source manifest has an unsupported schema");
   }
   if (!Array.isArray(value.comics) || value.comics.length !== expectedCount) {
@@ -239,7 +302,7 @@ function validateSourceManifest(value, expectedCount) {
 }
 
 function validateOCRIndex(value) {
-  if (!isRecord(value) || value.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(value) || value.schemaVersion !== INPUT_SCHEMA_VERSION) {
     fail("OCR corpus index has an unsupported schema");
   }
   if (!Array.isArray(value.comics)) fail("OCR corpus index needs comics[]");
@@ -258,7 +321,7 @@ function validateOCRIndex(value) {
 }
 
 function validateGlossary(value) {
-  if (!isRecord(value) || value.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(value) || value.schemaVersion !== INPUT_SCHEMA_VERSION) {
     fail("provisional glossary has an unsupported schema");
   }
   if (!Array.isArray(value.records)) fail("provisional glossary needs records[]");
@@ -294,7 +357,7 @@ function validateGlossary(value) {
 }
 
 function validateOverrides(value) {
-  if (!isRecord(value) || value.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(value) || value.schemaVersion !== INPUT_SCHEMA_VERSION) {
     fail("OCR overrides have an unsupported schema");
   }
   if (!Array.isArray(value.comics)) fail("OCR overrides need comics[]");
@@ -360,7 +423,7 @@ function validateOverrides(value) {
 }
 
 function validateOCRComic(value, expectedId) {
-  if (!isRecord(value) || value.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(value) || value.schemaVersion !== INPUT_SCHEMA_VERSION) {
     fail(`${expectedId} OCR file has an unsupported schema`);
   }
   if (value.id !== expectedId) fail(`${expectedId} OCR file ID mismatch`);
@@ -627,7 +690,7 @@ function buildGeneratedBundle(
   };
 
   return {
-    schemaVersion: SCHEMA_VERSION,
+    schemaVersion: RUNTIME_SCHEMA_VERSION,
     revision,
     reviewStatus: "needs-review",
     provenance: comic.provenance,
@@ -647,6 +710,7 @@ function generatedManifestEntry(sourceComic, bundle, revision) {
     titleEs: sourceComic.title,
     imageSrc: sourceComic.imageUrl,
     cardIds: bundle.comic.cardIds,
+    importanceTargetIds: importanceTargetIdsForCards(bundle.cards),
     reviewStatus: "needs-review",
     provenance: {
       method: "apple-vision-ocr-and-provisional-dictionary",
@@ -688,7 +752,7 @@ function equalStringSets(first, second) {
 }
 
 function validateGeneratedBundle(bundle, entry) {
-  if (!isRecord(bundle) || bundle.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(bundle) || bundle.schemaVersion !== RUNTIME_SCHEMA_VERSION) {
     fail(`${entry.id} bundle has an unsupported schema`);
   }
   if (bundle.revision !== entry.revision) {
@@ -792,7 +856,7 @@ function validateGeneratedBundle(bundle, entry) {
 }
 
 function validateManifestShape(manifest, expectedCount) {
-  if (!isRecord(manifest) || manifest.schemaVersion !== SCHEMA_VERSION) {
+  if (!isRecord(manifest) || manifest.schemaVersion !== RUNTIME_SCHEMA_VERSION) {
     fail("runtime manifest has an unsupported schema");
   }
   requireString(manifest.revision, "runtime manifest.revision");
@@ -818,8 +882,74 @@ function validateManifestShape(manifest, expectedCount) {
     if (new Set(entry.cardIds).size !== entry.cardIds.length) {
       fail(`${id}.cardIds contains duplicates`);
     }
+    if (
+      !Array.isArray(entry.importanceTargetIds) ||
+      entry.importanceTargetIds.some((targetId) => !isImportanceTargetId(targetId))
+    ) {
+      fail(`${id}.importanceTargetIds is invalid`);
+    }
+    if (
+      new Set(entry.importanceTargetIds).size !==
+      entry.importanceTargetIds.length
+    ) {
+      fail(`${id}.importanceTargetIds contains duplicates`);
+    }
+    if (
+      entry.importanceTargetIds.some(
+        (targetId, targetIndex) =>
+          targetIndex > 0 &&
+          entry.importanceTargetIds[targetIndex - 1] >= targetId,
+      )
+    ) {
+      fail(`${id}.importanceTargetIds must be sorted`);
+    }
     if (entry.reviewStatus !== "reviewed" && entry.reviewStatus !== "needs-review") {
       fail(`${id}.reviewStatus is invalid`);
+    }
+  }
+  const expectedImportance = scoreManifestEntries(manifest.comics);
+  if (
+    !sameFields(
+      manifest.importanceModel,
+      expectedImportance.importanceModel,
+      [
+        "algorithm",
+        "normalization",
+        "identityPolicy",
+        "edgePolicy",
+        "cardScope",
+        "includesSchedulableOnly",
+        "reviewStatus",
+        "provisional",
+        "contextualSensesReviewed",
+        "damping",
+        "tolerance",
+        "maxIterations",
+        "iterations",
+        "converged",
+        "nodeCount",
+        "comicNodeCount",
+        "cardNodeCount",
+        "edgeCount",
+      ],
+    )
+  ) {
+    fail("runtime manifest importanceModel does not match the comic-card graph");
+  }
+  const expectedImportanceById = new Map(
+    expectedImportance.comics.map((entry) => [entry.id, entry.importance]),
+  );
+  for (const entry of manifest.comics) {
+    if (
+      !sameFields(entry.importance, expectedImportanceById.get(entry.id), [
+        "score",
+        "rank",
+        "percentile",
+        "cardCount",
+        "sharedCardCount",
+      ])
+    ) {
+      fail(`${entry.id}.importance does not match the comic-card graph`);
     }
   }
   if (!Array.isArray(manifest.cardCatalog)) {
@@ -871,7 +1001,7 @@ async function reviewedCorpus() {
   const comicById = new Map(content.COMICS.map((comic) => [comic.id, comic]));
   return {
     REVIEWED_CORPUS_MANIFEST: {
-      schemaVersion: SCHEMA_VERSION,
+      schemaVersion: RUNTIME_SCHEMA_VERSION,
       revision,
       comics: entries,
     },
@@ -880,7 +1010,7 @@ async function reviewedCorpus() {
       if (!comic) return null;
       const cardIds = new Set(comic.cardIds);
       return {
-        schemaVersion: SCHEMA_VERSION,
+        schemaVersion: RUNTIME_SCHEMA_VERSION,
         revision,
         comic,
         cards: content.CARDS.filter((card) => cardIds.has(card.id)),
@@ -913,6 +1043,14 @@ async function validateOutput(outputDir, expectedCount) {
       if (!equalStringSets(reviewed.comic.cardIds, entry.cardIds)) {
         fail(`${entry.id} reviewed manifest card index is inconsistent`);
       }
+      if (
+        !equalStringSets(
+          importanceTargetIdsForCards(reviewed.cards),
+          entry.importanceTargetIds,
+        )
+      ) {
+        fail(`${entry.id} reviewed importance target index is inconsistent`);
+      }
       continue;
     }
 
@@ -923,6 +1061,14 @@ async function validateOutput(outputDir, expectedCount) {
       bundle,
       entry,
     );
+    if (
+      !equalStringSets(
+        importanceTargetIdsForCards(bundle.cards),
+        entry.importanceTargetIds,
+      )
+    ) {
+      fail(`${entry.id} generated importance target index is inconsistent`);
+    }
     generatedCardCount += occurrenceCount;
     schedulableGeneratedCardCount += schedulableCardCount;
     for (const card of bundle.cards) {
@@ -1011,8 +1157,13 @@ async function build(options) {
   for (const sourceComic of source.comics) {
     const reviewedEntry = reviewedEntryById.get(sourceComic.id);
     if (reviewedEntry) {
+      const reviewedBundle = reviewed.loadReviewedComic(sourceComic.id);
+      if (!reviewedBundle) {
+        fail(`reviewed bundle is missing ${sourceComic.id}`);
+      }
       manifestEntries.push({
         ...reviewedEntry,
+        importanceTargetIds: importanceTargetIdsForCards(reviewedBundle.cards),
         reviewStatus: "reviewed",
         provenance: { method: "hand-reviewed-seed" },
       });
@@ -1033,14 +1184,17 @@ async function build(options) {
   const cardCatalog = bundles.flatMap(({ bundle }) =>
     bundle.cards.filter((card) => card.schedulable),
   );
+  const { comics: scoredManifestEntries, importanceModel } =
+    scoreManifestEntries(manifestEntries);
   const manifest = {
-    schemaVersion: SCHEMA_VERSION,
+    schemaVersion: RUNTIME_SCHEMA_VERSION,
     revision,
+    importanceModel,
     reviewStatus: "mixed",
     counts: {
-      comics: manifestEntries.length,
+      comics: scoredManifestEntries.length,
       reviewedComics: reviewedEntryById.size,
-      needsReviewComics: manifestEntries.length - reviewedEntryById.size,
+      needsReviewComics: scoredManifestEntries.length - reviewedEntryById.size,
       generatedCards: bundles.reduce(
         (sum, item) => sum + item.bundle.cards.length,
         0,
@@ -1055,7 +1209,7 @@ async function build(options) {
       contextualSensesReviewed: false,
     },
     cardCatalog,
-    comics: manifestEntries,
+    comics: scoredManifestEntries,
   };
   validateManifestShape(manifest, options.expectedCount);
 

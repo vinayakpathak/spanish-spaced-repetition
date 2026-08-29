@@ -2,7 +2,16 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { build as viteBuild } from "vite";
-import { COMICS } from "../lib/content.ts";
+import { rankComicsByCardGraph } from "../lib/comic-importance.ts";
+import { CARDS, COMICS } from "../lib/content.ts";
+import {
+  IMPORTANCE_TARGET_CARD_SCOPE,
+  IMPORTANCE_TARGET_EDGE_POLICY,
+  IMPORTANCE_TARGET_IDENTITY_POLICY,
+  IMPORTANCE_TARGET_REVIEW_STATUS,
+  importanceTargetIdsForCards,
+  isImportanceTargetId,
+} from "../lib/importance-target.ts";
 
 const projectURL = new URL("../", import.meta.url);
 
@@ -69,6 +78,122 @@ test("the lazy corpus covers all 258 archive entries and preserves source anomal
   );
 });
 
+test("all 258 manifest comics carry deterministic normalized graph importance", async () => {
+  const manifest = await json("public/corpus/manifest.json");
+  const graph = manifest.comics.map(({ id, importanceTargetIds }) => ({
+    id,
+    cardIds: importanceTargetIds,
+  }));
+  const expected = rankComicsByCardGraph(graph);
+  const reordered = rankComicsByCardGraph(
+    [...graph]
+      .reverse()
+      .map(({ id, cardIds }) => ({ id, cardIds: [...cardIds].reverse() })),
+  );
+
+  assert.deepEqual(reordered, expected, "ranking is independent of input order");
+  assert.equal(manifest.schemaVersion, 2);
+  assert.equal(expected.comics.length, 258);
+  assert.equal(expected.comics[0].comicId, "tech-support");
+  assert.equal(expected.comics[0].rank, 1);
+
+  const storedById = new Map(
+    manifest.comics.map((comic) => [comic.id, comic.importance]),
+  );
+  for (const { comicId, ...importance } of expected.comics) {
+    assert.deepEqual(storedById.get(comicId), importance, comicId);
+    assert.ok(Number.isFinite(importance.score));
+    assert.ok(importance.score >= 0 && importance.score <= 1);
+    assert.ok(importance.percentile >= 0 && importance.percentile <= 1);
+    assert.equal(Number.isSafeInteger(importance.cardCount), true);
+    assert.equal(Number.isSafeInteger(importance.sharedCardCount), true);
+  }
+
+  assert.equal(
+    new Set(expected.comics.map((comic) => comic.rank)).size,
+    manifest.comics.length,
+  );
+  assert.deepEqual(
+    expected.comics.map((comic) => comic.rank),
+    Array.from({ length: manifest.comics.length }, (_, index) => index + 1),
+  );
+  assert.ok(
+    Math.abs(
+      expected.comics.reduce((sum, comic) => sum + comic.score, 0) - 1,
+    ) < 1e-12,
+  );
+  assert.deepEqual(manifest.importanceModel, {
+    algorithm: expected.algorithm,
+    normalization: expected.normalization,
+    identityPolicy: IMPORTANCE_TARGET_IDENTITY_POLICY,
+    edgePolicy: IMPORTANCE_TARGET_EDGE_POLICY,
+    cardScope: IMPORTANCE_TARGET_CARD_SCOPE,
+    includesSchedulableOnly: true,
+    reviewStatus: IMPORTANCE_TARGET_REVIEW_STATUS,
+    provisional: true,
+    contextualSensesReviewed: false,
+    damping: expected.damping,
+    tolerance: expected.tolerance,
+    maxIterations: expected.maxIterations,
+    iterations: expected.iterations,
+    converged: expected.converged,
+    nodeCount: expected.nodeCount,
+    comicNodeCount: expected.comicNodeCount,
+    cardNodeCount: expected.cardNodeCount,
+    edgeCount: expected.edgeCount,
+  });
+  assert.equal(expected.cardNodeCount, 1_234);
+  assert.equal(expected.edgeCount, 4_354);
+  assert.equal(expected.iterations, 17);
+});
+
+test("analytics targets canonically connect schedulable cards without aliasing SRS IDs", async () => {
+  const manifest = await json("public/corpus/manifest.json");
+  const reviewedIds = new Set(COMICS.map((comic) => comic.id));
+  const reviewedCardsById = new Map(CARDS.map((card) => [card.id, card]));
+  const targetFrequency = new Map();
+
+  for (const entry of manifest.comics) {
+    let cards;
+    if (reviewedIds.has(entry.id)) {
+      cards = entry.cardIds.map((cardId) => reviewedCardsById.get(cardId));
+      assert.equal(cards.every(Boolean), true, entry.id);
+    } else {
+      const bundle = await json(`public/corpus/comics/${entry.loadKey}.json`);
+      cards = bundle.cards;
+    }
+    const expectedTargets = importanceTargetIdsForCards(cards);
+    assert.deepEqual(entry.importanceTargetIds, expectedTargets, entry.id);
+    assert.equal(
+      entry.importanceTargetIds.every(isImportanceTargetId),
+      true,
+      entry.id,
+    );
+    assert.equal(
+      entry.importanceTargetIds.some((targetId) =>
+        entry.cardIds.includes(targetId),
+      ),
+      false,
+      `${entry.id} keeps analytics targets out of exact-card SRS indexes`,
+    );
+    assert.equal(entry.importance.cardCount, entry.importanceTargetIds.length);
+    for (const targetId of entry.importanceTargetIds) {
+      targetFrequency.set(targetId, (targetFrequency.get(targetId) ?? 0) + 1);
+    }
+  }
+
+  assert.equal(targetFrequency.size, 1_234);
+  assert.equal(
+    [...targetFrequency.values()].reduce((sum, count) => sum + count, 0),
+    4_354,
+  );
+  assert.equal(targetFrequency.get("word:en|in%3B%20on"), 145);
+  assert.equal(
+    [...targetFrequency.values()].filter((comicCount) => comicCount > 1).length,
+    375,
+  );
+});
+
 test("the browser manifest parser accepts the complete corpus, including its Unicode load key", async () => {
   const [rawManifest, parser] = await Promise.all([
     json("public/corpus/manifest.json"),
@@ -76,6 +201,7 @@ test("the browser manifest parser accepts the complete corpus, including its Uni
   ]);
 
   const parsed = parser.parseCorpusManifest(rawManifest);
+  const merged = parser.mergeReviewedManifest(parsed);
   assert.equal(parsed.comics.length, 258);
   assert.equal(new Set(parsed.comics.map((comic) => comic.xkcdNumber)).size, 254);
   assert.equal(
@@ -84,6 +210,35 @@ test("the browser manifest parser accepts the complete corpus, including its Uni
     "es-xkcd-quince-años",
   );
   assert.equal(parsed.cardCatalog.length, 5_019);
+  for (const reviewed of COMICS) {
+    assert.deepEqual(
+      merged.comics.find((comic) => comic.id === reviewed.id)?.importance,
+      parsed.comics.find((comic) => comic.id === reviewed.id)?.importance,
+      `reviewed adapter preserves the full-corpus score for ${reviewed.id}`,
+    );
+  }
+
+  const mismatchedReviewed = {
+    ...parsed,
+    comics: parsed.comics.map((comic) =>
+      comic.id === COMICS[0].id
+        ? { ...comic, cardIds: comic.cardIds.slice(1) }
+        : comic,
+    ),
+  };
+  assert.throws(
+    () => parser.mergeReviewedManifest(mismatchedReviewed),
+    /Remote reviewed curriculum does not match/,
+  );
+
+  const wrongOrder = structuredClone(rawManifest);
+  const firstRank = wrongOrder.comics[0].importance.rank;
+  wrongOrder.comics[0].importance.rank = wrongOrder.comics[1].importance.rank;
+  wrongOrder.comics[1].importance.rank = firstRank;
+  assert.throws(
+    () => parser.parseCorpusManifest(wrongOrder),
+    /ranks do not match score order/,
+  );
 });
 
 test("degraded corpus hydration never overwrites saved generated progress", async (t) => {

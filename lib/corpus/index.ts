@@ -17,6 +17,8 @@ export {
 export {
   CORPUS_SCHEMA_VERSION,
   TARGET_CORPUS_COMIC_COUNT,
+  type ComicImportance,
+  type ComicImportanceModel,
   type CorpusComicBundle,
   type CorpusManifest,
   type CorpusManifestEntry,

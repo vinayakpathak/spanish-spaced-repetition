@@ -24,10 +24,61 @@ test("server-renders the Tira learning experience", async () => {
   assert.match(html, /First,/i);
   assert.match(html, /El deber llama/i);
   assert.match(html, /I understand this comic/i);
+  assert.match(html, />Rankings</i);
   assert.match(html, /Tap any marked Spanish word in the picture/i);
   assert.match(html, /word meaning, reusable expression, grammar, and necessary context cards/i);
   assert.match(html, /Spanish edition/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+});
+
+test("comic importance is visible as a normalized badge and accessible ranking dialog", async () => {
+  const [page, styles, readme] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(page, /formatImportanceScore\(currentManifestEntry\.importance\.score\)/);
+  assert.match(page, /currentManifestEntry\.importance\.rank/);
+  assert.match(page, /corpusManifest\.comics\.length/);
+  assert.match(page, /first\.importance\.rank - second\.importance\.rank/);
+  assert.match(page, /aria-labelledby="rankings-title"/);
+  assert.match(page, /aria-describedby="rankings-description"/);
+  assert.match(page, /aria-modal="true"/);
+  assert.match(page, /setShowRankings\(false\)/);
+  assert.match(page, /comic\.importance\.cardCount/);
+  assert.match(page, /comic\.importance\.sharedCardCount/);
+  assert.match(page, /PageRank-style recursive importance/);
+  assert.match(page, /damped two-way comic–target centrality/);
+  assert.match(page, /15% baseline\/reset/);
+  assert.match(page, /zero-target comics from vanishing/);
+  assert.match(page, /comic scores below sum to 100%/);
+  assert.match(page, /className="rankings-list-region"[\s\S]*role="region"/);
+  assert.match(page, /tabIndex=\{0\}/);
+  assert.match(page, /aria-label="Comic importance rankings; scroll to view all comics"/);
+  assert.match(page, /Connected targets/);
+  assert.match(page, /normalized Spanish prompt and English answer match/);
+  assert.match(page, /Higher-level targets use exact card IDs/);
+  assert.match(page, /cross-comic targets/);
+  assert.match(page, /importanceModel\.cardNodeCount\.toLocaleString\("en"\)/);
+  assert.match(page, /unresolved preview cards are excluded/i);
+  assert.match(page, /never merges SRS card IDs or progress/i);
+  assert.match(styles, /\.importance-badge\s*\{/);
+  assert.match(styles, /\.importance-badge\s*\{[\s\S]*?min-height:\s*44px/);
+  assert.match(styles, /\.rankings-drawer\s*\{/);
+  assert.match(styles, /\.rankings-list li\.is-current/);
+  assert.match(styles, /\.rankings-list-region:focus-visible/);
+  assert.match(styles, /@media \(max-width:\s*480px\)/);
+  assert.match(styles, /\.ranking-comic strong\s*\{\s*overflow:\s*visible;\s*white-space:\s*normal/);
+  assert.doesNotMatch(page + readme, /standard PageRank/i);
+  assert.match(readme, /PageRank-style recursive importance/);
+  assert.match(readme, /damped two-way comic–target centrality/);
+  assert.match(readme, /15% baseline\/reset prevents disconnected components and zero-target comics from vanishing/);
+  assert.match(readme, /all 258 comic scores sum to 100%/);
+  assert.match(readme, /normalized Spanish prompt and English answer match/);
+  assert.match(readme, /higher-level grammar, expression, and concept cards use exact IDs/);
+  assert.match(readme, /never merges SRS card IDs or progress/);
+  assert.match(readme, /9,466 unresolved clickable previews are excluded entirely/);
 });
 
 test("the curriculum stays Spanish-first and starter artifacts are gone", async () => {
