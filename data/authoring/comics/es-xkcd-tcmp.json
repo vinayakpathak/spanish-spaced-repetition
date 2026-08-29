@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-tcmp",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "TCMP",
+  "titleEs": "TCMP",
+  "titleText": {
+    "es": "Un gran obstáculo a la hora de experimentar con el motor de simulaciones de sueños de la mente es conservar los detalles mientras te despiertas. Con el TCMP puedes traerte la información que quieras.",
+    "en": "A major obstacle when experimenting with the mind's dream-simulation engine is retaining the details as you wake up. With TCMP, you can bring back whatever information you want.",
+    "noteEn": "TCMP is the comic's fictional cross-consciousness messaging protocol; its initials follow the original English name rather than the Spanish word order."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-ayudadme",
+      "kind": "word",
+      "promptEs": "ayudadme",
+      "answerEn": "help me (informal command to several people, used mainly in Spain)",
+      "noteEn": "Ayudad is the positive command for vosotros, the informal plural “you” used mainly in Spain. Me is attached to the end because the speaker is the person receiving the help.",
+      "example": { "es": "Ayudadme a cerrar la puerta.", "en": "Help me close the door." },
+      "tags": ["word", "command", "Spain", "A2"]
+    },
+    { "id": "word-probar", "kind": "word", "promptEs": "probar", "answerEn": "to test; to try", "noteEn": "", "tags": ["word", "verb"] },
+    { "id": "word-protocolo", "kind": "word", "promptEs": "protocolo", "answerEn": "protocol; agreed procedure", "noteEn": "", "tags": ["word", "technology"] },
+    { "id": "word-mensajería", "kind": "word", "promptEs": "mensajería", "answerEn": "messaging; message service", "noteEn": "", "tags": ["word", "technology"] },
+    {
+      "id": "word-trans--across-prefix",
+      "kind": "word",
+      "promptEs": "trans",
+      "answerEn": "cross-; across; beyond (a prefix)",
+      "noteEn": "Trans- is added to the beginning of another word to suggest crossing or going beyond a boundary. It stays attached to the word that follows it, usually with no space.",
+      "example": { "es": "El vuelo transatlántico dura varias horas.", "en": "The transatlantic flight lasts several hours." },
+      "tags": ["word", "prefix", "word formation", "B1"]
+    },
+    { "id": "word-consciencia", "kind": "word", "promptEs": "consciencia", "answerEn": "consciousness; awareness", "noteEn": "", "tags": ["word"] },
+    {
+      "id": "word-estado--been",
+      "kind": "word",
+      "promptEs": "estado",
+      "answerEn": "been (the completed-action form of estar)",
+      "noteEn": "Estado is the completed-action form of estar, the verb for being or being in a state. After a helper such as he, has, or ha, it supplies the idea “been” and does not change for the person.",
+      "example": { "es": "He estado enfermo.", "en": "I have been sick." },
+      "tags": ["word", "verb form", "A2"]
+    },
+    { "id": "word-entrenando", "kind": "word", "promptEs": "entrenando", "answerEn": "training; practicing", "noteEn": "", "tags": ["word", "verb form"] },
+    { "id": "word-seguir--continue", "kind": "word", "promptEs": "seguir", "answerEn": "to continue; to keep doing", "noteEn": "", "tags": ["word", "verb"] },
+    { "id": "word-moviendo", "kind": "word", "promptEs": "moviendo", "answerEn": "moving", "noteEn": "", "tags": ["word", "verb form"] },
+    { "id": "word-dedos", "kind": "word", "promptEs": "dedos", "answerEn": "fingers; digits", "noteEn": "", "tags": ["word", "body"] },
+    {
+      "id": "word-duermo--fall-asleep",
+      "kind": "word",
+      "promptEs": "duermo",
+      "answerEn": "I fall asleep (when used with me)",
+      "noteEn": "Duermo alone normally means “I sleep.” Me duermo uses the same verb form with me to describe the change from awake to asleep.",
+      "example": { "es": "Me duermo temprano.", "en": "I fall asleep early." },
+      "tags": ["word", "verb", "A2"]
+    },
+    { "id": "word-teclear", "kind": "word", "promptEs": "teclear", "answerEn": "to type; to key in", "noteEn": "", "tags": ["word", "computing"] },
+    { "id": "word-desde--from", "kind": "word", "promptEs": "desde", "answerEn": "from; from within (a starting place)", "noteEn": "", "tags": ["word", "preposition"] },
+    { "id": "word-sueños", "kind": "word", "promptEs": "sueños", "answerEn": "dreams", "noteEn": "", "tags": ["word"] },
+    { "id": "word-ahora", "kind": "word", "promptEs": "ahora", "answerEn": "now", "noteEn": "", "tags": ["word", "time"] },
+    { "id": "word-dormir", "kind": "word", "promptEs": "dormir", "answerEn": "to sleep", "noteEn": "", "tags": ["word", "verb"] },
+    {
+      "id": "word-os--recipient",
+      "kind": "word",
+      "promptEs": "os",
+      "answerEn": "to you all; you all (informal plural, used mainly in Spain)",
+      "noteEn": "Os is the short object form used with vosotros or vosotras. It identifies several informally addressed people as receiving or being affected by an action.",
+      "example": { "es": "Os envío una foto.", "en": "I am sending you all a photo." },
+      "tags": ["word", "pronoun", "Spain", "A2"]
+    },
+    {
+      "id": "word-transmitirá",
+      "kind": "word",
+      "promptEs": "transmitirá",
+      "answerEn": "it will transmit; it will relay",
+      "noteEn": "Transmitirá is the future form of transmitir for one person or thing. The ending -á supplies “will”; the subject in the surrounding context tells you whether English uses he, she, it, or formal you.",
+      "example": { "es": "La radio transmitirá el partido.", "en": "The radio will broadcast the match." },
+      "tags": ["word", "verb", "future", "A2"]
+    },
+    { "id": "word-exploro", "kind": "word", "promptEs": "exploro", "answerEn": "I explore", "noteEn": "", "tags": ["word", "verb"] },
+    { "id": "word-extraño", "kind": "word", "promptEs": "extraño", "answerEn": "strange; weird (masculine singular)", "noteEn": "", "tags": ["word", "adjective"] },
+    { "id": "word-pensar", "kind": "word", "promptEs": "pensar", "answerEn": "to think", "noteEn": "", "tags": ["word", "verb"] },
+    {
+      "id": "word-sin--sin-embargo",
+      "kind": "word",
+      "promptEs": "sin",
+      "answerEn": "no separate English word; part of sin embargo (“however”)",
+      "noteEn": "Sin normally means “without,” but sin embargo is one fixed connector. In that expression, translate the pair together rather than translating sin separately.",
+      "example": { "es": "Quería salir; sin embargo, llovía.", "en": "I wanted to go out; however, it was raining." },
+      "tags": ["word", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-embargo--sin-embargo",
+      "kind": "word",
+      "promptEs": "embargo",
+      "answerEn": "no separate English word; part of sin embargo (“however”)",
+      "noteEn": "In sin embargo, embargo does not contribute a separate English word. The two Spanish words work together as the connector “however” or “nevertheless.”",
+      "example": { "es": "Es difícil; sin embargo, es posible.", "en": "It is difficult; however, it is possible." },
+      "tags": ["word", "fixed expression", "A2"]
+    },
+    { "id": "word-línea--connection", "kind": "word", "promptEs": "línea", "answerEn": "line; connection; lifeline", "noteEn": "", "tags": ["word", "communication"] },
+    {
+      "id": "word-de--fixed-de-vuelta",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; part of de vuelta a (“back to”)",
+      "noteEn": "De often means “of” or “from,” but de vuelta is a fixed way to express being or going back. Translate the whole expression rather than assigning de its usual meaning here.",
+      "example": { "es": "Vamos de vuelta a casa.", "en": "We are going back home." },
+      "tags": ["word", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-vuelta--back",
+      "kind": "word",
+      "promptEs": "vuelta",
+      "answerEn": "back; return (as part of de vuelta)",
+      "noteEn": "Vuelta can name a turn or a return. In de vuelta a followed by a place, it presents movement or orientation back toward that place.",
+      "example": { "es": "Estoy de vuelta en la oficina.", "en": "I am back at the office." },
+      "tags": ["word", "fixed expression", "A2"]
+    },
+    { "id": "word-oportunidad", "kind": "word", "promptEs": "oportunidad", "answerEn": "opportunity; chance", "noteEn": "", "tags": ["word"] },
+    { "id": "word-hablar", "kind": "word", "promptEs": "hablar", "answerEn": "to speak; to talk", "noteEn": "", "tags": ["word", "verb"] },
+    { "id": "word-realidad--reality", "kind": "word", "promptEs": "realidad", "answerEn": "reality", "noteEn": "", "tags": ["word"] },
+    {
+      "id": "word-siento--feel",
+      "kind": "word",
+      "promptEs": "siento",
+      "answerEn": "I feel",
+      "noteEn": "Siento is the form of sentir used by the speaker. With me before it, me siento describes how the speaker feels or what the speaker feels like; this is different from lo siento, the fixed expression for “I'm sorry.”",
+      "example": { "es": "Me siento mejor hoy.", "en": "I feel better today." },
+      "tags": ["word", "verb", "A2"]
+    },
+    {
+      "id": "word-podré",
+      "kind": "word",
+      "promptEs": "podré",
+      "answerEn": "I will be able to",
+      "noteEn": "Podré is the future form of poder for the speaker. Poder uses the shortened future stem podr-, and the ending -é supplies both “I” and “will.”",
+      "example": { "es": "Mañana podré ayudarte.", "en": "Tomorrow I will be able to help you." },
+      "tags": ["word", "verb", "future", "A2"]
+    },
+    { "id": "word-escribir", "kind": "word", "promptEs": "escribir", "answerEn": "to write", "noteEn": "", "tags": ["word", "verb"] },
+    { "id": "word-mensaje", "kind": "word", "promptEs": "mensaje", "answerEn": "message", "noteEn": "", "tags": ["word"] },
+    { "id": "word-inaugural", "kind": "word", "promptEs": "inaugural", "answerEn": "inaugural; first of its kind", "noteEn": "", "tags": ["word", "adjective"] },
+    {
+      "id": "word-veamos",
+      "kind": "word",
+      "promptEs": "veamos",
+      "answerEn": "let's see; let's take a look",
+      "noteEn": "Veamos is a form of ver, “to see,” used here to suggest that the speaker and others look or find out together. In conversation it often introduces the next step or a moment of checking something.",
+      "example": { "es": "Veamos el mapa.", "en": "Let's look at the map." },
+      "tags": ["word", "conversation", "A2"]
+    },
+    { "id": "word-fuera--outside", "kind": "word", "promptEs": "fuera", "answerEn": "outside", "noteEn": "", "tags": ["word", "location"] },
+    {
+      "id": "word-pasado--move-on",
+      "kind": "word",
+      "promptEs": "pasado",
+      "answerEn": "moved on; gone on to a new stage",
+      "noteEn": "Pasado is the completed-action form of pasar. When pasar is followed by a, it can describe moving from one activity, topic, or stage to the next rather than physically passing by something.",
+      "example": { "es": "El equipo ha pasado a otra tarea.", "en": "The team has moved on to another task." },
+      "tags": ["word", "verb form", "B1"]
+    },
+    { "id": "word-directamente", "kind": "word", "promptEs": "directamente", "answerEn": "directly; straight", "noteEn": "", "tags": ["word", "adverb"] },
+    { "id": "word-trolleo", "kind": "word", "promptEs": "trolleo", "answerEn": "trolling; deliberately provoking people online", "noteEn": "", "tags": ["word", "internet"] },
+    {
+      "id": "grammar-vosotros-affirmative-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para vosotros: hablad, comed, escribid",
+      "questionEn": "How do you tell several people informally to do something in Spain?",
+      "answerEn": "For most verbs, remove the final -r from the verb's dictionary form and add -d: hablar becomes hablad.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If a short object word such as me is included, attach it to the end: ayudad + me becomes ayudadme.",
+      "example": { "es": "Abrid los libros.", "en": "Open your books." },
+      "tags": ["grammar", "command", "vosotros", "Spain", "A2"]
+    },
+    {
+      "id": "grammar-present-perfect-progressive",
+      "kind": "grammar",
+      "promptEs": "he/has/ha… + estado + verbo en -ando/-iendo",
+      "questionEn": "How do you say that someone has been doing an activity over a period of time?",
+      "answerEn": "Use a present form of haber, then estado, then the activity verb in its -ando or -iendo form.",
+      "noteEn": "Only the form of haber changes for the person: he for “I,” has for informal “you,” ha for “he,” “she,” or formal “you,” and so on. Estado and the final -ando/-iendo form stay unchanged. That last form presents the activity as ongoing.",
+      "example": { "es": "He estado leyendo toda la tarde.", "en": "I have been reading all afternoon." },
+      "tags": ["grammar", "ongoing action", "present perfect", "B1"]
+    },
+    {
+      "id": "grammar-seguir-gerund",
+      "kind": "grammar",
+      "promptEs": "seguir + verbo en -ando/-iendo",
+      "questionEn": "How do you say that someone keeps doing or continues an activity?",
+      "answerEn": "Use a form of seguir followed by the activity verb in its -ando or -iendo form.",
+      "noteEn": "Seguir changes for the person and time; the following activity form stays unchanged. For example, mover becomes moviendo and estudiar becomes estudiando.",
+      "example": { "es": "Marta sigue estudiando.", "en": "Marta keeps studying." },
+      "tags": ["grammar", "continuation", "verb pattern", "A2"]
+    },
+    {
+      "id": "phrase-dormirse--fall-asleep",
+      "kind": "phrase",
+      "promptEs": "dormirse",
+      "questionEn": "How do you distinguish falling asleep from simply sleeping?",
+      "answerEn": "Use dormirse for the change into sleep, with a matching short word such as me, te, or se.",
+      "noteEn": "Dormir describes sleeping. Dormirse focuses on becoming asleep: duermo means “I sleep,” while me duermo means “I fall asleep.” The short word changes with the person.",
+      "example": { "es": "El bebé se duerme pronto.", "en": "The baby falls asleep quickly." },
+      "tags": ["phrase", "pronominal verb", "sleep", "A2"]
+    },
+    {
+      "id": "phrase-sin-embargo",
+      "kind": "phrase",
+      "promptEs": "sin embargo",
+      "questionEn": "How do you introduce a contrast with “however” or “nevertheless”?",
+      "answerEn": "Use sin embargo before or after the contrasting idea.",
+      "noteEn": "Sin embargo functions as one fixed connector. Its meaning is not obtained by translating sin as “without” and embargo separately. A comma often separates it from the rest of the statement.",
+      "example": { "es": "Está cansada; sin embargo, continúa trabajando.", "en": "She is tired; however, she keeps working." },
+      "tags": ["phrase", "connector", "contrast", "A2"]
+    },
+    {
+      "id": "phrase-de-vuelta-a",
+      "kind": "phrase",
+      "promptEs": "de vuelta a + lugar",
+      "questionEn": "How do you say that someone or something is going back to a place?",
+      "answerEn": "Use de vuelta a before the destination or place.",
+      "noteEn": "De vuelta presents a return, and a introduces the place being returned to. If that place starts with el, a + el contracts to al: de vuelta al trabajo.",
+      "example": { "es": "El autobús va de vuelta a la ciudad.", "en": "The bus is going back to the city." },
+      "tags": ["phrase", "movement", "location", "A2"]
+    },
+    {
+      "id": "phrase-sentirse-como",
+      "kind": "phrase",
+      "promptEs": "sentirse como + persona/cosa",
+      "questionEn": "How do you say that someone feels like a particular person or thing?",
+      "answerEn": "Use a matching short word with sentirse, then como and the comparison.",
+      "noteEn": "The short word and verb change with the person: me siento means “I feel,” te sientes means “you feel,” and se siente means “he or she feels” or “formal you feel.” Como introduces the person or thing used for the comparison.",
+      "example": { "es": "Me siento como una principiante.", "en": "I feel like a beginner." },
+      "tags": ["phrase", "comparison", "pronominal verb", "A2"]
+    },
+    {
+      "id": "concept-tcmp",
+      "kind": "concept",
+      "promptEs": "TCMP · protocolo de mensajería trans-consciencia",
+      "answerEn": "the comic's fictional protocol for typing messages between a dreaming mind and people in waking reality",
+      "noteEn": "The acronym retains the original English order, Trans-Consciousness Messaging Protocol, even though the translated Spanish words appear in a different order.",
+      "tags": ["concept", "comic joke", "dreams", "technology"]
+    },
+    {
+      "id": "concept-bell-watson-first-telephone-message",
+      "kind": "concept",
+      "promptEs": "Bell y Watson · primer mensaje telefónico",
+      "answerEn": "Alexander Graham Bell sent the first successfully transmitted intelligible telephone message to his assistant Thomas Watson in 1876.",
+      "noteEn": "The comic compares an inaugural message through TCMP with Bell calling Watson during the early telephone experiment.",
+      "tags": ["concept", "history", "telephone", "technology"]
+    },
+    {
+      "id": "concept-first-post-trolling",
+      "kind": "concept",
+      "promptEs": "“first post” · trolleo",
+      "answerEn": "“First post” is a deliberately low-effort internet comment whose main purpose is to claim being first; stylized spelling makes the message look even more trollish.",
+      "noteEn": "The joke wastes a historic first cross-reality message on an old internet-comment cliché.",
+      "tags": ["concept", "internet culture", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-tcmp:panel-1-protocol",
+      "labelEs": "OYE, AYUDADME A PROBAR EL PROTOCOLO DE MENSAJERÍA TRANS-CONSCIENCIA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0009" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w01", "text": "OYE", "normalized": "oye", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00001" }], "cardIds": ["word-oye--attention", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w02", "text": "AYUDADME", "normalized": "ayudadme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00002" }], "cardIds": ["word-ayudadme", "grammar-vosotros-affirmative-command", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00003" }], "cardIds": ["word-a--infinitive-link"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w04", "text": "PROBAR", "normalized": "probar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00004" }], "cardIds": ["word-probar"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00005" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w06", "text": "PROTOCOLO", "normalized": "protocolo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00011" }], "cardIds": ["word-protocolo", "concept-tcmp"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00012" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w08", "text": "MENSAJERÍA", "normalized": "mensajería", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00013" }], "cardIds": ["word-mensajería", "concept-tcmp"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w09", "text": "TRANS", "normalized": "trans", "explicitBounds": [{ "x": 1.0589, "y": 14.9554, "width": 6.35, "height": 6.7891 }], "geometryRationale": "OCR fused both sides of the printed hyphen; this checked box isolates the visible TRANS prefix.", "cardIds": ["word-trans--across-prefix", "concept-tcmp"] },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:w10", "text": "CONSCIENCIA", "normalized": "consciencia", "explicitBounds": [{ "x": 7.4089, "y": 14.9554, "width": 10.9965, "height": 6.7891 }], "geometryRationale": "OCR fused both sides of the printed hyphen; this checked box isolates the visible CONSCIENCIA component.", "cardIds": ["word-consciencia", "concept-tcmp"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:panel-1-protocol:app-tu-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-tcmp:panel-1-protocol:w01"], "exampleEs": "OYE", "explanationEn": "Oye is the informal singular command form used here as an attention-getter." },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:app-vosotros-command", "cardId": "grammar-vosotros-affirmative-command", "participantWordIds": ["es-xkcd-tcmp:panel-1-protocol:w02"], "exampleEs": "AYUDADME", "explanationEn": "Ayudad is ayudar's positive command for vosotros, and me is attached to identify the speaker as the person receiving help." },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:app-vosotros", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-tcmp:panel-1-protocol:w02"], "exampleEs": "AYUDADME", "explanationEn": "The -d command ending addresses several people informally in the vosotros form used mainly in Spain." },
+        { "id": "es-xkcd-tcmp:panel-1-protocol:app-trans-prefix", "cardId": "word-trans--across-prefix", "participantWordIds": ["es-xkcd-tcmp:panel-1-protocol:w09"], "exampleEs": "TRANS-CONSCIENCIA", "explanationEn": "The invented compound uses trans- to present consciousness as a boundary that the messaging protocol can cross." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:panel-1-question",
+      "labelEs": "¿QUÉ ES ESO?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0015" }],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-1-question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00036" }], "cardIds": ["word-qué--interrogative", "question-words"] },
+        { "id": "es-xkcd-tcmp:panel-1-question:w02", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00037" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-tcmp:panel-1-question:w03", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00038" }], "cardIds": ["word-eso"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:panel-1-question:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-tcmp:panel-1-question:w01"], "exampleEs": "QUÉ", "explanationEn": "Qué carries an accent because it directly asks for information." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:panel-1-training",
+      "labelEs": "ME HE ESTADO ENTRENANDO PARA SEGUIR MOVIENDO UN POCO LOS DEDOS MIENTRAS ME DUERMO, Y ASÍ PUEDO TECLEAR DESDE LOS SUEÑOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0034" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0037" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-1-training:w01", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00051" }], "cardIds": ["word-me--reflexive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w02", "text": "HE", "normalized": "he", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00052" }], "cardIds": ["word-he", "grammar-present-perfect", "grammar-present-perfect-progressive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w03", "text": "ESTADO", "normalized": "estado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00053" }], "cardIds": ["word-estado--been", "grammar-present-perfect", "grammar-present-perfect-progressive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w04", "text": "ENTRENANDO", "normalized": "entrenando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00054" }], "cardIds": ["word-entrenando", "grammar-present-perfect-progressive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w05", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00065" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w06", "text": "SEGUIR", "normalized": "seguir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00066" }], "cardIds": ["word-seguir--continue", "grammar-para-infinitive-purpose", "grammar-seguir-gerund"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w07", "text": "MOVIENDO", "normalized": "moviendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00067" }], "cardIds": ["word-moviendo", "grammar-seguir-gerund"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w08", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00068" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w09", "text": "POCO", "normalized": "poco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00075" }], "cardIds": ["word-poco--degree"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w10", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00076" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w11", "text": "DEDOS", "normalized": "dedos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00077" }], "cardIds": ["word-dedos"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w12", "text": "MIENTRAS", "normalized": "mientras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00078" }], "cardIds": ["word-mientras"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w13", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00085" }], "cardIds": ["word-me--pronominal-marker", "phrase-dormirse--fall-asleep"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w14", "text": "DUERMO", "normalized": "duermo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00086" }], "cardIds": ["word-duermo--fall-asleep", "phrase-dormirse--fall-asleep"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w15", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00087" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w16", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00088" }], "cardIds": ["word-así--like-that"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w17", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00089" }], "cardIds": ["word-puedo", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w18", "text": "TECLEAR", "normalized": "teclear", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00093" }], "cardIds": ["word-teclear", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w19", "text": "DESDE", "normalized": "desde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00094" }], "cardIds": ["word-desde--from"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w20", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00095" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-tcmp:panel-1-training:w21", "text": "SUEÑOS", "normalized": "sueños", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00096" }], "cardIds": ["word-sueños"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:panel-1-training:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w02", "es-xkcd-tcmp:panel-1-training:w03"], "exampleEs": "HE ESTADO", "explanationEn": "He is the present helper for the speaker, and estado is estar's unchanged completed-action form." },
+        { "id": "es-xkcd-tcmp:panel-1-training:app-perfect-progressive", "cardId": "grammar-present-perfect-progressive", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w02", "es-xkcd-tcmp:panel-1-training:w03", "es-xkcd-tcmp:panel-1-training:w04"], "exampleEs": "HE ESTADO ENTRENANDO", "explanationEn": "He selects the speaker, estado supplies “been,” and entrenando presents the training as an ongoing activity." },
+        { "id": "es-xkcd-tcmp:panel-1-training:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w05", "es-xkcd-tcmp:panel-1-training:w06"], "exampleEs": "PARA SEGUIR", "explanationEn": "Para introduces the purpose, and seguir remains in its unchanged dictionary form." },
+        { "id": "es-xkcd-tcmp:panel-1-training:app-continue", "cardId": "grammar-seguir-gerund", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w06", "es-xkcd-tcmp:panel-1-training:w07"], "exampleEs": "SEGUIR MOVIENDO", "explanationEn": "Seguir names the continuation, and moviendo is mover's ongoing -iendo form." },
+        { "id": "es-xkcd-tcmp:panel-1-training:app-fall-asleep", "cardId": "phrase-dormirse--fall-asleep", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w13", "es-xkcd-tcmp:panel-1-training:w14"], "exampleEs": "ME DUERMO", "explanationEn": "Me and duermo together focus on the speaker changing from awake to asleep." },
+        { "id": "es-xkcd-tcmp:panel-1-training:app-can-type", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-tcmp:panel-1-training:w17", "es-xkcd-tcmp:panel-1-training:w18"], "exampleEs": "PUEDO TECLEAR", "explanationEn": "Puedo changes for the speaker, while teclear stays in its unchanged dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:panel-2-message",
+      "labelEs": "AHORA VOY A DORMIR. MI ORDENADOR OS TRANSMITIRÁ MIS MENSAJES MIENTRAS EXPLORO EL MUNDO DE LOS SUEÑOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0033" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0036" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-2-message:w01", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00006" }], "cardIds": ["word-ahora"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w02", "text": "VOY", "normalized": "voy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00007" }], "cardIds": ["word-voy", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00017" }], "cardIds": ["word-a--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w04", "text": "DORMIR", "normalized": "dormir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00018" }], "cardIds": ["word-dormir", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w05", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00019" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w06", "text": "ORDENADOR", "normalized": "ordenador", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00024" }], "cardIds": ["word-ordenador"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w07", "text": "OS", "normalized": "os", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00031" }], "cardIds": ["word-os--recipient", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w08", "text": "TRANSMITIRÁ", "normalized": "transmitirá", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00032" }, { "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00042" }], "cardIds": ["word-transmitirá", "grammar-simple-future"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w09", "text": "MIS", "normalized": "mis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00043" }], "cardIds": ["word-mis"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w10", "text": "MENSAJES", "normalized": "mensajes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00055" }], "cardIds": ["word-mensajes"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w11", "text": "MIENTRAS", "normalized": "mientras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00064" }], "cardIds": ["word-mientras"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w12", "text": "EXPLORO", "normalized": "exploro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00079" }], "cardIds": ["word-exploro"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w13", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00080" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w14", "text": "MUNDO", "normalized": "mundo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00083" }], "cardIds": ["word-mundo"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00084" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w16", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00091" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-tcmp:panel-2-message:w17", "text": "SUEÑOS", "normalized": "sueños", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00092" }], "cardIds": ["word-sueños"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:panel-2-message:app-near-future", "cardId": "grammar-ir-a-infinitive", "participantWordIds": ["es-xkcd-tcmp:panel-2-message:w02", "es-xkcd-tcmp:panel-2-message:w03", "es-xkcd-tcmp:panel-2-message:w04"], "exampleEs": "VOY A DORMIR", "explanationEn": "Voy changes for the speaker, a links the pieces, and dormir stays in its dictionary form." },
+        { "id": "es-xkcd-tcmp:panel-2-message:app-vosotros", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-tcmp:panel-2-message:w07"], "exampleEs": "OS", "explanationEn": "Os identifies several informally addressed recipients in the usage common in Spain." },
+        { "id": "es-xkcd-tcmp:panel-2-message:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-tcmp:panel-2-message:w08"], "exampleEs": "TRANSMITIRÁ", "explanationEn": "The future ending -á is added to transmitir to describe what the computer will do." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:dream-caption",
+      "labelEs": "EN EL SUEÑO:",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0006" }],
+      "words": [
+        { "id": "es-xkcd-tcmp:dream-caption:w01", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00014" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-tcmp:dream-caption:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00015" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-tcmp:dream-caption:w03", "text": "SUEÑO", "normalized": "sueño", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00016" }], "cardIds": ["word-sueño--dream"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-tcmp:dream-monologue",
+      "labelEs": "ES MUY EXTRAÑO PENSAR QUE NADA DE ESTO ES REAL.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:dream-monologue:w01", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00033" }], "cardIds": ["word-es", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w02", "text": "MUY", "normalized": "muy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00034" }], "cardIds": ["word-muy"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w03", "text": "EXTRAÑO", "normalized": "extraño", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00035" }], "cardIds": ["word-extraño", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w04", "text": "PENSAR", "normalized": "pensar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00044" }], "cardIds": ["word-pensar", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w05", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00045" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w06", "text": "NADA", "normalized": "nada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00046" }], "cardIds": ["word-nada--none-of"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00047" }], "cardIds": ["word-de--partitive"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w08", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00059" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w09", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00060" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-tcmp:dream-monologue:w10", "text": "REAL", "normalized": "real", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00061" }], "cardIds": ["word-real--genuine"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:dream-monologue:app-es-adjective", "cardId": "grammar-es-adjective-infinitive", "participantWordIds": ["es-xkcd-tcmp:dream-monologue:w01", "es-xkcd-tcmp:dream-monologue:w03", "es-xkcd-tcmp:dream-monologue:w04"], "exampleEs": "ES MUY EXTRAÑO PENSAR", "explanationEn": "Es sets up the judgment, extraño describes the activity, and pensar stays in its dictionary form; muy raises the degree of extraño." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:dream-lifeline",
+      "labelEs": "Y SIN EMBARGO TENGO ESTA LÍNEA HACIA INTERNET DE VUELTA A CASA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0038" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0040" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0041" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0043" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0045" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:dream-lifeline:w01", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00097" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w02", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00098" }], "cardIds": ["word-sin--sin-embargo", "phrase-sin-embargo"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w03", "text": "EMBARGO", "normalized": "embargo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00099" }], "cardIds": ["word-embargo--sin-embargo", "phrase-sin-embargo"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w04", "text": "TENGO", "normalized": "tengo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00101" }], "cardIds": ["word-tengo"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w05", "text": "ESTA", "normalized": "esta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00102" }], "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w06", "text": "LÍNEA", "normalized": "línea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00103" }], "cardIds": ["word-línea--connection"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w07", "text": "HACIA", "normalized": "hacia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00104" }], "cardIds": ["word-hacia"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w08", "text": "INTERNET", "normalized": "internet", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00106" }], "cardIds": ["word-internet"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00107" }], "cardIds": ["word-de--fixed-de-vuelta", "phrase-de-vuelta-a"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w10", "text": "VUELTA", "normalized": "vuelta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00111" }], "cardIds": ["word-vuelta--back", "phrase-de-vuelta-a"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w11", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00112" }], "cardIds": ["word-a--destination", "phrase-de-vuelta-a"] },
+        { "id": "es-xkcd-tcmp:dream-lifeline:w12", "text": "CASA", "normalized": "casa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00113" }], "cardIds": ["word-casa", "phrase-de-vuelta-a"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:dream-lifeline:app-sin-embargo", "cardId": "phrase-sin-embargo", "participantWordIds": ["es-xkcd-tcmp:dream-lifeline:w02", "es-xkcd-tcmp:dream-lifeline:w03"], "exampleEs": "SIN EMBARGO", "explanationEn": "Sin and embargo work together as the fixed connector that introduces a contrast." },
+        { "id": "es-xkcd-tcmp:dream-lifeline:app-de-vuelta", "cardId": "phrase-de-vuelta-a", "participantWordIds": ["es-xkcd-tcmp:dream-lifeline:w09", "es-xkcd-tcmp:dream-lifeline:w10", "es-xkcd-tcmp:dream-lifeline:w11", "es-xkcd-tcmp:dream-lifeline:w12"], "exampleEs": "DE VUELTA A CASA", "explanationEn": "De vuelta presents the return, and a introduces casa as the destination of that return." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:panel-4-monologue",
+      "labelEs": "UNA OPORTUNIDAD PARA HABLAR DESDE UNA REALIDAD A OTRA. ME SIENTO COMO BELL Y WATSON. PODRÉ ESCRIBIR EL MENSAJE TCMP INAUGURAL.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0035" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0039" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w01", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00009" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w02", "text": "OPORTUNIDAD", "normalized": "oportunidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00010" }], "cardIds": ["word-oportunidad"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w03", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00020" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w04", "text": "HABLAR", "normalized": "hablar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00021" }], "cardIds": ["word-hablar", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w05", "text": "DESDE", "normalized": "desde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00022" }], "cardIds": ["word-desde--from"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w06", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00027" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w07", "text": "REALIDAD", "normalized": "realidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00028" }], "cardIds": ["word-realidad--reality"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w08", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00029" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w09", "text": "OTRA", "normalized": "otra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00030" }], "cardIds": ["word-otra"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w10", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00039" }], "cardIds": ["word-me--pronominal-marker", "phrase-sentirse-como"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w11", "text": "SIENTO", "normalized": "siento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00040" }], "cardIds": ["word-siento--feel", "phrase-sentirse-como"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w12", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00041" }], "cardIds": ["word-como", "phrase-sentirse-como", "concept-bell-watson-first-telephone-message"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w14", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00057" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w16", "text": "PODRÉ", "normalized": "podré", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00069" }], "cardIds": ["word-podré", "grammar-simple-future", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w17", "text": "ESCRIBIR", "normalized": "escribir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00070" }], "cardIds": ["word-escribir", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w18", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00071" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w19", "text": "MENSAJE", "normalized": "mensaje", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00081" }], "cardIds": ["word-mensaje", "concept-tcmp"] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:w21", "text": "INAUGURAL", "normalized": "inaugural", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00100" }], "cardIds": ["word-inaugural"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-tcmp:panel-4-monologue:excluded-bell", "text": "BELL", "reason": "non-spanish-text", "rationale": "Bell is an English-language proper name, not Spanish vocabulary; the historical reference is available through the comparison's concept card.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00056" }] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:excluded-watson", "text": "WATSON", "reason": "non-spanish-text", "rationale": "Watson is an English-language proper name, not Spanish vocabulary; the historical reference is available through the comparison's concept card.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00058" }] },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:excluded-tcmp", "text": "TCMP", "reason": "non-spanish-text", "rationale": "TCMP is an acronym built from the original English protocol name rather than a Spanish lexical word; the fictional protocol is taught through its concept card.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00090" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:panel-4-monologue:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-tcmp:panel-4-monologue:w03", "es-xkcd-tcmp:panel-4-monologue:w04"], "exampleEs": "PARA HABLAR", "explanationEn": "Para introduces the purpose, and hablar remains in its unchanged dictionary form." },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:app-feel-like", "cardId": "phrase-sentirse-como", "participantWordIds": ["es-xkcd-tcmp:panel-4-monologue:w10", "es-xkcd-tcmp:panel-4-monologue:w11", "es-xkcd-tcmp:panel-4-monologue:w12"], "exampleEs": "ME SIENTO COMO", "explanationEn": "Me and siento identify the speaker's feeling, and como introduces the comparison." },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-tcmp:panel-4-monologue:w16"], "exampleEs": "PODRÉ", "explanationEn": "The future ending -é combines with the irregular poder stem podr- for the speaker." },
+        { "id": "es-xkcd-tcmp:panel-4-monologue:app-can-write", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-tcmp:panel-4-monologue:w16", "es-xkcd-tcmp:panel-4-monologue:w17"], "exampleEs": "PODRÉ ESCRIBIR", "explanationEn": "Podré changes for the speaker and future time, while escribir stays in its dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-tcmp:panel-4-veamos",
+      "labelEs": "VEAMOS...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0042" }],
+      "words": [
+        { "id": "es-xkcd-tcmp:panel-4-veamos:w01", "text": "VEAMOS", "normalized": "veamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00105" }], "cardIds": ["word-veamos"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-tcmp:typing-sound",
+      "labelEs": "*CLIC CLIC CLIC*",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0044" }],
+      "words": [
+        { "id": "es-xkcd-tcmp:typing-sound:w01", "text": "CLIC", "normalized": "clic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00108" }], "cardIds": ["word-clic"] },
+        { "id": "es-xkcd-tcmp:typing-sound:w02", "text": "CLIC", "normalized": "clic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00109" }], "cardIds": ["word-clic"] },
+        { "id": "es-xkcd-tcmp:typing-sound:w03", "text": "CLIC", "normalized": "clic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00110" }], "cardIds": ["word-clic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-tcmp:outside-caption",
+      "labelEs": "FUERA:",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-tcmp:outside-caption:w01", "text": "FUERA", "normalized": "fuera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00008" }], "cardIds": ["word-fuera--outside"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-tcmp:first-post-quote",
+      "labelEs": "¿\"F1RST POST!!\"?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0011" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-tcmp:first-post-quote:excluded-english-message", "text": "F1RST POST!!", "reason": "non-spanish-text", "rationale": "This is a deliberately stylized English internet message, not Spanish vocabulary; its joke is taught through the linked trolling concept elsewhere.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00025" }, { "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00026" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-tcmp:outside-response",
+      "labelEs": "GENIAL. HA PASADO DIRECTAMENTE AL TROLLEO DE TRANS-REALIDAD.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-tcmp:ocr-line-0032" }
+      ],
+      "words": [
+        { "id": "es-xkcd-tcmp:outside-response:w01", "text": "GENIAL", "normalized": "genial", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00048" }], "cardIds": ["word-genial--great"] },
+        { "id": "es-xkcd-tcmp:outside-response:w02", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00049" }], "cardIds": ["word-ha", "grammar-present-perfect"] },
+        { "id": "es-xkcd-tcmp:outside-response:w03", "text": "PASADO", "normalized": "pasado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00050" }], "cardIds": ["word-pasado--move-on", "grammar-present-perfect"] },
+        { "id": "es-xkcd-tcmp:outside-response:w04", "text": "DIRECTAMENTE", "normalized": "directamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00062" }], "cardIds": ["word-directamente"] },
+        { "id": "es-xkcd-tcmp:outside-response:w05", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00063" }], "cardIds": ["word-al--contraction"] },
+        { "id": "es-xkcd-tcmp:outside-response:w06", "text": "TROLLEO", "normalized": "trolleo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00072" }], "cardIds": ["word-trolleo", "concept-first-post-trolling"] },
+        { "id": "es-xkcd-tcmp:outside-response:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00073" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-tcmp:outside-response:w08", "text": "TRANS", "normalized": "trans", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00074" }], "cardIds": ["word-trans--across-prefix"] },
+        { "id": "es-xkcd-tcmp:outside-response:w09", "text": "REALIDAD", "normalized": "realidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tcmp:ocr-token-00082" }], "cardIds": ["word-realidad--reality"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-tcmp:outside-response:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-tcmp:outside-response:w02", "es-xkcd-tcmp:outside-response:w03"], "exampleEs": "HA PASADO", "explanationEn": "Ha is the present helper for one person, and pasado is pasar's unchanged completed-action form." },
+        { "id": "es-xkcd-tcmp:outside-response:app-trans-prefix", "cardId": "word-trans--across-prefix", "participantWordIds": ["es-xkcd-tcmp:outside-response:w08"], "exampleEs": "TRANS-REALIDAD", "explanationEn": "The invented compound uses trans- to describe trolling that crosses the boundary between realities." }
+      ]
+    }
+  ]
+}

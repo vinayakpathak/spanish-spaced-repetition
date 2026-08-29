@@ -1,0 +1,936 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-merlin",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Merlin",
+  "titleEs": "Merlín",
+  "titleText": {
+    "es": "Quiero decir que la parte en blanco y negro iba hacia atrás, pero apenas aportaba nada a la historia.",
+    "en": "I mean, the black-and-white part was going backward, but it contributed almost nothing to the story."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-malo--bad-at",
+      "kind": "word",
+      "promptEs": "malo",
+      "answerEn": "bad at; not skilled at (masculine singular)",
+      "noteEn": "With ser and para, malo describes a person as not skilled or comfortable with an activity or situation.",
+      "example": {
+        "es": "Soy malo para recordar nombres.",
+        "en": "I am bad at remembering names."
+      },
+      "tags": ["word", "ability", "description"]
+    },
+    {
+      "id": "word-para--skill-at",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "at; with (introducing what someone is good or bad at)",
+      "noteEn": "After bueno or malo, para can introduce the activity or situation in which someone is skilled or unskilled.",
+      "example": {
+        "es": "Es buena para los idiomas.",
+        "en": "She is good at languages."
+      },
+      "tags": ["word", "preposition", "ability"]
+    },
+    {
+      "id": "word-despedidas",
+      "kind": "word",
+      "promptEs": "despedidas",
+      "answerEn": "farewells; goodbyes",
+      "noteEn": "",
+      "tags": ["word", "social interaction", "plural"]
+    },
+    {
+      "id": "word-a--level",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "at; on (introducing a level)",
+      "noteEn": "Spanish uses a before nivel when describing the level or layer at which something is true.",
+      "example": {
+        "es": "A otro nivel, el problema cambia.",
+        "en": "At another level, the problem changes."
+      },
+      "tags": ["word", "preposition", "viewpoint"]
+    },
+    {
+      "id": "word-nivel--degree",
+      "kind": "word",
+      "promptEs": "nivel",
+      "answerEn": "level; layer or degree",
+      "noteEn": "",
+      "tags": ["word", "viewpoint", "degree"]
+    },
+    {
+      "id": "word-pienso",
+      "kind": "word",
+      "promptEs": "pienso",
+      "answerEn": "I think",
+      "noteEn": "",
+      "tags": ["word", "thinking", "present tense"]
+    },
+    {
+      "id": "word-sean",
+      "kind": "word",
+      "promptEs": "sean",
+      "answerEn": "they are; may be (subjunctive form of ser)",
+      "noteEn": "Sean is used for plural subjects when the speaker is not presenting their being as a plain fact, for example after doubt or a negative belief.",
+      "example": {
+        "es": "No creo que sean iguales.",
+        "en": "I do not think they are the same."
+      },
+      "tags": ["word", "ser", "subjunctive"]
+    },
+    {
+      "id": "word-reales",
+      "kind": "word",
+      "promptEs": "reales",
+      "answerEn": "real (plural)",
+      "noteEn": "",
+      "tags": ["word", "description", "plural"]
+    },
+    {
+      "id": "word-hacen--cause",
+      "kind": "word",
+      "promptEs": "hacen",
+      "answerEn": "they make; they cause",
+      "noteEn": "Hacen is the plural present form of hacer. Before another action verb, it can mean that something causes a person to do or experience that action.",
+      "example": {
+        "es": "Esas fotos me hacen sonreír.",
+        "en": "Those photos make me smile."
+      },
+      "tags": ["word", "causation", "present tense"]
+    },
+    {
+      "id": "word-en--pensar",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "of; about (after pensar)",
+      "noteEn": "Pensar en means to think of or think about someone or something.",
+      "example": {
+        "es": "Pienso en mi familia.",
+        "en": "I think about my family."
+      },
+      "tags": ["word", "preposition", "verb complement"]
+    },
+    {
+      "id": "word-merlín--name",
+      "kind": "word",
+      "promptEs": "merlín",
+      "answerEn": "Merlin (the legendary wizard)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "literature"]
+    },
+    {
+      "id": "word-t--initial",
+      "kind": "word",
+      "promptEs": "t",
+      "answerEn": "T. (a name initial)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "initial"]
+    },
+    {
+      "id": "word-h--initial",
+      "kind": "word",
+      "promptEs": "h",
+      "answerEn": "H. (a name initial)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "initial"]
+    },
+    {
+      "id": "word-white--surname",
+      "kind": "word",
+      "promptEs": "white",
+      "answerEn": "White (a surname)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "literature"]
+    },
+    {
+      "id": "word-ah--confusion",
+      "kind": "word",
+      "promptEs": "ah",
+      "answerEn": "huh?; what?",
+      "noteEn": "Ah can be used as a brief questioning response when someone has not understood or expects an explanation.",
+      "example": {
+        "es": "—La reunión cambió de sitio. —¿Ah?",
+        "en": "“The meeting changed locations.” “Huh?”"
+      },
+      "tags": ["word", "interjection", "conversation"]
+    },
+    {
+      "id": "word-vivía",
+      "kind": "word",
+      "promptEs": "vivía",
+      "answerEn": "he lived; he used to live",
+      "noteEn": "Vivía describes an ongoing or habitual situation in the past.",
+      "example": {
+        "es": "Antes vivía cerca del mar.",
+        "en": "I used to live near the sea."
+      },
+      "tags": ["word", "living", "past background"]
+    },
+    {
+      "id": "word-atrás--backward",
+      "kind": "word",
+      "promptEs": "atrás",
+      "answerEn": "back; backward",
+      "noteEn": "",
+      "tags": ["word", "direction"]
+    },
+    {
+      "id": "word-recordando",
+      "kind": "word",
+      "promptEs": "recordando",
+      "answerEn": "remembering",
+      "noteEn": "Recordando is the -ando form of recordar and presents the remembering as an action in progress or accompanying another action.",
+      "example": {
+        "es": "Caminaba recordando el viaje.",
+        "en": "She walked while remembering the trip."
+      },
+      "tags": ["word", "memory", "gerund"]
+    },
+    {
+      "id": "word-pasado--time",
+      "kind": "word",
+      "promptEs": "pasado",
+      "answerEn": "past",
+      "noteEn": "",
+      "tags": ["word", "time"]
+    },
+    {
+      "id": "word-él--pronoun",
+      "kind": "word",
+      "promptEs": "él",
+      "answerEn": "he; him",
+      "noteEn": "The written accent distinguishes the pronoun él from the article el, which means “the.”",
+      "example": {
+        "es": "El libro es para él.",
+        "en": "The book is for him."
+      },
+      "tags": ["word", "pronoun", "accent"]
+    },
+    {
+      "id": "word-finales",
+      "kind": "word",
+      "promptEs": "finales",
+      "answerEn": "final; last (plural)",
+      "noteEn": "",
+      "tags": ["word", "description", "plural"]
+    },
+    {
+      "id": "word-significaban",
+      "kind": "word",
+      "promptEs": "significaban",
+      "answerEn": "they meant; they had significance",
+      "noteEn": "Significaban describes an ongoing or general meaning in the past.",
+      "example": {
+        "es": "Esas señales significaban peligro.",
+        "en": "Those signs meant danger."
+      },
+      "tags": ["word", "meaning", "past background"]
+    },
+    {
+      "id": "word-que--mientras-que",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "whereas; while (together with mientras)",
+      "noteEn": "",
+      "tags": ["word", "connector", "contrast"]
+    },
+    {
+      "id": "word-primeros",
+      "kind": "word",
+      "promptEs": "primeros",
+      "answerEn": "first; earliest (masculine plural)",
+      "noteEn": "",
+      "tags": ["word", "order", "plural"]
+    },
+    {
+      "id": "word-saludos",
+      "kind": "word",
+      "promptEs": "saludos",
+      "answerEn": "greetings; hellos",
+      "noteEn": "",
+      "tags": ["word", "social interaction", "plural"]
+    },
+    {
+      "id": "word-eran",
+      "kind": "word",
+      "promptEs": "eran",
+      "answerEn": "they were; used to be",
+      "noteEn": "",
+      "tags": ["word", "ser", "past background"]
+    },
+    {
+      "id": "word-dolorosos",
+      "kind": "word",
+      "promptEs": "dolorosos",
+      "answerEn": "painful (masculine plural)",
+      "noteEn": "",
+      "tags": ["word", "emotion", "description"]
+    },
+    {
+      "id": "word-agridulces",
+      "kind": "word",
+      "promptEs": "agridulces",
+      "answerEn": "bittersweet (plural)",
+      "noteEn": "Agridulce literally combines agrio, “sour,” and dulce, “sweet,” and can describe mixed happy and sad feelings.",
+      "example": {
+        "es": "La despedida dejó recuerdos agridulces.",
+        "en": "The farewell left bittersweet memories."
+      },
+      "tags": ["word", "emotion", "description"]
+    },
+    {
+      "id": "word-años",
+      "kind": "word",
+      "promptEs": "años",
+      "answerEn": "years",
+      "noteEn": "Años is the plural of año. Keep the ñ: anos without it is a different word.",
+      "example": {
+        "es": "Vivimos allí durante dos años.",
+        "en": "We lived there for two years."
+      },
+      "tags": ["word", "time", "plural"]
+    },
+    {
+      "id": "word-olvidaría",
+      "kind": "word",
+      "promptEs": "olvidaría",
+      "answerEn": "he would forget",
+      "noteEn": "Olvidaría combines the dictionary form olvidar with the conditional ending -ía.",
+      "example": {
+        "es": "Sin una nota, olvidaría la cita.",
+        "en": "Without a note, she would forget the appointment."
+      },
+      "tags": ["word", "memory", "conditional"]
+    },
+    {
+      "id": "word-amigos",
+      "kind": "word",
+      "promptEs": "amigos",
+      "answerEn": "friends (masculine or mixed group)",
+      "noteEn": "",
+      "tags": ["word", "people", "plural"]
+    },
+    {
+      "id": "word-debió--inference",
+      "kind": "word",
+      "promptEs": "debió",
+      "answerEn": "he must have; he probably did",
+      "noteEn": "With de and an action verb, debió presents a conclusion about what was probably true in the past, not a duty someone had to perform.",
+      "example": {
+        "es": "Debió de perder el tren.",
+        "en": "He must have missed the train."
+      },
+      "tags": ["word", "inference", "past"]
+    },
+    {
+      "id": "word-de--deber-inference",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; marks an inference after deber",
+      "noteEn": "In deber de plus an action verb, de helps mark a guess or conclusion about what is likely true.",
+      "example": {
+        "es": "Debe de estar cansada.",
+        "en": "She must be tired."
+      },
+      "tags": ["word", "verb complement", "inference"]
+    },
+    {
+      "id": "word-sentirse",
+      "kind": "word",
+      "promptEs": "sentirse",
+      "answerEn": "to feel; to find oneself feeling",
+      "noteEn": "Sentirse is sentir with the pronominal ending se. It is followed by a description of someone's physical or emotional state.",
+      "example": {
+        "es": "Después del viaje, se sintió cansado.",
+        "en": "After the trip, he felt tired."
+      },
+      "tags": ["word", "feelings", "pronominal verb"]
+    },
+    {
+      "id": "word-solo--alone",
+      "kind": "word",
+      "promptEs": "solo",
+      "answerEn": "alone; lonely (masculine singular)",
+      "noteEn": "When solo describes a person's state after sentirse, it means alone or lonely rather than “only.”",
+      "example": {
+        "es": "Se sintió solo en la ciudad nueva.",
+        "en": "He felt lonely in the new city."
+      },
+      "tags": ["word", "emotion", "description"]
+    },
+    {
+      "id": "word-terminó--ended-up",
+      "kind": "word",
+      "promptEs": "terminó",
+      "answerEn": "he ended up",
+      "noteEn": "Before an -ando or -iendo action form, terminó describes the final outcome of a process or series of events.",
+      "example": {
+        "es": "Terminó viviendo en Madrid.",
+        "en": "She ended up living in Madrid."
+      },
+      "tags": ["word", "outcome", "completed past"]
+    },
+    {
+      "id": "word-apoltronándose",
+      "kind": "word",
+      "promptEs": "apoltronándose",
+      "answerEn": "settling lazily into an armchair; lounging",
+      "noteEn": "Apoltronándose comes from apoltronarse, a vivid verb for making oneself comfortable and inactive, as if sinking into an armchair.",
+      "example": {
+        "es": "Pasó la tarde apoltronándose frente al televisor.",
+        "en": "He spent the afternoon lounging in front of the television."
+      },
+      "tags": ["word", "posture", "gerund", "pronominal verb"]
+    },
+    {
+      "id": "word-viendo--watching",
+      "kind": "word",
+      "promptEs": "viendo",
+      "answerEn": "watching; viewing",
+      "noteEn": "Viendo is the irregular -iendo form of ver.",
+      "example": {
+        "es": "Estoy viendo una película.",
+        "en": "I am watching a film."
+      },
+      "tags": ["word", "seeing", "gerund"]
+    },
+    {
+      "id": "word-dvds",
+      "kind": "word",
+      "promptEs": "dvds",
+      "answerEn": "DVDs",
+      "noteEn": "Spanish commonly keeps the international abbreviation DVD and adds a written plural s in informal use.",
+      "example": {
+        "es": "Guardó los DVDs en una caja.",
+        "en": "She kept the DVDs in a box."
+      },
+      "tags": ["word", "media", "abbreviation"]
+    },
+    {
+      "id": "word-alquiló",
+      "kind": "word",
+      "promptEs": "alquiló",
+      "answerEn": "he rented",
+      "noteEn": "Alquiló is a completed-past form of alquilar. The final accent marks the stressed last syllable.",
+      "example": {
+        "es": "Alquiló una bicicleta ayer.",
+        "en": "He rented a bicycle yesterday."
+      },
+      "tags": ["word", "renting", "completed past"]
+    },
+    {
+      "id": "word-memento--title",
+      "kind": "word",
+      "promptEs": "memento",
+      "answerEn": "Memento (a film title)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "film"]
+    },
+    {
+      "id": "word-elemental",
+      "kind": "word",
+      "promptEs": "elemental",
+      "answerEn": "elementary; obvious",
+      "noteEn": "As a one-word reaction, elemental says that a conclusion is basic or easy to deduce.",
+      "example": {
+        "es": "La respuesta es elemental.",
+        "en": "The answer is elementary."
+      },
+      "tags": ["word", "description", "reaction"]
+    },
+    {
+      "id": "phrase-ser-malo-para",
+      "kind": "phrase",
+      "promptEs": "ser malo/a para + nombre o infinitivo",
+      "questionEn": "How do you say that someone is bad at an activity or situation?",
+      "answerEn": "Use a form of ser, malo or mala, para, and then the activity or situation.",
+      "noteEn": "Malo changes to mala for a feminine subject. The final slot can be a noun or an unchanged action verb ending in -ar, -er, or -ir.",
+      "example": {
+        "es": "Soy mala para las matemáticas.",
+        "en": "I am bad at mathematics."
+      },
+      "tags": ["phrase", "ability", "A2"]
+    },
+    {
+      "id": "phrase-a-un-cierto-nivel",
+      "kind": "phrase",
+      "promptEs": "a un cierto nivel",
+      "questionEn": "How do you qualify a statement by saying it is true at some level?",
+      "answerEn": "Use a un cierto nivel.",
+      "noteEn": "The phrase introduces one layer, degree, or way of looking at a situation. It often softens or limits the claim that follows.",
+      "example": {
+        "es": "A un cierto nivel, estoy de acuerdo.",
+        "en": "At some level, I agree."
+      },
+      "tags": ["phrase", "viewpoint", "B1"]
+    },
+    {
+      "id": "grammar-negative-opinion-subjunctive",
+      "kind": "grammar",
+      "promptEs": "no/nunca + pensar/creer que + subjuntivo",
+      "questionEn": "What verb form usually follows a negative belief such as “I do not think that…”?",
+      "answerEn": "After the negative belief and que, use the form that presents the idea as doubted rather than asserted as fact.",
+      "noteEn": "For many verbs, this form has a changed ending: habla becomes hable, and comen becomes coman. A positive belief normally uses the ordinary fact-stating form instead.",
+      "example": {
+        "es": "No creo que Ana esté aquí.",
+        "en": "I do not think Ana is here."
+      },
+      "tags": ["grammar", "subjunctive", "belief", "B1"]
+    },
+    {
+      "id": "phrase-hacer-pensar-en",
+      "kind": "phrase",
+      "promptEs": "hacer pensar en + persona o cosa",
+      "questionEn": "How do you say that something reminds someone of another person or thing?",
+      "answerEn": "Use hacer, the person affected, pensar en, and then what comes to mind.",
+      "noteEn": "The form of hacer matches the thing causing the association. The person can appear as me, te, le, nos, or another object expression.",
+      "example": {
+        "es": "Esta canción me hace pensar en casa.",
+        "en": "This song makes me think of home."
+      },
+      "tags": ["phrase", "memory", "association", "A2"]
+    },
+    {
+      "id": "concept-merlin-th-white",
+      "kind": "concept",
+      "promptEs": "Merlín · T. H. White · vida hacia atrás",
+      "answerEn": "references T. H. White's Merlin, who experiences time backward",
+      "noteEn": "In The Once and Future King, T. H. White portrays Merlin as living backward through time. He knows events that are still in other people's future while his own past becomes their future.",
+      "tags": ["literature", "Arthurian legend", "time", "reference"]
+    },
+    {
+      "id": "phrase-hacia-atras",
+      "kind": "phrase",
+      "promptEs": "hacia atrás",
+      "questionEn": "How do you say that movement, direction, or progress goes backward?",
+      "answerEn": "Use hacia atrás.",
+      "noteEn": "Hacia supplies the direction and atrás points toward the back or reverse. The phrase can describe physical movement or an abstract process.",
+      "example": {
+        "es": "El vídeo va hacia atrás.",
+        "en": "The video is going backward."
+      },
+      "tags": ["phrase", "direction", "A2"]
+    },
+    {
+      "id": "phrase-mientras-que",
+      "kind": "phrase",
+      "promptEs": "mientras que",
+      "questionEn": "How do you contrast two facts with “whereas” or “while”?",
+      "answerEn": "Use mientras que before the contrasting fact.",
+      "noteEn": "This use compares two different situations. It is different from plain mientras when that word only means that two actions happen at the same time.",
+      "example": {
+        "es": "Ella madruga, mientras que yo trabajo de noche.",
+        "en": "She gets up early, whereas I work at night."
+      },
+      "tags": ["phrase", "contrast", "B1"]
+    },
+    {
+      "id": "grammar-simple-conditional",
+      "kind": "grammar",
+      "promptEs": "infinitivo + terminación condicional (-ía, -ías, -íamos…)",
+      "questionEn": "How do you form a Spanish “would” verb such as “would forget”?",
+      "answerEn": "Keep the whole dictionary form and add a conditional ending such as -ía.",
+      "noteEn": "The same endings attach to verbs ending in -ar, -er, and -ir. The ending changes for the person: -ía, -ías, -ía, -íamos, -íais, or -ían.",
+      "example": {
+        "es": "Viajaríamos en tren.",
+        "en": "We would travel by train."
+      },
+      "tags": ["grammar", "conditional", "would", "A2"]
+    },
+    {
+      "id": "phrase-con-los-años",
+      "kind": "phrase",
+      "promptEs": "con los años",
+      "questionEn": "How do you say that something changes gradually as years pass?",
+      "answerEn": "Use con los años.",
+      "noteEn": "The expression means “over the years” or “with the passing of time,” not merely that something is accompanied by years.",
+      "example": {
+        "es": "Con los años, la ciudad cambió.",
+        "en": "Over the years, the city changed."
+      },
+      "tags": ["phrase", "time", "A2"]
+    },
+    {
+      "id": "grammar-deber-de-inference",
+      "kind": "grammar",
+      "promptEs": "deber de + infinitivo (deducción)",
+      "questionEn": "How do you say that something must be true because the evidence makes it likely?",
+      "answerEn": "Use a form of deber, then de, then the action verb in its unchanged dictionary form.",
+      "noteEn": "This pattern makes an inference or educated guess. Without de, deber plus an action verb more often expresses a duty or what someone should do.",
+      "example": {
+        "es": "Deben de estar en casa.",
+        "en": "They must be at home."
+      },
+      "tags": ["grammar", "inference", "probability", "B1"]
+    },
+    {
+      "id": "grammar-sentirse-adjective",
+      "kind": "grammar",
+      "promptEs": "sentirse + adjetivo",
+      "questionEn": "How do you describe how a person feels?",
+      "answerEn": "Use a form of sentirse followed by a describing word.",
+      "noteEn": "The describing word normally changes to agree with the person: cansado for a man, cansada for a woman, and plural forms for more than one person.",
+      "example": {
+        "es": "Nos sentimos tranquilos.",
+        "en": "We feel calm."
+      },
+      "tags": ["grammar", "feelings", "agreement", "A2"]
+    },
+    {
+      "id": "grammar-terminar-gerundio",
+      "kind": "grammar",
+      "promptEs": "terminar + gerundio (-ando/-iendo)",
+      "questionEn": "How do you say that someone eventually ended up doing something?",
+      "answerEn": "Use a form of terminar followed by the action form ending in -ando or -iendo.",
+      "noteEn": "The pattern emphasizes the eventual outcome, often after an unexpected process. It does not simply say that the person finished the action.",
+      "example": {
+        "es": "Terminamos hablando toda la noche.",
+        "en": "We ended up talking all night."
+      },
+      "tags": ["grammar", "outcome", "gerund", "B1"]
+    },
+    {
+      "id": "phrase-todo-el-dia",
+      "kind": "phrase",
+      "promptEs": "todo el día",
+      "questionEn": "How do you say that something happens all day?",
+      "answerEn": "Use todo el día.",
+      "noteEn": "Todo agrees with the masculine singular noun día. Similar expressions include toda la noche and toda la semana.",
+      "example": {
+        "es": "Llovió todo el día.",
+        "en": "It rained all day."
+      },
+      "tags": ["phrase", "duration", "A1"]
+    },
+    {
+      "id": "phrase-lo-mejor",
+      "kind": "phrase",
+      "promptEs": "lo mejor",
+      "questionEn": "How do you refer to “the best thing” or “the best part” without naming a noun?",
+      "answerEn": "Use lo mejor.",
+      "noteEn": "Neutral lo turns mejor into an abstract idea. The phrase does not refer to a masculine noun; it means whatever aspect is best.",
+      "example": {
+        "es": "Lo mejor es descansar.",
+        "en": "The best thing is to rest."
+      },
+      "tags": ["phrase", "evaluation", "A2"]
+    },
+    {
+      "id": "grammar-time-noun-que",
+      "kind": "grammar",
+      "promptEs": "el día/momento/año que + verbo",
+      "questionEn": "How do you connect a named time to the event that happened then?",
+      "answerEn": "Put que after the time noun, then give the event as a clause.",
+      "noteEn": "After a time expression such as el día or el año, que can work like English “when.” The Spanish connector remains que.",
+      "example": {
+        "es": "Recuerdo el día que nos conocimos.",
+        "en": "I remember the day when we met."
+      },
+      "tags": ["grammar", "relative clause", "time", "A2"]
+    },
+    {
+      "id": "concept-memento-reverse-chronology",
+      "kind": "concept",
+      "promptEs": "Memento · memoria · cronología inversa",
+      "answerEn": "references Memento, a film whose color scenes run in reverse chronological order",
+      "noteEn": "Christopher Nolan's Memento follows a man with severe short-term memory loss. One sequence of scenes moves backward in time, so viewers repeatedly learn what happened just before the scene they have seen.",
+      "tags": ["film", "memory", "narrative structure", "reference"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-merlin:panel-1-opening",
+      "labelEs": "SOY MALO PARA LAS DESPEDIDAS. A UN CIERTO NIVEL NUNCA PIENSO QUE SEAN REALES.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0010" }
+      ],
+      "words": [
+        { "id": "es-xkcd-merlin:panel-1-opening:word-01", "text": "SOY", "normalized": "soy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00001" }], "cardIds": ["word-soy--identity", "phrase-ser-malo-para"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-02", "text": "MALO", "normalized": "malo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00002" }], "cardIds": ["word-malo--bad-at", "phrase-ser-malo-para"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-03", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00003" }], "cardIds": ["word-para--skill-at", "phrase-ser-malo-para"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-04", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00004" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-05", "text": "DESPEDIDAS", "normalized": "despedidas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00010" }], "cardIds": ["word-despedidas", "phrase-ser-malo-para"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-06", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00011" }], "cardIds": ["word-a--level", "phrase-a-un-cierto-nivel"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00012" }], "cardIds": ["word-un", "phrase-a-un-cierto-nivel"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-08", "text": "CIERTO", "normalized": "cierto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00013" }], "cardIds": ["word-cierto--particular", "phrase-a-un-cierto-nivel"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-09", "text": "NIVEL", "normalized": "nivel", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00019" }], "cardIds": ["word-nivel--degree", "phrase-a-un-cierto-nivel"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-10", "text": "NUNCA", "normalized": "nunca", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00020" }], "cardIds": ["word-nunca", "grammar-negative-opinion-subjunctive"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-11", "text": "PIENSO", "normalized": "pienso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00021" }], "cardIds": ["word-pienso", "grammar-negative-opinion-subjunctive"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-12", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00033" }], "cardIds": ["word-que--clause-link", "grammar-negative-opinion-subjunctive"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-13", "text": "SEAN", "normalized": "sean", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00034" }], "cardIds": ["word-sean", "grammar-negative-opinion-subjunctive"] },
+        { "id": "es-xkcd-merlin:panel-1-opening:word-14", "text": "REALES", "normalized": "reales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00035" }], "cardIds": ["word-reales"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-1-opening:app-ser-malo-para",
+          "cardId": "phrase-ser-malo-para",
+          "participantWordIds": ["es-xkcd-merlin:panel-1-opening:word-01", "es-xkcd-merlin:panel-1-opening:word-02", "es-xkcd-merlin:panel-1-opening:word-03", "es-xkcd-merlin:panel-1-opening:word-05"],
+          "exampleEs": "SOY MALO PARA LAS DESPEDIDAS",
+          "explanationEn": "Soy identifies the speaker, malo states the lack of skill or comfort, para introduces the situation, and despedidas fills that situation slot."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-1-opening:app-a-un-cierto-nivel",
+          "cardId": "phrase-a-un-cierto-nivel",
+          "participantWordIds": ["es-xkcd-merlin:panel-1-opening:word-06", "es-xkcd-merlin:panel-1-opening:word-07", "es-xkcd-merlin:panel-1-opening:word-08", "es-xkcd-merlin:panel-1-opening:word-09"],
+          "exampleEs": "A UN CIERTO NIVEL",
+          "explanationEn": "The complete fixed phrase introduces one particular layer at which the speaker's next statement feels true."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-1-opening:app-negative-opinion-subjunctive",
+          "cardId": "grammar-negative-opinion-subjunctive",
+          "participantWordIds": ["es-xkcd-merlin:panel-1-opening:word-10", "es-xkcd-merlin:panel-1-opening:word-11", "es-xkcd-merlin:panel-1-opening:word-12", "es-xkcd-merlin:panel-1-opening:word-13"],
+          "exampleEs": "NUNCA PIENSO QUE SEAN",
+          "explanationEn": "Nunca makes the belief negative, pienso names the belief, que introduces its content, and sean uses the doubted-idea form rather than ordinary son."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-1-reply",
+      "labelEs": "ME HACEN PENSAR EN EL MERLÍN DE T. H. WHITE",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-merlin:panel-1-reply:word-01", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00044" }], "cardIds": ["word-me--direct", "phrase-hacer-pensar-en"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-02", "text": "HACEN", "normalized": "hacen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00045" }], "cardIds": ["word-hacen--cause", "phrase-hacer-pensar-en"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-03", "text": "PENSAR", "normalized": "pensar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00048" }], "cardIds": ["word-pensar", "phrase-hacer-pensar-en"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00049" }], "cardIds": ["word-en--pensar", "phrase-hacer-pensar-en"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00052" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-06", "text": "MERLÍN", "normalized": "merlín", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00053" }], "cardIds": ["word-merlín--name", "concept-merlin-th-white"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00057" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-08", "text": "T", "normalized": "t", "explicitBounds": [{ "x": 16.1486, "y": 73.2558, "width": 1.15, "height": 8.1395 }], "geometryRationale": "Vision assigned one shared rectangle to the two distinct printed initials T. and H.; this measured box isolates T.", "cardIds": ["word-t--initial", "concept-merlin-th-white"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-09", "text": "H", "normalized": "h", "explicitBounds": [{ "x": 17.82, "y": 73.2558, "width": 1.25, "height": 8.1395 }], "geometryRationale": "Vision assigned one shared rectangle to the two distinct printed initials T. and H.; this measured box isolates H.", "cardIds": ["word-h--initial", "concept-merlin-th-white"] },
+        { "id": "es-xkcd-merlin:panel-1-reply:word-10", "text": "WHITE", "normalized": "white", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00070" }], "cardIds": ["word-white--surname", "concept-merlin-th-white"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-1-reply:app-hacer-pensar-en",
+          "cardId": "phrase-hacer-pensar-en",
+          "participantWordIds": ["es-xkcd-merlin:panel-1-reply:word-01", "es-xkcd-merlin:panel-1-reply:word-02", "es-xkcd-merlin:panel-1-reply:word-03", "es-xkcd-merlin:panel-1-reply:word-04"],
+          "exampleEs": "ME HACEN PENSAR EN",
+          "explanationEn": "Me is the affected person, hacen supplies the causing action, and pensar en introduces the person or thing brought to mind."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-2-question",
+      "labelEs": "¿AH?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-merlin:panel-2-question:word-01", "text": "AH", "normalized": "ah", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00005" }], "cardIds": ["word-ah--confusion"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-merlin:panel-2-explanation",
+      "labelEs": "VIVÍA HACIA ATRÁS, RECORDANDO EL FUTURO PERO NO EL PASADO. PARA ÉL, LAS DESPEDIDAS FINALES NO SIGNIFICABAN NADA, MIENTRAS QUE LOS PRIMEROS SALUDOS ERAN DOLOROSOS Y AGRIDULCES.",
+      "explicitBounds": [{ "x": 26.2, "y": 15.7, "width": 25.3, "height": 51.6 }],
+      "geometryRationale": "Vision omitted the lower three handwritten lines and split several words across line breaks; this measured panel-text rectangle contains the complete explanation.",
+      "words": [
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-01", "text": "VIVÍA", "normalized": "vivía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00015" }], "cardIds": ["word-vivía"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-02", "text": "HACIA", "normalized": "hacia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00016" }], "cardIds": ["word-hacia", "phrase-hacia-atras"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-03", "text": "ATRÁS", "normalized": "atrás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00017" }], "cardIds": ["word-atrás--backward", "phrase-hacia-atras"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-04", "text": "RECORDANDO", "normalized": "recordando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00018" }, { "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00022" }], "cardIds": ["word-recordando", "grammar-adverbial-gerund"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00023" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-06", "text": "FUTURO", "normalized": "futuro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00024" }], "cardIds": ["word-futuro"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-07", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00025" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-08", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00026" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-09", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00027" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-10", "text": "PASADO", "normalized": "pasado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00028" }], "cardIds": ["word-pasado--time"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-11", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00029" }], "cardIds": ["word-para--for-person"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-12", "text": "ÉL", "normalized": "él", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00030" }], "cardIds": ["word-él--pronoun"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-13", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00031" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-14", "text": "DESPEDIDAS", "normalized": "despedidas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00032" }, { "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00036" }], "cardIds": ["word-despedidas"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-15", "text": "FINALES", "normalized": "finales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00037" }], "cardIds": ["word-finales"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-16", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00038" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-17", "text": "SIGNIFICABAN", "normalized": "significaban", "explicitBounds": [{ "x": 43.0743, "y": 37.2093, "width": 6.1149, "height": 8.1395 }, { "x": 26.75, "y": 44.15, "width": 5.15, "height": 8.2 }], "geometryRationale": "The printed word wraps as SIGNIFI-/CABAN; Vision captured only the first fragment, so these measured boxes cover both visible fragments.", "cardIds": ["word-significaban"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-18", "text": "NADA", "normalized": "nada", "explicitBounds": [{ "x": 32.15, "y": 44.15, "width": 4.5, "height": 8.2 }], "geometryRationale": "Vision omitted this entire handwritten line; this box was measured against the visible word NADA.", "cardIds": ["word-nada"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-19", "text": "MIENTRAS", "normalized": "mientras", "explicitBounds": [{ "x": 36.9, "y": 44.15, "width": 8.4, "height": 8.2 }], "geometryRationale": "Vision omitted this entire handwritten line; this box was measured against the visible word MIENTRAS.", "cardIds": ["word-mientras", "phrase-mientras-que"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-20", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 45.55, "y": 44.15, "width": 3.4, "height": 8.2 }], "geometryRationale": "Vision omitted this entire handwritten line; this box was measured against the visible word QUE.", "cardIds": ["word-que--mientras-que", "phrase-mientras-que"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-21", "text": "LOS", "normalized": "los", "explicitBounds": [{ "x": 26.75, "y": 51.15, "width": 3.1, "height": 8.2 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word LOS.", "cardIds": ["word-los"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-22", "text": "PRIMEROS", "normalized": "primeros", "explicitBounds": [{ "x": 30.05, "y": 51.15, "width": 8.5, "height": 8.2 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word PRIMEROS.", "cardIds": ["word-primeros"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-23", "text": "SALUDOS", "normalized": "saludos", "explicitBounds": [{ "x": 38.8, "y": 51.15, "width": 7.45, "height": 8.2 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word SALUDOS.", "cardIds": ["word-saludos"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-24", "text": "ERAN", "normalized": "eran", "explicitBounds": [{ "x": 46.5, "y": 51.15, "width": 4.05, "height": 8.2 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word ERAN.", "cardIds": ["word-eran"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-25", "text": "DOLOROSOS", "normalized": "dolorosos", "explicitBounds": [{ "x": 26.75, "y": 58.1, "width": 9.75, "height": 8.25 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word DOLOROSOS.", "cardIds": ["word-dolorosos"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-26", "text": "Y", "normalized": "y", "explicitBounds": [{ "x": 36.75, "y": 58.1, "width": 1.35, "height": 8.25 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible conjunction Y.", "cardIds": ["word-y"] },
+        { "id": "es-xkcd-merlin:panel-2-explanation:word-27", "text": "AGRIDULCES", "normalized": "agridulces", "explicitBounds": [{ "x": 38.35, "y": 58.1, "width": 10.6, "height": 8.25 }], "geometryRationale": "Vision omitted this handwritten line; this box was measured against the visible word AGRIDULCES.", "cardIds": ["word-agridulces"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-2-explanation:app-hacia-atras",
+          "cardId": "phrase-hacia-atras",
+          "participantWordIds": ["es-xkcd-merlin:panel-2-explanation:word-02", "es-xkcd-merlin:panel-2-explanation:word-03"],
+          "exampleEs": "HACIA ATRÁS",
+          "explanationEn": "Hacia establishes a direction and atrás specifies that the direction is backward."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-2-explanation:app-recordando-gerund",
+          "cardId": "grammar-adverbial-gerund",
+          "participantWordIds": ["es-xkcd-merlin:panel-2-explanation:word-04"],
+          "exampleEs": "RECORDANDO",
+          "explanationEn": "Recordando uses the -ando action form to add the remembering that accompanies the way he lived."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-2-explanation:app-mientras-que",
+          "cardId": "phrase-mientras-que",
+          "participantWordIds": ["es-xkcd-merlin:panel-2-explanation:word-19", "es-xkcd-merlin:panel-2-explanation:word-20"],
+          "exampleEs": "MIENTRAS QUE",
+          "explanationEn": "The two-word connector introduces the contrasting treatment of first greetings."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-3-realization",
+      "labelEs": "OH. ENTONCES, CON LOS AÑOS OLVIDARÍA A TODOS SUS AMIGOS.",
+      "explicitBounds": [{ "x": 52.5, "y": 6.3, "width": 27.5, "height": 20.9 }],
+      "geometryRationale": "Vision fused these two handwritten lines into four inaccurate tokens; this measured rectangle covers the complete realization.",
+      "words": [
+        { "id": "es-xkcd-merlin:panel-3-realization:word-01", "text": "OH", "normalized": "oh", "explicitBounds": [{ "x": 53.05, "y": 6.9, "width": 3.5, "height": 8.3 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible interjection OH.", "cardIds": ["word-oh"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-02", "text": "ENTONCES", "normalized": "entonces", "explicitBounds": [{ "x": 56.85, "y": 6.9, "width": 9.85, "height": 8.3 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word ENTONCES.", "cardIds": ["word-entonces"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-03", "text": "CON", "normalized": "con", "explicitBounds": [{ "x": 67.0, "y": 6.9, "width": 3.7, "height": 8.3 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word CON.", "cardIds": ["word-con", "phrase-con-los-años"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-04", "text": "LOS", "normalized": "los", "explicitBounds": [{ "x": 70.95, "y": 6.9, "width": 3.1, "height": 8.3 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible article LOS.", "cardIds": ["word-los", "phrase-con-los-años"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-05", "text": "AÑOS", "normalized": "años", "explicitBounds": [{ "x": 74.3, "y": 6.9, "width": 5.7, "height": 8.3 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word AÑOS.", "cardIds": ["word-años", "phrase-con-los-años"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-06", "text": "OLVIDARÍA", "normalized": "olvidaría", "explicitBounds": [{ "x": 53.0, "y": 16.15, "width": 8.75, "height": 9.1 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word OLVIDARÍA.", "cardIds": ["word-olvidaría", "grammar-simple-conditional"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-07", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 62.0, "y": 16.15, "width": 1.35, "height": 9.1 }], "geometryRationale": "Vision fused both lines; this measured box isolates the personal A.", "cardIds": ["word-a--personal-a"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-08", "text": "TODOS", "normalized": "todos", "explicitBounds": [{ "x": 63.55, "y": 16.15, "width": 5.55, "height": 9.1 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word TODOS.", "cardIds": ["word-todos"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-09", "text": "SUS", "normalized": "sus", "explicitBounds": [{ "x": 69.35, "y": 16.15, "width": 3.05, "height": 9.1 }], "geometryRationale": "Vision fused both lines; this measured box isolates the possessive SUS.", "cardIds": ["word-sus--their"] },
+        { "id": "es-xkcd-merlin:panel-3-realization:word-10", "text": "AMIGOS", "normalized": "amigos", "explicitBounds": [{ "x": 72.65, "y": 16.15, "width": 7.3, "height": 9.1 }], "geometryRationale": "Vision fused both lines; this measured box isolates the visible word AMIGOS.", "cardIds": ["word-amigos"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-3-realization:app-con-los-anos",
+          "cardId": "phrase-con-los-años",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-realization:word-03", "es-xkcd-merlin:panel-3-realization:word-04", "es-xkcd-merlin:panel-3-realization:word-05"],
+          "exampleEs": "CON LOS AÑOS",
+          "explanationEn": "The complete time expression frames the forgetting as a gradual change over passing years."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-realization:app-simple-conditional",
+          "cardId": "grammar-simple-conditional",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-realization:word-06"],
+          "exampleEs": "OLVIDARÍA",
+          "explanationEn": "Olvidaría keeps the full verb olvidar and adds -ía to express what he would do under the imagined time direction."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-3-inference",
+      "labelEs": "DEBIÓ DE SENTIRSE SOLO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0012" }],
+      "words": [
+        { "id": "es-xkcd-merlin:panel-3-inference:word-01", "text": "DEBIÓ", "normalized": "debió", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00040" }], "cardIds": ["word-debió--inference", "grammar-deber-de-inference"] },
+        { "id": "es-xkcd-merlin:panel-3-inference:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00041" }], "cardIds": ["word-de--deber-inference", "grammar-deber-de-inference"] },
+        { "id": "es-xkcd-merlin:panel-3-inference:word-03", "text": "SENTIRSE", "normalized": "sentirse", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00042" }], "cardIds": ["word-sentirse", "grammar-deber-de-inference", "grammar-sentirse-adjective"] },
+        { "id": "es-xkcd-merlin:panel-3-inference:word-04", "text": "SOLO", "normalized": "solo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00043" }], "cardIds": ["word-solo--alone", "grammar-sentirse-adjective"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-3-inference:app-deber-de-inference",
+          "cardId": "grammar-deber-de-inference",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-inference:word-01", "es-xkcd-merlin:panel-3-inference:word-02", "es-xkcd-merlin:panel-3-inference:word-03"],
+          "exampleEs": "DEBIÓ DE SENTIRSE",
+          "explanationEn": "Debió and de mark a past inference, while sentirse is the unchanged action whose truth the speaker is inferring."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-inference:app-sentirse-adjective",
+          "cardId": "grammar-sentirse-adjective",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-inference:word-03", "es-xkcd-merlin:panel-3-inference:word-04"],
+          "exampleEs": "SENTIRSE SOLO",
+          "explanationEn": "Sentirse introduces a person's emotional state, and solo supplies the masculine singular description of that state."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-3-punchline-setup",
+      "labelEs": "SÍ. TERMINÓ APOLTRONÁNDOSE EN CASA VIENDO DVDs TODO EL DÍA. LO MEJOR FUE EL DÍA QUE ALQUILÓ “MEMENTO”...",
+      "explicitBounds": [{ "x": 57.2, "y": 48.5, "width": 23.7, "height": 49.2 }],
+      "geometryRationale": "Vision omitted the quoted final film title and separated this connected speech into partial lines; this measured rectangle contains the complete reply.",
+      "words": [
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00046" }], "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-02", "text": "TERMINÓ", "normalized": "terminó", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00047" }], "cardIds": ["word-terminó--ended-up", "grammar-terminar-gerundio"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-03", "text": "APOLTRONÁNDOSE", "normalized": "apoltronándose", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00050" }], "cardIds": ["word-apoltronándose", "grammar-terminar-gerundio"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00051" }], "cardIds": ["word-en--at-location"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-05", "text": "CASA", "normalized": "casa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00054" }], "cardIds": ["word-casa"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-06", "text": "VIENDO", "normalized": "viendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00055" }], "cardIds": ["word-viendo--watching", "grammar-adverbial-gerund"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-07", "text": "DVDs", "normalized": "dvds", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00056" }], "cardIds": ["word-dvds"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-08", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00060" }], "cardIds": ["word-todo", "phrase-todo-el-dia"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-09", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00061" }], "cardIds": ["word-el--article", "phrase-todo-el-dia"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-10", "text": "DÍA", "normalized": "día", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00062" }], "cardIds": ["word-día", "phrase-todo-el-dia"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-11", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00063" }], "cardIds": ["word-lo--neutral-article", "phrase-lo-mejor"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-12", "text": "MEJOR", "normalized": "mejor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00064" }], "cardIds": ["word-mejor--best", "phrase-lo-mejor"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-13", "text": "FUE", "normalized": "fue", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00065" }], "cardIds": ["word-fue--preterite-ser"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-14", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00066" }], "cardIds": ["word-el--article", "grammar-time-noun-que"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-15", "text": "DÍA", "normalized": "día", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00067" }], "cardIds": ["word-día", "grammar-time-noun-que"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-16", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00068" }], "cardIds": ["word-que--relative", "grammar-time-noun-que"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-17", "text": "ALQUILÓ", "normalized": "alquiló", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00069" }], "cardIds": ["word-alquiló", "grammar-time-noun-que"] },
+        { "id": "es-xkcd-merlin:panel-3-punchline-setup:word-18", "text": "MEMENTO", "normalized": "memento", "explicitBounds": [{ "x": 60.0, "y": 89.0, "width": 10.7, "height": 8.2 }], "geometryRationale": "Vision omitted the quoted film title on the final handwritten line; this box was measured against MEMENTO.", "cardIds": ["word-memento--title", "concept-memento-reverse-chronology"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-merlin:panel-3-punchline-setup:app-terminar-gerundio",
+          "cardId": "grammar-terminar-gerundio",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-punchline-setup:word-02", "es-xkcd-merlin:panel-3-punchline-setup:word-03"],
+          "exampleEs": "TERMINÓ APOLTRONÁNDOSE",
+          "explanationEn": "Terminó introduces the eventual outcome, and apoltronándose uses the -ando form to name the action that became that outcome."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-punchline-setup:app-viendo-gerund",
+          "cardId": "grammar-adverbial-gerund",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-punchline-setup:word-06"],
+          "exampleEs": "VIENDO",
+          "explanationEn": "Viendo uses the irregular -iendo action form to add the activity that accompanies being at home."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-punchline-setup:app-todo-el-dia",
+          "cardId": "phrase-todo-el-dia",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-punchline-setup:word-08", "es-xkcd-merlin:panel-3-punchline-setup:word-09", "es-xkcd-merlin:panel-3-punchline-setup:word-10"],
+          "exampleEs": "TODO EL DÍA",
+          "explanationEn": "Todo agrees with the masculine noun día, and the three-word expression gives the activity's duration."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-punchline-setup:app-lo-mejor",
+          "cardId": "phrase-lo-mejor",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-punchline-setup:word-11", "es-xkcd-merlin:panel-3-punchline-setup:word-12"],
+          "exampleEs": "LO MEJOR",
+          "explanationEn": "Neutral lo turns mejor into an unnamed best aspect or event rather than describing a masculine noun."
+        },
+        {
+          "id": "es-xkcd-merlin:panel-3-punchline-setup:app-time-noun-que",
+          "cardId": "grammar-time-noun-que",
+          "participantWordIds": ["es-xkcd-merlin:panel-3-punchline-setup:word-14", "es-xkcd-merlin:panel-3-punchline-setup:word-15", "es-xkcd-merlin:panel-3-punchline-setup:word-16", "es-xkcd-merlin:panel-3-punchline-setup:word-17"],
+          "exampleEs": "EL DÍA QUE ALQUILÓ",
+          "explanationEn": "El día names the time, que links it to an event, and alquiló supplies that event's completed action."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-merlin:panel-4-reaction",
+      "labelEs": "ELEMENTAL.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-merlin:ocr-line-0005" }],
+      "words": [
+        { "id": "es-xkcd-merlin:panel-4-reaction:word-01", "text": "ELEMENTAL", "normalized": "elemental", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-merlin:ocr-token-00014" }], "cardIds": ["word-elemental"] }
+      ],
+      "applications": []
+    }
+  ]
+}
