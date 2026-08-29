@@ -34,7 +34,7 @@ export interface ReviewEvent {
 }
 
 export interface SrsState {
-  schemaVersion: 2;
+  schemaVersion: 3;
   studyDay: number;
   cards: Record<string, CardProgress>;
   comics: Record<string, ComicProgress>;
@@ -92,7 +92,7 @@ const DEFAULT_COMIC_PROGRESS: Readonly<ComicProgress> = {
 
 export function createSrsState(): SrsState {
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
     studyDay: 1,
     cards: {},
     comics: {},
@@ -404,13 +404,26 @@ export function selectNextComic<T extends ComicLike>(
     );
     if (activeComic) {
       const activeCardIds = new Set(activeComic.cardIds);
+      const newlyEligibleCardIds = [...new Set(activeComic.cardIds)].filter(
+        (cardId) => {
+          const progress = getCardProgress(state, cardId);
+          return (
+            progress.status === "unseen" ||
+            progress.dueDay === null ||
+            progress.dueDay <= state.studyDay
+          );
+        },
+      );
       const resumedState: SrsState = {
         ...state,
         activeSession: {
           ...session,
-          eligibleCardIds: [...new Set(session.eligibleCardIds)].filter((id) =>
-            activeCardIds.has(id),
-          ),
+          eligibleCardIds: [
+            ...new Set([
+              ...session.eligibleCardIds.filter((id) => activeCardIds.has(id)),
+              ...newlyEligibleCardIds,
+            ]),
+          ],
           clickedCardIds: [...new Set(session.clickedCardIds)].filter((id) =>
             activeCardIds.has(id),
           ),
@@ -498,7 +511,7 @@ function nullableNumber(value: unknown): number | null {
 export function hydrateSrsState(value: unknown): SrsState {
   try {
     const parsed = typeof value === "string" ? JSON.parse(value) : value;
-    if (!isRecord(parsed) || parsed.schemaVersion !== 2) return createSrsState();
+    if (!isRecord(parsed) || parsed.schemaVersion !== 3) return createSrsState();
 
     const cards: Record<string, CardProgress> = {};
     if (isRecord(parsed.cards)) {
@@ -593,7 +606,7 @@ export function hydrateSrsState(value: unknown): SrsState {
       : [];
 
     return {
-      schemaVersion: 2,
+      schemaVersion: 3,
       studyDay: Math.max(1, numberOr(parsed.studyDay, 1)),
       cards,
       comics,

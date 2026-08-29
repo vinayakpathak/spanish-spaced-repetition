@@ -105,3 +105,52 @@ test("word overlays are driven by occurrence bounds and retain the card-list rel
   assert.match(page, /Cards related to[\s\S]*selectedWord\.text/);
   assert.match(page, /selectedWord\.cardIds/);
 });
+
+test("a revealed answer expands inside its clicked flashcard", async () => {
+  const [page, styles] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  const cardStart = page.indexOf('className={`candidate-card');
+  const revealStart = page.indexOf('className="candidate-reveal"', cardStart);
+  const cardEnd = page.indexOf("</article>", revealStart);
+  assert.ok(cardStart >= 0 && revealStart > cardStart && cardEnd > revealStart);
+  assert.ok(
+    page.slice(revealStart, cardEnd).includes("card.answerEn"),
+    "the answer is rendered inside the selected candidate card",
+  );
+  assert.match(page, /aria-expanded=\{isSelected\}/);
+  assert.match(page, /scrollIntoView\([\s\S]*block: "nearest"/);
+  assert.doesNotMatch(page, /className="learning-card-detail"/);
+  assert.doesNotMatch(page, /WHOLE-BUBBLE CONTEXT/);
+  assert.doesNotMatch(page, /className="candidate-context"/);
+  assert.match(page, /className="candidate-explanation"/);
+  assert.match(page, /className="candidate-general-example"/);
+  assert.match(page, /className="candidate-applications"/);
+  assert.match(page, /className="candidate-application"/);
+  assert.match(page, /GENERAL EXAMPLE/);
+  assert.match(page, /IN THIS COMIC/);
+  assert.match(page, /application\.cardId === card\.id/);
+  assert.match(page, /application\.participantWordIds\.includes\(selectedWord\.id\)/);
+  assert.match(page, /className="candidate-application"[\s\S]*lang="es"/);
+  assert.match(page, /card\.questionEn/);
+  assert.doesNotMatch(page, /card\.kind === "grammar" && card\.questionEn/);
+  assert.match(page, /SPANISH EXPRESSION/);
+  assert.match(page, /aria-controls=\{isSelected \? answerId : undefined\}/);
+  assert.match(
+    page.slice(revealStart, cardEnd),
+    /candidate-pattern[\s\S]*card\.promptEs/,
+  );
+
+  assert.match(
+    styles,
+    /grid-template-columns:\s*minmax\(195px, 232px\) minmax\(460px, 1fr\) clamp\(370px, 30vw, 560px\)/,
+  );
+  assert.match(
+    styles,
+    /grid-template-columns:\s*minmax\(180px, 210px\) minmax\(400px, 1fr\) clamp\(315px, 34vw, 370px\)/,
+  );
+  assert.match(styles, /\.candidate-reveal\s*\{[\s\S]*animation: card-turn/);
+  assert.match(styles, /\.candidate-pattern\.is-expression/);
+});

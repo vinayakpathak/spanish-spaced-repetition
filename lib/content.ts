@@ -14,11 +14,19 @@ export interface LearningCard {
   id: string;
   kind: CardKind;
   promptEs: string;
+  /** Plain-English question shown on reusable grammar and expression cards. */
+  questionEn?: string;
   answerEn: string;
+  /** Reusable explanation only. Comic-specific details belong to CardApplication. */
   noteEn: string;
+  /** A reusable example invented for the lesson, never copied from a comic. */
+  example?: { es: string; en: string };
   tags: readonly string[];
 }
 
+// Authoring templates and region-group aliases inherited from the first seed
+// pass. These entries are not the schedulable curriculum; only
+// ATOMIC_CURATED_CARDS below becomes live cards.
 const LEGACY_CURATED_CARDS = [
   {
     id: "grammar-estar-gerundio",
@@ -26,7 +34,7 @@ const LEGACY_CURATED_CARDS = [
     promptEs: "estar + gerundio",
     answerEn: "to be doing something right now",
     noteEn:
-      "Spanish uses estar plus a gerund for an action in progress: estás volando, estamos teniendo problemas.",
+      "Spanish uses estar plus a gerund for an action in progress.",
     tags: ["A2", "grammar", "actions in progress"],
   },
   {
@@ -416,124 +424,245 @@ function atomicCard(
  * grammar rule, or one cultural/technical idea per scheduling target.
  */
 const ATOMIC_CURATED_CARDS = [
-  atomicCard("grammar-estar-gerundio"),
-  atomicCard("grammar-past-contrast"),
-  atomicCard("grammar-present-perfect"),
-  atomicCard("grammar-subjunctive", {
-    promptEs: "odiar/molestar que + subjuntivo",
-    answerEn: "use the subjunctive after an emotional reaction to another action",
+  atomicCard("grammar-estar-gerundio", {
+    promptEs: "estar + gerundio (-ando/-iendo)",
+    questionEn: "How does Spanish show that an action is in progress at the time being discussed?",
+    answerEn: "Use a form of estar followed by the verb's -ando or -iendo form.",
     noteEn:
-      "Haga and tenga are subjunctive because the speaker reacts to what other people do.",
+      "The form of estar tells you who is acting. Most -ar verbs change to -ando; most -er and -ir verbs change to -iendo. This works much like English “am/is/are doing.”",
+    example: { es: "Estoy leyendo.", en: "I am reading." },
+  }),
+  atomicCard("grammar-past-contrast", {
+    promptEs: "hablé vs. hablaba",
+    questionEn: "Which past form tells an event, and which one sets the scene?",
+    answerEn:
+      "Use the preterite for a bounded or completed event; use the imperfect for background, habits, or an action in progress.",
+    noteEn:
+      "Both forms describe the past, but they present it differently. The preterite moves the story forward with a completed event. The imperfect describes what was going on, what things were like, or what used to happen.",
+    example: {
+      es: "Ayer llovió. Antes llovía mucho.",
+      en: "It rained yesterday. It used to rain a lot before.",
+    },
+  }),
+  atomicCard("grammar-present-perfect", {
+    promptEs: "he/has/ha/hemos/habéis/han + participio",
+    questionEn: "How do you connect a completed action to the present?",
+    answerEn:
+      "Use the present tense of haber plus a past participle, like English “have done.”",
+    noteEn:
+      "Choose he, has, ha, hemos, habéis, or han for the subject. Then add a participle: most -ar verbs use -ado and most -er/-ir verbs use -ido. The participle does not change after haber. How often speakers choose this tense instead of the simple past varies by region.",
+    example: { es: "He terminado.", en: "I have finished." },
+  }),
+  atomicCard("grammar-subjunctive", {
+    promptEs: "emoción o reacción + que + subjuntivo",
+    questionEn: "What verb form follows a reaction to what another person does?",
+    answerEn:
+      "After an emotional reaction plus que, put the second action in the subjunctive.",
+    noteEn:
+      "The first part gives a reaction such as joy, annoyance, fear, or hate. Que introduces the action being reacted to. Spanish marks that second action with the subjunctive when it has its own subject.",
+    example: {
+      es: "Me alegra que estés aquí.",
+      en: "I am glad that you are here.",
+    },
     tags: ["B1", "grammar", "subjunctive", "reactions"],
   }),
   atomicCard("grammar-subjunctive", {
     id: "grammar-esperar-que-subjunctive",
     promptEs: "esperar que + subjuntivo",
-    answerEn: "to hope that something happens",
+    questionEn: "What form follows esperar que when you hope for an outcome?",
+    answerEn: "Use the subjunctive after esperar que to say “to hope that…”",
     noteEn:
-      "A hoped-for outcome follows esperar que in the subjunctive: esté, hayan aprendido.",
+      "Esperar by itself can mean “to wait.” Esperar que followed by a new subject and verb usually means “to hope that.” The hoped-for outcome is not presented as a certain fact, so its verb is subjunctive.",
+    example: {
+      es: "Espero que tengas un buen día.",
+      en: "I hope you have a good day.",
+    },
     tags: ["B1", "grammar", "subjunctive", "hopes"],
   }),
   atomicCard("grammar-subjunctive", {
     id: "grammar-hasta-que-subjunctive",
-    promptEs: "hasta que hable…",
-    answerEn: "until I speak… (a future event not yet realized)",
+    promptEs: "hasta que + subjuntivo",
+    questionEn: "What form follows hasta que when the event is still pending?",
+    answerEn:
+      "Use the subjunctive after hasta que when you are waiting for a future event.",
     noteEn:
-      "Hasta que takes the subjunctive when the awaited event has not happened yet.",
+      "Hasta que means “until.” Use the subjunctive when the event has not happened yet. Use the indicative when describing a completed event or something that habitually happens.",
+    example: {
+      es: "Esperaré hasta que llegues.",
+      en: "I will wait until you arrive.",
+    },
     tags: ["B1", "grammar", "subjunctive", "future events"],
   }),
   atomicCard("grammar-subjunctive", {
     id: "grammar-indefinite-relative-subjunctive",
-    promptEs: "alguien que lleve…",
-    answerEn: "someone who might be wearing…",
+    promptEs: "alguien/algo que + subjuntivo",
+    questionEn: "How do you describe a person or thing you have not identified yet?",
+    answerEn:
+      "Use the subjunctive in the que-clause when the person or thing is unknown, uncertain, or may not exist.",
     noteEn:
-      "A relative clause describing an unknown or not-yet-identified person can take the subjunctive.",
+      "Spanish contrasts an identified person with a person you are still looking for. A known person normally takes the indicative; an unknown or hypothetical one often takes the subjunctive.",
+    example: {
+      es: "Busco a alguien que hable inglés.",
+      en: "I am looking for someone who speaks English.",
+    },
     tags: ["B1", "grammar", "subjunctive", "relative clauses"],
   }),
   atomicCard("grammar-subjunctive", {
     id: "grammar-evaluative-subjunctive",
-    promptEs: "es insoportable que… te diga…",
-    answerEn: "it is unbearable that… someone tells you…",
+    promptEs: "es + adjetivo de valoración + que + subjuntivo",
+    questionEn: "What form follows a judgment such as “it is important that…”?",
+    answerEn:
+      "Use the subjunctive after an impersonal judgment or evaluation followed by que.",
     noteEn:
-      "An impersonal evaluation such as es insoportable que is followed by the subjunctive diga.",
+      "The opening es + adjective gives the speaker's judgment: es importante, es raro, es bueno, and so on. Que introduces the situation being judged, whose verb normally takes the subjunctive.",
+    example: {
+      es: "Es importante que descanses.",
+      en: "It is important that you rest.",
+    },
     tags: ["B1", "grammar", "subjunctive", "evaluation"],
   }),
-  atomicCard("grammar-hypothetical"),
+  atomicCard("grammar-hypothetical", {
+    promptEs: "aunque + imperfecto de subjuntivo → condicional",
+    questionEn: "How do you express an unlikely “even if…, …would…” situation?",
+    answerEn:
+      "Use aunque plus the imperfect subjunctive for the condition, then the conditional for the result.",
+    noteEn:
+      "This pattern presents the condition as hypothetical rather than expected. Imperfect-subjunctive forms can end in -ra or -se; both are valid. The result often uses a form ending in -ría.",
+    example: {
+      es: "Aunque tuviera tiempo, no iría.",
+      en: "Even if I had time, I would not go.",
+    },
+  }),
   atomicCard("grammar-commands-register", {
     id: "grammar-informal-command",
-    promptEs: "¡Únete!",
-    answerEn: "Join! (informal singular command)",
+    promptEs: "imperativo afirmativo de tú + pronombre al final",
+    questionEn: "Where does a pronoun go with a positive tú command?",
+    answerEn:
+      "Attach the pronoun to the end of an affirmative tú command and write them as one word.",
     noteEn:
-      "Únete is an affirmative tú command with the reflexive pronoun attached.",
+      "This applies to object and reflexive pronouns such as me, te, lo, la, and se. The combined word may need a written accent to keep the original stress.",
+    example: { es: "¡Siéntate!", en: "Sit down!" },
     tags: ["A2", "grammar", "commands", "informal"],
   }),
   atomicCard("grammar-commands-register", {
     id: "grammar-formal-command",
-    promptEs: "Mire. · Diga. · Perdone.",
-    answerEn: "Look. · Say/Tell. · Excuse me. (formal commands)",
+    promptEs: "usted: hable / coma / escriba",
+    questionEn: "How do you give a polite command to one person?",
+    answerEn:
+      "Use an usted command, which has the same form as the present subjunctive.",
     noteEn:
-      "Formal usted commands use the present-subjunctive form, even when they function as direct commands.",
+      "For regular verbs, -ar verbs use an -e ending and -er/-ir verbs use an -a ending. Common irregular forms must be learned separately. Usted is usually omitted because the verb already signals formal address.",
+    example: { es: "Pase, por favor.", en: "Come in, please." },
     tags: ["A2", "grammar", "commands", "formal"],
   }),
   atomicCard("grammar-commands-register", {
     id: "grammar-formal-address",
-    promptEs: "su hijo · esté contenta · ¿puede…?",
-    answerEn: "your son · you are happy · can you…? (formal address)",
+    promptEs: "usted + verbo en tercera persona",
+    questionEn: "Which verb form goes with formal “you”?",
+    answerEn:
+      "Usted means “you,” but it uses the same third-person singular verb forms as él or ella.",
     noteEn:
-      "Formal usted is paired with third-person verb forms and possessive su.",
+      "Treat usted grammatically like él or ella even though it addresses the listener. Spanish often leaves usted unspoken; the verb form and context still communicate politeness or distance.",
+    example: {
+      es: "¿Usted necesita ayuda?",
+      en: "Do you need help?",
+    },
     tags: ["A2", "grammar", "register", "formal"],
   }),
   atomicCard("question-words", {
-    promptEs: "qué · cómo · por qué",
-    answerEn: "question words carry a written accent",
+    promptEs: "qué · cómo · cuándo…",
+    questionEn: "When do Spanish question and exclamation words need an accent?",
+    answerEn:
+      "Use the written accent when these words ask a question or add an exclamation, even inside a longer sentence.",
     noteEn:
-      "Qué and cómo are accented when interrogative; por qué is written as two words when it asks why.",
+      "Accented forms such as qué, cómo, and cuándo ask or exclaim. Their unstressed connector forms—que, como, cuando—do not. The accent remains in an indirect question such as no sé qué quiere (“I don't know what they want”).",
+    example: {
+      es: "¿Cómo te llamas?",
+      en: "What is your name?",
+    },
     tags: ["A1", "grammar", "questions", "accents"],
   }),
-  atomicCard("phrase-venir-a-la-cama"),
-  atomicCard("phrase-no-puedo-importante", {
-    promptEs: "No puedo.",
-    answerEn: "I can't.",
+  atomicCard("question-words", {
+    id: "grammar-por-que-vs-porque",
+    promptEs: "por qué / porque",
+    questionEn: "What is the difference between por qué and porque?",
+    answerEn: "Por qué means “why”; porque means “because.”",
     noteEn:
-      "The action after puedo can be omitted when the context makes it clear.",
-    tags: ["A1", "common expression"],
+      "Write the question form as two words, with an accent on qué. Write the usual answer word porque as one word without an accent.",
+    example: {
+      es: "¿Por qué estudias español? Porque me gusta.",
+      en: "Why do you study Spanish? Because I like it.",
+    },
+    tags: ["A1", "grammar", "questions", "spelling"],
+  }),
+  atomicCard("phrase-venir-a-la-cama", {
+    id: "grammar-present-immediate-plan",
+    kind: "grammar",
+    promptEs: "presente → plan futuro",
+    questionEn: "Can Spanish use the present tense for a near-future plan?",
+    answerEn:
+      "Yes. Use the present when the context or a time expression makes the future plan clear.",
+    noteEn:
+      "This is common for arranged or immediate plans, much like English “Are you coming tomorrow?” The present form does not change; the surrounding context supplies the future meaning.",
+    example: {
+      es: "Salimos esta noche.",
+      en: "We are going out tonight.",
+    },
+    tags: ["A1", "grammar", "present tense", "plans"],
   }),
   atomicCard("phrase-no-puedo-importante", {
-    id: "phrase-esto-es-importante",
-    promptEs: "Esto es importante.",
-    answerEn: "This is important.",
-    noteEn: "Esto points to the whole situation rather than a named object.",
-    tags: ["A1", "common expression"],
+    id: "grammar-poder-ellipsis",
+    kind: "grammar",
+    promptEs: "poder + acción omitida",
+    questionEn: "Can the action after poder be left unsaid?",
+    answerEn:
+      "Yes. Leave out the infinitive when the listener can recover the action from the conversation.",
+    noteEn:
+      "Poder normally appears before an infinitive, as in puedo ir (“I can go”). In a reply, the infinitive can disappear: no puedo means “I can't [do that].”",
+    example: {
+      es: "—¿Puedes venir? —No puedo.",
+      en: "—Can you come? —I can't.",
+    },
+    tags: ["A1", "grammar", "ellipsis", "modal verbs"],
   }),
-  atomicCard("phrase-estar-equivocado"),
+  atomicCard("phrase-estar-equivocado", {
+    noteEn:
+      "For a person holding a mistaken belief, Spanish naturally uses estar equivocado rather than ser incorrecto.",
+  }),
   atomicCard("concept-duty-calls"),
   atomicCard("phrase-change-patterns", {
     id: "phrase-volver-a-infinitive",
     promptEs: "volver a + infinitivo",
     answerEn: "to do something again",
-    noteEn: "Volver a plus an infinitive marks repetition or a return to an action.",
+    noteEn:
+      "Volver a plus an infinitive marks repetition or a return to an action.",
     tags: ["A2", "verb pattern", "repetition"],
   }),
   atomicCard("phrase-change-patterns", {
     id: "phrase-dejar-de-infinitive",
     promptEs: "dejar de + infinitivo",
     answerEn: "to stop doing something",
-    noteEn: "Dejar de plus an infinitive marks the end of an action or belief.",
+    noteEn:
+      "Dejar de plus an infinitive marks the end of an action or belief.",
     tags: ["A2", "verb pattern", "cessation"],
   }),
   atomicCard("phrase-ya-esta-comparar", {
     id: "phrase-ya-esta",
-    promptEs: "¿Y ya está?",
-    answerEn: "And that's it?",
-    noteEn: "Ya está says that nothing more is required or remains to be done.",
+    promptEs: "ya está",
+    answerEn: "that's it; it is done",
+    noteEn:
+      "Ya está says that nothing more is required or remains to be done.",
     tags: ["A2", "conversation", "common expression"],
   }),
   atomicCard("phrase-ya-esta-comparar", {
     id: "grammar-para-infinitive-purpose",
     kind: "grammar",
-    promptEs: "para comparar",
-    answerEn: "in order to compare",
-    noteEn: "Para plus an infinitive states the purpose of an action.",
+    promptEs: "para + infinitivo",
+    questionEn: "How do you say that one action is the purpose of another?",
+    answerEn: "Use para plus an infinitive to mean “in order to do something.”",
+    noteEn:
+      "Use this compact pattern when the understood subject of both actions is the same. If a different person will perform the second action, Spanish normally uses para que plus the subjunctive instead.",
+    example: { es: "Estudio para aprender.", en: "I study in order to learn." },
     tags: ["A2", "grammar", "purpose"],
   }),
   atomicCard("concept-python"),
@@ -552,82 +681,102 @@ const ATOMIC_CURATED_CARDS = [
     noteEn: "Python uses indentation as part of its block syntax.",
     tags: ["technology", "programming", "syntax"],
   }),
-  atomicCard("concept-programming-code", {
-    promptEs: "lenguaje de programación",
-    answerEn: "programming language",
-    noteEn:
-      "A programming language is a formal language used to express instructions for a computer.",
-    tags: ["technology", "programming"],
-  }),
   atomicCard("concept-antigravity"),
   atomicCard("phrase-trouble-break", {
     id: "phrase-tener-problemas",
     promptEs: "tener problemas",
     answerEn: "to have trouble; to have problems",
-    noteEn: "Tener problemas is the usual Spanish expression for experiencing trouble.",
+    noteEn:
+      "Tener problemas is the usual Spanish expression for experiencing trouble.",
     tags: ["A2", "common expression", "problems"],
   }),
   atomicCard("phrase-trouble-break", {
     id: "grammar-roto-participle",
     kind: "grammar",
     promptEs: "romper → roto",
-    answerEn: "to break → broken",
-    noteEn: "Roto is the irregular past participle of romper.",
+    questionEn: "What is the irregular past participle of romper, “to break”?",
+    answerEn: "Roto means “broken” and is the irregular past participle of romper.",
+    noteEn:
+      "Use roto after haber in compound tenses: he roto means “I have broken.” When roto acts as an adjective, it changes to match the noun: roto, rota, rotos, or rotas.",
+    example: { es: "He roto el vaso.", en: "I have broken the glass." },
     tags: ["A2", "grammar", "irregular participle"],
   }),
-  atomicCard("phrase-en-cierta-manera"),
+  atomicCard("phrase-en-cierta-manera", {
+    noteEn:
+      "This expression softens a partial agreement and signals a qualification.",
+  }),
   atomicCard("verb-poner-llamar", {
     id: "phrase-ponerle-un-nombre",
     promptEs: "ponerle un nombre a alguien",
     answerEn: "to give someone a name; to name someone",
-    noteEn: "Le marks the person receiving the name; personal a introduces that person.",
+    noteEn:
+      "Le marks the person receiving the name; personal a introduces that person.",
     tags: ["A2", "expression", "object pronouns"],
   }),
   atomicCard("verb-poner-llamar", {
     id: "phrase-llamar-a-alguien",
-    promptEs: "Le llamamos Pequeño Bobby Tablas.",
-    answerEn: "We call him Little Bobby Tables.",
-    noteEn: "Llamar describes the name people use for someone.",
+    promptEs: "llamar a alguien + nombre/apodo",
+    answerEn: "to call someone by a name or nickname",
+    noteEn:
+      "Llamar can introduce the name people use for someone.",
     tags: ["A2", "expression", "naming"],
   }),
   atomicCard("concept-sql-injection"),
-  atomicCard("phrase-records-hope", {
-    id: "phrase-registros-estudiantiles",
-    promptEs: "registros estudiantiles",
-    answerEn: "student records",
-    noteEn: "Estudiantiles is the adjective relating registros to students.",
-    tags: ["A2", "expression", "education"],
+  atomicCard("concept-input-sanitization", {
+    promptEs: "sanear entradas de base de datos",
+    answerEn: "to sanitize database input",
+    noteEn:
+      "The concept means validating untrusted input and, in practice, using parameterized queries.",
   }),
-  atomicCard("concept-input-sanitization"),
-  atomicCard("grammar-soler"),
+  atomicCard("grammar-soler", {
+    questionEn: "How do you say that someone usually does, or used to do, something?",
+    answerEn:
+      "Conjugate soler and put the main action in the infinitive.",
+    noteEn:
+      "Present forms such as suelo and suele describe a current habit. Imperfect forms such as solía describe a past habit and are often translated as “used to.” The following verb stays in its infinitive form.",
+    example: {
+      es: "Suelo caminar al trabajo.",
+      en: "I usually walk to work.",
+    },
+  }),
   atomicCard("concept-correlation-causation"),
   atomicCard("phrase-course-seem-maybe", {
     id: "phrase-dar-una-asignatura",
     promptEs: "dar una asignatura",
-    answerEn: "to take or teach a course (depending on regional context)",
-    noteEn: "In this Spanish translation, di una asignatura means I took a course.",
+    answerEn: "normally, to teach a subject or course",
+    noteEn:
+      "Dar una asignatura normally means to teach a subject. To say that a student takes a course, cursar or hacer una asignatura is usually clearer.",
     tags: ["A2", "expression", "education", "Spain"],
   }),
   atomicCard("phrase-course-seem-maybe", {
     id: "phrase-parece-que",
     promptEs: "parece que…",
     answerEn: "it seems that…; it sounds like…",
-    noteEn: "Parece que introduces an inference based on the available evidence.",
+    noteEn:
+      "Parece que introduces an inference based on the available evidence.",
     tags: ["A2", "expression", "inference"],
   }),
   atomicCard("phrase-troubleshooting", {
     id: "phrase-no-tener-nada-que-ver",
     promptEs: "no tener nada que ver",
     answerEn: "to have nothing to do with it",
-    noteEn: "This fixed expression denies any connection or relevance.",
+    noteEn:
+      "This fixed expression denies any connection or relevance.",
     tags: ["B1", "idiom", "relevance"],
   }),
   atomicCard("phrase-troubleshooting", {
-    id: "phrase-seguir-caido",
-    promptEs: "seguir caído",
-    answerEn: "to still be down; to remain offline",
-    noteEn: "Seguir plus an adjective means to remain in that state.",
-    tags: ["B1", "expression", "technology"],
+    id: "grammar-seguir-state",
+    kind: "grammar",
+    promptEs: "seguir + adjetivo/estado",
+    questionEn: "How do you say that someone or something is still in the same state?",
+    answerEn: "Use seguir followed by an adjective or state word to mean “still be” or “remain.”",
+    noteEn:
+      "Conjugate seguir for the subject, then describe the continuing state. An adjective after seguir agrees with the person or thing it describes.",
+    example: {
+      es: "La puerta sigue abierta.",
+      en: "The door is still open.",
+    },
+    tags: ["B1", "grammar", "continuation", "state"],
   }),
   atomicCard("phrase-troubleshooting", {
     id: "phrase-da-igual",
@@ -646,24 +795,25 @@ const ATOMIC_CURATED_CARDS = [
   }),
   atomicCard("concept-haiku-support", {
     id: "concept-scripted-tech-support",
-    promptEs: "guión de soporte técnico",
-    answerEn: "a fixed troubleshooting script used by first-line support",
-    noteEn: "The caller's diagnosis conflicts with the agent's required script.",
-    tags: ["technology", "technical support"],
-  }),
-  atomicCard("concept-haiku-support", {
-    id: "concept-support-engineer",
-    promptEs: "ingeniero",
-    answerEn: "the specialist who can diagnose the underlying system problem",
-    noteEn: "The joke contrasts specialist diagnosis with scripted first-line support.",
+    promptEs: "soporte con guión vs. diagnóstico experto",
+    answerEn: "scripted first-line support contrasted with expert diagnosis",
+    noteEn:
+      "The caller is trapped in a fixed troubleshooting script until an engineer recognizes the underlying problem immediately.",
     tags: ["technology", "technical support", "work"],
   }),
   atomicCard("phrase-until-should", {
     id: "grammar-deberia-expectation",
     kind: "grammar",
-    promptEs: "ya debería ir bien",
-    answerEn: "it should be working now",
-    noteEn: "Debería can express a reasoned expectation, not only an obligation.",
+    promptEs: "debería + infinitivo (expectativa)",
+    questionEn: "How can debería express an expectation rather than advice?",
+    answerEn:
+      "Debería plus an infinitive can mean that something should probably happen or be true.",
+    noteEn:
+      "Context decides whether debería gives advice or states a likely expectation. With an inanimate subject or a prediction, English “should” often means “is expected to.”",
+    example: {
+      es: "El tren debería llegar pronto.",
+      en: "The train should arrive soon.",
+    },
     tags: ["B1", "grammar", "modal meaning"],
   }),
   atomicCard("concept-shibboleet", {
@@ -675,90 +825,107 @@ const ATOMIC_CURATED_CARDS = [
   atomicCard("concept-shibboleet", {
     id: "concept-support-backdoor",
     promptEs: "puerta trasera",
-    answerEn: "a hidden backdoor into expert technical support",
-    noteEn: "In the dream, the secret phrase bypasses the normal support process.",
+    answerEn: "a hidden access path that bypasses normal controls",
+    noteEn:
+      "A backdoor bypasses the normal route or controls; the term can be used literally in technology or metaphorically for a hidden shortcut.",
     tags: ["technology", "technical support", "metaphor"],
   }),
-  atomicCard("phrase-no-se-lo-diga"),
+  atomicCard("phrase-no-se-lo-diga", {
+    id: "grammar-se-lo-pronouns",
+    kind: "grammar",
+    promptEs: "le/les + lo/la/los/las → se lo/se la/se los/se las",
+    questionEn: "Why does le or les change to se before lo, la, los, or las?",
+    answerEn:
+      "Spanish replaces le or les with se when a direct-object pronoun follows it.",
+    noteEn:
+      "The indirect-object pronoun comes first and the direct-object pronoun second. Spanish avoids combinations such as le lo, so le changes to se: doy el libro a Ana becomes se lo doy. Here se means “to her” and lo means “it.”",
+    example: { es: "Se lo doy.", en: "I give it to him/her/you." },
+    tags: ["B1", "grammar", "object pronouns"],
+  }),
   atomicCard("phrase-no-se-lo-diga", {
     id: "phrase-como-minimo",
     promptEs: "como mínimo",
     answerEn: "at least; at a minimum",
-    noteEn: "Como mínimo sets the lowest acceptable number or threshold.",
+    noteEn:
+      "Como mínimo sets the lowest acceptable number or threshold.",
     tags: ["A2", "expression", "quantity"],
   }),
   atomicCard("phrase-instead-enjoy-view", {
     id: "phrase-en-lugar-de",
     promptEs: "en lugar de",
     answerEn: "instead of",
-    noteEn: "En lugar de introduces an alternative to the action that follows.",
+    noteEn:
+      "En lugar de introduces an alternative to the action that follows.",
     tags: ["A2", "connector", "contrast"],
   }),
   atomicCard("phrase-instead-enjoy-view", {
     id: "phrase-disfrutar-de",
-    promptEs: "disfrutar de la vista",
-    answerEn: "to enjoy the view",
-    noteEn: "This translation uses disfrutar de before the thing being enjoyed.",
-    tags: ["A2", "expression", "outdoors"],
+    promptEs: "disfrutar de + sustantivo",
+    answerEn: "to enjoy something",
+    noteEn:
+      "Disfrutar de introduces the person, thing, or experience being enjoyed.",
+    tags: ["A2", "verb pattern", "prepositions"],
   }),
   atomicCard("phrase-instead-enjoy-view", {
     id: "phrase-puesta-de-sol",
     promptEs: "puesta de sol",
     answerEn: "sunset",
-    noteEn: "Literally, puesta de sol describes the sun's setting.",
+    noteEn:
+      "This lexicalized expression literally describes the sun's setting.",
     tags: ["A2", "expression", "outdoors"],
   }),
   atomicCard("phrase-try-attention-arise", {
     id: "phrase-prestar-atencion",
     promptEs: "prestar atención",
     answerEn: "to pay attention",
-    noteEn: "Prestar atención is a fixed expression; prestar alone usually means to lend.",
+    noteEn:
+      "Prestar atención is a fixed expression; prestar alone usually means to lend.",
     tags: ["A2", "expression", "attention"],
   }),
   atomicCard("phrase-try-attention-arise", {
     id: "phrase-hacerle-una-foto",
-    promptEs: "hacerle una foto a algo",
-    answerEn: "to take a photo of something",
+    promptEs: "hacer(le) una foto / hacer fotos",
+    answerEn: "to take a photo of something / to take photos",
     noteEn:
-      "Hacer una foto is the standard expression in Spain; le refers to the subject photographed.",
+      "Hacer una foto is the standard expression in Spain. The indirect pronoun le can point to the person or thing being photographed.",
     tags: ["A2", "expression", "photography", "Spain"],
   }),
   atomicCard("phrase-try-attention-arise", {
     id: "grammar-ir-a-infinitive",
     kind: "grammar",
-    promptEs: "voy a prestar…",
-    answerEn: "I am going to pay…",
+    promptEs: "ir a + infinitivo",
+    questionEn: "How do you say that someone is going to do something?",
+    answerEn: "Conjugate ir, add a, and keep the main action in the infinitive.",
     noteEn:
-      "Ir a plus an infinitive expresses an intended or expected future action.",
+      "This common pattern expresses a plan, intention, or expected near-future action. Only ir changes for the subject; the final verb stays in its dictionary form.",
+    example: { es: "Voy a estudiar.", en: "I am going to study." },
     tags: ["A2", "grammar", "future"],
   }),
   atomicCard("phrase-try-attention-arise", {
     id: "grammar-al-infinitive",
     kind: "grammar",
-    promptEs: "al intentar…",
-    answerEn: "when trying…; upon trying…",
-    noteEn: "Al plus an infinitive expresses when something happens.",
+    promptEs: "al + infinitivo",
+    questionEn: "How do you say “when doing” or “upon doing” something?",
+    answerEn: "Use al followed by an infinitive to say when another action happens.",
+    noteEn:
+      "This compact time expression often has the same subject as the main clause. Translate it naturally as “when,” “on,” or “upon” doing the action.",
+    example: { es: "Al llegar, te llamaré.", en: "When I arrive, I will call you." },
     tags: ["B1", "grammar", "time clauses"],
   }),
   atomicCard("word-bother-experience", {
     id: "phrase-perdone-que-moleste",
-    promptEs: "Perdone que la moleste.",
-    answerEn: "Sorry to bother you.",
-    noteEn: "A polite formal apology before interrupting someone.",
+    promptEs: "Perdone que + subjuntivo",
+    answerEn: "Excuse me for…; Sorry to… (formal)",
+    noteEn:
+      "This is a productive formal apology before an interruption.",
     tags: ["B1", "expression", "politeness", "formal"],
-  }),
-  atomicCard("word-bother-experience", {
-    id: "phrase-tener-experiencias",
-    promptEs: "tener experiencias",
-    answerEn: "to have experiences",
-    noteEn: "Spanish uses tener, literally to have, with experiencias.",
-    tags: ["A2", "expression", "experience"],
   }),
   atomicCard("word-bother-experience", {
     id: "phrase-lo-siento",
     promptEs: "Lo siento.",
     answerEn: "I'm sorry.",
-    noteEn: "Lo siento is the conventional expression for apologizing.",
+    noteEn:
+      "Lo siento is the conventional expression for apologizing.",
     tags: ["A1", "expression", "politeness"],
   }),
   atomicCard("word-document-distract", {
@@ -766,7 +933,8 @@ const ATOMIC_CURATED_CARDS = [
     kind: "phrase",
     promptEs: "en realidad",
     answerEn: "actually; in fact",
-    noteEn: "En realidad corrects or qualifies what was just said.",
+    noteEn:
+      "En realidad corrects or qualifies what was just said.",
     tags: ["A2", "connector", "conversation"],
   }),
   atomicCard("grammar-commands-register", {
@@ -774,24 +942,32 @@ const ATOMIC_CURATED_CARDS = [
     kind: "phrase",
     promptEs: "¡Venga ya!",
     answerEn: "Oh, come on!",
-    noteEn: "Venga ya rejects a claim with impatience or disbelief.",
+    noteEn:
+      "Venga ya rejects a claim with impatience or disbelief.",
     tags: ["B1", "expression", "conversation", "Spain"],
   }),
-  atomicCard("phrase-why-care"),
-  atomicCard("phrase-hesitation", {
-    id: "phrase-bueno-discourse-marker",
-    promptEs: "Bueno, porque…",
-    answerEn: "Well, because…",
-    noteEn: "Bueno can buy time or soften the start of an answer.",
-    tags: ["A2", "conversation", "discourse marker"],
+  atomicCard("phrase-why-care", {
+    id: "grammar-importar-indirect-object",
+    kind: "grammar",
+    promptEs: "me/te/le importa",
+    questionEn: "Why does importar put the person in me, te, or le?",
+    answerEn:
+      "The thing that matters is the subject; the person who cares is an indirect object, as with gustar.",
+    noteEn:
+      "Use me, te, le, nos, or les for the person affected. The verb agrees with the thing that matters: me importa el libro but me importan los libros.",
+    example: {
+      es: "Me importa tu opinión.",
+      en: "Your opinion matters to me; I care about your opinion.",
+    },
+    tags: ["A2", "grammar", "indirect object", "gustar-type verb"],
   }),
   atomicCard("phrase-hesitation", {
-    id: "concept-trailing-off-hesitation",
-    kind: "concept",
-    promptEs: "yo solo, eh…",
-    answerEn: "I just, uh… (trailing off while searching for an answer)",
-    noteEn: "Eh and the unfinished sentence reveal that the speaker has no good justification.",
-    tags: ["A2", "conversation", "hesitation"],
+    id: "phrase-bueno-discourse-marker",
+    promptEs: "bueno (marcador discursivo)",
+    answerEn: "well…; a way to buy time or soften a response",
+    noteEn:
+      "Bueno can buy time or soften the start of an answer.",
+    tags: ["A2", "conversation", "discourse marker"],
   }),
 ] as const satisfies readonly LearningCard[];
 
@@ -910,7 +1086,7 @@ const WORD_GLOSSARY = {
   "guión": "script",
   ha: "has",
   hable: "speak (subjunctive form)",
-  hacerle: "to take it/of it (as part of hacerle una foto)",
+  hacerle: "to take a photo of it or them (in hacerle una foto)",
   haga: "do; make (subjunctive form)",
   haiku: "Haiku (an operating system)",
   han: "they have; you all have",
@@ -1115,6 +1291,551 @@ type CuratedCardId = CuratedCard["id"];
 type NormalizedWord = keyof typeof WORD_GLOSSARY & string;
 type WordCardId = `word-${string}`;
 
+type BeginnerLanguageCardCopy = Required<
+  Pick<LearningCard, "questionEn" | "answerEn" | "noteEn" | "example">
+> & { promptEs?: string };
+
+/**
+ * Final learner-facing copy for every reusable grammar or expression card.
+ * Keeping it in one exhaustive map makes it harder for terse legacy seed copy
+ * to slip back into the live curriculum.
+ */
+const BEGINNER_LANGUAGE_CARD_COPY = {
+  "grammar-estar-gerundio": {
+    questionEn: "How do you say that someone is in the middle of doing something?",
+    answerEn:
+      "Use a form of estar followed by an action word ending in -ando or -iendo.",
+    noteEn:
+      "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+    example: { es: "Estoy leyendo.", en: "I am reading." },
+  },
+  "grammar-past-contrast": {
+    questionEn:
+      "Spanish has two common ways to talk about the past. When do you use each one?",
+    answerEn:
+      "Use the preterite for a completed event and the imperfect for background, an ongoing situation, or something that used to happen.",
+    noteEn:
+      "Think of a story: the preterite answers “What happened next?” The imperfect answers “What was happening?”, “What were things like?”, or “What used to happen?” These two names describe how the speaker presents an event, not simply how long it lasted.",
+    example: {
+      es: "Mientras caminaba, empezó a llover.",
+      en: "While I was walking, it started to rain.",
+    },
+  },
+  "grammar-present-perfect": {
+    questionEn: "How do you say “have done,” as in “I have finished”?",
+    answerEn:
+      "Use he, has, ha, hemos, habéis, or han followed by the verb’s completed-action form.",
+    noteEn:
+      "These are forms of haber, the helper verb used here like English “have.” For most verbs, the completed-action form ends in -ado after an -ar verb and -ido after an -er or -ir verb. This form is called the past participle, and it does not change after haber. How often this tense is used instead of the simple past varies by region.",
+    example: { es: "He terminado.", en: "I have finished." },
+  },
+  "grammar-subjunctive": {
+    questionEn:
+      "What happens to the second verb after phrases such as “I’m glad that…” or “It bothers me that…”?",
+    answerEn:
+      "Spanish puts that second verb in a special form called the subjunctive.",
+    noteEn:
+      "The first part expresses someone’s feeling or reaction. Que means “that” and introduces what they are reacting to. When the part after que has its own doer, Spanish normally changes its verb to the subjunctive: estás becomes estés in the example. English does not need a separate word for this change.",
+    example: {
+      es: "Me alegra que estés aquí.",
+      en: "I am glad that you are here.",
+    },
+  },
+  "grammar-esperar-que-subjunctive": {
+    questionEn:
+      "After esperar que (“to hope that”), what happens to the next verb?",
+    answerEn: "Put the verb for the hoped-for event in the subjunctive.",
+    noteEn:
+      "The subjunctive is a special Spanish verb form often used for hoped-for or uncertain events. Esperar by itself can mean “to wait.” When esperar que introduces who or what will perform the hoped-for action, that action uses the subjunctive: llegas becomes llegues.",
+    example: {
+      es: "Espero que llegues pronto.",
+      en: "I hope you arrive soon.",
+    },
+  },
+  "grammar-hasta-que-subjunctive": {
+    questionEn:
+      "After hasta que (“until”), which verb form do you use for something that has not happened yet?",
+    answerEn: "Use the subjunctive for the still-awaited action.",
+    noteEn:
+      "The subjunctive is a special Spanish verb form used here because the action is still pending. In esperaré hasta que llegues, the arrival has not happened yet. After the event has already happened, Spanish uses its ordinary statement form instead: esperé hasta que llegaste means “I waited until you arrived.”",
+    example: {
+      es: "Esperaré hasta que llegues.",
+      en: "I will wait until you arrive.",
+    },
+  },
+  "grammar-indefinite-relative-subjunctive": {
+    questionEn:
+      "Which verb form do you use when you are looking for a person or thing that has not been identified—and may not exist?",
+    answerEn:
+      "Use the subjunctive after que when describing that unknown person or thing.",
+    noteEn:
+      "Spanish treats a known person differently from one you are still trying to find. Conozco a alguien que habla inglés means “I know someone who speaks English.” Busco a alguien que hable inglés uses hable because no particular person has been identified.",
+    example: {
+      es: "Busco a alguien que hable inglés.",
+      en: "I am looking for someone who speaks English.",
+    },
+  },
+  "grammar-evaluative-subjunctive": {
+    questionEn:
+      "After “It is important/good/strange that…,” which form does the next Spanish verb take?",
+    answerEn: "Use the subjunctive for the situation being judged.",
+    noteEn:
+      "Phrases such as es importante, es bueno, and es raro express a judgment about what follows. Spanish marks the verb after que with the subjunctive. In the example, descansas—the ordinary statement form—changes to descanses.",
+    example: {
+      es: "Es importante que descanses.",
+      en: "It is important that you rest.",
+    },
+  },
+  "grammar-hypothetical": {
+    questionEn: "How do you say an imaginary “even if…, …would…” sentence?",
+    answerEn:
+      "After aunque (“even if”), use the hypothetical past form; use the “would” form for the result.",
+    noteEn:
+      "Spanish calls the first form the imperfect subjunctive. It commonly ends in -ra or -se, as in tuviera or tuviese. The result uses the conditional, often ending in -ría, as in iría. Together they present the condition as imagined or unlikely rather than expected.",
+    example: {
+      es: "Aunque tuviera tiempo, no iría.",
+      en: "Even if I had time, I would not go.",
+    },
+  },
+  "grammar-informal-command": {
+    questionEn:
+      "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
+    answerEn:
+      "Attach it to the end of the command and write the result as one word.",
+    noteEn:
+      "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+    example: { es: "¡Siéntate aquí!", en: "Sit down here!" },
+  },
+  "grammar-formal-command": {
+    questionEn: "How do you politely tell one person to do something in Spanish?",
+    answerEn:
+      "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
+    noteEn:
+      "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+    example: { es: "Pase, por favor.", en: "Come in, please." },
+  },
+  "grammar-formal-address": {
+    questionEn:
+      "When usted means polite or formal “you,” which verb form goes with it?",
+    answerEn:
+      "Use the same singular verb form used with él or ella (“he” or “she”).",
+    noteEn:
+      "Although usted refers to the listener, Spanish treats it like “he” or “she” when choosing the verb. Compare tú necesitas for informal “you need” with usted necesita for formal “you need.” Spanish often leaves usted unspoken when the context makes it clear.",
+    example: {
+      es: "¿Necesita ayuda?",
+      en: "Do you need help? (formal)",
+    },
+  },
+  "question-words": {
+    questionEn:
+      "Why do words such as que, como, and cuando sometimes have a written accent?",
+    answerEn:
+      "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+    noteEn:
+      "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+    example: {
+      es: "¿Cómo te llamas?",
+      en: "What is your name?",
+    },
+  },
+  "grammar-por-que-vs-porque": {
+    questionEn: "How do you write “why” and “because” in Spanish?",
+    answerEn: "Por qué means “why”; porque means “because.”",
+    noteEn:
+      "Write the question form as two words, with an accent on qué. Write the usual answer word porque as one word without an accent.",
+    example: {
+      es: "¿Por qué estudias español? Porque me gusta.",
+      en: "Why do you study Spanish? Because I like it.",
+    },
+  },
+  "grammar-present-immediate-plan": {
+    questionEn: "Can a Spanish present-time verb describe a future plan?",
+    answerEn:
+      "Yes. Use the normal present form when a time word or the situation makes the future meaning clear.",
+    noteEn:
+      "This is common for arranged or immediate plans, just as English can say “Are you coming tomorrow?” A phrase such as mañana or esta noche—or the conversation itself—tells the listener that the action is in the future.",
+    example: {
+      es: "Salimos esta noche.",
+      en: "We are going out tonight.",
+    },
+  },
+  "grammar-poder-ellipsis": {
+    questionEn:
+      "In a reply with poder (“can” or “be able to”), can you leave out the action?",
+    answerEn:
+      "Yes. If the action is already clear, puedo or no puedo can stand alone.",
+    noteEn:
+      "Poder usually comes before another verb in its dictionary form: puedo ir means “I can go.” When the conversation has already named the action, Spanish can omit that second verb, just as English says “I can” or “I can’t.”",
+    example: {
+      es: "—¿Puedes venir? —No puedo.",
+      en: "—Can you come? —I can’t.",
+    },
+  },
+  "grammar-para-infinitive-purpose": {
+    questionEn: "How do you say “in order to do something” in Spanish?",
+    answerEn: "Use para followed by the verb’s dictionary form.",
+    noteEn:
+      "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
+    example: {
+      es: "Estudio para aprender.",
+      en: "I study in order to learn.",
+    },
+  },
+  "grammar-roto-participle": {
+    questionEn: "What special form of romper (“to break”) means “broken”?",
+    answerEn: "Romper changes irregularly to roto.",
+    noteEn:
+      "Roto is the form used after haber in phrases such as he roto (“I have broken”). This kind of form is called a past participle. It can also describe a noun; then its ending matches that noun: un vaso roto but una ventana rota.",
+    example: {
+      es: "He roto el vaso.",
+      en: "I have broken the glass.",
+    },
+  },
+  "grammar-soler": {
+    questionEn:
+      "How do you say that someone usually does something, or used to do it?",
+    answerEn:
+      "Use a form of soler followed by the action verb in its dictionary form.",
+    noteEn:
+      "Soler adds the idea of a habit. Suelo means “I usually,” while solía means “I used to.” The action after it stays in its unchanged -ar, -er, or -ir form: suelo caminar, solía caminar.",
+    example: {
+      es: "Suelo caminar al trabajo.",
+      en: "I usually walk to work.",
+    },
+  },
+  "grammar-seguir-state": {
+    questionEn:
+      "How do you say that someone or something is still in the same condition?",
+    answerEn:
+      "Use a form of seguir followed by the word that describes the condition.",
+    noteEn:
+      "Seguir normally means “to continue” or “to keep going.” Before a description, it means “to still be” or “to remain”: sigue abierta means “is still open.” If the describing word has masculine, feminine, singular, or plural endings, match it to what is being described.",
+    example: {
+      es: "La puerta sigue abierta.",
+      en: "The door is still open.",
+    },
+  },
+  "grammar-deberia-expectation": {
+    questionEn:
+      "Besides giving advice, what can debería followed by a verb mean?",
+    answerEn: "It can say that something is expected or likely to happen.",
+    noteEn:
+      "Context decides between advice and expectation. Deberías descansar tells a person what they should do. El tren debería llegar pronto predicts what is expected to happen. In both uses, the following action stays in its dictionary form.",
+    example: {
+      es: "El tren debería llegar pronto.",
+      en: "The train should arrive soon.",
+    },
+  },
+  "grammar-se-lo-pronouns": {
+    questionEn:
+      "How do you say “I give it to her/him/them” without repeating the person and the thing?",
+    answerEn:
+      "Use se for the recipient, followed by lo, la, los, or las for the thing.",
+    noteEn:
+      "Le or les normally means “to him,” “to her,” “to you” (formal), or “to them.” Immediately before lo, la, los, or las, it changes to se; Spanish does not say le lo. Se still stands for the recipient, while the second word stands for the thing. Le doy el libro a Ana therefore becomes se lo doy.",
+    example: {
+      es: "Le doy el libro a Ana. → Se lo doy.",
+      en: "I give the book to Ana. → I give it to her.",
+    },
+  },
+  "grammar-ir-a-infinitive": {
+    questionEn: "How do you say that someone is going to do something?",
+    answerEn:
+      "Use a form of ir (“to go”), then a, then the action verb in its dictionary form.",
+    noteEn:
+      "Ir changes to match the person: voy a means “I am going to,” vas a means “you are going to,” and va a means “he/she is going to.” The final action stays in its unchanged -ar, -er, or -ir form. This pattern expresses a plan, intention, or expected future event.",
+    example: {
+      es: "Voy a estudiar.",
+      en: "I am going to study.",
+    },
+  },
+  "grammar-al-infinitive": {
+    questionEn:
+      "How do you say “when doing something” or “upon doing something”?",
+    answerEn: "Use al followed by the action verb in its dictionary form.",
+    noteEn:
+      "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al + verb tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
+    example: {
+      es: "Al llegar, te llamaré.",
+      en: "When I arrive, I will call you.",
+    },
+  },
+  "grammar-importar-indirect-object": {
+    questionEn:
+      "Why does me importa work like “it matters to me” rather than “I care about it”?",
+    answerEn:
+      "The thing that matters chooses importa or importan; me, te, le, nos, or les says who cares.",
+    noteEn:
+      "Spanish builds this idea from the thing outward. Me importa el libro literally says “The book matters to me,” so the singular el libro uses importa. Me importan los libros says “Books matter to me,” so the plural los libros uses importan. The small word identifies the affected person: me means “to me,” te means “to you,” and le can mean “to him,” “to her,” or formal “to you.”",
+    example: {
+      es: "Me importa tu opinión.",
+      en: "Your opinion matters to me; I care about your opinion.",
+    },
+  },
+  "phrase-estar-equivocado": {
+    questionEn: "How do you say that a person is wrong or mistaken?",
+    answerEn:
+      "Use estar equivocado or estar equivocada: “to be wrong” or “to be mistaken.”",
+    noteEn:
+      "Spanish uses estar here because it describes the person’s state. Equivocado changes to match the person being described: equivocado for one male person, equivocada for one female person, and equivocados or equivocadas for groups.",
+    example: {
+      es: "Creo que estoy equivocado.",
+      en: "I think I am wrong.",
+    },
+  },
+  "phrase-volver-a-infinitive": {
+    questionEn: "How do you say that someone does something again?",
+    answerEn:
+      "Use a form of volver, then a, then the action verb in its dictionary form.",
+    noteEn:
+      "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir, such as hablar, comer, or salir. Only volver changes to show who acts and when; the final verb stays in its dictionary form. In this pattern, volver a means repeating the action, not literally returning to a place.",
+    example: {
+      es: "Marta vuelve a llamar.",
+      en: "Marta calls again.",
+    },
+  },
+  "phrase-dejar-de-infinitive": {
+    questionEn: "How do you say that someone stops doing something?",
+    answerEn:
+      "Use a form of dejar, then de, then the action verb in its dictionary form.",
+    noteEn:
+      "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de + action means to stop doing that action.",
+    example: {
+      es: "Quiero dejar de fumar.",
+      en: "I want to stop smoking.",
+    },
+  },
+  "phrase-ya-esta": {
+    questionEn: "What can ya está mean when something is finished?",
+    answerEn: "Ya está can mean “that's it,” “it's done,” or “all set.”",
+    noteEn:
+      "This is an everyday fixed expression. It tells the listener that something is complete or that nothing else needs to be added. The most natural English wording depends on the situation.",
+    example: {
+      es: "Ya está. Podemos irnos.",
+      en: "That's it. We can leave.",
+    },
+  },
+  "phrase-tener-problemas": {
+    questionEn: "How do you say that someone or something is having trouble?",
+    answerEn:
+      "Use tener problemas, often followed by con to name the problem.",
+    noteEn:
+      "Change tener to match who has the problem: tengo problemas means “I am having trouble.” Use con before the person, thing, or activity causing difficulty.",
+    example: {
+      es: "Tengo problemas con mi teléfono.",
+      en: "I am having trouble with my phone.",
+    },
+  },
+  "phrase-en-cierta-manera": {
+    questionEn:
+      "How can you say that something is true only from one point of view?",
+    answerEn: "En cierta manera means “in a way” or “in a sense.”",
+    noteEn:
+      "Use this expression when a statement is only partly true or is true from one particular point of view. It signals that a qualification or explanation may follow.",
+    example: {
+      es: "En cierta manera, los dos tienen razón.",
+      en: "In a way, they are both right.",
+    },
+  },
+  "phrase-ponerle-un-nombre": {
+    questionEn: "How do you say that you give a person or animal a name?",
+    answerEn:
+      "Use ponerle un nombre a alguien: “to give someone a name” or “to name someone.”",
+    noteEn:
+      "In this expression, poner means “to give or assign,” not literally “to put.” Le means “to him, her, or it.” You can state who receives the name after a, as in ponerle un nombre al perro.",
+    example: {
+      es: "Vamos a ponerle un nombre al perro.",
+      en: "We are going to give the dog a name.",
+    },
+  },
+  "phrase-llamar-a-alguien": {
+    promptEs: "llamar a alguien + nombre o apodo",
+    questionEn:
+      "How do you say what name or nickname people use for someone?",
+    answerEn:
+      "Use llamar a alguien followed by the name or nickname: “to call someone…”",
+    noteEn:
+      "Here llamar means “to call someone by a name,” not “to telephone.” Small words such as lo, la, or—in much of Spain—le can stand for the person being named. The name or nickname follows llamar.",
+    example: {
+      es: "A Elena la llaman Nena.",
+      en: "People call Elena “Nena.”",
+    },
+  },
+  "phrase-dar-una-asignatura": {
+    questionEn: "In Spain, what does dar una asignatura normally mean?",
+    answerEn: "It normally means “to teach a subject or course.”",
+    noteEn:
+      "Dar often means “to give.” In an educational context, a teacher can dar una asignatura. A student normally cursa, hace, or estudia una asignatura instead.",
+    example: {
+      es: "Este año doy una asignatura de historia.",
+      en: "This year I teach a history course.",
+    },
+  },
+  "phrase-parece-que": {
+    questionEn:
+      "How do you introduce something that seems likely but is not certain?",
+    answerEn:
+      "Parece que… means “It seems that…” or “It looks as though…”",
+    noteEn:
+      "Put a complete statement after que. Use this pattern when the available evidence points toward a conclusion, but you are not presenting that conclusion as completely certain.",
+    example: {
+      es: "Parece que va a llover.",
+      en: "It looks like it is going to rain.",
+    },
+  },
+  "phrase-no-tener-nada-que-ver": {
+    promptEs: "no tener nada que ver con…",
+    questionEn: "How do you say that one thing has no connection to another?",
+    answerEn:
+      "Use no tener nada que ver con…: “to have nothing to do with…”",
+    noteEn:
+      "This is a fixed expression; ver does not mean literally “to see” here. Use con to name the unrelated subject. You can leave that subject unsaid when the conversation already makes it clear.",
+    example: {
+      es: "Eso no tiene nada que ver con el precio.",
+      en: "That has nothing to do with the price.",
+    },
+  },
+  "phrase-da-igual": {
+    questionEn: "How do you say that a choice or difference does not matter?",
+    answerEn:
+      "Da igual means “it doesn't matter” or “either way is fine.”",
+    noteEn:
+      "Treat da igual as a fixed expression rather than translating its two words separately. Add me, te, or le to say who does not mind: me da igual means “I don't mind.”",
+    example: {
+      es: "Da igual; las dos opciones son buenas.",
+      en: "It doesn't matter; both options are good.",
+    },
+  },
+  "phrase-como-minimo": {
+    questionEn:
+      "How do you say that a number is the lowest possible or required amount?",
+    answerEn: "Como mínimo means “at least” or “at a minimum.”",
+    noteEn:
+      "Place this expression next to the relevant amount. Here como belongs to the whole expression and does not mean “like.”",
+    example: {
+      es: "Necesitamos como mínimo tres personas.",
+      en: "We need at least three people.",
+    },
+  },
+  "phrase-en-lugar-de": {
+    questionEn: "How do you say “instead of” before a thing or an action?",
+    answerEn: "Use en lugar de.",
+    noteEn:
+      "After en lugar de, use a thing or the dictionary form of an action verb. That dictionary form is called the infinitive and usually ends in -ar, -er, or -ir.",
+    example: {
+      es: "Caminamos en lugar de conducir.",
+      en: "We walk instead of driving.",
+    },
+  },
+  "phrase-disfrutar-de": {
+    promptEs: "disfrutar de algo o alguien",
+    questionEn:
+      "How does disfrutar de connect “enjoy” to the thing being enjoyed?",
+    answerEn:
+      "Disfrutar de followed by a thing means “to enjoy that thing.”",
+    noteEn:
+      "De introduces what is being enjoyed and usually has no separate English word here. Spanish can also use disfrutar directly without de in many contexts, so learn disfrutar de as a common pattern rather than an unbreakable rule.",
+    example: {
+      es: "Disfrutamos de la música.",
+      en: "We enjoy the music.",
+    },
+  },
+  "phrase-puesta-de-sol": {
+    questionEn: "What is the usual Spanish expression for “sunset”?",
+    answerEn: "Puesta de sol means “sunset.”",
+    noteEn:
+      "Learn these three words as one noun expression. Puesta means “setting” here, so the phrase literally describes the setting of the sun.",
+    example: {
+      es: "Vimos una puesta de sol preciosa.",
+      en: "We saw a beautiful sunset.",
+    },
+  },
+  "phrase-prestar-atencion": {
+    questionEn: "How do you say “to pay attention” in Spanish?",
+    answerEn: "Use prestar atención.",
+    noteEn:
+      "English uses “pay,” but Spanish uses prestar, a verb that by itself often means “to lend.” Add a before the person or thing receiving the attention: prestar atención a algo.",
+    example: {
+      es: "Presta atención a la pregunta.",
+      en: "Pay attention to the question.",
+    },
+  },
+  "phrase-hacerle-una-foto": {
+    promptEs: "hacer una foto · hacerle una foto a alguien/algo",
+    questionEn:
+      "In Spain, how do you say “to take a photo” or “to take a photo of someone”?",
+    answerEn:
+      "Use hacer una foto; to name what is photographed, use hacerle una foto a alguien or algo.",
+    noteEn:
+      "Hacer normally means “to make” or “to do,” but in this expression it corresponds to English “take.” Le and the words after a point to the person or thing in the photo. Tomar una foto is common in many other regions.",
+    example: {
+      es: "Vamos a hacerle una foto al perro.",
+      en: "We are going to take a photo of the dog.",
+    },
+  },
+  "phrase-perdone-que-moleste": {
+    promptEs: "Perdone que…",
+    questionEn:
+      "How can you formally apologize before interrupting or bothering someone?",
+    answerEn:
+      "Say Perdone que… followed by the action: “Excuse me for…” or “Sorry to…”",
+    noteEn:
+      "Perdone is the polite form used when addressing one person formally. The verb after que uses a special form called the subjunctive because the speaker is apologizing for the action rather than simply reporting it. With someone you address informally, say Perdona que… instead.",
+    example: {
+      es: "Perdone que interrumpa.",
+      en: "Excuse me for interrupting.",
+    },
+  },
+  "phrase-lo-siento": {
+    questionEn:
+      "What is the standard way to say “I'm sorry” when apologizing or expressing sympathy?",
+    answerEn: "Lo siento means “I'm sorry.”",
+    noteEn:
+      "Use this fixed expression for an apology or when reacting sympathetically to bad news. Learn it as a complete expression instead of translating lo and siento separately.",
+    example: {
+      es: "Lo siento. Fue un error.",
+      en: "I'm sorry. It was a mistake.",
+    },
+  },
+  "phrase-en-realidad": {
+    questionEn:
+      "What expression means “actually” or “in fact” when correcting an impression?",
+    answerEn: "En realidad means “actually” or “in fact.”",
+    noteEn:
+      "Use it to correct or qualify what someone may believe. It does not mean “currently”; Spanish normally uses actualmente for that meaning.",
+    example: {
+      es: "Pensaba que era lunes, pero en realidad es martes.",
+      en: "I thought it was Monday, but it is actually Tuesday.",
+    },
+  },
+  "phrase-venga-ya": {
+    questionEn:
+      "In Spain, what does ¡Venga ya! mean when someone reacts with disbelief or impatience?",
+    answerEn: "It means “Oh, come on!” or “No way!”",
+    noteEn:
+      "Venga by itself is a form of venir, “to come,” but the complete expression is a fixed reaction. Tone can make it sound playful, disbelieving, or annoyed.",
+    example: {
+      es: "—Dice que ganó solo. —¡Venga ya!",
+      en: "—He says he won by himself. —Oh, come on!",
+    },
+  },
+  "phrase-bueno-discourse-marker": {
+    promptEs: "bueno…",
+    questionEn:
+      "What can bueno mean at the start of an answer when it is not describing something as good?",
+    answerEn:
+      "It can mean “well…,” giving the speaker time or softening the reply.",
+    noteEn:
+      "Here bueno organizes the conversation rather than describing a person or thing. A pause after it can signal hesitation, reluctance, or a gentle correction.",
+    example: {
+      es: "Bueno… no lo sé.",
+      en: "Well… I don't know.",
+    },
+  },
+} as const satisfies Partial<
+  Record<CuratedCardId, BeginnerLanguageCardCopy>
+>;
+
 interface WordSenseContext {
   pattern: readonly NormalizedWord[];
   /** Index of the target word inside pattern. */
@@ -1128,11 +1849,19 @@ interface WordSenseDefinition {
   contexts?: readonly WordSenseContext[];
 }
 
+interface WordCardTeaching {
+  /** Reusable, beginner-oriented explanation; never mentions a comic. */
+  noteEn: string;
+  /** Reusable example invented for this card, never copied from a comic. */
+  example: { es: string; en: string };
+}
+
 const WORD_SENSES = {
   a: [
     {
       key: "repetition-link",
-      answerEn: "again (the linker in volver a + infinitive)",
+      answerEn:
+        "no separate English word; it links volver to the repeated action",
       contexts: [
         { pattern: ["vuelve", "a", "ser"], at: 1 },
         { pattern: ["volvería", "a", "caerse"], at: 1 },
@@ -1163,7 +1892,7 @@ const WORD_SENSES = {
     },
     {
       key: "join-complement",
-      answerEn: "no separate English word; required before nosotros after únete",
+      answerEn: "links unirse to the person or group being joined",
       contexts: [{ pattern: ["únete", "a", "nosotros"], at: 1 }],
     },
     {
@@ -1237,7 +1966,7 @@ const WORD_SENSES = {
     },
     {
       key: "photo-subject",
-      answerEn: "to it (referring to the subject of the photo)",
+      answerEn: "to it (the thing receiving attention)",
       contexts: [{ pattern: ["algo", "le", "voy"], at: 1 }],
     },
     { key: "him", answerEn: "to him; him" },
@@ -1384,6 +2113,323 @@ const WORD_SENSES = {
   Record<NormalizedWord, readonly WordSenseDefinition[]>
 >;
 
+/**
+ * Most word cards stay intentionally compact. Only forms whose short gloss
+ * hides grammar, morphology, or an idiomatic use receive a teaching note.
+ */
+const WORD_CARD_TEACHING = {
+  "word-a--join-complement": {
+    noteEn:
+      "Unirse (“to join”) takes a before the person, group, or activity being joined. English does not translate this a separately.",
+    example: {
+      es: "Quiero unirme a este grupo.",
+      en: "I want to join this group.",
+    },
+  },
+  "word-a--personal-a": {
+    noteEn:
+      "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+    example: { es: "Veo a Marta.", en: "I see Marta." },
+  },
+  "word-de--verb-complement": {
+    noteEn:
+      "Some Spanish verbs require de before their complement or a following infinitive. English often absorbs this de into the verb’s translation: dejar de means “to stop doing,” while disfrutar de means “to enjoy.”",
+    example: { es: "Dejé de fumar.", en: "I stopped smoking." },
+  },
+  "word-al--contraction": {
+    noteEn:
+      "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+    example: { es: "Voy al mercado.", en: "I’m going to the market." },
+  },
+  "word-del": {
+    noteEn:
+      "Del is the required contraction of de + el. It can mean “of the” or “from the,” depending on context.",
+    example: {
+      es: "Vengo del mercado.",
+      en: "I’m coming from the market.",
+    },
+  },
+  "word-que--clause-link": {
+    noteEn:
+      "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+    example: {
+      es: "Creo que Ana viene.",
+      en: "I think that Ana is coming.",
+    },
+  },
+  "word-que--relative": {
+    noteEn:
+      "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+    example: {
+      es: "La persona que llamó es mi amiga.",
+      en: "The person who called is my friend.",
+    },
+  },
+  "word-lo--neutral-relative": {
+    noteEn:
+      "Lo combines with que to refer to an idea, action, or whole situation rather than a masculine noun. Together, lo que means “what” or “the thing that.”",
+    example: {
+      es: "Entiendo lo que dices.",
+      en: "I understand what you’re saying.",
+    },
+  },
+  "word-que--neutral-relative": {
+    noteEn:
+      "Here que completes lo que, a neutral expression meaning “what” or “the thing that.” It does not refer to a particular masculine or feminine noun.",
+    example: {
+      es: "Entiendo lo que dices.",
+      en: "I understand what you’re saying.",
+    },
+  },
+  "word-lo--neutral-article": {
+    noteEn:
+      "Neutral lo turns an adjective into an abstract idea: lo importante means “the important thing,” not a masculine noun.",
+    example: {
+      es: "Lo importante es empezar.",
+      en: "The important thing is to begin.",
+    },
+  },
+  "word-lo--object-pronoun": {
+    noteEn:
+      "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+    example: {
+      es: "Tengo el libro y lo leo.",
+      en: "I have the book and I’m reading it.",
+    },
+  },
+  "word-qué--exclamative-degree": {
+    noteEn:
+      "Qué before an adjective can express a strong degree, like English “how” in “how strange!” It keeps its written accent.",
+    example: {
+      es: "¡Qué bonito es el jardín!",
+      en: "How beautiful the garden is!",
+    },
+  },
+  "word-esto": {
+    noteEn:
+      "Esto is a neutral demonstrative for an unidentified thing, fact, or whole situation. It is not used directly before a noun.",
+    example: { es: "Esto es difícil.", en: "This is difficult." },
+  },
+  "word-la--formal-object-pronoun": {
+    noteEn:
+      "When speaking formally to a woman, la can mean “you” as the direct object. The same form also commonly means “her.”",
+    example: {
+      es: "La llamaré mañana, señora.",
+      en: "I’ll call you tomorrow, ma’am.",
+    },
+  },
+  "word-le--formal-recipient": {
+    noteEn:
+      "When addressing someone formally, le can mean “to you.” It is an indirect-object pronoun and normally appears before the conjugated verb.",
+    example: {
+      es: "Le escribo mañana, señor.",
+      en: "I’ll write to you tomorrow, sir.",
+    },
+  },
+  "word-le--him": {
+    noteEn:
+      "Le usually marks an indirect object, such as a recipient (“to him”). With a masculine person, especially in Spain, le can also be used as the direct object (“him”); this accepted use is called leísmo.",
+    example: {
+      es: "Le di el libro a Pablo.",
+      en: "I gave Pablo the book.",
+    },
+  },
+  "word-le--photo-subject": {
+    noteEn:
+      "Here le points back to a thing and functions as an indirect-object pronoun with prestar atención. A fuller a + noun phrase can state what le refers to.",
+    example: {
+      es: "A esta cuestión le presto mucha atención.",
+      en: "I pay close attention to this issue.",
+    },
+  },
+  "word-te--indirect": {
+    noteEn:
+      "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+    example: {
+      es: "Te envío un mensaje.",
+      en: "I’m sending you a message.",
+    },
+  },
+  "word-se--change-of-state": {
+    noteEn:
+      "With some verbs, se marks that something enters a new state rather than acting on another object. Apagarse means “to go out” or “to turn off.”",
+    example: { es: "La luz se apagó.", en: "The light went out." },
+  },
+  "word-se--passive-fixed": {
+    noteEn:
+      "Se can present a change as happening without naming an agent. Depending on the verb and context, English may use a passive or describe the result as happening on its own.",
+    example: {
+      es: "El problema se resolverá mañana.",
+      en: "The problem will be resolved tomorrow.",
+    },
+  },
+  "word-se--passive-transfer": {
+    noteEn:
+      "This se presents the action without naming who performs it. A following le can identify the person who receives or is affected by the action.",
+    example: {
+      es: "Se le enviará un mensaje.",
+      en: "A message will be sent to you.",
+    },
+  },
+  "word-se--indirect-before-lo": {
+    noteEn:
+      "When le or les comes immediately before lo, la, los, or las, it changes to se. This se identifies the recipient; it is not reflexive.",
+    example: {
+      es: "Le doy el libro a Ana. → Se lo doy.",
+      en: "I give the book to Ana. → I give it to her.",
+    },
+  },
+  "word-su": {
+    noteEn:
+      "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+    example: {
+      es: "Señora, aquí está su café.",
+      en: "Ma’am, here is your coffee.",
+    },
+  },
+  "word-sus": {
+    noteEn:
+      "Sus is used before plural things that are owned. It agrees with what is owned, not with the owner; with usted, it can mean formal “your.”",
+    example: {
+      es: "Señor, estos son sus documentos.",
+      en: "Sir, these are your documents.",
+    },
+  },
+  "word-hacerle": {
+    noteEn:
+      "Hacerle combines hacer with the indirect-object pronoun le. In hacerle una foto a algo or alguien, the full expression means “to take a photo of it or them.”",
+    example: {
+      es: "Quiero hacerle una foto al edificio.",
+      en: "I want to take a photo of the building.",
+    },
+  },
+  "word-pasármela": {
+    noteEn:
+      "Pasármela combines pasar + me + la: pasar means “to pass,” me means “to me,” and la replaces a feminine person or thing. Object pronouns can attach to an infinitive.",
+    example: {
+      es: "La botella está allí; ¿puedes pasármela?",
+      en: "The bottle is over there; can you pass it to me?",
+    },
+  },
+  "word-prestar": {
+    noteEn:
+      "Prestar normally means “to lend,” but prestar atención is a fixed expression meaning “to pay attention.”",
+    example: {
+      es: "Presta atención a la explicación.",
+      en: "Pay attention to the explanation.",
+    },
+  },
+  "word-ir": {
+    noteEn:
+      "Ir normally means “to go.” In ir bien or ir mal, it describes how something works or is going: va bien means “it works” or “it’s going well.”",
+    example: {
+      es: "La aplicación va bien.",
+      en: "The app is working well.",
+    },
+  },
+  "word-nada": {
+    noteEn:
+      "After a negative verb, nada is commonly translated as “anything,” even though its basic meaning is “nothing.” Spanish keeps both negative words.",
+    example: { es: "No veo nada.", en: "I don’t see anything." },
+  },
+  "word-nadie": {
+    noteEn:
+      "After a negative verb, nadie is commonly translated as “anyone.” Spanish uses negative concord, so no and nadie can appear together.",
+    example: {
+      es: "No conozco a nadie.",
+      en: "I don’t know anyone.",
+    },
+  },
+} as const satisfies Partial<Record<WordCardId, WordCardTeaching>>;
+
+/**
+ * This copy is materialized into CardApplication records, not LearningCard.
+ * It may therefore describe the selected occurrence without contaminating the
+ * reusable SRS card when that card appears in another comic.
+ */
+const WORD_APPLICATION_EXPLANATIONS = {
+  "word-a--join-complement":
+    "Here a connects únete to nosotros. English simply says “join us,” so a disappears in translation.",
+  "word-a--personal-a":
+    "Here a marks a specific person as the receiver of the action; it has no separate English word.",
+  "word-de--verb-complement":
+    "Here de is required by the verb before the following complement. Translate the complete verb pattern, not de by itself.",
+  "word-que--relative":
+    "Here que connects the noun before it to a description of that noun.",
+  "word-lo--neutral-relative":
+    "Here lo joins que to form lo que, referring to an idea or situation rather than a named object.",
+  "word-que--neutral-relative":
+    "Here que completes lo que. Together they mean “what” or “the thing that.”",
+  "word-lo--neutral-article":
+    "Here lo turns the following adjective into an abstract idea: “the best thing.”",
+  "word-qué--exclamative-degree":
+    "Here qué intensifies insoportable. The combination means “how unbearable,” not “what unbearable.”",
+  "word-la--formal-object-pronoun":
+    "Here la refers respectfully to the woman being bothered, so it means formal “you.”",
+  "word-le--formal-recipient":
+    "Here le identifies the formally addressed person who will receive the transferred call.",
+  "word-le--photo-subject":
+    "Here le points back to algo—the thing that will receive the speaker’s attention.",
+  "word-te--indirect":
+    "Here te marks “you” as the person affected by the verb rather than as its subject.",
+  "word-se--passive-fixed":
+    "Here se lets the speaker say that the problem will be fixed without naming who will fix it.",
+  "word-se--passive-transfer":
+    "Here se presents the transfer without naming the operator; le identifies the person receiving it.",
+  "word-se--indirect-before-lo":
+    "Here se replaces le before lo. Se is the recipient and lo is the thing not to be told.",
+} as const satisfies Partial<Record<WordCardId, string>>;
+
+/** Occurrence-specific guidance for reusable expressions. */
+const PHRASE_APPLICATION_EXPLANATIONS = {
+  "phrase-estar-equivocado":
+    "Here estar describes the person’s current state, and equivocado labels that state as being mistaken.",
+  "phrase-volver-a-infinitive":
+    "Here volver + a + the unchanged action verb says that the action happens again.",
+  "phrase-dejar-de-infinitive":
+    "Here dejar + de + the unchanged action verb says that the action or belief stopped.",
+  "phrase-ya-esta":
+    "Here ya está signals that the action is complete and nothing more is needed.",
+  "phrase-tener-problemas":
+    "Here a form of tener combines with problemas to describe trouble that is currently happening.",
+  "phrase-en-cierta-manera":
+    "Here en cierta manera limits the claim: it is true only in one sense, not completely.",
+  "phrase-ponerle-un-nombre":
+    "Here ponerle un nombre assigns a name, and the words after a identify who receives it.",
+  "phrase-llamar-a-alguien":
+    "Here llamar introduces the name or nickname used for the person; it does not mean making a phone call.",
+  "phrase-dar-una-asignatura":
+    "Here dar una asignatura refers to teaching a course, not taking one as a student.",
+  "phrase-parece-que":
+    "Here parece que introduces a conclusion that seems likely from the available evidence.",
+  "phrase-no-tener-nada-que-ver":
+    "Here the whole fixed expression denies any connection; ver does not literally mean seeing.",
+  "phrase-da-igual":
+    "Here da igual dismisses the distinction because the choice does not matter.",
+  "phrase-como-minimo":
+    "Here como mínimo sets the lowest acceptable amount or threshold.",
+  "phrase-en-lugar-de":
+    "Here en lugar de introduces the action chosen as the alternative.",
+  "phrase-disfrutar-de":
+    "Here disfrutar de connects the act of enjoying to what is being enjoyed.",
+  "phrase-puesta-de-sol":
+    "Here puesta de sol works as one noun expression meaning “sunset.”",
+  "phrase-prestar-atencion":
+    "Here prestar atención works as one expression meaning “to pay attention”; prestar is not being used as “to lend.”",
+  "phrase-hacerle-una-foto":
+    "Here hacer una foto means taking a photo; le and the words after a can identify what is photographed.",
+  "phrase-perdone-que-moleste":
+    "Here Perdone que politely introduces an apology before the potentially bothersome action.",
+  "phrase-lo-siento":
+    "Here lo siento functions as the complete conventional apology, rather than as two separately translated words.",
+  "phrase-en-realidad":
+    "Here en realidad signals a correction or qualification of the preceding idea.",
+  "phrase-venga-ya":
+    "Here venga ya is a fixed reaction showing disbelief or impatience, not a literal request to come.",
+  "phrase-bueno-discourse-marker":
+    "Here bueno opens a hesitant response and gives the speaker time; it does not describe something as good.",
+} as const satisfies Partial<Record<CuratedCardId, string>>;
+
 function wordCardId(normalized: string, senseKey?: string): WordCardId {
   return `word-${normalized}${senseKey ? `--${senseKey}` : ""}`;
 }
@@ -1396,18 +2442,20 @@ const WORD_CARDS = Object.entries(WORD_GLOSSARY).flatMap(
     const definitions = senses ?? [
       { key: "", answerEn: defaultAnswerEn } satisfies WordSenseDefinition,
     ];
-    return definitions.map(
-      (sense) =>
-        ({
-          id: wordCardId(normalized, sense.key),
-          kind: "word",
-          promptEs: normalized,
-          answerEn: sense.answerEn,
-          noteEn:
-            "This card tracks the meaning of this exact surface form in this comic context.",
-          tags: ["word", "contextual sense"],
-        }) satisfies LearningCard,
-    );
+    return definitions.map((sense) => {
+      const id = wordCardId(normalized, sense.key);
+      const teaching =
+        WORD_CARD_TEACHING[id as keyof typeof WORD_CARD_TEACHING];
+      return {
+        id,
+        kind: "word",
+        promptEs: normalized,
+        answerEn: sense.answerEn,
+        noteEn: teaching?.noteEn ?? "",
+        ...(teaching ? { example: teaching.example } : {}),
+        tags: ["word", "contextual sense"],
+      } satisfies LearningCard;
+    });
   },
 );
 
@@ -1416,7 +2464,13 @@ const WORD_CARDS = Object.entries(WORD_GLOSSARY).flatMap(
  * superseded by the exact surface-form cards above. Grammar, expressions,
  * and concepts remain as the reusable higher-level learning targets.
  */
-const REUSABLE_CURATED_CARDS = ATOMIC_CURATED_CARDS;
+const REUSABLE_CURATED_CARDS: readonly LearningCard[] =
+  ATOMIC_CURATED_CARDS.map((card) => ({
+    ...card,
+    ...(BEGINNER_LANGUAGE_CARD_COPY[
+      card.id as keyof typeof BEGINNER_LANGUAGE_CARD_COPY
+    ] ?? {}),
+  }));
 
 export const CARDS: readonly LearningCard[] = [
   ...REUSABLE_CURATED_CARDS,
@@ -1448,6 +2502,18 @@ export interface WordOccurrence {
   cardIds: readonly CardId[];
 }
 
+export interface CardApplication {
+  /** Display-only identity; SRS scheduling always uses cardId. */
+  id: string;
+  cardId: CardId;
+  /** Every word occurrence that instantiates this use of the shared card. */
+  participantWordIds: readonly string[];
+  /** Only the relevant Spanish fragment, never a whole-bubble translation. */
+  exampleEs: string;
+  /** How the reusable lesson applies to this exact comic fragment. */
+  explanationEn: string;
+}
+
 export interface RevealRegion {
   id: string;
   /** Exact Spanish text printed in the translated image. */
@@ -1456,6 +2522,8 @@ export interface RevealRegion {
   noteEn: string;
   bounds: PercentBounds;
   words: readonly WordOccurrence[];
+  /** Comic-specific display context, stored separately from shared cards. */
+  applications: readonly CardApplication[];
   cardIds: readonly CardId[];
 }
 
@@ -1494,7 +2562,7 @@ export interface Comic {
   cardIds: readonly CardId[];
 }
 
-interface RevealRegionSeed extends Omit<RevealRegion, "words" | "cardIds"> {
+interface RevealRegionSeed extends Omit<RevealRegion, "words" | "applications" | "cardIds"> {
   /** Curated cards eligible to be linked to words in this region. */
   cardIds: readonly LegacyCuratedCardId[];
 }
@@ -1531,82 +2599,337 @@ function tokenizeLabel(labelEs: string): { text: string; normalized: string }[] 
  * Contiguous surface patterns make links occurrence-specific. For example,
  * the `a` in `vuelve a ser` receives that expression card, while another `a`
  * elsewhere in the same bubble does not.
+ *
+ * A targeted pattern can match a larger exact surface span while linking only
+ * the offsets that instantiate the learning target. This is useful when an
+ * adverb, subject, or other comic-specific word interrupts a reusable pattern.
  */
+interface TargetedCuratedPattern {
+  tokens: readonly NormalizedWord[];
+  targetOffsets?: readonly number[];
+  /** Optional occurrence-specific teaching copy; kept outside LearningCard. */
+  exampleEs?: string;
+  applicationEn?: string;
+}
+
+type CuratedPattern = readonly NormalizedWord[] | TargetedCuratedPattern;
+
 const CURATED_CARD_PATTERNS = {
   "grammar-estar-gerundio": [
-    ["estás", "volando"],
-    ["estamos", "teniendo"],
+    {
+      tokens: ["estás", "volando"],
+      exampleEs: "estás volando",
+      applicationEn:
+        "Estás is the tú form of estar (“you are”), and volando is the -ando form of volar (“to fly”). Together they present the flying as happening now.",
+    },
+    {
+      tokens: ["estamos", "teniendo"],
+      exampleEs: "estamos teniendo",
+      applicationEn:
+        "Estamos means “we are,” and teniendo is the irregular -iendo form of tener. The school is describing a problem currently in progress.",
+    },
   ],
   "grammar-past-contrast": [
-    ["aprendí"],
-    ["escribí"],
-    ["probé"],
-    ["solía"],
-    ["implicaba"],
-    ["di"],
-    ["dejé"],
+    {
+      tokens: ["aprendí"],
+      exampleEs: "aprendí",
+      applicationEn:
+        "Aprendí is preterite because learning it last night is presented as one completed event.",
+    },
+    {
+      tokens: ["escribí"],
+      exampleEs: "escribí",
+      applicationEn:
+        "Escribí is preterite because typing the command is a completed step in the story.",
+    },
+    {
+      tokens: ["probé"],
+      exampleEs: "probé",
+      applicationEn:
+        "Probé is preterite because trying the other items is presented as a completed action.",
+    },
+    {
+      tokens: ["solía"],
+      exampleEs: "solía",
+      applicationEn:
+        "Solía is imperfect because it describes a repeated former habit: what the speaker used to believe.",
+    },
+    {
+      tokens: ["implicaba"],
+      exampleEs: "implicaba",
+      applicationEn:
+        "Implicaba is imperfect because it describes the continuing content of that former belief, not a new completed event.",
+    },
+    {
+      tokens: ["di"],
+      exampleEs: "di una asignatura",
+      applicationEn:
+        "Di is preterite because the course is treated as a completed event that changed the speaker's view.",
+    },
+    {
+      tokens: ["dejé"],
+      exampleEs: "dejé de creerlo",
+      applicationEn:
+        "Dejé is preterite because stopping the belief is the completed change that moves the story forward.",
+    },
   ],
   "grammar-present-perfect": [
-    ["ha", "roto"],
-    ["hemos", "perdido"],
-    ["he", "reiniciado"],
-    ["han", "surgido"],
-    ["has", "encontrado"],
+    {
+      tokens: ["ha", "roto"],
+      exampleEs: "ha roto",
+      applicationEn:
+        "Ha is the he/she/usted form of haber, and roto is the participle. The question asks about a past action whose result matters now.",
+    },
+    {
+      tokens: ["hemos", "perdido"],
+      exampleEs: "hemos perdido",
+      applicationEn:
+        "Hemos is the we form of haber, followed by perdido. The records were lost earlier, and that loss is the school's current problem.",
+    },
+    {
+      tokens: ["he", "reiniciado"],
+      exampleEs: "he reiniciado",
+      applicationEn:
+        "He is the I form of haber, followed by reiniciado. The restart has just been completed and its result is relevant now.",
+    },
+    {
+      tokens: ["han", "surgido"],
+      exampleEs: "han surgido",
+      applicationEn:
+        "Han is the they form of haber, followed by surgido. The adventures happened before now but are being discussed as part of the speaker's experience.",
+    },
+    {
+      tokens: ["has", "encontrado"],
+      exampleEs: "has encontrado",
+      applicationEn:
+        "Has is the tú form of haber, followed by encontrado. The thing was found earlier and is still important at this moment.",
+    },
   ],
   "grammar-subjunctive": [
-    ["odio", "que"],
-    ["molesta", "que"],
-    ["haga"],
-    ["tenga"],
+    {
+      tokens: ["odio", "que", "la", "gente", "haga", "fotos"],
+      targetOffsets: [0, 1, 4],
+      exampleEs: "odio que … haga fotos",
+      applicationEn:
+        "Odio gives the emotional reaction. Que introduces what other people do, so hacer appears in the subjunctive form haga.",
+    },
+    {
+      tokens: ["molesta", "que", "otra", "gente", "tenga", "experiencias"],
+      targetOffsets: [0, 1, 4],
+      exampleEs: "molesta que … tenga experiencias",
+      applicationEn:
+        "Molesta gives the reaction. Que introduces another group's action, so tener appears in the subjunctive form tenga.",
+    },
   ],
   "grammar-esperar-que-subjunctive": [
-    ["espero", "que"],
-    ["esté"],
-    ["hayan", "aprendido"],
+    {
+      tokens: ["espero", "que", "esté"],
+      exampleEs: "espero que esté",
+      applicationEn:
+        "Espero que introduces the speaker's hope, so estar changes to the subjunctive form esté.",
+    },
+    {
+      tokens: ["espero", "que", "hayan", "aprendido"],
+      exampleEs: "espero que hayan aprendido",
+      applicationEn:
+        "Espero que introduces a hope about an already completed action. Hayan aprendido is the perfect subjunctive: “have learned.”",
+    },
   ],
-  "grammar-hasta-que-subjunctive": [["hasta", "que", "hable"]],
+  "grammar-hasta-que-subjunctive": [
+    {
+      tokens: ["hasta", "que", "hable"],
+      exampleEs: "hasta que hable",
+      applicationEn:
+        "The speaker has not yet talked to an engineer. Because that event is still pending, hablar appears as the subjunctive hable.",
+    },
+  ],
   "grammar-indefinite-relative-subjunctive": [
-    ["alguien", "que", "lleve"],
-    ["persona", "que", "conozca"],
+    {
+      tokens: ["alguien", "que", "lleve"],
+      exampleEs: "alguien que lleve",
+      applicationEn:
+        "Alguien refers to a person not yet identified. The description after que therefore uses the subjunctive form lleve.",
+    },
+    {
+      tokens: ["persona", "que", "conozca"],
+      exampleEs: "una persona que conozca",
+      applicationEn:
+        "The speaker is not naming a known person, but any person who meets the requirement. Conocer therefore appears as conozca.",
+    },
   ],
   "grammar-evaluative-subjunctive": [
-    [
-      "insoportable",
-      "es",
-      "que",
-      "un",
-      "desconocido",
-      "condescendiente",
-      "te",
-      "diga",
-    ],
+    {
+      tokens: [
+        "insoportable",
+        "es",
+        "que",
+        "un",
+        "desconocido",
+        "condescendiente",
+        "te",
+        "diga",
+      ],
+      targetOffsets: [0, 1, 2, 7],
+      exampleEs: "qué insoportable es que … diga",
+      applicationEn:
+        "Es insoportable gives the judgment. Que introduces the action being judged, so decir appears in the subjunctive form diga.",
+    },
   ],
   "grammar-hypothetical": [
-    ["aunque", "volviese"],
-    ["volvería", "a", "caerse"],
+    {
+      tokens: ["aunque", "volviese", "volvería", "a", "caerse"],
+      targetOffsets: [0, 1, 2],
+      exampleEs: "aunque volviese, volvería a caerse",
+      applicationEn:
+        "Volviese presents the return as hypothetical. Volvería gives the imagined result: it would go down again.",
+    },
   ],
-  "grammar-informal-command": [["únete"]],
+  "grammar-informal-command": [
+    {
+      tokens: ["únete"],
+      exampleEs: "¡Únete!",
+      applicationEn:
+        "Únete combines the affirmative tú command une with the reflexive pronoun te. The written accent keeps the stress in the right place.",
+    },
+  ],
   "grammar-formal-command": [
-    ["mire"],
-    ["diga"],
-    ["perdone"],
+    {
+      tokens: ["mire"],
+      exampleEs: "mire",
+      applicationEn:
+        "Mire is the usted command of mirar. It politely asks one person to look or listen.",
+    },
+    {
+      tokens: ["diga"],
+      exampleEs: "diga",
+      applicationEn:
+        "Diga is the irregular usted command of decir. It politely tells one person to say something.",
+    },
+    {
+      tokens: ["perdone"],
+      exampleEs: "perdone",
+      applicationEn:
+        "Perdone is the usted command of perdonar. Here it works as the polite formula “excuse me.”",
+    },
   ],
   "grammar-formal-address": [
-    ["su", "hijo"],
-    ["su", "oficina"],
-    ["esté", "contenta"],
-    ["usted"],
-    ["ve"],
-    ["puede"],
-    ["pasármela"],
-    ["mire"],
-    ["diga"],
-    ["perdone"],
+    {
+      tokens: ["esté", "contenta"],
+      targetOffsets: [0],
+      exampleEs: "esté contenta",
+      applicationEn:
+        "The caller addresses the mother as usted. Esté is therefore singular third person, even though it means “you are” here.",
+    },
+    {
+      tokens: ["usted"],
+      exampleEs: "usted",
+      applicationEn:
+        "Usted explicitly marks the listener as formal “you” and takes singular third-person grammar.",
+    },
+    {
+      tokens: ["debe"],
+      exampleEs: "debe",
+      applicationEn:
+        "Debe is singular third person in form, but here it means formal “you must.”",
+    },
+    {
+      tokens: ["ve"],
+      exampleEs: "¿Ve…?",
+      applicationEn:
+        "Ve is singular third person in form, but the question politely asks the listener “Do you see…?”",
+    },
+    {
+      tokens: ["perfecto", "puede", "pasármela"],
+      targetOffsets: [1],
+      exampleEs: "puede",
+      applicationEn:
+        "Puede uses the singular form associated with usted, marking the request as formal without needing to repeat usted.",
+    },
+    {
+      tokens: ["puede", "decir"],
+      targetOffsets: [0],
+      exampleEs: "puede decir",
+      applicationEn:
+        "Puede is singular third person in form, but here it means formal “you can say.”",
+    },
   ],
-  "question-words": [["qué"], ["cómo"], ["por", "qué"]],
-  "phrase-venir-a-la-cama": [["vienes", "a", "la", "cama"]],
-  "phrase-no-puedo-importante": [["no", "puedo"]],
-  "phrase-esto-es-importante": [["esto", "es", "importante"]],
+  "question-words": [
+    {
+      tokens: ["el", "qué"],
+      targetOffsets: [1],
+      exampleEs: "¿El qué?",
+      applicationEn:
+        "Qué carries an accent because it directly asks “what?” in this short follow-up question.",
+    },
+    {
+      tokens: ["mej", "qué"],
+      targetOffsets: [1],
+      exampleEs: "¿Qué…?",
+      applicationEn:
+        "Qué carries an accent because the surprised speaker is asking “what?”",
+    },
+    {
+      tokens: ["imagina", "qué", "insoportable"],
+      targetOffsets: [1],
+      exampleEs: "qué insoportable",
+      applicationEn:
+        "Qué carries an accent here because it is exclamative: qué insoportable means “how unbearable.”",
+    },
+    {
+      tokens: ["por", "qué"],
+      targetOffsets: [1],
+      exampleEs: "por qué",
+      applicationEn:
+        "Qué keeps its accent inside por qué because the phrase asks “why.”",
+    },
+    {
+      tokens: ["volando", "cómo"],
+      targetOffsets: [1],
+      exampleEs: "¿Cómo?",
+      applicationEn:
+        "Cómo carries an accent because it directly asks “how?”",
+    },
+    {
+      tokens: ["cómo", "estás", "volando"],
+      targetOffsets: [0],
+      exampleEs: "cómo",
+      applicationEn:
+        "Cómo carries an accent here because it asks a direct question about manner: “how?”",
+    },
+    {
+      tokens: ["importa", "cómo", "disfrutan"],
+      targetOffsets: [1],
+      exampleEs: "cómo disfrutan",
+      applicationEn:
+        "Cómo carries an accent because it introduces the embedded question of how other people enjoy the sunset.",
+    },
+  ],
+  "grammar-por-que-vs-porque": [
+    {
+      tokens: ["por", "qué"],
+      exampleEs: "¿Por qué?",
+      applicationEn:
+        "This is the two-word question form por qué, meaning “why.” The one-word answer form porque means “because.”",
+    },
+  ],
+  "grammar-present-immediate-plan": [
+    {
+      tokens: ["vienes", "a", "la", "cama"],
+      targetOffsets: [0],
+      exampleEs: "vienes",
+      applicationEn:
+        "Vienes has an ordinary present-time form, but the surrounding situation makes it a plan about what happens next.",
+    },
+  ],
+  "grammar-poder-ellipsis": [
+    {
+      tokens: ["no", "puedo"],
+      targetOffsets: [1],
+      exampleEs: "puedo",
+      applicationEn:
+        "Puedo normally introduces an action. Here that action is left unsaid because the preceding conversation already makes it clear.",
+    },
+  ],
   "phrase-estar-equivocado": [["está", "equivocado"]],
   "concept-duty-calls": [["internet"], ["equivocado"]],
   "phrase-volver-a-infinitive": [
@@ -1614,78 +2937,161 @@ const CURATED_CARD_PATTERNS = {
     ["volvería", "a", "caerse"],
   ],
   "phrase-dejar-de-infinitive": [["dejé", "de", "creerlo"]],
-  "phrase-ya-esta": [["y", "ya", "está"]],
-  "grammar-para-infinitive-purpose": [["para", "comparar"]],
+  "phrase-ya-esta": [["ya", "está"]],
+  "grammar-para-infinitive-purpose": [
+    {
+      tokens: ["para", "comparar"],
+      exampleEs: "para comparar",
+      applicationEn:
+        "Para introduces the purpose, and comparar stays in the infinitive: the extra attempt was made “in order to compare.”",
+    },
+  ],
   "concept-python": [["python"]],
   "concept-hello-world": [["hola", "mundo"]],
   "concept-dynamic-typing": [["tipado", "dinámico"]],
   "concept-indentation": [["indentación"]],
-  "concept-programming-code": [
-    ["lenguajes", "de", "programación"],
-  ],
   "concept-antigravity": [["import", "antigravity"]],
-  "phrase-tener-problemas": [["teniendo"], ["problemas"]],
-  "grammar-roto-participle": [["ha", "roto"]],
+  "phrase-tener-problemas": [
+    {
+      tokens: ["estamos", "teniendo", "ciertos", "problemas"],
+      targetOffsets: [1, 3],
+    },
+  ],
+  "grammar-roto-participle": [
+    {
+      tokens: ["ha", "roto"],
+      targetOffsets: [1],
+      exampleEs: "ha roto",
+      applicationEn:
+        "Roto is the irregular participle that follows ha. Here it means “has broken.”",
+    },
+  ],
   "phrase-en-cierta-manera": [["en", "cierta", "manera"]],
   "phrase-ponerle-un-nombre": [
-    ["le", "puso", "a", "su", "hijo", "el", "nombre"],
+    ["le", "puso", "a", "su", "hijo", "el", "nombre", "de", "robert"],
   ],
-  "phrase-llamar-a-alguien": [["le", "llamamos"]],
+  "phrase-llamar-a-alguien": [
+    ["le", "llamamos", "pequeño", "bobby", "tablas"],
+  ],
   "concept-sql-injection": [
     ["robert", "drop", "table", "students"],
     ["pequeño", "bobby", "tablas"],
   ],
-  "phrase-registros-estudiantiles": [["registros", "estudiantiles"]],
   "concept-input-sanitization": [
-    ["sanear", "la", "inserción"],
-    ["bases", "de", "datos"],
+    {
+      tokens: ["sanear", "la", "inserción", "de", "sus", "bases", "de", "datos"],
+      targetOffsets: [0, 2, 5, 7],
+    },
   ],
-  "grammar-soler": [["solía", "creer"]],
+  "grammar-soler": [
+    {
+      tokens: ["solía", "creer"],
+      exampleEs: "solía creer",
+      applicationEn:
+        "Solía is the past-habit form of soler, and creer remains an infinitive. Together they mean “used to believe.”",
+    },
+  ],
   "concept-correlation-causation": [
     ["correlación"],
+    ["implicaba"],
     ["causalidad"],
-    ["creerlo"],
-    ["ayudó"],
   ],
   "phrase-dar-una-asignatura": [["di", "una", "asignatura"]],
   "phrase-parece-que": [["parece", "que"]],
   "phrase-no-tener-nada-que-ver": [["no", "tiene", "nada", "que", "ver"]],
-  "phrase-seguir-caido": [["sigue", "caído"]],
+  "grammar-seguir-state": [
+    {
+      tokens: ["sigue", "caído"],
+      exampleEs: "sigue caído",
+      applicationEn:
+        "Sigue says the state continues, and caído describes the down or offline state: it is still down.",
+    },
+  ],
   "phrase-da-igual": [["da", "igual"]],
   "concept-haiku-os": [["haiku"]],
   "concept-scripted-tech-support": [
     ["seguir", "un", "guión"],
     ["servicio", "técnico"],
     ["soporte", "telefónico"],
+    ["ingeniero"],
   ],
-  "concept-support-engineer": [["ingeniero"]],
-  "grammar-deberia-expectation": [["ya", "debería", "ir", "bien"]],
+  "grammar-deberia-expectation": [
+    {
+      tokens: ["ya", "debería", "ir", "bien"],
+      targetOffsets: [1, 2],
+      exampleEs: "debería ir bien",
+      applicationEn:
+        "Debería ir expresses a reasoned expectation, not advice: the connection should now work properly.",
+    },
+  ],
   "concept-shibboleet": [["shibboleet"]],
   "concept-support-backdoor": [["puerta", "trasera"]],
-  "phrase-no-se-lo-diga": [["no", "se", "lo", "diga", "a", "nadie"]],
+  "grammar-se-lo-pronouns": [
+    {
+      tokens: ["no", "se", "lo", "diga", "a", "nadie"],
+      targetOffsets: [1, 2],
+      exampleEs: "no se lo diga",
+      applicationEn:
+        "Se stands for “to anyone,” and lo stands for the secret. Spanish uses se lo, not le lo, before diga.",
+    },
+  ],
   "phrase-como-minimo": [["como", "mínimo"]],
   "phrase-en-lugar-de": [["en", "lugar", "de"]],
-  "phrase-disfrutar-de": [["disfrutar", "de", "la", "vista"]],
+  "phrase-disfrutar-de": [
+    ["disfrutar", "de", "la", "vista"],
+    {
+      tokens: ["disfrutan", "otros", "de", "una", "puesta", "de", "sol"],
+      targetOffsets: [0, 2, 3, 4, 5, 6],
+    },
+  ],
   "phrase-puesta-de-sol": [["puesta", "de", "sol"]],
-  "phrase-prestar-atencion": [["prestar"], ["atención"]],
-  "phrase-hacerle-una-foto": [["hacerle", "una", "foto", "a", "algo"]],
-  "grammar-ir-a-infinitive": [["voy", "a", "prestar"]],
-  "grammar-al-infinitive": [["al", "intentar"]],
+  "phrase-prestar-atencion": [
+    {
+      tokens: ["prestar", "más", "atención"],
+      targetOffsets: [0, 2],
+    },
+  ],
+  "phrase-hacerle-una-foto": [
+    ["hacerle", "una", "foto", "a", "algo"],
+    ["haga", "fotos"],
+  ],
+  "grammar-ir-a-infinitive": [
+    {
+      tokens: ["voy", "a", "prestar"],
+      exampleEs: "voy a prestar",
+      applicationEn:
+        "Voy shows who acts, a links the verbs, and prestar stays in its unchanged dictionary form. Together they mark the following action as planned or expected.",
+    },
+  ],
+  "grammar-al-infinitive": [
+    {
+      tokens: ["al", "intentar"],
+      exampleEs: "al intentar",
+      applicationEn:
+        "Al plus the infinitive intentar marks when the adventures arose: “when trying.”",
+    },
+  ],
   "phrase-perdone-que-moleste": [["perdone", "que", "la", "moleste"]],
-  "phrase-tener-experiencias": [["tenga", "experiencias"]],
   "phrase-lo-siento": [["lo", "siento"]],
   "phrase-en-realidad": [["en", "realidad"]],
   "phrase-venga-ya": [["venga", "ya"]],
-  "phrase-why-care": [["por", "qué"], ["te", "importa"]],
+  "grammar-importar-indirect-object": [
+    {
+      tokens: ["te", "importa"],
+      exampleEs: "te importa",
+      applicationEn:
+        "Te names the person affected (“to you”), while the situation is what matters. In natural English, the question asks why you care.",
+    },
+  ],
   "phrase-bueno-discourse-marker": [["bueno"]],
-  "concept-trailing-off-hesitation": [["yo", "solo", "eh"]],
 } as const satisfies Partial<
-  Record<CuratedCardId, readonly (readonly NormalizedWord[])[]>
+  Record<CuratedCardId, readonly CuratedPattern[]>
 >;
 
 const LEGACY_CARD_EXPANSIONS: Partial<
   Record<LegacyCuratedCardId, readonly string[]>
 > = {
+  "question-words": ["question-words", "grammar-por-que-vs-porque"],
   "grammar-subjunctive": [
     "grammar-subjunctive",
     "grammar-esperar-que-subjunctive",
@@ -1699,10 +3105,8 @@ const LEGACY_CARD_EXPANSIONS: Partial<
     "grammar-formal-address",
     "phrase-venga-ya",
   ],
-  "phrase-no-puedo-importante": [
-    "phrase-no-puedo-importante",
-    "phrase-esto-es-importante",
-  ],
+  "phrase-venir-a-la-cama": ["grammar-present-immediate-plan"],
+  "phrase-no-puedo-importante": ["grammar-poder-ellipsis"],
   "phrase-change-patterns": [
     "phrase-volver-a-infinitive",
     "phrase-dejar-de-infinitive",
@@ -1713,8 +3117,8 @@ const LEGACY_CARD_EXPANSIONS: Partial<
   ],
   "concept-python-syntax": ["concept-dynamic-typing", "concept-indentation"],
   "concept-programming-code": [
-    "concept-programming-code",
     "phrase-como-minimo",
+    "concept-scripted-tech-support",
   ],
   "phrase-trouble-break": [
     "phrase-tener-problemas",
@@ -1724,23 +3128,19 @@ const LEGACY_CARD_EXPANSIONS: Partial<
     "phrase-ponerle-un-nombre",
     "phrase-llamar-a-alguien",
   ],
-  "phrase-records-hope": [
-    "phrase-registros-estudiantiles",
-    "grammar-esperar-que-subjunctive",
-  ],
+  "phrase-records-hope": ["grammar-esperar-que-subjunctive"],
   "phrase-course-seem-maybe": [
     "phrase-dar-una-asignatura",
     "phrase-parece-que",
   ],
   "phrase-troubleshooting": [
     "phrase-no-tener-nada-que-ver",
-    "phrase-seguir-caido",
+    "grammar-seguir-state",
     "phrase-da-igual",
   ],
   "concept-haiku-support": [
     "concept-haiku-os",
     "concept-scripted-tech-support",
-    "concept-support-engineer",
     "phrase-da-igual",
   ],
   "phrase-until-should": [
@@ -1748,10 +3148,12 @@ const LEGACY_CARD_EXPANSIONS: Partial<
     "grammar-deberia-expectation",
   ],
   "concept-shibboleet": ["concept-shibboleet", "concept-support-backdoor"],
+  "phrase-no-se-lo-diga": ["grammar-se-lo-pronouns"],
   "phrase-instead-enjoy-view": [
     "phrase-en-lugar-de",
     "phrase-disfrutar-de",
     "phrase-puesta-de-sol",
+    "phrase-hacerle-una-foto",
   ],
   "phrase-try-attention-arise": [
     "phrase-prestar-atencion",
@@ -1761,40 +3163,65 @@ const LEGACY_CARD_EXPANSIONS: Partial<
   ],
   "word-bother-experience": [
     "phrase-perdone-que-moleste",
-    "phrase-tener-experiencias",
     "phrase-lo-siento",
   ],
   "word-document-distract": ["phrase-en-realidad"],
-  "phrase-hesitation": [
-    "phrase-bueno-discourse-marker",
-    "concept-trailing-off-hesitation",
-  ],
+  "phrase-why-care": ["grammar-importar-indirect-object"],
+  "phrase-hesitation": ["phrase-bueno-discourse-marker"],
 };
 
 const REUSABLE_CURATED_CARD_IDS = new Set<string>(
   REUSABLE_CURATED_CARDS.map((card) => card.id),
 );
 const CURATED_PATTERNS_BY_ID: Partial<
-  Record<CuratedCardId, readonly (readonly NormalizedWord[])[]>
+  Record<CuratedCardId, readonly CuratedPattern[]>
 > = CURATED_CARD_PATTERNS;
 
-function matchingIndexes(
+interface CuratedPatternMatch {
+  start: number;
+  participantIndexes: readonly number[];
+  matchedIndexes: readonly number[];
+}
+
+function matchingPatternOccurrences(
   tokens: readonly { normalized: string }[],
-  pattern: readonly string[],
-): Set<number> {
-  const indexes = new Set<number>();
-  for (let start = 0; start <= tokens.length - pattern.length; start += 1) {
+  pattern: CuratedPattern,
+): CuratedPatternMatch[] {
+  const matches: CuratedPatternMatch[] = [];
+  const expectedTokens = "tokens" in pattern ? pattern.tokens : pattern;
+  const targetOffsets =
+    "tokens" in pattern
+      ? (pattern.targetOffsets ?? expectedTokens.map((_, offset) => offset))
+      : expectedTokens.map((_, offset) => offset);
+
+  if (
+    targetOffsets.length === 0 ||
+    new Set(targetOffsets).size !== targetOffsets.length ||
+    targetOffsets.some(
+      (offset) => offset < 0 || offset >= expectedTokens.length,
+    )
+  ) {
+    throw new Error("Invalid target offsets in curated card pattern");
+  }
+
+  for (
+    let start = 0;
+    start <= tokens.length - expectedTokens.length;
+    start += 1
+  ) {
     if (
-      pattern.every(
+      expectedTokens.every(
         (expected, offset) => tokens[start + offset].normalized === expected,
       )
     ) {
-      for (let offset = 0; offset < pattern.length; offset += 1) {
-        indexes.add(start + offset);
-      }
+      matches.push({
+        start,
+        participantIndexes: targetOffsets.map((offset) => start + offset),
+        matchedIndexes: expectedTokens.map((_, offset) => start + offset),
+      });
     }
   }
-  return indexes;
+  return matches;
 }
 
 function contextMatchesAt(
@@ -1809,28 +3236,47 @@ function contextMatchesAt(
   );
 }
 
-function meaningCardIdForOccurrence(
+interface ResolvedWordMeaning {
+  cardId: WordCardId;
+  matchedContext?: WordSenseContext;
+  contextStart?: number;
+}
+
+function resolveWordMeaningForOccurrence(
   tokens: readonly { normalized: string }[],
   index: number,
-): WordCardId {
+): ResolvedWordMeaning {
   const normalized = tokens[index].normalized as NormalizedWord;
   const senses = WORD_SENSES[normalized as keyof typeof WORD_SENSES] as
     | readonly WordSenseDefinition[]
     | undefined;
-  if (!senses) return wordCardId(normalized);
+  if (!senses) return { cardId: wordCardId(normalized) };
 
-  const matched = senses.find(
-    (sense) =>
-      sense.contexts?.some((context) =>
-        contextMatchesAt(tokens, index, context),
-      ) ?? false,
+  const matches = senses.flatMap((sense) =>
+    (sense.contexts ?? [])
+      .filter((context) => contextMatchesAt(tokens, index, context))
+      .map((context) => ({ sense, context })),
   );
+  if (matches.length > 1) {
+    throw new Error(
+      `Ambiguous contextual word sense for ${normalized} at token ${index}`,
+    );
+  }
+  const matched = matches[0];
   const fallback = senses.find((sense) => !sense.contexts);
-  const sense = matched ?? fallback;
+  const sense = matched?.sense ?? fallback;
   if (!sense) {
     throw new Error(`No contextual word sense for ${normalized}`);
   }
-  return wordCardId(normalized, sense.key);
+  return {
+    cardId: wordCardId(normalized, sense.key),
+    ...(matched
+      ? {
+          matchedContext: matched.context,
+          contextStart: index - matched.context.at,
+        }
+      : {}),
+  };
 }
 
 function defineRegion(seed: RevealRegionSeed): RevealRegion {
@@ -1842,6 +3288,7 @@ function defineRegion(seed: RevealRegionSeed): RevealRegion {
     );
   }
   const linkedIndexes = new Map<CuratedCardId, Set<number>>();
+  const applications: CardApplication[] = [];
 
   const candidateCardIds = [
     ...new Set(
@@ -1858,24 +3305,27 @@ function defineRegion(seed: RevealRegionSeed): RevealRegion {
     const patterns = CURATED_PATTERNS_BY_ID[cardId] ?? [];
     const indexes = new Set<number>();
     for (const pattern of patterns) {
-      for (const index of matchingIndexes(tokens, pattern)) indexes.add(index);
-    }
-    if (cardId === "question-words") {
-      tokens.forEach((token, index) => {
-        if (
-          token.normalized === "qué" &&
-          tokens[index - 1]?.normalized === "imagina"
-        ) {
-          indexes.delete(index);
+      for (const match of matchingPatternOccurrences(tokens, pattern)) {
+        for (const index of match.participantIndexes) indexes.add(index);
+        const applicationEn =
+          ("tokens" in pattern ? pattern.applicationEn : undefined) ??
+          PHRASE_APPLICATION_EXPLANATIONS[
+            cardId as keyof typeof PHRASE_APPLICATION_EXPLANATIONS
+          ];
+        if (applicationEn) {
+          applications.push({
+            id: `${seed.id}:${cardId}:${match.start}`,
+            cardId,
+            participantWordIds: match.participantIndexes.map(
+              (index) => `${seed.id}-word-${index + 1}`,
+            ),
+            exampleEs:
+              ("tokens" in pattern ? pattern.exampleEs : undefined) ??
+              match.matchedIndexes.map((index) => tokens[index].text).join(" "),
+            explanationEn: applicationEn,
+          });
         }
-      });
-    }
-    if (cardId === "grammar-evaluative-subjunctive") {
-      tokens.forEach((token, index) => {
-        if (!["insoportable", "es", "que", "diga"].includes(token.normalized)) {
-          indexes.delete(index);
-        }
-      });
+      }
     }
     if (indexes.size === 0) continue;
     linkedIndexes.set(cardId, indexes);
@@ -1887,7 +3337,31 @@ function defineRegion(seed: RevealRegionSeed): RevealRegion {
         `Missing word gloss for ${token.normalized} in region ${seed.id}`,
       );
     }
-    const wordMeaningCardId = meaningCardIdForOccurrence(tokens, index);
+    const resolvedMeaning = resolveWordMeaningForOccurrence(tokens, index);
+    const wordMeaningCardId = resolvedMeaning.cardId;
+    const applicationExplanation =
+      WORD_APPLICATION_EXPLANATIONS[
+        wordMeaningCardId as keyof typeof WORD_APPLICATION_EXPLANATIONS
+      ];
+    if (
+      resolvedMeaning.matchedContext &&
+      resolvedMeaning.contextStart !== undefined &&
+      applicationExplanation
+    ) {
+      const contextEnd =
+        resolvedMeaning.contextStart +
+        resolvedMeaning.matchedContext.pattern.length;
+      applications.push({
+        id: `${seed.id}:${wordMeaningCardId}:word-${index + 1}`,
+        cardId: wordMeaningCardId,
+        participantWordIds: [`${seed.id}-word-${index + 1}`],
+        exampleEs: tokens
+          .slice(resolvedMeaning.contextStart, contextEnd)
+          .map((contextToken) => contextToken.text)
+          .join(" "),
+        explanationEn: applicationExplanation,
+      });
+    }
     const relatedCardIds = [...linkedIndexes.entries()]
       .filter(([, indexes]) => indexes.has(index))
       .map(([cardId]) => cardId);
@@ -1907,6 +3381,7 @@ function defineRegion(seed: RevealRegionSeed): RevealRegion {
     noteEn: seed.noteEn,
     bounds: seed.bounds,
     words,
+    applications,
     cardIds: [...new Set(words.flatMap((word) => word.cardIds))],
   };
 }
@@ -2298,6 +3773,7 @@ const COMIC_SEEDS = [
           "word-tech-vocabulary",
           "phrase-troubleshooting",
           "concept-haiku-support",
+          "grammar-commands-register",
         ],
       },
       {
@@ -2490,6 +3966,31 @@ export function validateContent(): string[] {
   for (const card of CARDS) {
     if (cardIds.has(card.id)) errors.push(`Duplicate card id: ${card.id}`);
     cardIds.add(card.id);
+    if (
+      card.kind !== "concept" &&
+      /\bcomic\b|this translation/i.test(card.noteEn)
+    ) {
+      errors.push(`Reusable language card embeds comic context: ${card.id}`);
+    }
+    if (
+      card.kind === "word" &&
+      Boolean(card.noteEn.trim()) !== Boolean(card.example)
+    ) {
+      errors.push(
+        `Expanded word card needs both an explanation and example: ${card.id}`,
+      );
+    }
+    if (card.kind === "grammar" || card.kind === "phrase") {
+      if (!card.questionEn?.trim()) {
+        errors.push(`Language card has no beginner question: ${card.id}`);
+      }
+      if (!card.noteEn.trim()) {
+        errors.push(`Language card has no reusable explanation: ${card.id}`);
+      }
+      if (!card.example?.es.trim() || !card.example.en.trim()) {
+        errors.push(`Language card has no reusable bilingual example: ${card.id}`);
+      }
+    }
   }
 
   for (const comic of COMICS) {
@@ -2685,7 +4186,145 @@ export function validateContent(): string[] {
             );
           }
         }
+        for (const cardId of word.cardIds.slice(1)) {
+          const relatedKind = CARD_BY_ID.get(cardId)?.kind;
+          if (relatedKind !== "grammar" && relatedKind !== "phrase") continue;
+          const matchingApplications = region.applications.filter(
+            (application) =>
+              application.cardId === cardId &&
+              application.participantWordIds.includes(word.id),
+          );
+          if (matchingApplications.length !== 1) {
+            errors.push(
+              `Language link needs exactly one comic application in ${comic.id}/${region.id}/${word.id}: ${cardId}`,
+            );
+          }
+        }
+        const wordApplicationCount = region.applications.filter(
+          (application) =>
+            application.cardId === meaningCardId &&
+            application.participantWordIds.includes(word.id),
+        ).length;
+        const expectsWordApplication =
+          meaningCardId in WORD_APPLICATION_EXPLANATIONS;
+        if (wordApplicationCount !== (expectsWordApplication ? 1 : 0)) {
+          errors.push(
+            `Word meaning application mismatch in ${comic.id}/${region.id}/${word.id}: ${meaningCardId}`,
+          );
+        }
       });
+
+      const applicationIds = new Set<string>();
+      const applicationTuples = new Set<string>();
+      for (const application of region.applications) {
+        if (applicationIds.has(application.id)) {
+          errors.push(
+            `Duplicate application id in ${comic.id}/${region.id}: ${application.id}`,
+          );
+        }
+        applicationIds.add(application.id);
+        const card = CARD_BY_ID.get(application.cardId);
+        if (
+          !card ||
+          (card.kind !== "grammar" &&
+            card.kind !== "phrase" &&
+            card.kind !== "word")
+        ) {
+          errors.push(
+            `Application does not reference a word, grammar, or phrase card in ${comic.id}/${region.id}: ${application.cardId}`,
+          );
+        }
+        if (!application.exampleEs.trim() || !application.explanationEn.trim()) {
+          errors.push(
+            `Application has empty teaching copy in ${comic.id}/${region.id}: ${application.id}`,
+          );
+        }
+        if (
+          application.participantWordIds.length === 0 ||
+          new Set(application.participantWordIds).size !==
+            application.participantWordIds.length
+        ) {
+          errors.push(
+            `Application has invalid participants in ${comic.id}/${region.id}: ${application.id}`,
+          );
+        }
+        const tuple = `${application.cardId}:${[...application.participantWordIds].sort().join(",")}`;
+        if (applicationTuples.has(tuple)) {
+          errors.push(
+            `Duplicate application participants in ${comic.id}/${region.id}: ${tuple}`,
+          );
+        }
+        applicationTuples.add(tuple);
+        for (const participantWordId of application.participantWordIds) {
+          const participant = region.words.find(
+            (word) => word.id === participantWordId,
+          );
+          if (!participant) {
+            errors.push(
+              `Application references an unknown word in ${comic.id}/${region.id}: ${participantWordId}`,
+            );
+          } else if (
+            (card?.kind === "word" &&
+              (application.participantWordIds.length !== 1 ||
+                participant.cardIds[0] !== application.cardId)) ||
+            ((card?.kind === "grammar" || card?.kind === "phrase") &&
+              !participant.cardIds.slice(1).includes(application.cardId))
+          ) {
+            errors.push(
+              `Application is not reverse-linked in ${comic.id}/${region.id}/${participantWordId}: ${application.cardId}`,
+            );
+          }
+        }
+        const exampleTokens = tokenizeLabel(application.exampleEs).map(
+          (token) => token.normalized,
+        );
+        let regionCursor = 0;
+        const exampleIsSubsequence = exampleTokens.every((exampleToken) => {
+          const nextIndex = region.words.findIndex(
+            (word, index) =>
+              index >= regionCursor && word.normalized === exampleToken,
+          );
+          if (nextIndex < 0) return false;
+          regionCursor = nextIndex + 1;
+          return true;
+        });
+        if (!exampleIsSubsequence) {
+          errors.push(
+            `Application example is not from its comic region in ${comic.id}/${region.id}: ${application.id}`,
+          );
+        }
+      }
+
+      const languageIdsInRegion = new Set(
+        [...wordReferenced].filter(
+          (cardId) => {
+            const kind = CARD_BY_ID.get(cardId as CardId)?.kind;
+            return kind === "grammar" || kind === "phrase";
+          },
+        ),
+      );
+      const applicationCardIds = new Set(
+        region.applications
+          .filter((application) => {
+            const kind = CARD_BY_ID.get(application.cardId)?.kind;
+            return kind === "grammar" || kind === "phrase";
+          })
+          .map((application) => application.cardId),
+      );
+      for (const languageCardId of languageIdsInRegion) {
+        if (!applicationCardIds.has(languageCardId as CardId)) {
+          errors.push(
+            `Region language card has no application in ${comic.id}/${region.id}: ${languageCardId}`,
+          );
+        }
+      }
+      for (const applicationCardId of applicationCardIds) {
+        if (!languageIdsInRegion.has(applicationCardId)) {
+          errors.push(
+            `Region application has no linked language card in ${comic.id}/${region.id}: ${applicationCardId}`,
+          );
+        }
+      }
 
       if (new Set(region.cardIds).size !== region.cardIds.length) {
         errors.push(`Duplicate region card index in ${comic.id}/${region.id}`);

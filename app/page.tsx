@@ -27,16 +27,9 @@ import {
   type SrsState,
 } from "../lib/srs";
 
-const SRS_STORAGE_KEY = "tira:srs:v2";
-const UI_STORAGE_KEY = "tira:ui:v2";
+const SRS_STORAGE_KEY = "tira:srs:v3";
+const UI_STORAGE_KEY = "tira:ui:v3";
 const CURRICULUM_CARD_IDS = CARDS.map((card) => card.id);
-
-const KIND_LABELS: Record<LearningCard["kind"], string> = {
-  word: "word",
-  phrase: "phrase",
-  grammar: "grammar",
-  concept: "idea",
-};
 
 const KIND_GROUPS: readonly {
   kind: LearningCard["kind"];
@@ -50,8 +43,8 @@ const KIND_GROUPS: readonly {
   },
   {
     kind: "phrase",
-    label: "Expression or phrase",
-    description: "Meaning created by words used together",
+    label: "Reusable expression",
+    description: "A common pattern or fixed expression used beyond this sentence",
   },
   {
     kind: "grammar",
@@ -171,7 +164,6 @@ export default function Home() {
         .map((id) => lookupCard(id))
         .filter((card): card is LearningCard => card !== null)
     : [];
-  const selectedCard = selectedCardId ? lookupCard(selectedCardId) : null;
   const dueCardIds = getDueCardIds(srs, CURRICULUM_CARD_IDS);
   const learnedTodayIds = getLearnedTodayCardIds(srs).filter((cardId) =>
     CARD_BY_ID.has(cardId as CardId),
@@ -214,6 +206,21 @@ export default function Home() {
     return () => window.clearTimeout(timeout);
   }, [toast]);
 
+  useEffect(() => {
+    if (!selectedCardId) return;
+    const frame = window.requestAnimationFrame(() => {
+      document
+        .getElementById(`flashcard-${encodeURIComponent(selectedCardId)}`)
+        ?.scrollIntoView({
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? "auto"
+            : "smooth",
+          block: "nearest",
+        });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [selectedCardId]);
+
   function commit(nextState: SrsState, nextOpened = openedByComic) {
     setSrs(nextState);
     setOpenedByComic(nextOpened);
@@ -245,6 +252,10 @@ export default function Home() {
   }
 
   function learnCard(cardId: string) {
+    if (selectedCardId === cardId) {
+      setSelectedCardId(null);
+      return;
+    }
     setSelectedCardId(cardId);
     const wasAlreadyLearnedToday = learnedTodayIds.includes(cardId);
     const nextState = recordCardHelp(srs, cardId);
@@ -587,7 +598,7 @@ export default function Home() {
           </div>
         </article>
 
-        <aside ref={revealPanelRef} className={`reveal-panel ${selectedRegion ? "has-selection" : ""}`} aria-live="polite">
+        <aside ref={revealPanelRef} className={`reveal-panel ${selectedRegion ? "has-selection" : ""}`}>
           {selectedRegion ? (
             <div className="reveal-scroll">
               <div className="reveal-meta">
@@ -639,21 +650,140 @@ export default function Home() {
                               const isSelected = selectedCardId === card.id;
                               const isLearned = learnedTodayIds.includes(card.id);
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
+                              const frontId = `${candidateId}-front`;
+                              const answerId = `${candidateId}-answer`;
+                              const patternId = `${candidateId}-pattern`;
+                              const howItWorksId = `${candidateId}-how-it-works`;
+                              const generalExampleId = `${candidateId}-general-example`;
+                              const comicApplicationId = `${candidateId}-in-this-comic`;
+                              const matchingApplications =
+                                selectedRegion?.applications.filter(
+                                  (application) =>
+                                    application.cardId === card.id &&
+                                    application.participantWordIds.includes(selectedWord.id),
+                                ) ?? [];
+                              const hasSupportingContent = Boolean(
+                                card.noteEn ||
+                                card.example ||
+                                matchingApplications.length > 0,
+                              );
+                              const isCompactWordCard =
+                                card.kind === "word" && !hasSupportingContent;
                               return (
-                                <button
+                                <article
                                   key={card.id}
-                                  className={`${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""}`}
-                                  onClick={() => learnCard(card.id)}
-                                  aria-pressed={isSelected}
-                                  aria-labelledby={`${candidateId}-prompt`}
-                                  aria-describedby={`${candidateId}-status`}
+                                  id={`flashcard-${encodeURIComponent(card.id)}`}
+                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
                                 >
-                                  <span className="candidate-state" aria-hidden="true">{isLearned ? "✓" : "→"}</span>
-                                  <span className="candidate-copy">
-                                    <strong id={`${candidateId}-prompt`} lang="es">{card.promptEs}</strong>
-                                    <small id={`${candidateId}-status`}>{isLearned ? "Learned today; reveal again" : "Reveal answer + add to review"}</small>
-                                  </span>
-                                </button>
+                                  <button
+                                    type="button"
+                                    className="candidate-trigger"
+                                    onClick={() => learnCard(card.id)}
+                                    aria-expanded={isSelected}
+                                    aria-controls={isSelected ? answerId : undefined}
+                                    aria-labelledby={frontId}
+                                    aria-describedby={`${candidateId}-status`}
+                                  >
+                                    <span className="candidate-state" aria-hidden="true">{isLearned ? "✓" : "→"}</span>
+                                    <span className="candidate-copy">
+                                      {card.questionEn ? (
+                                        <strong id={frontId} className="candidate-question">
+                                          {card.questionEn}
+                                        </strong>
+                                      ) : (
+                                        <strong id={frontId} className="candidate-prompt" lang="es">
+                                          {card.promptEs}
+                                        </strong>
+                                      )}
+                                      <small id={`${candidateId}-status`}>
+                                        {isSelected
+                                          ? card.kind === "word"
+                                            ? "Meaning shown · tap to close"
+                                            : "Answer shown · tap to close"
+                                          : isLearned
+                                            ? card.kind === "word"
+                                              ? "Learned today · show meaning"
+                                              : "Learned today · show answer"
+                                            : card.kind === "word"
+                                              ? "Reveal meaning + add to review"
+                                              : "Reveal answer + add to review"}
+                                      </small>
+                                    </span>
+                                  </button>
+
+                                  {isSelected ? (
+                                    <div
+                                      id={answerId}
+                                      className="candidate-reveal"
+                                      role="region"
+                                      aria-labelledby={frontId}
+                                    >
+                                      <div className="candidate-answer-label">
+                                        {card.kind === "word" ? "MEANING HERE" : "SHORT ANSWER"}
+                                      </div>
+                                      <div className="candidate-answer">{card.answerEn}</div>
+
+                                      {card.questionEn ? (
+                                        <section
+                                          className={`candidate-pattern ${card.kind === "phrase" ? "is-expression" : ""}`}
+                                          aria-labelledby={patternId}
+                                        >
+                                          <h5 id={patternId}>
+                                            {card.kind === "phrase"
+                                              ? "SPANISH EXPRESSION"
+                                              : "SPANISH PATTERN"}
+                                          </h5>
+                                          <p lang="es">{card.promptEs}</p>
+                                        </section>
+                                      ) : null}
+
+                                      {card.noteEn ? (
+                                        <section
+                                          className="candidate-explanation"
+                                          aria-labelledby={howItWorksId}
+                                        >
+                                          <h5 id={howItWorksId}>HOW IT WORKS</h5>
+                                          <p>{card.noteEn}</p>
+                                        </section>
+                                      ) : null}
+
+                                      {card.example ? (
+                                        <section
+                                          className="candidate-general-example"
+                                          aria-labelledby={generalExampleId}
+                                        >
+                                          <h5 id={generalExampleId}>GENERAL EXAMPLE</h5>
+                                          <p className="candidate-example-es" lang="es">
+                                            {card.example.es}
+                                          </p>
+                                          <p className="candidate-example-en">{card.example.en}</p>
+                                        </section>
+                                      ) : null}
+
+                                      {matchingApplications.length > 0 ? (
+                                        <section
+                                          className="candidate-applications"
+                                          aria-labelledby={comicApplicationId}
+                                        >
+                                          <h5 id={comicApplicationId}>IN THIS COMIC</h5>
+                                          {matchingApplications.map((application) => (
+                                            <div className="candidate-application" key={application.id}>
+                                              <strong lang="es">{application.exampleEs}</strong>
+                                              <p>{application.explanationEn}</p>
+                                            </div>
+                                          ))}
+                                        </section>
+                                      ) : null}
+
+                                      {card.kind !== "word" ? (
+                                        <div className="candidate-tags">
+                                          {card.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                                        </div>
+                                      ) : null}
+                                      <div className="candidate-memory"><span>✓</span> Returns on day {srs.studyDay + 1}</div>
+                                    </div>
+                                  ) : null}
+                                </article>
                               );
                             })}
                           </div>
@@ -666,38 +796,13 @@ export default function Home() {
                 <div className="choose-word-prompt"><span>↖</span> Choose a highlighted word directly in the comic. This still adds 0 cards.</div>
               )}
 
-              {selectedCard ? (
-                <section className="learning-card-detail" aria-label={`Revealed ${KIND_LABELS[selectedCard.kind]} card`}>
-                  <div className="detail-heading">
-                    <div className={`kind-badge kind-${selectedCard.kind}`}>{KIND_LABELS[selectedCard.kind]}</div>
-                    <span>LEARNED TODAY</span>
-                  </div>
-                  <div className="card-answer" lang="es">{selectedCard.promptEs}</div>
-                  <div className="card-prompt">{selectedCard.answerEn}</div>
-                  <p>{selectedCard.noteEn}</p>
-                  <div className="card-tags">
-                    {selectedCard.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                  </div>
-                  <div className="memory-copy"><span>✓</span> This specific card returns on day {srs.studyDay + 1}</div>
-                </section>
-              ) : selectedWord ? (
-                <div className="choose-card-prompt"><span>↑</span> Choose a card to reveal its answer and count it as learned today.</div>
-              ) : null}
-
-              {selectedCard ? (
-                <div className="bubble-context">
-                  <div className="translation-label">WHOLE-BUBBLE CONTEXT · NOT AN EXTRA CARD</div>
-                  <strong>{selectedRegion.translationEn}</strong>
-                  <p>{selectedRegion.noteEn}</p>
-                </div>
-              ) : null}
             </div>
           ) : (
             <div className="empty-reveal">
               <div className="empty-glyph">1</div>
               <h3>Let the comic speak first.</h3>
               <p>
-                Choose a word whenever you need help. Tap any marked Spanish word in the picture; its meaning, expression, grammar, and idea cards will appear here.
+                Choose a word whenever you need help. Tap any marked Spanish word in the picture; its word meaning, reusable expression, grammar, and necessary context cards will appear here.
               </p>
               <div className="gesture-line"><span>↖</span> try any highlighted Spanish word</div>
               <div className="today-mini">
@@ -820,7 +925,7 @@ export default function Home() {
             <p>Tira turns the real context of a Spanish comic into a memory session—without a separate quiz.</p>
             <ol className="method-steps">
               <li><span>1</span><div><strong>Read before translating</strong><p>The Spanish artwork and the joke give you a real chance to infer meaning.</p></div></li>
-              <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. Opening it saves nothing; reveal only the meaning, expression, grammar, or idea you needed.</p></div></li>
+              <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. Opening it saves nothing; reveal only the word meaning, reusable expression, grammar lesson, or context card you needed.</p></div></li>
               <li><span>3</span><div><strong>Finish honestly</strong><p>What you understood unaided graduates; what needed help returns soon.</p></div></li>
               <li><span>4</span><div><strong>Let overlap choose</strong><p>Your next comic contains as many of your due cards as possible.</p></div></li>
             </ol>
