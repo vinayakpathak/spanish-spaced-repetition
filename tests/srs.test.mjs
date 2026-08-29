@@ -7,6 +7,7 @@ import {
   getCardProgress,
   getRecentlyOpenedCardIds,
   hydrateSrsState,
+  isCurrentSrsSnapshot,
   rankComics,
   reconcileSrsState,
   recordCardOpen,
@@ -438,8 +439,8 @@ test("schema-four hydration sanitizes malformed and orphan pending exposures", (
   assert.equal(restored.nextSessionId, 2);
 });
 
-test("schema-three migration keeps only bounded aggregate evidence without fake dates", () => {
-  const legacy = {
+test("legacy schema-three progress starts a fresh timestamped state", () => {
+  const oldState = {
     schemaVersion: 3,
     studyDay: 9,
     cards: {
@@ -461,61 +462,52 @@ test("schema-three migration keeps only bounded aggregate evidence without fake 
     ],
     activeSession: null,
   };
-  const migrated = hydrateSrsState(legacy, NOW);
+  const hydrated = hydrateSrsState(oldState, NOW);
 
-  assert.equal(migrated.schemaVersion, 4);
-  assert.equal(migrated.historyCompleteness, "legacy-bounded");
-  assert.deepEqual(migrated.cards.hard, {
-    exposures: [],
-    legacyEvidence: { displayCount: 1, openCount: 1 },
-  });
-  assert.deepEqual(migrated.cards.known.legacyEvidence, {
-    displayCount: 1,
-    openCount: 0,
-  });
-  assert.deepEqual(migrated.cards.aggregateOnly.legacyEvidence, {
-    displayCount: 99,
-    openCount: 8,
-  });
-  assert.deepEqual(migrated.cards.aggregateOnly.exposures, []);
-  assert.equal(migrated.comics.old.lastViewedAtMs, null);
-  assert.equal(migrated.comics.old.lastCompletedAtMs, null);
-  assert.ok(
-    scoreCardPriority(migrated, "hard", NOW).priorityIndex >
-      scoreCardPriority(migrated, "known", NOW).priorityIndex,
-  );
-
-  const oldComic = comic("old", ["hard"], 1);
-  const newComic = comic("new", ["known"], 0);
-  const selected = selectNextComic([oldComic, newComic], migrated, NOW);
-  assert.equal(selected.reason, "priority");
-  assert.equal(selected.comic.id, "new");
-  assert.equal(selectNextComic([oldComic], migrated, NOW).reason, "complete");
+  assert.deepEqual(hydrated, createSrsState());
+  assert.equal(selectNextComic([comic("old", ["hard"])], hydrated, NOW).reason, "priority");
 });
 
-test("a schema-three active session restarts timestamping at migration", () => {
-  const legacy = {
-    schemaVersion: 3,
-    studyDay: 4,
-    cards: {},
-    comics: {},
-    history: [
-      { comicId: "active", cardId: "opened", day: 4, event: "help" },
-    ],
-    activeSession: {
-      comicId: "active",
-      startedDay: 4,
-      eligibleCardIds: ["opened", "pending"],
-      clickedCardIds: ["opened"],
+test("already-migrated legacy snapshots also start fresh", () => {
+  const migratedLegacyState = {
+    ...createSrsState(),
+    historyCompleteness: "legacy-bounded",
+    cards: {
+      oldCard: {
+        exposures: [],
+        legacyEvidence: { displayCount: 12, openCount: 8 },
+      },
     },
+    comics: {
+      read: {
+        views: 1,
+        completions: 1,
+        lastViewedAtMs: null,
+        lastCompletedAtMs: null,
+      },
+    },
+    lastCompletedComicId: "read",
   };
-  const migrated = hydrateSrsState(legacy, NOW);
 
-  assert.equal(migrated.activeSession?.startedAtMs, NOW);
-  assert.deepEqual(migrated.activeSession?.openedCardIds, []);
-  assert.equal(migrated.cards.opened.legacyEvidence.openCount, 1);
-  assert.deepEqual(migrated.cards.opened.exposures[0].openedAtMs, []);
-  assert.equal(migrated.cards.opened.exposures[0].displayedAtMs, NOW);
+  assert.deepEqual(hydrateSrsState(migratedLegacyState, NOW), createSrsState());
+});
+
+test("current-snapshot detection accepts only complete schema four markers", () => {
+  const current = createSrsState();
+
+  assert.equal(isCurrentSrsSnapshot(current), true);
+  assert.equal(isCurrentSrsSnapshot(serializeSrsState(current)), true);
+  assert.equal(isCurrentSrsSnapshot({ ...current, schemaVersion: 3 }), false);
+  assert.equal(
+    isCurrentSrsSnapshot({
+      ...current,
+      historyCompleteness: "legacy-bounded",
+    }),
+    false,
+  );
+  assert.equal(isCurrentSrsSnapshot({ schemaVersion: 4 }), false);
+  assert.equal(isCurrentSrsSnapshot("not json"), false);
+  assert.equal(isCurrentSrsSnapshot(null), false);
 });
 
 test("recent-open helper uses exact wall-clock timestamps", () => {

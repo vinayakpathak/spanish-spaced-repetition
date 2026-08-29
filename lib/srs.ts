@@ -13,11 +13,6 @@ export interface CardExposure {
 
 export interface CardHistory {
   exposures: CardExposure[];
-  /** Weak aggregate imported from schema 3's capped, day-level event log. */
-  legacyEvidence?: {
-    displayCount: number;
-    openCount: number;
-  };
 }
 
 export interface ComicProgress {
@@ -43,8 +38,8 @@ export interface SrsState {
   comics: Record<string, ComicProgress>;
   activeSession: ActiveSession | null;
   lastCompletedComicId: string | null;
-  /** Schema 3 stored at most 500 day-level events, which cannot be recovered. */
-  historyCompleteness: "complete" | "legacy-bounded";
+  /** Only complete timestamp history is accepted by the current scheduler. */
+  historyCompleteness: "complete";
 }
 
 export interface ComicLike {
@@ -267,16 +262,8 @@ export function scoreCardPriority(
   const history = getCardHistory(state, cardId);
   const observations = observationsFor(history);
 
-  const legacyDisplayCount = history.legacyEvidence?.displayCount ?? 0;
-  const legacyOpenCount = history.legacyEvidence?.openCount ?? 0;
-  // The old log was capped and had simulated-day rather than wall-clock
-  // timestamps. Preserve its observed ratio as at most four weak samples;
-  // never invent precise timestamps or let incomplete legacy data dominate.
-  const legacyEvidenceWeight = Math.min(4, legacyDisplayCount * 0.25);
-  const legacyOpenShare =
-    legacyDisplayCount > 0 ? legacyOpenCount / legacyDisplayCount : 0;
-  let recentOpenWeight = legacyEvidenceWeight * legacyOpenShare;
-  let recentSuccessWeight = legacyEvidenceWeight * (1 - legacyOpenShare);
+  let recentOpenWeight = 0;
+  let recentSuccessWeight = 0;
   for (const observation of observations) {
     const ageDays = Math.max(0, now - observation.atMs) / DAY_MS;
     const weight = 2 ** (-ageDays / config.evidenceHalfLifeDays);
@@ -289,12 +276,7 @@ export function scoreCardPriority(
       recentOpenWeight) /
     (config.priorEvidenceWeight + recentDisplayWeight);
 
-  let stabilityDays: number | null =
-    legacyDisplayCount === 0
-      ? null
-      : legacyOpenCount > legacyDisplayCount - legacyOpenCount
-        ? config.lapseStabilityMultiplier
-        : 1;
+  let stabilityDays: number | null = null;
   let previousAtMs: number | null = null;
   for (const observation of observations) {
     if (observation.opened) {
@@ -308,11 +290,7 @@ export function scoreCardPriority(
       );
     } else if (stabilityDays === null) {
       stabilityDays = 1;
-    } else if (previousAtMs === null) {
-      // There is no trustworthy interval from aggregate legacy evidence to
-      // the first timestamped success, so it earns no spacing growth.
-      stabilityDays = Math.max(1, stabilityDays);
-    } else {
+    } else if (previousAtMs !== null) {
       const gapDays = Math.max(0, observation.atMs - previousAtMs) / DAY_MS;
       const retrievability = 2 ** (-gapDays / stabilityDays);
       stabilityDays = Math.min(
@@ -333,7 +311,7 @@ export function scoreCardPriority(
           (-Math.max(0, now - lastObservedAtMs) /
             DAY_MS /
             stabilityDays);
-  const hasEvidence = observations.length > 0 || legacyDisplayCount > 0;
+  const hasEvidence = observations.length > 0;
   const priorityIndex =
     !hasEvidence
       ? config.untouchedPriorityIndex
@@ -342,10 +320,9 @@ export function scoreCardPriority(
   const openedTimestamps = history.exposures.flatMap(
     (exposure) => exposure.openedAtMs,
   );
-  const completedDisplayCount =
-    legacyDisplayCount +
-    history.exposures.filter((exposure) => exposure.completedAtMs !== null)
-      .length;
+  const completedDisplayCount = history.exposures.filter(
+    (exposure) => exposure.completedAtMs !== null,
+  ).length;
   const lastDisplayedAtMs = history.exposures.reduce<number | null>(
     (latest, exposure) =>
       latest === null
@@ -362,9 +339,7 @@ export function scoreCardPriority(
   const status: CardStatus =
     !hasEvidence
       ? "unseen"
-      : latestObservation?.opened ||
-          (latestObservation === undefined &&
-            legacyOpenCount > legacyDisplayCount - legacyOpenCount)
+      : latestObservation?.opened
         ? "learning"
         : priorityIndex < 0.2
           ? "mastered"
@@ -378,9 +353,9 @@ export function scoreCardPriority(
     recentDisplayWeight,
     recentOpenWeight,
     stabilityDays,
-    displayCount: legacyDisplayCount + history.exposures.length,
+    displayCount: history.exposures.length,
     completedDisplayCount,
-    openCount: legacyOpenCount + openedTimestamps.length,
+    openCount: openedTimestamps.length,
     lastDisplayedAtMs,
     lastOpenedAtMs,
     lastObservedAtMs,
@@ -472,9 +447,7 @@ export function reconcileSrsState<T extends ComicLike>(
         ? []
         : [{ ...exposure, completedAtMs: lastOpen }];
     });
-    if (exposures.length > 0 || history.legacyEvidence) {
-      cards[cardId] = { ...history, exposures };
-    }
+    if (exposures.length > 0) cards[cardId] = { exposures };
   }
   if (activeSession) {
     for (const cardId of activeSession.cardIds) {
@@ -746,9 +719,7 @@ function abandonActiveSession(state: SrsState): SrsState {
         ? []
         : [{ ...exposure, completedAtMs: lastOpen }];
     });
-    if (exposures.length > 0 || history.legacyEvidence) {
-      cards[cardId] = { ...history, exposures };
-    }
+    if (exposures.length > 0) cards[cardId] = { exposures };
   }
   return { ...state, cards, activeSession: null };
 }
@@ -921,21 +892,7 @@ function hydrateSchemaFour(parsed: Record<string, unknown>): SrsState {
       for (const exposure of exposures) {
         greatestSessionId = Math.max(greatestSessionId, exposure.sessionId);
       }
-      let legacyEvidence: CardHistory["legacyEvidence"];
-      if (isRecord(rawHistory.legacyEvidence)) {
-        const displayCount = nonNegativeInteger(
-          rawHistory.legacyEvidence.displayCount,
-          0,
-        );
-        const openCount = Math.min(
-          displayCount,
-          nonNegativeInteger(rawHistory.legacyEvidence.openCount, 0),
-        );
-        if (displayCount > 0) legacyEvidence = { displayCount, openCount };
-      }
-      if (exposures.length > 0 || legacyEvidence) {
-        cards[cardId] = { exposures, legacyEvidence };
-      }
+      if (exposures.length > 0) cards[cardId] = { exposures };
     }
   }
 
@@ -971,195 +928,34 @@ function hydrateSchemaFour(parsed: Record<string, unknown>): SrsState {
       typeof parsed.lastCompletedComicId === "string"
         ? parsed.lastCompletedComicId
         : null,
-    historyCompleteness:
-      parsed.historyCompleteness === "legacy-bounded"
-        ? "legacy-bounded"
-        : "complete",
-  };
-}
-
-interface LegacyEvent {
-  comicId: string;
-  cardId: string;
-  day: number;
-  event: "help" | "independent-success";
-  order: number;
-}
-
-function migrateSchemaThree(
-  parsed: Record<string, unknown>,
-  nowMs: number,
-): SrsState {
-  const legacyEvents: LegacyEvent[] = Array.isArray(parsed.history)
-    ? parsed.history
-        .map((value, order): LegacyEvent | null => {
-          if (
-            !isRecord(value) ||
-            typeof value.comicId !== "string" ||
-            typeof value.cardId !== "string" ||
-            typeof value.day !== "number" ||
-            !Number.isFinite(value.day) ||
-            (value.event !== "help" && value.event !== "independent-success")
-          ) {
-            return null;
-          }
-          return {
-            comicId: value.comicId,
-            cardId: value.cardId,
-            day: Math.max(1, Math.floor(value.day)),
-            event: value.event,
-            order,
-          };
-        })
-        .filter((event): event is LegacyEvent => event !== null)
-    : [];
-
-  const cards: Record<string, CardHistory> = {};
-  const outcomeByExposure = new Map<
-    string,
-    { cardId: string; opened: boolean }
-  >();
-  for (const event of legacyEvents) {
-    const key = `${event.day}\u0000${event.comicId}\u0000${event.cardId}`;
-    const existing = outcomeByExposure.get(key);
-    outcomeByExposure.set(key, {
-      cardId: event.cardId,
-      opened: event.event === "help" || existing?.opened === true,
-    });
-  }
-  for (const { cardId, opened } of outcomeByExposure.values()) {
-    const history = cards[cardId] ?? {
-      exposures: [],
-      legacyEvidence: { displayCount: 0, openCount: 0 },
-    };
-    const legacyEvidence = history.legacyEvidence ?? {
-      displayCount: 0,
-      openCount: 0,
-    };
-    cards[cardId] = {
-      exposures: [],
-      legacyEvidence: {
-        displayCount: legacyEvidence.displayCount + 1,
-        openCount: legacyEvidence.openCount + Number(opened),
-      },
-    };
-  }
-  if (isRecord(parsed.cards)) {
-    for (const [cardId, progress] of Object.entries(parsed.cards)) {
-      if (!isRecord(progress)) continue;
-      // These aggregates outlive the capped event tail, but lack timestamps.
-      // Preserve only bounded counts and let scoring cap their influence.
-      const encounters = Math.min(
-        1_000_000,
-        nonNegativeInteger(progress.encounters, 0),
-      );
-      const lapses = Math.min(
-        encounters,
-        nonNegativeInteger(progress.lapses, 0) +
-          Number(finiteNumber(progress.lastHelpDay) !== null),
-      );
-      const current = cards[cardId]?.legacyEvidence;
-      const displayCount = Math.max(current?.displayCount ?? 0, encounters);
-      const openCount = Math.min(
-        displayCount,
-        Math.max(current?.openCount ?? 0, lapses),
-      );
-      if (displayCount > 0) {
-        cards[cardId] = {
-          exposures: [],
-          legacyEvidence: { displayCount, openCount },
-        };
-      }
-    }
-  }
-
-  const comics: Record<string, ComicProgress> = {};
-  if (isRecord(parsed.comics)) {
-    for (const [comicId, value] of Object.entries(parsed.comics)) {
-      if (!isRecord(value)) continue;
-      comics[comicId] = {
-        views: nonNegativeInteger(value.views, 0),
-        completions: nonNegativeInteger(value.completions, 0),
-        // Schema 3 had simulated day numbers, not trustworthy wall-clock time.
-        lastViewedAtMs: null,
-        lastCompletedAtMs: null,
-      };
-    }
-  }
-
-  // Restart an active legacy comic at the actual migration instant. Its past
-  // help choices are already represented by the bounded aggregate above.
-  let activeSession: ActiveSession | null = null;
-  let nextSessionId = 1;
-  if (
-    isRecord(parsed.activeSession) &&
-    typeof parsed.activeSession.comicId === "string"
-  ) {
-    const legacyActive = parsed.activeSession;
-    const legacyComicId = legacyActive.comicId as string;
-    const eligibleCardIds = Array.isArray(legacyActive.eligibleCardIds)
-      ? legacyActive.eligibleCardIds.filter(
-          (id): id is string => typeof id === "string",
-        )
-      : [];
-    const clickedCardIds = Array.isArray(legacyActive.clickedCardIds)
-      ? legacyActive.clickedCardIds.filter(
-          (id): id is string => typeof id === "string",
-        )
-      : [];
-    const cardIds = uniqueStrings([...eligibleCardIds, ...clickedCardIds]);
-    const sessionId = nextSessionId;
-    nextSessionId += 1;
-    for (const cardId of cardIds) {
-      const history = cards[cardId] ?? { exposures: [] };
-      cards[cardId] = {
-        ...history,
-        exposures: [
-          ...history.exposures,
-          {
-            sessionId,
-            comicId: legacyComicId,
-            displayedAtMs: nowMs,
-            openedAtMs: [],
-            completedAtMs: null,
-          },
-        ],
-      };
-    }
-    activeSession = {
-      sessionId,
-      comicId: legacyComicId,
-      startedAtMs: nowMs,
-      cardIds,
-      openedCardIds: [],
-    };
-  }
-
-  return {
-    schemaVersion: 4,
-    nextSessionId,
-    cards,
-    comics,
-    activeSession,
-    lastCompletedComicId: Array.isArray(parsed.recentComicIds)
-      ? parsed.recentComicIds.find(
-          (comicId): comicId is string => typeof comicId === "string",
-        ) ?? null
-      : null,
-    historyCompleteness: "legacy-bounded",
+    historyCompleteness: "complete",
   };
 }
 
 export function hydrateSrsState(value: unknown, nowMs: number): SrsState {
-  const now = finiteTimestamp(nowMs, "nowMs");
+  finiteTimestamp(nowMs, "nowMs");
   try {
     const parsed = typeof value === "string" ? JSON.parse(value) : value;
-    if (!isRecord(parsed)) return createSrsState();
-    if (parsed.schemaVersion === 4) return hydrateSchemaFour(parsed);
-    if (parsed.schemaVersion === 3) return migrateSchemaThree(parsed, now);
-    return createSrsState();
+    if (!isCurrentSrsSnapshot(parsed) || !isRecord(parsed)) {
+      return createSrsState();
+    }
+    return hydrateSchemaFour(parsed);
   } catch {
     return createSrsState();
+  }
+}
+
+/** Whether a stored value belongs to the complete timestamp-based schema. */
+export function isCurrentSrsSnapshot(value: unknown): boolean {
+  try {
+    const parsed = typeof value === "string" ? JSON.parse(value) : value;
+    return (
+      isRecord(parsed) &&
+      parsed.schemaVersion === 4 &&
+      parsed.historyCompleteness === "complete"
+    );
+  } catch {
+    return false;
   }
 }
 

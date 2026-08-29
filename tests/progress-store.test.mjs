@@ -12,9 +12,6 @@ function createLegacyStorage(entries = {}) {
   const values = new Map(Object.entries(entries));
   return {
     values,
-    getItem(key) {
-      return values.get(key) ?? null;
-    },
     removeItem(key) {
       values.delete(key);
     },
@@ -63,7 +60,7 @@ test("the browser store can be constructed safely during server rendering", asyn
   assert.match(loaded.warning, /last only until this tab closes/i);
 });
 
-test("legacy localStorage progress migrates to IndexedDB exactly once", async () => {
+test("obsolete localStorage progress is deleted without being imported", async () => {
   const serializedSrs = JSON.stringify({ schemaVersion: 3, studyDay: 7 });
   const legacy = createLegacyStorage({
     [LEGACY_SRS_STORAGE_KEY]: serializedSrs,
@@ -76,24 +73,28 @@ test("legacy localStorage progress migrates to IndexedDB exactly once", async ()
 
   const loaded = await store.load();
 
-  assert.equal(loaded.serializedSrs, serializedSrs);
-  assert.deepEqual(loaded.openedByComic, { alpha: ["region-1"] });
-  assert.equal(loaded.source, "indexeddb");
+  assert.equal(loaded.serializedSrs, null);
+  assert.deepEqual(loaded.openedByComic, {});
+  assert.equal(loaded.source, "empty");
   assert.equal(loaded.warning, null);
-  assert.equal(backend.writes.length, 1);
-  assert.equal(backend.writes[0].schemaVersion, 1);
+  assert.equal(backend.writes.length, 0);
   assert.equal(legacy.values.has(LEGACY_SRS_STORAGE_KEY), false);
   assert.equal(legacy.values.has(LEGACY_UI_STORAGE_KEY), false);
 
   const reloaded = await store.load();
-  assert.equal(reloaded.source, "indexeddb");
-  assert.equal(backend.writes.length, 1);
+  assert.equal(reloaded.source, "empty");
+  assert.equal(backend.writes.length, 0);
 });
 
-test("an IndexedDB snapshot wins over stale legacy keys", async () => {
+test("a native schema-four IndexedDB snapshot wins over obsolete keys", async () => {
+  const serializedSrs = JSON.stringify({
+    schemaVersion: 4,
+    historyCompleteness: "complete",
+    cards: {},
+  });
   const backend = createBackend({
     schemaVersion: 1,
-    serializedSrs: "new-state",
+    serializedSrs,
     openedByComic: { current: ["r1"] },
   });
   const legacy = createLegacyStorage({
@@ -105,13 +106,49 @@ test("an IndexedDB snapshot wins over stale legacy keys", async () => {
 
   const loaded = await createProgressStore(backend, legacy).load();
 
-  assert.equal(loaded.serializedSrs, "new-state");
+  assert.equal(loaded.serializedSrs, serializedSrs);
   assert.deepEqual(loaded.openedByComic, { current: ["r1"] });
   assert.equal(loaded.source, "indexeddb");
   assert.equal(legacy.values.size, 0);
 });
 
-test("legacy progress remains readable when IndexedDB is unavailable", async () => {
+test("the progress store leaves scheduler-schema interpretation to the app", async () => {
+  const serializedSrs = JSON.stringify({ schemaVersion: 3, studyDay: 8 });
+  const backend = createBackend({
+    schemaVersion: 1,
+    serializedSrs,
+    openedByComic: { old: ["region-1"] },
+  });
+
+  const loaded = await createProgressStore(backend).load();
+
+  assert.equal(loaded.serializedSrs, serializedSrs);
+  assert.deepEqual(loaded.openedByComic, { old: ["region-1"] });
+  assert.equal(loaded.source, "indexeddb");
+  assert.equal(loaded.warning, null);
+  assert.equal(backend.writes.length, 0);
+});
+
+test("a damaged IndexedDB envelope never falls back to obsolete localStorage", async () => {
+  const backend = createBackend({ schemaVersion: 99, serializedSrs: "damaged" });
+  const legacy = createLegacyStorage({
+    [LEGACY_SRS_STORAGE_KEY]: "old-state",
+    [LEGACY_UI_STORAGE_KEY]: JSON.stringify({
+      openedByComic: { old: ["region-1"] },
+    }),
+  });
+
+  const loaded = await createProgressStore(backend, legacy).load();
+
+  assert.equal(loaded.serializedSrs, null);
+  assert.deepEqual(loaded.openedByComic, {});
+  assert.equal(loaded.source, "empty");
+  assert.match(loaded.warning, /could not be read.*starting fresh/i);
+  assert.equal(backend.writes.length, 0);
+  assert.equal(legacy.values.size, 0);
+});
+
+test("obsolete progress is ignored when IndexedDB is unavailable", async () => {
   const legacy = createLegacyStorage({
     [LEGACY_SRS_STORAGE_KEY]: "recoverable-state",
   });
@@ -129,10 +166,11 @@ test("legacy progress remains readable when IndexedDB is unavailable", async () 
 
   const loaded = await createProgressStore(backend, legacy).load();
 
-  assert.equal(loaded.serializedSrs, "recoverable-state");
-  assert.equal(loaded.source, "local-storage");
+  assert.equal(loaded.serializedSrs, null);
+  assert.deepEqual(loaded.openedByComic, {});
+  assert.equal(loaded.source, "empty");
   assert.match(loaded.warning, /last only until this tab closes/i);
-  assert.equal(legacy.values.has(LEGACY_SRS_STORAGE_KEY), true);
+  assert.equal(legacy.values.has(LEGACY_SRS_STORAGE_KEY), false);
 });
 
 test("rapid saves are serialized and coalesced to the latest snapshot", async () => {
@@ -207,17 +245,14 @@ test("reset waits for queued writes and clears IndexedDB and legacy keys", async
   assert.deepEqual(loaded.openedByComic, {});
 });
 
-test("reset reports a legacy cleanup failure instead of claiming success", async () => {
+test("reset succeeds even when obsolete-key cleanup is blocked", async () => {
   const backend = createBackend(undefined);
   const store = createProgressStore(backend, {
-    getItem() {
-      return null;
-    },
     removeItem() {
       throw new Error("storage blocked");
     },
   });
 
-  await assert.rejects(store.clear(), /could not be cleared/i);
+  await assert.doesNotReject(store.clear());
   assert.equal(backend.clearCount, 1);
 });

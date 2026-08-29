@@ -84,6 +84,9 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(readme, /higher-level grammar, expression, and concept cards use exact IDs/);
   assert.match(readme, /never merges SRS card IDs or progress/);
   assert.match(readme, /All 14,485 enter SRS and the importance graph/);
+  assert.match(readme, /starts with a clean timestamp history/i);
+  assert.match(readme, /Schema-v3 localStorage records are never read as progress/i);
+  assert.doesNotMatch(readme, /Migration preserves its aggregate learning evidence/i);
 });
 
 test("the curriculum stays Spanish-first and starter artifacts are gone", async () => {
@@ -109,9 +112,21 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   assert.match(page, /Word opened · no cards selected/);
   assert.match(page, /selectedWord\.cardIds/);
   assert.match(page, /createBrowserProgressStore/);
+  assert.match(page, /isCurrentSrsSnapshot/);
+  assert.match(
+    page,
+    /canRestoreStoredProgress\s*\?\s*storedProgress\.serializedSrs\s*:\s*null/,
+  );
+  assert.match(
+    page,
+    /canRestoreStoredProgress\s*\?\s*storedProgress\.openedByComic\s*:\s*\{\}/,
+  );
+  assert.match(page, /earlier simulated-day prototype is not imported/i);
   assert.match(progressStore, /tira:srs:v3/);
   assert.match(progressStore, /tira:ui:v3/);
   assert.match(progressStore, /indexedDB/i);
+  assert.doesNotMatch(progressStore, /\.getItem\(/);
+  assert.doesNotMatch(progressStore, /source:\s*"local-storage"/);
   assert.doesNotMatch(page, /localStorage\.setItem/);
   assert.doesNotMatch(page + progressStore, /tira:(?:srs|ui):v2/);
   assert.match(layout, /Tira — learn Spanish, one comic at a time/);

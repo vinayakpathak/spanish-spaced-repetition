@@ -47,9 +47,9 @@ selectionScore = 0.80 × cardAxis + 0.20 × importanceAxis
 
 Thus 80% of selection follows the learner's live exact-card needs and 20% favors comics that connect important recurring material. This calculation runs for every Next action, not once per calendar day. Card priorities can recur through other unread comics that share those cards, but a read comic itself never returns.
 
-### Persistence migration and research basis
+### Persistence and research basis
 
-Schema-v3 progress recorded simulated day numbers and retained only a capped review history, so it cannot be converted into exact historical timestamps. Migration preserves its aggregate learning evidence as a bounded legacy prior without inventing dates; complete timestamp history begins with the continuous scheduler. Existing `tira:srs:v3` and `tira:ui:v3` localStorage records are still imported once and removed only after a successful IndexedDB write.
+The continuous scheduler starts with a clean timestamp history instead of converting progress from the earlier simulated-day prototype. Only native schema-v4 snapshots marked as complete timestamp history are restored from IndexedDB. Schema-v3 localStorage records are never read as progress and are removed on a best-effort basis; previously imported, bounded legacy histories are also rejected. When an old learning history is discarded, its opened-region UI state is discarded with it so no part of the old session leaks into the fresh start. Current schema-v4 progress continues to survive ordinary reloads.
 
 The model is a deliberately explainable adaptation rather than an implementation of any one published scheduler. Its exponential retrievability curve and history features follow [Half-Life Regression for language learning](https://aclanthology.org/P16-1174/); its use of item difficulty plus the amount, timing, and outcome of practice follows the [DASH personalized-review model](https://doi.org/10.1177/0956797613504302); and its separate stability, difficulty, and retrievability signals follow the [official FSRS algorithm description](https://github.com/open-spaced-repetition/awesome-fsrs/wiki/The-Algorithm).
 

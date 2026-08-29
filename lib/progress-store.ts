@@ -14,7 +14,7 @@ export interface ProgressSnapshot {
 }
 
 export interface ProgressLoadResult extends ProgressSnapshot {
-  source: "indexeddb" | "local-storage" | "empty";
+  source: "indexeddb" | "empty";
   warning: string | null;
 }
 
@@ -28,8 +28,7 @@ export interface ProgressBackend {
   clear(): Promise<void>;
 }
 
-export interface LegacyProgressStorage {
-  getItem(key: string): string | null;
+export interface ObsoleteProgressStorage {
   removeItem(key: string): void;
 }
 
@@ -80,41 +79,9 @@ function parseStoredSnapshot(value: unknown): StoredProgressSnapshot | null {
   };
 }
 
-function readLegacySnapshot(
-  storage: LegacyProgressStorage | null,
-): { snapshot: ProgressSnapshot; found: boolean } {
-  if (!storage) {
-    return {
-      snapshot: { serializedSrs: null, openedByComic: {} },
-      found: false,
-    };
-  }
-
-  try {
-    const serializedSrs = storage.getItem(LEGACY_SRS_STORAGE_KEY);
-    const serializedUi = storage.getItem(LEGACY_UI_STORAGE_KEY);
-    let openedByComic: OpenedByComic = {};
-    if (serializedUi) {
-      try {
-        const parsed = JSON.parse(serializedUi) as { openedByComic?: unknown };
-        openedByComic = sanitizeOpenedByComic(parsed.openedByComic);
-      } catch {
-        // Keep valid SRS data even when the old UI-only record is malformed.
-      }
-    }
-    return {
-      snapshot: { serializedSrs, openedByComic },
-      found: serializedSrs !== null || serializedUi !== null,
-    };
-  } catch {
-    return {
-      snapshot: { serializedSrs: null, openedByComic: {} },
-      found: false,
-    };
-  }
-}
-
-function removeLegacySnapshot(storage: LegacyProgressStorage | null): boolean {
+function removeObsoleteSnapshot(
+  storage: ObsoleteProgressStorage | null,
+): boolean {
   if (!storage) return true;
   try {
     storage.removeItem(LEGACY_SRS_STORAGE_KEY);
@@ -137,7 +104,7 @@ function storedSnapshot(snapshot: ProgressSnapshot): StoredProgressSnapshot {
 
 export function createProgressStore(
   backend: ProgressBackend,
-  legacyStorage: LegacyProgressStorage | null = null,
+  obsoleteStorage: ObsoleteProgressStorage | null = null,
 ): ProgressStore {
   let pendingWrite: PendingWrite | null = null;
   let drainPromise: Promise<void> | null = null;
@@ -148,7 +115,7 @@ export function createProgressStore(
       pendingWrite = null;
       try {
         await backend.write(current.snapshot);
-        removeLegacySnapshot(legacyStorage);
+        removeObsoleteSnapshot(obsoleteStorage);
         for (const waiter of current.waiters) waiter.resolve();
       } catch (error) {
         for (const waiter of current.waiters) waiter.reject(error);
@@ -173,13 +140,16 @@ export function createProgressStore(
 
   return {
     async load() {
-      const legacy = readLegacySnapshot(legacyStorage);
+      // Schema-v3 localStorage records came from the former simulated-day
+      // scheduler. They do not contain the timestamps required by the current
+      // model, so they are deliberately discarded rather than imported with
+      // invented history.
+      removeObsoleteSnapshot(obsoleteStorage);
       try {
         const stored = await backend.read();
         if (stored !== undefined && stored !== null) {
           const parsed = parseStoredSnapshot(stored);
           if (parsed) {
-            removeLegacySnapshot(legacyStorage);
             return {
               serializedSrs: parsed.serializedSrs,
               openedByComic: parsed.openedByComic,
@@ -189,40 +159,25 @@ export function createProgressStore(
           }
 
           return {
-            ...legacy.snapshot,
-            source: legacy.found ? ("local-storage" as const) : ("empty" as const),
-            warning:
-              "Saved progress could not be read. New progress may replace the damaged record.",
-          };
-        }
-
-        if (!legacy.found) {
-          return {
-            ...legacy.snapshot,
+            serializedSrs: null,
+            openedByComic: {},
             source: "empty" as const,
-            warning: null,
+            warning:
+              "Saved progress could not be read. The current scheduler is starting fresh.",
           };
         }
 
-        try {
-          await backend.write(storedSnapshot(legacy.snapshot));
-          removeLegacySnapshot(legacyStorage);
-          return {
-            ...legacy.snapshot,
-            source: "indexeddb" as const,
-            warning: null,
-          };
-        } catch {
-          return {
-            ...legacy.snapshot,
-            source: "local-storage" as const,
-            warning: STORAGE_UNAVAILABLE_WARNING,
-          };
-        }
+        return {
+          serializedSrs: null,
+          openedByComic: {},
+          source: "empty" as const,
+          warning: null,
+        };
       } catch {
         return {
-          ...legacy.snapshot,
-          source: legacy.found ? ("local-storage" as const) : ("empty" as const),
+          serializedSrs: null,
+          openedByComic: {},
+          source: "empty" as const,
           warning: STORAGE_UNAVAILABLE_WARNING,
         };
       }
@@ -251,11 +206,10 @@ export function createProgressStore(
       } catch (error) {
         clearError = error;
       }
-      const legacyWasCleared = removeLegacySnapshot(legacyStorage);
+      // Cleanup is best-effort because obsolete keys are never read again.
+      // Failure to remove them cannot restore or affect current progress.
+      removeObsoleteSnapshot(obsoleteStorage);
       if (clearError) throw clearError;
-      if (!legacyWasCleared) {
-        throw new Error("Legacy localStorage progress could not be cleared");
-      }
     },
 
     flush,
@@ -337,10 +291,10 @@ function createIndexedDbBackend(factory: IDBFactory): ProgressBackend {
 }
 
 export function createBrowserProgressStore(): ProgressStore {
-  let legacyStorage: Storage | null = null;
+  let obsoleteStorage: Storage | null = null;
   if (typeof window !== "undefined") {
     try {
-      legacyStorage = window.localStorage;
+      obsoleteStorage = window.localStorage;
     } catch {
       // IndexedDB remains usable when localStorage is blocked.
     }
@@ -364,6 +318,6 @@ export function createBrowserProgressStore(): ProgressStore {
 
   return createProgressStore(
     backend,
-    legacyStorage,
+    obsoleteStorage,
   );
 }
