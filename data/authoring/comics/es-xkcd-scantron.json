@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-scantron",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Scantron",
+  "titleEs": "Scantron",
+  "titleText": {
+    "es": "Además, con todas las advertencias sobre rellenar completamente los círculos, me pasé como 30 segundos con cada uno.",
+    "en": "Also, after all the warnings about filling in the bubbles completely, I spent like 30 seconds on each one.",
+    "noteEn": "The Spanish archive closely translates the official title text and preserves the numeral 30."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-entregado--submitted",
+      "kind": "word",
+      "promptEs": "entregado",
+      "answerEn": "submitted; handed in",
+      "noteEn": "Entregado is the completed-action form of entregar. After a form of haber, it stays unchanged and can say that work, forms, or documents have been submitted.",
+      "example": { "es": "He entregado el informe.", "en": "I have submitted the report." },
+      "tags": ["word", "entregar", "completed-action form", "school", "A2"]
+    },
+    {
+      "id": "word-puntúen--grade-purpose",
+      "kind": "word",
+      "promptEs": "puntúen",
+      "answerEn": "they grade; they score, as a desired result",
+      "noteEn": "Puntúen is a special form of puntuar used after para que because the grading is the intended next action, not a fact already being reported. The plural ending leaves the graders unnamed.",
+      "example": { "es": "Envío las pruebas para que las puntúen.", "en": "I send the tests so that they can be graded." },
+      "tags": ["word", "puntuar", "purpose", "subjunctive", "A2"]
+    },
+    {
+      "id": "word-usé",
+      "kind": "word",
+      "promptEs": "usé",
+      "answerEn": "I used",
+      "noteEn": "Usé is the completed-past form of usar for the speaker. The written accent distinguishes this past form from the special present form use.",
+      "example": { "es": "Usé un bolígrafo azul.", "en": "I used a blue pen." },
+      "tags": ["word", "usar", "completed past", "first person", "A1"]
+    },
+    {
+      "id": "word-lápiz",
+      "kind": "word",
+      "promptEs": "lápiz",
+      "answerEn": "pencil",
+      "noteEn": "Lápiz is singular. Its plural is lápices, with c instead of z.",
+      "example": { "es": "Necesito un lápiz para el examen.", "en": "I need a pencil for the exam." },
+      "tags": ["word", "school", "noun", "A1"]
+    },
+    {
+      "id": "word-en--fixed-en-vez-de",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "no separate English word; begins en vez de, ‘instead of’",
+      "noteEn": "En belongs to the fixed three-word connector en vez de. Learn the connector as a unit rather than translating en as ordinary ‘in.’",
+      "example": { "es": "Tomé té en vez de café.", "en": "I had tea instead of coffee." },
+      "tags": ["word", "fixed expression", "substitution", "A2"]
+    },
+    {
+      "id": "word-vez--fixed-en-vez-de",
+      "kind": "word",
+      "promptEs": "vez",
+      "answerEn": "no separate English word; forms en vez de, ‘instead of’",
+      "noteEn": "Vez often means an occurrence or time, but inside en vez de it helps form the fixed connector ‘instead of.’",
+      "example": { "es": "Fuimos andando en vez de tomar el autobús.", "en": "We walked instead of taking the bus." },
+      "tags": ["word", "fixed expression", "substitution", "A2"]
+    },
+    {
+      "id": "word-de--fixed-en-vez-de",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; completes en vez de, ‘instead of’",
+      "noteEn": "De finishes the connector en vez de and comes directly before the alternative that is not chosen.",
+      "example": { "es": "Escribió un correo en vez de llamar.", "en": "She wrote an email instead of calling." },
+      "tags": ["word", "fixed expression", "substitution", "A2"]
+    },
+    {
+      "id": "word-afecta--make-difference",
+      "kind": "word",
+      "promptEs": "afecta",
+      "answerEn": "does it affect; does it make a difference",
+      "noteEn": "Afecta is a present form of afectar. In a question, it asks whether something changes the result or matters in some way. English adds ‘does’ before the subject, while the Spanish verb form stays afecta.",
+      "example": { "es": "¿Afecta eso al resultado?", "en": "Does that affect the result?" },
+      "tags": ["word", "afectar", "effect", "question", "A2"]
+    },
+    {
+      "id": "word-en--extent",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "in; in any way, as part of en algo",
+      "noteEn": "After a verb about changing or affecting something, en algo can ask whether there is any effect or difference at all.",
+      "example": { "es": "¿Cambió el plan en algo?", "en": "Did the plan change in any way?" },
+      "tags": ["word", "preposition", "extent", "A2"]
+    },
+    {
+      "id": "word-algo--anything-question",
+      "kind": "word",
+      "promptEs": "algo",
+      "answerEn": "anything; any way (in a question)",
+      "noteEn": "Algo refers to an unspecified thing. In a question, natural English often uses ‘anything’; after en, en algo can mean ‘in any way.’",
+      "example": { "es": "¿Necesitas algo?", "en": "Do you need anything?" },
+      "tags": ["word", "indefinite", "question", "A1"]
+    },
+    {
+      "id": "word-qué--echo-question",
+      "kind": "word",
+      "promptEs": "qué",
+      "answerEn": "what? (echoing something surprising)",
+      "noteEn": "Qué keeps its written accent in a short echo question. The speaker repeats only the missing or unbelievable information instead of forming a longer question.",
+      "example": { "es": "—Me voy mañana. —¿Qué?", "en": "‘I'm leaving tomorrow.’ ‘What?’" },
+      "tags": ["word", "question", "reaction", "accent", "A1"]
+    },
+    {
+      "id": "word-aaaah--scream",
+      "kind": "word",
+      "promptEs": "aaaah",
+      "answerEn": "aaah! (a scream)",
+      "noteEn": "Aaaah stretches the vowel to write a scream or cry of alarm. The number of repeated letters varies with the imagined length of the sound.",
+      "example": { "es": "¡Aaaah! ¡Una araña!", "en": "Aaah! A spider!" },
+      "tags": ["word", "sound effect", "scream", "interjection"]
+    },
+    {
+      "id": "word-bam--impact-sound",
+      "kind": "word",
+      "promptEs": "bam",
+      "answerEn": "bam! (a sudden impact sound)",
+      "noteEn": "Bam represents a loud, abrupt blow, collision, or impact in comics.",
+      "example": { "es": "La puerta se cerró: ¡bam!", "en": "The door slammed shut: bam!" },
+      "tags": ["word", "sound effect", "impact", "onomatopoeia"]
+    },
+    {
+      "id": "phrase-en-vez-de",
+      "kind": "phrase",
+      "promptEs": "en vez de + alternativa",
+      "questionEn": "How do you say that one option replaces another?",
+      "answerEn": "Put en vez de before the alternative that was not chosen: ‘instead of.’",
+      "noteEn": "A noun, pronoun, or unchanged action verb can follow: en vez de café, en vez de eso, en vez de llamar. The three words en vez de stay together.",
+      "example": { "es": "Usamos el tren en vez del coche.", "en": "We used the train instead of the car." },
+      "tags": ["phrase", "substitution", "choice", "A2"]
+    },
+    {
+      "id": "concept-scantron-number-two-pencil",
+      "kind": "concept",
+      "promptEs": "hoja de respuestas óptica · lápiz n.º 2",
+      "answerEn": "A Scantron-style test records answers in filled bubbles that an optical mark reader can score; instructions have traditionally specified a No. 2 pencil.",
+      "noteEn": "Scantron still sells No. 2 pencils for optical-mark recognition, although current Scantron equipment can support pencil or ink depending on the form and scanner. The joke turns the minor choice of a No. 3 pencil into an absurdly violent grading disaster.",
+      "tags": ["concept", "optical mark recognition", "testing", "Scantron", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-scantron:teacher-opening",
+      "labelEs": "BIEN NIÑOS, HE ENTREGADO VUESTROS EXÁMENES PARA QUE LOS PUNTÚEN. AHORA-",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-scantron:teacher-opening:w01", "text": "BIEN", "normalized": "bien", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00002" }], "cardIds": ["word-bien--discourse"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w02", "text": "NIÑOS", "normalized": "niños", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00003" }], "cardIds": ["word-niños--children"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w03", "text": "HE", "normalized": "he", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00004" }], "cardIds": ["word-he", "grammar-present-perfect"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w04", "text": "ENTREGADO", "normalized": "entregado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00005" }, { "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00008" }], "cardIds": ["word-entregado--submitted", "grammar-present-perfect"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w05", "text": "VUESTROS", "normalized": "vuestros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00009" }], "cardIds": ["word-vuestros", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w06", "text": "EXÁMENES", "normalized": "exámenes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00010" }, { "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00011" }], "cardIds": ["word-exámenes", "concept-scantron-number-two-pencil"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w07", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00012" }], "cardIds": ["word-para--purpose-clause", "grammar-para-que-subjunctive-purpose"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w08", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00013" }], "cardIds": ["word-que--purpose-clause", "grammar-para-que-subjunctive-purpose"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w09", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00014" }], "cardIds": ["word-los--direct-object", "grammar-para-que-subjunctive-purpose", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w10", "text": "PUNTÚEN", "normalized": "puntúen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00023" }], "cardIds": ["word-puntúen--grade-purpose", "grammar-para-que-subjunctive-purpose", "grammar-direct-object-pronoun-before-finite-verb", "grammar-third-person-plural-unnamed-agent", "concept-scantron-number-two-pencil"] },
+        { "id": "es-xkcd-scantron:teacher-opening:w11", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00024" }], "cardIds": ["word-ahora"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:teacher-opening:app-present-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": ["es-xkcd-scantron:teacher-opening:w03", "es-xkcd-scantron:teacher-opening:w04"],
+          "exampleEs": "HE ENTREGADO",
+          "explanationEn": "He is the present helper for the speaker, and entregado is the unchanged completed-action form."
+        },
+        {
+          "id": "es-xkcd-scantron:teacher-opening:app-vosotros-possessive",
+          "cardId": "grammar-vosotros-informal-plural",
+          "participantWordIds": ["es-xkcd-scantron:teacher-opening:w05"],
+          "exampleEs": "VUESTROS",
+          "explanationEn": "Vuestros is the Spain-style informal plural possessive and matches the masculine plural thing owned."
+        },
+        {
+          "id": "es-xkcd-scantron:teacher-opening:app-purpose-clause",
+          "cardId": "grammar-para-que-subjunctive-purpose",
+          "participantWordIds": ["es-xkcd-scantron:teacher-opening:w07", "es-xkcd-scantron:teacher-opening:w08", "es-xkcd-scantron:teacher-opening:w09", "es-xkcd-scantron:teacher-opening:w10"],
+          "exampleEs": "PARA QUE LOS PUNTÚEN",
+          "explanationEn": "Para que introduces the intended later event, los stands for the exams, and puntúen uses the special desired-result form."
+        },
+        {
+          "id": "es-xkcd-scantron:teacher-opening:app-object-pronoun",
+          "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+          "participantWordIds": ["es-xkcd-scantron:teacher-opening:w09", "es-xkcd-scantron:teacher-opening:w10"],
+          "exampleEs": "LOS PUNTÚEN",
+          "explanationEn": "Los replaces the masculine plural exámenes and appears directly before the changed verb puntúen."
+        },
+        {
+          "id": "es-xkcd-scantron:teacher-opening:app-unnamed-graders",
+          "cardId": "grammar-third-person-plural-unnamed-agent",
+          "participantWordIds": ["es-xkcd-scantron:teacher-opening:w10"],
+          "exampleEs": "PUNTÚEN",
+          "explanationEn": "The plural verb form points to unnamed people who will do the grading."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-scantron:student-address",
+      "labelEs": "¿SEÑORITA LENHART?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-scantron:student-address:w01", "text": "SEÑORITA", "normalized": "señorita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00038" }], "cardIds": ["word-señorita"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-scantron:student-address:excluded-lenhart",
+          "text": "LENHART",
+          "reason": "non-spanish-text",
+          "rationale": "LENHART is an unchanged personal surname, not a Spanish lexical word.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00039" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-scantron:student-question",
+      "labelEs": "USÉ UN LÁPIZ Nº3 EN VEZ DE UNO Nº2. ¿AFECTA ESO EN ALGO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0011" }
+      ],
+      "words": [
+        { "id": "es-xkcd-scantron:student-question:w01", "text": "USÉ", "normalized": "usé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00016" }], "cardIds": ["word-usé"] },
+        { "id": "es-xkcd-scantron:student-question:w02", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00017" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-scantron:student-question:w03", "text": "LÁPIZ", "normalized": "lápiz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00018" }], "cardIds": ["word-lápiz", "concept-scantron-number-two-pencil"] },
+        { "id": "es-xkcd-scantron:student-question:w04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00021" }], "cardIds": ["word-en--fixed-en-vez-de", "phrase-en-vez-de"] },
+        { "id": "es-xkcd-scantron:student-question:w05", "text": "VEZ", "normalized": "vez", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00022" }], "cardIds": ["word-vez--fixed-en-vez-de", "phrase-en-vez-de"] },
+        { "id": "es-xkcd-scantron:student-question:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00025" }], "cardIds": ["word-de--fixed-en-vez-de", "phrase-en-vez-de"] },
+        { "id": "es-xkcd-scantron:student-question:w07", "text": "UNO", "normalized": "uno", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00026" }], "cardIds": ["word-uno--one-item", "phrase-en-vez-de"] },
+        { "id": "es-xkcd-scantron:student-question:w08", "text": "AFECTA", "normalized": "afecta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00029" }], "cardIds": ["word-afecta--make-difference", "concept-scantron-number-two-pencil"] },
+        { "id": "es-xkcd-scantron:student-question:w09", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00030" }], "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-scantron:student-question:w10", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00033" }], "cardIds": ["word-en--extent"] },
+        { "id": "es-xkcd-scantron:student-question:w11", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00034" }], "cardIds": ["word-algo--anything-question"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-scantron:student-question:excluded-pencil-3",
+          "text": "Nº3",
+          "reason": "number",
+          "rationale": "Nº3 is the printed numeric pencil-grade label, not a Spanish lexical word.",
+          "explicitBounds": [{ "x": 38.4459, "y": 18.2692, "width": 3.6486, "height": 8.6538 }],
+          "geometryRationale": "Vision emitted two duplicate tokens over the same combined label; this single measured box accounts for the visible unit once."
+        },
+        {
+          "id": "es-xkcd-scantron:student-question:excluded-pencil-2",
+          "text": "Nº2",
+          "reason": "number",
+          "rationale": "Nº2 is the printed numeric pencil-grade label, not a Spanish lexical word.",
+          "explicitBounds": [{ "x": 32.7027, "y": 25.0, "width": 4.2568, "height": 8.6538 }],
+          "geometryRationale": "Vision emitted two duplicate tokens over the same combined label; this single measured box accounts for the visible unit once."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:student-question:app-instead-of",
+          "cardId": "phrase-en-vez-de",
+          "participantWordIds": ["es-xkcd-scantron:student-question:w04", "es-xkcd-scantron:student-question:w05", "es-xkcd-scantron:student-question:w06", "es-xkcd-scantron:student-question:w07"],
+          "exampleEs": "EN VEZ DE UNO Nº2",
+          "explanationEn": "En vez de is the fixed substitution connector, and uno fills its alternative slot by standing for another pencil."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-scantron:teacher-echo-question",
+      "labelEs": "¿TÚ QUÉ?",
+      "explicitBounds": [
+        { "x": 38.75, "y": 73.3, "width": 3.85, "height": 7.7 },
+        { "x": 42.05, "y": 66.8, "width": 2.2, "height": 8.5 },
+        { "x": 37.3, "y": 80.2, "width": 10.0, "height": 16.2 }
+      ],
+      "geometryRationale": "Vision split the large two-line reaction into oversized boxes. The first two measured boxes isolate ¿TÚ and its detached acute accent; the third isolates QUÉ and avoids the adjacent character stroke.",
+      "words": [
+        {
+          "id": "es-xkcd-scantron:teacher-echo-question:w01",
+          "text": "TÚ",
+          "normalized": "tú",
+          "explicitBounds": [
+            { "x": 38.75, "y": 73.3, "width": 3.85, "height": 7.7 },
+            { "x": 42.05, "y": 66.8, "width": 2.2, "height": 8.5 }
+          ],
+          "geometryRationale": "The first measured box covers the opening punctuation and letters. The second captures the detached acute accent over Ú without turning the blank space below it into a hotspot.",
+          "cardIds": ["word-tú"]
+        },
+        {
+          "id": "es-xkcd-scantron:teacher-echo-question:w02",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "explicitBounds": [{ "x": 37.3, "y": 80.2, "width": 10.0, "height": 16.2 }],
+          "geometryRationale": "This measured box tightly covers the large printed echo word and its closing punctuation.",
+          "cardIds": ["word-qué--echo-question", "question-words"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:teacher-echo-question:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-scantron:teacher-echo-question:w02"],
+          "exampleEs": "QUÉ",
+          "explanationEn": "Qué carries a written accent because it directly asks for the surprising information to be repeated."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-scantron:scream",
+      "labelEs": "AAAAH",
+      "explicitBounds": [{ "x": 54.3, "y": 0.4, "width": 8.0, "height": 10.6 }],
+      "geometryRationale": "Vision read the scream as Cyrillic characters and included a nearby motion stroke; this measured region isolates the visible letters.",
+      "words": [
+        {
+          "id": "es-xkcd-scantron:scream:w01",
+          "text": "AAAAH",
+          "normalized": "aaaah",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00001" }],
+          "cardIds": ["word-aaaah--scream", "concept-scantron-number-two-pencil"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-scantron:impact",
+      "labelEs": "BAM",
+      "explicitBounds": [
+        { "x": 57.45, "y": 27.0, "width": 3.4, "height": 11.0 },
+        { "x": 59.5, "y": 23.4, "width": 3.7, "height": 11.2 },
+        { "x": 61.4, "y": 20.0, "width": 3.5, "height": 11.2 }
+      ],
+      "geometryRationale": "Vision's detected region reaches into the surrounding motion lines; these three measured boxes follow the diagonal letters while avoiding the impact strokes.",
+      "words": [
+        {
+          "id": "es-xkcd-scantron:impact:w01",
+          "text": "BAM",
+          "normalized": "bam",
+          "explicitBounds": [
+            { "x": 57.75, "y": 27.4, "width": 2.9, "height": 10.2 },
+            { "x": 59.8, "y": 23.8, "width": 3.2, "height": 10.2 },
+            { "x": 61.7, "y": 20.4, "width": 3.0, "height": 10.5 }
+          ],
+          "geometryRationale": "These three tight boxes follow the rising B-A-M letter sequence without absorbing the neighboring body or impact strokes.",
+          "cardIds": ["word-bam--impact-sound", "concept-scantron-number-two-pencil"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-scantron:panel-3-exclamation",
+      "labelEs": "¡DIOS MÍO!",
+      "explicitBounds": [{ "x": 59.8, "y": 70.8, "width": 11.7, "height": 11.9 }],
+      "geometryRationale": "Vision's boxes absorb nearby curved artwork; these measured bounds isolate the handwritten exclamation.",
+      "words": [
+        {
+          "id": "es-xkcd-scantron:panel-3-exclamation:w01",
+          "text": "DIOS",
+          "normalized": "dios",
+          "explicitBounds": [{ "x": 60.1, "y": 71.7, "width": 5.1, "height": 10.7 }],
+          "geometryRationale": "This measured box covers DIOS and its opening punctuation without the adjacent figure.",
+          "cardIds": ["word-dios--exclamation", "phrase-dios-mio"]
+        },
+        {
+          "id": "es-xkcd-scantron:panel-3-exclamation:w02",
+          "text": "MÍO",
+          "normalized": "mío",
+          "explicitBounds": [{ "x": 65.7, "y": 71.7, "width": 5.5, "height": 10.7 }],
+          "geometryRationale": "This measured box covers MÍO and its closing punctuation without the curved underline.",
+          "cardIds": ["word-mío", "phrase-dios-mio"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:panel-3-exclamation:app-dios-mio",
+          "cardId": "phrase-dios-mio",
+          "participantWordIds": ["es-xkcd-scantron:panel-3-exclamation:w01", "es-xkcd-scantron:panel-3-exclamation:w02"],
+          "exampleEs": "DIOS MÍO",
+          "explanationEn": "The two words form the fixed exclamation of shock."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-scantron:panel-4-exclamation",
+      "labelEs": "¡DIOS MÍO!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-scantron:panel-4-exclamation:w01", "text": "DIOS", "normalized": "dios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00006" }], "cardIds": ["word-dios--exclamation", "phrase-dios-mio"] },
+        { "id": "es-xkcd-scantron:panel-4-exclamation:w02", "text": "MÍO", "normalized": "mío", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00007" }], "cardIds": ["word-mío", "phrase-dios-mio"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:panel-4-exclamation:app-dios-mio",
+          "cardId": "phrase-dios-mio",
+          "participantWordIds": ["es-xkcd-scantron:panel-4-exclamation:w01", "es-xkcd-scantron:panel-4-exclamation:w02"],
+          "exampleEs": "DIOS MÍO",
+          "explanationEn": "The same two-word expression again marks an immediate shocked reaction."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-scantron:blood-reaction",
+      "labelEs": "¡NUNCA HABÍA VISTO TANTA SANGRE!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-scantron:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-scantron:blood-reaction:w01", "text": "NUNCA", "normalized": "nunca", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00031" }], "cardIds": ["word-nunca"] },
+        { "id": "es-xkcd-scantron:blood-reaction:w02", "text": "HABÍA", "normalized": "había", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00032" }], "cardIds": ["word-había--past-perfect-helper", "grammar-past-perfect"] },
+        { "id": "es-xkcd-scantron:blood-reaction:w03", "text": "VISTO", "normalized": "visto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00035" }], "cardIds": ["word-visto--seen", "grammar-past-perfect"] },
+        { "id": "es-xkcd-scantron:blood-reaction:w04", "text": "TANTA", "normalized": "tanta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00036" }], "cardIds": ["word-tanta--so-much"] },
+        { "id": "es-xkcd-scantron:blood-reaction:w05", "text": "SANGRE", "normalized": "sangre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scantron:ocr-token-00037" }], "cardIds": ["word-sangre", "concept-scantron-number-two-pencil"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scantron:blood-reaction:app-past-perfect",
+          "cardId": "grammar-past-perfect",
+          "participantWordIds": ["es-xkcd-scantron:blood-reaction:w02", "es-xkcd-scantron:blood-reaction:w03"],
+          "exampleEs": "HABÍA VISTO",
+          "explanationEn": "Había is the past helper and visto is the irregular completed-action form of ver."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-terminologia",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Terminology",
+  "titleEs": "Terminología",
+  "titleText": {
+    "es": "Además, ¿soy sólo yo, o Japón y Nueva Zelanda son sospechosamente parecidas? ¿Alguien las ha visto juntas en una fiesta alguna vez?",
+    "en": "Also, is it just me, or do Japan and New Zealand look suspiciously similar?  Has anyone seen them at a party together?",
+    "noteEn": "The Spanish archive supplies a faithful translated title text. The official English JSON contains two spaces between its questions; they are preserved here."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-oeste--direction",
+      "kind": "word",
+      "promptEs": "oeste",
+      "answerEn": "west (the compass direction)",
+      "noteEn": "Oeste names the direction where the sun sets. This literal direction is distinct from el Oeste used as a broad cultural or geopolitical label.",
+      "example": { "es": "El barco navega hacia el oeste.", "en": "The ship sails west." },
+      "tags": ["word", "direction", "sense split", "A1"]
+    },
+    {
+      "id": "word-este--cultural-region",
+      "kind": "word",
+      "promptEs": "este",
+      "answerEn": "the East; a broad eastern geographic or cultural region",
+      "noteEn": "Este can name the compass direction or, by convention, a broad geographic or cultural region. The article el is used because the word is acting as a noun; context, not the article alone, selects the regional sense.",
+      "example": { "es": "El libro compara el este con el oeste.", "en": "The book compares the East with the West." },
+      "tags": ["word", "geography", "cultural region", "sense split", "B1"]
+    },
+    {
+      "id": "word-oeste--cultural-region",
+      "kind": "word",
+      "promptEs": "oeste",
+      "answerEn": "the West; a broad western geographic or cultural region",
+      "noteEn": "Oeste can name the compass direction or, by convention, a broad geographic or cultural region. The article el is used because the word is acting as a noun; context, not the article alone, selects the regional sense.",
+      "example": { "es": "El texto habla de relaciones entre el este y el oeste.", "en": "The text discusses relations between the East and the West." },
+      "tags": ["word", "geography", "cultural region", "sense split", "B1"]
+    },
+    {
+      "id": "word-fastidiado--annoyed",
+      "kind": "word",
+      "promptEs": "fastidiado",
+      "answerEn": "annoyed; bothered (completed-action form)",
+      "noteEn": "Fastidiado is the completed-action form of fastidiar, ‘to annoy’ or ‘to bother.’ After a form of haber such as ha, it stays unchanged.",
+      "example": { "es": "Ese ruido me ha fastidiado todo el día.", "en": "That noise has bothered me all day." },
+      "tags": ["word", "annoyance", "completed-action form", "B1"]
+    },
+    {
+      "id": "concept-east-west-cultural-geography",
+      "kind": "concept",
+      "promptEs": "el este y el oeste como regiones culturales",
+      "questionEn": "Why can “the East” lie west of someone while “the West” lies east of them?",
+      "answerEn": "These are conventional cultural and geographic labels, not directions measured from the current observer.",
+      "noteEn": "The labels grew from a Europe-centered view: East Asia became ‘the East,’ while Europe and societies historically grouped with it became ‘the West.’ From North America, traveling toward East Asia can mean going west across the Pacific, while traveling toward Europe can mean going east across the Atlantic. That mismatch creates the joke.",
+      "example": { "es": "Desde California, Japón queda al oeste.", "en": "From California, Japan lies to the west." },
+      "tags": ["concept", "geography", "cultural labels", "map joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-terminologia:map-cultural-east",
+      "labelEs": "\"EL ESTE\"",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-terminologia:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-terminologia:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-terminologia:map-cultural-east:w01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00003" }], "cardIds": ["word-el--article", "concept-east-west-cultural-geography"] },
+        { "id": "es-xkcd-terminologia:map-cultural-east:w02", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00004" }], "cardIds": ["word-este--cultural-region", "concept-east-west-cultural-geography"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-terminologia:map-west-direction",
+      "labelEs": "← OESTE",
+      "explicitBounds": [{ "x": 36.6372, "y": 34.7701, "width": 16.2832, "height": 8.3333 }],
+      "geometryRationale": "Vision missed OESTE and did not classify the adjacent left arrow; this measured group box covers only that directional annotation.",
+      "words": [
+        {
+          "id": "es-xkcd-terminologia:map-west-direction:w01",
+          "text": "OESTE",
+          "normalized": "oeste",
+          "explicitBounds": [{ "x": 41.7699, "y": 37.931, "width": 8.6726, "height": 4.5977 }],
+          "geometryRationale": "Vision omitted this handwritten compass label; the rectangle tightly covers its five letters below the arrow shaft.",
+          "cardIds": ["word-oeste--direction", "concept-east-west-cultural-geography"]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-terminologia:map-west-direction:excluded-left-arrow",
+          "text": "←",
+          "reason": "symbol",
+          "rationale": "The arrow indicates the westward direction on the map and is not a Spanish lexical unit.",
+          "explicitBounds": [{ "x": 36.6372, "y": 34.7701, "width": 16.2832, "height": 3.1609 }],
+          "geometryRationale": "The box follows the complete handwritten left arrow without entering the OESTE letters below it."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-terminologia:map-self-marker",
+      "labelEs": "YO X",
+      "explicitBounds": [{ "x": 52.2124, "y": 30.7471, "width": 3.3628, "height": 8.046 }],
+      "geometryRationale": "Vision omitted both the short self-label and its stacked map marker; this measured box contains only those two units.",
+      "words": [
+        {
+          "id": "es-xkcd-terminologia:map-self-marker:w01",
+          "text": "YO",
+          "normalized": "yo",
+          "explicitBounds": [{ "x": 52.2124, "y": 30.7471, "width": 3.3628, "height": 4.3103 }],
+          "geometryRationale": "Vision missed the small handwritten label; the box tightly covers YO above the location mark.",
+          "cardIds": ["word-yo--self-reference", "concept-east-west-cultural-geography"]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-terminologia:map-self-marker:excluded-location-x",
+          "text": "X",
+          "reason": "symbol",
+          "rationale": "The handwritten X marks the speaker's location on the map and is not the Spanish letter-name vocabulary being taught.",
+          "explicitBounds": [{ "x": 53.2743, "y": 35.0575, "width": 2.3009, "height": 3.7356 }],
+          "geometryRationale": "The tight rectangle covers the crossed location strokes below YO without touching either directional arrow."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-terminologia:map-east-direction",
+      "labelEs": "ESTE →",
+      "explicitBounds": [{ "x": 55.5752, "y": 35.0575, "width": 10.2655, "height": 8.6207 }],
+      "geometryRationale": "The OCR box for ESTE reached into the adjacent arrow; this measured group separates the lexical label from the complete right arrow.",
+      "words": [
+        {
+          "id": "es-xkcd-terminologia:map-east-direction:w01",
+          "text": "ESTE",
+          "normalized": "este",
+          "explicitBounds": [{ "x": 57.5221, "y": 38.2184, "width": 8.3186, "height": 5.4598 }],
+          "geometryRationale": "The manually tightened box covers only the four letters and excludes the arrow shaft above them.",
+          "cardIds": ["word-este--east", "concept-east-west-cultural-geography"]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-terminologia:map-east-direction:excluded-right-arrow",
+          "text": "→",
+          "reason": "symbol",
+          "rationale": "The arrow indicates the eastward direction on the map and is not a Spanish lexical unit.",
+          "explicitBounds": [{ "x": 55.5752, "y": 35.0575, "width": 6.9027, "height": 3.1609 }],
+          "geometryRationale": "The box follows the complete handwritten right arrow above ESTE without entering the word below."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-terminologia:map-cultural-west",
+      "labelEs": "\"EL OESTE\"",
+      "explicitBounds": [{ "x": 63.8938, "y": 28.4483, "width": 9.5575, "height": 11.2069 }],
+      "geometryRationale": "Vision detected only the first line of this two-line quoted label; the group box includes both lexical lines and their punctuation.",
+      "words": [
+        { "id": "es-xkcd-terminologia:map-cultural-west:w01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00001" }], "cardIds": ["word-el--article", "concept-east-west-cultural-geography"] },
+        {
+          "id": "es-xkcd-terminologia:map-cultural-west:w02",
+          "text": "OESTE",
+          "normalized": "oeste",
+          "explicitBounds": [{ "x": 63.8938, "y": 34.1954, "width": 9.5575, "height": 5.4598 }],
+          "geometryRationale": "Vision omitted the second line; this measured rectangle covers OESTE and its closing quote without reaching nearby coastlines.",
+          "cardIds": ["word-oeste--cultural-region", "concept-east-west-cultural-geography"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-terminologia:caption",
+      "labelEs": "ESTO SIEMPRE ME HA FASTIDIADO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-terminologia:ocr-line-0005" }],
+      "words": [
+        { "id": "es-xkcd-terminologia:caption:w01", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00005" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-terminologia:caption:w02", "text": "SIEMPRE", "normalized": "siempre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00006" }], "cardIds": ["word-siempre"] },
+        { "id": "es-xkcd-terminologia:caption:w03", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00007" }], "cardIds": ["word-me--direct"] },
+        { "id": "es-xkcd-terminologia:caption:w04", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00008" }], "cardIds": ["word-ha", "grammar-present-perfect"] },
+        { "id": "es-xkcd-terminologia:caption:w05", "text": "FASTIDIADO", "normalized": "fastidiado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-terminologia:ocr-token-00009" }], "cardIds": ["word-fastidiado--annoyed", "grammar-present-perfect"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-terminologia:caption:app-present-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": ["es-xkcd-terminologia:caption:w04", "es-xkcd-terminologia:caption:w05"],
+          "exampleEs": "HA FASTIDIADO",
+          "explanationEn": "Ha is the present helper for one thing, and fastidiado is fastidiar's unchanged completed-action form."
+        }
+      ]
+    }
+  ]
+}

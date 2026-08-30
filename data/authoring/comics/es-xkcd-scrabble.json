@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-scrabble",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Scrabble",
+  "titleEs": "Scrabble",
+  "titleText": {
+    "es": "",
+    "en": "A veteran Scrabble player will spot the 'OSTRICH' option.",
+    "noteEn": "The Spanish archive genuinely leaves its title text empty. The official English hint refers to the original rack letters CLTORIS and the board letters HI; the Spanish image instead changes them to CLITORIS and SI, so the OSTRICH option does not carry over unchanged."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-si--scrabble-tile-ambiguity",
+      "kind": "word",
+      "promptEs": "si",
+      "answerEn": "sí (‘yes’) or si (‘if’); Spanish Scrabble tiles omit the accent mark",
+      "noteEn": "Standard Spanish distinguishes sí, ‘yes,’ from si, ‘if.’ Spanish Scrabble uses unaccented vowel tiles even for words that carry a written accent in ordinary text, so the played SI can represent either spelling. Without a sentence, the board alone does not choose between them.",
+      "example": { "es": "Sí, iré si puedo.", "en": "Yes, I will go if I can." },
+      "tags": ["word", "accent", "spelling", "board game", "A2"]
+    },
+    {
+      "id": "word-clitoris--printed-without-accent",
+      "kind": "word",
+      "promptEs": "clitoris",
+      "answerEn": "clitoris; standard Spanish spells clítoris",
+      "noteEn": "Spanish Scrabble uses unaccented vowel tiles even for words that carry a written accent in ordinary text, so the rack shows CLITORIS. Standard Spanish writes clítoris with an accent on the first í.",
+      "example": { "es": "El clítoris forma parte de la anatomía genital.", "en": "The clitoris is part of genital anatomy." },
+      "tags": ["word", "anatomy", "printed without accent", "spelling", "B1"]
+    },
+    {
+      "id": "word-partidas",
+      "kind": "word",
+      "promptEs": "partidas",
+      "answerEn": "games; matches",
+      "noteEn": "A partida is one complete session of a board game, card game, or match. Partidas is the plural.",
+      "example": { "es": "Jugamos dos partidas de ajedrez.", "en": "We played two games of chess." },
+      "tags": ["word", "games", "plural", "A2"]
+    },
+    {
+      "id": "word-familiares--family-related",
+      "kind": "word",
+      "promptEs": "familiares",
+      "answerEn": "family; involving the family (plural)",
+      "noteEn": "Familiar can describe something connected with a family. It can also mean ‘familiar’ or name a relative in other settings, so context matters.",
+      "example": { "es": "Organizan cenas familiares los domingos.", "en": "They organize family dinners on Sundays." },
+      "tags": ["word", "family", "adjective", "plural", "A2"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-scrabble:board-word",
+      "labelEs": "SI",
+      "explicitBounds": [
+        { "x": 48.7805, "y": 52.6718, "width": 5.9233, "height": 3.4351 }
+      ],
+      "geometryRationale": "Vision read the two letter tiles plus a score mark as SIL; this measured region isolates the complete two-tile word SI.",
+      "words": [
+        {
+          "id": "es-xkcd-scrabble:board-word:w01",
+          "text": "SI",
+          "normalized": "si",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00001" }
+          ],
+          "cardIds": ["word-si--scrabble-tile-ambiguity"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-scrabble:rack-word",
+      "labelEs": "CLITORIS",
+      "explicitBounds": [
+        { "x": 35.8885, "y": 79.0076, "width": 29.2683, "height": 7.2519 }
+      ],
+      "geometryRationale": "Vision omitted the rack entirely; this measured region covers the eight adjacent letter tiles that visibly spell CLITORIS.",
+      "words": [
+        {
+          "id": "es-xkcd-scrabble:rack-word:w01",
+          "text": "CLITORIS",
+          "normalized": "clitoris",
+          "explicitBounds": [
+            { "x": 37.4564, "y": 80.1527, "width": 26.1324, "height": 4.9618 }
+          ],
+          "geometryRationale": "Vision missed the word; this tight rectangle spans the complete letter sequence while avoiding the board and table edge.",
+          "cardIds": ["word-clitoris--printed-without-accent"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-scrabble:caption",
+      "labelEs": "SIEMPRE ME PASA ESTO EN LAS PARTIDAS FAMILIARES DE SCRABBLE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-scrabble:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-scrabble:caption:w01", "text": "SIEMPRE", "normalized": "siempre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00002" }], "cardIds": ["word-siempre"] },
+        { "id": "es-xkcd-scrabble:caption:w02", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00003" }], "cardIds": ["word-me--indirect", "grammar-pasarle-algo-a-alguien"] },
+        { "id": "es-xkcd-scrabble:caption:w03", "text": "PASA", "normalized": "pasa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00004" }], "cardIds": ["word-pasa--happens", "grammar-pasarle-algo-a-alguien"] },
+        { "id": "es-xkcd-scrabble:caption:w04", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00005" }], "cardIds": ["word-esto", "grammar-pasarle-algo-a-alguien"] },
+        { "id": "es-xkcd-scrabble:caption:w05", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00006" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-scrabble:caption:w06", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00007" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-scrabble:caption:w07", "text": "PARTIDAS", "normalized": "partidas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00008" }], "cardIds": ["word-partidas", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-scrabble:caption:w08", "text": "FAMILIARES", "normalized": "familiares", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00009" }], "cardIds": ["word-familiares--family-related", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-scrabble:caption:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00010" }], "cardIds": ["word-de--type-classifier"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-scrabble:caption:excluded-scrabble",
+          "text": "SCRABBLE",
+          "reason": "non-spanish-text",
+          "rationale": "SCRABBLE is the unchanged English-language board-game brand name, not a Spanish lexical word.",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-scrabble:ocr-token-00011" }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-scrabble:caption:app-happen-to",
+          "cardId": "grammar-pasarle-algo-a-alguien",
+          "participantWordIds": [
+            "es-xkcd-scrabble:caption:w02",
+            "es-xkcd-scrabble:caption:w03",
+            "es-xkcd-scrabble:caption:w04"
+          ],
+          "exampleEs": "ME PASA ESTO",
+          "explanationEn": "Me identifies the affected person, pasa gives the happening form, and esto names what happens."
+        },
+        {
+          "id": "es-xkcd-scrabble:caption:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-scrabble:caption:w07",
+            "es-xkcd-scrabble:caption:w08"
+          ],
+          "exampleEs": "PARTIDAS FAMILIARES",
+          "explanationEn": "Partidas names the games first, and familiares follows as the neutral description."
+        },
+        {
+          "id": "es-xkcd-scrabble:caption:app-adjective-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-scrabble:caption:w07",
+            "es-xkcd-scrabble:caption:w08"
+          ],
+          "exampleEs": "PARTIDAS FAMILIARES",
+          "explanationEn": "Familiares takes plural -es to match partidas; this adjective has the same form with masculine and feminine nouns."
+        }
+      ]
+    }
+  ]
+}
