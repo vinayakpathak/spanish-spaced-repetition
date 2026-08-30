@@ -1,0 +1,811 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-papyrus",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Papyrus",
+  "titleEs": "Papyrus",
+  "titleText": {
+    "es": "",
+    "en": "",
+    "noteEn": "The Spanish archive supplies no title text, so both title-text fields remain empty. The raster restores the visible accents in FELICITACIÓN and CÓMO, joins the line-broken IM-/PRESAS as one word, and localizes the official twitch cues as *TIC*. It also renders the official heartfelt-card wording as tarjetas de felicitación and the final birthday card as regalo de cumpleaños. The official title text says the narrator privately likes Papyrus and expects typographers to object, confirming that the joke depends on the typeface's reputation."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-frikis--geeks",
+      "kind": "word",
+      "promptEs": "frikis",
+      "answerEn": "geeks; nerds (plural, informal)",
+      "noteEn": "Friki is an informal Spanish noun borrowed from English “freak.” The plural frikis can refer to enthusiasts with intense or specialized interests; tone determines whether it sounds affectionate or mocking.",
+      "example": {
+        "es": "Los frikis del cine conocen cada detalle.",
+        "en": "The film geeks know every detail."
+      },
+      "tags": ["word", "people", "informal", "loanword", "B1"]
+    },
+    {
+      "id": "word-tipografía",
+      "kind": "word",
+      "promptEs": "tipografía",
+      "answerEn": "typography",
+      "noteEn": "",
+      "tags": ["word", "design", "writing", "B1"]
+    },
+    {
+      "id": "word-tarjetas",
+      "kind": "word",
+      "promptEs": "tarjetas",
+      "answerEn": "cards",
+      "noteEn": "",
+      "tags": ["word", "objects", "plural", "A1"]
+    },
+    {
+      "id": "word-felicitación",
+      "kind": "word",
+      "promptEs": "felicitación",
+      "answerEn": "greeting; congratulatory message",
+      "noteEn": "",
+      "tags": ["word", "celebrations", "A2"]
+    },
+    {
+      "id": "word-impresas",
+      "kind": "word",
+      "promptEs": "impresas",
+      "answerEn": "printed (feminine plural)",
+      "noteEn": "Impresas is the completed-action form of imprimir used as a description. Its -as ending matches a feminine plural noun; masculine plural items would be impresos.",
+      "example": {
+        "es": "Guardamos las fotos impresas.",
+        "en": "We kept the printed photos."
+      },
+      "tags": ["word", "printing", "completed action", "agreement", "A2"]
+    },
+    {
+      "id": "word-con--using-style",
+      "kind": "word",
+      "promptEs": "con",
+      "answerEn": "in; using (a typeface or style)",
+      "noteEn": "Con can introduce the tool, format, or style used to produce something. Natural English may use “in” or “using” rather than a literal “with.”",
+      "example": {
+        "es": "Imprimieron el aviso con un tipo sencillo.",
+        "en": "They printed the notice in a simple typeface."
+      },
+      "tags": ["word", "preposition", "method", "style", "A2"]
+    },
+    {
+      "id": "word-tipo--typeface",
+      "kind": "word",
+      "promptEs": "tipo",
+      "answerEn": "typeface; font",
+      "noteEn": "In printing and design, tipo can be a shortened way to refer to a tipo de letra, a typeface or font. This is distinct from informal tipo meaning “guy.”",
+      "example": {
+        "es": "Elige un tipo fácil de leer.",
+        "en": "Choose an easy-to-read typeface."
+      },
+      "tags": ["word", "typography", "design", "B1"]
+    },
+    {
+      "id": "word-papyrus--typeface-name",
+      "kind": "word",
+      "promptEs": "papyrus",
+      "answerEn": "Papyrus (a typeface name)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "typeface"]
+    },
+    {
+      "id": "word-luchan--strive",
+      "kind": "word",
+      "promptEs": "luchan",
+      "answerEn": "they struggle; they strive",
+      "noteEn": "Luchan is the present form of luchar for they or plural you. Besides a physical fight, luchar can describe making a determined effort toward a goal.",
+      "example": {
+        "es": "Luchan por terminar a tiempo.",
+        "en": "They struggle to finish on time."
+      },
+      "tags": ["word", "effort", "present", "plural", "A2"]
+    },
+    {
+      "id": "word-por--striving-goal",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "to; toward the goal of (after luchar)",
+      "noteEn": "After luchar, por can introduce the goal being pursued. When that goal is an action, natural English often uses “to” rather than translating por as “for.”",
+      "example": {
+        "es": "Lucho por aprender más.",
+        "en": "I strive to learn more."
+      },
+      "tags": ["word", "preposition", "goal", "effort", "A2"]
+    },
+    {
+      "id": "word-parecer",
+      "kind": "word",
+      "promptEs": "parecer",
+      "answerEn": "to seem; to appear",
+      "noteEn": "",
+      "tags": ["word", "appearance", "verbs", "A2"]
+    },
+    {
+      "id": "word-agradecidos",
+      "kind": "word",
+      "promptEs": "agradecidos",
+      "answerEn": "grateful; thankful (masculine or mixed plural)",
+      "noteEn": "Agradecidos describes more than one male person or a mixed group. A feminine plural group would be agradecidas.",
+      "example": {
+        "es": "Estamos agradecidos por tu ayuda.",
+        "en": "We are grateful for your help."
+      },
+      "tags": ["word", "gratitude", "agreement", "plural", "A2"]
+    },
+    {
+      "id": "word-bonito--lovely",
+      "kind": "word",
+      "promptEs": "bonito",
+      "answerEn": "nice; lovely (masculine singular)",
+      "noteEn": "Bonito can come before a noun when the speaker presents a positive, often personal evaluation. Its ending changes to match the noun: bonita, bonitos, or bonitas.",
+      "example": {
+        "es": "Fue un bonito detalle.",
+        "en": "It was a lovely gesture."
+      },
+      "tags": ["word", "evaluation", "adjective", "agreement", "A1"]
+    },
+    {
+      "id": "word-regalo",
+      "kind": "word",
+      "promptEs": "regalo",
+      "answerEn": "gift; present",
+      "noteEn": "",
+      "tags": ["word", "objects", "celebrations", "A1"]
+    },
+    {
+      "id": "word-cumpleaños",
+      "kind": "word",
+      "promptEs": "cumpleaños",
+      "answerEn": "birthday",
+      "noteEn": "",
+      "tags": ["word", "celebrations", "A1"]
+    },
+    {
+      "id": "phrase-tarjeta-de-felicitacion",
+      "kind": "phrase",
+      "promptEs": "tarjeta de felicitación",
+      "questionEn": "What common Spanish phrase means a card sent for a celebration or special occasion?",
+      "answerEn": "Use tarjeta de felicitación. Make tarjeta plural when referring to more than one card.",
+      "noteEn": "De links tarjeta to its purpose. In the plural, only the main noun changes: tarjetas de felicitación; felicitación normally stays singular because it classifies the kind of card.",
+      "example": {
+        "es": "Compré una tarjeta de felicitación.",
+        "en": "I bought a greeting card."
+      },
+      "tags": ["phrase", "cards", "celebrations", "A2"]
+    },
+    {
+      "id": "phrase-luchar-por-infinitive",
+      "kind": "phrase",
+      "promptEs": "luchar por + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone struggles or strives to do something?",
+      "answerEn": "Use a form of luchar, then por, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. Luchar changes for the person and time, while por stays fixed and the goal action keeps its dictionary form.",
+      "example": {
+        "es": "Luchamos por mejorar.",
+        "en": "We strive to improve."
+      },
+      "tags": ["phrase", "effort", "goals", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-regalo-de-cumpleanos",
+      "kind": "phrase",
+      "promptEs": "regalo de cumpleaños",
+      "questionEn": "What common Spanish phrase means a birthday gift or birthday present?",
+      "answerEn": "Use regalo de cumpleaños. Make regalo plural when referring to more than one gift.",
+      "noteEn": "De links the gift to the occasion. Cumpleaños keeps the same written form in regalo de cumpleaños and regalos de cumpleaños; only regalo marks whether there is one gift or several.",
+      "example": {
+        "es": "Le compré un regalo de cumpleaños.",
+        "en": "I bought her a birthday present."
+      },
+      "tags": ["phrase", "gifts", "birthdays", "A1"]
+    },
+    {
+      "id": "concept-papyrus-typeface-reputation",
+      "kind": "concept",
+      "promptEs": "Papyrus · reputación tipográfica",
+      "answerEn": "Papyrus is a widely available display typeface that many designers criticize as overused and visually clichéd.",
+      "noteEn": "Its faux-handwritten look appears in many informal signs and themed designs, which has made it a recurring target of typography jokes. Giving a carefully meant card set in Papyrus is therefore framed as an irritant to a typography enthusiast; the official title text adds that the narrator secretly likes the typeface and expects beautifully typeset complaints.",
+      "tags": ["concept", "typography", "design culture", "xkcd joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-papyrus:hobby-heading",
+      "labelEs": "MI HOBBY:",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0001" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-papyrus:hobby-heading:w01",
+          "text": "MI",
+          "normalized": "mi",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-papyrus:ocr-token-00001" }
+          ],
+          "cardIds": ["word-mi"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-heading:w02",
+          "text": "HOBBY",
+          "normalized": "hobby",
+          "explicitBounds": [
+            { "x": 42.8571, "y": 1.2077, "width": 25.4826, "height": 4.3478 }
+          ],
+          "geometryRationale": "Vision included the following colon; this checked box isolates the printed letters of HOBBY from that punctuation.",
+          "cardIds": ["word-hobby"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-papyrus:hobby-description",
+      "labelEs": "DARLE A FRIKIS DE LA TIPOGRAFÍA TARJETAS DE FELICITACIÓN IMPRESAS CON EL TIPO \"PAPYRUS\" Y OBSERVAR CÓMO LUCHAN POR PARECER AGRADECIDOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0006" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w01",
+          "text": "DARLE",
+          "normalized": "darle",
+          "explicitBounds": [
+            { "x": 0, "y": 6.5217, "width": 19.0385, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-darle--give-recipient",
+            "grammar-pronoun-attached-to-infinitive",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w02",
+          "text": "A",
+          "normalized": "a",
+          "explicitBounds": [
+            { "x": 19.9038, "y": 6.5217, "width": 4.3269, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-a--recipient",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w03",
+          "text": "FRIKIS",
+          "normalized": "frikis",
+          "explicitBounds": [
+            { "x": 25.0962, "y": 6.5217, "width": 19.0385, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-frikis--geeks",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w04",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [
+            { "x": 45, "y": 6.5217, "width": 7.7885, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-de--about-topic",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w05",
+          "text": "LA",
+          "normalized": "la",
+          "explicitBounds": [
+            { "x": 53.6538, "y": 6.5217, "width": 7.7885, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-la--article",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w06",
+          "text": "TIPOGRAFÍA",
+          "normalized": "tipografía",
+          "explicitBounds": [
+            { "x": 62.3077, "y": 6.5217, "width": 32.3077, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-tipografía",
+            "grammar-indirect-object-pronoun-plus-a-clarifier"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w07",
+          "text": "TARJETAS",
+          "normalized": "tarjetas",
+          "explicitBounds": [
+            { "x": 0, "y": 10.3865, "width": 29.4231, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-tarjetas",
+            "phrase-tarjeta-de-felicitacion",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w08",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [
+            { "x": 30.2885, "y": 10.3865, "width": 6.9231, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-de--noun-classifier",
+            "phrase-tarjeta-de-felicitacion"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w09",
+          "text": "FELICITACIÓN",
+          "normalized": "felicitación",
+          "explicitBounds": [
+            { "x": 38.0769, "y": 10.3865, "width": 38.0769, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the adjacent text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-felicitación",
+            "phrase-tarjeta-de-felicitacion"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w10",
+          "text": "IMPRESAS",
+          "normalized": "impresas",
+          "explicitBounds": [
+            { "x": 77.9923, "y": 10.3865, "width": 6.1776, "height": 3.3816 },
+            { "x": 0, "y": 14.2512, "width": 22.5, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision split the line-wrapped word and its row rectangles overlap adjacent text; these checked boxes isolate both visible parts without crossing another hotspot.",
+          "cardIds": [
+            "word-impresas",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w11",
+          "text": "CON",
+          "normalized": "con",
+          "explicitBounds": [
+            { "x": 23.3654, "y": 14.2512, "width": 12.9808, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-con--using-style"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w12",
+          "text": "EL",
+          "normalized": "el",
+          "explicitBounds": [
+            { "x": 37.2115, "y": 14.2512, "width": 6.9231, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-el--article"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w13",
+          "text": "TIPO",
+          "normalized": "tipo",
+          "explicitBounds": [
+            { "x": 45, "y": 14.2512, "width": 13.8462, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-tipo--typeface"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w14",
+          "text": "PAPYRUS",
+          "normalized": "papyrus",
+          "explicitBounds": [
+            { "x": 63.7066, "y": 14.2512, "width": 23.5521, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision included both surrounding quotation marks and overlapped adjacent rows; this checked box isolates the PAPYRUS letters without crossing another hotspot.",
+          "cardIds": [
+            "word-papyrus--typeface-name",
+            "concept-papyrus-typeface-reputation"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w15",
+          "text": "Y",
+          "normalized": "y",
+          "explicitBounds": [
+            { "x": 91.7308, "y": 14.2512, "width": 5.1923, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-y"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w16",
+          "text": "OBSERVAR",
+          "normalized": "observar",
+          "explicitBounds": [
+            { "x": 0, "y": 18.1159, "width": 30.2885, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-observar"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w17",
+          "text": "CÓMO",
+          "normalized": "cómo",
+          "explicitBounds": [
+            { "x": 31.1538, "y": 18.1159, "width": 17.3077, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": ["word-cómo"]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w18",
+          "text": "LUCHAN",
+          "normalized": "luchan",
+          "explicitBounds": [
+            { "x": 49.3269, "y": 18.1159, "width": 22.5, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-luchan--strive",
+            "phrase-luchar-por-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w19",
+          "text": "POR",
+          "normalized": "por",
+          "explicitBounds": [
+            { "x": 72.6923, "y": 18.1159, "width": 12.6923, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps adjacent text rows; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-por--striving-goal",
+            "phrase-luchar-por-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w20",
+          "text": "PARECER",
+          "normalized": "parecer",
+          "explicitBounds": [
+            { "x": 0, "y": 22.4638, "width": 25, "height": 2.8986 }
+          ],
+          "geometryRationale": "Vision's row rectangle overlaps the preceding text row; this checked box follows the visible glyphs without crossing another word hotspot.",
+          "cardIds": [
+            "word-parecer",
+            "phrase-luchar-por-infinitive",
+            "grammar-parecer-adjective"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:w21",
+          "text": "AGRADECIDOS",
+          "normalized": "agradecidos",
+          "explicitBounds": [
+            { "x": 26.6409, "y": 22.4638, "width": 35.9073, "height": 2.8986 }
+          ],
+          "geometryRationale": "Vision included the following period and overlapped the preceding row; this checked box isolates AGRADECIDOS without crossing another hotspot.",
+          "cardIds": [
+            "word-agradecidos",
+            "grammar-parecer-adjective",
+            "grammar-adjective-gender-agreement"
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-darle-word",
+          "cardId": "word-darle--give-recipient",
+          "participantWordIds": ["es-xkcd-papyrus:hobby-description:w01"],
+          "exampleEs": "DARLE A FRIKIS",
+          "explanationEn": "The le attached to dar points ahead to the plural frikis. Careful standard number agreement would normally use darles here; colloquial usage sometimes leaves le singular before an explicitly plural receiver."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-attached-le",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-papyrus:hobby-description:w01"],
+          "exampleEs": "DARLE",
+          "explanationEn": "Le attaches directly to the unchanged action dar and marks its receiver."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-recipient-clarifier",
+          "cardId": "grammar-indirect-object-pronoun-plus-a-clarifier",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w01",
+            "es-xkcd-papyrus:hobby-description:w02",
+            "es-xkcd-papyrus:hobby-description:w03",
+            "es-xkcd-papyrus:hobby-description:w04",
+            "es-xkcd-papyrus:hobby-description:w05",
+            "es-xkcd-papyrus:hobby-description:w06"
+          ],
+          "exampleEs": "DARLE A FRIKIS DE LA TIPOGRAFÍA",
+          "explanationEn": "Le inside darle marks the receiver, while a frikis de la tipografía names that same receiver explicitly. Because frikis is plural, careful standard Spanish normally uses les; the raster preserves colloquial le."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-greeting-card",
+          "cardId": "phrase-tarjeta-de-felicitacion",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w07",
+            "es-xkcd-papyrus:hobby-description:w08",
+            "es-xkcd-papyrus:hobby-description:w09"
+          ],
+          "exampleEs": "TARJETAS DE FELICITACIÓN",
+          "explanationEn": "Tarjetas is plural, de links it to the kind of card, and felicitación remains singular as the classifier."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-printed-position",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w07",
+            "es-xkcd-papyrus:hobby-description:w10"
+          ],
+          "exampleEs": "TARJETAS DE FELICITACIÓN IMPRESAS",
+          "explanationEn": "Impresas follows the noun tarjetas and its de felicitación modifier, then describes which cards are meant."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-printed-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w07",
+            "es-xkcd-papyrus:hobby-description:w10"
+          ],
+          "exampleEs": "TARJETAS DE FELICITACIÓN IMPRESAS",
+          "explanationEn": "Impresas uses feminine plural -as to match the feminine plural noun tarjetas."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-por-word",
+          "cardId": "word-por--striving-goal",
+          "participantWordIds": ["es-xkcd-papyrus:hobby-description:w19"],
+          "exampleEs": "LUCHAN POR PARECER",
+          "explanationEn": "After luchan, por introduces the goal action parecer, so natural English uses “to” for this link."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-strive-action",
+          "cardId": "phrase-luchar-por-infinitive",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w18",
+            "es-xkcd-papyrus:hobby-description:w19",
+            "es-xkcd-papyrus:hobby-description:w20"
+          ],
+          "exampleEs": "LUCHAN POR PARECER",
+          "explanationEn": "Luchan changes for the plural people, por introduces their goal, and parecer stays in its unchanged -er dictionary form."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-seem-grateful",
+          "cardId": "grammar-parecer-adjective",
+          "participantWordIds": [
+            "es-xkcd-papyrus:hobby-description:w20",
+            "es-xkcd-papyrus:hobby-description:w21"
+          ],
+          "exampleEs": "PARECER AGRADECIDOS",
+          "explanationEn": "Parecer introduces an outward impression, and agradecidos supplies the description."
+        },
+        {
+          "id": "es-xkcd-papyrus:hobby-description:app-grateful-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": ["es-xkcd-papyrus:hobby-description:w21"],
+          "exampleEs": "AGRADECIDOS",
+          "explanationEn": "Agradecidos ends in -os because it describes the plural group of typography geeks."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-papyrus:recipient-reaction",
+      "labelEs": "¡GRACIAS POR ESTE *TIC* ...BONITO... *TIC* REGALO DE CUMPLEAÑOS!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-papyrus:ocr-line-0009" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w01",
+          "text": "GRACIAS",
+          "normalized": "gracias",
+          "explicitBounds": [
+            { "x": 22.0077, "y": 32.1256, "width": 24.7104, "height": 4.1063 }
+          ],
+          "geometryRationale": "Vision included the opening inverted exclamation mark; this checked box isolates the letters of GRACIAS from that punctuation.",
+          "cardIds": ["word-gracias"]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w02",
+          "text": "POR",
+          "normalized": "por",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-papyrus:ocr-token-00026" }
+          ],
+          "cardIds": ["word-por--thanks-reason"]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w03",
+          "text": "ESTE",
+          "normalized": "este",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-papyrus:ocr-token-00027" }
+          ],
+          "cardIds": ["word-este"]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w04",
+          "text": "TIC",
+          "normalized": "tic",
+          "explicitBounds": [
+            { "x": 16.6023, "y": 38.1643, "width": 7.722, "height": 4.5894 }
+          ],
+          "geometryRationale": "Vision fused both bracketing asterisks into this token; the measured rectangle isolates the three Spanish letters.",
+          "cardIds": ["word-tic--twitch"]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w05",
+          "text": "BONITO",
+          "normalized": "bonito",
+          "explicitBounds": [
+            { "x": 37.4517, "y": 38.6473, "width": 21.6216, "height": 3.6232 }
+          ],
+          "geometryRationale": "Vision included both surrounding ellipses; this checked box isolates the six printed letters of BONITO from that punctuation.",
+          "cardIds": [
+            "word-bonito--lovely",
+            "grammar-adjective-gender-agreement"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w06",
+          "text": "TIC",
+          "normalized": "tic",
+          "explicitBounds": [
+            { "x": 74.5174, "y": 38.1643, "width": 7.722, "height": 4.5894 }
+          ],
+          "geometryRationale": "Vision fused both bracketing asterisks into this token; the measured rectangle isolates the three Spanish letters.",
+          "cardIds": ["word-tic--twitch"]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w07",
+          "text": "REGALO",
+          "normalized": "regalo",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-papyrus:ocr-token-00031" }
+          ],
+          "cardIds": [
+            "word-regalo",
+            "grammar-adjective-gender-agreement",
+            "phrase-regalo-de-cumpleanos"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w08",
+          "text": "DE",
+          "normalized": "de",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-papyrus:ocr-token-00032" }
+          ],
+          "cardIds": [
+            "word-de--noun-classifier",
+            "phrase-regalo-de-cumpleanos"
+          ]
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:w09",
+          "text": "CUMPLEAÑOS",
+          "normalized": "cumpleaños",
+          "explicitBounds": [
+            { "x": 47.8764, "y": 45.4106, "width": 38.9961, "height": 3.3816 }
+          ],
+          "geometryRationale": "Vision included the following exclamation mark; this checked box isolates CUMPLEAÑOS from that punctuation.",
+          "cardIds": [
+            "word-cumpleaños",
+            "phrase-regalo-de-cumpleanos"
+          ]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:excluded-first-left-asterisk",
+          "text": "*",
+          "reason": "symbol",
+          "rationale": "This asterisk visually opens the first TIC sound cue and is not Spanish lexical vocabulary.",
+          "occurrence": 1,
+          "explicitBounds": [
+            { "x": 14.6718, "y": 40.8213, "width": 1.9305, "height": 1.2077 }
+          ],
+          "geometryRationale": "Vision fused the symbol into the first TIC token; this measured box isolates the opening asterisk."
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:excluded-first-right-asterisk",
+          "text": "*",
+          "reason": "symbol",
+          "rationale": "This asterisk visually closes the first TIC sound cue and is not Spanish lexical vocabulary.",
+          "occurrence": 2,
+          "explicitBounds": [
+            { "x": 24.3243, "y": 38.1643, "width": 1.1583, "height": 1.2077 }
+          ],
+          "geometryRationale": "Vision fused the symbol into the first TIC token; this measured box isolates the closing asterisk."
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:excluded-second-left-asterisk",
+          "text": "*",
+          "reason": "symbol",
+          "rationale": "This asterisk visually opens the second TIC sound cue and is not Spanish lexical vocabulary.",
+          "occurrence": 3,
+          "explicitBounds": [
+            { "x": 72.5869, "y": 40.8213, "width": 1.9305, "height": 1.2077 }
+          ],
+          "geometryRationale": "Vision fused the symbol into the second TIC token; this measured box isolates the opening asterisk."
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:excluded-second-right-asterisk",
+          "text": "*",
+          "reason": "symbol",
+          "rationale": "This asterisk visually closes the second TIC sound cue and is not Spanish lexical vocabulary.",
+          "occurrence": 4,
+          "explicitBounds": [
+            { "x": 82.2394, "y": 38.1643, "width": 1.1583, "height": 1.2077 }
+          ],
+          "geometryRationale": "Vision fused the symbol into the second TIC token; this measured box isolates the closing asterisk."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:app-bonito-word",
+          "cardId": "word-bonito--lovely",
+          "participantWordIds": ["es-xkcd-papyrus:recipient-reaction:w05"],
+          "exampleEs": "*TIC* ...BONITO... *TIC*",
+          "explanationEn": "The long pauses and visible tics make this positive description sound forced rather than spontaneous."
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:app-lovely-gift-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-papyrus:recipient-reaction:w05",
+            "es-xkcd-papyrus:recipient-reaction:w07"
+          ],
+          "exampleEs": "BONITO... *TIC* REGALO",
+          "explanationEn": "Bonito uses masculine singular -o to match the masculine singular noun regalo."
+        },
+        {
+          "id": "es-xkcd-papyrus:recipient-reaction:app-birthday-gift",
+          "cardId": "phrase-regalo-de-cumpleanos",
+          "participantWordIds": [
+            "es-xkcd-papyrus:recipient-reaction:w07",
+            "es-xkcd-papyrus:recipient-reaction:w08",
+            "es-xkcd-papyrus:recipient-reaction:w09"
+          ],
+          "exampleEs": "REGALO DE CUMPLEAÑOS",
+          "explanationEn": "Regalo names the gift, de links it to the occasion, and cumpleaños names that occasion."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-estimacion",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Estimation",
+  "titleEs": "Estimación",
+  "titleText": {
+    "es": "Podrían decir que ",
+    "en": "They could say \"the connection is probably lost,\" but it's more fun to do naive time-averaging to give you hope that if you wait around for 1,163 hours, it will finally finish.",
+    "noteEn": "The Spanish archive's title-text field is truncated immediately after Podrían decir que and is preserved verbatim, including its trailing space. The Spanish raster preserves the official car scene and changing-arrival-time joke. Vision omitted nearly all of the first speech bubble, dropped the initial letters of EN and SERÁN, misread AUTOR as ALTOR, and falsely interpreted the illustrated front grille as FREEBIC; the grille is not printed text."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-llegando",
+      "kind": "word",
+      "promptEs": "llegando",
+      "answerEn": "arriving; getting (somewhere)",
+      "noteEn": "Llegando is the -ando form of llegar. After a form of estar, it presents the arrival as an action in progress.",
+      "example": { "es": "Estamos llegando a casa.", "en": "We are getting home." },
+      "tags": ["word", "movement", "action in progress", "A2"]
+    },
+    {
+      "id": "word-estar--location-infinitive",
+      "kind": "word",
+      "promptEs": "estar",
+      "answerEn": "to be (at a location)",
+      "noteEn": "Spanish normally uses estar to say where a person or thing is. Estar is the verb's unchanged dictionary form.",
+      "example": { "es": "Espero estar allí mañana.", "en": "I hope to be there tomorrow." },
+      "tags": ["word", "location", "infinitive", "A1"]
+    },
+    {
+      "id": "word-en--future-interval",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "in; after (an amount of time)",
+      "noteEn": "Before a time span, en can measure how long from now it will be until a future event occurs. In another context, en plus a time span can instead say how long an activity takes to complete.",
+      "example": { "es": "El tren llegará en diez minutos.", "en": "The train will arrive in ten minutes." },
+      "tags": ["word", "preposition", "future time", "A2"]
+    },
+    {
+      "id": "word-serán--future-duration",
+      "kind": "word",
+      "promptEs": "serán",
+      "answerEn": "it will be; it will come to (a plural amount)",
+      "noteEn": "Serán is the future form of ser used with a plural amount. Spanish can match ser to plural time units, as in serán dos días, while natural English may use singular ‘it’: ‘it will be two days.’",
+      "example": { "es": "Serán tres horas de viaje.", "en": "It will be a three-hour trip." },
+      "tags": ["word", "ser", "future", "quantity", "A2"]
+    },
+    {
+      "id": "word-unos--approximately",
+      "kind": "word",
+      "promptEs": "unos",
+      "answerEn": "about; approximately (before a masculine plural amount)",
+      "noteEn": "Before a number, unos can make the quantity approximate. This differs from unos before an ordinary plural noun, where it usually means ‘some’ or ‘a few.’",
+      "example": { "es": "Tardaremos unos veinte minutos.", "en": "We will take about twenty minutes." },
+      "tags": ["word", "approximation", "quantity", "A2"]
+    },
+    {
+      "id": "word-treinta",
+      "kind": "word",
+      "promptEs": "treinta",
+      "answerEn": "thirty",
+      "noteEn": "",
+      "tags": ["word", "number", "A1"]
+    },
+    {
+      "id": "word-autor",
+      "kind": "word",
+      "promptEs": "autor",
+      "answerEn": "author; creator",
+      "noteEn": "",
+      "tags": ["word", "people", "creation", "A2"]
+    },
+    {
+      "id": "word-diálogo--dialog-box",
+      "kind": "word",
+      "promptEs": "diálogo",
+      "answerEn": "dialog box; on-screen dialog",
+      "noteEn": "In computing, diálogo or cuadro de diálogo is a small on-screen window that asks for information or reports status. This differs from diálogo meaning spoken conversation.",
+      "example": { "es": "El diálogo muestra el progreso.", "en": "The dialog box shows the progress." },
+      "tags": ["word", "computing", "interface", "B1"]
+    },
+    {
+      "id": "word-copia--copying-process",
+      "kind": "word",
+      "promptEs": "copia",
+      "answerEn": "copying; copy operation",
+      "noteEn": "Here copia names the process of duplicating data, rather than one particular copy of an item.",
+      "example": { "es": "La copia de datos tardó una hora.", "en": "Copying the data took an hour." },
+      "tags": ["word", "computing", "process", "A2"]
+    },
+    {
+      "id": "word-windows--operating-system",
+      "kind": "word",
+      "promptEs": "windows",
+      "answerEn": "Windows (the Microsoft operating system)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "computing"]
+    },
+    {
+      "id": "word-visita--visits",
+      "kind": "word",
+      "promptEs": "visita",
+      "answerEn": "visits; is visiting",
+      "noteEn": "Visita is the present form of visitar for one person or thing described as he, she, or it. When the visitor goes to see specific people, Spanish normally uses a before them.",
+      "example": { "es": "Clara visita a sus abuelos.", "en": "Clara visits her grandparents." },
+      "tags": ["word", "visiting", "present tense", "A1"]
+    },
+    {
+      "id": "grammar-en-duration-until-event",
+      "kind": "grammar",
+      "promptEs": "en + cantidad de tiempo (hasta un evento futuro)",
+      "questionEn": "How do you say how long from now it will be until something happens?",
+      "answerEn": "Use en before the amount of time.",
+      "noteEn": "With a future event, en plus a time span measures the interval from now until that event: llegará en diez minutos. With an activity that has a clear endpoint, the same pattern can instead say how long completion takes: lo terminó en una hora. The surrounding event tells which reading fits.",
+      "example": { "es": "La película empezará en media hora.", "en": "The movie will start in half an hour." },
+      "tags": ["grammar", "future time", "duration", "A2"]
+    },
+    {
+      "id": "grammar-unos-approximate-quantity",
+      "kind": "grammar",
+      "promptEs": "unos/unas + número + nombre",
+      "questionEn": "How do you make a number sound approximate, like ‘about twenty minutes’?",
+      "answerEn": "Put unos or unas before the number.",
+      "noteEn": "Use unos before a masculine plural unit and unas before a feminine plural unit: unos veinte minutos, unas veinte personas. Here these words mean ‘about,’ rather than their ordinary ‘some’ meaning before a noun without a number.",
+      "example": { "es": "Esperamos unos diez minutos.", "en": "We waited about ten minutes." },
+      "tags": ["grammar", "approximation", "quantity", "A2"]
+    },
+    {
+      "id": "concept-windows-file-copy-estimation",
+      "kind": "concept",
+      "promptEs": "estimaciones de tiempo · diálogo de copia de ficheros de Windows",
+      "questionEn": "Why does the visitor's arrival estimate swing between minutes, days, and seconds?",
+      "answerEn": "The visitor is personified as the author of a Windows file-copy dialog, so his unreliable arrival estimates imitate the wildly changing completion-time estimates produced while files are copied.",
+      "noteEn": "The official title text says the software could simply report a probably lost connection, but instead uses naive time-averaging that can preserve false hope with an enormous remaining-time estimate. The Spanish raster preserves the car scene and the same changing-time joke.",
+      "tags": ["concept", "xkcd joke", "computing", "estimation"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-estimacion:first-estimate",
+      "labelEs": "ESTOY LLEGANDO A LA CIUDAD, ASÍ QUE DEBERÍA ESTAR AHÍ EN CINCUENTA MINUTOS.",
+      "explicitBounds": [{ "x": 5.3872, "y": 2.0896, "width": 90.2357, "height": 14.3284 }],
+      "geometryRationale": "Vision detected only MINUTOS from this speech bubble; this measured envelope covers all three printed rows and their punctuation.",
+      "words": [
+        { "id": "es-xkcd-estimacion:first-estimate:w01", "text": "ESTOY", "normalized": "estoy", "explicitBounds": [{ "x": 6.0606, "y": 2.0896, "width": 15.1515, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without touching another hotspot.", "cardIds": ["word-estoy--progressive-auxiliary", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w02", "text": "LLEGANDO", "normalized": "llegando", "explicitBounds": [{ "x": 22.2222, "y": 2.0896, "width": 23.569, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without touching another hotspot.", "cardIds": ["word-llegando", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w03", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 46.8013, "y": 2.0896, "width": 3.367, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyph without touching another hotspot.", "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w04", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 50.8418, "y": 2.0896, "width": 6.0606, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without touching another hotspot.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w05", "text": "CIUDAD", "normalized": "ciudad", "explicitBounds": [{ "x": 57.9125, "y": 2.0896, "width": 16.835, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box isolates the letters from the following comma.", "cardIds": ["word-ciudad"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w06", "text": "ASÍ", "normalized": "así", "explicitBounds": [{ "x": 77.7778, "y": 2.0896, "width": 8.0808, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box includes its written accent without touching another hotspot.", "cardIds": ["word-así--result-link", "phrase-asi-que"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w07", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 86.532, "y": 2.0896, "width": 9.0909, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without touching another hotspot.", "cardIds": ["word-que--result-link", "phrase-asi-que"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w08", "text": "DEBERÍA", "normalized": "debería", "explicitBounds": [{ "x": 6.0606, "y": 6.8657, "width": 20.202, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box includes its written accent without crossing rows.", "cardIds": ["word-debería", "grammar-deberia-expectation"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w09", "text": "ESTAR", "normalized": "estar", "explicitBounds": [{ "x": 26.5993, "y": 6.8657, "width": 14.4781, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without crossing rows.", "cardIds": ["word-estar--location-infinitive", "grammar-deberia-expectation"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w10", "text": "AHÍ", "normalized": "ahí", "explicitBounds": [{ "x": 42.0875, "y": 6.8657, "width": 8.4175, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box includes its written accent without touching another hotspot.", "cardIds": ["word-ahí--there"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w11", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 51.1785, "y": 6.8657, "width": 6.3973, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without touching another hotspot.", "cardIds": ["word-en--future-interval", "grammar-en-duration-until-event"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w12", "text": "CINCUENTA", "normalized": "cincuenta", "explicitBounds": [{ "x": 58.9226, "y": 6.8657, "width": 26.2626, "height": 4.4776 }], "geometryRationale": "Vision omitted this printed word; this measured box follows its visible glyphs without crossing rows.", "cardIds": ["word-cincuenta", "grammar-en-duration-until-event", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:first-estimate:w13", "text": "MINUTOS", "normalized": "minutos", "explicitBounds": [{ "x": 5.3872, "y": 11.3433, "width": 22.8956, "height": 5.0746 }], "geometryRationale": "Vision detected this row broadly; this measured box isolates MINUTOS from the following period.", "cardIds": ["word-minutos", "grammar-en-duration-until-event", "concept-windows-file-copy-estimation"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-estimacion:first-estimate:app-progressive", "cardId": "grammar-estar-gerundio", "participantWordIds": ["es-xkcd-estimacion:first-estimate:w01", "es-xkcd-estimacion:first-estimate:w02"], "exampleEs": "ESTOY LLEGANDO", "explanationEn": "Estoy identifies the speaker and llegando presents the arrival as already in progress." },
+        { "id": "es-xkcd-estimacion:first-estimate:app-result-link", "cardId": "phrase-asi-que", "participantWordIds": ["es-xkcd-estimacion:first-estimate:w06", "es-xkcd-estimacion:first-estimate:w07"], "exampleEs": "ASÍ QUE", "explanationEn": "These two words introduce the speaker's conclusion about the expected arrival time." },
+        { "id": "es-xkcd-estimacion:first-estimate:app-expected-location", "cardId": "grammar-deberia-expectation", "participantWordIds": ["es-xkcd-estimacion:first-estimate:w08", "es-xkcd-estimacion:first-estimate:w09"], "exampleEs": "DEBERÍA ESTAR", "explanationEn": "Debería frames estar as an expectation about a later location, rather than as advice." },
+        { "id": "es-xkcd-estimacion:first-estimate:app-future-interval", "cardId": "grammar-en-duration-until-event", "participantWordIds": ["es-xkcd-estimacion:first-estimate:w11", "es-xkcd-estimacion:first-estimate:w12", "es-xkcd-estimacion:first-estimate:w13"], "exampleEs": "EN CINCUENTA MINUTOS", "explanationEn": "En introduces the estimated interval from now until the expected arrival." }
+      ]
+    },
+    {
+      "id": "es-xkcd-estimacion:revised-estimate",
+      "labelEs": "EN REALIDAD, CREO QUE SERÁN UNOS SEIS DÍAS.",
+      "explicitBounds": [{ "x": 35.6902, "y": 18.806, "width": 55.5556, "height": 8.6567 }],
+      "geometryRationale": "Vision omitted the first letters of both printed rows and made the row rectangles overlap; this measured envelope covers the complete speech.",
+      "words": [
+        { "id": "es-xkcd-estimacion:revised-estimate:w01", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 35.6902, "y": 18.806, "width": 7.4074, "height": 3.72 }], "geometryRationale": "Vision dropped the initial E; this checked box restores the complete printed word without crossing rows.", "cardIds": ["word-en--fixed-en-realidad", "phrase-en-realidad"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w02", "text": "REALIDAD", "normalized": "realidad", "explicitBounds": [{ "x": 43.771, "y": 18.806, "width": 20.8754, "height": 3.72 }], "geometryRationale": "Vision's row rectangles overlap; this checked box isolates REALIDAD from its following comma and the lower row.", "cardIds": ["word-realidad", "phrase-en-realidad"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w03", "text": "CREO", "normalized": "creo", "explicitBounds": [{ "x": 67.6768, "y": 18.806, "width": 13.1313, "height": 3.72 }], "geometryRationale": "Vision's row rectangles overlap; this checked box follows the visible glyphs without crossing rows.", "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w04", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 81.4815, "y": 18.806, "width": 9.7643, "height": 3.72 }], "geometryRationale": "Vision's row rectangles overlap; this checked box follows the visible glyphs without crossing rows.", "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w05", "text": "SERÁN", "normalized": "serán", "explicitBounds": [{ "x": 35.6902, "y": 22.5373, "width": 14.8148, "height": 4.9254 }], "geometryRationale": "Vision dropped the initial S; this checked box restores the complete accented word without crossing another hotspot.", "cardIds": ["word-serán--future-duration", "grammar-simple-future"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w06", "text": "UNOS", "normalized": "unos", "explicitBounds": [{ "x": 50.8418, "y": 22.5373, "width": 13.8047, "height": 4.9254 }], "geometryRationale": "Vision's two row rectangles overlap; this checked box follows the lower-row glyphs without crossing another hotspot.", "cardIds": ["word-unos--approximately", "grammar-unos-approximate-quantity", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w07", "text": "SEIS", "normalized": "seis", "explicitBounds": [{ "x": 64.9832, "y": 22.5373, "width": 11.1111, "height": 4.9254 }], "geometryRationale": "Vision's two row rectangles overlap; this checked box follows the lower-row glyphs without crossing another hotspot.", "cardIds": ["word-seis", "grammar-unos-approximate-quantity", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:revised-estimate:w08", "text": "DÍAS", "normalized": "días", "explicitBounds": [{ "x": 76.431, "y": 22.5373, "width": 12.1212, "height": 4.9254 }], "geometryRationale": "Vision's two row rectangles overlap; this checked box includes the accent while excluding the following period.", "cardIds": ["word-días", "grammar-unos-approximate-quantity", "concept-windows-file-copy-estimation"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-estimacion:revised-estimate:app-en-realidad", "cardId": "phrase-en-realidad", "participantWordIds": ["es-xkcd-estimacion:revised-estimate:w01", "es-xkcd-estimacion:revised-estimate:w02"], "exampleEs": "EN REALIDAD", "explanationEn": "The fixed expression signals that the speaker is replacing the earlier estimate with a correction." },
+        { "id": "es-xkcd-estimacion:revised-estimate:app-seran-word", "cardId": "word-serán--future-duration", "participantWordIds": ["es-xkcd-estimacion:revised-estimate:w05"], "exampleEs": "SERÁN", "explanationEn": "Serán is plural because the estimated amount is unos seis días; natural English can express that amount with singular ‘it.’" },
+        { "id": "es-xkcd-estimacion:revised-estimate:app-simple-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-estimacion:revised-estimate:w05"], "exampleEs": "SERÁN", "explanationEn": "Serán keeps the complete verb ser and adds -án, the future ending used with a plural subject or amount." },
+        { "id": "es-xkcd-estimacion:revised-estimate:app-approximate-quantity", "cardId": "grammar-unos-approximate-quantity", "participantWordIds": ["es-xkcd-estimacion:revised-estimate:w06", "es-xkcd-estimacion:revised-estimate:w07", "es-xkcd-estimacion:revised-estimate:w08"], "exampleEs": "UNOS SEIS DÍAS", "explanationEn": "Unos comes before the number and masculine plural unit to mark the six-day figure as approximate." }
+      ]
+    },
+    {
+      "id": "es-xkcd-estimacion:third-estimate",
+      "labelEs": "NO, ESPERA, TREINTA SEGUNDOS.",
+      "explicitBounds": [{ "x": 18.5185, "y": 35.8209, "width": 76.431, "height": 5.3731 }],
+      "geometryRationale": "Vision included adjacent punctuation in the broad token row; this measured envelope covers the complete printed correction.",
+      "words": [
+        { "id": "es-xkcd-estimacion:third-estimate:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 18.5185, "y": 35.8209, "width": 7.0707, "height": 5.3731 }], "geometryRationale": "Vision included the following comma; this measured box isolates the letters of NO.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-estimacion:third-estimate:w02", "text": "ESPERA", "normalized": "espera", "explicitBounds": [{ "x": 28.2828, "y": 35.8209, "width": 17.8451, "height": 5.3731 }], "geometryRationale": "Vision included the following comma; this measured box isolates the letters of ESPERA.", "cardIds": ["word-espera--wait-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-estimacion:third-estimate:w03", "text": "TREINTA", "normalized": "treinta", "explicitBounds": [{ "x": 48.4848, "y": 35.8209, "width": 20.202, "height": 5.3731 }], "geometryRationale": "Vision's row height was broader than the glyphs; this checked box isolates TREINTA without touching another hotspot.", "cardIds": ["word-treinta", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:third-estimate:w04", "text": "SEGUNDOS", "normalized": "segundos", "explicitBounds": [{ "x": 69.3603, "y": 35.8209, "width": 23.9057, "height": 5.3731 }], "geometryRationale": "Vision included the following period; this measured box isolates the letters of SEGUNDOS.", "cardIds": ["word-segundos", "concept-windows-file-copy-estimation"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-estimacion:third-estimate:app-wait-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-estimacion:third-estimate:w02"], "exampleEs": "ESPERA", "explanationEn": "Espera is the positive informal command used to tell one familiar listener to pause." }
+      ]
+    },
+    {
+      "id": "es-xkcd-estimacion:caption",
+      "labelEs": "EL AUTOR DEL DIÁLOGO DE COPIA DE FICHEROS DE WINDOWS VISITA A UNOS AMIGOS.",
+      "explicitBounds": [{ "x": 11.4478, "y": 85.9701, "width": 79.4613, "height": 13.7313 }],
+      "geometryRationale": "Vision's three caption-row rectangles overlap and it misread AUTOR; this measured envelope covers all printed caption text.",
+      "words": [
+        { "id": "es-xkcd-estimacion:caption:w01", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 11.4478, "y": 85.9701, "width": 6.0606, "height": 5.0746 }], "geometryRationale": "Vision's caption rows overlap; this checked box follows EL without crossing another row or hotspot.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-estimacion:caption:w02", "text": "AUTOR", "normalized": "autor", "explicitBounds": [{ "x": 18.1818, "y": 85.9701, "width": 16.835, "height": 5.0746 }], "geometryRationale": "Vision misread AUTOR as ALTOR; this measured box follows the actual printed letters without crossing another hotspot.", "cardIds": ["word-autor", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:caption:w03", "text": "DEL", "normalized": "del", "explicitBounds": [{ "x": 35.6902, "y": 85.9701, "width": 9.4276, "height": 5.0746 }], "geometryRationale": "Vision's caption rows overlap; this checked box follows DEL without crossing another row or hotspot.", "cardIds": ["word-del"] },
+        { "id": "es-xkcd-estimacion:caption:w04", "text": "DIÁLOGO", "normalized": "diálogo", "explicitBounds": [{ "x": 45.7912, "y": 85.9701, "width": 21.2121, "height": 5.0746 }], "geometryRationale": "Vision's caption rows overlap; this checked box includes the accent without crossing another hotspot.", "cardIds": ["word-diálogo--dialog-box", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:caption:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 67.6768, "y": 85.9701, "width": 6.734, "height": 5.0746 }], "geometryRationale": "Vision's caption rows overlap; this checked box follows DE without crossing another row or hotspot.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-estimacion:caption:w06", "text": "COPIA", "normalized": "copia", "explicitBounds": [{ "x": 75.0842, "y": 85.9701, "width": 15.8249, "height": 5.0746 }], "geometryRationale": "Vision's caption rows overlap; this checked box follows COPIA without crossing another row or hotspot.", "cardIds": ["word-copia--copying-process", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:caption:w07", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 11.4478, "y": 91.0448, "width": 5.3872, "height": 4.1791 }], "geometryRationale": "Vision's caption rows overlap; this tightened box isolates the second-row DE without crossing rows.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-estimacion:caption:w08", "text": "FICHEROS", "normalized": "ficheros", "explicitBounds": [{ "x": 17.5084, "y": 91.0448, "width": 24.2424, "height": 4.1791 }], "geometryRationale": "Vision's caption rows overlap; this tightened box isolates FICHEROS without crossing rows.", "cardIds": ["word-ficheros", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:caption:w09", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 42.4242, "y": 91.0448, "width": 7.4074, "height": 4.1791 }], "geometryRationale": "Vision's caption rows overlap; this tightened box isolates the second DE on this row without crossing hotspots.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-estimacion:caption:w10", "text": "WINDOWS", "normalized": "windows", "explicitBounds": [{ "x": 50.5051, "y": 91.0448, "width": 23.569, "height": 4.1791 }], "geometryRationale": "Vision's caption rows overlap; this tightened box isolates WINDOWS without crossing rows.", "cardIds": ["word-windows--operating-system", "concept-windows-file-copy-estimation"] },
+        { "id": "es-xkcd-estimacion:caption:w11", "text": "VISITA", "normalized": "visita", "explicitBounds": [{ "x": 74.7475, "y": 91.0448, "width": 16.1616, "height": 4.1791 }], "geometryRationale": "Vision's caption rows overlap; this tightened box isolates VISITA without crossing rows.", "cardIds": ["word-visita--visits"] },
+        { "id": "es-xkcd-estimacion:caption:w12", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 12.4579, "y": 95.2239, "width": 4.0404, "height": 4.4776 }], "geometryRationale": "Vision's caption rows overlap; this measured box follows the single printed letter without crossing another hotspot.", "cardIds": ["word-a--personal-a", "grammar-personal-a"] },
+        { "id": "es-xkcd-estimacion:caption:w13", "text": "UNOS", "normalized": "unos", "explicitBounds": [{ "x": 17.5084, "y": 95.2239, "width": 14.1414, "height": 4.4776 }], "geometryRationale": "Vision's caption rows overlap; this measured box isolates UNOS without crossing another hotspot.", "cardIds": ["word-unos--some-before-noun", "grammar-personal-a"] },
+        { "id": "es-xkcd-estimacion:caption:w14", "text": "AMIGOS", "normalized": "amigos", "explicitBounds": [{ "x": 32.3232, "y": 95.2239, "width": 19.8653, "height": 4.4776 }], "geometryRationale": "Vision's caption rows overlap; this measured box isolates AMIGOS from the following period.", "cardIds": ["word-amigos", "grammar-personal-a"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-estimacion:caption:app-personal-a", "cardId": "grammar-personal-a", "participantWordIds": ["es-xkcd-estimacion:caption:w12", "es-xkcd-estimacion:caption:w13", "es-xkcd-estimacion:caption:w14"], "exampleEs": "A UNOS AMIGOS", "explanationEn": "A appears before unos amigos because the friends are the people being visited; unos amigos is the complete plural person phrase." }
+      ]
+    }
+  ]
+}

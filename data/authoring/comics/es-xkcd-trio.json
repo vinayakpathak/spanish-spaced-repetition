@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-trio",
+  "titleEn": "Threesome",
+  "titleEs": "Trío",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleText": {
+    "es": "Yo quería que intentáramos buscar una solución numérica aproximada, pero nooooo.",
+    "en": "I wanted us to try finding an approximate numeric solution, but noooo.",
+    "noteEn": "The English text is the official xkcd title text. The Spanish raster uses COMPLICADO for the official dialogue's ‘awkward’ and visibly prints POR QUÉ and SÍ with accents, although Vision transcribed QUE and SI. Vision's lone slash detection is a speech-balloon tail rather than printed text, and its line order follows page position rather than the conversation; this artifact follows the visible dialogue exactly."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-hicimos--fixed-hacer-un-trio",
+      "kind": "word",
+      "promptEs": "hicimos",
+      "answerEn": "we had (as part of hacer un trío)",
+      "noteEn": "Hicimos is hacer's completed-past form for ‘we.’ In hacer un trío, hacer is not the literal ‘make’ or ‘do’; the full expression means having a threesome.",
+      "example": { "es": "Hicimos un trío con otra persona.", "en": "We had a threesome with another person." },
+      "tags": ["word", "verb", "completed past", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-trío--threesome",
+      "kind": "word",
+      "promptEs": "trío",
+      "answerEn": "threesome",
+      "noteEn": "Trío can name any group of three. In a sexual context, it means three people having sex together.",
+      "example": { "es": "Hablaron de hacer un trío.", "en": "They talked about having a threesome." },
+      "tags": ["word", "noun", "sex", "group of three", "A2"]
+    },
+    {
+      "id": "word-complicado--awkward",
+      "kind": "word",
+      "promptEs": "complicado",
+      "answerEn": "awkward; uncomfortable (masculine singular)",
+      "noteEn": "Complicado often means ‘complicated.’ When it describes an experience or situation, it can instead mean awkward, difficult, or uncomfortable.",
+      "example": { "es": "El encuentro fue complicado.", "en": "The meeting was awkward." },
+      "tags": ["word", "adjective", "social situation", "A2"]
+    },
+    {
+      "id": "word-resolver",
+      "kind": "word",
+      "promptEs": "resolver",
+      "answerEn": "to solve",
+      "noteEn": "",
+      "tags": ["word", "verb", "problem solving", "A1"]
+    },
+    {
+      "id": "word-cuerpos--physics-bodies",
+      "kind": "word",
+      "promptEs": "cuerpos",
+      "answerEn": "bodies; objects with mass (plural)",
+      "noteEn": "In physics, a cuerpo can be an object with mass, such as a planet or star, rather than a human body.",
+      "example": { "es": "Los dos cuerpos se atraen.", "en": "The two bodies attract each other." },
+      "tags": ["word", "noun", "physics", "plural", "A2"]
+    },
+    {
+      "id": "phrase-hacer-un-trio",
+      "kind": "phrase",
+      "promptEs": "hacer un trío",
+      "questionEn": "How do you say that three people have sex together?",
+      "answerEn": "Use hacer un trío, changing hacer for the people and time.",
+      "noteEn": "This is a fixed expression: hacer is not translated literally as ‘make.’ Hacer changes, as in hacemos for ‘we do’ or hicieron for ‘they did,’ while un trío stays unchanged.",
+      "example": { "es": "Decidieron hacer un trío.", "en": "They decided to have a threesome." },
+      "tags": ["phrase", "fixed expression", "sex", "A2"]
+    },
+    {
+      "id": "concept-three-body-problem",
+      "kind": "concept",
+      "promptEs": "problema de los tres cuerpos · solución numérica aproximada",
+      "questionEn": "What physics reference creates the joke?",
+      "answerEn": "The three-body problem asks how three masses move while all three attract one another. Unlike the general two-body case, arbitrary three-body systems have no single simple formula for all future motion, so particular trajectories are commonly approximated with numerical calculations.",
+      "noteEn": "The dialogue turns the technical meaning of ‘solve the three-body problem’ into a sexual-performance joke. The title text extends it by proposing an approximate numerical solution.",
+      "tags": ["concept", "physics", "celestial mechanics", "three-body problem", "xkcd joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-trio:panel-1-threesome",
+      "labelEs": "ANOCHE HICIMOS UN TRÍO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0008" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-1-threesome:w01",
+          "text": "ANOCHE",
+          "normalized": "anoche",
+          "explicitBounds": [{ "x": 2.9927, "y": 9.8785, "width": 11.7504, "height": 6.45 }],
+          "geometryRationale": "Vision's full-height first-row box crosses into HICIMOS; this checked box retains ANOCHE while stopping before the next printed row.",
+          "cardIds": ["word-anoche"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-threesome:w02",
+          "text": "HICIMOS",
+          "normalized": "hicimos",
+          "explicitBounds": [{ "x": 2.988, "y": 16.5623, "width": 11.7599, "height": 6.65 }],
+          "geometryRationale": "Vision's full-height middle-row box crosses into UN TRÍO; this checked box isolates HICIMOS between its neighboring rows.",
+          "cardIds": ["word-hicimos--fixed-hacer-un-trio", "phrase-hacer-un-trio"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-threesome:w03",
+          "text": "UN",
+          "normalized": "un",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00017" }],
+          "cardIds": ["word-un", "phrase-hacer-un-trio"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-threesome:w04",
+          "text": "TRÍO",
+          "normalized": "trío",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00018" }],
+          "cardIds": ["word-trío--threesome", "phrase-hacer-un-trio"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-trio:panel-1-threesome:app-hacer-trio",
+          "cardId": "phrase-hacer-un-trio",
+          "participantWordIds": [
+            "es-xkcd-trio:panel-1-threesome:w02",
+            "es-xkcd-trio:panel-1-threesome:w03",
+            "es-xkcd-trio:panel-1-threesome:w04"
+          ],
+          "exampleEs": "HICIMOS UN TRÍO",
+          "explanationEn": "Hicimos supplies the completed-past ‘we’ form of hacer, while un trío completes the fixed expression."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-trio:panel-1-question",
+      "labelEs": "¿QUÉ TAL FUE?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0015" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-1-question:w01",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00027" }],
+          "cardIds": ["word-qué--fixed-qué-tal-result", "phrase-que-tal-went", "question-words"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-question:w02",
+          "text": "TAL",
+          "normalized": "tal",
+          "explicitBounds": [{ "x": 10.1887, "y": 74.7899, "width": 5.283, "height": 5.7 }],
+          "geometryRationale": "Vision's full-height TAL box crosses into FUE; this checked box retains the middle line and stops before the final printed row.",
+          "cardIds": ["word-tal--fixed-qué-tal-result", "phrase-que-tal-went"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-question:w03",
+          "text": "FUE",
+          "normalized": "fue",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00029" }],
+          "cardIds": ["word-fue--preterite-ser", "phrase-que-tal-went"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-trio:panel-1-question:app-how-went",
+          "cardId": "phrase-que-tal-went",
+          "participantWordIds": [
+            "es-xkcd-trio:panel-1-question:w01",
+            "es-xkcd-trio:panel-1-question:w02",
+            "es-xkcd-trio:panel-1-question:w03"
+          ],
+          "exampleEs": "QUÉ TAL FUE",
+          "explanationEn": "Qué tal forms the fixed evaluation question, and fue places the experience in a finished past setting."
+        },
+        {
+          "id": "es-xkcd-trio:panel-1-question:app-question-accent",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-trio:panel-1-question:w01"],
+          "exampleEs": "QUÉ",
+          "explanationEn": "Qué keeps its written accent because it directly asks for an evaluation."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-trio:panel-2-awkward",
+      "labelEs": "COMPLICADO. FUE CON UN FÍSICO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0005" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-2-awkward:w01",
+          "text": "COMPLICADO",
+          "normalized": "complicado",
+          "explicitBounds": [{ "x": 29.0566, "y": 9.2437, "width": 18.3962, "height": 6.5 }],
+          "geometryRationale": "Vision's full-height top-row box crosses into CON; this checked box retains COMPLICADO and stops above the next printed row.",
+          "cardIds": ["word-complicado--awkward"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-awkward:w02",
+          "text": "FUE",
+          "normalized": "fue",
+          "explicitBounds": [{ "x": 47.9245, "y": 9.2437, "width": 6.0377, "height": 6.5 }],
+          "geometryRationale": "Vision's full-height top-row box crosses into the line below; this checked box isolates the printed FUE.",
+          "cardIds": ["word-fue--preterite-ser"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-awkward:w03",
+          "text": "CON",
+          "normalized": "con",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00011" }],
+          "cardIds": ["word-con"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-awkward:w04",
+          "text": "UN",
+          "normalized": "un",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00012" }],
+          "cardIds": ["word-un"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-awkward:w05",
+          "text": "FÍSICO",
+          "normalized": "físico",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00013" }],
+          "cardIds": ["word-físico--physicist"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-trio:panel-2-question",
+      "labelEs": "¿Y POR QUÉ ES ESO COMPLICADO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0011" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-2-question:w01",
+          "text": "Y",
+          "normalized": "y",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00019" }],
+          "cardIds": ["word-y"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-question:w02",
+          "text": "POR",
+          "normalized": "por",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00020" }],
+          "cardIds": ["word-por--question", "grammar-por-que-vs-porque"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-question:w03",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00021" }],
+          "cardIds": ["word-qué--why-complement", "grammar-por-que-vs-porque"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-question:w04",
+          "text": "ES",
+          "normalized": "es",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00022" }],
+          "cardIds": ["word-es"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-question:w05",
+          "text": "ESO",
+          "normalized": "eso",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00025" }],
+          "cardIds": ["word-eso"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-2-question:w06",
+          "text": "COMPLICADO",
+          "normalized": "complicado",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00026" }],
+          "cardIds": ["word-complicado--awkward"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-trio:panel-2-question:app-why",
+          "cardId": "grammar-por-que-vs-porque",
+          "participantWordIds": [
+            "es-xkcd-trio:panel-2-question:w02",
+            "es-xkcd-trio:panel-2-question:w03"
+          ],
+          "exampleEs": "POR QUÉ",
+          "explanationEn": "Por and accented qué are written as two words because they directly ask for a reason."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-trio:panel-3-physics",
+      "labelEs": "NO PUEDEN RESOLVER EL PROBLEMA DE LOS TRES CUERPOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0007" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w01",
+          "text": "NO",
+          "normalized": "no",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00001" }],
+          "cardIds": ["word-no"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w02",
+          "text": "PUEDEN",
+          "normalized": "pueden",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00002" }],
+          "cardIds": ["word-pueden", "grammar-poder-infinitive"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w03",
+          "text": "RESOLVER",
+          "normalized": "resolver",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00003" }],
+          "cardIds": ["word-resolver", "grammar-poder-infinitive"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w04",
+          "text": "EL",
+          "normalized": "el",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00007" }],
+          "cardIds": ["word-el--article"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w05",
+          "text": "PROBLEMA",
+          "normalized": "problema",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00008" }],
+          "cardIds": ["word-problema", "concept-three-body-problem"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w06",
+          "text": "DE",
+          "normalized": "de",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00009" }],
+          "cardIds": ["word-de--of", "concept-three-body-problem"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w07",
+          "text": "LOS",
+          "normalized": "los",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00010" }],
+          "cardIds": ["word-los", "concept-three-body-problem"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w08",
+          "text": "TRES",
+          "normalized": "tres",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00015" }],
+          "cardIds": ["word-tres", "concept-three-body-problem"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-physics:w09",
+          "text": "CUERPOS",
+          "normalized": "cuerpos",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00016" }],
+          "cardIds": ["word-cuerpos--physics-bodies", "concept-three-body-problem"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-trio:panel-3-physics:app-can-solve",
+          "cardId": "grammar-poder-infinitive",
+          "participantWordIds": [
+            "es-xkcd-trio:panel-3-physics:w02",
+            "es-xkcd-trio:panel-3-physics:w03"
+          ],
+          "exampleEs": "PUEDEN RESOLVER",
+          "explanationEn": "Pueden changes for a plural subject, while resolver remains in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-trio:panel-3-recognition",
+      "labelEs": "AH, SÍ.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-trio:ocr-line-0010" }],
+      "words": [
+        {
+          "id": "es-xkcd-trio:panel-3-recognition:w01",
+          "text": "AH",
+          "normalized": "ah",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00023" }],
+          "cardIds": ["word-ah--realization"]
+        },
+        {
+          "id": "es-xkcd-trio:panel-3-recognition:w02",
+          "text": "SÍ",
+          "normalized": "sí",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-trio:ocr-token-00024" }],
+          "cardIds": ["word-sí"]
+        }
+      ],
+      "applications": []
+    }
+  ]
+}

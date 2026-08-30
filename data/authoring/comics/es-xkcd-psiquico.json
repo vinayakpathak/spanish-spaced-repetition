@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-psiquico",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Psychic",
+  "titleEs": "Psíquico",
+  "titleText": {
+    "es": "Se puede mejorar mucho ese 1% si empiezas a registrar los patrones que sigue la gente al escoger números.",
+    "en": "You can do a lot better than 1% if you start keeping track of the patterns in what numbers people pick.",
+    "noteEn": "The Spanish archive credits Gabriel Rodríguez Alberich and closely translates the official title text. Its raster preserves the official four-panel exchange and the final probability caption. Vision found all lexical units but used overlapping full-row rectangles and absorbed commas, periods, question marks, exclamation marks, and ellipses; the checked direct geometry separates those marks."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-psíquico",
+      "kind": "word",
+      "promptEs": "psíquico",
+      "answerEn": "psychic; a person claimed to perceive thoughts or future events",
+      "noteEn": "Psíquico can describe supposed powers beyond ordinary senses or name a person who claims to have them. The -o form is masculine singular.",
+      "example": { "es": "El supuesto psíquico predijo el resultado.", "en": "The supposed psychic predicted the result." },
+      "tags": ["word", "person", "paranormal", "masculine singular"]
+    },
+    {
+      "id": "word-tal--such",
+      "kind": "word",
+      "promptEs": "tal",
+      "answerEn": "such; that kind of",
+      "noteEn": "Before a singular naming word, tal points to something of the kind just mentioned. It becomes tales before a plural naming word.",
+      "example": { "es": "No conozco tal regla.", "en": "I know of no such rule." },
+      "tags": ["word", "determiner", "reference", "B1"]
+    },
+    {
+      "id": "word-del--range-start",
+      "kind": "word",
+      "promptEs": "del",
+      "answerEn": "from the; de + el marking the start of a range",
+      "noteEn": "Del combines de and el. In a range, it introduces the starting endpoint when that endpoint uses the masculine article el.",
+      "example": { "es": "La oficina abre del lunes al viernes.", "en": "The office opens from Monday to Friday." },
+      "tags": ["word", "contraction", "range", "A2"]
+    },
+    {
+      "id": "word-al--range-end",
+      "kind": "word",
+      "promptEs": "al",
+      "answerEn": "to the; a + el marking the end of a range",
+      "noteEn": "Al combines a and el. In a range, it introduces the ending endpoint when that endpoint uses the masculine article el.",
+      "example": { "es": "La oficina abre del lunes al viernes.", "en": "The office opens from Monday to Friday." },
+      "tags": ["word", "contraction", "range", "A2"]
+    },
+    {
+      "id": "word-cien",
+      "kind": "word",
+      "promptEs": "cien",
+      "answerEn": "one hundred",
+      "noteEn": "",
+      "tags": ["word", "number", "A1"]
+    },
+    {
+      "id": "word-cojones--exclamation",
+      "kind": "word",
+      "promptEs": "cojones",
+      "answerEn": "holy shit!; damn! (vulgar exclamation, especially in Spain)",
+      "noteEn": "Cojones literally names testicles, but by itself it can be a strong vulgar reaction to shock or surprise. It is much stronger than a neutral exclamation.",
+      "example": { "es": "¡Cojones, qué susto!", "en": "Damn, what a scare!" },
+      "tags": ["word", "exclamation", "vulgar", "Spain"]
+    },
+    {
+      "id": "word-afecte--subjunctive",
+      "kind": "word",
+      "promptEs": "afecte",
+      "answerEn": "affect (special form for an intended or uncertain result)",
+      "noteEn": "Afecte is a form of afectar used when the effect is presented as a goal, possibility, wish, or other non-established result. The ordinary one-thing form afecta changes its final -a to -e.",
+      "example": { "es": "Espero que el ruido no afecte al bebé.", "en": "I hope the noise does not affect the baby." },
+      "tags": ["word", "verb", "subjunctive", "third person"]
+    },
+    {
+      "id": "word-a--afectar-target",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; introduces what is affected",
+      "noteEn": "Spanish commonly uses afectar a before the person, thing, or area receiving an effect. Natural English normally puts that target directly after “affect.”",
+      "example": { "es": "El retraso afecta a todo el proyecto.", "en": "The delay affects the whole project." },
+      "tags": ["word", "preposition", "afectar", "verb complement"]
+    },
+    {
+      "id": "word-prestes--negative-command",
+      "kind": "word",
+      "promptEs": "prestes",
+      "answerEn": "pay (attention; special form in a negative informal command)",
+      "noteEn": "Prestes comes from prestar. When telling one familiar person not to do something, ordinary prestas changes to no prestes. In prestar atención, prestar means “to pay” attention rather than “to lend.”",
+      "example": { "es": "No prestes atención al rumor.", "en": "Do not pay attention to the rumor." },
+      "tags": ["word", "command", "negative", "prestar"]
+    },
+    {
+      "id": "word-olvida--command",
+      "kind": "word",
+      "promptEs": "olvida",
+      "answerEn": "forget (informal singular command)",
+      "noteEn": "Olvida tells one friend, relative, or other familiar person to forget something. It comes from olvidar.",
+      "example": { "es": "Olvida ese comentario.", "en": "Forget that comment." },
+      "tags": ["word", "command", "informal singular", "olvidar"]
+    },
+    {
+      "id": "word-vamos--lets-go",
+      "kind": "word",
+      "promptEs": "vamos",
+      "answerEn": "let's go",
+      "noteEn": "Vamos is the “we” form of ir, “to go.” Speakers also use it to propose that the group go somewhere or begin moving.",
+      "example": { "es": "Vamos al parque.", "en": "Let's go to the park." },
+      "tags": ["word", "ir", "suggestion", "first person plural"]
+    },
+    {
+      "id": "word-venga--agreement",
+      "kind": "word",
+      "promptEs": "venga",
+      "answerEn": "okay; all right; sure (showing agreement)",
+      "noteEn": "Standing alone after a suggestion, venga can show that the speaker accepts or goes along with it. In other contexts it can urge someone on or come from venir, so those senses use separate cards.",
+      "example": { "es": "—¿Tomamos un café? —Venga.", "en": "—Shall we have a coffee? —Sure." },
+      "tags": ["word", "agreement", "conversation", "Spain"]
+    },
+    {
+      "id": "word-truco",
+      "kind": "word",
+      "promptEs": "truco",
+      "answerEn": "trick",
+      "noteEn": "",
+      "tags": ["word", "deception", "masculine noun"]
+    },
+    {
+      "id": "word-funcione--possibility-subjunctive",
+      "kind": "word",
+      "promptEs": "funcione",
+      "answerEn": "works; functions (special possibility form)",
+      "noteEn": "Funcione comes from funcionar. After an expression of possibility such as puede que, ordinary funciona changes its final -a to -e because the result is not stated as certain.",
+      "example": { "es": "Puede que funcione mañana.", "en": "It may work tomorrow." },
+      "tags": ["word", "functioning", "subjunctive", "possibility"]
+    },
+    {
+      "id": "word-hace--does-so",
+      "kind": "word",
+      "promptEs": "hace",
+      "answerEn": "does; does so (replacing an earlier action)",
+      "noteEn": "Hacer normally means “to do” or “to make.” With lo, a form of hacer can stand in for a whole action already mentioned so that the speaker does not repeat that action.",
+      "example": { "es": "A veces falla, pero cuando lo hace, avisa.", "en": "Sometimes it fails, but when it does, it gives a warning." },
+      "tags": ["word", "hacer", "reference", "present"]
+    },
+    {
+      "id": "word-merece--is-worth",
+      "kind": "word",
+      "promptEs": "merece",
+      "answerEn": "is worth (as part of merece la pena)",
+      "noteEn": "Merece is a form of merecer for one person or thing. The verb can mean “deserves” elsewhere; in merecer la pena, it says that something is worth the time or effort.",
+      "example": { "es": "El viaje merece la pena.", "en": "The trip is worth it." },
+      "tags": ["word", "value", "merecer", "present"]
+    },
+    {
+      "id": "word-pena--fixed-merecer-la-pena",
+      "kind": "word",
+      "promptEs": "pena",
+      "answerEn": "effort; completes merecer la pena, “to be worth it”",
+      "noteEn": "Pena can mean sorrow, pity, or a penalty elsewhere. In the fixed expression merecer la pena, the whole expression means that something is worth the time or effort.",
+      "example": { "es": "Merece la pena esperar.", "en": "It is worth waiting." },
+      "tags": ["word", "fixed expression", "value", "feminine noun"]
+    },
+    {
+      "id": "phrase-no-existir-tal-cosa",
+      "kind": "phrase",
+      "promptEs": "no existir tal cosa",
+      "questionEn": "How do you say that no such thing exists?",
+      "answerEn": "Use no, a matching form of existir, and tal before the kind of thing being denied.",
+      "noteEn": "Existir changes to match one or more things: no existe tal problema but no existen tales problemas. Tal means “such” before a singular naming word and becomes tales before a plural one.",
+      "example": { "es": "No existe tal regla.", "en": "There is no such rule." },
+      "tags": ["phrase", "existence", "denial", "B1"]
+    },
+    {
+      "id": "phrase-pensar-en",
+      "kind": "phrase",
+      "promptEs": "pensar en + persona, cosa o idea",
+      "questionEn": "How do you say what someone is thinking about?",
+      "answerEn": "Use a form of pensar followed by en, then name the person, thing, or idea.",
+      "noteEn": "Pensar changes for the person and time, while en stays in place before what comes to mind. Depending on context, English uses either “think about” or “think of.”",
+      "example": { "es": "Pienso en mis amigos.", "en": "I am thinking about my friends." },
+      "tags": ["phrase", "pensar en", "verb complement", "A2"]
+    },
+    {
+      "id": "phrase-no-poder-creerselo",
+      "kind": "phrase",
+      "promptEs": "no poder creérselo",
+      "questionEn": "How do you express that someone cannot believe something?",
+      "answerEn": "Use no, then the matching person marker and lo before a form of poder, followed by creer: no se lo puede creer.",
+      "noteEn": "Me, te, se, nos, or os identifies the person reacting, while lo stands for the surprising fact. Only poder changes for the person and time; creer stays in its unchanged dictionary form. The two markers may instead attach to creer: no puede creérselo.",
+      "example": { "es": "Ana no se lo puede creer.", "en": "Ana cannot believe it." },
+      "tags": ["phrase", "disbelief", "pronouns", "poder"]
+    },
+    {
+      "id": "grammar-hacerlo-replace-action",
+      "kind": "grammar",
+      "promptEs": "lo + hacer para sustituir una acción anterior",
+      "questionEn": "How do you avoid repeating an action that was just mentioned?",
+      "answerEn": "Put lo before a matching form of hacer to mean “do it” or “do so.”",
+      "noteEn": "Lo stands for the whole earlier action, not for a masculine object, and hacer changes for the person and time: lo hago, lo hace, lo hicieron. The earlier action supplies the meaning that hacer replaces.",
+      "example": { "es": "Marta prometió llamar y luego lo hizo.", "en": "Marta promised to call and then did so." },
+      "tags": ["grammar", "hacer", "object pronoun", "reference"]
+    },
+    {
+      "id": "phrase-merecer-la-pena",
+      "kind": "phrase",
+      "promptEs": "merecer la pena",
+      "questionEn": "How do you say that something is worth the time or effort?",
+      "answerEn": "Use a matching form of merecer followed by la pena.",
+      "noteEn": "Merecer changes for the person, thing, or time, while la pena stays fixed. An action worth doing can follow in its unchanged dictionary form: merece la pena esperar.",
+      "example": { "es": "Merece la pena visitar el museo.", "en": "The museum is worth visiting." },
+      "tags": ["phrase", "value", "effort", "B1"]
+    },
+    {
+      "id": "concept-psychic-number-guessing-probability",
+      "kind": "concept",
+      "promptEs": "psíquico · número del uno al cien · 1% · patrones al escoger",
+      "answerEn": "a fixed guess among one hundred numbers has a 1% chance if choices are uniform, while tracking people's non-random choices can improve the odds",
+      "noteEn": "The man asks for a number from one to one hundred and guesses 43. A uniformly random choice would match that fixed guess one time in a hundred. The title text points out that people favor some numbers over others, so recording their choices could make the trick work more often; the rare success is convincing enough to sustain the false psychic claim.",
+      "tags": ["concept", "probability", "psychic trick", "human choice", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-psiquico:psychic-claim",
+      "labelEs": "SOY UN PSÍQUICO, ¿SABES?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:psychic-claim:w01", "text": "SOY", "normalized": "soy", "explicitBounds": [{ "x": 0.95, "y": 5.25, "width": 3.80, "height": 4.80 }], "geometryRationale": "Vision's broad row-height geometry is not tight enough for direct selection; this measured box isolates the printed word.", "cardIds": ["word-soy--identity"] },
+        { "id": "es-xkcd-psiquico:psychic-claim:w02", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 5.30, "y": 5.25, "width": 2.50, "height": 4.80 }], "geometryRationale": "Vision's broad row-height geometry is not tight enough for direct selection; this measured box isolates the printed word.", "cardIds": ["word-un"] },
+        { "id": "es-xkcd-psiquico:psychic-claim:w03", "text": "PSÍQUICO", "normalized": "psíquico", "explicitBounds": [{ "x": 8.35, "y": 5.25, "width": 8.75, "height": 4.80 }], "geometryRationale": "Vision absorbed the following comma; this measured box isolates the printed word and its accent.", "cardIds": ["word-psíquico", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:psychic-claim:w04", "text": "SABES", "normalized": "sabes", "explicitBounds": [{ "x": 1.75, "y": 10.45, "width": 6.75, "height": 5.85 }], "geometryRationale": "Vision absorbed both question marks; this measured box isolates the five printed letters.", "cardIds": ["word-sabes--discourse-marker"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:denial",
+      "labelEs": "NO EXISTE TAL COSA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:denial:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 5.95, "y": 26.00, "width": 4.15, "height": 5.50 }], "geometryRationale": "Vision's broad row-height geometry touches the row below; this measured box isolates the printed word.", "cardIds": ["word-no", "phrase-no-existir-tal-cosa"] },
+        { "id": "es-xkcd-psiquico:denial:w02", "text": "EXISTE", "normalized": "existe", "explicitBounds": [{ "x": 10.55, "y": 26.00, "width": 6.65, "height": 5.50 }], "geometryRationale": "Vision's broad row-height geometry touches the row below; this measured box isolates the printed word.", "cardIds": ["word-existe", "phrase-no-existir-tal-cosa"] },
+        { "id": "es-xkcd-psiquico:denial:w03", "text": "TAL", "normalized": "tal", "explicitBounds": [{ "x": 6.75, "y": 31.90, "width": 3.70, "height": 5.55 }], "geometryRationale": "Vision's broad row-height geometry touches the row above; this measured box isolates the printed word.", "cardIds": ["word-tal--such", "phrase-no-existir-tal-cosa"] },
+        { "id": "es-xkcd-psiquico:denial:w04", "text": "COSA", "normalized": "cosa", "explicitBounds": [{ "x": 10.80, "y": 31.90, "width": 5.30, "height": 5.55 }], "geometryRationale": "Vision absorbed the final period and touched the row above; this measured box isolates COSA.", "cardIds": ["word-cosa", "phrase-no-existir-tal-cosa"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:denial:app-no-such-thing", "cardId": "phrase-no-existir-tal-cosa", "participantWordIds": ["es-xkcd-psiquico:denial:w01", "es-xkcd-psiquico:denial:w02", "es-xkcd-psiquico:denial:w03", "es-xkcd-psiquico:denial:w04"], "exampleEs": "NO EXISTE TAL COSA", "explanationEn": "No negates existe, and tal before cosa identifies the kind of thing whose existence is denied." }
+      ]
+    },
+    {
+      "id": "es-xkcd-psiquico:number-instruction",
+      "labelEs": "VALE, PIENSA EN UN NÚMERO DEL UNO AL CIEN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:number-instruction:w01", "text": "VALE", "normalized": "vale", "explicitBounds": [{ "x": 19.46, "y": 4.60, "width": 4.85, "height": 4.15 }], "geometryRationale": "Vision absorbed the following comma and overlapped the row below; this measured box isolates VALE.", "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w02", "text": "PIENSA", "normalized": "piensa", "explicitBounds": [{ "x": 25.14, "y": 4.60, "width": 6.95, "height": 4.15 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-piensa--command", "grammar-affirmative-tu-command", "phrase-pensar-en", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w03", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 32.43, "y": 4.60, "width": 2.90, "height": 4.15 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-en--pensar", "phrase-pensar-en"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w04", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 35.68, "y": 4.60, "width": 2.35, "height": 4.15 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-un", "phrase-pensar-en"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w05", "text": "NÚMERO", "normalized": "número", "explicitBounds": [{ "x": 19.73, "y": 8.95, "width": 7.72, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word and its accent.", "cardIds": ["word-número", "phrase-pensar-en", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w06", "text": "DEL", "normalized": "del", "explicitBounds": [{ "x": 27.77, "y": 8.95, "width": 3.70, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-del--range-start", "grammar-de-a-range"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w07", "text": "UNO", "normalized": "uno", "explicitBounds": [{ "x": 31.79, "y": 8.95, "width": 3.93, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-uno--number", "grammar-de-a-range", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w08", "text": "AL", "normalized": "al", "explicitBounds": [{ "x": 36.05, "y": 8.95, "width": 2.75, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-al--range-end", "grammar-de-a-range"] },
+        { "id": "es-xkcd-psiquico:number-instruction:w09", "text": "CIEN", "normalized": "cien", "explicitBounds": [{ "x": 39.12, "y": 8.95, "width": 3.95, "height": 4.65 }], "geometryRationale": "Vision absorbed the final period and overlapped the line above; this measured box isolates CIEN.", "cardIds": ["word-cien", "grammar-de-a-range", "concept-psychic-number-guessing-probability"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:number-instruction:app-think-about", "cardId": "phrase-pensar-en", "participantWordIds": ["es-xkcd-psiquico:number-instruction:w02", "es-xkcd-psiquico:number-instruction:w03", "es-xkcd-psiquico:number-instruction:w04", "es-xkcd-psiquico:number-instruction:w05"], "exampleEs": "PIENSA EN UN NÚMERO", "explanationEn": "Piensa supplies the requested mental action, en introduces what should come to mind, and un número fills that thought slot." },
+        { "id": "es-xkcd-psiquico:number-instruction:app-think-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-psiquico:number-instruction:w02"], "exampleEs": "PIENSA", "explanationEn": "Piensa is the positive command used to tell one familiar person to think." },
+        { "id": "es-xkcd-psiquico:number-instruction:app-number-range", "cardId": "grammar-de-a-range", "participantWordIds": ["es-xkcd-psiquico:number-instruction:w06", "es-xkcd-psiquico:number-instruction:w07", "es-xkcd-psiquico:number-instruction:w08", "es-xkcd-psiquico:number-instruction:w09"], "exampleEs": "DEL UNO AL CIEN", "explanationEn": "Del combines de with el before the starting endpoint uno, while al combines a with el before the ending endpoint cien." }
+      ]
+    },
+    {
+      "id": "es-xkcd-psiquico:acknowledgement",
+      "labelEs": "VALE.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-psiquico:acknowledgement:w01", "text": "VALE", "normalized": "vale", "explicitBounds": [{ "x": 29.46, "y": 17.90, "width": 5.25, "height": 4.75 }], "geometryRationale": "Vision absorbed the final period; this measured box isolates the printed word.", "cardIds": ["word-vale"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:guess",
+      "labelEs": "43.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0012" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-psiquico:guess:excluded-43", "text": "43", "reason": "number", "rationale": "43 is the guessed numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 25.55, "y": 24.65, "width": 2.10, "height": 5.30 }], "geometryRationale": "Vision absorbed the final period; this measured box isolates the two printed digits." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:shocked-reaction",
+      "labelEs": "¡COJONES!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0017" }],
+      "words": [
+        { "id": "es-xkcd-psiquico:shocked-reaction:w01", "text": "COJONES", "normalized": "cojones", "explicitBounds": [{ "x": 29.75, "y": 32.65, "width": 9.45, "height": 6.40 }], "geometryRationale": "Vision absorbed both exclamation marks; this measured box isolates the seven printed letters.", "cardIds": ["word-cojones--exclamation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:life-effect",
+      "labelEs": "INTENTO QUE NO AFECTE MUCHO A MI VIDA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:life-effect:w01", "text": "INTENTO", "normalized": "intento", "explicitBounds": [{ "x": 46.76, "y": 6.15, "width": 8.12, "height": 4.70 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-intento", "grammar-intentar-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:life-effect:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 55.27, "y": 6.15, "width": 3.86, "height": 4.70 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-que--clause-link", "grammar-intentar-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:life-effect:w03", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 59.53, "y": 6.15, "width": 2.95, "height": 4.70 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-no", "grammar-intentar-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:life-effect:w04", "text": "AFECTE", "normalized": "afecte", "explicitBounds": [{ "x": 62.87, "y": 6.15, "width": 7.30, "height": 4.70 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-afecte--subjunctive", "grammar-intentar-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:life-effect:w05", "text": "MUCHO", "normalized": "mucho", "explicitBounds": [{ "x": 46.76, "y": 11.20, "width": 6.60, "height": 5.75 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-mucho--standalone-amount"] },
+        { "id": "es-xkcd-psiquico:life-effect:w06", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 53.75, "y": 11.20, "width": 1.73, "height": 5.75 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed letter.", "cardIds": ["word-a--afectar-target"] },
+        { "id": "es-xkcd-psiquico:life-effect:w07", "text": "MI", "normalized": "mi", "explicitBounds": [{ "x": 55.88, "y": 11.20, "width": 2.65, "height": 5.75 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-psiquico:life-effect:w08", "text": "VIDA", "normalized": "vida", "explicitBounds": [{ "x": 58.92, "y": 11.20, "width": 5.25, "height": 5.75 }], "geometryRationale": "Vision absorbed the final period and overlapped the line above; this measured box isolates VIDA.", "cardIds": ["word-vida"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:life-effect:app-attempted-result", "cardId": "grammar-intentar-que-subjunctive", "participantWordIds": ["es-xkcd-psiquico:life-effect:w01", "es-xkcd-psiquico:life-effect:w02", "es-xkcd-psiquico:life-effect:w03", "es-xkcd-psiquico:life-effect:w04"], "exampleEs": "INTENTO QUE NO AFECTE", "explanationEn": "Intento names the attempt, que opens its desired result, no negates that result, and ordinary afecta changes to afecte because the effect is a goal rather than an asserted fact." }
+      ]
+    },
+    {
+      "id": "es-xkcd-psiquico:disbelief",
+      "labelEs": "ESPERA, NO ME LO PUEDO CREER.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:disbelief:w01", "text": "ESPERA", "normalized": "espera", "explicitBounds": [{ "x": 54.86, "y": 23.15, "width": 7.85, "height": 4.65 }], "geometryRationale": "Vision absorbed the following comma and touched the row below; this measured box isolates ESPERA.", "cardIds": ["word-espera--wait-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-psiquico:disbelief:w02", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 63.68, "y": 23.15, "width": 2.95, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle touches the line below; this measured box isolates the printed word.", "cardIds": ["word-no", "phrase-no-poder-creerselo"] },
+        { "id": "es-xkcd-psiquico:disbelief:w03", "text": "ME", "normalized": "me", "explicitBounds": [{ "x": 67.03, "y": 23.15, "width": 2.90, "height": 4.65 }], "geometryRationale": "Vision's full-row rectangle touches the line below; this measured box isolates the printed word.", "cardIds": ["word-me--pronominal-marker", "phrase-no-poder-creerselo"] },
+        { "id": "es-xkcd-psiquico:disbelief:w04", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 55.13, "y": 28.15, "width": 2.95, "height": 5.55 }], "geometryRationale": "Vision's full-row rectangle touches the line above; this measured box isolates the printed word.", "cardIds": ["word-lo--object-pronoun", "phrase-no-poder-creerselo"] },
+        { "id": "es-xkcd-psiquico:disbelief:w05", "text": "PUEDO", "normalized": "puedo", "explicitBounds": [{ "x": 58.42, "y": 28.15, "width": 6.25, "height": 5.55 }], "geometryRationale": "Vision's full-row rectangle touches the line above; this measured box isolates the printed word.", "cardIds": ["word-puedo", "phrase-no-poder-creerselo", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-psiquico:disbelief:w06", "text": "CREER", "normalized": "creer", "explicitBounds": [{ "x": 65.01, "y": 28.15, "width": 5.35, "height": 5.55 }], "geometryRationale": "Vision absorbed the final period and touched the line above; this measured box isolates CREER.", "cardIds": ["word-creer", "phrase-no-poder-creerselo", "grammar-poder-infinitive"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:disbelief:app-wait-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-psiquico:disbelief:w01"], "exampleEs": "ESPERA", "explanationEn": "Espera is the positive command used to tell one familiar person to wait." },
+        { "id": "es-xkcd-psiquico:disbelief:app-cannot-believe", "cardId": "phrase-no-poder-creerselo", "participantWordIds": ["es-xkcd-psiquico:disbelief:w02", "es-xkcd-psiquico:disbelief:w03", "es-xkcd-psiquico:disbelief:w04", "es-xkcd-psiquico:disbelief:w05", "es-xkcd-psiquico:disbelief:w06"], "exampleEs": "NO ME LO PUEDO CREER", "explanationEn": "No negates puedo, me identifies the reacting speaker, lo stands for the surprising fact, and creer stays unchanged after puedo." },
+        { "id": "es-xkcd-psiquico:disbelief:app-can-believe", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-psiquico:disbelief:w05", "es-xkcd-psiquico:disbelief:w06"], "exampleEs": "PUEDO CREER", "explanationEn": "Puedo changes for the speaker, while creer stays in its unchanged dictionary form as the possible action." }
+      ]
+    },
+    {
+      "id": "es-xkcd-psiquico:dismissal",
+      "labelEs": "NO LE PRESTES ATENCIÓN. OLVIDA LO QUE HE DICHO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:dismissal:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 74.59, "y": 4.05, "width": 2.95, "height": 5.05 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-no", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-psiquico:dismissal:w02", "text": "LE", "normalized": "le", "explicitBounds": [{ "x": 77.94, "y": 4.05, "width": 2.65, "height": 5.05 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-le--photo-subject", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-psiquico:dismissal:w03", "text": "PRESTES", "normalized": "prestes", "explicitBounds": [{ "x": 80.98, "y": 4.05, "width": 8.12, "height": 5.05 }], "geometryRationale": "Vision's full-row rectangle overlaps the line below; this measured box isolates the printed word.", "cardIds": ["word-prestes--negative-command", "grammar-negative-tu-command", "phrase-prestar-atencion"] },
+        { "id": "es-xkcd-psiquico:dismissal:w04", "text": "ATENCIÓN", "normalized": "atención", "explicitBounds": [{ "x": 89.49, "y": 4.05, "width": 8.90, "height": 5.05 }], "geometryRationale": "Vision absorbed the final period and overlapped the line below; this measured box isolates ATENCIÓN and its accent.", "cardIds": ["word-atención", "phrase-prestar-atencion"] },
+        { "id": "es-xkcd-psiquico:dismissal:w05", "text": "OLVIDA", "normalized": "olvida", "explicitBounds": [{ "x": 74.59, "y": 9.75, "width": 6.66, "height": 5.25 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-olvida--command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-psiquico:dismissal:w06", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 81.62, "y": 9.75, "width": 2.88, "height": 5.25 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-lo--neutral-relative", "grammar-lo-que"] },
+        { "id": "es-xkcd-psiquico:dismissal:w07", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 84.86, "y": 9.75, "width": 3.96, "height": 5.25 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-que--neutral-relative", "grammar-lo-que"] },
+        { "id": "es-xkcd-psiquico:dismissal:w08", "text": "HE", "normalized": "he", "explicitBounds": [{ "x": 89.19, "y": 9.75, "width": 2.61, "height": 5.25 }], "geometryRationale": "Vision's full-row rectangle overlaps the line above; this measured box isolates the printed word.", "cardIds": ["word-he", "grammar-present-perfect"] },
+        { "id": "es-xkcd-psiquico:dismissal:w09", "text": "DICHO", "normalized": "dicho", "explicitBounds": [{ "x": 92.16, "y": 9.75, "width": 5.52, "height": 5.25 }], "geometryRationale": "Vision absorbed the final period and overlapped the line above; this measured box isolates DICHO.", "cardIds": ["word-dicho--said", "grammar-present-perfect"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:dismissal:app-negative-command", "cardId": "grammar-negative-tu-command", "participantWordIds": ["es-xkcd-psiquico:dismissal:w01", "es-xkcd-psiquico:dismissal:w02", "es-xkcd-psiquico:dismissal:w03"], "exampleEs": "NO LE PRESTES", "explanationEn": "No begins the negative instruction, le appears before the verb as its object marker, and ordinary prestas changes to the familiar negative-command form prestes." },
+        { "id": "es-xkcd-psiquico:dismissal:app-pay-attention", "cardId": "phrase-prestar-atencion", "participantWordIds": ["es-xkcd-psiquico:dismissal:w03", "es-xkcd-psiquico:dismissal:w04"], "exampleEs": "PRESTES ATENCIÓN", "explanationEn": "Prestes is the changed form of prestar required by the negative instruction, while atención completes the conventional expression." },
+        { "id": "es-xkcd-psiquico:dismissal:app-forget-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-psiquico:dismissal:w05"], "exampleEs": "OLVIDA", "explanationEn": "Olvida is the positive command used to tell one familiar person to forget something." },
+        { "id": "es-xkcd-psiquico:dismissal:app-lo-que", "cardId": "grammar-lo-que", "participantWordIds": ["es-xkcd-psiquico:dismissal:w06", "es-xkcd-psiquico:dismissal:w07"], "exampleEs": "LO QUE", "explanationEn": "Lo que points neutrally to an unnamed thing or idea; the following words identify it as previously said content." },
+        { "id": "es-xkcd-psiquico:dismissal:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-psiquico:dismissal:w08", "es-xkcd-psiquico:dismissal:w09"], "exampleEs": "HE DICHO", "explanationEn": "He is the helper form for the speaker, and dicho is decir's irregular completed-action form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-psiquico:objection",
+      "labelEs": "PERO...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0010" }],
+      "words": [
+        { "id": "es-xkcd-psiquico:objection:w01", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 87.30, "y": 20.95, "width": 4.85, "height": 6.55 }], "geometryRationale": "Vision absorbed the following ellipsis; this measured box isolates the four printed letters.", "cardIds": ["word-pero"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:movie-plan",
+      "labelEs": "VAMOS AL CINE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0018" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:movie-plan:w01", "text": "VAMOS", "normalized": "vamos", "explicitBounds": [{ "x": 77.03, "y": 27.60, "width": 7.20, "height": 5.95 }], "geometryRationale": "Vision's broad row-height geometry is not tight enough for direct selection; this measured box isolates the printed word.", "cardIds": ["word-vamos--lets-go"] },
+        { "id": "es-xkcd-psiquico:movie-plan:w02", "text": "AL", "normalized": "al", "explicitBounds": [{ "x": 77.03, "y": 33.70, "width": 2.88, "height": 5.10 }], "geometryRationale": "Vision's broad row-height geometry touches the row above; this measured box isolates the printed word.", "cardIds": ["word-al--contraction"] },
+        { "id": "es-xkcd-psiquico:movie-plan:w03", "text": "CINE", "normalized": "cine", "explicitBounds": [{ "x": 80.27, "y": 33.70, "width": 4.20, "height": 5.10 }], "geometryRationale": "Vision absorbed the final period and touched the row above; this measured box isolates CINE.", "cardIds": ["word-cine"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:hesitation",
+      "labelEs": "YO, EH...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0019" }],
+      "words": [
+        { "id": "es-xkcd-psiquico:hesitation:w01", "text": "YO", "normalized": "yo", "explicitBounds": [{ "x": 83.23, "y": 64.55, "width": 2.65, "height": 5.20 }], "geometryRationale": "Vision absorbed the following comma and overlapped the response row; this measured box isolates the two printed letters.", "cardIds": ["word-yo"] },
+        { "id": "es-xkcd-psiquico:hesitation:w02", "text": "EH", "normalized": "eh", "explicitBounds": [{ "x": 86.87, "y": 64.55, "width": 2.50, "height": 5.20 }], "geometryRationale": "Vision absorbed the following ellipsis and overlapped the response row; this measured box isolates the two printed letters.", "cardIds": ["word-eh--hesitation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:agreement",
+      "labelEs": "VENGA.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0020" }],
+      "words": [
+        { "id": "es-xkcd-psiquico:agreement:w01", "text": "VENGA", "normalized": "venga", "explicitBounds": [{ "x": 82.97, "y": 69.85, "width": 6.10, "height": 5.35 }], "geometryRationale": "Vision absorbed the final period; this measured box isolates the printed word.", "cardIds": ["word-venga--agreement"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-psiquico:caption",
+      "labelEs": "PUEDE QUE ESTE TRUCO SÓLO FUNCIONE UN 1% DE LAS VECES, PERO CUANDO LO HACE, MERECE COMPLETAMENTE LA PENA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-psiquico:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-psiquico:caption:w01", "text": "PUEDE", "normalized": "puede", "explicitBounds": [{ "x": 41.89, "y": 86.90, "width": 5.98, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-puede--possibility", "grammar-puede-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:caption:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 48.31, "y": 86.90, "width": 3.96, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-que--puede-que", "grammar-puede-que-subjunctive"] },
+        { "id": "es-xkcd-psiquico:caption:w03", "text": "ESTE", "normalized": "este", "explicitBounds": [{ "x": 52.70, "y": 86.90, "width": 4.97, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-este"] },
+        { "id": "es-xkcd-psiquico:caption:w04", "text": "TRUCO", "normalized": "truco", "explicitBounds": [{ "x": 58.11, "y": 86.90, "width": 5.98, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-truco", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:caption:w05", "text": "SÓLO", "normalized": "sólo", "explicitBounds": [{ "x": 64.53, "y": 86.90, "width": 4.97, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word and its accent.", "cardIds": ["word-sólo--only"] },
+        { "id": "es-xkcd-psiquico:caption:w06", "text": "FUNCIONE", "normalized": "funcione", "explicitBounds": [{ "x": 69.93, "y": 86.90, "width": 9.36, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-funcione--possibility-subjunctive", "grammar-puede-que-subjunctive", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:caption:w07", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 79.73, "y": 86.90, "width": 2.62, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-un--before-percentage"] },
+        { "id": "es-xkcd-psiquico:caption:w08", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 85.81, "y": 86.90, "width": 2.28, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-psiquico:caption:w09", "text": "LAS", "normalized": "las", "explicitBounds": [{ "x": 88.51, "y": 86.90, "width": 3.96, "height": 5.45 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row below; this measured box isolates the printed word.", "cardIds": ["word-las"] },
+        { "id": "es-xkcd-psiquico:caption:w10", "text": "VECES", "normalized": "veces", "explicitBounds": [{ "x": 92.91, "y": 86.90, "width": 6.10, "height": 5.45 }], "geometryRationale": "Vision absorbed the following comma and overlapped the row below; this measured box isolates VECES.", "cardIds": ["word-veces--a-veces", "concept-psychic-number-guessing-probability"] },
+        { "id": "es-xkcd-psiquico:caption:w11", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 41.89, "y": 92.70, "width": 5.07, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-psiquico:caption:w12", "text": "CUANDO", "normalized": "cuando", "explicitBounds": [{ "x": 47.36, "y": 92.70, "width": 7.20, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-cuando--when"] },
+        { "id": "es-xkcd-psiquico:caption:w13", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 54.97, "y": 92.70, "width": 2.65, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-lo--object-pronoun", "grammar-hacerlo-replace-action"] },
+        { "id": "es-xkcd-psiquico:caption:w14", "text": "HACE", "normalized": "hace", "explicitBounds": [{ "x": 58.01, "y": 92.70, "width": 5.15, "height": 6.15 }], "geometryRationale": "Vision absorbed the following comma and overlapped the row above; this measured box isolates HACE.", "cardIds": ["word-hace--does-so", "grammar-hacerlo-replace-action"] },
+        { "id": "es-xkcd-psiquico:caption:w15", "text": "MERECE", "normalized": "merece", "explicitBounds": [{ "x": 64.09, "y": 92.70, "width": 7.80, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-merece--is-worth", "phrase-merecer-la-pena"] },
+        { "id": "es-xkcd-psiquico:caption:w16", "text": "COMPLETAMENTE", "normalized": "completamente", "explicitBounds": [{ "x": 72.30, "y": 92.70, "width": 15.71, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-completamente", "grammar-adverbs-mente"] },
+        { "id": "es-xkcd-psiquico:caption:w17", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 88.41, "y": 92.70, "width": 2.65, "height": 6.15 }], "geometryRationale": "Vision's caption-row rectangle overlaps the row above; this measured box isolates the printed word.", "cardIds": ["word-la--article", "phrase-merecer-la-pena"] },
+        { "id": "es-xkcd-psiquico:caption:w18", "text": "PENA", "normalized": "pena", "explicitBounds": [{ "x": 91.45, "y": 92.70, "width": 4.85, "height": 6.15 }], "geometryRationale": "Vision absorbed the final period and overlapped the row above; this measured box isolates PENA.", "cardIds": ["word-pena--fixed-merecer-la-pena", "phrase-merecer-la-pena"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-psiquico:caption:excluded-1-percent", "text": "1%", "reason": "measurement", "rationale": "1% is a numerical probability measurement, not Spanish vocabulary.", "explicitBounds": [{ "x": 82.77, "y": 86.90, "width": 2.70, "height": 5.45 }], "geometryRationale": "Vision recognized only the digit; this measured box covers the complete printed percentage." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-psiquico:caption:app-possibility", "cardId": "grammar-puede-que-subjunctive", "participantWordIds": ["es-xkcd-psiquico:caption:w01", "es-xkcd-psiquico:caption:w02", "es-xkcd-psiquico:caption:w06"], "exampleEs": "PUEDE QUE ESTE TRUCO SÓLO FUNCIONE", "explanationEn": "Puede que opens a possibility, este truco names its subject, sólo limits the claim, and ordinary funciona changes to the possibility form funcione." },
+        { "id": "es-xkcd-psiquico:caption:app-do-so", "cardId": "grammar-hacerlo-replace-action", "participantWordIds": ["es-xkcd-psiquico:caption:w13", "es-xkcd-psiquico:caption:w14"], "exampleEs": "LO HACE", "explanationEn": "Lo stands for the already mentioned action, and hace is the matching present form that avoids repeating that action." },
+        { "id": "es-xkcd-psiquico:caption:app-completamente-mente", "cardId": "grammar-adverbs-mente", "participantWordIds": ["es-xkcd-psiquico:caption:w16"], "exampleEs": "COMPLETAMENTE", "explanationEn": "Completa takes its feminine singular form and adds -mente to make completamente, which strengthens the degree here." },
+        { "id": "es-xkcd-psiquico:caption:app-worth-it", "cardId": "phrase-merecer-la-pena", "participantWordIds": ["es-xkcd-psiquico:caption:w15", "es-xkcd-psiquico:caption:w17", "es-xkcd-psiquico:caption:w18"], "exampleEs": "MERECE COMPLETAMENTE LA PENA", "explanationEn": "Merece and la pena form the conventional value expression, while completamente intensifies how strongly that value is claimed." }
+      ]
+    }
+  ]
+}
