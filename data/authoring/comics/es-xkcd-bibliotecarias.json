@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-bibliotecarias",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Librarians",
+  "titleEs": "Bibliotecarias",
+  "titleText": {
+    "es": "Eso sí, no esperéis ninguna indulgencia con las multas por atrasos en la devolución",
+    "en": "That said, don't expect any leniency with fines for late returns."
+  },
+  "cardDefinitions": [
+    { "id": "word-ventajas", "kind": "word", "promptEs": "ventajas", "answerEn": "advantages; benefits", "noteEn": "", "tags": ["word", "plural", "evaluation"] },
+    {
+      "id": "word-salir--date",
+      "kind": "word",
+      "promptEs": "salir",
+      "answerEn": "to date; to go out with (in salir con)",
+      "noteEn": "Salir by itself usually means “to go out” or “to leave.” With con followed by a person, it can mean to date that person.",
+      "example": { "es": "Marta sale con Elena.", "en": "Marta is dating Elena." },
+      "tags": ["word", "relationships", "contextual sense"]
+    },
+    { "id": "word-bibliotecaria", "kind": "word", "promptEs": "bibliotecaria", "answerEn": "female librarian", "noteEn": "", "tags": ["word", "profession", "feminine"] },
+    {
+      "id": "word-vamos--near-future",
+      "kind": "word",
+      "promptEs": "vamos",
+      "answerEn": "we are going; we are going to",
+      "noteEn": "Vamos is the present form of ir for “we.” Before a and an action verb, it can announce a plan or near-future action.",
+      "example": { "es": "Vamos a descansar.", "en": "We are going to rest." },
+      "tags": ["word", "ir", "we", "near future"]
+    },
+    { "id": "word-parar--stop", "kind": "word", "promptEs": "parar", "answerEn": "to stop; to make a stop", "noteEn": "", "tags": ["word", "travel", "infinitive"] },
+    { "id": "word-baltimore", "kind": "word", "promptEs": "baltimore", "answerEn": "Baltimore (a city in Maryland)", "noteEn": "", "tags": ["word", "proper name", "place"] },
+    { "id": "word-visitar", "kind": "word", "promptEs": "visitar", "answerEn": "to visit", "noteEn": "", "tags": ["word", "infinitive"] },
+    { "id": "word-familia", "kind": "word", "promptEs": "familia", "answerEn": "family", "noteEn": "", "tags": ["word", "family", "feminine"] },
+    { "id": "word-que--no-more-to-discuss", "kind": "word", "promptEs": "que", "answerEn": "to; no separate word (in no hay más que hablar)", "noteEn": "", "tags": ["word", "fixed expression", "connector"] },
+    {
+      "id": "word-ah--challenge",
+      "kind": "word",
+      "promptEs": "ah",
+      "answerEn": "oh; really? (challenging reaction)",
+      "noteEn": "Ah can signal recognition, surprise, or a challenge. In ¿Ah, sí?, the speaker questions what was just said, much like “Oh, really?”",
+      "example": { "es": "—No te atreves. —¿Ah, sí?", "en": "“You wouldn't dare.” “Oh, really?”" },
+      "tags": ["word", "interjection", "reaction"]
+    },
+    { "id": "word-eh--attention", "kind": "word", "promptEs": "eh", "answerEn": "hey (getting someone's attention)", "noteEn": "", "tags": ["word", "interjection", "attention"] },
+    { "id": "word-libro", "kind": "word", "promptEs": "libro", "answerEn": "book", "noteEn": "", "tags": ["word", "reading", "masculine"] },
+    { "id": "word-tapa--book-cover", "kind": "word", "promptEs": "tapa", "answerEn": "cover (of a book)", "noteEn": "", "tags": ["word", "book", "feminine"] },
+    { "id": "word-dura--hard", "kind": "word", "promptEs": "dura", "answerEn": "hard; rigid (feminine singular)", "noteEn": "", "tags": ["word", "description", "feminine"] },
+    {
+      "id": "word-seras--future",
+      "kind": "word",
+      "promptEs": "serás",
+      "answerEn": "you will be",
+      "noteEn": "Serás is the simple-future form of ser for informal singular “you.” Spanish writes an accent on the final -ás.",
+      "example": { "es": "Serás un buen guía.", "en": "You will be a good guide." },
+      "tags": ["word", "ser", "future", "informal singular"]
+    },
+    { "id": "word-capaz", "kind": "word", "promptEs": "capaz", "answerEn": "capable; able", "noteEn": "", "tags": ["word", "ability", "description"] },
+    { "id": "word-ñec--creak", "kind": "word", "promptEs": "ñec", "answerEn": "creak; crinkle (sound effect)", "noteEn": "", "tags": ["word", "onomatopoeia", "sound"] },
+    { "id": "word-cric--creak", "kind": "word", "promptEs": "cric", "answerEn": "creak (sound effect)", "noteEn": "", "tags": ["word", "onomatopoeia", "sound"] },
+    { "id": "word-tic--twitch", "kind": "word", "promptEs": "tic", "answerEn": "tic; involuntary twitch", "noteEn": "", "tags": ["word", "sound effect", "movement"] },
+    { "id": "word-crac--crack", "kind": "word", "promptEs": "crac", "answerEn": "crack (a sharp breaking sound)", "noteEn": "", "tags": ["word", "onomatopoeia", "sound"] },
+    { "id": "word-ganas--win", "kind": "word", "promptEs": "ganas", "answerEn": "you win", "noteEn": "", "tags": ["word", "ganar", "informal singular"] },
+    {
+      "id": "phrase-ventajas-de-infinitive",
+      "kind": "phrase",
+      "promptEs": "ventajas de + infinitivo",
+      "questionEn": "How do you introduce the advantages of doing an activity?",
+      "answerEn": "Use ventajas de followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The action verb ends in -ar, -er, or -ir and names the activity whose benefits are being discussed.",
+      "example": { "es": "Hablamos de las ventajas de caminar.", "en": "We are talking about the advantages of walking." },
+      "tags": ["phrase", "evaluation", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-salir-con-alguien",
+      "kind": "phrase",
+      "promptEs": "salir con alguien",
+      "questionEn": "How do you say that someone is dating another person?",
+      "answerEn": "Use a form of salir, then con, then the person.",
+      "noteEn": "This relationship meaning depends on con plus a person. In other settings, salir can simply mean “to go out” or “to leave.”",
+      "example": { "es": "Luis sale con mi hermano.", "en": "Luis is dating my brother." },
+      "tags": ["phrase", "relationships", "A2"]
+    },
+    {
+      "id": "phrase-no-hay-mas-que-hablar",
+      "kind": "phrase",
+      "promptEs": "no hay más que hablar",
+      "questionEn": "How do you say firmly that there is nothing more to discuss?",
+      "answerEn": "Use no hay más que hablar.",
+      "noteEn": "The expression closes a discussion by presenting the decision as final. Más means “more,” while que links it to hablar, the remaining possible discussion.",
+      "example": { "es": "La decisión está tomada; no hay más que hablar.", "en": "The decision is made; there is nothing more to discuss." },
+      "tags": ["phrase", "decision", "conversation", "A2"]
+    },
+    {
+      "id": "phrase-ah-si-challenge",
+      "kind": "phrase",
+      "promptEs": "¿Ah, sí?",
+      "questionEn": "How do you react with a skeptical or challenging “Oh, really?”",
+      "answerEn": "Use ¿Ah, sí?",
+      "noteEn": "The same two words can sound genuinely surprised or openly challenging; the speaker's tone and the situation supply the difference.",
+      "example": { "es": "—No puedes hacerlo. —¿Ah, sí?", "en": "“You cannot do it.” “Oh, really?”" },
+      "tags": ["phrase", "reaction", "challenge", "A1"]
+    },
+    {
+      "id": "phrase-libro-de-tapa-dura",
+      "kind": "phrase",
+      "promptEs": "libro de tapa dura",
+      "questionEn": "How do you say “hardcover book” in Spanish?",
+      "answerEn": "Use libro de tapa dura.",
+      "noteEn": "Spanish builds the description literally as a book “of hard cover.” De links the book to its cover type, and dura agrees with the feminine noun tapa.",
+      "example": { "es": "Compré un libro de tapa dura.", "en": "I bought a hardcover book." },
+      "tags": ["phrase", "books", "description", "A2"]
+    },
+    {
+      "id": "phrase-no-ser-capaz-challenge",
+      "kind": "phrase",
+      "promptEs": "no ser capaz (de + infinitivo) · como reto",
+      "questionEn": "How can you challenge someone by implying that they would not dare or be able to do something?",
+      "answerEn": "Use no, a form of ser, and capaz, often followed by de and the action verb in its unchanged dictionary form.",
+      "noteEn": "The literal meaning is “not be capable,” but said directly to someone it can function as a dare. The action may be left unstated when the situation makes it obvious.",
+      "example": {
+        "es": "No serás capaz de saltar.",
+        "en": "You wouldn't dare jump."
+      },
+      "tags": ["phrase", "challenge", "dare", "ability", "A2"]
+    },
+    {
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": { "es": "Necesito una mochila nueva.", "en": "I need a new backpack." },
+      "tags": ["grammar", "word order", "adjective", "A1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-bibliotecarias:heading",
+      "labelEs": "VENTAJAS DE SALIR CON UNA BIBLIOTECARIA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:heading:w01", "text": "VENTAJAS", "normalized": "ventajas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00001" }], "cardIds": ["word-ventajas", "phrase-ventajas-de-infinitive"] },
+        { "id": "es-xkcd-bibliotecarias:heading:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00002" }], "cardIds": ["word-de--of", "phrase-ventajas-de-infinitive"] },
+        { "id": "es-xkcd-bibliotecarias:heading:w03", "text": "SALIR", "normalized": "salir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00003" }], "cardIds": ["word-salir--date", "phrase-ventajas-de-infinitive", "phrase-salir-con-alguien"] },
+        { "id": "es-xkcd-bibliotecarias:heading:w04", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00004" }], "cardIds": ["word-con", "phrase-salir-con-alguien"] },
+        { "id": "es-xkcd-bibliotecarias:heading:w05", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00005" }], "cardIds": ["word-una", "phrase-salir-con-alguien"] },
+        { "id": "es-xkcd-bibliotecarias:heading:w06", "text": "BIBLIOTECARIA", "normalized": "bibliotecaria", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00006" }], "cardIds": ["word-bibliotecaria", "phrase-salir-con-alguien"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:heading:app-advantages",
+          "cardId": "phrase-ventajas-de-infinitive",
+          "participantWordIds": ["es-xkcd-bibliotecarias:heading:w01", "es-xkcd-bibliotecarias:heading:w02", "es-xkcd-bibliotecarias:heading:w03"],
+          "exampleEs": "VENTAJAS DE SALIR",
+          "explanationEn": "Ventajas names the benefits, de introduces the activity, and salir stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:heading:app-date",
+          "cardId": "phrase-salir-con-alguien",
+          "participantWordIds": ["es-xkcd-bibliotecarias:heading:w03", "es-xkcd-bibliotecarias:heading:w04", "es-xkcd-bibliotecarias:heading:w05", "es-xkcd-bibliotecarias:heading:w06"],
+          "exampleEs": "SALIR CON UNA BIBLIOTECARIA",
+          "explanationEn": "Salir gains the dating meaning because con introduces a person, here una bibliotecaria."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:travel-decision",
+      "labelEs": "VAMOS A PARAR EN BALTIMORE PARA VISITAR A MI FAMILIA Y NO HAY MÁS QUE HABLAR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w01", "text": "VAMOS", "normalized": "vamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00007" }], "cardIds": ["word-vamos--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00008" }], "cardIds": ["word-a--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w03", "text": "PARAR", "normalized": "parar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00009" }], "cardIds": ["word-parar--stop", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00010" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w05", "text": "BALTIMORE", "normalized": "baltimore", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00015" }, { "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00016" }], "cardIds": ["word-baltimore"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w06", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00017" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w07", "text": "VISITAR", "normalized": "visitar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00018" }], "cardIds": ["word-visitar", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w08", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00024" }], "cardIds": ["word-a--personal-a", "grammar-personal-a"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w09", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00025" }], "cardIds": ["word-mi", "grammar-personal-a"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w10", "text": "FAMILIA", "normalized": "familia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00026" }], "cardIds": ["word-familia", "grammar-personal-a"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w11", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00027" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w12", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00028" }], "cardIds": ["word-no", "phrase-no-hay-mas-que-hablar"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w13", "text": "HAY", "normalized": "hay", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00029" }], "cardIds": ["word-hay", "phrase-no-hay-mas-que-hablar"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w14", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00030" }], "cardIds": ["word-más--more", "phrase-no-hay-mas-que-hablar"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w15", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00031" }], "cardIds": ["word-que--no-more-to-discuss", "phrase-no-hay-mas-que-hablar"] },
+        { "id": "es-xkcd-bibliotecarias:travel-decision:w16", "text": "HABLAR", "normalized": "hablar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00032" }], "cardIds": ["word-hablar", "phrase-no-hay-mas-que-hablar"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:travel-decision:app-near-future",
+          "cardId": "grammar-ir-a-infinitive",
+          "participantWordIds": ["es-xkcd-bibliotecarias:travel-decision:w01", "es-xkcd-bibliotecarias:travel-decision:w02", "es-xkcd-bibliotecarias:travel-decision:w03"],
+          "exampleEs": "VAMOS A PARAR",
+          "explanationEn": "Vamos matches “we,” a connects the pieces, and parar stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:travel-decision:app-purpose",
+          "cardId": "grammar-para-infinitive-purpose",
+          "participantWordIds": ["es-xkcd-bibliotecarias:travel-decision:w06", "es-xkcd-bibliotecarias:travel-decision:w07"],
+          "exampleEs": "PARA VISITAR",
+          "explanationEn": "Para introduces the purpose of the stop, and visitar stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:travel-decision:app-personal-a",
+          "cardId": "grammar-personal-a",
+          "participantWordIds": ["es-xkcd-bibliotecarias:travel-decision:w08", "es-xkcd-bibliotecarias:travel-decision:w09", "es-xkcd-bibliotecarias:travel-decision:w10"],
+          "exampleEs": "A MI FAMILIA",
+          "explanationEn": "A appears because the people being visited are the specific family identified by mi."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:travel-decision:app-nothing-more",
+          "cardId": "phrase-no-hay-mas-que-hablar",
+          "participantWordIds": [
+            "es-xkcd-bibliotecarias:travel-decision:w12",
+            "es-xkcd-bibliotecarias:travel-decision:w13",
+            "es-xkcd-bibliotecarias:travel-decision:w14",
+            "es-xkcd-bibliotecarias:travel-decision:w15",
+            "es-xkcd-bibliotecarias:travel-decision:w16"
+          ],
+          "exampleEs": "NO HAY MÁS QUE HABLAR",
+          "explanationEn": "No hay denies that any further discussion exists, while más que hablar names that possible additional discussion."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:challenge",
+      "labelEs": "¿AH, SÍ?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:challenge:w01", "text": "AH", "normalized": "ah", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00038" }], "cardIds": ["word-ah--challenge", "phrase-ah-si-challenge"] },
+        { "id": "es-xkcd-bibliotecarias:challenge:w02", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00039" }], "cardIds": ["word-sí", "phrase-ah-si-challenge"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:challenge:app-ah-si",
+          "cardId": "phrase-ah-si-challenge",
+          "participantWordIds": ["es-xkcd-bibliotecarias:challenge:w01", "es-xkcd-bibliotecarias:challenge:w02"],
+          "exampleEs": "AH, SÍ",
+          "explanationEn": "Ah marks the reaction and sí echoes the claim being challenged; question intonation turns the pair into a skeptical response."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:hardcover-bait",
+      "labelEs": "EH, MIRA, ¡ES UN LIBRO DE TAPA DURA NUEVO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w01", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00011" }], "cardIds": ["word-eh--attention"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w02", "text": "MIRA", "normalized": "mira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00012" }], "cardIds": ["word-mira--imperative", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00013" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00014" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w05", "text": "LIBRO", "normalized": "libro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00019" }], "cardIds": ["word-libro", "phrase-libro-de-tapa-dura", "grammar-descriptive-adjective-after-noun"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00020" }], "cardIds": ["word-de--type-classifier", "phrase-libro-de-tapa-dura"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w07", "text": "TAPA", "normalized": "tapa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00021" }], "cardIds": ["word-tapa--book-cover", "phrase-libro-de-tapa-dura"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w08", "text": "DURA", "normalized": "dura", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00022" }], "cardIds": ["word-dura--hard", "phrase-libro-de-tapa-dura"] },
+        { "id": "es-xkcd-bibliotecarias:hardcover-bait:w09", "text": "NUEVO", "normalized": "nuevo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00023" }], "cardIds": ["word-nuevo", "grammar-descriptive-adjective-after-noun"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:hardcover-bait:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-bibliotecarias:hardcover-bait:w02"],
+          "exampleEs": "MIRA",
+          "explanationEn": "Mira directly tells one familiar person to look, using the ordinary positive tú command form."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:hardcover-bait:app-hardcover",
+          "cardId": "phrase-libro-de-tapa-dura",
+          "participantWordIds": [
+            "es-xkcd-bibliotecarias:hardcover-bait:w05",
+            "es-xkcd-bibliotecarias:hardcover-bait:w06",
+            "es-xkcd-bibliotecarias:hardcover-bait:w07",
+            "es-xkcd-bibliotecarias:hardcover-bait:w08"
+          ],
+          "exampleEs": "LIBRO DE TAPA DURA",
+          "explanationEn": "Libro names the object, de links it to the cover type, and dura agrees with the feminine word tapa."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:hardcover-bait:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": ["es-xkcd-bibliotecarias:hardcover-bait:w05", "es-xkcd-bibliotecarias:hardcover-bait:w09"],
+          "exampleEs": "LIBRO DE TAPA DURA NUEVO",
+          "explanationEn": "Nuevo comes after the complete noun phrase headed by libro and describes the book as new."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:would-not-dare",
+      "labelEs": "NO SERÁS CAPAZ.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:would-not-dare:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00033" }], "cardIds": ["word-no", "phrase-no-ser-capaz-challenge"] },
+        { "id": "es-xkcd-bibliotecarias:would-not-dare:w02", "text": "SERÁS", "normalized": "serás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00034" }], "cardIds": ["word-seras--future", "grammar-simple-future", "phrase-no-ser-capaz-challenge"] },
+        { "id": "es-xkcd-bibliotecarias:would-not-dare:w03", "text": "CAPAZ", "normalized": "capaz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00035" }], "cardIds": ["word-capaz", "phrase-no-ser-capaz-challenge"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:would-not-dare:app-challenge",
+          "cardId": "phrase-no-ser-capaz-challenge",
+          "participantWordIds": [
+            "es-xkcd-bibliotecarias:would-not-dare:w01",
+            "es-xkcd-bibliotecarias:would-not-dare:w02",
+            "es-xkcd-bibliotecarias:would-not-dare:w03"
+          ],
+          "exampleEs": "NO SERÁS CAPAZ",
+          "explanationEn": "The action is left unstated because the situation makes it obvious; the direct challenge turns the literal statement about ability into a dare."
+        },
+        {
+          "id": "es-xkcd-bibliotecarias:would-not-dare:app-future",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-bibliotecarias:would-not-dare:w02"],
+          "exampleEs": "SERÁS",
+          "explanationEn": "Serás keeps the full dictionary form ser and adds the future ending -ás for informal singular “you.”"
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:first-creak",
+      "labelEs": "ÑEC",
+      "explicitBounds": [{ "x": 51.6, "y": 52.8, "width": 4.8, "height": 9.4 }],
+      "geometryRationale": "Vision omitted this small rotated book-creaking sound effect; the rectangle was measured from the Spanish raster.",
+      "words": [
+        {
+          "id": "es-xkcd-bibliotecarias:first-creak:w01",
+          "text": "ÑEC",
+          "normalized": "ñec",
+          "explicitBounds": [{ "x": 52.1, "y": 55.1, "width": 3.9, "height": 6.8 }],
+          "geometryRationale": "Vision omitted this small rotated onomatopoeia; the word box follows the printed glyphs.",
+          "cardIds": ["word-ñec--creak"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:second-creak",
+      "labelEs": "CRIC",
+      "explicitBounds": [{ "x": 67.3, "y": 52.3, "width": 5.7, "height": 9.8 }],
+      "geometryRationale": "Vision omitted this rotated book-creaking sound effect; the rectangle was measured from the Spanish raster.",
+      "words": [
+        {
+          "id": "es-xkcd-bibliotecarias:second-creak:w01",
+          "text": "CRIC",
+          "normalized": "cric",
+          "explicitBounds": [{ "x": 68, "y": 54.2, "width": 4.6, "height": 7.5 }],
+          "geometryRationale": "Vision omitted this rotated onomatopoeia; the word box follows the four printed letters.",
+          "cardIds": ["word-cric--creak"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:twitch",
+      "labelEs": "TIC",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0013" }],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:twitch:w01", "text": "TIC", "normalized": "tic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00042" }], "cardIds": ["word-tic--twitch"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:spine-crack",
+      "labelEs": "CRAC",
+      "explicitBounds": [{ "x": 83.3, "y": 55.6, "width": 5.9, "height": 10.3 }],
+      "geometryRationale": "Vision omitted this rotated book-spine cracking sound effect; the rectangle was measured from the Spanish raster.",
+      "words": [
+        {
+          "id": "es-xkcd-bibliotecarias:spine-crack:w01",
+          "text": "CRAC",
+          "normalized": "crac",
+          "explicitBounds": [{ "x": 84, "y": 57.5, "width": 4.8, "height": 7.9 }],
+          "geometryRationale": "Vision omitted this rotated onomatopoeia; the word box follows the four printed letters.",
+          "cardIds": ["word-crac--crack"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-bibliotecarias:concession",
+      "labelEs": "¡VALE! ¡TÚ GANAS!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-bibliotecarias:ocr-line-0012" }
+      ],
+      "words": [
+        { "id": "es-xkcd-bibliotecarias:concession:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00036" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-bibliotecarias:concession:w02", "text": "TÚ", "normalized": "tú", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00037" }], "cardIds": ["word-tú", "grammar-explicit-subject-pronoun"] },
+        { "id": "es-xkcd-bibliotecarias:concession:w03", "text": "GANAS", "normalized": "ganas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-bibliotecarias:ocr-token-00041" }], "cardIds": ["word-ganas--win", "grammar-explicit-subject-pronoun"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-bibliotecarias:concession:app-explicit-subject",
+          "cardId": "grammar-explicit-subject-pronoun",
+          "participantWordIds": ["es-xkcd-bibliotecarias:concession:w02", "es-xkcd-bibliotecarias:concession:w03"],
+          "exampleEs": "TÚ GANAS",
+          "explanationEn": "Ganas already identifies informal singular “you,” while tú adds contrast by emphasizing that the other person wins."
+        }
+      ]
+    }
+  ]
+}

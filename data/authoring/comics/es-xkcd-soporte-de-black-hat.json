@@ -1,0 +1,518 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-soporte-de-black-hat",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Black Hat Support",
+  "titleEs": "Soporte de Black Hat",
+  "titleText": {
+    "es": "Para no dejaros con la intriga: era un problema con llamadas select()",
+    "en": "So as not to leave you hanging: it was a problem with select() calls."
+  },
+  "cardDefinitions": [
+    { "id": "word-por--thanks-reason", "kind": "word", "promptEs": "por", "answerEn": "for (introducing what someone is thanked for)", "noteEn": "", "tags": ["word", "thanks", "A1"] },
+    { "id": "word-llamar--phone", "kind": "word", "promptEs": "llamar", "answerEn": "to call; to phone", "noteEn": "", "tags": ["word", "verbs", "communication", "A1"] },
+    { "id": "word-a--llamar-destination", "kind": "word", "promptEs": "a", "answerEn": "no separate English word; links llamar to the person, number, or service called", "noteEn": "", "tags": ["word", "prepositions", "communication", "A2"] },
+    { "id": "word-línea--helpline", "kind": "word", "promptEs": "línea", "answerEn": "line; helpline", "noteEn": "", "tags": ["word", "communication", "support", "A2"] },
+    { "id": "word-fuente--source", "kind": "word", "promptEs": "fuente", "answerEn": "source", "noteEn": "", "tags": ["word", "A2"] },
+    { "id": "word-de--support-domain", "kind": "word", "promptEs": "de", "answerEn": "for; links support or help to the system it covers", "noteEn": "", "tags": ["word", "support", "technology", "A2"] },
+    {
+      "id": "word-ayudarle--formal",
+      "kind": "word",
+      "promptEs": "ayudarle",
+      "answerEn": "to help you (formal singular)",
+      "noteEn": "Ayudar is the unchanged dictionary form, and le means the formal listener here. Spanish attaches le to the end of an unchanged verb and writes ayudarle as one word.",
+      "example": { "es": "Quiero ayudarle.", "en": "I want to help you." },
+      "tags": ["word", "verbs", "pronouns", "formal address", "A2"]
+    },
+    {
+      "id": "word-corriendo--operate",
+      "kind": "word",
+      "promptEs": "corriendo",
+      "answerEn": "running; operating",
+      "noteEn": "Correr usually describes running on foot, but in technology it can describe operating software, a process, or a server.",
+      "example": { "es": "Estamos corriendo una prueba.", "en": "We are running a test." },
+      "tags": ["word", "verbs", "technology", "A2"]
+    },
+    { "id": "word-apache--web-server", "kind": "word", "promptEs": "apache", "answerEn": "Apache (web-server software)", "noteEn": "", "tags": ["word", "proper name", "technology"] },
+    {
+      "id": "word-carga--system-load",
+      "kind": "word",
+      "promptEs": "carga",
+      "answerEn": "load; demand on a computer system",
+      "noteEn": "In computing, carga describes how much work the system is handling rather than a physical weight.",
+      "example": { "es": "La carga del sistema es alta.", "en": "The system load is high." },
+      "tags": ["word", "technology", "servers", "B1"]
+    },
+    { "id": "word-para--stops", "kind": "word", "promptEs": "para", "answerEn": "stops", "noteEn": "", "tags": ["word", "verbs", "A1"] },
+    { "id": "word-de--parar-de", "kind": "word", "promptEs": "de", "answerEn": "no separate English word; links parar to the action that stops", "noteEn": "", "tags": ["word", "verb patterns", "A2"] },
+    { "id": "word-subir--increase", "kind": "word", "promptEs": "subir", "answerEn": "to rise; to increase", "noteEn": "", "tags": ["word", "verbs", "change", "A2"] },
+    { "id": "word-control--control", "kind": "word", "promptEs": "control", "answerEn": "control", "noteEn": "", "tags": ["word", "A1"] },
+    {
+      "id": "word-primer--printed-adverb-typo",
+      "kind": "word",
+      "promptEs": "primer",
+      "answerEn": "first; printed before a verb where standard Spanish would use primero",
+      "noteEn": "Primer is the shortened form of primero used before a masculine singular noun, as in el primer paso. Before an instruction verb such as pulse, standard Spanish uses primero instead. The comic visibly prints primer.",
+      "example": { "es": "Primero, pulse el botón.", "en": "First, press the button." },
+      "tags": ["word", "printed anomaly", "sequence", "A2"]
+    },
+    { "id": "word-pulse--formal-command", "kind": "word", "promptEs": "pulse", "answerEn": "click; press (formal command)", "noteEn": "", "tags": ["word", "commands", "technology", "A2"] },
+    { "id": "word-perdón--apology", "kind": "word", "promptEs": "perdón", "answerEn": "sorry; excuse me", "noteEn": "", "tags": ["word", "apologies", "A1"] },
+    { "id": "word-ayuda--support", "kind": "word", "promptEs": "ayuda", "answerEn": "help; support", "noteEn": "", "tags": ["word", "support", "A1"] },
+    { "id": "word-abre--formal-if", "kind": "word", "promptEs": "abre", "answerEn": "you open (formal singular, in an if-clause)", "noteEn": "", "tags": ["word", "verbs", "formal address", "A2"] },
+    { "id": "word-carpeta--folder", "kind": "word", "promptEs": "carpeta", "answerEn": "folder", "noteEn": "", "tags": ["word", "technology", "A1"] },
+    { "id": "word-documentos--documents", "kind": "word", "promptEs": "documentos", "answerEn": "documents", "noteEn": "", "tags": ["word", "technology", "A1"] },
+    { "id": "word-se--quedarse-con-tease", "kind": "word", "promptEs": "se", "answerEn": "no separate English word; marks the idiom quedarse con alguien", "noteEn": "", "tags": ["word", "pronominal verbs", "idioms", "B1"] },
+    {
+      "id": "word-esá--printed-typo-está",
+      "kind": "word",
+      "promptEs": "esá",
+      "answerEn": "you are; printed misspelling of está",
+      "noteEn": "The visible word omits the t from está but keeps the accent on á. The intended está is the form used with formal usted and helps form an ongoing action.",
+      "example": { "es": "Usted está bromeando.", "en": "You are joking." },
+      "tags": ["word", "printed anomaly", "verbs", "formal address", "A2"]
+    },
+    { "id": "word-quedando--teasing", "kind": "word", "promptEs": "quedando", "answerEn": "teasing; fooling (as part of quedarse con alguien)", "noteEn": "", "tags": ["word", "verbs", "idioms", "B1"] },
+    { "id": "word-conmigo--with-me", "kind": "word", "promptEs": "conmigo", "answerEn": "with me", "noteEn": "", "tags": ["word", "pronouns", "A1"] },
+    {
+      "id": "word-discúlpeme--formal",
+      "kind": "word",
+      "promptEs": "discúlpeme",
+      "answerEn": "please excuse me; bear with me (formal)",
+      "noteEn": "Disculpe is a polite command to one person, and me means “me.” In a positive command, Spanish attaches me to the end and writes discúlpeme as one word; the accent keeps the original stress.",
+      "example": { "es": "Discúlpeme, ¿puede repetirlo?", "en": "Excuse me, can you repeat that?" },
+      "tags": ["word", "commands", "apologies", "formal address", "A2"]
+    },
+    { "id": "word-abra--formal-command", "kind": "word", "promptEs": "abra", "answerEn": "open (formal command)", "noteEn": "", "tags": ["word", "commands", "A2"] },
+    { "id": "word-aol--online-service", "kind": "word", "promptEs": "aol", "answerEn": "AOL (an online service)", "noteEn": "", "tags": ["word", "proper name", "technology"] },
+    { "id": "word-vaya--formal-command", "kind": "word", "promptEs": "vaya", "answerEn": "go (formal command)", "noteEn": "", "tags": ["word", "commands", "A2"] },
+    { "id": "word-clave--keyword", "kind": "word", "promptEs": "clave", "answerEn": "key; keyword (as part of palabra clave)", "noteEn": "", "tags": ["word", "technology", "A2"] },
+    {
+      "id": "phrase-gracias-por-infinitive",
+      "kind": "phrase",
+      "promptEs": "gracias por una acción",
+      "questionEn": "How do you thank someone for doing something?",
+      "answerEn": "Say gracias por, then put the action verb in its unchanged dictionary form.",
+      "noteEn": "Por introduces the reason for the thanks. The following action stays in the dictionary form ending in -ar, -er, or -ir, even where English uses a verb ending in -ing.",
+      "example": { "es": "Gracias por venir.", "en": "Thank you for coming." },
+      "tags": ["phrase", "thanks", "infinitives", "A1"]
+    },
+    {
+      "id": "grammar-no-parar-de-infinitive",
+      "kind": "grammar",
+      "promptEs": "no parar de hacer algo",
+      "questionEn": "How do you say that something keeps doing an action without stopping?",
+      "answerEn": "Use no, then a changed form of parar, then de, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Only parar changes for the person and time. The action after de stays in its dictionary form ending in -ar, -er, or -ir. Although the words literally say that the action does not stop, natural English often uses “keep doing.”",
+      "example": { "es": "El bebé no para de reír.", "en": "The baby keeps laughing." },
+      "tags": ["grammar", "continuation", "infinitives", "A2"]
+    },
+    {
+      "id": "phrase-sin-control",
+      "kind": "phrase",
+      "promptEs": "sin control",
+      "questionEn": "How do you say that something is uncontrolled or out of control?",
+      "answerEn": "Use sin control.",
+      "noteEn": "Sin means “without,” so sin control can describe movement or change that is no longer controlled. English may use “out of control” or an adverb such as “uncontrollably.”",
+      "example": { "es": "El coche gira sin control.", "en": "The car spins out of control." },
+      "tags": ["phrase", "control", "manner", "A2"]
+    },
+    {
+      "id": "phrase-quedarse-con-alguien--tease",
+      "kind": "phrase",
+      "promptEs": "quedarse con alguien para bromear o engañar",
+      "questionEn": "How can you say that someone is teasing, fooling, or putting another person on?",
+      "answerEn": "In Spain, use a form of quedarse con followed by the person being teased or fooled.",
+      "noteEn": "The small pronoun in quedarse changes with the person doing it: me, te, se, nos, or os. Context matters because quedarse con can also literally mean to keep something or stay with someone. In this idiomatic use, it describes not speaking sincerely to the other person.",
+      "example": { "es": "No te quedes conmigo; dime la verdad.", "en": "Don't mess with me; tell me the truth." },
+      "tags": ["phrase", "idioms", "Spain", "pronominal verbs", "B1"]
+    },
+    {
+      "id": "phrase-palabra-clave",
+      "kind": "phrase",
+      "promptEs": "palabra clave",
+      "questionEn": "How do you say “keyword” or “key term” in Spanish?",
+      "answerEn": "Use palabra clave.",
+      "noteEn": "Palabra names the word, and clave says it is important for access, searching, or identifying a topic. The common plural is palabras clave.",
+      "example": { "es": "Busca una palabra clave.", "en": "Look for a keyword." },
+      "tags": ["phrase", "technology", "search", "A2"]
+    },
+    {
+      "id": "concept-linux-windows-aol-support-mismatch",
+      "kind": "concept",
+      "promptEs": "Apache y Linux frente a Menú Inicio, Mis Documentos y AOL",
+      "answerEn": "Apache can run as a web server on Linux, while Start and My Documents are Windows interface names and AOL Keywords belonged to AOL. Those steps do not address the caller's Linux server problem.",
+      "noteEn": "The Black Hat character deliberately gives obsolete, mismatched consumer-computer instructions. The growing mismatch is the central support-call joke.",
+      "tags": ["concept", "technology", "Linux", "Windows", "AOL", "support"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-soporte-de-black-hat:support-greeting",
+      "labelEs": "GRACIAS POR LLAMAR A LA LÍNEA DE SOPORTE DE BLACK HAT, SU PRIMERA FUENTE DE SOPORTE DE LINUX. ¿CÓMO PUEDO AYUDARLE?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-01", "text": "GRACIAS", "normalized": "gracias", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00001" }], "cardIds": ["word-gracias", "phrase-gracias-por-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-02", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00002" }], "cardIds": ["word-por--thanks-reason", "phrase-gracias-por-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-03", "text": "LLAMAR", "normalized": "llamar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00003" }], "cardIds": ["word-llamar--phone", "phrase-gracias-por-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00004" }], "cardIds": ["word-a--llamar-destination"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00005" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-06", "text": "LÍNEA", "normalized": "línea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00016" }], "cardIds": ["word-línea--helpline"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00017" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-08", "text": "SOPORTE", "normalized": "soporte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00018" }], "cardIds": ["word-soporte"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00019" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-10", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00033" }], "cardIds": ["word-su"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-11", "text": "PRIMERA", "normalized": "primera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00034" }], "cardIds": ["word-primera"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-12", "text": "FUENTE", "normalized": "fuente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00035" }], "cardIds": ["word-fuente--source"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-13", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00036" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-14", "text": "SOPORTE", "normalized": "soporte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00039" }], "cardIds": ["word-soporte"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00040" }], "cardIds": ["word-de--support-domain"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-16", "text": "LINUX", "normalized": "linux", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00041" }], "cardIds": ["word-linux--operating-system", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-17", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00042" }], "cardIds": ["word-cómo"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-18", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00044" }], "cardIds": ["word-puedo"] },
+        { "id": "es-xkcd-soporte-de-black-hat:support-greeting:word-19", "text": "AYUDARLE", "normalized": "ayudarle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00045" }], "cardIds": ["word-ayudarle--formal", "grammar-pronoun-attached-to-infinitive"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:support-greeting:excluded-black-hat",
+          "text": "BLACK HAT",
+          "reason": "non-spanish-text",
+          "rationale": "This is the English proper name of the support line and character, not Spanish vocabulary.",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00020" },
+            { "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00032" }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:support-greeting:app-gracias-por",
+          "cardId": "phrase-gracias-por-infinitive",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:support-greeting:word-01",
+            "es-xkcd-soporte-de-black-hat:support-greeting:word-02",
+            "es-xkcd-soporte-de-black-hat:support-greeting:word-03"
+          ],
+          "exampleEs": "GRACIAS POR LLAMAR",
+          "explanationEn": "Gracias supplies the thanks, por introduces its reason, and llamar stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:support-greeting:app-attached-le",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:support-greeting:word-19"],
+          "exampleEs": "AYUDARLE",
+          "explanationEn": "Le is attached to the unchanged verb ayudar and identifies the formal listener receiving the help."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:server-problem",
+      "labelEs": "HOLA. ESTOY CORRIENDO UN SERVIDOR APACHE Y LA CARGA NO PARA DE SUBIR SIN CONTROL.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0033" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-01", "text": "HOLA", "normalized": "hola", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00057" }], "cardIds": ["word-hola"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-02", "text": "ESTOY", "normalized": "estoy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00058" }], "cardIds": ["word-estoy--progressive-auxiliary", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-03", "text": "CORRIENDO", "normalized": "corriendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00064" }], "cardIds": ["word-corriendo--operate", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00065" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-05", "text": "SERVIDOR", "normalized": "servidor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00069" }], "cardIds": ["word-servidor"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-06", "text": "APACHE", "normalized": "apache", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00072" }], "cardIds": ["word-apache--web-server", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-07", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00073" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00074" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-09", "text": "CARGA", "normalized": "carga", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00075" }], "cardIds": ["word-carga--system-load"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-10", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00076" }], "cardIds": ["word-no", "grammar-no-parar-de-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-11", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00077" }], "cardIds": ["word-para--stops", "grammar-no-parar-de-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-12", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00081" }], "cardIds": ["word-de--parar-de", "grammar-no-parar-de-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-13", "text": "SUBIR", "normalized": "subir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00082" }], "cardIds": ["word-subir--increase", "grammar-no-parar-de-infinitive"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-14", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00083" }], "cardIds": ["word-sin", "phrase-sin-control"] },
+        { "id": "es-xkcd-soporte-de-black-hat:server-problem:word-15", "text": "CONTROL", "normalized": "control", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00087" }], "cardIds": ["word-control--control", "phrase-sin-control"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:server-problem:app-progressive",
+          "cardId": "grammar-estar-gerundio",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:server-problem:word-02",
+            "es-xkcd-soporte-de-black-hat:server-problem:word-03"
+          ],
+          "exampleEs": "ESTOY CORRIENDO",
+          "explanationEn": "Estoy identifies the speaker and corriendo supplies the ongoing action form ending in -iendo."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:server-problem:app-no-parar",
+          "cardId": "grammar-no-parar-de-infinitive",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:server-problem:word-10",
+            "es-xkcd-soporte-de-black-hat:server-problem:word-11",
+            "es-xkcd-soporte-de-black-hat:server-problem:word-12",
+            "es-xkcd-soporte-de-black-hat:server-problem:word-13"
+          ],
+          "exampleEs": "NO PARA DE SUBIR",
+          "explanationEn": "No negates para, de links it to the continuing action, and subir stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:server-problem:app-sin-control",
+          "cardId": "phrase-sin-control",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:server-problem:word-14",
+            "es-xkcd-soporte-de-black-hat:server-problem:word-15"
+          ],
+          "exampleEs": "SIN CONTROL",
+          "explanationEn": "Sin and control form the fixed description for a change that is no longer controlled."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction",
+      "labelEs": "VALE. PRIMER PULSE EN EL MENÚ INICIO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00013" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-02", "text": "PRIMER", "normalized": "primer", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00014" }], "cardIds": ["word-primer--printed-adverb-typo"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-03", "text": "PULSE", "normalized": "pulse", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00015" }], "cardIds": ["word-pulse--formal-command", "grammar-formal-command"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00028" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00029" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-06", "text": "MENÚ", "normalized": "menú", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00030" }], "cardIds": ["word-menú", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:word-07", "text": "INICIO", "normalized": "inicio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00031" }], "cardIds": ["word-inicio", "concept-linux-windows-aol-support-mismatch"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:start-menu-instruction:app-formal-command",
+          "cardId": "grammar-formal-command",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:start-menu-instruction:word-03"],
+          "exampleEs": "PULSE",
+          "explanationEn": "Pulse is the polite command form addressed to one formal usted listener."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:linux-line-check",
+      "labelEs": "PERDÓN, ESTO ES LA LÍNEA DE AYUDA DE LINUX, ¿VERDAD?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0026" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-01", "text": "PERDÓN", "normalized": "perdón", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00046" }], "cardIds": ["word-perdón--apology"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-02", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00047" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00054" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00055" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-05", "text": "LÍNEA", "normalized": "línea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00056" }], "cardIds": ["word-línea--helpline"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00061" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-07", "text": "AYUDA", "normalized": "ayuda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00062" }], "cardIds": ["word-ayuda--support"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00063" }], "cardIds": ["word-de--support-domain"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-09", "text": "LINUX", "normalized": "linux", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00068" }], "cardIds": ["word-linux--operating-system", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:linux-line-check:word-10", "text": "VERDAD", "normalized": "verdad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00071" }], "cardIds": ["word-verdad--tag-question"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:assurance",
+      "labelEs": "POR SUPUESTO, SEÑOR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0032" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:assurance:word-01", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00078" }], "cardIds": ["word-por--por-supuesto", "phrase-por-supuesto"] },
+        { "id": "es-xkcd-soporte-de-black-hat:assurance:word-02", "text": "SUPUESTO", "normalized": "supuesto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00079" }], "cardIds": ["word-supuesto--por-supuesto", "phrase-por-supuesto"] },
+        { "id": "es-xkcd-soporte-de-black-hat:assurance:word-03", "text": "SEÑOR", "normalized": "señor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00086" }], "cardIds": ["word-señor"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:assurance:app-por-supuesto",
+          "cardId": "phrase-por-supuesto",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:assurance:word-01",
+            "es-xkcd-soporte-de-black-hat:assurance:word-02"
+          ],
+          "exampleEs": "POR SUPUESTO",
+          "explanationEn": "Por and supuesto work together as the conventional expression for confident agreement."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:documents-instruction",
+      "labelEs": "SI ABRE LA CARPETA \"MIS DOCUMENTOS\"...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00009" }], "cardIds": ["word-si"] },
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-02", "text": "ABRE", "normalized": "abre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00010" }], "cardIds": ["word-abre--formal-if", "grammar-formal-address"] },
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00011" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-04", "text": "CARPETA", "normalized": "carpeta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00012" }], "cardIds": ["word-carpeta--folder"] },
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-05", "text": "MIS", "normalized": "mis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00026" }], "cardIds": ["word-mis", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:documents-instruction:word-06", "text": "DOCUMENTOS", "normalized": "documentos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00027" }], "cardIds": ["word-documentos--documents", "concept-linux-windows-aol-support-mismatch"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:documents-instruction:app-formal-address",
+          "cardId": "grammar-formal-address",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:documents-instruction:word-02"],
+          "exampleEs": "ABRE",
+          "explanationEn": "The unspoken subject is formal usted, so abre uses the same singular form used with él or ella."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:suspicion",
+      "labelEs": "UN MOMENTO. CREO QUE SE ESÁ QUEDANDO CONMIGO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-01", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00048" }], "cardIds": ["word-un", "phrase-un-momento-interruption"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-02", "text": "MOMENTO", "normalized": "momento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00049" }], "cardIds": ["word-momento", "phrase-un-momento-interruption"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-03", "text": "CREO", "normalized": "creo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00051" }], "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00052" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-05", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00053" }], "cardIds": ["word-se--quedarse-con-tease", "phrase-quedarse-con-alguien--tease"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-06", "text": "ESÁ", "normalized": "esá", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00066" }], "cardIds": ["word-esá--printed-typo-está", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-07", "text": "QUEDANDO", "normalized": "quedando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00067" }], "cardIds": ["word-quedando--teasing", "grammar-estar-gerundio", "phrase-quedarse-con-alguien--tease"] },
+        { "id": "es-xkcd-soporte-de-black-hat:suspicion:word-08", "text": "CONMIGO", "normalized": "conmigo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00070" }], "cardIds": ["word-conmigo--with-me", "phrase-quedarse-con-alguien--tease"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:suspicion:app-un-momento",
+          "cardId": "phrase-un-momento-interruption",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:suspicion:word-01",
+            "es-xkcd-soporte-de-black-hat:suspicion:word-02"
+          ],
+          "exampleEs": "UN MOMENTO",
+          "explanationEn": "Un momento interrupts the exchange and asks the other speaker to pause."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:suspicion:app-progressive",
+          "cardId": "grammar-estar-gerundio",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:suspicion:word-06",
+            "es-xkcd-soporte-de-black-hat:suspicion:word-07"
+          ],
+          "exampleEs": "ESÁ QUEDANDO",
+          "explanationEn": "The printed esá is a misspelling of the intended auxiliary está, while quedando supplies the ongoing action form ending in -ando."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:suspicion:app-quedarse-con",
+          "cardId": "phrase-quedarse-con-alguien--tease",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:suspicion:word-05",
+            "es-xkcd-soporte-de-black-hat:suspicion:word-07",
+            "es-xkcd-soporte-de-black-hat:suspicion:word-08"
+          ],
+          "exampleEs": "SE ESÁ QUEDANDO CONMIGO",
+          "explanationEn": "Se and quedando form the relevant use of quedarse, while conmigo identifies the person who suspects he is being fooled."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:polite-reassurance",
+      "labelEs": "DISCÚLPEME, SEÑOR.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0031" }],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:polite-reassurance:word-01", "text": "DISCÚLPEME", "normalized": "discúlpeme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00084" }], "cardIds": ["word-discúlpeme--formal", "grammar-formal-command"] },
+        { "id": "es-xkcd-soporte-de-black-hat:polite-reassurance:word-02", "text": "SEÑOR", "normalized": "señor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00085" }], "cardIds": ["word-señor"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:polite-reassurance:app-formal-command",
+          "cardId": "grammar-formal-command",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:polite-reassurance:word-01"],
+          "exampleEs": "DISCÚLPEME",
+          "explanationEn": "Disculpe is the polite command form for one formal listener, with me attached at the end."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:aol-instruction",
+      "labelEs": "AHORA ABRA SU AOL Y VAYA A LA PALABRA CLAVE \"LINUX\"...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0012" }
+      ],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-01", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00006" }], "cardIds": ["word-ahora"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-02", "text": "ABRA", "normalized": "abra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00007" }], "cardIds": ["word-abra--formal-command", "grammar-formal-command"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-03", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00008" }], "cardIds": ["word-su"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-04", "text": "AOL", "normalized": "aol", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00021" }], "cardIds": ["word-aol--online-service", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-05", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00022" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-06", "text": "VAYA", "normalized": "vaya", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00023" }], "cardIds": ["word-vaya--formal-command", "grammar-formal-command"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-07", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00024" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00025" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-09", "text": "PALABRA", "normalized": "palabra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00037" }], "cardIds": ["word-palabra", "phrase-palabra-clave", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-10", "text": "CLAVE", "normalized": "clave", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00038" }], "cardIds": ["word-clave--keyword", "phrase-palabra-clave", "concept-linux-windows-aol-support-mismatch"] },
+        { "id": "es-xkcd-soporte-de-black-hat:aol-instruction:word-11", "text": "LINUX", "normalized": "linux", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00043" }], "cardIds": ["word-linux--operating-system", "concept-linux-windows-aol-support-mismatch"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-soporte-de-black-hat:aol-instruction:app-formal-command-abra",
+          "cardId": "grammar-formal-command",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:aol-instruction:word-02"],
+          "exampleEs": "ABRA",
+          "explanationEn": "Abra is the polite command form addressed to one formal usted listener."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:aol-instruction:app-formal-command-vaya",
+          "cardId": "grammar-formal-command",
+          "participantWordIds": ["es-xkcd-soporte-de-black-hat:aol-instruction:word-06"],
+          "exampleEs": "VAYA",
+          "explanationEn": "Vaya is the irregular polite command form used to direct one formal listener."
+        },
+        {
+          "id": "es-xkcd-soporte-de-black-hat:aol-instruction:app-palabra-clave",
+          "cardId": "phrase-palabra-clave",
+          "participantWordIds": [
+            "es-xkcd-soporte-de-black-hat:aol-instruction:word-09",
+            "es-xkcd-soporte-de-black-hat:aol-instruction:word-10"
+          ],
+          "exampleEs": "PALABRA CLAVE",
+          "explanationEn": "Palabra and clave form the conventional compound for a term used to search or gain access."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-soporte-de-black-hat:hang-up",
+      "labelEs": "*CLIC*",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-soporte-de-black-hat:ocr-line-0019" }],
+      "words": [
+        { "id": "es-xkcd-soporte-de-black-hat:hang-up:word-01", "text": "CLIC", "normalized": "clic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-soporte-de-black-hat:ocr-token-00059" }], "cardIds": ["word-clic"] }
+      ],
+      "applications": []
+    }
+  ]
+}

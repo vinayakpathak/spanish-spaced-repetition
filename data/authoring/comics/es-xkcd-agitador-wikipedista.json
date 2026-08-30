@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-agitador-wikipedista",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Wikipedian Protester",
+  "titleEs": "Agitador wikipedista",
+  "titleText": {
+    "es": "SEMI-PROTEGER LA CONSTITUCIÓN",
+    "en": "SEMI-PROTECT THE CONSTITUTION",
+    "noteEn": "On Wikipedia, semi-protection limits who can edit a page. The title text extends the joke by applying that technical page status to the United States Constitution."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-cita--citation",
+      "kind": "word",
+      "promptEs": "cita",
+      "answerEn": "citation; source reference",
+      "noteEn": "Cita can also mean an appointment or a quotation. In writing and research, it can name the reference that identifies a source supporting a claim.",
+      "example": {
+        "es": "El informe incluye una cita de una fuente fiable.",
+        "en": "The report includes a citation from a reliable source."
+      },
+      "tags": ["word", "sources", "writing", "contextual sense"]
+    },
+    {
+      "id": "word-requerida--needed",
+      "kind": "word",
+      "promptEs": "requerida",
+      "answerEn": "required; needed (feminine singular)",
+      "noteEn": "Requerida describes one feminine person or thing. The ending changes to match what is described: requerido is masculine singular, and requeridos or requeridas are plural.",
+      "example": {
+        "es": "La autorización requerida llegó hoy.",
+        "en": "The required authorization arrived today."
+      },
+      "tags": ["word", "requirement", "feminine singular", "description"]
+    },
+    {
+      "id": "phrase-cita-requerida",
+      "kind": "phrase",
+      "promptEs": "cita requerida",
+      "questionEn": "What Spanish editorial notice says that a claim needs a source?",
+      "answerEn": "Use cita requerida: “citation needed” or “citation required.”",
+      "noteEn": "This is a conventional notice in collaborative reference writing, especially on Spanish Wikipedia. It is often displayed in brackets as [cita requerida]. Short notices commonly omit an article such as una.",
+      "example": {
+        "es": "El editor añadió «cita requerida» después de la afirmación.",
+        "en": "The editor added “citation needed” after the claim."
+      },
+      "tags": ["phrase", "Wikipedia", "sources", "B1"]
+    },
+    {
+      "id": "concept-wikipedia-cita-requerida-protest",
+      "kind": "concept",
+      "promptEs": "«cita requerida» como protesta",
+      "answerEn": "a Wikipedia sourcing warning turned into a real-world protest slogan",
+      "noteEn": "Wikipedia editors attach a citation-needed warning to a claim whose source is missing or inadequate. The placard carries that editing convention into a political rally, challenging the speaker's claims as if the speech were editable wiki text.",
+      "tags": ["concept", "Wikipedia", "citation needed", "joke concept"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-agitador-wikipedista:protest-sign",
+      "labelEs": "CITA REQUERIDA",
+      "explicitBounds": [
+        { "x": 77, "y": 42.4354, "width": 17, "height": 16.2362 }
+      ],
+      "geometryRationale": "Apple Vision returned no lines or tokens for the tilted blue placard, so this measured box covers its complete two-word text.",
+      "words": [
+        {
+          "id": "es-xkcd-agitador-wikipedista:protest-sign:word-01",
+          "text": "CITA",
+          "normalized": "cita",
+          "explicitBounds": [
+            { "x": 77, "y": 42.4354, "width": 5, "height": 9.2251 }
+          ],
+          "geometryRationale": "OCR missed the tilted blue lettering; this measured box isolates CITA without including the following word.",
+          "cardIds": [
+            "word-cita--citation",
+            "phrase-cita-requerida",
+            "grammar-adjective-gender-agreement",
+            "grammar-descriptive-adjective-after-noun",
+            "concept-wikipedia-cita-requerida-protest"
+          ]
+        },
+        {
+          "id": "es-xkcd-agitador-wikipedista:protest-sign:word-02",
+          "text": "REQUERIDA",
+          "normalized": "requerida",
+          "explicitBounds": [
+            { "x": 81.8, "y": 46.1255, "width": 4.2, "height": 8.4871 },
+            { "x": 86, "y": 47.9705, "width": 4, "height": 9.2251 },
+            { "x": 90, "y": 50.1845, "width": 4, "height": 8.4871 }
+          ],
+          "geometryRationale": "OCR missed the tilted blue lettering; these three measured boxes follow the slope of the full word REQUERIDA without covering the protester's head.",
+          "cardIds": [
+            "word-requerida--needed",
+            "phrase-cita-requerida",
+            "grammar-adjective-gender-agreement",
+            "grammar-descriptive-adjective-after-noun",
+            "concept-wikipedia-cita-requerida-protest"
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-agitador-wikipedista:protest-sign:app-cita-requerida",
+          "cardId": "phrase-cita-requerida",
+          "participantWordIds": [
+            "es-xkcd-agitador-wikipedista:protest-sign:word-01",
+            "es-xkcd-agitador-wikipedista:protest-sign:word-02"
+          ],
+          "exampleEs": "CITA REQUERIDA",
+          "explanationEn": "Cita requerida is the conventional two-word editorial warning printed on the placard."
+        },
+        {
+          "id": "es-xkcd-agitador-wikipedista:protest-sign:app-feminine-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-agitador-wikipedista:protest-sign:word-01",
+            "es-xkcd-agitador-wikipedista:protest-sign:word-02"
+          ],
+          "exampleEs": "CITA REQUERIDA",
+          "explanationEn": "Cita is feminine singular, so the describing form matches it with the feminine ending in requerida."
+        },
+        {
+          "id": "es-xkcd-agitador-wikipedista:protest-sign:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-agitador-wikipedista:protest-sign:word-01",
+            "es-xkcd-agitador-wikipedista:protest-sign:word-02"
+          ],
+          "exampleEs": "CITA REQUERIDA",
+          "explanationEn": "Cita names the thing first, and requerida follows it with the description."
+        }
+      ]
+    }
+  ]
+}

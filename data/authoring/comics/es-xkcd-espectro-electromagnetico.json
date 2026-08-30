@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-espectro-electromagnetico",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Electromagnetic Spectrum",
+  "titleEs": "Espectro electromagnético",
+  "titleText": {
+    "es": "A veces intento imaginarme cómo se vería todo si todo el espectro estuviese comprimido dentro del espectro visible. A veces también intento imaginarme a tu hermana desnuda.",
+    "en": "Sometimes I try to imagine what everything would look like if the entire spectrum were compressed into the visible spectrum. Sometimes I also try to imagine your sister naked."
+  },
+  "cardDefinitions": [
+    { "id": "word-espectro--range", "kind": "word", "promptEs": "espectro", "answerEn": "spectrum; full range", "noteEn": "Espectro can mean a continuous range, especially a range of wavelengths or frequencies. In other settings it can also mean a ghost, but that is not the sense taught here.", "example": { "es": "La luz ocupa una parte del espectro.", "en": "Light occupies one part of the spectrum." }, "tags": ["word", "science", "range"] },
+    { "id": "word-absorcion", "kind": "word", "promptEs": "absorción", "answerEn": "absorption", "noteEn": "Absorción names the process of taking in light, energy, liquid, or another substance. The written accent marks the stressed final syllable.", "example": { "es": "El material reduce la absorción de calor.", "en": "The material reduces heat absorption." }, "tags": ["word", "science", "noun"] },
+    { "id": "word-electromagnetico", "kind": "word", "promptEs": "electromagnético", "answerEn": "electromagnetic (masculine singular)", "noteEn": "Electromagnético describes something involving linked electric and magnetic effects. Its ending changes to electromagnética with a feminine noun.", "example": { "es": "Estudiamos el campo electromagnético.", "en": "We study the electromagnetic field." }, "tags": ["word", "science", "adjective"] },
+    { "id": "word-ondas--waves", "kind": "word", "promptEs": "ondas", "answerEn": "waves", "noteEn": "An onda is a wave or repeating disturbance. Ondas is the plural and can describe electromagnetic, sound, water, or other waves.", "example": { "es": "Las ondas viajan por el agua.", "en": "The waves travel through the water." }, "tags": ["word", "science", "plural"] },
+    { "id": "word-viajan", "kind": "word", "promptEs": "viajan", "answerEn": "they travel; you all travel", "noteEn": "Viajan is a present-time form of viajar. It is used with ellos, ellas, or ustedes.", "example": { "es": "Las señales viajan muy rápido.", "en": "The signals travel very quickly." }, "tags": ["word", "verb", "present"] },
+    { "id": "word-anteriormente", "kind": "word", "promptEs": "anteriormente", "answerEn": "previously; formerly" , "noteEn": "Anteriormente places something at an earlier time. It often introduces a contrast with what is true now.", "example": { "es": "Anteriormente vivía en otra ciudad.", "en": "Previously, I lived in another city." }, "tags": ["word", "time", "adverb"] },
+    { "id": "word-portadas--carried", "kind": "word", "promptEs": "portadas", "answerEn": "carried (feminine plural)", "noteEn": "Portadas is the completed-action form of portar, “to carry,” changed to match a feminine plural subject. In a passive pattern such as eran portadas, it says that the action was done to those things.", "example": { "es": "Las cajas fueron portadas por dos personas.", "en": "The boxes were carried by two people." }, "tags": ["word", "verb", "participle"] },
+    { "id": "word-eter--luminiferous-aether", "kind": "word", "promptEs": "éter", "answerEn": "aether; ether (an obsolete proposed medium for light)", "noteEn": "In older physics, scientists proposed a substance called the luminiferous aether through which light would travel. Experiments and relativity made that idea unnecessary; this is different from the chemical substance ether.", "example": { "es": "En el siglo XIX, algunos científicos hablaban del éter.", "en": "In the nineteenth century, some scientists spoke about the aether." }, "tags": ["word", "physics", "history"] },
+    { "id": "word-retirado--decommissioned", "kind": "word", "promptEs": "retirado", "answerEn": "withdrawn; removed; decommissioned" , "noteEn": "Retirado is a completed-action form of retirar. With fue, it says that something was taken out of use in a completed past event.", "example": { "es": "El tren fue retirado del servicio.", "en": "The train was taken out of service." }, "tags": ["word", "verb", "participle"] },
+    { "id": "word-recortes", "kind": "word", "promptEs": "recortes", "answerEn": "cuts; reductions" , "noteEn": "Recortes often means reductions in spending, services, or resources. The singular is recorte.", "example": { "es": "Los recortes afectaron al proyecto.", "en": "The cuts affected the project." }, "tags": ["word", "budget", "plural"] },
+    { "id": "word-presupuesto", "kind": "word", "promptEs": "presupuesto", "answerEn": "budget" , "noteEn": "Presupuesto is a plan for how much money is available and how it will be spent. It can also mean a price estimate or quote in another context.", "example": { "es": "El proyecto tiene un presupuesto pequeño.", "en": "The project has a small budget." }, "tags": ["word", "money", "noun"] },
+    { "id": "word-naranja--color", "kind": "word", "promptEs": "naranja", "answerEn": "orange" , "noteEn": "As a color word, naranja commonly stays unchanged for gender: una camisa naranja and un coche naranja.", "example": { "es": "La pared es naranja.", "en": "The wall is orange." }, "tags": ["word", "color"] },
+    { "id": "word-amarillo--color", "kind": "word", "promptEs": "amarillo", "answerEn": "yellow (masculine singular)", "noteEn": "Amarillo changes its ending to match what it describes: amarillo, amarilla, amarillos, or amarillas.", "example": { "es": "El papel es amarillo.", "en": "The paper is yellow." }, "tags": ["word", "color", "adjective"] },
+    { "id": "word-verde--color", "kind": "word", "promptEs": "verde", "answerEn": "green" , "noteEn": "Verde has the same singular form with masculine and feminine nouns; the plural is verdes.", "example": { "es": "La puerta es verde.", "en": "The door is green." }, "tags": ["word", "color", "adjective"] },
+    { "id": "word-azul--color", "kind": "word", "promptEs": "azul", "answerEn": "blue" , "noteEn": "Azul has the same singular form with masculine and feminine nouns; the plural is azules.", "example": { "es": "El cielo parece azul.", "en": "The sky looks blue." }, "tags": ["word", "color", "adjective"] },
+    { "id": "word-violeta--color", "kind": "word", "promptEs": "violeta", "answerEn": "violet; purple" , "noteEn": "Violeta can name the color or the flower. As a color after a noun, it commonly stays unchanged for gender.", "example": { "es": "Compré una bufanda violeta.", "en": "I bought a violet scarf." }, "tags": ["word", "color"] },
+    { "id": "word-octarino--imaginary-color", "kind": "word", "promptEs": "octarino", "answerEn": "octarine; an imaginary eighth color" , "noteEn": "Octarino is the Spanish form used for octarine, the fictional color of magic in Terry Pratchett's Discworld stories. It is not a color in the real visible spectrum.", "example": { "es": "El mago describió una luz octarina.", "en": "The wizard described an octarine light." }, "tags": ["word", "fiction", "color"] },
+    { "id": "word-otras--adjective", "kind": "word", "promptEs": "otras", "answerEn": "other (feminine plural, before a noun)", "noteEn": "Otras goes before a feminine plural noun. Spanish normally does not put un or una before otro or otra in this meaning.", "example": { "es": "Buscamos otras respuestas.", "en": "We are looking for other answers." }, "tags": ["word", "adjective", "plural"] },
+    { "id": "word-anuncios", "kind": "word", "promptEs": "anuncios", "answerEn": "advertisements; announcements" , "noteEn": "Anuncio can mean either a commercial advertisement or a public announcement. The surrounding words show which meaning is intended.", "example": { "es": "La radio emite muchos anuncios.", "en": "The radio broadcasts many advertisements." }, "tags": ["word", "media", "plural"] },
+    { "id": "word-ruidosos", "kind": "word", "promptEs": "ruidosos", "answerEn": "noisy; loud (masculine plural)", "noteEn": "Ruidoso comes from ruido, “noise,” and changes its ending to match the noun it describes.", "example": { "es": "Los vecinos son ruidosos.", "en": "The neighbors are noisy." }, "tags": ["word", "adjective", "sound"] },
+    { "id": "word-venta", "kind": "word", "promptEs": "venta", "answerEn": "sale; selling" , "noteEn": "Venta can name the act of selling or a sale transaction. En venta means “for sale.”", "example": { "es": "La venta de entradas empieza mañana.", "en": "Ticket sales begin tomorrow." }, "tags": ["word", "commerce", "noun"] },
+    { "id": "word-coches", "kind": "word", "promptEs": "coches", "answerEn": "cars" , "noteEn": "Coche commonly means “car” in Spain. Other Spanish-speaking regions may prefer carro or auto.", "example": { "es": "Hay muchos coches en la calle.", "en": "There are many cars in the street." }, "tags": ["word", "transport", "plural"] },
+    { "id": "word-visible", "kind": "word", "promptEs": "visible", "answerEn": "visible; able to be seen" , "noteEn": "Visible has the same singular form with masculine and feminine nouns. The plural is visibles.", "example": { "es": "La señal es visible desde aquí.", "en": "The sign is visible from here." }, "tags": ["word", "adjective", "sight"] },
+    { "id": "word-radioaficion", "kind": "word", "promptEs": "radioafición", "answerEn": "amateur radio; ham radio" , "noteEn": "Radioafición is the hobby of communicating by radio as a licensed amateur operator. It is written as one word even when a line break divides it in a label.", "example": { "es": "Mi abuelo practica la radioafición.", "en": "My grandfather practices amateur radio." }, "tags": ["word", "radio", "hobby"] },
+    { "id": "word-radio--broadcast-medium", "kind": "word", "promptEs": "radio", "answerEn": "radio" , "noteEn": "Radio can mean the broadcast medium, a receiver, or a radio-frequency band. It is normally feminine when it refers to broadcasting: la radio.", "example": { "es": "Escucho las noticias en la radio.", "en": "I listen to the news on the radio." }, "tags": ["word", "media", "technology"] },
+    { "id": "word-secreto", "kind": "word", "promptEs": "secreto", "answerEn": "secret (masculine singular)" , "noteEn": "Secreto can be a noun, “a secret,” or an adjective meaning “secret.” Here it labels something that is not publicly disclosed.", "example": { "es": "El informe es secreto.", "en": "The report is secret." }, "tags": ["word", "adjective"] },
+    { "id": "word-rayos", "kind": "word", "promptEs": "rayos", "answerEn": "rays; beams" , "noteEn": "A rayo can be a ray or beam of radiation, a lightning bolt, or a sudden streak. The scientific labels here use the radiation sense.", "example": { "es": "Los rayos atraviesan el material.", "en": "The rays pass through the material." }, "tags": ["word", "science", "plural"] },
+    { "id": "word-cancerigenos", "kind": "word", "promptEs": "cancerígenos", "answerEn": "carcinogenic; cancer-causing (masculine plural)", "noteEn": "Cancerígeno describes something capable of causing cancer. Its ending changes to agree with the noun.", "example": { "es": "Estudian posibles efectos cancerígenos.", "en": "They study possible carcinogenic effects." }, "tags": ["word", "health", "adjective"] },
+    { "id": "word-telefonos", "kind": "word", "promptEs": "teléfonos", "answerEn": "telephones; phones" , "noteEn": "Teléfonos is the plural of teléfono. The written accent keeps the stress on lé.", "example": { "es": "Los teléfonos están sobre la mesa.", "en": "The phones are on the table." }, "tags": ["word", "technology", "plural"] },
+    { "id": "word-moviles--mobile-phone", "kind": "word", "promptEs": "móviles", "answerEn": "mobile; cell (masculine plural, describing phones)", "noteEn": "Móvil literally describes something that can move. In teléfonos móviles it distinguishes mobile or cell phones from fixed landlines.", "example": { "es": "Apaguen los teléfonos móviles.", "en": "Turn off the mobile phones." }, "tags": ["word", "technology", "adjective"] },
+    { "id": "word-tejon", "kind": "word", "promptEs": "tejón", "answerEn": "badger" , "noteEn": "Tejón is the animal called a badger. The written accent marks the stressed final syllable.", "example": { "es": "Un tejón salió del bosque.", "en": "A badger came out of the forest." }, "tags": ["word", "animal"] },
+    { "id": "word-ardilla", "kind": "word", "promptEs": "ardilla", "answerEn": "squirrel", "noteEn": "Ardilla is a feminine noun for a squirrel, so it normally takes la or una.", "example": { "es": "La ardilla sube al árbol.", "en": "The squirrel climbs the tree." }, "tags": ["word", "animal"] },
+    { "id": "word-asustada", "kind": "word", "promptEs": "asustada", "answerEn": "frightened; scared (feminine singular)", "noteEn": "Asustada describes a feminine singular person or animal that feels fear. Masculine singular is asustado.", "example": { "es": "La niña está asustada.", "en": "The girl is frightened." }, "tags": ["word", "emotion", "adjective"] },
+    { "id": "word-controlan", "kind": "word", "promptEs": "controlan", "answerEn": "they control; you all control", "noteEn": "Controlan is a present-time form of controlar used with ellos, ellas, or ustedes.", "example": { "es": "Ellos controlan la temperatura.", "en": "They control the temperature." }, "tags": ["word", "verb", "present"] },
+    { "id": "word-gravedad", "kind": "word", "promptEs": "gravedad", "answerEn": "gravity" , "noteEn": "In physics, gravedad is the force that attracts masses. In ordinary speech, the same word can also mean seriousness or severity.", "example": { "es": "La gravedad atrae los objetos hacia la Tierra.", "en": "Gravity pulls objects toward Earth." }, "tags": ["word", "physics", "noun"] },
+    { "id": "word-vision", "kind": "word", "promptEs": "visión", "answerEn": "vision; sight" , "noteEn": "Visión can mean the ability to see, what someone sees, or a broader viewpoint. The written accent marks the stressed final syllable.", "example": { "es": "Tiene buena visión de noche.", "en": "She has good night vision." }, "tags": ["word", "sight", "noun"] },
+    { "id": "word-calor", "kind": "word", "promptEs": "calor", "answerEn": "heat" , "noteEn": "Calor is masculine in standard Spanish: el calor. It can refer to thermal energy or the feeling of being hot.", "example": { "es": "El metal transmite el calor.", "en": "Metal transmits heat." }, "tags": ["word", "physics", "noun"] },
+    { "id": "word-laser", "kind": "word", "promptEs": "láser", "answerEn": "laser" , "noteEn": "Láser is a Spanish noun formed from an international acronym. Its written accent marks the first syllable, and the plural can be láseres.", "example": { "es": "El laboratorio usa un láser azul.", "en": "The laboratory uses a blue laser." }, "tags": ["word", "technology", "noun"] },
+    { "id": "word-estrella", "kind": "word", "promptEs": "estrella", "answerEn": "star" , "noteEn": "Estrella can mean an astronomical star or a famous performer. The surrounding words determine the sense.", "example": { "es": "Esa estrella está muy lejos.", "en": "That star is very far away." }, "tags": ["word", "space", "noun"] },
+    { "id": "word-principal", "kind": "word", "promptEs": "principal", "answerEn": "main; principal; primary" , "noteEn": "Principal identifies the most important or central one. It has the same singular form with masculine and feminine nouns.", "example": { "es": "Esta es la entrada principal.", "en": "This is the main entrance." }, "tags": ["word", "adjective"] },
+    { "id": "word-censurado", "kind": "word", "promptEs": "censurado", "answerEn": "censored (masculine singular)", "noteEn": "Censurado is the completed-action form of censurar and can describe material that authorities have suppressed or hidden.", "example": { "es": "El pasaje fue censurado.", "en": "The passage was censored." }, "tags": ["word", "participle", "media"] },
+    { "id": "word-patata", "kind": "word", "promptEs": "patata", "answerEn": "potato" , "noteEn": "Patata is the usual word for “potato” in Spain. Papa is common in much of Latin America.", "example": { "es": "Añade una patata a la sopa.", "en": "Add a potato to the soup." }, "tags": ["word", "food"] },
+    { "id": "word-gafas", "kind": "word", "promptEs": "gafas", "answerEn": "glasses; spectacles" , "noteEn": "Gafas is normally used in the plural for eyeglasses, even when referring to one pair.", "example": { "es": "Necesito mis gafas para leer.", "en": "I need my glasses to read." }, "tags": ["word", "objects", "plural"] },
+    { "id": "word-teletienda", "kind": "word", "promptEs": "teletienda", "answerEn": "television shopping; infomercial shopping" , "noteEn": "Teletienda combines tele-, relating to television, with tienda, “shop.” It refers to products sold through television advertisements.", "example": { "es": "Compró el aparato en la teletienda.", "en": "She bought the device through television shopping." }, "tags": ["word", "television", "commerce"] },
+    { "id": "word-blogorayos", "kind": "word", "promptEs": "blogorayos", "answerEn": "blog rays (an invented comic word)", "noteEn": "Blogorayos humorously fuses blog with rayos, “rays,” as though blogs occupied a band of the electromagnetic spectrum.", "example": { "es": "El dibujo inventa los blogorayos.", "en": "The drawing invents blog rays." }, "tags": ["word", "wordplay", "internet"] },
+    { "id": "word-proyectos", "kind": "word", "promptEs": "proyectos", "answerEn": "projects" , "noteEn": "Proyecto can mean a planned piece of work or a proposal. Proyectos is the plural.", "example": { "es": "El equipo tiene varios proyectos.", "en": "The team has several projects." }, "tags": ["word", "work", "plural"] },
+    { "id": "word-siniestros", "kind": "word", "promptEs": "siniestros", "answerEn": "sinister; ominous (masculine plural)", "noteEn": "Siniestro can describe something threatening or disturbing. In insurance language it can instead mean a damaging incident or claim.", "example": { "es": "Oyeron unos ruidos siniestros.", "en": "They heard some sinister noises." }, "tags": ["word", "adjective", "tone"] },
+    { "id": "word-corriente--electric-current", "kind": "word", "promptEs": "corriente", "answerEn": "electric current; mains power" , "noteEn": "In an electrical setting, corriente is the flow of electric charge and can also refer generally to supplied electrical power. Elsewhere corriente can mean “current,” “ordinary,” or a flowing stream.", "example": { "es": "Corta la corriente antes de reparar el cable.", "en": "Cut the power before repairing the cable." }, "tags": ["word", "electricity", "noun"] },
+    { "id": "word-telefono", "kind": "word", "promptEs": "teléfono", "answerEn": "telephone; phone" , "noteEn": "Teléfono is stressed on lé, which is why it carries a written accent.", "example": { "es": "El teléfono está sonando.", "en": "The phone is ringing." }, "tags": ["word", "technology", "noun"] },
+    { "id": "word-microondas", "kind": "word", "promptEs": "microondas", "answerEn": "microwaves" , "noteEn": "Microondas names microwave radiation. The same unchanged word can also mean a microwave oven, usually el microondas.", "example": { "es": "Las microondas calientan el agua.", "en": "Microwaves heat the water." }, "tags": ["word", "physics", "plural"] },
+    { "id": "word-tostadoras", "kind": "word", "promptEs": "tostadoras", "answerEn": "toasters" , "noteEn": "Tostadoras is the plural of tostadora, an appliance for toasting bread. The word is printed across two lines in this comic but remains one word.", "example": { "es": "Las tostadoras están en la cocina.", "en": "The toasters are in the kitchen." }, "tags": ["word", "appliances", "plural"] },
+    { "id": "word-oscuridad", "kind": "word", "promptEs": "oscuridad", "answerEn": "darkness" , "noteEn": "Oscuridad is the noun related to oscuro, “dark.” It can describe absence of light or figurative obscurity.", "example": { "es": "No veo nada en la oscuridad.", "en": "I cannot see anything in the darkness." }, "tags": ["word", "light", "noun"] },
+    { "id": "word-cosmicos", "kind": "word", "promptEs": "cósmicos", "answerEn": "cosmic; from outer space (masculine plural)", "noteEn": "Cósmico describes something related to the cosmos or outer space. The ending changes to match the noun.", "example": { "es": "El detector registra rayos cósmicos.", "en": "The detector records cosmic rays." }, "tags": ["word", "space", "adjective"] },
+    { "id": "word-gamma--radiation", "kind": "word", "promptEs": "gamma", "answerEn": "gamma (as in gamma rays)" , "noteEn": "Gamma is the name of a Greek letter used in the scientific term rayos gamma. In that expression it identifies very high-frequency electromagnetic radiation.", "example": { "es": "El instrumento detecta rayos gamma.", "en": "The instrument detects gamma rays." }, "tags": ["word", "physics", "Greek letter"] },
+    { "id": "word-prefijos", "kind": "word", "promptEs": "prefijos", "answerEn": "prefixes" , "noteEn": "A prefijo is an element placed before a word or unit, such as re- or kilo-. Prefijos is the plural.", "example": { "es": "Kilo- y mega- son prefijos comunes.", "en": "Kilo- and mega- are common prefixes." }, "tags": ["word", "language", "measurement"] },
+    { "id": "word-griegos", "kind": "word", "promptEs": "griegos", "answerEn": "Greek (masculine plural)" , "noteEn": "Griegos describes masculine plural people or things associated with Greece or the Greek language.", "example": { "es": "Estudiamos varios símbolos griegos.", "en": "We study several Greek symbols." }, "tags": ["word", "adjective", "Greek"] },
+    { "id": "word-entretenidos", "kind": "word", "promptEs": "entretenidos", "answerEn": "entertaining; fun (masculine plural)", "noteEn": "Entretenido can describe something that holds attention or is enjoyable. Its ending changes to match the noun.", "example": { "es": "Son juegos cortos y entretenidos.", "en": "They are short, entertaining games." }, "tags": ["word", "adjective"] },
+    { "id": "word-peta--si-prefix", "kind": "word", "promptEs": "peta", "answerEn": "peta-; the metric prefix for 10¹⁵", "noteEn": "Peta- is placed before a unit to multiply it by one quadrillion, or 10¹⁵. For example, a petabyte is 10¹⁵ bytes in decimal SI usage.", "example": { "es": "Peta- representa un factor de 10¹⁵.", "en": "Peta- represents a factor of 10¹⁵." }, "tags": ["word", "measurement", "SI prefix"] },
+    { "id": "word-exa--si-prefix", "kind": "word", "promptEs": "exa", "answerEn": "exa-; the metric prefix for 10¹⁸", "noteEn": "Exa- is placed before a unit to multiply it by one quintillion, or 10¹⁸.", "example": { "es": "Exa- representa un factor de 10¹⁸.", "en": "Exa- represents a factor of 10¹⁸." }, "tags": ["word", "measurement", "SI prefix"] },
+    { "id": "word-zappa--fake-prefix", "kind": "word", "promptEs": "zappa", "answerEn": "zappa-; a deliberately fake metric prefix" , "noteEn": "Zappa- is not an SI prefix. The comic substitutes the musician Frank Zappa's surname for zetta-, the real prefix for 10²¹.", "example": { "es": "Zappa- no aparece en la lista oficial de prefijos.", "en": "Zappa- does not appear in the official list of prefixes." }, "tags": ["word", "wordplay", "measurement"] },
+    { "id": "word-sonoras", "kind": "word", "promptEs": "sonoras", "answerEn": "sound; relating to sound (feminine plural)", "noteEn": "Sonoro describes something that produces or relates to sound. Sonoras agrees with the feminine plural noun ondas.", "example": { "es": "Las ondas sonoras llegan al micrófono.", "en": "The sound waves reach the microphone." }, "tags": ["word", "sound", "adjective"] },
+    { "id": "word-sonido", "kind": "word", "promptEs": "sonido", "answerEn": "sound" , "noteEn": "Sonido can mean sound in general or a particular noise that can be heard.", "example": { "es": "Oigo un sonido extraño.", "en": "I hear a strange sound." }, "tags": ["word", "sound", "noun"] },
+    { "id": "word-audible", "kind": "word", "promptEs": "audible", "answerEn": "audible; able to be heard" , "noteEn": "Audible has the same singular form with masculine and feminine nouns. The plural is audibles.", "example": { "es": "La señal apenas es audible.", "en": "The signal is barely audible." }, "tags": ["word", "sound", "adjective"] },
+    { "id": "word-ese--demonstrative", "kind": "word", "promptEs": "ese", "answerEn": "that (masculine singular, before a noun)", "noteEn": "Ese points to a masculine singular noun that is not presented as right next to the speaker. Feminine singular is esa.", "example": { "es": "No reconozco ese sonido.", "en": "I do not recognize that sound." }, "tags": ["word", "demonstrative", "adjective"] },
+    { "id": "word-agudo", "kind": "word", "promptEs": "agudo", "answerEn": "high-pitched; sharp (masculine singular)", "noteEn": "For sound, agudo means high in pitch, opposed to grave, “low-pitched.” In other contexts it can mean sharp or acute.", "example": { "es": "El silbato produce un sonido agudo.", "en": "The whistle produces a high-pitched sound." }, "tags": ["word", "sound", "adjective"] },
+    { "id": "word-habitaciones", "kind": "word", "promptEs": "habitaciones", "answerEn": "rooms" , "noteEn": "Habitación usually means a room, especially a bedroom or hotel room. Habitaciones is the plural.", "example": { "es": "La casa tiene cuatro habitaciones.", "en": "The house has four rooms." }, "tags": ["word", "places", "plural"] },
+    { "id": "word-vacias", "kind": "word", "promptEs": "vacías", "answerEn": "empty (feminine plural)", "noteEn": "Vacías agrees with feminine plural nouns. Masculine singular is vacío.", "example": { "es": "Las cajas están vacías.", "en": "The boxes are empty." }, "tags": ["word", "adjective", "plural"] },
+    { "id": "word-ola--crowd-wave", "kind": "word", "promptEs": "ola", "answerEn": "wave; stadium wave" , "noteEn": "Ola usually means a wave in water, but la ola also names the coordinated crowd movement called “the wave.”", "example": { "es": "El público empezó a hacer la ola.", "en": "The crowd started doing the wave." }, "tags": ["word", "crowd", "noun"] },
+    { "id": "word-campanas", "kind": "word", "promptEs": "campañas", "answerEn": "campaigns; organized drives" , "noteEn": "A campaña is a coordinated series of actions toward a goal, such as an election, advertising, or fundraising campaign.", "example": { "es": "Organizan campañas para ayudar al barrio.", "en": "They organize campaigns to help the neighborhood." }, "tags": ["word", "organizations", "plural"] },
+    { "id": "word-recaudacion", "kind": "word", "promptEs": "recaudación", "answerEn": "fundraising; collection of money" , "noteEn": "Recaudación is the act or result of collecting money, taxes, donations, or ticket revenue. The written accent marks the stressed final syllable.", "example": { "es": "La recaudación ayudará al hospital.", "en": "The fundraising will help the hospital." }, "tags": ["word", "money", "noun"] },
+    { "id": "word-cerebrales", "kind": "word", "promptEs": "cerebrales", "answerEn": "brain; cerebral (plural)" , "noteEn": "Cerebral describes something related to the brain. Cerebrales is the plural for either masculine or feminine nouns.", "example": { "es": "El equipo mide señales cerebrales.", "en": "The equipment measures brain signals." }, "tags": ["word", "biology", "adjective"] },
+
+    { "id": "phrase-retirar-del-servicio", "kind": "phrase", "promptEs": "retirar algo del servicio", "questionEn": "How do you say that equipment, a vehicle, or a system is taken out of use?", "answerEn": "Use retirar followed by the thing, then del servicio. In a passive sentence, use a form of ser plus retirado, retirada, retirados, or retiradas.", "noteEn": "Retirar means to remove or withdraw, and del combines de with el before servicio. The person or time changes retirar; if the passive form is used, retirado changes its ending to match the thing removed.", "example": { "es": "Retiraron el autobús del servicio.", "en": "They took the bus out of service." }, "tags": ["phrase", "operations", "B1"] },
+    { "id": "phrase-recortes-de-presupuesto", "kind": "phrase", "promptEs": "recortes de presupuesto", "questionEn": "What is the usual Spanish expression for reductions made because less money is available?", "answerEn": "Use recortes de presupuesto for “budget cuts.”", "noteEn": "Recortes means cuts or reductions, and de presupuesto specifies that the reductions concern the budget. The singular recorte de presupuesto is possible when referring to one cut.", "example": { "es": "Los recortes de presupuesto retrasaron la obra.", "en": "Budget cuts delayed the construction." }, "tags": ["phrase", "money", "B1"] },
+    { "id": "phrase-campana-de-recaudacion", "kind": "phrase", "promptEs": "campaña de recaudación", "questionEn": "How do you name an organized drive to collect money?", "answerEn": "Use campaña de recaudación for a fundraising campaign or pledge drive.", "noteEn": "Campaña names the organized effort, while de recaudación states that its purpose is collecting money. Use campañas in the plural when there is more than one drive.", "example": { "es": "La escuela inició una campaña de recaudación.", "en": "The school started a fundraising campaign." }, "tags": ["phrase", "fundraising", "B1"] },
+
+    { "id": "concept-electromagnetic-spectrum", "kind": "concept", "promptEs": "espectro electromagnético", "answerEn": "the complete range of electromagnetic radiation, ordered by wavelength or frequency", "noteEn": "Radio waves, microwaves, visible light, ultraviolet light, X-rays, and gamma rays are different portions of the same spectrum. Shorter wavelength corresponds to higher frequency.", "tags": ["concept", "physics", "spectrum"] },
+    { "id": "concept-absorption-spectrum", "kind": "concept", "promptEs": "espectro de absorción", "answerEn": "a spectrum showing which wavelengths a substance absorbs", "noteEn": "When light passes through or reflects from material, particular wavelengths can be removed. The missing or weakened bands form an absorption spectrum and can help identify the material.", "tags": ["concept", "physics", "spectroscopy"] },
+    { "id": "concept-octarine-discworld-color", "kind": "concept", "promptEs": "octarino · el color imaginario", "answerEn": "octarine is the fictional eighth color of magic in Terry Pratchett's Discworld", "noteEn": "The arrow outside the real visible colors treats this fantasy color as though it had a physical wavelength beyond violet.", "tags": ["concept", "fiction", "joke reference"] },
+    { "id": "concept-zappa-prefix-joke", "kind": "concept", "promptEs": "peta-, exa- y zappa-", "answerEn": "peta- and exa- are real SI prefixes; zappa- is a fake replacement for zetta-", "noteEn": "The real sequence continues with zetta- for 10²¹. The comic writes zappa- instead as a reference to musician Frank Zappa, turning a scientific scale into a name joke.", "tags": ["concept", "measurement", "joke reference"] },
+    { "id": "concept-patriot-act-censorship", "kind": "concept", "promptEs": "censurado por la Patriot Act", "answerEn": "a joke that a portion of the spectrum is hidden under a U.S. surveillance law", "noteEn": "The USA PATRIOT Act expanded government surveillance powers after 2001. The blacked-out band exaggerates secrecy by pretending a law can censor part of nature itself.", "tags": ["concept", "law", "joke reference"] },
+    { "id": "concept-death-star-superlaser", "kind": "concept", "promptEs": "láser principal de la Estrella de la Muerte", "answerEn": "the planet-destroying superlaser from Star Wars", "noteEn": "The Death Star is a fictional space station whose main weapon concentrates energy into a destructive beam. The chart jokingly assigns that beam a precise spectral band.", "tags": ["concept", "Star Wars", "joke reference"] },
+    { "id": "concept-heat-vision-jack-black", "kind": "concept", "promptEs": "visión de calor de Jack Black", "answerEn": "a reference to the unaired comedy pilot Heat Vision and Jack", "noteEn": "Jack Black played an astronaut whose mind expanded in sunlight, and his character rode a talking motorcycle. The tiny motorcycle on the graph distinguishes this reference from Superman's literal heat vision.", "tags": ["concept", "television", "joke reference"] }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-espectro-electromagnetico:absorption-heading",
+      "labelEs": "ESPECTRO DE ABSORCIÓN",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:absorption-heading:word-01", "text": "ESPECTRO", "normalized": "espectro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00001" }], "cardIds": ["word-espectro--range", "concept-absorption-spectrum"] },
+        { "id": "es-xkcd-espectro-electromagnetico:absorption-heading:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00002" }], "cardIds": ["word-de--of", "concept-absorption-spectrum"] },
+        { "id": "es-xkcd-espectro-electromagnetico:absorption-heading:word-03", "text": "ABSORCIÓN", "normalized": "absorción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00003" }], "cardIds": ["word-absorcion", "concept-absorption-spectrum"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:main-heading",
+      "labelEs": "EL ESPECTRO ELECTROMAGNÉTICO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:main-heading:word-01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00004" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:main-heading:word-02", "text": "ESPECTRO", "normalized": "espectro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00005" }], "cardIds": ["word-espectro--range", "concept-electromagnetic-spectrum"] },
+        { "id": "es-xkcd-espectro-electromagnetico:main-heading:word-03", "text": "ELECTROMAGNÉTICO", "normalized": "electromagnético", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00006" }], "cardIds": ["word-electromagnetico", "concept-electromagnetic-spectrum"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:dodotis-label",
+      "labelEs": "DODOTIS®",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0005" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:dodotis-label:excluded-brand", "text": "DODOTIS", "reason": "non-spanish-text", "rationale": "Dodotis is a retained commercial brand name, not Spanish vocabulary for this curriculum.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00007" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:tampax-label",
+      "labelEs": "TAMPAX®",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0008" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:tampax-label:excluded-brand", "text": "TAMPAX", "reason": "non-spanish-text", "rationale": "Tampax is a retained commercial brand name, not Spanish vocabulary for this curriculum.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00014" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:introduction",
+      "labelEs": "ESTAS ONDAS VIAJAN A TRAVÉS DEL ESPECTRO ELECTROMAGNÉTICO. ANTERIORMENTE ERAN PORTADAS POR EL ÉTER, QUE FUE RETIRADO DEL SERVICIO EN 1897 POR RECORTES DE PRESUPUESTO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-01", "text": "ESTAS", "normalized": "estas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00008" }], "cardIds": ["word-estas--demonstrative"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-02", "text": "ONDAS", "normalized": "ondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00009" }], "cardIds": ["word-ondas--waves"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-03", "text": "VIAJAN", "normalized": "viajan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00010" }], "cardIds": ["word-viajan"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00011" }], "cardIds": ["word-a--through-expression", "phrase-a-traves-de"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-05", "text": "TRAVÉS", "normalized": "través", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00012" }], "cardIds": ["word-traves--through-expression", "phrase-a-traves-de"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-06", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00015" }], "cardIds": ["word-del", "phrase-a-traves-de"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-07", "text": "ESPECTRO", "normalized": "espectro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00016" }], "cardIds": ["word-espectro--range"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-08", "text": "ELECTROMAGNÉTICO", "normalized": "electromagnético", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00017" }], "cardIds": ["word-electromagnetico"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-09", "text": "ANTERIORMENTE", "normalized": "anteriormente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00018" }], "cardIds": ["word-anteriormente"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-10", "text": "ERAN", "normalized": "eran", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00019" }], "cardIds": ["word-eran", "grammar-ser-participle-passive"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-11", "text": "PORTADAS", "normalized": "portadas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00020" }], "cardIds": ["word-portadas--carried", "grammar-ser-participle-passive"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-12", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00027" }], "cardIds": ["word-por--passive-agent"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-13", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00028" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-14", "text": "ÉTER", "normalized": "éter", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00029" }], "cardIds": ["word-eter--luminiferous-aether"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-15", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00030" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-16", "text": "FUE", "normalized": "fue", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00031" }], "cardIds": ["word-fue--preterite-ser", "grammar-ser-participle-passive"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-17", "text": "RETIRADO", "normalized": "retirado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00032" }], "cardIds": ["word-retirado--decommissioned", "grammar-ser-participle-passive", "phrase-retirar-del-servicio"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-18", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00033" }], "cardIds": ["word-del", "phrase-retirar-del-servicio"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-19", "text": "SERVICIO", "normalized": "servicio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00034" }], "cardIds": ["word-servicio", "phrase-retirar-del-servicio"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-20", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00035" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-21", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00037" }], "cardIds": ["word-por--cause"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-22", "text": "RECORTES", "normalized": "recortes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00038" }], "cardIds": ["word-recortes", "phrase-recortes-de-presupuesto"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-23", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00039" }], "cardIds": ["word-de--of", "phrase-recortes-de-presupuesto"] },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:word-24", "text": "PRESUPUESTO", "normalized": "presupuesto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00040" }], "cardIds": ["word-presupuesto", "phrase-recortes-de-presupuesto"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:excluded-year", "text": "1897", "reason": "number", "rationale": "This is the historical year printed in the caption, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00036" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:app-a-traves-de", "cardId": "phrase-a-traves-de", "participantWordIds": ["es-xkcd-espectro-electromagnetico:introduction:word-04", "es-xkcd-espectro-electromagnetico:introduction:word-05", "es-xkcd-espectro-electromagnetico:introduction:word-06"], "exampleEs": "A TRAVÉS DEL", "explanationEn": "A través de is the fixed expression; de and el combine as del before the following masculine singular noun." },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:app-passive-eran-portadas", "cardId": "grammar-ser-participle-passive", "participantWordIds": ["es-xkcd-espectro-electromagnetico:introduction:word-10", "es-xkcd-espectro-electromagnetico:introduction:word-11"], "exampleEs": "ERAN PORTADAS", "explanationEn": "Eran is the past form of ser for a plural subject, and portadas is the completed-action form changed to feminine plural." },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:app-passive-fue-retirado", "cardId": "grammar-ser-participle-passive", "participantWordIds": ["es-xkcd-espectro-electromagnetico:introduction:word-16", "es-xkcd-espectro-electromagnetico:introduction:word-17"], "exampleEs": "FUE RETIRADO", "explanationEn": "Fue supplies the completed past form of ser, while retirado is the masculine singular completed-action form." },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:app-retirar-del-servicio", "cardId": "phrase-retirar-del-servicio", "participantWordIds": ["es-xkcd-espectro-electromagnetico:introduction:word-17", "es-xkcd-espectro-electromagnetico:introduction:word-18", "es-xkcd-espectro-electromagnetico:introduction:word-19"], "exampleEs": "RETIRADO DEL SERVICIO", "explanationEn": "Retirado is the passive form used here, and del servicio completes the standard expression for taking something out of use." },
+        { "id": "es-xkcd-espectro-electromagnetico:introduction:app-recortes-de-presupuesto", "cardId": "phrase-recortes-de-presupuesto", "participantWordIds": ["es-xkcd-espectro-electromagnetico:introduction:word-22", "es-xkcd-espectro-electromagnetico:introduction:word-23", "es-xkcd-espectro-electromagnetico:introduction:word-24"], "exampleEs": "RECORTES DE PRESUPUESTO", "explanationEn": "Recortes names the reductions, and de presupuesto specifies that they concern available funding." }
+      ]
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:visible-colors",
+      "labelEs": "ROJO NARANJA AMARILLO VERDE AZUL VIOLETA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-01", "text": "ROJO", "normalized": "rojo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00021" }], "cardIds": ["word-rojo--traffic-signal"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-02", "text": "NARANJA", "normalized": "naranja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00022" }], "cardIds": ["word-naranja--color"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-03", "text": "AMARILLO", "normalized": "amarillo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00023" }], "cardIds": ["word-amarillo--color"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-04", "text": "VERDE", "normalized": "verde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00024" }], "cardIds": ["word-verde--color"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-05", "text": "AZUL", "normalized": "azul", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00025" }], "cardIds": ["word-azul--color"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-colors:word-06", "text": "VIOLETA", "normalized": "violeta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00026" }], "cardIds": ["word-violeta--color"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:octarino",
+      "labelEs": "OCTARINO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0007" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:octarino:word-01", "text": "OCTARINO", "normalized": "octarino", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00013" }], "cardIds": ["word-octarino--imaginary-color", "concept-octarine-discworld-color"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:visible-wavelengths",
+      "labelEs": "700 nm 450 nm",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0016" }
+      ],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:visible-wavelengths:excluded-red-end", "text": "700 nm", "reason": "measurement", "rationale": "This is the numerical wavelength at one end of the visible band, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00041" }] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-wavelengths:excluded-violet-end", "text": "450 nm", "reason": "measurement", "rationale": "This is the numerical wavelength at the other end of the visible band, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00042" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00043" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:visible-light-large",
+      "labelEs": "LUZ VISIBLE",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:visible-light-large:word-01", "text": "LUZ", "normalized": "luz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00052" }], "cardIds": ["word-luz"] },
+        { "id": "es-xkcd-espectro-electromagnetico:visible-light-large:word-02", "text": "VISIBLE", "normalized": "visible", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00055" }], "cardIds": ["word-visible"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:other-waves-heading",
+      "labelEs": "OTRAS ONDAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0017" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:other-waves-heading:word-01", "text": "OTRAS", "normalized": "otras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00044" }], "cardIds": ["word-otras--adjective"] },
+        { "id": "es-xkcd-espectro-electromagnetico:other-waves-heading:word-02", "text": "ONDAS", "normalized": "ondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00045" }], "cardIds": ["word-ondas--waves"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:slinky-waves",
+      "labelEs": "ONDAS SLINKY",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0020" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:slinky-waves:word-01", "text": "ONDAS", "normalized": "ondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00053" }], "cardIds": ["word-ondas--waves"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:slinky-waves:excluded-brand", "text": "SLINKY", "reason": "non-spanish-text", "rationale": "Slinky is the retained English toy brand name used as a label, not a Spanish vocabulary item.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00054" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:sound-waves",
+      "labelEs": "ONDAS SONORAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0034" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:sound-waves:word-01", "text": "ONDAS", "normalized": "ondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00076" }], "cardIds": ["word-ondas--waves"] },
+        { "id": "es-xkcd-espectro-electromagnetico:sound-waves:word-02", "text": "SONORAS", "normalized": "sonoras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00077" }], "cardIds": ["word-sonoras"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:audible-sound",
+      "labelEs": "SONIDO AUDIBLE",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0044" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0051" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:audible-sound:word-01", "text": "SONIDO", "normalized": "sonido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00094" }], "cardIds": ["word-sonido"] },
+        { "id": "es-xkcd-espectro-electromagnetico:audible-sound:word-02", "text": "AUDIBLE", "normalized": "audible", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00104" }], "cardIds": ["word-audible"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:audible-range",
+      "labelEs": "20 Hz 20 kHz",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0036" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0056" }
+      ],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:audible-range:excluded-upper-frequency", "text": "20 kHz", "reason": "measurement", "rationale": "This is the numerical upper-frequency marker for the audible range, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00080" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00081" }] },
+        { "id": "es-xkcd-espectro-electromagnetico:audible-range:excluded-lower-frequency", "text": "20 Hz", "reason": "measurement", "rationale": "This is the numerical lower-frequency marker for the audible range, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00115" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00116" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:empty-room-noise",
+      "labelEs": "ESE SONIDO AGUDO DE LAS HABITACIONES VACÍAS",
+      "explicitBounds": [{ "x": 16.4, "y": 62.2, "width": 7.4, "height": 7.5 }],
+      "geometryRationale": "Vision detected only the final two lines of this small handwritten label, so the complete visible label needs checked manual bounds.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-01", "text": "ESE", "normalized": "ese", "explicitBounds": [{ "x": 16.8, "y": 62.7, "width": 1.8, "height": 1.4 }], "geometryRationale": "Vision omitted this small handwritten word from the label." , "cardIds": ["word-ese--demonstrative"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-02", "text": "SONIDO", "normalized": "sonido", "explicitBounds": [{ "x": 18.7, "y": 62.7, "width": 3.8, "height": 1.4 }], "geometryRationale": "Vision omitted this small handwritten word from the label." , "cardIds": ["word-sonido"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-03", "text": "AGUDO", "normalized": "agudo", "explicitBounds": [{ "x": 16.8, "y": 64.2, "width": 3.1, "height": 1.4 }], "geometryRationale": "Vision omitted this small handwritten word from the label." , "cardIds": ["word-agudo"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 20.0, "y": 64.2, "width": 1.1, "height": 1.4 }], "geometryRationale": "Vision omitted this small handwritten word from the label." , "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-05", "text": "LAS", "normalized": "las", "explicitBounds": [{ "x": 21.2, "y": 64.2, "width": 1.8, "height": 1.4 }], "geometryRationale": "Vision omitted this small handwritten word from the label." , "cardIds": ["word-las"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-06", "text": "HABITACIONES", "normalized": "habitaciones", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00122" }], "cardIds": ["word-habitaciones"] },
+        { "id": "es-xkcd-espectro-electromagnetico:empty-room-noise:word-07", "text": "VACÍAS", "normalized": "vacías", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00127" }], "cardIds": ["word-vacias"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:crowd-wave",
+      "labelEs": "LA OLA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0069" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:crowd-wave:word-01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00133" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:crowd-wave:word-02", "text": "OLA", "normalized": "ola", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00134" }], "cardIds": ["word-ola--crowd-wave"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads",
+      "labelEs": "ANUNCIOS RUIDOSOS DE VENTA DE COCHES",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0018" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-01", "text": "ANUNCIOS", "normalized": "anuncios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00046" }], "cardIds": ["word-anuncios"] },
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-02", "text": "RUIDOSOS", "normalized": "ruidosos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00047" }], "cardIds": ["word-ruidosos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00048" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-04", "text": "VENTA", "normalized": "venta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00049" }], "cardIds": ["word-venta"] },
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-05", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00050" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:noisy-car-ads:word-06", "text": "COCHES", "normalized": "coches", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00051" }], "cardIds": ["word-coches"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:cia-secret",
+      "labelEs": "CIA (SECRETO)",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0028" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:cia-secret:word-01", "text": "SECRETO", "normalized": "secreto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00062" }], "cardIds": ["word-secreto"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:cia-secret:excluded-acronym", "text": "CIA", "reason": "non-spanish-text", "rationale": "CIA is the English initials of a United States agency, not a Spanish lexical word in this label.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00060" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:amateur-radio",
+      "labelEs": "RADIOAFICIÓN",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0024" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:amateur-radio:word-01", "text": "RADIOAFICIÓN", "normalized": "radioafición", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00057" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00058" }], "cardIds": ["word-radioaficion"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:kosher-radio",
+      "labelEs": "KOSHER RADIO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:kosher-radio:word-01", "text": "RADIO", "normalized": "radio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00059" }], "cardIds": ["word-radio--broadcast-medium"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:kosher-radio:excluded-english-adjective", "text": "KOSHER", "reason": "non-spanish-text", "rationale": "Kosher is retained here as the English label from the source joke rather than a Spanish vocabulary target.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00056" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays",
+      "labelEs": "RAYOS CANCERÍGENOS DE LOS TELÉFONOS MÓVILES",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0031" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-01", "text": "RAYOS", "normalized": "rayos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00063" }], "cardIds": ["word-rayos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-02", "text": "CANCERÍGENOS", "normalized": "cancerígenos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00064" }], "cardIds": ["word-cancerigenos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00068" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-04", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00069" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-05", "text": "TELÉFONOS", "normalized": "teléfonos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00070" }], "cardIds": ["word-telefonos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:cell-phone-rays:word-06", "text": "MÓVILES", "normalized": "móviles", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00071" }], "cardIds": ["word-moviles--mobile-phone"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:station-fox",
+      "labelEs": "99,3 \"LA FOX\"",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0035" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-fox:word-01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00078" }], "cardIds": ["word-la--article"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-fox:excluded-frequency", "text": "99,3", "reason": "measurement", "rationale": "This is the station's numerical FM frequency, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00072" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00073" }] },
+        { "id": "es-xkcd-espectro-electromagnetico:station-fox:excluded-name", "text": "FOX", "reason": "non-spanish-text", "rationale": "Fox is the retained English station nickname, not Spanish curriculum vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00079" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:station-badger",
+      "labelEs": "101,5 \"EL TEJÓN\"",
+      "explicitBounds": [{ "x": 37.3, "y": 54.1, "width": 4.5, "height": 4.3 }],
+      "geometryRationale": "Vision detected the frequency but omitted both small handwritten Spanish words beneath it.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-badger:word-01", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 37.7, "y": 55.7, "width": 1.2, "height": 1.2 }], "geometryRationale": "Vision omitted this tiny handwritten article beneath the station frequency.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:station-badger:word-02", "text": "TEJÓN", "normalized": "tejón", "explicitBounds": [{ "x": 38.5, "y": 56.8, "width": 2.9, "height": 1.4 }], "geometryRationale": "Vision omitted this tiny handwritten station nickname beneath the frequency.", "cardIds": ["word-tejon"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-badger:excluded-frequency", "text": "101,5", "reason": "measurement", "rationale": "This is the station's numerical FM frequency, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00074" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00075" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:station-squirrel",
+      "labelEs": "106,3 \"LA ARDILLA ASUSTADA\"",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0039" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0046" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0050" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0054" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-squirrel:word-01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00098" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:station-squirrel:word-02", "text": "ARDILLA", "normalized": "ardilla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00103" }], "cardIds": ["word-ardilla"] },
+        { "id": "es-xkcd-espectro-electromagnetico:station-squirrel:word-03", "text": "ASUSTADA", "normalized": "asustada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00112" }], "cardIds": ["word-asustada"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:station-squirrel:excluded-frequency", "text": "106,3", "reason": "measurement", "rationale": "This is the station's numerical FM frequency, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00087" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00088" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays",
+      "labelEs": "RAYOS ESPACIALES QUE CONTROLAN A STEVE BALLMER",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0037" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0041" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0043" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0045" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-01", "text": "RAYOS", "normalized": "rayos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00082" }], "cardIds": ["word-rayos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-02", "text": "ESPACIALES", "normalized": "espaciales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00083" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00084" }], "cardIds": ["word-espaciales--outer-space"] },
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00090" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-04", "text": "CONTROLAN", "normalized": "controlan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00093" }], "cardIds": ["word-controlan"] },
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-05", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00095" }], "cardIds": ["word-a--personal-a", "grammar-personal-a"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:excluded-person-name", "text": "STEVE BALLMER", "reason": "non-spanish-text", "rationale": "Steve Ballmer is a person's proper name retained unchanged, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00096" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00097" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-espectro-electromagnetico:ballmer-space-rays:app-personal-a", "cardId": "grammar-personal-a", "participantWordIds": ["es-xkcd-espectro-electromagnetico:ballmer-space-rays:word-05"], "exampleEs": "A STEVE BALLMER", "explanationEn": "A appears before the named person who directly receives the action; the personal name itself stays unchanged." }
+      ]
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:am-us",
+      "labelEs": "AM (US)",
+      "explicitBounds": [{ "x": 28.8, "y": 67.0, "width": 3.7, "height": 4.0 }],
+      "geometryRationale": "Vision omitted the handwritten acronym beneath the gray radio-band marker.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:am-us:excluded-radio-label", "text": "AM (US)", "reason": "non-spanish-text", "rationale": "This is an English radio-band abbreviation and country code, not Spanish lexical material.", "explicitBounds": [{ "x": 28.8, "y": 67.0, "width": 3.7, "height": 4.0 }], "geometryRationale": "Vision omitted the handwritten acronym beneath the gray radio-band marker." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:npr-fundraising",
+      "labelEs": "CAMPAÑAS DE RECAUDACIÓN DE LA NPR",
+      "explicitBounds": [{ "x": 32.0, "y": 66.6, "width": 5.8, "height": 5.1 }],
+      "geometryRationale": "Vision fragmented and misread this three-line miniature label, so checked manual bounds cover the complete visible text.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:word-01", "text": "CAMPAÑAS", "normalized": "campañas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00123" }], "cardIds": ["word-campanas", "phrase-campana-de-recaudacion"] },
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00124" }], "cardIds": ["word-de--of", "phrase-campana-de-recaudacion"] },
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:word-03", "text": "RECAUDACIÓN", "normalized": "recaudación", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00128" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00129" }], "cardIds": ["word-recaudacion", "phrase-campana-de-recaudacion"] },
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:word-04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 32.5, "y": 69.4, "width": 1.0, "height": 1.2 }], "geometryRationale": "Vision omitted this tiny second preposition on the final line.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:word-05", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 33.7, "y": 69.4, "width": 1.0, "height": 1.2 }], "geometryRationale": "Vision omitted this tiny article on the final line.", "cardIds": ["word-la--article"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:excluded-network-acronym", "text": "NPR", "reason": "non-spanish-text", "rationale": "NPR is the English initials of the U.S. radio network named by the joke, not Spanish vocabulary.", "explicitBounds": [{ "x": 34.9, "y": 69.4, "width": 2.0, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny handwritten network acronym." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-espectro-electromagnetico:npr-fundraising:app-campana-recaudacion", "cardId": "phrase-campana-de-recaudacion", "participantWordIds": ["es-xkcd-espectro-electromagnetico:npr-fundraising:word-01", "es-xkcd-espectro-electromagnetico:npr-fundraising:word-02", "es-xkcd-espectro-electromagnetico:npr-fundraising:word-03"], "exampleEs": "CAMPAÑAS DE RECAUDACIÓN", "explanationEn": "Campañas is plural because the label imagines repeated drives, and de recaudación identifies their money-collecting purpose." }
+      ]
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:vhf",
+      "labelEs": "VHF",
+      "explicitBounds": [{ "x": 35.6, "y": 72.5, "width": 3.0, "height": 2.4 }],
+      "geometryRationale": "Vision omitted the tiny technical acronym printed beneath its gray marker.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:vhf:excluded-acronym", "text": "VHF", "reason": "symbol", "rationale": "VHF is a technical frequency-band abbreviation, not a Spanish lexical word.", "explicitBounds": [{ "x": 35.6, "y": 72.5, "width": 3.0, "height": 2.4 }], "geometryRationale": "Vision omitted the tiny technical acronym printed beneath its gray marker." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:uhf",
+      "labelEs": "UHF",
+      "explicitBounds": [{ "x": 39.3, "y": 72.5, "width": 3.0, "height": 2.4 }],
+      "geometryRationale": "Vision omitted the tiny technical acronym printed beneath its gray marker.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:uhf:excluded-acronym", "text": "UHF", "reason": "symbol", "rationale": "UHF is a technical frequency-band abbreviation, not a Spanish lexical word.", "explicitBounds": [{ "x": 39.3, "y": 72.5, "width": 3.0, "height": 2.4 }], "geometryRationale": "Vision omitted the tiny technical acronym printed beneath its gray marker." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:fhf",
+      "labelEs": "FHF",
+      "explicitBounds": [{ "x": 43.8, "y": 72.5, "width": 3.0, "height": 2.4 }],
+      "geometryRationale": "Vision omitted the tiny invented acronym printed beneath its gray marker.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:fhf:excluded-acronym", "text": "FHF", "reason": "symbol", "rationale": "FHF is an acronym-like invented band label rather than Spanish lexical material.", "explicitBounds": [{ "x": 43.8, "y": 72.5, "width": 3.0, "height": 2.4 }], "geometryRationale": "Vision omitted the tiny invented acronym printed beneath its gray marker." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:aliens",
+      "labelEs": "ALIENS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0038" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:aliens:excluded-english-label", "text": "ALIENS", "reason": "non-spanish-text", "rationale": "Aliens is retained as an English joke label rather than translated Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00085" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:seti",
+      "labelEs": "SETI",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0053" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:seti:excluded-acronym", "text": "SETI", "reason": "non-spanish-text", "rationale": "SETI is an English scientific-program acronym, not a Spanish lexical word in the diagram.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00111" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:wifi",
+      "labelEs": "WIFI",
+      "explicitBounds": [{ "x": 43.1, "y": 68.0, "width": 3.4, "height": 2.1 }],
+      "geometryRationale": "Vision fused the label with its arrow and nearby gray marker instead of isolating the letters.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:wifi:excluded-technical-name", "text": "WIFI", "reason": "non-spanish-text", "rationale": "Wi-Fi is an international technical name retained unchanged, not a Spanish word target here.", "explicitBounds": [{ "x": 43.1, "y": 68.0, "width": 3.4, "height": 2.1 }], "geometryRationale": "Vision fused the label with its arrow and nearby gray marker instead of isolating the letters." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:brain-waves",
+      "labelEs": "ONDAS CEREBRALES",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0066" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0063" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:brain-waves:word-01", "text": "ONDAS", "normalized": "ondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00130" }], "cardIds": ["word-ondas--waves"] },
+        { "id": "es-xkcd-espectro-electromagnetico:brain-waves:word-02", "text": "CEREBRALES", "normalized": "cerebrales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00126" }], "cardIds": ["word-cerebrales"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:sulawesi",
+      "labelEs": "SULAWESI",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0073" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:sulawesi:excluded-place-name", "text": "SULAWESI", "reason": "non-spanish-text", "rationale": "Sulawesi is an Indonesian place name retained unchanged, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00141" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:gravity",
+      "labelEs": "GRAVEDAD",
+      "explicitBounds": [{ "x": 49.7, "y": 57.2, "width": 5.9, "height": 2.2 }],
+      "geometryRationale": "Vision grouped this word with a neighboring English label and its plotted marker.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:gravity:word-01", "text": "GRAVEDAD", "normalized": "gravedad", "explicitBounds": [{ "x": 50.2, "y": 57.5, "width": 5.3, "height": 1.7 }], "geometryRationale": "Vision grouped the letters with the adjacent plotted marker instead of returning a direct word box.", "cardIds": ["word-gravedad"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision",
+      "labelEs": "VISIÓN DE CALOR DE SUPERMAN",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0042" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0048" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0052" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision:word-01", "text": "VISIÓN", "normalized": "visión", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00091" }], "cardIds": ["word-vision"] },
+        { "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00092" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision:word-03", "text": "CALOR", "normalized": "calor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00100" }], "cardIds": ["word-calor"] },
+        { "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision:word-04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00101" }], "cardIds": ["word-de--of"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:superman-heat-vision:excluded-character-name", "text": "SUPERMAN", "reason": "non-spanish-text", "rationale": "Superman is a fictional character's proper name retained unchanged, not Spanish vocabulary.", "explicitBounds": [{ "x": 55.5, "y": 61.6, "width": 6.0, "height": 1.8 }], "geometryRationale": "Vision's box extended across several neighboring labels, so a checked direct name boundary is used." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision",
+      "labelEs": "VISIÓN DE CALOR DE JACK BLACK",
+      "explicitBounds": [{ "x": 54.4, "y": 70.4, "width": 9.4, "height": 3.8 }],
+      "geometryRationale": "Vision omitted this tiny two-line handwritten pop-culture label beneath the motorcycle marker.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision:word-01", "text": "VISIÓN", "normalized": "visión", "explicitBounds": [{ "x": 54.7, "y": 70.6, "width": 3.5, "height": 1.5 }], "geometryRationale": "Vision omitted this tiny handwritten word beneath the plotted marker.", "cardIds": ["word-vision", "concept-heat-vision-jack-black"] },
+        { "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision:word-02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 58.3, "y": 70.6, "width": 1.2, "height": 1.5 }], "geometryRationale": "Vision omitted this tiny handwritten preposition beneath the plotted marker.", "cardIds": ["word-de--of", "concept-heat-vision-jack-black"] },
+        { "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision:word-03", "text": "CALOR", "normalized": "calor", "explicitBounds": [{ "x": 59.6, "y": 70.6, "width": 3.1, "height": 1.5 }], "geometryRationale": "Vision omitted this tiny handwritten word beneath the plotted marker.", "cardIds": ["word-calor", "concept-heat-vision-jack-black"] },
+        { "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision:word-04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 54.9, "y": 72.2, "width": 1.2, "height": 1.5 }], "geometryRationale": "Vision omitted this tiny handwritten preposition beneath the plotted marker.", "cardIds": ["word-de--of", "concept-heat-vision-jack-black"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:jack-black-heat-vision:excluded-actor-name", "text": "JACK BLACK", "reason": "non-spanish-text", "rationale": "Jack Black is the actor's proper name retained unchanged, not Spanish vocabulary.", "explicitBounds": [{ "x": 56.2, "y": 72.2, "width": 6.3, "height": 1.6 }], "geometryRationale": "Vision omitted this tiny handwritten actor name beneath the plotted marker." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:sunlight",
+      "labelEs": "LUZ DEL SOL",
+      "explicitBounds": [{ "x": 61.4, "y": 61.7, "width": 6.9, "height": 2.7 }],
+      "geometryRationale": "Vision fused this label with neighboring plot annotations and returned overly tall token boxes.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:sunlight:word-01", "text": "LUZ", "normalized": "luz", "explicitBounds": [{ "x": 61.6, "y": 62.1, "width": 1.8, "height": 1.7 }], "geometryRationale": "Vision fused this word with neighboring plot labels and produced an overly tall box.", "cardIds": ["word-luz"] },
+        { "id": "es-xkcd-espectro-electromagnetico:sunlight:word-02", "text": "DEL", "normalized": "del", "explicitBounds": [{ "x": 63.5, "y": 62.1, "width": 2.0, "height": 1.7 }], "geometryRationale": "Vision fused this word with neighboring plot labels and produced an overly tall box.", "cardIds": ["word-del"] },
+        { "id": "es-xkcd-espectro-electromagnetico:sunlight:word-03", "text": "SOL", "normalized": "sol", "explicitBounds": [{ "x": 65.6, "y": 62.1, "width": 2.1, "height": 1.7 }], "geometryRationale": "Vision fused this word with neighboring plot labels and produced an overly tall box.", "cardIds": ["word-sol"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:death-star-laser",
+      "labelEs": "LÁSER DE LA ESTRELLA DE LA MUERTE PRINCIPAL",
+      "explicitBounds": [{ "x": 67.5, "y": 60.0, "width": 5.6, "height": 8.2 }],
+      "geometryRationale": "Vision fragmented this narrow six-line label and fused its central word with neighboring text, so checked manual bounds define the whole label.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-01", "text": "LÁSER", "normalized": "láser", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00102" }], "cardIds": ["word-laser", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00113" }], "cardIds": ["word-de--of", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00114" }], "cardIds": ["word-la--article", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-04", "text": "ESTRELLA", "normalized": "estrella", "explicitBounds": [{ "x": 67.7, "y": 63.1, "width": 4.9, "height": 1.5 }], "geometryRationale": "Vision fused this word into an overly tall box with neighboring text.", "cardIds": ["word-estrella", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 68.7, "y": 64.5, "width": 1.2, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny second preposition in the stacked label.", "cardIds": ["word-de--of", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-06", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 70.0, "y": 64.5, "width": 1.3, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny second article in the stacked label.", "cardIds": ["word-la--article", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-07", "text": "MUERTE", "normalized": "muerte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00117" }], "cardIds": ["word-muerte", "concept-death-star-superlaser"] },
+        { "id": "es-xkcd-espectro-electromagnetico:death-star-laser:word-08", "text": "PRINCIPAL", "normalized": "principal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00118" }], "cardIds": ["word-principal", "concept-death-star-superlaser"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:patriot-act",
+      "labelEs": "CENSURADO POR LA PATRIOT ACT",
+      "explicitBounds": [{ "x": 73.5, "y": 52.2, "width": 1.9, "height": 23.0 }],
+      "geometryRationale": "Vision found the upper vertical words but truncated the final vertically printed English law name.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:patriot-act:word-01", "text": "CENSURADO", "normalized": "censurado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00065" }], "cardIds": ["word-censurado", "concept-patriot-act-censorship"] },
+        { "id": "es-xkcd-espectro-electromagnetico:patriot-act:word-02", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00066" }], "cardIds": ["word-por--passive-agent", "concept-patriot-act-censorship"] },
+        { "id": "es-xkcd-espectro-electromagnetico:patriot-act:word-03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00067" }], "cardIds": ["word-la--article", "concept-patriot-act-censorship"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:patriot-act:excluded-law-name", "text": "PATRIOT ACT", "reason": "non-spanish-text", "rationale": "Patriot Act is the English proper name of a United States law, retained unchanged in the translated label.", "explicitBounds": [{ "x": 73.7, "y": 67.8, "width": 1.7, "height": 7.2 }], "geometryRationale": "Vision truncated the lower portion of this vertically printed English law name." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:potato",
+      "labelEs": "PATATA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0027" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:potato:word-01", "text": "PATATA", "normalized": "patata", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00061" }], "cardIds": ["word-patata"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:xray-glasses",
+      "labelEs": "GAFAS DE RAYOS X DE LA TELETIENDA",
+      "explicitBounds": [{ "x": 80.3, "y": 65.8, "width": 5.8, "height": 6.3 }],
+      "geometryRationale": "Vision omitted the middle of this small four-line label and split its final Spanish compound word.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-01", "text": "GAFAS", "normalized": "gafas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00119" }], "cardIds": ["word-gafas"] },
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00120" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-03", "text": "RAYOS", "normalized": "rayos", "explicitBounds": [{ "x": 81.3, "y": 67.5, "width": 3.0, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny handwritten word in the stacked label.", "cardIds": ["word-rayos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 81.1, "y": 68.8, "width": 1.1, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny second preposition in the stacked label.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-05", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 82.4, "y": 68.8, "width": 1.1, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny article in the stacked label.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:word-06", "text": "TELETIENDA", "normalized": "teletienda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00135" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00136" }], "cardIds": ["word-teletienda"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:xray-glasses:excluded-x-symbol", "text": "X", "reason": "symbol", "rationale": "X is the conventional radiation-band symbol in rayos X, not a Spanish lexical word.", "explicitBounds": [{ "x": 84.3, "y": 67.5, "width": 1.0, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny handwritten scientific symbol." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:blog-rays",
+      "labelEs": "BLOGORAYOS",
+      "explicitBounds": [{ "x": 84.6, "y": 59.4, "width": 9.6, "height": 4.0 }],
+      "geometryRationale": "Vision fused the word with its plotted marker and returned a much wider and taller box than the letters.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:blog-rays:word-01", "text": "BLOGORAYOS", "normalized": "blogorayos", "explicitBounds": [{ "x": 86.1, "y": 61.0, "width": 7.8, "height": 1.8 }], "geometryRationale": "Vision fused the letters with the adjacent plotted marker instead of returning a direct word hotspot.", "cardIds": ["word-blogorayos"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:sinister-google-projects",
+      "labelEs": "PROYECTOS SINIESTROS DE GOOGLE",
+      "explicitBounds": [{ "x": 85.3, "y": 65.1, "width": 10.6, "height": 6.9 }],
+      "geometryRationale": "Vision fused most of this boxed three-line label into one inaccurate rectangle, so checked word-level geometry is used.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:sinister-google-projects:word-01", "text": "PROYECTOS", "normalized": "proyectos", "explicitBounds": [{ "x": 86.0, "y": 66.1, "width": 8.5, "height": 1.9 }], "geometryRationale": "Vision fused this word with the rest of the boxed label instead of giving it a usable hotspot.", "cardIds": ["word-proyectos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:sinister-google-projects:word-02", "text": "SINIESTROS", "normalized": "siniestros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00132" }], "cardIds": ["word-siniestros"] },
+        { "id": "es-xkcd-espectro-electromagnetico:sinister-google-projects:word-03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00137" }], "cardIds": ["word-de--of"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:sinister-google-projects:excluded-company-name", "text": "GOOGLE", "reason": "non-spanish-text", "rationale": "Google is a company's proper name retained unchanged, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00138" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-power-telephone",
+      "labelEs": "CORRIENTE Y TELÉFONO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0080" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-power-telephone:word-01", "text": "CORRIENTE", "normalized": "corriente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00153" }], "cardIds": ["word-corriente--electric-current"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-power-telephone:word-02", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00154" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-power-telephone:word-03", "text": "TELÉFONO", "normalized": "teléfono", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00155" }], "cardIds": ["word-telefono"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-radio-tv",
+      "labelEs": "RADIO Y TV",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0079" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-radio-tv:word-01", "text": "RADIO", "normalized": "radio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00150" }], "cardIds": ["word-radio--broadcast-medium"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-radio-tv:word-02", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00151" }], "cardIds": ["word-y"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-radio-tv:excluded-tv-abbreviation", "text": "TV", "reason": "symbol", "rationale": "TV is the conventional abbreviation for televisión, not a full Spanish lexical word in the image.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00152" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-microwaves",
+      "labelEs": "MICROONDAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0081" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-microwaves:word-01", "text": "MICROONDAS", "normalized": "microondas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00156" }], "cardIds": ["word-microondas"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-toasters",
+      "labelEs": "TOSTADORAS",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0077" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0082" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-toasters:word-01", "text": "TOSTADORAS", "normalized": "tostadoras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00147" }, { "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00157" }], "cardIds": ["word-tostadoras"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-ir",
+      "labelEs": "IR",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0075" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-ir:excluded-abbreviation", "text": "IR", "reason": "symbol", "rationale": "IR is the conventional abbreviation for infrared radiation, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00144" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-visible-light",
+      "labelEs": "LUZ VISIBLE",
+      "explicitBounds": [{ "x": 61.0, "y": 74.4, "width": 5.3, "height": 4.3 }],
+      "geometryRationale": "Vision fused both stacked words of this tiny category label into one unusable token box.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-visible-light:word-01", "text": "LUZ", "normalized": "luz", "explicitBounds": [{ "x": 62.2, "y": 74.6, "width": 2.5, "height": 1.6 }], "geometryRationale": "Vision fused the two stacked words instead of returning a direct hotspot for this word.", "cardIds": ["word-luz"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-visible-light:word-02", "text": "VISIBLE", "normalized": "visible", "explicitBounds": [{ "x": 61.2, "y": 76.4, "width": 4.7, "height": 1.6 }], "geometryRationale": "Vision fused the two stacked words instead of returning a direct hotspot for this word.", "cardIds": ["word-visible"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-uv-visible-darkness",
+      "labelEs": "UV OSCURIDAD VISIBLE",
+      "explicitBounds": [{ "x": 67.0, "y": 74.0, "width": 6.3, "height": 5.2 }],
+      "geometryRationale": "Vision omitted this compact category and its two-line joke sublabel.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-uv-visible-darkness:word-01", "text": "OSCURIDAD", "normalized": "oscuridad", "explicitBounds": [{ "x": 67.5, "y": 76.7, "width": 5.5, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny handwritten joke sublabel.", "cardIds": ["word-oscuridad"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-uv-visible-darkness:word-02", "text": "VISIBLE", "normalized": "visible", "explicitBounds": [{ "x": 68.6, "y": 78.1, "width": 3.9, "height": 1.1 }], "geometryRationale": "Vision omitted this tiny handwritten joke sublabel.", "cardIds": ["word-visible"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-uv-visible-darkness:excluded-uv-abbreviation", "text": "UV", "reason": "symbol", "rationale": "UV is the conventional abbreviation for ultraviolet radiation, not a Spanish lexical word.", "explicitBounds": [{ "x": 68.0, "y": 74.3, "width": 3.1, "height": 2.0 }], "geometryRationale": "Vision omitted this compact technical category abbreviation." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-miller-light",
+      "labelEs": "LUZ DE MILLER",
+      "explicitBounds": [{ "x": 73.2, "y": 74.0, "width": 3.7, "height": 5.1 }],
+      "geometryRationale": "Vision omitted this very narrow three-line parody product label.",
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-miller-light:word-01", "text": "LUZ", "normalized": "luz", "explicitBounds": [{ "x": 73.6, "y": 74.5, "width": 2.5, "height": 1.5 }], "geometryRationale": "Vision omitted this tiny handwritten word in the narrow category.", "cardIds": ["word-luz"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-miller-light:word-02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 74.3, "y": 76.1, "width": 1.3, "height": 1.2 }], "geometryRationale": "Vision omitted this tiny handwritten preposition in the narrow category.", "cardIds": ["word-de--of"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-miller-light:excluded-brand-name", "text": "MILLER", "reason": "non-spanish-text", "rationale": "Miller is the retained beer brand name used for the Miller Lite wordplay, not Spanish vocabulary.", "explicitBounds": [{ "x": 73.4, "y": 77.4, "width": 3.3, "height": 1.3 }], "geometryRationale": "Vision omitted this tiny handwritten brand name in the narrow category." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-x-rays",
+      "labelEs": "RAYOS X",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0078" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-x-rays:word-01", "text": "RAYOS", "normalized": "rayos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00148" }], "cardIds": ["word-rayos"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-x-rays:excluded-x-symbol", "text": "X", "reason": "symbol", "rationale": "X is the conventional scientific band symbol in rayos X, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00149" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:band-cosmic-gamma-rays",
+      "labelEs": "RAYOS CÓSMICOS/GAMMA",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0076" },
+        { "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0074" }
+      ],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:band-cosmic-gamma-rays:word-01", "text": "RAYOS", "normalized": "rayos", "explicitBounds": [{ "x": 86.1, "y": 74.5, "width": 5.5, "height": 2.0 }], "geometryRationale": "Vision's word box included much of the full two-line category, so a direct word boundary is used.", "cardIds": ["word-rayos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-cosmic-gamma-rays:word-02", "text": "CÓSMICOS", "normalized": "cósmicos", "explicitBounds": [{ "x": 82.3, "y": 76.7, "width": 8.0, "height": 2.1 }], "geometryRationale": "Vision fused both lower-line labels into one oversized category box.", "cardIds": ["word-cosmicos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:band-cosmic-gamma-rays:word-03", "text": "GAMMA", "normalized": "gamma", "explicitBounds": [{ "x": 90.5, "y": 76.7, "width": 6.5, "height": 2.1 }], "geometryRationale": "Vision fused both lower-line labels into one oversized category box.", "cardIds": ["word-gamma--radiation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:wavelength-scale",
+      "labelEs": "λ (m) 10⁸ 100 Mm 10⁷ 10 Mm 10⁶ 1 Mm 10⁵ 100 km 10⁴ 10 km 10³ 1 km 10² 100 m 10¹ 10 m 10⁰ 1 m 10⁻¹ 10 cm 10⁻² 1 cm 10⁻³ 1 mm 10⁻⁴ 100 µm 10⁻⁵ 10 µm 10⁻⁶ 1 µm 10⁻⁷ 100 nm 10⁻⁸ 10 nm 10⁻⁹ 1 nm 10⁻¹⁰ 100 pm 10⁻¹¹ 10 pm 10⁻¹² 1 pm 10⁻¹³ 100 fm",
+      "explicitBounds": [{ "x": 4.0, "y": 79.3, "width": 92.5, "height": 5.8 }],
+      "geometryRationale": "Vision captured only scattered values from this continuous scientific scale, so the complete audited scale uses one checked row boundary.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:wavelength-scale:excluded-equation-row", "text": "λ (m) 10⁸ 100 Mm 10⁷ 10 Mm 10⁶ 1 Mm 10⁵ 100 km 10⁴ 10 km 10³ 1 km 10² 100 m 10¹ 10 m 10⁰ 1 m 10⁻¹ 10 cm 10⁻² 1 cm 10⁻³ 1 mm 10⁻⁴ 100 µm 10⁻⁵ 10 µm 10⁻⁶ 1 µm 10⁻⁷ 100 nm 10⁻⁸ 10 nm 10⁻⁹ 1 nm 10⁻¹⁰ 100 pm 10⁻¹¹ 10 pm 10⁻¹² 1 pm 10⁻¹³ 100 fm", "reason": "equation", "rationale": "This row consists entirely of the wavelength symbol, powers of ten, and scientific units rather than Spanish lexical material.", "explicitBounds": [{ "x": 4.0, "y": 79.3, "width": 92.5, "height": 5.8 }], "geometryRationale": "Vision captured only scattered values from this continuous scientific scale, so the complete audited scale uses one checked row boundary." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:frequency-scale",
+      "labelEs": "f (Hz) 10⁰ 1 Hz 10¹ 10 Hz 10² 100 Hz 10³ 1 KHz 10⁴ 10 KHz 10⁵ 100 KHz 10⁶ 1 MHz 10⁷ 10 MHz 10⁸ 100 MHz 10⁹ 1 GHz 10¹⁰ 10 GHz 10¹¹ 100 GHz 10¹² 1 THz 10¹³ 10 THz 10¹⁴ 100 THz 10¹⁵ 10¹⁶ 10¹⁷ 10¹⁸ 10¹⁹ 10²⁰ 10²¹ 10²²",
+      "explicitBounds": [{ "x": 4.0, "y": 86.0, "width": 92.5, "height": 6.0 }],
+      "geometryRationale": "Vision captured only scattered values from this continuous scientific scale, so the complete audited scale uses one checked row boundary.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:frequency-scale:excluded-equation-row", "text": "f (Hz) 10⁰ 1 Hz 10¹ 10 Hz 10² 100 Hz 10³ 1 KHz 10⁴ 10 KHz 10⁵ 100 KHz 10⁶ 1 MHz 10⁷ 10 MHz 10⁸ 100 MHz 10⁹ 1 GHz 10¹⁰ 10 GHz 10¹¹ 100 GHz 10¹² 1 THz 10¹³ 10 THz 10¹⁴ 100 THz 10¹⁵ 10¹⁶ 10¹⁷ 10¹⁸ 10¹⁹ 10²⁰ 10²¹ 10²²", "reason": "equation", "rationale": "This row consists entirely of the frequency symbol, powers of ten, and scientific units rather than Spanish lexical material.", "explicitBounds": [{ "x": 4.0, "y": 86.0, "width": 92.5, "height": 6.0 }], "geometryRationale": "Vision captured only scattered values from this continuous scientific scale, so the complete audited scale uses one checked row boundary." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:prefix-joke",
+      "labelEs": "OTROS PREFIJOS GRIEGOS ENTRETENIDOS COMO -PETA Y -EXA Y -ZAPPA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-espectro-electromagnetico:ocr-line-0099" }],
+      "words": [
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-01", "text": "OTROS", "normalized": "otros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00185" }], "cardIds": ["word-otros--adjective"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-02", "text": "PREFIJOS", "normalized": "prefijos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00186" }], "cardIds": ["word-prefijos", "concept-zappa-prefix-joke"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-03", "text": "GRIEGOS", "normalized": "griegos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00187" }], "cardIds": ["word-griegos", "concept-zappa-prefix-joke"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-04", "text": "ENTRETENIDOS", "normalized": "entretenidos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00188" }], "cardIds": ["word-entretenidos"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-05", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00189" }], "cardIds": ["word-como"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-06", "text": "PETA", "normalized": "peta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00190" }], "cardIds": ["word-peta--si-prefix", "concept-zappa-prefix-joke"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-07", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00191" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-08", "text": "EXA", "normalized": "exa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00192" }], "cardIds": ["word-exa--si-prefix", "concept-zappa-prefix-joke"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-09", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00193" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-espectro-electromagnetico:prefix-joke:word-10", "text": "ZAPPA", "normalized": "zappa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-espectro-electromagnetico:ocr-token-00194" }], "cardIds": ["word-zappa--fake-prefix", "concept-zappa-prefix-joke"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-espectro-electromagnetico:q-scale",
+      "labelEs": "Q (Gal²/Coloumb) 17 117 π 17 42 φ e^π−π −2 540⁵⁰ 12 11²",
+      "explicitBounds": [{ "x": 4.0, "y": 92.0, "width": 92.5, "height": 6.0 }],
+      "geometryRationale": "Vision captured only isolated values from this deliberately nonsensical equation scale, so the complete audited row uses checked manual bounds.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-espectro-electromagnetico:q-scale:excluded-equation-row", "text": "Q (Gal²/Coloumb) 17 117 π 17 42 φ e^π−π −2 540⁵⁰ 12 11²", "reason": "equation", "rationale": "This deliberately nonsensical scale contains only a variable, invented units, constants, and numerical expressions rather than Spanish words.", "explicitBounds": [{ "x": 4.0, "y": 92.0, "width": 92.5, "height": 6.0 }], "geometryRationale": "Vision captured only isolated values from this deliberately nonsensical equation scale, so the complete audited row uses checked manual bounds." }
+      ],
+      "applications": []
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-np-completo",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "NP-Complete",
+  "titleEs": "NP-Completo",
+  "titleText": {
+    "es": "Con una solución general consigue una propina del 50%.",
+    "en": "General solutions get you a 50% tip."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-introducir--embed",
+      "kind": "word",
+      "promptEs": "introducir",
+      "answerEn": "to introduce; to insert or embed",
+      "noteEn": "Introducir can mean putting something into a larger setting, not only introducing one person to another.",
+      "example": {
+        "es": "Introdujeron una regla nueva en el juego.",
+        "en": "They introduced a new rule into the game."
+      },
+      "tags": ["word", "insertion", "contextual sense", "infinitive"]
+    },
+    {
+      "id": "word-np--complexity-class",
+      "kind": "word",
+      "promptEs": "np",
+      "answerEn": "NP (a computer-science complexity class)",
+      "noteEn": "NP is an international computer-science abbreviation. It groups decision problems whose proposed solutions can be checked efficiently.",
+      "example": {
+        "es": "El problema pertenece a NP.",
+        "en": "The problem belongs to NP."
+      },
+      "tags": ["word", "abbreviation", "computer science", "complexity"]
+    },
+    {
+      "id": "word-completos--np-complete",
+      "kind": "word",
+      "promptEs": "completos",
+      "answerEn": "complete (masculine plural, in NP-complete)",
+      "noteEn": "The ending -os makes completos match the masculine plural noun problemas. After NP-, it forms the technical description NP-completos.",
+      "example": {
+        "es": "Estos problemas son NP-completos.",
+        "en": "These problems are NP-complete."
+      },
+      "tags": ["word", "computer science", "complexity", "masculine plural"]
+    },
+    {
+      "id": "word-pedir--order",
+      "kind": "word",
+      "promptEs": "pedir",
+      "answerEn": "to order; to request",
+      "noteEn": "At a restaurant, pedir is the ordinary verb for ordering food or drink. The same verb can mean asking for or requesting something elsewhere.",
+      "example": {
+        "es": "Voy a pedir la sopa.",
+        "en": "I am going to order the soup."
+      },
+      "tags": ["word", "restaurant", "request", "infinitive"]
+    },
+    {
+      "id": "word-restaurante",
+      "kind": "word",
+      "promptEs": "restaurante",
+      "answerEn": "restaurant",
+      "noteEn": "",
+      "tags": ["word", "restaurant", "place"]
+    },
+    {
+      "id": "word-aperitivos",
+      "kind": "word",
+      "promptEs": "aperitivos",
+      "answerEn": "appetizers; starters",
+      "noteEn": "",
+      "tags": ["word", "food", "restaurant", "plural"]
+    },
+    {
+      "id": "word-querriamos--polite-request",
+      "kind": "word",
+      "promptEs": "querríamos",
+      "answerEn": "we would like (polite request)",
+      "noteEn": "Querríamos is a courteous form of querer, “to want.” It softens an order or request in much the same way as English “we would like.”",
+      "example": {
+        "es": "Querríamos una mesa junto a la ventana.",
+        "en": "We would like a table by the window."
+      },
+      "tags": ["word", "politeness", "conditional", "first-person plural"]
+    },
+    {
+      "id": "word-exactamente",
+      "kind": "word",
+      "promptEs": "exactamente",
+      "answerEn": "exactly",
+      "noteEn": "",
+      "tags": ["word", "precision"]
+    },
+    {
+      "id": "word-eh--hesitation",
+      "kind": "word",
+      "promptEs": "eh",
+      "answerEn": "uh; um (hesitation)",
+      "noteEn": "Eh can fill a pause while a speaker thinks or reacts. Its tone and punctuation determine whether it sounds hesitant, surprised, or attention-getting.",
+      "example": {
+        "es": "Eh... necesito pensarlo.",
+        "en": "Um... I need to think about it."
+      },
+      "tags": ["word", "interjection", "hesitation"]
+    },
+    {
+      "id": "word-tome--formal-command",
+      "kind": "word",
+      "promptEs": "tome",
+      "answerEn": "take; here you go (formal command)",
+      "noteEn": "Tome tells one person addressed as usted to take something. In a handover, it can work like English “here you go.”",
+      "example": {
+        "es": "Tome este documento, por favor.",
+        "en": "Take this document, please."
+      },
+      "tags": ["word", "formal command", "handover"]
+    },
+    {
+      "id": "word-articulos--papers",
+      "kind": "word",
+      "promptEs": "artículos",
+      "answerEn": "articles; papers",
+      "noteEn": "In academic or technical contexts, un artículo can be a scholarly paper rather than a newspaper article or a grammatical article.",
+      "example": {
+        "es": "Leí dos artículos científicos.",
+        "en": "I read two scientific papers."
+      },
+      "tags": ["word", "research", "writing", "plural"]
+    },
+    {
+      "id": "word-mochila--knapsack",
+      "kind": "word",
+      "promptEs": "mochila",
+      "answerEn": "knapsack; backpack",
+      "noteEn": "Mochila is the everyday word for a backpack. In el problema de la mochila, it supplies the Spanish name of the computer-science knapsack problem.",
+      "example": {
+        "es": "Guardé el libro en la mochila.",
+        "en": "I put the book in the backpack."
+      },
+      "tags": ["word", "container", "computer science", "contextual sense"]
+    },
+    {
+      "id": "word-escuche--formal-command",
+      "kind": "word",
+      "promptEs": "escuche",
+      "answerEn": "listen (formal command)",
+      "noteEn": "Escuche tells one person addressed as usted to listen. The informal command to a friend would be escucha.",
+      "example": {
+        "es": "Escuche esta explicación, por favor.",
+        "en": "Listen to this explanation, please."
+      },
+      "tags": ["word", "formal command", "listening"]
+    },
+    {
+      "id": "word-seis",
+      "kind": "word",
+      "promptEs": "seis",
+      "answerEn": "six",
+      "noteEn": "",
+      "tags": ["word", "number"]
+    },
+    {
+      "id": "word-lo--fixed-lo-mas-posible",
+      "kind": "word",
+      "promptEs": "lo",
+      "answerEn": "no separate English word; begins lo más... posible (“as... as possible”)",
+      "noteEn": "Lo stays unchanged in this degree expression. It works with más and posible around the description being maximized.",
+      "example": {
+        "es": "Hazlo lo más sencillo posible.",
+        "en": "Make it as simple as possible."
+      },
+      "tags": ["word", "fixed pattern", "degree"]
+    },
+    {
+      "id": "word-mas--fixed-lo-mas-posible",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "most; part of lo más... posible (“as... as possible”)",
+      "noteEn": "Más raises the degree of the description between lo and posible. The complete pattern is translated naturally with “as... as possible,” not word by word.",
+      "example": {
+        "es": "Sal lo más pronto posible.",
+        "en": "Leave as soon as possible."
+      },
+      "tags": ["word", "fixed pattern", "degree"]
+    },
+    {
+      "id": "word-rapido",
+      "kind": "word",
+      "promptEs": "rápido",
+      "answerEn": "fast; quickly",
+      "noteEn": "",
+      "tags": ["word", "speed", "description"]
+    },
+    {
+      "id": "word-posible",
+      "kind": "word",
+      "promptEs": "posible",
+      "answerEn": "possible",
+      "noteEn": "",
+      "tags": ["word", "possibility", "description"]
+    },
+    {
+      "id": "word-quiere--formal",
+      "kind": "word",
+      "promptEs": "quiere",
+      "answerEn": "do you want; would you like (formal singular)",
+      "noteEn": "Quiere is the present form used for usted, the formal singular “you.” The same written form can also mean “he or she wants”; context identifies the person.",
+      "example": {
+        "es": "¿Quiere ver el menú, señor?",
+        "en": "Would you like to see the menu, sir?"
+      },
+      "tags": ["word", "formal address", "wanting", "question"]
+    },
+    {
+      "id": "word-viajante--salesperson",
+      "kind": "word",
+      "promptEs": "viajante",
+      "answerEn": "traveling salesperson; traveling salesman",
+      "noteEn": "A viajante travels for work, traditionally to sell goods. El problema del viajante is the conventional Spanish name for the traveling-salesperson problem in computer science.",
+      "example": {
+        "es": "La viajante visitó cinco ciudades.",
+        "en": "The traveling salesperson visited five cities."
+      },
+      "tags": ["word", "occupation", "computer science", "contextual sense"]
+    },
+    {
+      "id": "word-fruta",
+      "kind": "word",
+      "promptEs": "fruta",
+      "answerEn": "fruit",
+      "noteEn": "",
+      "tags": ["word", "food"]
+    },
+    {
+      "id": "word-mixta",
+      "kind": "word",
+      "promptEs": "mixta",
+      "answerEn": "mixed (feminine singular)",
+      "noteEn": "",
+      "tags": ["word", "description", "feminine singular"]
+    },
+    {
+      "id": "word-patatas",
+      "kind": "word",
+      "promptEs": "patatas",
+      "answerEn": "potatoes",
+      "noteEn": "",
+      "tags": ["word", "food", "Spain", "plural"]
+    },
+    {
+      "id": "word-fritas",
+      "kind": "word",
+      "promptEs": "fritas",
+      "answerEn": "fried (feminine plural)",
+      "noteEn": "",
+      "tags": ["word", "cooking", "feminine plural"]
+    },
+    {
+      "id": "word-ensalada",
+      "kind": "word",
+      "promptEs": "ensalada",
+      "answerEn": "salad",
+      "noteEn": "",
+      "tags": ["word", "food"]
+    },
+    {
+      "id": "word-individual--single-serving",
+      "kind": "word",
+      "promptEs": "individual",
+      "answerEn": "individual; single-serving",
+      "noteEn": "On a menu, individual says that an item is sized or intended for one person rather than for sharing.",
+      "example": {
+        "es": "Pedimos dos porciones individuales.",
+        "en": "We ordered two individual portions."
+      },
+      "tags": ["word", "restaurant", "portion", "contextual sense"]
+    },
+    {
+      "id": "word-alitas",
+      "kind": "word",
+      "promptEs": "alitas",
+      "answerEn": "wings; little wings (feminine plural)",
+      "noteEn": "Alitas is the plural diminutive of alas, “wings.” On a menu it commonly refers to chicken wings.",
+      "example": {
+        "es": "Las alitas están picantes.",
+        "en": "The wings are spicy."
+      },
+      "tags": ["word", "food", "diminutive", "plural"]
+    },
+    {
+      "id": "word-pollo",
+      "kind": "word",
+      "promptEs": "pollo",
+      "answerEn": "chicken",
+      "noteEn": "",
+      "tags": ["word", "food"]
+    },
+    {
+      "id": "word-palitos",
+      "kind": "word",
+      "promptEs": "palitos",
+      "answerEn": "small sticks; sticks",
+      "noteEn": "Palitos is a diminutive plural of palos. For food, it describes small stick-shaped pieces.",
+      "example": {
+        "es": "Cortó la zanahoria en palitos.",
+        "en": "She cut the carrot into sticks."
+      },
+      "tags": ["word", "shape", "food", "diminutive"]
+    },
+    {
+      "id": "word-mozzarella",
+      "kind": "word",
+      "promptEs": "mozzarella",
+      "answerEn": "mozzarella",
+      "noteEn": "",
+      "tags": ["word", "food", "cheese"]
+    },
+    {
+      "id": "word-variado--sampler",
+      "kind": "word",
+      "promptEs": "variado",
+      "answerEn": "assorted sampler; selection",
+      "noteEn": "Variado normally describes something as varied or assorted. Used alone on a menu, it can name a mixed selection or sampler plate.",
+      "example": {
+        "es": "Pedimos un variado de quesos.",
+        "en": "We ordered an assortment of cheeses."
+      },
+      "tags": ["word", "restaurant", "assortment", "contextual sense"]
+    },
+    {
+      "id": "word-sandwiches--printed-without-accent",
+      "kind": "word",
+      "promptEs": "sandwiches",
+      "answerEn": "sandwiches (printed without the standard Spanish accent)",
+      "noteEn": "Standard Spanish spelling is sándwiches, with an accent on the first a. This printed menu omits that accent, so the card preserves the exact surface form while showing the usual spelling here.",
+      "example": {
+        "es": "Pedimos dos sándwiches.",
+        "en": "We ordered two sandwiches."
+      },
+      "tags": ["word", "food", "printed spelling", "plural"]
+    },
+    {
+      "id": "word-barbacoa",
+      "kind": "word",
+      "promptEs": "barbacoa",
+      "answerEn": "barbecue; barbecue-flavored",
+      "noteEn": "",
+      "tags": ["word", "food", "cooking"]
+    },
+    {
+      "id": "grammar-querer-conditional-politeness",
+      "kind": "grammar",
+      "promptEs": "querría / querríamos + lo pedido",
+      "questionEn": "How do you politely say “I would like” or “we would like” when requesting something?",
+      "answerEn": "Use querría for one speaker or querríamos for “we,” then name what is wanted.",
+      "noteEn": "These polite forms come from querer, “to want.” The middle changes to querr-, and the endings -ía or -íamos express “would.” They make an order or request less direct than quiero or queremos.",
+      "example": {
+        "es": "Querría un café, por favor.",
+        "en": "I would like a coffee, please."
+      },
+      "tags": ["grammar", "politeness", "requests", "A2"]
+    },
+    {
+      "id": "phrase-lo-mas-posible",
+      "kind": "phrase",
+      "promptEs": "lo más + descripción + posible",
+      "questionEn": "How do you say that something should be as fast, simple, close, or otherwise extreme as possible?",
+      "answerEn": "Use lo más, then the description, then posible.",
+      "noteEn": "Lo and posible stay fixed around the description being pushed to its greatest practical degree. The middle word can describe a quality or manner, as in lo más claro posible or lo más pronto posible.",
+      "example": {
+        "es": "Explícalo lo más claro posible.",
+        "en": "Explain it as clearly as possible."
+      },
+      "tags": ["phrase", "degree", "maximum", "A2"]
+    },
+    {
+      "id": "phrase-patatas-fritas",
+      "kind": "phrase",
+      "promptEs": "patatas fritas",
+      "questionEn": "What common menu phrase means French fries or chips?",
+      "answerEn": "Use patatas fritas.",
+      "noteEn": "In Spain, patatas fritas commonly names fried potatoes and often means French fries on a restaurant menu; context can also indicate potato chips. Many Latin American varieties use papas fritas.",
+      "example": {
+        "es": "Pedimos una hamburguesa con patatas fritas.",
+        "en": "We ordered a hamburger with French fries."
+      },
+      "tags": ["phrase", "food", "restaurant", "Spain", "A1"]
+    },
+    {
+      "id": "phrase-alitas-de-pollo",
+      "kind": "phrase",
+      "promptEs": "alitas de pollo",
+      "questionEn": "What Spanish menu phrase means chicken wings?",
+      "answerEn": "Use alitas de pollo.",
+      "noteEn": "Alitas literally means “little wings,” and de pollo identifies the meat. Together they form the ordinary menu name for chicken wings.",
+      "example": {
+        "es": "Compartimos unas alitas de pollo.",
+        "en": "We shared some chicken wings."
+      },
+      "tags": ["phrase", "food", "restaurant", "A1"]
+    },
+    {
+      "id": "phrase-palitos-de-mozzarella",
+      "kind": "phrase",
+      "promptEs": "palitos de mozzarella",
+      "questionEn": "What Spanish menu phrase means mozzarella sticks?",
+      "answerEn": "Use palitos de mozzarella.",
+      "noteEn": "Palitos names small stick-shaped pieces, and de mozzarella says what they contain. The complete phrase is a conventional name for mozzarella sticks.",
+      "example": {
+        "es": "Los palitos de mozzarella vienen con salsa.",
+        "en": "The mozzarella sticks come with sauce."
+      },
+      "tags": ["phrase", "food", "restaurant", "A2"]
+    },
+    {
+      "id": "concept-np-complete",
+      "kind": "concept",
+      "promptEs": "problemas NP-completos",
+      "answerEn": "problems whose proposed solutions are quick to check but which have no known efficient general solver",
+      "noteEn": "NP-complete problems are the hardest problems in the class NP, in a precise sense: every NP problem can be efficiently translated into any NP-complete problem. If an efficient general algorithm were found for one of them, it would efficiently solve every problem in NP. No such algorithm is currently known.",
+      "tags": ["concept", "computer science", "complexity", "NP-complete"]
+    },
+    {
+      "id": "concept-knapsack-subset-sum",
+      "kind": "concept",
+      "promptEs": "problema de la mochila · suma exacta",
+      "answerEn": "select a subset of available items that obeys a limit or hits an exact target",
+      "noteEn": "The classic knapsack problem chooses items with weights and values under a capacity limit. Asking which menu prices add to one exact total is more specifically the closely related subset-sum problem. The decision versions are NP-complete, so the restaurant request hides a computationally difficult search inside an ordinary order.",
+      "tags": ["concept", "computer science", "knapsack", "subset sum", "joke concept"]
+    },
+    {
+      "id": "concept-traveling-salesperson-problem",
+      "kind": "concept",
+      "promptEs": "problema del viajante",
+      "answerEn": "find the shortest route that visits every required stop",
+      "noteEn": "The traveling-salesperson problem asks for the shortest tour through a set of locations. Comparing all possible routes becomes difficult as the number of stops grows; its decision version is NP-complete. Visiting several restaurant tables as quickly as possible supplies the comic's second example.",
+      "tags": ["concept", "computer science", "routing", "NP-complete", "joke concept"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-np-completo:heading",
+      "labelEs": "MI HOBBY:",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:heading:word-01", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00001" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-np-completo:heading:word-02", "text": "HOBBY", "normalized": "hobby", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00002" }], "cardIds": ["word-hobby"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:subtitle",
+      "labelEs": "INTRODUCIR PROBLEMAS NP-COMPLETOS AL PEDIR EN UN RESTAURANTE",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:subtitle:word-01", "text": "INTRODUCIR", "normalized": "introducir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00003" }], "cardIds": ["word-introducir--embed"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-02", "text": "PROBLEMAS", "normalized": "problemas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00004" }], "cardIds": ["word-problemas", "concept-np-complete"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-03", "text": "NP", "normalized": "np", "explicitBounds": [{ "x": 35.7031, "y": 9.6618, "width": 3.75, "height": 4.8309 }], "geometryRationale": "OCR fused NP and COMPLETOS into one hyphenated token, so this box isolates the printed abbreviation.", "cardIds": ["word-np--complexity-class", "concept-np-complete"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-04", "text": "COMPLETOS", "normalized": "completos", "explicitBounds": [{ "x": 40.1563, "y": 9.6618, "width": 15.8593, "height": 4.8309 }], "geometryRationale": "OCR fused NP and COMPLETOS into one hyphenated token, so this box isolates the printed adjective.", "cardIds": ["word-completos--np-complete", "concept-np-complete"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-05", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00006" }], "cardIds": ["word-al--time-clause", "grammar-al-infinitive"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-06", "text": "PEDIR", "normalized": "pedir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00007" }], "cardIds": ["word-pedir--order", "grammar-al-infinitive"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-07", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00008" }], "cardIds": ["word-en--at-location"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-08", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00009" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-np-completo:subtitle:word-09", "text": "RESTAURANTE", "normalized": "restaurante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00010" }], "cardIds": ["word-restaurante"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-np-completo:subtitle:app-al-infinitive",
+          "cardId": "grammar-al-infinitive",
+          "participantWordIds": ["es-xkcd-np-completo:subtitle:word-05", "es-xkcd-np-completo:subtitle:word-06"],
+          "exampleEs": "AL PEDIR",
+          "explanationEn": "Al introduces the time relationship, and pedir stays in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-name",
+      "labelEs": "RESTAURANTE CHOTCHKIES",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-name:word-01", "text": "RESTAURANTE", "normalized": "restaurante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00015" }], "cardIds": ["word-restaurante"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-np-completo:menu-name:excluded-brand-name",
+          "text": "CHOTCHKIES",
+          "reason": "non-spanish-text",
+          "rationale": "Chotchkies is the fictional restaurant's retained English proper name, not Spanish lexical material.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00016" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-appetizers-heading",
+      "labelEs": "APERITIVOS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0006" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-appetizers-heading:word-01", "text": "APERITIVOS", "normalized": "aperitivos", "explicitBounds": [{ "x": 12.1875, "y": 33.3333, "width": 16.0938, "height": 4.3478 }], "geometryRationale": "OCR fused the menu's left decorative flourish into APERITIVOS, so this measured box covers only the printed word.", "cardIds": ["word-aperitivos", "concept-knapsack-subset-sum"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-fruit",
+      "labelEs": "FRUTA MIXTA 2.15",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0009" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-fruit:word-01", "text": "FRUTA", "normalized": "fruta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00025" }], "cardIds": ["word-fruta"] },
+        { "id": "es-xkcd-np-completo:menu-fruit:word-02", "text": "MIXTA", "normalized": "mixta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00026" }], "cardIds": ["word-mixta"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-fruit:excluded-price", "text": "2.15", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00027" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-fries",
+      "labelEs": "PATATAS FRITAS 2.75",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-fries:word-01", "text": "PATATAS", "normalized": "patatas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00040" }], "cardIds": ["word-patatas", "phrase-patatas-fritas"] },
+        { "id": "es-xkcd-np-completo:menu-fries:word-02", "text": "FRITAS", "normalized": "fritas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00041" }], "cardIds": ["word-fritas", "phrase-patatas-fritas"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-fries:excluded-price", "text": "2.75", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00042" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:menu-fries:app-dish", "cardId": "phrase-patatas-fritas", "participantWordIds": ["es-xkcd-np-completo:menu-fries:word-01", "es-xkcd-np-completo:menu-fries:word-02"], "exampleEs": "PATATAS FRITAS", "explanationEn": "Patatas fritas is the conventional two-word menu name for this fried-potato dish." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-salad",
+      "labelEs": "ENSALADA INDIVIDUAL 3.35",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0017" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-salad:word-01", "text": "ENSALADA", "normalized": "ensalada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00050" }], "cardIds": ["word-ensalada"] },
+        { "id": "es-xkcd-np-completo:menu-salad:word-02", "text": "INDIVIDUAL", "normalized": "individual", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00051" }], "cardIds": ["word-individual--single-serving"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-salad:excluded-price", "text": "3.35", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00052" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-wings",
+      "labelEs": "ALITAS DE POLLO 3.55",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0020" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-wings:word-01", "text": "ALITAS", "normalized": "alitas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00065" }], "cardIds": ["word-alitas", "phrase-alitas-de-pollo"] },
+        { "id": "es-xkcd-np-completo:menu-wings:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00066" }], "cardIds": ["word-de--of", "phrase-alitas-de-pollo"] },
+        { "id": "es-xkcd-np-completo:menu-wings:word-03", "text": "POLLO", "normalized": "pollo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00067" }], "cardIds": ["word-pollo", "phrase-alitas-de-pollo"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-wings:excluded-price", "text": "3.55", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00063" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:menu-wings:app-dish", "cardId": "phrase-alitas-de-pollo", "participantWordIds": ["es-xkcd-np-completo:menu-wings:word-01", "es-xkcd-np-completo:menu-wings:word-02", "es-xkcd-np-completo:menu-wings:word-03"], "exampleEs": "ALITAS DE POLLO", "explanationEn": "Alitas names the wings, and de pollo identifies the meat in this conventional menu item." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-mozzarella-sticks",
+      "labelEs": "PALITOS DE MOZZARELLA 4.20",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0024" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-mozzarella-sticks:word-01", "text": "PALITOS", "normalized": "palitos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00070" }], "cardIds": ["word-palitos", "phrase-palitos-de-mozzarella"] },
+        { "id": "es-xkcd-np-completo:menu-mozzarella-sticks:word-02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00071" }], "cardIds": ["word-de--of", "phrase-palitos-de-mozzarella"] },
+        { "id": "es-xkcd-np-completo:menu-mozzarella-sticks:word-03", "text": "MOZZARELLA", "normalized": "mozzarella", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00074" }], "cardIds": ["word-mozzarella", "phrase-palitos-de-mozzarella"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-mozzarella-sticks:excluded-price", "text": "4.20", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00072" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:menu-mozzarella-sticks:app-dish", "cardId": "phrase-palitos-de-mozzarella", "participantWordIds": ["es-xkcd-np-completo:menu-mozzarella-sticks:word-01", "es-xkcd-np-completo:menu-mozzarella-sticks:word-02", "es-xkcd-np-completo:menu-mozzarella-sticks:word-03"], "exampleEs": "PALITOS DE MOZZARELLA", "explanationEn": "Palitos supplies the stick shape, and de mozzarella identifies what this conventional dish contains." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-sampler",
+      "labelEs": "VARIADO 5.80",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0027" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-sampler:word-01", "text": "VARIADO", "normalized": "variado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00075" }], "cardIds": ["word-variado--sampler"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-sampler:excluded-price", "text": "5.80", "reason": "measurement", "rationale": "This is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00076" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-sandwiches-heading",
+      "labelEs": "SANDWICHES",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0028" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-sandwiches-heading:word-01", "text": "SANDWICHES", "normalized": "sandwiches", "explicitBounds": [{ "x": 10.9375, "y": 89.8551, "width": 15.7813, "height": 4.3478 }], "geometryRationale": "OCR fused the menu's left decorative flourish into SANDWICHES, so this measured box covers only the printed word.", "cardIds": ["word-sandwiches--printed-without-accent"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:menu-barbecue",
+      "labelEs": "BARBACOA 6.55",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:menu-barbecue:word-01", "text": "BARBACOA", "normalized": "barbacoa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00079" }], "cardIds": ["word-barbacoa"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:menu-barbecue:excluded-price", "text": "6.55", "reason": "measurement", "rationale": "This partially cropped but legible unit is a monetary menu price, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00080" }, { "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00081" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:order-request",
+      "labelEs": "QUERRÍAMOS EXACTAMENTE 15,05$ EN APERITIVOS, POR FAVOR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:order-request:word-01", "text": "QUERRÍAMOS", "normalized": "querríamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00011" }], "cardIds": ["word-querriamos--polite-request", "grammar-querer-conditional-politeness"] },
+        { "id": "es-xkcd-np-completo:order-request:word-02", "text": "EXACTAMENTE", "normalized": "exactamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00012" }], "cardIds": ["word-exactamente", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:order-request:word-03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00017" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-np-completo:order-request:word-04", "text": "APERITIVOS", "normalized": "aperitivos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00018" }], "cardIds": ["word-aperitivos", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:order-request:word-05", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00019" }], "cardIds": ["word-por--por-favor", "phrase-por-favor"] },
+        { "id": "es-xkcd-np-completo:order-request:word-06", "text": "FAVOR", "normalized": "favor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00020" }], "cardIds": ["word-favor", "phrase-por-favor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-np-completo:order-request:excluded-target-price", "text": "15,05$", "reason": "measurement", "rationale": "This is an exact monetary amount with a currency symbol, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00013" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:order-request:app-polite-would-like", "cardId": "grammar-querer-conditional-politeness", "participantWordIds": ["es-xkcd-np-completo:order-request:word-01"], "exampleEs": "QUERRÍAMOS", "explanationEn": "Querríamos uses the polite first-person-plural form for making a softened request." },
+        { "id": "es-xkcd-np-completo:order-request:app-please", "cardId": "phrase-por-favor", "participantWordIds": ["es-xkcd-np-completo:order-request:word-05", "es-xkcd-np-completo:order-request:word-06"], "exampleEs": "POR FAVOR", "explanationEn": "Por favor adds the conventional politeness marker to the request." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:exact-reaction",
+      "labelEs": "¿EXACTAMENTE? EH...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0007" }],
+      "words": [
+        { "id": "es-xkcd-np-completo:exact-reaction:word-01", "text": "EXACTAMENTE", "normalized": "exactamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00023" }], "cardIds": ["word-exactamente"] },
+        { "id": "es-xkcd-np-completo:exact-reaction:word-02", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00024" }], "cardIds": ["word-eh--hesitation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-np-completo:papers-offer",
+      "labelEs": "TOME. ESTOS ARTÍCULOS SOBRE EL PROBLEMA DE LA MOCHILA PUEDEN AYUDARLE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0012" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:papers-offer:word-01", "text": "TOME", "normalized": "tome", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00029" }], "cardIds": ["word-tome--formal-command", "grammar-formal-command"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-02", "text": "ESTOS", "normalized": "estos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00030" }], "cardIds": ["word-estos"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-03", "text": "ARTÍCULOS", "normalized": "artículos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00031" }], "cardIds": ["word-articulos--papers"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-04", "text": "SOBRE", "normalized": "sobre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00032" }], "cardIds": ["word-sobre--about"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00033" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-06", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00034" }], "cardIds": ["word-problema", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00035" }], "cardIds": ["word-de--of", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00036" }], "cardIds": ["word-la--article", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-09", "text": "MOCHILA", "normalized": "mochila", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00037" }], "cardIds": ["word-mochila--knapsack", "concept-knapsack-subset-sum"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-10", "text": "PUEDEN", "normalized": "pueden", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00038" }], "cardIds": ["word-pueden", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-np-completo:papers-offer:word-11", "text": "AYUDARLE", "normalized": "ayudarle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00039" }], "cardIds": ["word-ayudarle--formal", "grammar-poder-infinitive", "grammar-pronoun-attached-to-infinitive"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:papers-offer:app-formal-command", "cardId": "grammar-formal-command", "participantWordIds": ["es-xkcd-np-completo:papers-offer:word-01"], "exampleEs": "TOME", "explanationEn": "Tome is the usted command form used to tell one person formally to take something." },
+        { "id": "es-xkcd-np-completo:papers-offer:app-can-help", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-np-completo:papers-offer:word-10", "es-xkcd-np-completo:papers-offer:word-11"], "exampleEs": "PUEDEN AYUDARLE", "explanationEn": "Pueden changes for the plural subject, while ayudar remains in its dictionary form with le attached." },
+        { "id": "es-xkcd-np-completo:papers-offer:app-attached-pronoun", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-np-completo:papers-offer:word-11"], "exampleEs": "AYUDARLE", "explanationEn": "Ayudarle writes the unchanged verb ayudar and the formal object word le together as one word." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:other-tables",
+      "labelEs": "ESCUCHE, TENGO OTRAS SEIS MESAS QUE...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:other-tables:word-01", "text": "ESCUCHE", "normalized": "escuche", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00044" }], "cardIds": ["word-escuche--formal-command", "grammar-formal-command"] },
+        { "id": "es-xkcd-np-completo:other-tables:word-02", "text": "TENGO", "normalized": "tengo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00045" }], "cardIds": ["word-tengo"] },
+        { "id": "es-xkcd-np-completo:other-tables:word-03", "text": "OTRAS", "normalized": "otras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00046" }], "cardIds": ["word-otras--adjective", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:other-tables:word-04", "text": "SEIS", "normalized": "seis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00047" }], "cardIds": ["word-seis", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:other-tables:word-05", "text": "MESAS", "normalized": "mesas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00048" }], "cardIds": ["word-mesas", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:other-tables:word-06", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00049" }], "cardIds": ["word-que--relative"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:other-tables:app-formal-command", "cardId": "grammar-formal-command", "participantWordIds": ["es-xkcd-np-completo:other-tables:word-01"], "exampleEs": "ESCUCHE", "explanationEn": "Escuche is the usted command form used to ask one person formally to listen." }
+      ]
+    },
+    {
+      "id": "es-xkcd-np-completo:fastest-route",
+      "labelEs": "LO MÁS RÁPIDO POSIBLE, POR SUPUESTO. ¿QUIERE ALGO SOBRE EL VIAJANTE?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-np-completo:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-np-completo:fastest-route:word-01", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00054" }], "cardIds": ["word-lo--fixed-lo-mas-posible", "phrase-lo-mas-posible", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-02", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00055" }], "cardIds": ["word-mas--fixed-lo-mas-posible", "phrase-lo-mas-posible", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-03", "text": "RÁPIDO", "normalized": "rápido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00056" }], "cardIds": ["word-rapido", "phrase-lo-mas-posible", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-04", "text": "POSIBLE", "normalized": "posible", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00057" }], "cardIds": ["word-posible", "phrase-lo-mas-posible", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-05", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00058" }], "cardIds": ["word-por--por-supuesto", "phrase-por-supuesto"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-06", "text": "SUPUESTO", "normalized": "supuesto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00059" }], "cardIds": ["word-supuesto--por-supuesto", "phrase-por-supuesto"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-07", "text": "QUIERE", "normalized": "quiere", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00060" }], "cardIds": ["word-quiere--formal", "grammar-formal-address"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-08", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00061" }], "cardIds": ["word-algo"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-09", "text": "SOBRE", "normalized": "sobre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00062" }], "cardIds": ["word-sobre--about"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-10", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00068" }], "cardIds": ["word-el--article", "concept-traveling-salesperson-problem"] },
+        { "id": "es-xkcd-np-completo:fastest-route:word-11", "text": "VIAJANTE", "normalized": "viajante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-np-completo:ocr-token-00069" }], "cardIds": ["word-viajante--salesperson", "concept-traveling-salesperson-problem"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-np-completo:fastest-route:app-as-possible", "cardId": "phrase-lo-mas-posible", "participantWordIds": ["es-xkcd-np-completo:fastest-route:word-01", "es-xkcd-np-completo:fastest-route:word-02", "es-xkcd-np-completo:fastest-route:word-03", "es-xkcd-np-completo:fastest-route:word-04"], "exampleEs": "LO MÁS RÁPIDO POSIBLE", "explanationEn": "Lo más and posible frame rápido as the quality being pushed to the greatest practical degree." },
+        { "id": "es-xkcd-np-completo:fastest-route:app-of-course", "cardId": "phrase-por-supuesto", "participantWordIds": ["es-xkcd-np-completo:fastest-route:word-05", "es-xkcd-np-completo:fastest-route:word-06"], "exampleEs": "POR SUPUESTO", "explanationEn": "Por supuesto marks the speaker's ready agreement that this requirement is obvious." },
+        { "id": "es-xkcd-np-completo:fastest-route:app-formal-address", "cardId": "grammar-formal-address", "participantWordIds": ["es-xkcd-np-completo:fastest-route:word-07"], "exampleEs": "QUIERE", "explanationEn": "Quiere uses the same singular form as él or ella while addressing the customer formally as usted." }
+      ]
+    }
+  ]
+}
