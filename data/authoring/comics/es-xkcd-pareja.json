@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-pareja",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Couple",
+  "titleEs": "Pareja",
+  "titleText": {
+    "es": "Facebook define las relaciones. ",
+    "en": "Facebook defines relationships.",
+    "noteEn": "The Spanish archive preserves only the first sentence of the original title text. The official English source adds a second joke about a breakup being delayed by a failed internet connection."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-somos--identity",
+      "kind": "word",
+      "promptEs": "somos",
+      "answerEn": "we are (an identity or defining description)",
+      "noteEn": "Somos is the present form of ser used with nosotros or nosotras, “we.” Ser presents an identity, category, or defining description; estamos normally presents a state or location instead.",
+      "example": { "es": "Somos vecinos.", "en": "We are neighbors." },
+      "tags": ["word", "ser", "identity", "present", "A1"]
+    },
+    {
+      "id": "word-pareja--couple",
+      "kind": "word",
+      "promptEs": "pareja",
+      "answerEn": "couple; two romantic partners together",
+      "noteEn": "Pareja can name two people as a couple or one person's partner. This is the collective sense for the two people together.",
+      "example": { "es": "Lucía y Marta son pareja.", "en": "Lucía and Marta are a couple." },
+      "tags": ["word", "relationship", "noun", "A1"]
+    },
+    {
+      "id": "word-me--gustar-experiencer",
+      "kind": "word",
+      "promptEs": "me",
+      "answerEn": "marks me as the person who likes something",
+      "noteEn": "With gustar, Spanish presents the liked thing as pleasing to a person. Me identifies the speaker as that person; it does not become a separate English word when the natural translation uses “I.”",
+      "example": { "es": "Me gusta el café.", "en": "I like coffee." },
+      "tags": ["word", "gustar", "experiencer", "pronoun", "A1"]
+    },
+    {
+      "id": "word-gusta--i-like",
+      "kind": "word",
+      "promptEs": "gusta",
+      "answerEn": "I like; is pleasing to me",
+      "noteEn": "With me before it, gusta expresses that one thing or situation is pleasing to the speaker. The liked thing controls the verb: use gusta for one thing and gustan for more than one.",
+      "example": { "es": "Me gusta este libro.", "en": "I like this book." },
+      "tags": ["word", "gustar", "singular", "present", "A1"]
+    },
+    {
+      "id": "grammar-ser-role-without-indefinite-article",
+      "kind": "grammar",
+      "promptEs": "ser + profesión, relación o rol sin un/una",
+      "questionEn": "When you say someone's profession, relationship, or role in Spanish, do you always need a word for “a” or “an”?",
+      "answerEn": "Often no. Use a form of ser directly before the profession, relationship, or role when it has no added description.",
+      "noteEn": "Ser changes to match the person: soy, eres, es, somos, sois, or son. A bare profession or role normally follows without un or una: soy estudiante. An article commonly returns when the noun has an added description or is being singled out: es una estudiante excelente.",
+      "example": { "es": "Luis es profesor.", "en": "Luis is a teacher." },
+      "tags": ["grammar", "ser", "article omission", "roles", "A1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-pareja:opening-question",
+      "labelEs": "ENTONCES, ¿YA ESTÁ? ¿SOMOS PAREJA?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-pareja:opening-question:w01", "text": "ENTONCES", "normalized": "entonces", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00005" }], "cardIds": ["word-entonces"] },
+        { "id": "es-xkcd-pareja:opening-question:w02", "text": "YA", "normalized": "ya", "explicitBounds": [{ "x": 16.0, "y": 6.0, "width": 3.1, "height": 12.7 }], "geometryRationale": "Vision merged the inverted question mark into this word and misread the result as ZYA; this measured box isolates the two printed letters YA.", "cardIds": ["word-ya--thats-it", "phrase-ya-esta"] },
+        { "id": "es-xkcd-pareja:opening-question:w03", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00012" }], "cardIds": ["word-está", "phrase-ya-esta"] },
+        { "id": "es-xkcd-pareja:opening-question:w04", "text": "SOMOS", "normalized": "somos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00013" }], "cardIds": ["word-somos--identity", "grammar-ser-role-without-indefinite-article"] },
+        { "id": "es-xkcd-pareja:opening-question:w05", "text": "PAREJA", "normalized": "pareja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00016" }], "cardIds": ["word-pareja--couple", "grammar-ser-role-without-indefinite-article"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-pareja:opening-question:app-ya-esta",
+          "cardId": "phrase-ya-esta",
+          "participantWordIds": ["es-xkcd-pareja:opening-question:w02", "es-xkcd-pareja:opening-question:w03"],
+          "exampleEs": "YA ESTÁ",
+          "explanationEn": "Ya está is used here as a compact check about whether the present situation is now settled or complete."
+        },
+        {
+          "id": "es-xkcd-pareja:opening-question:app-ser-role-without-article",
+          "cardId": "grammar-ser-role-without-indefinite-article",
+          "participantWordIds": ["es-xkcd-pareja:opening-question:w04", "es-xkcd-pareja:opening-question:w05"],
+          "exampleEs": "SOMOS PAREJA",
+          "explanationEn": "Somos gives the form of ser for “we,” and pareja names the relationship directly without una between them."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-pareja:uncertain-reply",
+      "labelEs": "NO LO SÉ. ME GUSTA ESTO. SIMPLEMENTE... NO LO SÉ.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0010" }
+      ],
+      "words": [
+        { "id": "es-xkcd-pareja:uncertain-reply:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00001" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w02", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00002" }], "cardIds": ["word-lo--object-pronoun", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w03", "text": "SÉ", "normalized": "sé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00003" }], "cardIds": ["word-sé", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w04", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00004" }], "cardIds": ["word-me--gustar-experiencer", "grammar-gustar-with-noun"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w05", "text": "GUSTA", "normalized": "gusta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00014" }], "cardIds": ["word-gusta--i-like", "grammar-gustar-with-noun"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w06", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00015" }], "cardIds": ["word-esto", "grammar-gustar-with-noun"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w07", "text": "SIMPLEMENTE", "normalized": "simplemente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00017" }], "cardIds": ["word-simplemente"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w08", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00020" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w09", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00021" }], "cardIds": ["word-lo--object-pronoun", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-pareja:uncertain-reply:w10", "text": "SÉ", "normalized": "sé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00022" }], "cardIds": ["word-sé", "grammar-direct-object-pronoun-before-finite-verb"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-pareja:uncertain-reply:app-first-lo",
+          "cardId": "word-lo--object-pronoun",
+          "participantWordIds": ["es-xkcd-pareja:uncertain-reply:w02"],
+          "exampleEs": "LO",
+          "explanationEn": "Lo points back to the unstated answer about the relationship, treating that whole answer as the thing that is not known."
+        },
+        {
+          "id": "es-xkcd-pareja:uncertain-reply:app-first-lo-before-verb",
+          "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+          "participantWordIds": ["es-xkcd-pareja:uncertain-reply:w02", "es-xkcd-pareja:uncertain-reply:w03"],
+          "exampleEs": "LO SÉ",
+          "explanationEn": "Lo stands immediately before sé; sé already carries the speaker as its understood subject, so the short object word is written separately in front."
+        },
+        {
+          "id": "es-xkcd-pareja:uncertain-reply:app-gustar",
+          "cardId": "grammar-gustar-with-noun",
+          "participantWordIds": ["es-xkcd-pareja:uncertain-reply:w04", "es-xkcd-pareja:uncertain-reply:w05", "es-xkcd-pareja:uncertain-reply:w06"],
+          "exampleEs": "ME GUSTA ESTO",
+          "explanationEn": "Me identifies the speaker as the person experiencing the liking, while gusta stays singular because esto presents one situation as the liked thing."
+        },
+        {
+          "id": "es-xkcd-pareja:uncertain-reply:app-second-lo",
+          "cardId": "word-lo--object-pronoun",
+          "participantWordIds": ["es-xkcd-pareja:uncertain-reply:w09"],
+          "exampleEs": "LO",
+          "explanationEn": "This second lo again stands for the unstated answer being considered, rather than a named masculine object."
+        },
+        {
+          "id": "es-xkcd-pareja:uncertain-reply:app-second-lo-before-verb",
+          "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+          "participantWordIds": ["es-xkcd-pareja:uncertain-reply:w09", "es-xkcd-pareja:uncertain-reply:w10"],
+          "exampleEs": "LO SÉ",
+          "explanationEn": "The repeated lo again occupies the normal position directly before the conjugated verb sé."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-pareja:facebook-proposal",
+      "labelEs": "VALE. ¿QUIERES SER MI \"IT'S COMPLICATED\" EN FACEBOOK?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-pareja:ocr-line-0011" }
+      ],
+      "words": [
+        { "id": "es-xkcd-pareja:facebook-proposal:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00007" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-pareja:facebook-proposal:w02", "text": "QUIERES", "normalized": "quieres", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00008" }], "cardIds": ["word-quieres", "grammar-querer-infinitive"] },
+        { "id": "es-xkcd-pareja:facebook-proposal:w03", "text": "SER", "normalized": "ser", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00009" }], "cardIds": ["word-ser", "grammar-querer-infinitive"] },
+        { "id": "es-xkcd-pareja:facebook-proposal:w04", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00010" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-pareja:facebook-proposal:w05", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00019" }], "cardIds": ["word-en"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-pareja:facebook-proposal:excluded-english-status",
+          "text": "IT'S COMPLICATED",
+          "reason": "non-spanish-text",
+          "rationale": "This is Facebook's relationship-status label printed in English, not a Spanish lexical expression.",
+          "geometryRefs": [
+            { "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00011" },
+            { "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00018" }
+          ]
+        },
+        {
+          "id": "es-xkcd-pareja:facebook-proposal:excluded-facebook-brand",
+          "text": "FACEBOOK",
+          "reason": "non-spanish-text",
+          "rationale": "Facebook is the unchanged proper brand name of the website, not Spanish vocabulary.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-pareja:ocr-token-00023" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-pareja:facebook-proposal:app-querer-infinitive",
+          "cardId": "grammar-querer-infinitive",
+          "participantWordIds": ["es-xkcd-pareja:facebook-proposal:w02", "es-xkcd-pareja:facebook-proposal:w03"],
+          "exampleEs": "QUIERES SER",
+          "explanationEn": "Quieres changes for one familiar listener, while ser stays in its unchanged dictionary form as the desired action."
+        }
+      ]
+    }
+  ]
+}

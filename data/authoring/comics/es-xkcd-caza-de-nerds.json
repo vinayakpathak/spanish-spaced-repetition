@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-caza-de-nerds",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Nerd Sniping",
+  "titleEs": "Caza de nerds",
+  "titleText": {
+    "es": "Vi por primera vez este problema en el test de aptitud de Google Labs. Un profesor y yo llenamos una pizarra sin conseguir nada. Divertíos.",
+    "en": "I first saw this problem on the Google Labs aptitude test. A professor and I filled a blackboard without getting anywhere. Have fun.",
+    "noteEn": "The archive title literally means “Nerd Hunting,” while the official English title is “Nerd Sniping.” The Spanish title text closely translates the official source; divertíos is an informal plural command used mainly in Spain."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-cerebro",
+      "kind": "word",
+      "promptEs": "cerebro",
+      "answerEn": "brain",
+      "noteEn": "",
+      "tags": ["word", "body", "noun", "A1"]
+    },
+    {
+      "id": "word-incapacita--becomes-disabled",
+      "kind": "word",
+      "promptEs": "incapacita",
+      "answerEn": "becomes disabled; becomes unable to function (with se)",
+      "noteEn": "Incapacita is a present form of incapacitar. With se before it, the person or thing being described enters a disabled or nonfunctioning state rather than disabling something else.",
+      "example": { "es": "El sistema se incapacita con el calor.", "en": "The system becomes unable to function in the heat." },
+      "tags": ["word", "change of state", "present", "B1"]
+    },
+    {
+      "id": "word-facilidad",
+      "kind": "word",
+      "promptEs": "facilidad",
+      "answerEn": "ease (in con facilidad: easily)",
+      "noteEn": "Facilidad names ease or lack of difficulty. Con facilidad describes how something happens and is naturally translated as “easily.”",
+      "example": { "es": "Ana aprende idiomas con facilidad.", "en": "Ana learns languages easily." },
+      "tags": ["word", "manner", "noun", "A2"]
+    },
+    {
+      "id": "word-enseñas--show",
+      "kind": "word",
+      "promptEs": "enseñas",
+      "answerEn": "you show (one familiar person or thing)",
+      "noteEn": "Enseñas is the present form of enseñar used for tú, one familiar listener. Enseñar can mean either “to teach” or “to show”; the surrounding object decides which sense applies.",
+      "example": { "es": "Me enseñas una foto.", "en": "You show me a photo." },
+      "tags": ["word", "show", "present", "informal singular", "A2"]
+    },
+    {
+      "id": "word-interesante",
+      "kind": "word",
+      "promptEs": "interesante",
+      "answerEn": "interesting",
+      "noteEn": "",
+      "tags": ["word", "description", "A1"]
+    },
+    {
+      "id": "word-lo--nonstandard-subject-it",
+      "kind": "word",
+      "promptEs": "lo",
+      "answerEn": "“it” here, but this is nonstandard Spanish; standard Spanish would omit lo",
+      "noteEn": "Lo normally stands for the person or thing receiving an action; it does not name who or what performs that action. Spanish usually leaves an already understood performer unstated because the verb form carries it. A standard version would say abandona todo without lo.",
+      "example": { "es": "La máquina falla y abandona la tarea.", "en": "The machine fails and abandons the task." },
+      "tags": ["word", "source anomaly", "pronoun", "usage warning"]
+    },
+    {
+      "id": "word-abandona--drops",
+      "kind": "word",
+      "promptEs": "abandona",
+      "answerEn": "abandons; drops",
+      "noteEn": "Abandona is a present form used with one person or thing. With todo, it describes dropping or leaving everything else aside.",
+      "example": { "es": "Marta abandona el plan.", "en": "Marta abandons the plan." },
+      "tags": ["word", "present", "leave", "A2"]
+    },
+    {
+      "id": "word-involuntariamente",
+      "kind": "word",
+      "promptEs": "involuntariamente",
+      "answerEn": "involuntarily; without intending to",
+      "noteEn": "",
+      "tags": ["word", "manner", "adverb", "B1"]
+    },
+    {
+      "id": "word-ponerse--get-to-work",
+      "kind": "word",
+      "promptEs": "ponerse",
+      "answerEn": "to get started; to get to work (on something)",
+      "noteEn": "Ponerse is the dictionary form poner with se attached. In ponerse a ello, it describes turning one's attention to a matter and beginning work on it.",
+      "example": { "es": "Tenemos tiempo para ponernos a trabajar.", "en": "We have time to get to work." },
+      "tags": ["word", "pronominal verb", "beginning", "A2"]
+    },
+    {
+      "id": "word-a--fixed-ponerse-a-ello",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; links ponerse to ello",
+      "noteEn": "Ponerse a ello requires a between ponerse and ello. Translating this a by itself as “to” would sound unnatural in English.",
+      "example": { "es": "Ahora me pongo a ello.", "en": "Now I will get to work on it." },
+      "tags": ["word", "fixed expression", "linking word", "A2"]
+    },
+    {
+      "id": "word-ello--matter",
+      "kind": "word",
+      "promptEs": "ello",
+      "answerEn": "it; that matter or task",
+      "noteEn": "Ello is a small neutral reference word that can point back to an idea, event, or task rather than to a masculine or feminine object. It is more common in formal writing and in fixed expressions such as ponerse a ello.",
+      "example": { "es": "Hablaremos de ello mañana.", "en": "We will talk about it tomorrow." },
+      "tags": ["word", "pronoun", "reference", "B1"]
+    },
+    {
+      "id": "phrase-ponerse-a-ello",
+      "kind": "phrase",
+      "promptEs": "ponerse a ello",
+      "questionEn": "How do you say that someone gets started on a matter or task already mentioned?",
+      "answerEn": "Use a matching form of ponerse, then a ello.",
+      "noteEn": "Ponerse changes for the person and time: me pongo, te pones, se pone, nos ponemos, and so on. Ello points back to the matter or task, while a is the required link between the two parts.",
+      "example": { "es": "Después de comer, nos ponemos a ello.", "en": "After lunch, we get to work on it." },
+      "tags": ["phrase", "starting work", "pronominal verb", "A2"]
+    },
+    {
+      "id": "word-llevado--led-to",
+      "kind": "word",
+      "promptEs": "llevado",
+      "answerEn": "led; prompted (after ha)",
+      "noteEn": "Llevado is the completed-action form of llevar. After ha and before a plus another verb, it says that something has led or prompted someone to do an action.",
+      "example": { "es": "La duda me ha llevado a preguntar.", "en": "The doubt has led me to ask." },
+      "tags": ["word", "completed-action form", "cause", "B1"]
+    },
+    {
+      "id": "word-inventar",
+      "kind": "word",
+      "promptEs": "inventar",
+      "answerEn": "to invent; to devise",
+      "noteEn": "",
+      "tags": ["word", "dictionary form", "creation", "A2"]
+    },
+    {
+      "id": "word-deporte",
+      "kind": "word",
+      "promptEs": "deporte",
+      "answerEn": "sport",
+      "noteEn": "",
+      "tags": ["word", "activity", "noun", "A1"]
+    },
+    {
+      "id": "word-caza--hunting",
+      "kind": "word",
+      "promptEs": "caza",
+      "answerEn": "hunting; hunt",
+      "noteEn": "Caza can name the activity of hunting or a hunt itself.",
+      "example": { "es": "La caza está prohibida aquí.", "en": "Hunting is forbidden here." },
+      "tags": ["word", "hunting", "noun", "A2"]
+    },
+    {
+      "id": "word-nerds--loanword",
+      "kind": "word",
+      "promptEs": "nerds",
+      "answerEn": "nerds",
+      "noteEn": "Nerd is an English loanword also used informally in Spanish for a highly intellectual or technically absorbed person. This printed plural keeps the English -s.",
+      "example": { "es": "Somos nerds de la informática.", "en": "We are computer nerds." },
+      "tags": ["word", "loanword", "people", "informal"]
+    },
+    {
+      "id": "grammar-llevar-a-alguien-a-infinitive",
+      "kind": "grammar",
+      "promptEs": "llevar a alguien a + verbo en forma de diccionario",
+      "questionEn": "How do you say that something leads or prompts someone to do an action?",
+      "answerEn": "Use a form of llevar, mark the affected person, then add a and the action verb in its dictionary form.",
+      "noteEn": "Llevar changes for the person and time doing the leading. The affected person can appear as me, te, lo, la, nos, los, las, or a named person. The final action stays in its unchanged form ending in -ar, -er, or -ir.",
+      "example": { "es": "La curiosidad me llevó a preguntar.", "en": "Curiosity led me to ask." },
+      "tags": ["grammar", "cause", "infinitive", "B1"]
+    },
+    {
+      "id": "word-físico--physicist",
+      "kind": "word",
+      "promptEs": "físico",
+      "answerEn": "physicist (masculine singular)",
+      "noteEn": "Físico can be an adjective meaning “physical,” but here it is a noun for a person who works in physics.",
+      "example": { "es": "El físico estudia la luz.", "en": "The physicist studies light." },
+      "tags": ["word", "profession", "physics", "masculine singular"]
+    },
+    {
+      "id": "word-cruzando--crossing",
+      "kind": "word",
+      "promptEs": "cruzando",
+      "answerEn": "crossing; going across",
+      "noteEn": "Cruzando is the ongoing-action form of cruzar. Regular -ar verbs replace -ar with -ando for this form.",
+      "example": { "es": "Veo a Pablo cruzando la plaza.", "en": "I see Pablo crossing the square." },
+      "tags": ["word", "ongoing action", "gerund", "A2"]
+    },
+    {
+      "id": "grammar-ver-a-alguien-gerundio",
+      "kind": "grammar",
+      "promptEs": "ver a alguien + acción en -ando/-iendo",
+      "questionEn": "How do you say that you see someone while that person is doing an action?",
+      "answerEn": "Use a form of ver, then a before the person, followed by the action form ending in -ando or -iendo.",
+      "noteEn": "Ver changes for who sees. A marks the person being seen, and the final -ando or -iendo form presents that person's action as in progress: correr becomes corriendo and caminar becomes caminando.",
+      "example": { "es": "Veo a Marta corriendo.", "en": "I see Marta running." },
+      "tags": ["grammar", "perception", "ongoing action", "A2"]
+    },
+    {
+      "id": "word-malla--electrical-network",
+      "kind": "word",
+      "promptEs": "malla",
+      "answerEn": "grid; mesh network",
+      "noteEn": "In an electrical diagram, malla describes a gridlike network of connected branches rather than a piece of fabric.",
+      "example": { "es": "La corriente pasa por una malla de resistencias.", "en": "The current passes through a grid of resistors." },
+      "tags": ["word", "electricity", "network", "technical"]
+    },
+    {
+      "id": "word-infinita",
+      "kind": "word",
+      "promptEs": "infinita",
+      "answerEn": "infinite; endless (feminine singular)",
+      "noteEn": "Infinita has a feminine ending because it describes the feminine noun malla.",
+      "example": { "es": "Imagina una línea infinita.", "en": "Imagine an infinite line." },
+      "tags": ["word", "description", "feminine singular", "A2"]
+    },
+    {
+      "id": "word-resistencias--electrical",
+      "kind": "word",
+      "promptEs": "resistencias",
+      "answerEn": "resistors; electrical resistances",
+      "noteEn": "In a circuit, resistencia can name either opposition to electric current or a component—a resistor—that provides it. The diagram makes the component sense prominent here.",
+      "example": { "es": "Conectamos dos resistencias al circuito.", "en": "We connect two resistors to the circuit." },
+      "tags": ["word", "electricity", "plural", "technical"]
+    },
+    {
+      "id": "word-ideales--idealized",
+      "kind": "word",
+      "promptEs": "ideales",
+      "answerEn": "ideal; idealized (plural)",
+      "noteEn": "In a technical problem, ideal describes components treated as perfectly matching a simplified model, without real-world imperfections.",
+      "example": { "es": "El modelo usa componentes ideales.", "en": "The model uses idealized components." },
+      "tags": ["word", "technical description", "plural", "B1"]
+    },
+    {
+      "id": "word-cuál--identity-or-value",
+      "kind": "word",
+      "promptEs": "cuál",
+      "answerEn": "what; which one (asking for an identity or value)",
+      "noteEn": "Before es or son, cuál often asks the listener to identify the answer or value. Natural English frequently uses “what” even though cuál is related to “which.”",
+      "example": { "es": "¿Cuál es la respuesta?", "en": "What is the answer?" },
+      "tags": ["word", "question", "identity", "A1"]
+    },
+    {
+      "id": "word-resistencia--electrical",
+      "kind": "word",
+      "promptEs": "resistencia",
+      "answerEn": "electrical resistance",
+      "noteEn": "Electrical resistance measures how strongly a component or network opposes electric current.",
+      "example": { "es": "Medimos la resistencia del circuito.", "en": "We measure the circuit's resistance." },
+      "tags": ["word", "electricity", "singular", "technical"]
+    },
+    {
+      "id": "word-equivalente",
+      "kind": "word",
+      "promptEs": "equivalente",
+      "answerEn": "equivalent; having the same effect",
+      "noteEn": "",
+      "tags": ["word", "comparison", "description", "A2"]
+    },
+    {
+      "id": "word-nodos--electrical-network",
+      "kind": "word",
+      "promptEs": "nodos",
+      "answerEn": "nodes; connection points in a network",
+      "noteEn": "In a circuit diagram, a node is a point where connected wires or components share the same electrical potential.",
+      "example": { "es": "Los cables se unen en dos nodos.", "en": "The wires join at two nodes." },
+      "tags": ["word", "electricity", "network", "plural"]
+    },
+    {
+      "id": "word-señalados--indicated",
+      "kind": "word",
+      "promptEs": "señalados",
+      "answerEn": "marked; indicated (masculine plural)",
+      "noteEn": "Señalados describes the masculine plural nodos and points to the ones marked in the diagram.",
+      "example": { "es": "Compara los puntos señalados.", "en": "Compare the marked points." },
+      "tags": ["word", "description", "masculine plural", "A2"]
+    },
+    {
+      "id": "concept-equivalent-resistance",
+      "kind": "concept",
+      "promptEs": "resistencia equivalente",
+      "answerEn": "the single resistance that would have the same electrical behavior between two terminals as the whole network",
+      "noteEn": "A network of many resistors can sometimes be represented, from two chosen connection points, by one resistance that produces the same relationship between voltage and current. Finding that value simplifies the network without claiming that its internal layout is the same.",
+      "example": { "es": "Calculamos la resistencia equivalente entre A y B.", "en": "We calculate the equivalent resistance between A and B." },
+      "tags": ["concept", "electricity", "circuits", "technical"]
+    },
+    {
+      "id": "word-mmm--hesitation",
+      "kind": "word",
+      "promptEs": "mmm",
+      "answerEn": "hmm; a sound of hesitation or thought",
+      "noteEn": "Mmm represents a pause while someone thinks, hesitates, or considers an idea.",
+      "example": { "es": "Mmm... no estoy seguro.", "en": "Hmm... I am not sure." },
+      "tags": ["word", "interjection", "hesitation", "informal"]
+    },
+    {
+      "id": "word-empezamos--start",
+      "kind": "word",
+      "promptEs": "empezamos",
+      "answerEn": "we start; we begin",
+      "noteEn": "Empezamos is the present form of empezar used for nosotros or nosotras, “we.”",
+      "example": { "es": "Empezamos por la primera pregunta.", "en": "We start with the first question." },
+      "tags": ["word", "beginning", "present", "A1"]
+    },
+    {
+      "id": "word-podríamos--tentative-suggestion",
+      "kind": "word",
+      "promptEs": "podríamos",
+      "answerEn": "we could (a possibility or tentative suggestion)",
+      "noteEn": "Podríamos is the “would/could” form of poder for “we.” Poder keeps its whole dictionary form and adds -íamos. It often makes a suggestion sound tentative rather than stating a firm plan.",
+      "example": { "es": "Podríamos salir temprano.", "en": "We could leave early." },
+      "tags": ["word", "conditional", "suggestion", "A2"]
+    },
+    {
+      "id": "word-ver--fixed-nada-que-ver",
+      "kind": "word",
+      "promptEs": "ver",
+      "answerEn": "connection; relevance (inside nada que ver con)",
+      "noteEn": "Ver normally means “to see.” Inside no tener nada que ver con, however, it is part of a fixed expression about having no connection or involvement; translating ver alone as “see” would be misleading.",
+      "example": { "es": "Eso no tiene nada que ver con el precio.", "en": "That has nothing to do with the price." },
+      "tags": ["word", "fixed expression", "connection", "A2"]
+    },
+    {
+      "id": "word-hazte--make-yourself",
+      "kind": "word",
+      "promptEs": "hazte",
+      "answerEn": "make yourself; get yourself (informal command)",
+      "noteEn": "Haz is the irregular positive command of hacer for one familiar listener. Te is attached to its end and presents the result as being made or obtained for that listener.",
+      "example": { "es": "Hazte una taza de té.", "en": "Make yourself a cup of tea." },
+      "tags": ["word", "command", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-cartel",
+      "kind": "word",
+      "promptEs": "cartel",
+      "answerEn": "sign; poster",
+      "noteEn": "",
+      "tags": ["word", "written display", "noun", "A1"]
+    },
+    {
+      "id": "word-físicos--physicists",
+      "kind": "word",
+      "promptEs": "físicos",
+      "answerEn": "physicists",
+      "noteEn": "As a noun, físicos names people who work in physics. The same written form can be an adjective meaning “physical” when it describes a plural masculine noun.",
+      "example": { "es": "Los físicos comparan los datos.", "en": "The physicists compare the data." },
+      "tags": ["word", "profession", "physics", "plural"]
+    },
+    {
+      "id": "word-puntos--score",
+      "kind": "word",
+      "promptEs": "puntos",
+      "answerEn": "points in a score",
+      "noteEn": "Punto can mean a dot, a location, or a point in a score. Here the plural counts the value awarded in a game-like scoring system.",
+      "example": { "es": "Nuestro equipo tiene diez puntos.", "en": "Our team has ten points." },
+      "tags": ["word", "score", "game", "plural"]
+    },
+    {
+      "id": "grammar-parallel-clause-ellipsis",
+      "kind": "grammar",
+      "promptEs": "primera afirmación; segunda persona, cosa o valor con palabras repetidas omitidas",
+      "questionEn": "Can Spanish leave out repeated words in the second part of a comparison or list?",
+      "answerEn": "Yes. State the full first part, then keep only the changed person, thing, or value when the repeated words are already clear.",
+      "noteEn": "This omission is called ellipsis: words are understood even though they are not repeated. A comma or semicolon often marks the gap. The listener recovers the missing verb and other repeated material from the first parallel part.",
+      "example": { "es": "Ana tiene dos libros; Luis, tres.", "en": "Ana has two books; Luis has three." },
+      "tags": ["grammar", "ellipsis", "parallel structure", "B1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-caza-de-nerds:brain-description",
+      "labelEs": "HAY UN CIERTO TIPO DE CEREBRO QUE SE INCAPACITA CON FACILIDAD.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0009" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w01", "text": "HAY", "normalized": "hay", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00010" }], "cardIds": ["word-hay"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w02", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00011" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w03", "text": "CIERTO", "normalized": "cierto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00012" }], "cardIds": ["word-cierto--particular"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w04", "text": "TIPO", "normalized": "tipo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00013" }], "cardIds": ["word-tipo--kind"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w05", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00014" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w06", "text": "CEREBRO", "normalized": "cerebro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00015" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00022" }], "cardIds": ["word-cerebro"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w07", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00023" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w08", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00024" }], "cardIds": ["word-se--intransitive-change"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w09", "text": "INCAPACITA", "normalized": "incapacita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00025" }], "cardIds": ["word-incapacita--becomes-disabled"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w10", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00026" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-caza-de-nerds:brain-description:w11", "text": "FACILIDAD", "normalized": "facilidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00034" }], "cardIds": ["word-facilidad"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:problem-effect",
+      "labelEs": "SI LE ENSEÑAS UN PROBLEMA INTERESANTE, LO ABANDONA TODO INVOLUNTARIAMENTE PARA PONERSE A ELLO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00042" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w02", "text": "LE", "normalized": "le", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00043" }], "cardIds": ["word-le--affected-receiver-thing"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w03", "text": "ENSEÑAS", "normalized": "enseñas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00044" }], "cardIds": ["word-enseñas--show", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00049" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w05", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00050" }], "cardIds": ["word-problema"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w06", "text": "INTERESANTE", "normalized": "interesante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00051" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00055" }], "cardIds": ["word-interesante"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w07", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00056" }], "cardIds": ["word-lo--nonstandard-subject-it"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w08", "text": "ABANDONA", "normalized": "abandona", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00057" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00061" }], "cardIds": ["word-abandona--drops"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w09", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00062" }], "cardIds": ["word-todo"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w10", "text": "INVOLUNTARIAMENTE", "normalized": "involuntariamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00063" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00064" }], "cardIds": ["word-involuntariamente"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w11", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00065" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w12", "text": "PONERSE", "normalized": "ponerse", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00066" }], "cardIds": ["word-ponerse--get-to-work", "grammar-para-infinitive-purpose", "grammar-pronoun-attached-to-infinitive", "phrase-ponerse-a-ello"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w13", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00067" }], "cardIds": ["word-a--fixed-ponerse-a-ello", "phrase-ponerse-a-ello"] },
+        { "id": "es-xkcd-caza-de-nerds:problem-effect:w14", "text": "ELLO", "normalized": "ello", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00068" }], "cardIds": ["word-ello--matter", "phrase-ponerse-a-ello"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-real-condition",
+          "cardId": "grammar-si-present-real-condition",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w01", "es-xkcd-caza-de-nerds:problem-effect:w03"],
+          "exampleEs": "SI LE ENSEÑAS",
+          "explanationEn": "Si introduces a genuinely possible condition, and enseñas uses the ordinary present form for one familiar listener; le identifies the receiver between them."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-recipient-le",
+          "cardId": "word-le--affected-receiver-thing",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w02"],
+          "exampleEs": "LE",
+          "explanationEn": "Le points back to the previously named type of brain as the receiver of what is shown."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-nonstandard-lo",
+          "cardId": "word-lo--nonstandard-subject-it",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w07"],
+          "exampleEs": "LO",
+          "explanationEn": "The printed lo attempts to carry the original English “it” as the doer, but standard Spanish would leave that already understood doer unstated before abandona."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-purpose",
+          "cardId": "grammar-para-infinitive-purpose",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w11", "es-xkcd-caza-de-nerds:problem-effect:w12"],
+          "exampleEs": "PARA PONERSE",
+          "explanationEn": "Para introduces the purpose, and poner remains in its unchanged dictionary form inside ponerse."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-attached-se",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w12"],
+          "exampleEs": "PONERSE",
+          "explanationEn": "Se attaches directly to the unchanged verb poner and makes the printed result one word."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:problem-effect:app-ponerse-a-ello",
+          "cardId": "phrase-ponerse-a-ello",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:problem-effect:w12", "es-xkcd-caza-de-nerds:problem-effect:w13", "es-xkcd-caza-de-nerds:problem-effect:w14"],
+          "exampleEs": "PONERSE A ELLO",
+          "explanationEn": "Ponerse keeps the action in its dictionary form with se attached, a supplies the fixed link, and ello points back to the task already mentioned."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:new-sport",
+      "labelEs": "ESTO ME HA LLEVADO A INVENTAR UN NUEVO DEPORTE: LA CAZA DE NERDS. ¿VES A ESE FÍSICO CRUZANDO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0012" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w01", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00001" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w02", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00002" }], "cardIds": ["word-me--direct", "grammar-llevar-a-alguien-a-infinitive"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w03", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00003" }], "cardIds": ["word-ha", "grammar-present-perfect", "grammar-llevar-a-alguien-a-infinitive"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w04", "text": "LLEVADO", "normalized": "llevado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00004" }], "cardIds": ["word-llevado--led-to", "grammar-present-perfect", "grammar-llevar-a-alguien-a-infinitive"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w05", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00005" }], "cardIds": ["word-a--infinitive-link", "grammar-llevar-a-alguien-a-infinitive"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w06", "text": "INVENTAR", "normalized": "inventar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00019" }], "cardIds": ["word-inventar", "grammar-llevar-a-alguien-a-infinitive"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00020" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w08", "text": "NUEVO", "normalized": "nuevo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00021" }], "cardIds": ["word-nuevo"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w09", "text": "DEPORTE", "normalized": "deporte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00030" }], "cardIds": ["word-deporte"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w10", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00031" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w11", "text": "CAZA", "normalized": "caza", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00032" }], "cardIds": ["word-caza--hunting"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w12", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00033" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w13", "text": "NERDS", "normalized": "nerds", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00035" }], "cardIds": ["word-nerds--loanword"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w14", "text": "VES", "normalized": "ves", "explicitBounds": [{ "x": 31.35, "y": 15.01, "width": 4.27, "height": 4.9 }], "geometryRationale": "Vision fused this printed line with CRUZANDO below; this measured box isolates VES and its opening question mark.", "cardIds": ["word-ves", "grammar-ver-a-alguien-gerundio"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w15", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 36.21, "y": 15.01, "width": 1.23, "height": 4.9 }], "geometryRationale": "Vision stretched this word across two printed lines; this measured box isolates the single letter A.", "cardIds": ["word-a--personal-a", "grammar-personal-a", "grammar-ver-a-alguien-gerundio"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w16", "text": "ESE", "normalized": "ese", "explicitBounds": [{ "x": 38.03, "y": 15.01, "width": 3.06, "height": 4.9 }], "geometryRationale": "Vision stretched this word across two printed lines; this measured box isolates the three letters ESE.", "cardIds": ["word-ese--demonstrative", "grammar-personal-a", "grammar-ver-a-alguien-gerundio"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w17", "text": "FÍSICO", "normalized": "físico", "explicitBounds": [{ "x": 41.68, "y": 15.01, "width": 8.87, "height": 4.9 }], "geometryRationale": "Vision stretched this word across two printed lines and lost its accent; this measured box isolates the printed FÍSICO.", "cardIds": ["word-físico--physicist", "grammar-personal-a", "grammar-ver-a-alguien-gerundio"] },
+        { "id": "es-xkcd-caza-de-nerds:new-sport:w18", "text": "CRUZANDO", "normalized": "cruzando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00040" }], "cardIds": ["word-cruzando--crossing", "grammar-ver-a-alguien-gerundio"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:new-sport:app-present-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:new-sport:w03", "es-xkcd-caza-de-nerds:new-sport:w04"],
+          "exampleEs": "HA LLEVADO",
+          "explanationEn": "Ha is the present helper for one subject, and llevado is llevar's completed-action form."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:new-sport:app-lead-to-action",
+          "cardId": "grammar-llevar-a-alguien-a-infinitive",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:new-sport:w02", "es-xkcd-caza-de-nerds:new-sport:w03", "es-xkcd-caza-de-nerds:new-sport:w04", "es-xkcd-caza-de-nerds:new-sport:w05", "es-xkcd-caza-de-nerds:new-sport:w06"],
+          "exampleEs": "ME HA LLEVADO A INVENTAR",
+          "explanationEn": "Me identifies the affected speaker, ha llevado gives the completed prompting action, a supplies the required link, and inventar stays in its dictionary form."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:new-sport:app-personal-a",
+          "cardId": "grammar-personal-a",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:new-sport:w15", "es-xkcd-caza-de-nerds:new-sport:w16", "es-xkcd-caza-de-nerds:new-sport:w17"],
+          "exampleEs": "A ESE FÍSICO",
+          "explanationEn": "A marks the specific person receiving the seeing action, and ese físico identifies that person."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:new-sport:app-see-action",
+          "cardId": "grammar-ver-a-alguien-gerundio",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:new-sport:w14", "es-xkcd-caza-de-nerds:new-sport:w15", "es-xkcd-caza-de-nerds:new-sport:w16", "es-xkcd-caza-de-nerds:new-sport:w17", "es-xkcd-caza-de-nerds:new-sport:w18"],
+          "exampleEs": "VES A ESE FÍSICO CRUZANDO",
+          "explanationEn": "Ves addresses one familiar observer, a ese físico identifies the person seen, and cruzando presents that person's action as in progress."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:shout",
+      "labelEs": "- ¡OYE!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0013" }],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:shout:w01", "text": "OYE", "normalized": "oye", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00041" }], "cardIds": ["word-oye--attention", "grammar-affirmative-tu-command"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:shout:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:shout:w01"],
+          "exampleEs": "OYE",
+          "explanationEn": "Oye is the irregular positive command of oír used to get one familiar listener's attention."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:resistor-sign",
+      "labelEs": "En esta malla infinita de resistencias ideales de 1 omh, ¿cuál es la resistencia equivalente entre los dos nodos señalados?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w01", "text": "En", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00006" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w02", "text": "esta", "normalized": "esta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00007" }], "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w03", "text": "malla", "normalized": "malla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00008" }], "cardIds": ["word-malla--electrical-network"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w04", "text": "infinita", "normalized": "infinita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00009" }], "cardIds": ["word-infinita"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w05", "text": "de", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00016" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w06", "text": "resistencias", "normalized": "resistencias", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00017" }], "cardIds": ["word-resistencias--electrical"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w07", "text": "ideales", "normalized": "ideales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00018" }], "cardIds": ["word-ideales--idealized"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w08", "text": "de", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00027" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w09", "text": "cuál", "normalized": "cuál", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00045" }], "cardIds": ["word-cuál--identity-or-value", "question-words"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w10", "text": "es", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00046" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w11", "text": "la", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00047" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w12", "text": "resistencia", "normalized": "resistencia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00048" }], "cardIds": ["word-resistencia--electrical", "concept-equivalent-resistance"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w13", "text": "equivalente", "normalized": "equivalente", "explicitBounds": [{ "x": 76.95, "y": 34.65, "width": 11.45, "height": 4.1 }], "geometryRationale": "Vision omitted the opening EQUI letters; this measured box covers the complete printed word EQUIVALENTE.", "cardIds": ["word-equivalente", "concept-equivalent-resistance"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w14", "text": "entre", "normalized": "entre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00053" }], "cardIds": ["word-entre"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w15", "text": "los", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00054" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w16", "text": "dos", "normalized": "dos", "explicitBounds": [{ "x": 77.0, "y": 37.1, "width": 3.55, "height": 4.3 }], "geometryRationale": "Vision omitted the opening D from this printed number word; this measured box covers the complete word DOS.", "cardIds": ["word-dos"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w17", "text": "nodos", "normalized": "nodos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00059" }], "cardIds": ["word-nodos--electrical-network"] },
+        { "id": "es-xkcd-caza-de-nerds:resistor-sign:w18", "text": "señalados", "normalized": "señalados", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00060" }], "cardIds": ["word-señalados--indicated"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-caza-de-nerds:resistor-sign:excluded-measurement",
+          "text": "1 omh",
+          "reason": "measurement",
+          "rationale": "This is the printed numerical resistance measurement, including the source's misspelling omh for ohm, not Spanish lexical vocabulary.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00028" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00029" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:resistor-sign:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:resistor-sign:w09"],
+          "exampleEs": "cuál",
+          "explanationEn": "Cuál keeps its written accent because it directly asks for the unknown value."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:absorbed-thought",
+      "labelEs": "ES... MMM. INTERESANTE. QUIZÁ SI EMPEZAMOS POR... NO. ESPERA. MMM, PODRÍAMOS...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0034" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w01", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00076" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w02", "text": "MMM", "normalized": "mmm", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00077" }], "cardIds": ["word-mmm--hesitation"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w03", "text": "INTERESANTE", "normalized": "interesante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00078" }], "cardIds": ["word-interesante"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w04", "text": "QUIZÁ", "normalized": "quizá", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00082" }], "cardIds": ["word-quizá"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w05", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00083" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w06", "text": "EMPEZAMOS", "normalized": "empezamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00084" }], "cardIds": ["word-empezamos--start", "grammar-si-present-real-condition", "phrase-empezar-por"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w07", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00085" }], "cardIds": ["word-por--after-empezar", "phrase-empezar-por"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w08", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00090" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w09", "text": "ESPERA", "normalized": "espera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00091" }], "cardIds": ["word-espera--wait-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w10", "text": "MMM", "normalized": "mmm", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00092" }], "cardIds": ["word-mmm--hesitation"] },
+        { "id": "es-xkcd-caza-de-nerds:absorbed-thought:w11", "text": "PODRÍAMOS", "normalized": "podríamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00093" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00097" }], "cardIds": ["word-podríamos--tentative-suggestion", "grammar-simple-conditional"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:absorbed-thought:app-real-condition",
+          "cardId": "grammar-si-present-real-condition",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:absorbed-thought:w05", "es-xkcd-caza-de-nerds:absorbed-thought:w06"],
+          "exampleEs": "SI EMPEZAMOS",
+          "explanationEn": "Si introduces the tentative possible condition, and empezamos uses the ordinary present form for “we.”"
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:absorbed-thought:app-start-with",
+          "cardId": "phrase-empezar-por",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:absorbed-thought:w06", "es-xkcd-caza-de-nerds:absorbed-thought:w07"],
+          "exampleEs": "EMPEZAMOS POR...",
+          "explanationEn": "Empezamos supplies the form for “we,” and por would introduce the first step, which the trailing interruption leaves unstated."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:absorbed-thought:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:absorbed-thought:w09"],
+          "exampleEs": "ESPERA",
+          "explanationEn": "Espera is the regular positive command directed to one familiar listener."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:absorbed-thought:app-conditional",
+          "cardId": "grammar-simple-conditional",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:absorbed-thought:w11"],
+          "exampleEs": "PODRÍAMOS",
+          "explanationEn": "Poder keeps its complete dictionary form and adds -íamos for a tentative possibility involving “we.”"
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:truck-sound",
+      "labelEs": "FOOOOM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0025" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-caza-de-nerds:truck-sound:excluded-sound-effect",
+          "text": "FOOOOM",
+          "reason": "non-spanish-text",
+          "rationale": "This elongated impact and vehicle sound effect is not Spanish lexical vocabulary.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00072" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:denial",
+      "labelEs": "NO TENGO NADA QUE VER CON ESTO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:denial:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00069" }], "cardIds": ["word-no", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w02", "text": "TENGO", "normalized": "tengo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00070" }], "cardIds": ["word-tengo", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w03", "text": "NADA", "normalized": "nada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00071" }], "cardIds": ["word-nada", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00073" }], "cardIds": ["word-que--fixed-nada-que-ver", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w05", "text": "VER", "normalized": "ver", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00074" }], "cardIds": ["word-ver--fixed-nada-que-ver", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w06", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00075" }], "cardIds": ["word-con", "phrase-no-tener-nada-que-ver"] },
+        { "id": "es-xkcd-caza-de-nerds:denial:w07", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00086" }], "cardIds": ["word-esto", "phrase-no-tener-nada-que-ver"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:denial:app-word-ver",
+          "cardId": "word-ver--fixed-nada-que-ver",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:denial:w05"],
+          "exampleEs": "VER",
+          "explanationEn": "Ver contributes the fixed expression's idea of connection or relevance here rather than its ordinary literal sense “to see.”"
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:denial:app-nothing-to-do-with",
+          "cardId": "phrase-no-tener-nada-que-ver",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:denial:w01", "es-xkcd-caza-de-nerds:denial:w02", "es-xkcd-caza-de-nerds:denial:w03", "es-xkcd-caza-de-nerds:denial:w04", "es-xkcd-caza-de-nerds:denial:w05", "es-xkcd-caza-de-nerds:denial:w06", "es-xkcd-caza-de-nerds:denial:w07"],
+          "exampleEs": "NO TENGO NADA QUE VER CON ESTO",
+          "explanationEn": "Tengo changes for the speaker, nada que ver forms the fixed core about having no connection, and con esto supplies the matter from which the speaker distances himself."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-caza-de-nerds:scoring-advice",
+      "labelEs": "VENGA, HAZTE UN CARTEL. ¡ES DIVERTIDO! LOS FÍSICOS SON DOS PUNTOS, LOS MATEMÁTICOS, TRES.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0033" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0035" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0036" },
+        { "source": "ocr-line", "id": "es-xkcd-caza-de-nerds:ocr-line-0037" }
+      ],
+      "words": [
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w01", "text": "VENGA", "normalized": "venga", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00079" }], "cardIds": ["word-venga"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w02", "text": "HAZTE", "normalized": "hazte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00080" }], "cardIds": ["word-hazte--make-yourself", "grammar-affirmative-tu-command", "grammar-informal-command"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w03", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00081" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w04", "text": "CARTEL", "normalized": "cartel", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00087" }], "cardIds": ["word-cartel"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w05", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 91.0, "y": 68.82, "width": 2.35, "height": 3.25 }], "geometryRationale": "Vision fused the inverted exclamation mark into this word; this measured box isolates the two printed letters ES.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w06", "text": "DIVERTIDO", "normalized": "divertido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00089" }, { "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00094" }], "cardIds": ["word-divertido"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w07", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00095" }], "cardIds": ["word-los", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w08", "text": "FÍSICOS", "normalized": "físicos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00096" }], "cardIds": ["word-físicos--physicists", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w09", "text": "SON", "normalized": "son", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00098" }], "cardIds": ["word-son", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w10", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00099" }], "cardIds": ["word-dos", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w11", "text": "PUNTOS", "normalized": "puntos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00100" }], "cardIds": ["word-puntos--score", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w12", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00101" }], "cardIds": ["word-los", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w13", "text": "MATEMÁTICOS", "normalized": "matemáticos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00102" }], "cardIds": ["word-matemáticos", "grammar-parallel-clause-ellipsis"] },
+        { "id": "es-xkcd-caza-de-nerds:scoring-advice:w14", "text": "TRES", "normalized": "tres", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-caza-de-nerds:ocr-token-00103" }], "cardIds": ["word-tres", "grammar-parallel-clause-ellipsis"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-caza-de-nerds:scoring-advice:app-venga",
+          "cardId": "word-venga",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:scoring-advice:w01"],
+          "exampleEs": "VENGA",
+          "explanationEn": "Venga stands alone here as an encouraging conversational “come on,” rather than as a literal request for someone to come."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:scoring-advice:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:scoring-advice:w02"],
+          "exampleEs": "HAZTE",
+          "explanationEn": "Haz is the irregular positive command of hacer for one familiar listener, with te attached."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:scoring-advice:app-attached-command-pronoun",
+          "cardId": "grammar-informal-command",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:scoring-advice:w02"],
+          "exampleEs": "HAZTE",
+          "explanationEn": "Te is written on the end of the positive command haz and presents the result as made or obtained for the listener."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:scoring-advice:app-three-points",
+          "cardId": "word-tres",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:scoring-advice:w14"],
+          "exampleEs": "TRES",
+          "explanationEn": "Tres supplies the second score; the earlier son and puntos remain understood instead of being printed again."
+        },
+        {
+          "id": "es-xkcd-caza-de-nerds:scoring-advice:app-parallel-ellipsis",
+          "cardId": "grammar-parallel-clause-ellipsis",
+          "participantWordIds": ["es-xkcd-caza-de-nerds:scoring-advice:w07", "es-xkcd-caza-de-nerds:scoring-advice:w08", "es-xkcd-caza-de-nerds:scoring-advice:w09", "es-xkcd-caza-de-nerds:scoring-advice:w10", "es-xkcd-caza-de-nerds:scoring-advice:w11", "es-xkcd-caza-de-nerds:scoring-advice:w12", "es-xkcd-caza-de-nerds:scoring-advice:w13", "es-xkcd-caza-de-nerds:scoring-advice:w14"],
+          "exampleEs": "LOS FÍSICOS SON DOS PUNTOS, LOS MATEMÁTICOS, TRES",
+          "explanationEn": "The first part supplies the full scoring pattern. After the comma, los matemáticos changes the group and tres changes the value, while son and puntos are left understood."
+        }
+      ]
+    }
+  ]
+}

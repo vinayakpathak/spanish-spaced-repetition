@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-queja-del-compilador",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Compiler Complaint",
+  "titleEs": "Queja del compilador",
+  "titleText": {
+    "es": "",
+    "en": "Checking whether build environment is sane ... build environment is grinning and holding a spatula. Guess not.",
+    "noteEn": "The Spanish archive omits the original strip's alt text, which jokes that an allegedly sane build environment is grinning and holding a spatula."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-de--fixed-antes-de-infinitive",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; links antes to the following action",
+      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "example": { "es": "Lávate las manos antes de comer.", "en": "Wash your hands before eating." },
+      "tags": ["word", "time", "verb pattern", "A2"]
+    },
+    {
+      "id": "word-darle--press-control",
+      "kind": "word",
+      "promptEs": "darle",
+      "answerEn": "to press; to click (a control, followed by a)",
+      "noteEn": "Darle normally combines dar, 'to give,' with le. In the conversational pattern darle a un botón or darle a una opción, it means to press, click, or activate that control.",
+      "example": { "es": "Voy a darle al botón azul.", "en": "I am going to press the blue button." },
+      "tags": ["word", "control", "computing", "verb", "A2"]
+    },
+    {
+      "id": "word-a--fixed-darle-a-control",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; introduces the control after darle",
+      "noteEn": "The pattern darle a needs a before the button, key, or option. Before masculine singular el, a and el combine as al: darle al botón.",
+      "example": { "es": "Dale a guardar.", "en": "Click save." },
+      "tags": ["word", "control", "verb complement", "A2"]
+    },
+    {
+      "id": "word-escucha--command",
+      "kind": "word",
+      "promptEs": "escucha",
+      "answerEn": "listen (informal command)",
+      "noteEn": "Escucha is the positive command of escuchar for one friend, peer, or other familiar listener.",
+      "example": { "es": "Escucha con atención.", "en": "Listen carefully." },
+      "tags": ["word", "command", "escuchar", "A1"]
+    },
+    {
+      "id": "word-cuando--printed-missing-accent",
+      "kind": "word",
+      "promptEs": "cuando",
+      "answerEn": "when (printed without the normally required accent)",
+      "noteEn": "The strip prints cuando, but standard Spanish writes cuándo here because it introduces an embedded question about when something happens. The written accent remains even though the question sits inside a larger question.",
+      "example": { "es": "¿Sabes cuándo empieza la película?", "en": "Do you know when the movie starts?" },
+      "tags": ["word", "printed typo", "question word", "spelling", "A2"]
+    },
+    {
+      "id": "word-durmiendo--falling-asleep",
+      "kind": "word",
+      "promptEs": "durmiendo",
+      "answerEn": "falling asleep (with te estás)",
+      "noteEn": "Durmiendo is the -iendo action form of dormir, 'to sleep.' Dormirse means to fall asleep, so te estás durmiendo presents that change as happening now.",
+      "example": { "es": "El niño se está durmiendo.", "en": "The child is falling asleep." },
+      "tags": ["word", "dormirse", "ongoing action", "sleep", "A2"]
+    },
+    {
+      "id": "word-te--reflexive-yourself",
+      "kind": "word",
+      "promptEs": "te",
+      "answerEn": "yourself (with imaginas)",
+      "noteEn": "Before imaginas, te identifies the informal listener as both the person imagining and the person pictured in the imagined scene.",
+      "example": { "es": "Te imaginas viajando solo.", "en": "You imagine yourself traveling alone." },
+      "tags": ["word", "pronoun", "reflexive", "A2"]
+    },
+    {
+      "id": "word-imaginas--picture-yourself",
+      "kind": "word",
+      "promptEs": "imaginas",
+      "answerEn": "you imagine; you picture (yourself, with te)",
+      "noteEn": "Imaginas is the present form of imaginar for one informal listener. With te, it can introduce a scene in which that listener pictures themself doing something.",
+      "example": { "es": "¿Te imaginas viviendo aquí?", "en": "Can you imagine yourself living here?" },
+      "tags": ["word", "imaginar", "present", "A2"]
+    },
+    {
+      "id": "word-de--fixed-de-pronto",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; begins de pronto, 'suddenly'",
+      "noteEn": "Keep de and pronto together in the fixed expression de pronto. English translates the pair as one word, 'suddenly.'",
+      "example": { "es": "De pronto, se apagó la luz.", "en": "Suddenly, the light went out." },
+      "tags": ["word", "fixed expression", "time", "A2"]
+    },
+    {
+      "id": "word-pronto--suddenly",
+      "kind": "word",
+      "promptEs": "pronto",
+      "answerEn": "suddenly (together with de)",
+      "noteEn": "Pronto by itself often means 'soon.' In de pronto, the complete expression instead means 'suddenly.'",
+      "example": { "es": "De pronto, empezó a llover.", "en": "Suddenly, it began to rain." },
+      "tags": ["word", "fixed expression", "time", "A2"]
+    },
+    {
+      "id": "word-tropiezas",
+      "kind": "word",
+      "promptEs": "tropiezas",
+      "answerEn": "you trip; you stumble",
+      "noteEn": "Tropiezas is the present form of tropezar for one informal listener. The vowel changes from e in tropezar to ie in tropiezas.",
+      "example": { "es": "A veces tropiezas con esa piedra.", "en": "Sometimes you trip over that stone." },
+      "tags": ["word", "tropezar", "present", "stem change", "A2"]
+    },
+    {
+      "id": "word-sobresaltas--jolt",
+      "kind": "word",
+      "promptEs": "sobresaltas",
+      "answerEn": "you jolt; you start suddenly (with te)",
+      "noteEn": "Sobresaltarse describes reacting with a sudden involuntary start because of surprise, fear, or a physical sensation. Te marks the informal listener.",
+      "example": { "es": "Te sobresaltas con el ruido.", "en": "You jolt at the noise." },
+      "tags": ["word", "sobresaltarse", "reaction", "A2"]
+    },
+    {
+      "id": "word-despiertas--wake-up",
+      "kind": "word",
+      "promptEs": "despiertas",
+      "answerEn": "you wake up (with te)",
+      "noteEn": "Despertarse means to wake up. Despiertas is the present form for one informal listener, and te marks that listener as the person waking.",
+      "example": { "es": "Te despiertas muy temprano.", "en": "You wake up very early." },
+      "tags": ["word", "despertarse", "present", "A1"]
+    },
+    {
+      "id": "word-pues--discourse",
+      "kind": "word",
+      "promptEs": "pues",
+      "answerEn": "then; so; well (continuing a thought)",
+      "noteEn": "Pues often connects a conclusion or next step to what was just said. In conversation, it can work like English 'so,' 'then,' or a second 'well.'",
+      "example": { "es": "Pues seguimos con el plan.", "en": "Then we will continue with the plan." },
+      "tags": ["word", "discourse", "connector", "A2"]
+    },
+    {
+      "id": "word-como--how-way",
+      "kind": "word",
+      "promptEs": "como",
+      "answerEn": "how; the way that (after así es)",
+      "noteEn": "In así es como, como introduces the action or situation whose manner is being explained. It has no written accent because it is part of this statement pattern rather than an open question word.",
+      "example": { "es": "Así es como funciona.", "en": "That is how it works." },
+      "tags": ["word", "manner", "connector", "A2"]
+    },
+    {
+      "id": "word-se--sentirse",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; marks sentirse, 'to feel'",
+      "noteEn": "Sentirse uses me, te, se, nos, or os to identify who or what has the experience: me siento, te sientes, se siente. English normally folds this small word into the meaning of 'feel.'",
+      "example": { "es": "La tela se siente suave.", "en": "The fabric feels soft." },
+      "tags": ["word", "sentirse", "pronominal verb", "A2"]
+    },
+    {
+      "id": "word-siente--feels",
+      "kind": "word",
+      "promptEs": "siente",
+      "answerEn": "feels (with se)",
+      "noteEn": "Siente is the present form used with one person or thing. Together with se, it can describe what an experience or object feels like.",
+      "example": { "es": "El suelo se siente frío.", "en": "The floor feels cold." },
+      "tags": ["word", "sentirse", "present", "A2"]
+    },
+    {
+      "id": "word-segfault--computing",
+      "kind": "word",
+      "promptEs": "segfault",
+      "answerEn": "segmentation fault; a program crash from invalid memory access",
+      "noteEn": "Segfault is an English computing abbreviation used as a masculine technical noun in this Spanish sentence.",
+      "example": { "es": "El programa terminó con un segfault.", "en": "The program ended with a segmentation fault." },
+      "tags": ["word", "loanword", "computing", "memory", "B2"]
+    },
+    {
+      "id": "word-comprueba--check-command",
+      "kind": "word",
+      "promptEs": "comprueba",
+      "answerEn": "check; verify (informal command)",
+      "noteEn": "Comprueba is the positive command of comprobar for one friend, peer, or other familiar listener.",
+      "example": { "es": "Comprueba la dirección otra vez.", "en": "Check the address again." },
+      "tags": ["word", "command", "comprobar", "A1"]
+    },
+    {
+      "id": "word-malditos--damn",
+      "kind": "word",
+      "promptEs": "malditos",
+      "answerEn": "damn; damned (masculine plural, angry emphasis)",
+      "noteEn": "Before a masculine plural noun, malditos adds strong anger or contempt. It is rude or emotionally charged rather than a neutral description.",
+      "example": { "es": "Esos malditos cables no funcionan.", "en": "Those damn cables do not work." },
+      "tags": ["word", "adjective", "plural", "register", "B1"]
+    },
+    {
+      "id": "word-punteros--computer-pointers",
+      "kind": "word",
+      "promptEs": "punteros",
+      "answerEn": "pointers (programming values that hold memory addresses)",
+      "noteEn": "In languages such as C, a pointer stores the address of data in memory. A bad pointer can make a program read or write an invalid location.",
+      "example": { "es": "El programa usa punteros para acceder a la memoria.", "en": "The program uses pointers to access memory." },
+      "tags": ["word", "computing", "programming", "memory", "B2"]
+    },
+    {
+      "id": "grammar-antes-de-infinitive",
+      "kind": "grammar",
+      "promptEs": "antes de + verbo en forma de diccionario",
+      "questionEn": "How do you say that one action happens before another action by the same person?",
+      "answerEn": "Use antes de, then keep the second action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir, such as salir, comer, or escribir. Use antes de directly before that form when no new subject is named. If the later action has its own stated subject, Spanish normally uses antes de que and a different verb form.",
+      "example": { "es": "Apaga la luz antes de salir.", "en": "Turn off the light before leaving." },
+      "tags": ["grammar", "time", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-darle-a-control",
+      "kind": "phrase",
+      "promptEs": "darle a + botón, tecla u opción",
+      "questionEn": "How do you say to press, click, or activate a named control?",
+      "answerEn": "Use the appropriate form of darle, then a, then name the button, key, or option.",
+      "noteEn": "The pieces appear in that order: darle first, a second, and the control last. Dar changes for the person and time. Before el, a and el combine as al, as in darle al botón; before a quoted option name, use a, as in darle a 'guardar.'",
+      "example": { "es": "Dale al botón verde.", "en": "Press the green button." },
+      "tags": ["phrase", "controls", "computing", "conversation", "A2"]
+    },
+    {
+      "id": "phrase-imaginarse-gerundio",
+      "kind": "phrase",
+      "promptEs": "imaginarse + acción en -ando/-iendo",
+      "questionEn": "How do you say that someone pictures themself doing an action?",
+      "answerEn": "Use me, te, se, nos, or os with a form of imaginar, then give the pictured action in its -ando or -iendo form.",
+      "noteEn": "The small word changes with the person: me imagino, te imaginas, se imagina, and so on. The next verb names the pictured action with an ending such as -ando for caminar or -iendo for vivir; only imaginar changes for the person and time.",
+      "example": { "es": "Me imagino viviendo junto al mar.", "en": "I imagine myself living by the sea." },
+      "tags": ["phrase", "imaginarse", "gerund", "A2"]
+    },
+    {
+      "id": "phrase-de-pronto",
+      "kind": "phrase",
+      "promptEs": "de pronto",
+      "questionEn": "How do you say that something happens suddenly?",
+      "answerEn": "Use de pronto before or after the sudden event.",
+      "noteEn": "Keep the two words together. Pronto alone often means 'soon,' but de pronto presents an abrupt, unexpected change and means 'suddenly.'",
+      "example": { "es": "De pronto, sonó el teléfono.", "en": "Suddenly, the phone rang." },
+      "tags": ["phrase", "time", "sudden change", "A2"]
+    },
+    {
+      "id": "grammar-asi-es-como",
+      "kind": "grammar",
+      "promptEs": "así es como + situación o acción",
+      "questionEn": "How do you say 'that is how...' before explaining the way something happens or feels?",
+      "answerEn": "Use así es como, then state the complete action or situation.",
+      "noteEn": "Así points to the manner, es means 'is,' and como introduces the explanation that follows. Como has no accent in this statement pattern. Change es if the time changes: así fue como introduces how something happened in the past.",
+      "example": { "es": "Así es como funciona la máquina.", "en": "That is how the machine works." },
+      "tags": ["grammar", "manner", "explanation", "A2"]
+    },
+    {
+      "id": "concept-segfault-invalid-pointer",
+      "kind": "concept",
+      "promptEs": "segfault · punteros",
+      "answerEn": "A segmentation fault often occurs when a program follows a pointer to memory it is not allowed to access.",
+      "noteEn": "A pointer stores a memory address. If it is uninitialized, corrupted, or otherwise invalid, using it can trigger a segfault and abruptly stop the program. The comic personifies that crash as the sudden physical jolt that can happen while someone is falling asleep.",
+      "tags": ["concept", "computing", "memory safety", "pointers", "joke reference"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-queja-del-compilador:computer-opening",
+      "labelEs": "MIRA, HUMANO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:computer-opening:w01", "text": "MIRA", "normalized": "mira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00005" }], "cardIds": ["word-mira--imperative", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-queja-del-compilador:computer-opening:w02", "text": "HUMANO", "normalized": "humano", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00006" }], "cardIds": ["word-humano--noun-address"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:computer-opening:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-queja-del-compilador:computer-opening:w01"],
+          "exampleEs": "MIRA",
+          "explanationEn": "Mira is a positive command directed to one familiar listener."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:human-confusion",
+      "labelEs": "¿EH?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:human-confusion:w01", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00027" }], "cardIds": ["word-eh--confusion"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:listen-before-compiling",
+      "labelEs": "ANTES DE DARLE A \"COMPILAR\", ESCUCHA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w01", "text": "ANTES", "normalized": "antes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00038" }], "cardIds": ["word-antes--before-event", "grammar-antes-de-infinitive"] },
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00039" }], "cardIds": ["word-de--fixed-antes-de-infinitive", "grammar-antes-de-infinitive"] },
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w03", "text": "DARLE", "normalized": "darle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00044" }], "cardIds": ["word-darle--press-control", "grammar-antes-de-infinitive", "phrase-darle-a-control"] },
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00045" }], "cardIds": ["word-a--fixed-darle-a-control", "grammar-antes-de-infinitive", "phrase-darle-a-control"] },
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w05", "text": "COMPILAR", "normalized": "compilar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00049" }], "cardIds": ["word-compilar", "grammar-antes-de-infinitive", "phrase-darle-a-control"] },
+        { "id": "es-xkcd-queja-del-compilador:listen-before-compiling:w06", "text": "ESCUCHA", "normalized": "escucha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00050" }], "cardIds": ["word-escucha--command", "grammar-affirmative-tu-command"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:listen-before-compiling:app-before-action",
+          "cardId": "grammar-antes-de-infinitive",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w01",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w02",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w03",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w04",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w05"
+          ],
+          "exampleEs": "ANTES DE DARLE A COMPILAR",
+          "explanationEn": "Antes de introduces the earlier boundary, and the complete action darle a compilar begins with darle in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:listen-before-compiling:app-press-control",
+          "cardId": "phrase-darle-a-control",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w03",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w04",
+            "es-xkcd-queja-del-compilador:listen-before-compiling:w05"
+          ],
+          "exampleEs": "DARLE A COMPILAR",
+          "explanationEn": "Darle supplies the activation action, a introduces the control, and compilar is the quoted option being activated."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:listen-before-compiling:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-queja-del-compilador:listen-before-compiling:w06"],
+          "exampleEs": "ESCUCHA",
+          "explanationEn": "Escucha is a positive command directed to one familiar listener."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:falling-asleep-question",
+      "labelEs": "¿SABES CUANDO TE ESTÁS DURMIENDO Y TE IMAGINAS CAMINANDO O ALGO ASÍ...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0010" }
+      ],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w01", "text": "SABES", "normalized": "sabes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00007" }], "cardIds": ["word-sabes"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w02", "text": "CUANDO", "normalized": "cuando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00008" }], "cardIds": ["word-cuando--printed-missing-accent", "grammar-indirect-question-accent"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w03", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00009" }], "cardIds": ["word-te--pronominal-marker", "grammar-indirect-question-accent"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w04", "text": "ESTÁS", "normalized": "estás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00010" }], "cardIds": ["word-estás", "grammar-indirect-question-accent", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w05", "text": "DURMIENDO", "normalized": "durmiendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00019" }], "cardIds": ["word-durmiendo--falling-asleep", "grammar-indirect-question-accent", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w06", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00020" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w07", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00021" }], "cardIds": ["word-te--reflexive-yourself", "phrase-imaginarse-gerundio"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w08", "text": "IMAGINAS", "normalized": "imaginas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00022" }], "cardIds": ["word-imaginas--picture-yourself", "phrase-imaginarse-gerundio"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w09", "text": "CAMINANDO", "normalized": "caminando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00028" }], "cardIds": ["word-caminando", "phrase-imaginarse-gerundio"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w10", "text": "O", "normalized": "o", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00029" }], "cardIds": ["word-o", "phrase-o-algo"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w11", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00030" }], "cardIds": ["word-algo", "phrase-o-algo"] },
+        { "id": "es-xkcd-queja-del-compilador:falling-asleep-question:w12", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00031" }], "cardIds": ["word-así--like-that"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:falling-asleep-question:app-missing-question-accent",
+          "cardId": "grammar-indirect-question-accent",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w02",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w03",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w04",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w05"
+          ],
+          "exampleEs": "CUANDO TE ESTÁS DURMIENDO",
+          "explanationEn": "Cuando introduces an embedded question about when the event occurs. Standard Spanish would keep the accent and write cuándo here; the strip omits it."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:falling-asleep-question:app-progressive",
+          "cardId": "grammar-estar-gerundio",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w04",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w05"
+          ],
+          "exampleEs": "ESTÁS DURMIENDO",
+          "explanationEn": "Estás matches the informal listener, and durmiendo supplies the action in progress with its -iendo ending."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:falling-asleep-question:app-imagined-action",
+          "cardId": "phrase-imaginarse-gerundio",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w07",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w08",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w09"
+          ],
+          "exampleEs": "TE IMAGINAS CAMINANDO",
+          "explanationEn": "Te identifies the listener inside the imagined scene, imaginas supplies the mental action, and caminando names the pictured ongoing action."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:falling-asleep-question:app-or-something",
+          "cardId": "phrase-o-algo",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w10",
+            "es-xkcd-queja-del-compilador:falling-asleep-question:w11"
+          ],
+          "exampleEs": "O ALGO",
+          "explanationEn": "O algo leaves the imagined activity deliberately open rather than naming a precise alternative."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:sudden-jolt-question",
+      "labelEs": "Y DE PRONTO TROPIEZAS, TE SOBRESALTAS Y TE DESPIERTAS?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0011" }
+      ],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w01", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00011" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00012" }], "cardIds": ["word-de--fixed-de-pronto", "phrase-de-pronto"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w03", "text": "PRONTO", "normalized": "pronto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00013" }], "cardIds": ["word-pronto--suddenly", "phrase-de-pronto"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w04", "text": "TROPIEZAS", "normalized": "tropiezas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00014" }, { "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00023" }], "cardIds": ["word-tropiezas"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w05", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00024" }], "cardIds": ["word-te--pronominal-marker"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w06", "text": "SOBRESALTAS", "normalized": "sobresaltas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00025" }, { "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00032" }], "cardIds": ["word-sobresaltas--jolt"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w07", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00033" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w08", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00034" }], "cardIds": ["word-te--pronominal-marker"] },
+        { "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:w09", "text": "DESPIERTAS", "normalized": "despiertas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00035" }], "cardIds": ["word-despiertas--wake-up"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:sudden-jolt-question:app-suddenly",
+          "cardId": "phrase-de-pronto",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:sudden-jolt-question:w02",
+            "es-xkcd-queja-del-compilador:sudden-jolt-question:w03"
+          ],
+          "exampleEs": "DE PRONTO",
+          "explanationEn": "De and pronto stay together as the fixed expression that marks an abrupt change."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:human-agreement",
+      "labelEs": "¡SÍ!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0014" }],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:human-agreement:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00040" }], "cardIds": ["word-sí"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:segfault-analogy",
+      "labelEs": "BUENO, PUES ASÍ ES COMO SE SIENTE UN SEGFAULT.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w01", "text": "BUENO", "normalized": "bueno", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00001" }], "cardIds": ["word-bueno", "phrase-bueno-discourse-marker"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w02", "text": "PUES", "normalized": "pues", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00002" }], "cardIds": ["word-pues--discourse"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w03", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00003" }], "cardIds": ["word-así--like-that", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w04", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00004" }], "cardIds": ["word-es", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w05", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00015" }], "cardIds": ["word-como--how-way", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w06", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00016" }], "cardIds": ["word-se--sentirse", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w07", "text": "SIENTE", "normalized": "siente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00017" }], "cardIds": ["word-siente--feels", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w08", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00018" }], "cardIds": ["word-un", "grammar-asi-es-como"] },
+        { "id": "es-xkcd-queja-del-compilador:segfault-analogy:w09", "text": "SEGFAULT", "normalized": "segfault", "explicitBounds": [{ "x": 78.0282, "y": 20.3125, "width": 10.1408, "height": 6.77 }], "geometryRationale": "The OCR token extended through the speech-tail gap into the next bubble; this checked bound ends above that tail and isolates the printed technical word.", "cardIds": ["word-segfault--computing", "grammar-asi-es-como", "concept-segfault-invalid-pointer"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:segfault-analogy:app-well",
+          "cardId": "phrase-bueno-discourse-marker",
+          "participantWordIds": ["es-xkcd-queja-del-compilador:segfault-analogy:w01"],
+          "exampleEs": "BUENO",
+          "explanationEn": "Bueno organizes the transition into the computer's conclusion rather than describing something as good."
+        },
+        {
+          "id": "es-xkcd-queja-del-compilador:segfault-analogy:app-that-is-how",
+          "cardId": "grammar-asi-es-como",
+          "participantWordIds": [
+            "es-xkcd-queja-del-compilador:segfault-analogy:w03",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w04",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w05",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w06",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w07",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w08",
+            "es-xkcd-queja-del-compilador:segfault-analogy:w09"
+          ],
+          "exampleEs": "ASÍ ES COMO SE SIENTE UN SEGFAULT",
+          "explanationEn": "Así points to the manner just described, es como frames the explanation, and se siente un segfault supplies the complete situation being characterized."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-queja-del-compilador:pointer-warning",
+      "labelEs": "COMPRUEBA DOS VECES TUS MALDITOS PUNTEROS, ¿VALE?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-queja-del-compilador:ocr-line-0017" }
+      ],
+      "words": [
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w01", "text": "COMPRUEBA", "normalized": "comprueba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00036" }], "cardIds": ["word-comprueba--check-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w02", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00037" }], "cardIds": ["word-dos"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w03", "text": "VECES", "normalized": "veces", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00041" }], "cardIds": ["word-veces--a-veces"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w04", "text": "TUS", "normalized": "tus", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00042" }], "cardIds": ["word-tus"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w05", "text": "MALDITOS", "normalized": "malditos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00043" }], "cardIds": ["word-malditos--damn"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w06", "text": "PUNTEROS", "normalized": "punteros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00046" }], "cardIds": ["word-punteros--computer-pointers", "concept-segfault-invalid-pointer"] },
+        { "id": "es-xkcd-queja-del-compilador:pointer-warning:w07", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-queja-del-compilador:ocr-token-00047" }], "cardIds": ["word-vale"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-queja-del-compilador:pointer-warning:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-queja-del-compilador:pointer-warning:w01"],
+          "exampleEs": "COMPRUEBA",
+          "explanationEn": "Comprueba is a positive command directed to one familiar listener."
+        }
+      ]
+    }
+  ]
+}

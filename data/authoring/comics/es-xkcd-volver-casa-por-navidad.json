@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-volver-casa-por-navidad",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Christmas Back Home",
+  "titleEs": "Volver a casa por Navidad",
+  "titleText": {
+    "es": "Que la familia se vaya a la cama a las 10 PM es mucho peor que el jet lag.",
+    "en": "Family going to bed at 10 PM is so much worse than jet lag.",
+    "noteEn": "The title text extends the joke by comparing the family's early holiday bedtime with the disruption of jet lag."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-nochebuena",
+      "kind": "word",
+      "promptEs": "nochebuena",
+      "answerEn": "Christmas Eve",
+      "noteEn": "",
+      "tags": ["word", "holiday", "time", "A1"]
+    },
+    {
+      "id": "word-navidad",
+      "kind": "word",
+      "promptEs": "navidad",
+      "answerEn": "Christmas",
+      "noteEn": "",
+      "tags": ["word", "holiday", "time", "A1"]
+    },
+    {
+      "id": "word-había--existential",
+      "kind": "word",
+      "promptEs": "había",
+      "answerEn": "there was; there were",
+      "noteEn": "This past form of hay presents something as existing in a past setting. In this use, había stays singular even before a plural noun: había una silla and había dos sillas.",
+      "example": {
+        "es": "Había dos cartas en la mesa.",
+        "en": "There were two letters on the table."
+      },
+      "tags": ["word", "haber", "existence", "past", "A2"]
+    },
+    {
+      "id": "word-ratón--computer-mouse",
+      "kind": "word",
+      "promptEs": "ratón",
+      "answerEn": "mouse (computer input device)",
+      "noteEn": "Ratón can name either the animal or a computer mouse. Words about clicking or a computer normally select the device meaning.",
+      "example": {
+        "es": "Muevo el cursor con el ratón.",
+        "en": "I move the cursor with the mouse."
+      },
+      "tags": ["word", "computing", "noun", "A1"]
+    },
+    {
+      "id": "word-hora--time-of-day",
+      "kind": "word",
+      "promptEs": "hora",
+      "answerEn": "time; hour of the day",
+      "noteEn": "",
+      "tags": ["word", "time", "noun", "A1"]
+    },
+    {
+      "id": "word-a--relative-time",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "at; links hora to la que ('at which')",
+      "noteEn": "A supplies the time relationship before la que. English may place the matching 'at' earlier or at the end, but Spanish keeps it before la que.",
+      "example": {
+        "es": "No sé la hora a la que abre el museo.",
+        "en": "I do not know the time at which the museum opens."
+      },
+      "tags": ["word", "preposition", "time", "relative clause", "B1"]
+    },
+    {
+      "id": "word-duerme",
+      "kind": "word",
+      "promptEs": "duerme",
+      "answerEn": "sleeps",
+      "noteEn": "Duerme is the present form of dormir used with one person or thing. Spanish treats gente, 'people,' as grammatically singular, so gente goes with duerme rather than duermen.",
+      "example": {
+        "es": "La gente duerme poco en verano.",
+        "en": "People sleep little in summer."
+      },
+      "tags": ["word", "dormir", "present", "singular", "A1"]
+    },
+    {
+      "id": "word-levantado--out-of-bed",
+      "kind": "word",
+      "promptEs": "levantado",
+      "answerEn": "up; out of bed (masculine singular)",
+      "noteEn": "Levantado describes a male person who is awake and no longer in bed. Its ending changes to levantada for a female person and to levantados or levantadas for a plural group.",
+      "example": {
+        "es": "Pablo sigue levantado.",
+        "en": "Pablo is still up."
+      },
+      "tags": ["word", "state", "agreement", "sleep", "A2"]
+    },
+    {
+      "id": "word-tarde--late",
+      "kind": "word",
+      "promptEs": "tarde",
+      "answerEn": "late",
+      "noteEn": "",
+      "tags": ["word", "time", "adverb", "A1"]
+    },
+    {
+      "id": "word-apenas--barely",
+      "kind": "word",
+      "promptEs": "apenas",
+      "answerEn": "barely; only just",
+      "noteEn": "",
+      "tags": ["word", "degree", "adverb", "A2"]
+    },
+    {
+      "id": "word-son--clock-time",
+      "kind": "word",
+      "promptEs": "son",
+      "answerEn": "it is (before plural clock hours)",
+      "noteEn": "Son normally means 'they are,' but clock time uses son before every hour except one o'clock because the understood word horas is plural.",
+      "example": {
+        "es": "Son las cinco.",
+        "en": "It is five o'clock."
+      },
+      "tags": ["word", "ser", "clock time", "plural", "A1"]
+    },
+    {
+      "id": "word-las--clock-time",
+      "kind": "word",
+      "promptEs": "las",
+      "answerEn": "no separate English word; used before plural clock hours",
+      "noteEn": "The understood word is horas, a feminine plural noun, so Spanish uses las before two o'clock and every later hour. One o'clock instead uses la: es la una.",
+      "example": {
+        "es": "La clase empieza a las nueve.",
+        "en": "The class starts at nine."
+      },
+      "tags": ["word", "article", "clock time", "feminine plural", "A1"]
+    },
+    {
+      "id": "grammar-ser-clock-time",
+      "kind": "grammar",
+      "promptEs": "es la una · son las dos, tres...",
+      "questionEn": "How do you state the clock time in Spanish?",
+      "answerEn": "Use es la for one o'clock and son las for every other hour.",
+      "noteEn": "Es and son are forms of ser, 'to be.' Spanish treats one o'clock as singular, es la una, and the other hours as plural, son las dos, son las tres, and so on. The feminine article la or las appears because hora or horas is understood.",
+      "example": {
+        "es": "Son las ocho.",
+        "en": "It is eight o'clock."
+      },
+      "tags": ["grammar", "ser", "clock time", "agreement", "A1"]
+    },
+    {
+      "id": "phrase-que-hacer-state-place",
+      "kind": "phrase",
+      "promptEs": "¿qué + forma de hacer + lugar o estado?",
+      "questionEn": "How do you ask why someone is in an unexpected place or condition?",
+      "answerEn": "Begin with qué and the appropriate form of hacer, then add the place or the word that describes the person's condition.",
+      "noteEn": "The question literally asks what the person is doing, but it can express surprise at finding that person there or in that condition. Hacer changes for the person: hago means 'I do,' haces means 'you do,' and hace means 'he, she, or formal you does.'",
+      "example": {
+        "es": "¿Qué haces despierto?",
+        "en": "What are you doing awake?"
+      },
+      "tags": ["phrase", "question", "hacer", "surprise", "A2"]
+    },
+    {
+      "id": "concept-night-before-christmas-parody",
+      "kind": "concept",
+      "promptEs": "Nochebuena · ningún sonido · clic de un ratón",
+      "answerEn": "The narration parodies the famous Christmas poem commonly called 'Twas the Night Before Christmas.",
+      "noteEn": "The poem opens on Christmas Eve and describes a house so quiet that not even a mouse is stirring. The comic replaces that quiet animal with the click of a computer mouse, then has Santa find someone awake at three in the morning.",
+      "tags": ["concept", "literature", "Christmas", "wordplay", "joke reference"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:opening-narration",
+      "labelEs": "ERA NOCHEBUENA EN CASA DE MI FAMILIA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w01", "text": "ERA", "normalized": "era", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00005" }], "cardIds": ["word-era"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w02", "text": "NOCHEBUENA", "normalized": "nochebuena", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00006" }], "cardIds": ["word-nochebuena", "concept-night-before-christmas-parody"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00007" }], "cardIds": ["word-en--at-location"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w04", "text": "CASA", "normalized": "casa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00013" }], "cardIds": ["word-casa"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w05", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00014" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w06", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00015" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:opening-narration:w07", "text": "FAMILIA", "normalized": "familia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00016" }], "cardIds": ["word-familia"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration",
+      "labelEs": "NO HABÍA NINGÚN SONIDO, EXCEPTO EL CLIC DE UN RATÓN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00039" }], "cardIds": ["word-no", "grammar-negative-concord"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w02", "text": "HABÍA", "normalized": "había", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00040" }], "cardIds": ["word-había--existential", "grammar-negative-concord"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w03", "text": "NINGÚN", "normalized": "ningún", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00041" }], "cardIds": ["word-ningún", "grammar-negative-concord"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w04", "text": "SONIDO", "normalized": "sonido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00042" }], "cardIds": ["word-sonido", "grammar-negative-concord", "concept-night-before-christmas-parody"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w05", "text": "EXCEPTO", "normalized": "excepto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00043" }, { "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00046" }], "cardIds": ["word-excepto"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00047" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w07", "text": "CLIC", "normalized": "clic", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00048" }], "cardIds": ["word-clic", "concept-night-before-christmas-parody"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00049" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w09", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00050" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w10", "text": "RATÓN", "normalized": "ratón", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00051" }], "cardIds": ["word-ratón--computer-mouse", "concept-night-before-christmas-parody"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:quiet-house-narration:app-negative-concord",
+          "cardId": "grammar-negative-concord",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w01",
+            "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w02",
+            "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w03",
+            "es-xkcd-volver-casa-por-navidad:quiet-house-narration:w04"
+          ],
+          "exampleEs": "NO HABÍA NINGÚN SONIDO",
+          "explanationEn": "No remains before había because ningún supplies a matching negative before the masculine noun sonido."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration",
+      "labelEs": "PORQUE ERA COMO LA NAVIDAD DE UN NIÑO, EXCEPTO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w01", "text": "PORQUE", "normalized": "porque", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00020" }], "cardIds": ["word-porque"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w02", "text": "ERA", "normalized": "era", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00021" }], "cardIds": ["word-era"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w03", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00022" }], "cardIds": ["word-como--comparison"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00023" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w05", "text": "NAVIDAD", "normalized": "navidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00024" }, { "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00025" }], "cardIds": ["word-navidad", "concept-night-before-christmas-parody"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00026" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00027" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w08", "text": "NIÑO", "normalized": "niño", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00028" }], "cardIds": ["word-niño"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:childhood-comparison-narration:w09", "text": "EXCEPTO", "normalized": "excepto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00029" }], "cardIds": ["word-excepto"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration",
+      "labelEs": "QUE HABÍA OLVIDADO LA HORA A LA QUE DUERME LA GENTE NORMAL.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w01", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00001" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w02", "text": "HABÍA", "normalized": "había", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00002" }], "cardIds": ["word-había--past-perfect-helper", "grammar-past-perfect"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w03", "text": "OLVIDADO", "normalized": "olvidado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00003" }], "cardIds": ["word-olvidado", "grammar-past-perfect"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00004" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w05", "text": "HORA", "normalized": "hora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00008" }], "cardIds": ["word-hora--time-of-day"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w06", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00009" }], "cardIds": ["word-a--relative-time", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w07", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00010" }], "cardIds": ["word-la--relative-article", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w08", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00011" }], "cardIds": ["word-que--relative", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w09", "text": "DUERME", "normalized": "duerme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00012" }], "cardIds": ["word-duerme"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w10", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00017" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w11", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00018" }], "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w12", "text": "NORMAL", "normalized": "normal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00019" }], "cardIds": ["word-normal"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:app-past-perfect",
+          "cardId": "grammar-past-perfect",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w02",
+            "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w03"
+          ],
+          "exampleEs": "HABÍA OLVIDADO",
+          "explanationEn": "Había is the helper form, and olvidado is the unchanged completed-action form of olvidar."
+        },
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:app-relative-time",
+          "cardId": "grammar-preposition-article-que-relative",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w06",
+            "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w07",
+            "es-xkcd-volver-casa-por-navidad:forgotten-hours-narration:w08"
+          ],
+          "exampleEs": "A LA QUE",
+          "explanationEn": "A supplies the time relationship, la matches the feminine noun hora, and que links back to that noun."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:santa-question",
+      "labelEs": "¿QUÉ HACES LEVANTADO TAN TARDE?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0009" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:santa-question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00030" }], "cardIds": ["word-qué--interrogative", "phrase-que-hacer-state-place"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:santa-question:w02", "text": "HACES", "normalized": "haces", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00031" }], "cardIds": ["word-haces", "phrase-que-hacer-state-place"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:santa-question:w03", "text": "LEVANTADO", "normalized": "levantado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00032" }], "cardIds": ["word-levantado--out-of-bed", "phrase-que-hacer-state-place"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:santa-question:w04", "text": "TAN", "normalized": "tan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00033" }], "cardIds": ["word-tan", "grammar-tan-adjective-degree"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:santa-question:w05", "text": "TARDE", "normalized": "tarde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00034" }], "cardIds": ["word-tarde--late", "grammar-tan-adjective-degree"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:santa-question:app-surprised-state",
+          "cardId": "phrase-que-hacer-state-place",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:santa-question:w01",
+            "es-xkcd-volver-casa-por-navidad:santa-question:w02",
+            "es-xkcd-volver-casa-por-navidad:santa-question:w03"
+          ],
+          "exampleEs": "QUÉ HACES LEVANTADO",
+          "explanationEn": "Qué and haces form the surprised question frame, and levantado supplies the unexpected condition."
+        },
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:santa-question:app-tan-degree",
+          "cardId": "grammar-tan-adjective-degree",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:santa-question:w04",
+            "es-xkcd-volver-casa-por-navidad:santa-question:w05"
+          ],
+          "exampleEs": "TAN TARDE",
+          "explanationEn": "Tan immediately precedes the adverb tarde and intensifies how late the time is."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-volver-casa-por-navidad:late-reply",
+      "labelEs": "¿TARDE? ¡APENAS SON LAS 3!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-volver-casa-por-navidad:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-volver-casa-por-navidad:late-reply:w01", "text": "TARDE", "normalized": "tarde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00035" }], "cardIds": ["word-tarde--late"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:late-reply:w02", "text": "APENAS", "normalized": "apenas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00036" }, { "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00037" }], "cardIds": ["word-apenas--barely"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:late-reply:w03", "text": "SON", "normalized": "son", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00038" }], "cardIds": ["word-son--clock-time", "grammar-ser-clock-time"] },
+        { "id": "es-xkcd-volver-casa-por-navidad:late-reply:w04", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00044" }], "cardIds": ["word-las--clock-time", "grammar-ser-clock-time"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:late-reply:excluded-clock-hour",
+          "text": "3",
+          "reason": "number",
+          "rationale": "This is the numerical clock hour, not a printed Spanish lexical word.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-volver-casa-por-navidad:ocr-token-00045" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-volver-casa-por-navidad:late-reply:app-clock-time",
+          "cardId": "grammar-ser-clock-time",
+          "participantWordIds": [
+            "es-xkcd-volver-casa-por-navidad:late-reply:w03",
+            "es-xkcd-volver-casa-por-navidad:late-reply:w04"
+          ],
+          "exampleEs": "SON LAS 3",
+          "explanationEn": "Son is the plural clock-time form and las is the matching feminine plural article used before the hour number."
+        }
+      ]
+    }
+  ]
+}

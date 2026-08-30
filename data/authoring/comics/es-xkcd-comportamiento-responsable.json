@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-comportamiento-responsable",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Responsible Behavior",
+  "titleEs": "Comportamiento responsable",
+  "titleText": {
+    "es": "Nunca lleves tequila a una fiesta de firma de claves.",
+    "en": "Never bring tequila to a key-signing party.",
+    "noteEn": "A key-signing party is a gathering where people verify one another's cryptographic public keys. The tequila warning jokingly treats careless key signing as the regrettable consequence of getting drunk."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-volver--return",
+      "kind": "word",
+      "promptEs": "volver",
+      "answerEn": "to return; to come back",
+      "noteEn": "Follow volver with de and a place or event to say where someone is returning from.",
+      "example": { "es": "Acabo de volver del trabajo.", "en": "I have just returned from work." },
+      "tags": ["word", "verb", "movement", "A1"]
+    },
+    { "id": "word-fiesta", "kind": "word", "promptEs": "fiesta", "answerEn": "party", "noteEn": "", "tags": ["word", "social event", "noun", "A1"] },
+    {
+      "id": "word-qué--fixed-qué-tal-result",
+      "kind": "word",
+      "promptEs": "qué",
+      "answerEn": "how (as part of asking qué tal about an experience)",
+      "noteEn": "Qué keeps its written accent inside the fixed question qué tal. When the question includes fue or ha ido, it asks how an event or experience went.",
+      "example": { "es": "¿Qué tal fue la reunión?", "en": "How did the meeting go?" },
+      "tags": ["word", "fixed question", "experience", "A1"]
+    },
+    {
+      "id": "word-tal--fixed-qué-tal-result",
+      "kind": "word",
+      "promptEs": "tal",
+      "answerEn": "no separate English word; completes qué tal when asking how something went",
+      "noteEn": "Qué and tal work together as one question expression. Tal stays unchanged regardless of the event being discussed.",
+      "example": { "es": "¿Qué tal ha ido el viaje?", "en": "How has the trip gone?" },
+      "tags": ["word", "fixed question", "experience", "A1"]
+    },
+    {
+      "id": "word-bebí",
+      "kind": "word",
+      "promptEs": "bebí",
+      "answerEn": "I drank",
+      "noteEn": "Bebí is the completed-past form of beber used by the speaker. The written accent marks the stressed final sound.",
+      "example": { "es": "Ayer bebí mucha agua.", "en": "Yesterday I drank a lot of water." },
+      "tags": ["word", "verb", "completed past", "A1"]
+    },
+    {
+      "id": "word-la--fixed-cagarla",
+      "kind": "word",
+      "promptEs": "la",
+      "answerEn": "no separate English word; fixed part of cagarla, “to screw up”",
+      "noteEn": "The la in cagarla is fixed and does not point to a particular feminine person or thing. It moves before a conjugated verb or helper: la cagué and la he cagado.",
+      "example": { "es": "La cagué al enviar el archivo.", "en": "I screwed up when I sent the file." },
+      "tags": ["word", "fixed expression", "vulgar", "B1"]
+    },
+    {
+      "id": "word-cagado--screwed-up",
+      "kind": "word",
+      "promptEs": "cagado",
+      "answerEn": "screwed up; messed up (with la, vulgar)",
+      "noteEn": "Cagado is the completed-action form of cagar. In the fixed expression cagarla, the literal meaning gives way to the informal vulgar sense of making a serious mistake.",
+      "example": { "es": "Creo que la hemos cagado.", "en": "I think we have screwed up." },
+      "tags": ["word", "fixed expression", "vulgar", "completed-action form", "B1"]
+    },
+    {
+      "id": "word-pasado--happened",
+      "kind": "word",
+      "promptEs": "pasado",
+      "answerEn": "happened; occurred (after ha)",
+      "noteEn": "Pasado is the completed-action form of pasar. In qué ha pasado, pasar means to happen rather than to move past a place.",
+      "example": { "es": "¿Qué ha pasado aquí?", "en": "What has happened here?" },
+      "tags": ["word", "verb", "event", "completed-action form", "A2"]
+    },
+    {
+      "id": "word-de--no-idea-content",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; introduces what someone has no idea about",
+      "noteEn": "After no tener ni idea or the shorter ni idea, de introduces the fact or question that is unknown. English normally places who, what, or whether directly after no idea.",
+      "example": { "es": "No tengo ni idea de quién llamó.", "en": "I have no idea who called." },
+      "tags": ["word", "required complement", "uncertainty", "A2"]
+    },
+    {
+      "id": "word-estaba--i-was-state",
+      "kind": "word",
+      "promptEs": "estaba",
+      "answerEn": "I was (in a past state)",
+      "noteEn": "Estaba is a background-past form of estar. The subject can be I, he, she, or one formal you; here the unstated subject is the speaker.",
+      "example": { "es": "Estaba cansado después del viaje.", "en": "I was tired after the trip." },
+      "tags": ["word", "estar", "past state", "A2"]
+    },
+    {
+      "id": "word-su--her",
+      "kind": "word",
+      "promptEs": "su",
+      "answerEn": "her (before one thing)",
+      "noteEn": "Su comes before the singular thing that belongs to someone. Spanish does not mark the owner's gender in su; the surrounding context identifies a female owner.",
+      "example": { "es": "Ana perdió su teléfono.", "en": "Ana lost her phone." },
+      "tags": ["word", "possessive", "female owner", "A1"]
+    },
+    { "id": "word-borracho", "kind": "word", "promptEs": "borracho", "answerEn": "drunk (masculine singular)", "noteEn": "", "tags": ["word", "state", "adjective", "A2"] },
+    {
+      "id": "word-para--too-result",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "for; introduces a result blocked by being too much a certain way",
+      "noteEn": "After demasiado plus a description, para introduces the action or result that the excessive condition prevents. Use para que when that result has its own subject and verb.",
+      "example": { "es": "Está demasiado lejos para que lo oiga.", "en": "He is too far away for me to hear him." },
+      "tags": ["word", "result", "threshold", "B1"]
+    },
+    {
+      "id": "word-que--too-result",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "no separate English word; completes para que before a separate blocked result",
+      "noteEn": "Que lets the result after para have its own subject and verb. In a demasiado... para que pattern, that result is presented as prevented or unreal rather than as a fact.",
+      "example": { "es": "Era demasiado tarde para que saliéramos.", "en": "It was too late for us to leave." },
+      "tags": ["word", "result", "connector", "B1"]
+    },
+    {
+      "id": "word-importara--matter",
+      "kind": "word",
+      "promptEs": "importara",
+      "answerEn": "would matter; mattered (a special past form after para que)",
+      "noteEn": "Importar can mean to matter. Importara is a special past form used because the result after para que is blocked or not asserted as a fact. The ordinary background-past form would be importaba.",
+      "example": { "es": "Era demasiado tarde para que importara.", "en": "It was too late for it to matter." },
+      "tags": ["word", "verb", "matter", "subjunctive", "B1"]
+    },
+    {
+      "id": "word-y--fixed-y-que",
+      "kind": "word",
+      "promptEs": "y",
+      "answerEn": "so; and (as part of ¿y qué?, “so what?”)",
+      "noteEn": "At the start of ¿y qué?, y does not merely join two listed items. It challenges the relevance of what was just said, much like conversational English so.",
+      "example": { "es": "—No están de acuerdo. —¿Y qué?", "en": "—They do not agree. —So what?" },
+      "tags": ["word", "fixed response", "conversation", "A2"]
+    },
+    {
+      "id": "word-acostaste--slept-with",
+      "kind": "word",
+      "promptEs": "acostaste",
+      "answerEn": "you slept with; you had sex with (with te and con)",
+      "noteEn": "Acostaste is a completed-past form for informal singular you. In te acostaste con alguien, acostarse con commonly means to sleep with someone in the sexual sense, though context can sometimes support a literal shared-bed meaning.",
+      "example": { "es": "¿Te acostaste con tu pareja?", "en": "Did you sleep with your partner?" },
+      "tags": ["word", "verb", "sex", "completed past", "B1"]
+    },
+    { "id": "word-ella", "kind": "word", "promptEs": "ella", "answerEn": "her; she", "noteEn": "After a preposition such as con, ella corresponds to her. As a sentence subject, it means she.", "example": { "es": "Hablé con ella ayer.", "en": "I spoke with her yesterday." }, "tags": ["word", "pronoun", "person", "A1"] },
+    {
+      "id": "word-firmé--signed",
+      "kind": "word",
+      "promptEs": "firmé",
+      "answerEn": "I signed; I certified",
+      "noteEn": "Firmé is the completed-past form of firmar used by the speaker. With a cryptographic public key, signing means digitally certifying the link between that key and an identity.",
+      "example": { "es": "Firmé el documento esta mañana.", "en": "I signed the document this morning." },
+      "tags": ["word", "verb", "signature", "completed past", "A2"]
+    },
+    {
+      "id": "word-clave--cryptographic-key",
+      "kind": "word",
+      "promptEs": "clave",
+      "answerEn": "key (in cryptography)",
+      "noteEn": "In cryptography, a clave is data used for operations such as encryption or signature checking. A public key can be shared openly; it is not the same thing as a password.",
+      "example": { "es": "Guardé una copia de mi clave pública.", "en": "I saved a copy of my public key." },
+      "tags": ["word", "cryptography", "key", "B1"]
+    },
+    {
+      "id": "word-pública--public",
+      "kind": "word",
+      "promptEs": "pública",
+      "answerEn": "public (feminine singular)",
+      "noteEn": "Pública is feminine singular because it describes the feminine noun clave.",
+      "example": { "es": "La información es pública.", "en": "The information is public." },
+      "tags": ["word", "adjective", "feminine singular", "A2"]
+    },
+    {
+      "id": "phrase-que-tal-went",
+      "kind": "phrase",
+      "promptEs": "¿qué tal fue…? / ¿qué tal ha ido…?",
+      "questionEn": "How do you ask how an event or experience went?",
+      "answerEn": "Ask ¿qué tal fue...? for a finished past event, or ¿qué tal ha ido...? for one viewed as connected to now.",
+      "noteEn": "Qué tal works as one fixed question expression. Fue is a simple completed-past form of ser used to evaluate a finished event. Ha ido combines ha with ido, the completed-action form of ir, and is common when asking about a recent experience. The slash in the prompt separates these two alternatives; it does not belong in a Spanish sentence.",
+      "example": { "es": "¿Qué tal fue el concierto?", "en": "How did the concert go?" },
+      "tags": ["phrase", "questions", "experiences", "A1"]
+    },
+    {
+      "id": "phrase-cagarla",
+      "kind": "phrase",
+      "promptEs": "cagarla",
+      "questionEn": "What informal vulgar expression means to mess something up or make a serious mistake?",
+      "answerEn": "Use cagarla for “to screw up” or “to mess up.”",
+      "noteEn": "Conjugate cagar for the person and time, but keep la as a fixed part of the expression. La comes before a conjugated verb or a helper: la cagué means “I screwed up,” while la he cagado means “I have screwed up.” Do not interpret la as a particular woman or object here.",
+      "example": { "es": "La cagué al borrar el archivo.", "en": "I screwed up when I deleted the file." },
+      "tags": ["phrase", "mistakes", "vulgar", "B1"]
+    },
+    {
+      "id": "grammar-demasiado-para-que-result",
+      "kind": "grammar",
+      "promptEs": "estar demasiado + descripción + para que + resultado",
+      "questionEn": "How do you say that someone or something is too much a certain way for a separate result to happen or matter?",
+      "answerEn": "Use a form of estar, demasiado, the description, then para que and the separate result in its special non-factual form.",
+      "noteEn": "Demasiado marks the excessive condition. Para que introduces a result with its own subject and verb, and that result uses a form called the subjunctive because it is blocked rather than stated as a fact. For a past setting, ordinary importaba becomes importara and ordinary oía becomes oyera. When the same person performs the following action, Spanish can instead use para plus the verb's unchanged dictionary form: estaba demasiado cansado para seguir.",
+      "example": { "es": "Estaba demasiado lejos para que me oyera.", "en": "I was too far away for her to hear me." },
+      "tags": ["grammar", "threshold", "blocked result", "subjunctive", "B1"]
+    },
+    {
+      "id": "phrase-y-que-so-what",
+      "kind": "phrase",
+      "promptEs": "¿y qué?",
+      "questionEn": "What short response means “so what?” when you challenge why something matters?",
+      "answerEn": "Use ¿y qué? to mean “so what?”",
+      "noteEn": "This fixed response asks why the previous statement should matter. Its tone can be dismissive or challenging, so use it carefully. Qué keeps its written accent because the response is still shaped as a question.",
+      "example": { "es": "—Es difícil. —¿Y qué?", "en": "—It is difficult. —So what?" },
+      "tags": ["phrase", "conversation", "challenge", "A2"]
+    },
+    {
+      "id": "phrase-acostarse-con-alguien",
+      "kind": "phrase",
+      "promptEs": "acostarse con alguien",
+      "questionEn": "How do you say that someone sleeps with or has sex with another person?",
+      "answerEn": "Use a matching form of acostarse, then con, then the other person.",
+      "noteEn": "Acostarse uses a matching short word: me acuesto, te acuestas, se acuesta, or nos acostamos. With con alguien, it commonly carries the sexual meaning of sleeping with that person, although context can sometimes make it literal. Change acostar for the person and time, but keep con before the other person.",
+      "example": { "es": "No me acosté con nadie.", "en": "I did not sleep with anyone." },
+      "tags": ["phrase", "sex", "pronominal verb", "B1"]
+    },
+    {
+      "id": "phrase-clave-publica",
+      "kind": "phrase",
+      "promptEs": "una clave pública",
+      "questionEn": "What is the Spanish term for a public key in cryptography?",
+      "answerEn": "Use clave pública for “public key.”",
+      "noteEn": "Clave is the feminine noun for the cryptographic key, so pública is feminine too. A public key is meant to be shared and can be used to verify digital signatures or protect data for its owner; the matching private key stays secret.",
+      "example": { "es": "Ana compartió su clave pública.", "en": "Ana shared her public key." },
+      "tags": ["phrase", "cryptography", "public key", "B1"]
+    },
+    {
+      "id": "concept-public-key-signing-party",
+      "kind": "concept",
+      "promptEs": "fiesta de firma de claves",
+      "answerEn": "a gathering where people verify identities and digitally sign one another's public keys",
+      "noteEn": "In public-key cryptography, signing another person's key records confidence that the key really belongs to that identity. Key-signing parties organize these checks and can build a web of trust. The comic treats careless signing as the supposedly shocking drunken mistake, reversing the kind of confession the listener expects.",
+      "tags": ["concept", "cryptography", "key signing", "web of trust"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-1-opening",
+      "labelEs": "OYE, ACABO DE VOLVER DE LA FIESTA.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w01", "text": "OYE", "normalized": "oye", "explicitBounds": [{ "x": 1.4063, "y": 6.5657, "width": 4.8438, "height": 8.0808 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates OYE.", "cardIds": ["word-oye--attention", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w02", "text": "ACABO", "normalized": "acabo", "explicitBounds": [{ "x": 6.7188, "y": 6.5657, "width": 6.5625, "height": 8.0808 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates ACABO.", "cardIds": ["word-acabo--recent-past", "grammar-acabar-de-infinitive"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 13.5938, "y": 7.0707, "width": 2.8125, "height": 7.5758 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates the first DE.", "cardIds": ["word-de--fixed-acabar-de", "grammar-acabar-de-infinitive"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w04", "text": "VOLVER", "normalized": "volver", "explicitBounds": [{ "x": 1.4063, "y": 14.6465, "width": 7.9688, "height": 7.0707 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates VOLVER.", "cardIds": ["word-volver--return", "grammar-acabar-de-infinitive"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 9.6875, "y": 14.6465, "width": 2.9688, "height": 7.0707 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates the second DE.", "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w06", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 12.8125, "y": 14.6465, "width": 2.6563, "height": 7.0707 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates LA.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:w07", "text": "FIESTA", "normalized": "fiesta", "explicitBounds": [{ "x": 15.9375, "y": 14.6465, "width": 7.5, "height": 7.0707 }], "geometryRationale": "Vision fused both opening lines into vertical columns; this measured box isolates FIESTA.", "cardIds": ["word-fiesta", "concept-public-key-signing-party"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:app-oye-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-1-opening:w01"], "exampleEs": "OYE", "explanationEn": "Oye is the irregular positive command of oír used here to get one familiar listener's attention." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-opening:app-recent-past", "cardId": "grammar-acabar-de-infinitive", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-1-opening:w02", "es-xkcd-comportamiento-responsable:panel-1-opening:w03", "es-xkcd-comportamiento-responsable:panel-1-opening:w04"], "exampleEs": "ACABO DE VOLVER", "explanationEn": "Acabo marks the speaker and recent time, de links the pattern, and volver stays in its unchanged dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-1-party-question",
+      "labelEs": "- ¿LA DE LA GENTE DEL IRC?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00036" }], "cardIds": ["word-la--omitted-feminine-noun"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00037" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00038" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:w04", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00043" }], "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:w05", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00044" }], "cardIds": ["word-del--of-the"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-party-question:excluded-irc", "text": "IRC", "reason": "non-spanish-text", "rationale": "IRC is the English technical acronym for Internet Relay Chat, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00045" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-1-answer",
+      "labelEs": "SÍ.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0019" }],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-1-answer:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00048" }], "cardIds": ["word-sí"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it",
+      "labelEs": "¿QUÉ TAL FUE?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00004" }], "cardIds": ["word-qué--fixed-qué-tal-result", "phrase-que-tal-went", "question-words"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it:w02", "text": "TAL", "normalized": "tal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00005" }], "cardIds": ["word-tal--fixed-qué-tal-result", "phrase-que-tal-went"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it:w03", "text": "FUE", "normalized": "fue", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00006" }], "cardIds": ["word-fue--preterite-ser", "phrase-que-tal-went"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it:app-how-went", "cardId": "phrase-que-tal-went", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-how-was-it:w01", "es-xkcd-comportamiento-responsable:panel-2-how-was-it:w02", "es-xkcd-comportamiento-responsable:panel-2-how-was-it:w03"], "exampleEs": "QUÉ TAL FUE", "explanationEn": "Qué tal forms the fixed evaluation question, and fue places the experience in a finished past setting." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-how-was-it:app-question-accent", "cardId": "question-words", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-how-was-it:w01"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its written accent because it directly asks for an evaluation." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-2-confession",
+      "labelEs": "BEBÍ DEMASIADO. LA HE CAGADO BIEN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0017" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w01", "text": "BEBÍ", "normalized": "bebí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00034" }], "cardIds": ["word-bebí"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w02", "text": "DEMASIADO", "normalized": "demasiado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00035" }], "cardIds": ["word-demasiado--too-much"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w03", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 28.75, "y": 39.3939, "width": 3.125, "height": 9.0909 }], "geometryRationale": "Vision recognized only the final letter; this measured box covers the full printed fixed pronoun LA.", "cardIds": ["word-la--fixed-cagarla", "phrase-cagarla"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w04", "text": "HE", "normalized": "he", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00040" }], "cardIds": ["word-he", "grammar-present-perfect", "phrase-cagarla"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w05", "text": "CAGADO", "normalized": "cagado", "explicitBounds": [{ "x": 35.1563, "y": 39.3939, "width": 7.8125, "height": 9.0909 }], "geometryRationale": "Vision misread the final letter and clipped its right edge; this measured box covers the full printed word CAGADO.", "cardIds": ["word-cagado--screwed-up", "grammar-present-perfect", "phrase-cagarla"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:w06", "text": "BIEN", "normalized": "bien", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00046" }], "cardIds": ["word-bien--intensifier"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:app-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-confession:w04", "es-xkcd-comportamiento-responsable:panel-2-confession:w05"], "exampleEs": "HE CAGADO", "explanationEn": "He is the present helper for the speaker, and cagado is the completed-action form that follows it." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-confession:app-cagarla", "cardId": "phrase-cagarla", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-confession:w03", "es-xkcd-comportamiento-responsable:panel-2-confession:w04", "es-xkcd-comportamiento-responsable:panel-2-confession:w05"], "exampleEs": "LA HE CAGADO", "explanationEn": "La is the fixed part of the expression, while he cagado supplies its present-perfect form for the speaker." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened",
+      "labelEs": "¿QUÉ HA PASADO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0024" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00053" }], "cardIds": ["word-qué--interrogative", "question-words"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened:w02", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00054" }], "cardIds": ["word-ha", "grammar-present-perfect"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened:w03", "text": "PASADO", "normalized": "pasado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00056" }], "cardIds": ["word-pasado--happened", "grammar-present-perfect"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened:app-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-what-happened:w02", "es-xkcd-comportamiento-responsable:panel-2-what-happened:w03"], "exampleEs": "HA PASADO", "explanationEn": "Ha is the present helper for one event, and pasado is pasar's completed-action form." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-2-what-happened:app-question-accent", "cardId": "question-words", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-2-what-happened:w01"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its written accent because it directly asks what happened." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-3-explanation",
+      "labelEs": "HABÍA UNA CHICA. NI IDEA DE QUIÉN ERA. NI SIQUIERA SÉ SU NOMBRE. ESTABA DEMASIADO BORRACHO PARA QUE ME IMPORTARA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w01", "text": "HABÍA", "normalized": "había", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00001" }], "cardIds": ["word-había--existential", "grammar-impersonal-habia-existence"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w02", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00002" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w03", "text": "CHICA", "normalized": "chica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00003" }], "cardIds": ["word-chica--young-woman"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w04", "text": "NI", "normalized": "ni", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00011" }], "cardIds": ["word-ni--fixed-ni-idea", "phrase-ni-idea"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w05", "text": "IDEA", "normalized": "idea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00012" }], "cardIds": ["word-idea", "phrase-ni-idea"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00013" }], "cardIds": ["word-de--no-idea-content"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w07", "text": "QUIÉN", "normalized": "quién", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00014" }], "cardIds": ["word-quién--interrogative", "question-words"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w08", "text": "ERA", "normalized": "era", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00015" }], "cardIds": ["word-era"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w09", "text": "NI", "normalized": "ni", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00016" }], "cardIds": ["word-ni--fixed-ni-siquiera", "phrase-ni-siquiera"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w10", "text": "SIQUIERA", "normalized": "siquiera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00017" }], "cardIds": ["word-siquiera--fixed-ni-siquiera", "phrase-ni-siquiera"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w11", "text": "SÉ", "normalized": "sé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00018" }], "cardIds": ["word-sé"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w12", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00019" }], "cardIds": ["word-su--her"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w13", "text": "NOMBRE", "normalized": "nombre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00020" }], "cardIds": ["word-nombre"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w14", "text": "ESTABA", "normalized": "estaba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00024" }], "cardIds": ["word-estaba--i-was-state", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w15", "text": "DEMASIADO", "normalized": "demasiado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00025" }], "cardIds": ["word-demasiado", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w16", "text": "BORRACHO", "normalized": "borracho", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00026" }, { "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00029" }], "cardIds": ["word-borracho", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w17", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00030" }], "cardIds": ["word-para--too-result", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w18", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00031" }], "cardIds": ["word-que--too-result", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w19", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00032" }], "cardIds": ["word-me--indirect", "grammar-demasiado-para-que-result"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:w20", "text": "IMPORTARA", "normalized": "importara", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00033" }, { "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00042" }], "cardIds": ["word-importara--matter", "grammar-demasiado-para-que-result"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:app-existence", "cardId": "grammar-impersonal-habia-existence", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-explanation:w01"], "exampleEs": "HABÍA", "explanationEn": "Había presents a person as existing in the past setting and stays singular." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:app-no-idea", "cardId": "phrase-ni-idea", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-explanation:w04", "es-xkcd-comportamiento-responsable:panel-3-explanation:w05"], "exampleEs": "NI IDEA", "explanationEn": "Ni idea is the conventional shortened form here, with no tengo left unstated." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:app-who-accent", "cardId": "question-words", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-explanation:w07"], "exampleEs": "QUIÉN", "explanationEn": "Quién keeps its written accent because it introduces an embedded question about identity." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:app-not-even", "cardId": "phrase-ni-siquiera", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-explanation:w09", "es-xkcd-comportamiento-responsable:panel-3-explanation:w10"], "exampleEs": "NI SIQUIERA", "explanationEn": "Ni siquiera supplies the strong negative emphasis before the knowledge statement that follows." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-explanation:app-too-for-result", "cardId": "grammar-demasiado-para-que-result", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-explanation:w14", "es-xkcd-comportamiento-responsable:panel-3-explanation:w15", "es-xkcd-comportamiento-responsable:panel-3-explanation:w16", "es-xkcd-comportamiento-responsable:panel-3-explanation:w17", "es-xkcd-comportamiento-responsable:panel-3-explanation:w18", "es-xkcd-comportamiento-responsable:panel-3-explanation:w19", "es-xkcd-comportamiento-responsable:panel-3-explanation:w20"], "exampleEs": "ESTABA DEMASIADO BORRACHO PARA QUE ME IMPORTARA", "explanationEn": "Estaba sets the past state, demasiado borracho gives the excessive condition, and para que introduces the blocked result expressed by me importara." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up",
+      "labelEs": "¿Y QUÉ? ¿TE ACOSTASTE CON ELLA?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w01", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00049" }], "cardIds": ["word-y--fixed-y-que", "phrase-y-que-so-what"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w02", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00050" }], "cardIds": ["word-qué--interrogative", "phrase-y-que-so-what", "question-words"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w03", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00051" }], "cardIds": ["word-te--pronominal-marker", "phrase-acostarse-con-alguien"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w04", "text": "ACOSTASTE", "normalized": "acostaste", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00055" }], "cardIds": ["word-acostaste--slept-with", "phrase-acostarse-con-alguien"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w05", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00057" }], "cardIds": ["word-con", "phrase-acostarse-con-alguien"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:w06", "text": "ELLA", "normalized": "ella", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00058" }], "cardIds": ["word-ella", "phrase-acostarse-con-alguien"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:app-so-what", "cardId": "phrase-y-que-so-what", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-follow-up:w01", "es-xkcd-comportamiento-responsable:panel-3-follow-up:w02"], "exampleEs": "Y QUÉ", "explanationEn": "Y challenges the relevance of the previous statement, while qué keeps the fixed response in question form." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:app-question-accent", "cardId": "question-words", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-follow-up:w02"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its written accent because the fixed response is expressed as a direct question." },
+        { "id": "es-xkcd-comportamiento-responsable:panel-3-follow-up:app-sleep-with", "cardId": "phrase-acostarse-con-alguien", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-3-follow-up:w03", "es-xkcd-comportamiento-responsable:panel-3-follow-up:w04", "es-xkcd-comportamiento-responsable:panel-3-follow-up:w05", "es-xkcd-comportamiento-responsable:panel-3-follow-up:w06"], "exampleEs": "TE ACOSTASTE CON ELLA", "explanationEn": "Te matches the addressed person in acostaste, and con ella supplies the other person in the expression." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-4-denial",
+      "labelEs": "NO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-denial:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00010" }], "cardIds": ["word-no"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing",
+      "labelEs": "LE FIRMÉ LA CLAVE PÚBLICA.",
+      "explicitBounds": [{ "x": 82.1875, "y": 21.7172, "width": 15.7813, "height": 15.6566 }],
+      "geometryRationale": "Vision clipped letters at both edges of this two-line utterance; this measured region covers the complete printed phrase.",
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:w01", "text": "LE", "normalized": "le", "explicitBounds": [{ "x": 82.3438, "y": 22.2222, "width": 3.4375, "height": 10.101 }], "geometryRationale": "Vision recognized only the final letter; this measured box covers the full printed recipient pronoun LE.", "cardIds": ["word-le--recipient-feminine"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:w02", "text": "FIRMÉ", "normalized": "firmé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00022" }], "cardIds": ["word-firmé--signed", "concept-public-key-signing-party"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:w03", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 92.1875, "y": 22.2222, "width": 3.75, "height": 10.101 }], "geometryRationale": "Vision clipped the final letter; this measured box covers the full printed article LA.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:w04", "text": "CLAVE", "normalized": "clave", "explicitBounds": [{ "x": 82.3438, "y": 29.2929, "width": 6.7188, "height": 7.5758 }], "geometryRationale": "Vision omitted the initial letters; this measured box covers the full printed word CLAVE without including the speech-tail stroke below.", "cardIds": ["word-clave--cryptographic-key", "phrase-clave-publica", "concept-public-key-signing-party"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:w05", "text": "PÚBLICA", "normalized": "pública", "explicitBounds": [{ "x": 88.9063, "y": 29.2929, "width": 8.9063, "height": 7.5758 }], "geometryRationale": "Vision clipped the word ending; this measured box covers the full printed word PÚBLICA without including the speech-tail stroke below.", "cardIds": ["word-pública--public", "phrase-clave-publica", "concept-public-key-signing-party"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-key-signing:app-public-key", "cardId": "phrase-clave-publica", "participantWordIds": ["es-xkcd-comportamiento-responsable:panel-4-key-signing:w04", "es-xkcd-comportamiento-responsable:panel-4-key-signing:w05"], "exampleEs": "CLAVE PÚBLICA", "explanationEn": "Clave names the cryptographic key, and pública agrees with that feminine singular noun." }
+      ]
+    },
+    {
+      "id": "es-xkcd-comportamiento-responsable:panel-4-reaction",
+      "labelEs": "MIERDA, TÍO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-comportamiento-responsable:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-reaction:w01", "text": "MIERDA", "normalized": "mierda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00047" }], "cardIds": ["word-mierda"] },
+        { "id": "es-xkcd-comportamiento-responsable:panel-4-reaction:w02", "text": "TÍO", "normalized": "tío", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-comportamiento-responsable:ocr-token-00052" }], "cardIds": ["word-tío--informal-address"] }
+      ],
+      "applications": []
+    }
+  ]
+}
