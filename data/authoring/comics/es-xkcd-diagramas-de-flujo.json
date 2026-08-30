@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-diagramas-de-flujo",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Flow Charts",
+  "titleEs": "Diagramas de flujo",
+  "titleText": {
+    "es": "Tras 8 tragos cambias el torrent de FreeBSD a Microsoft Bob. ¡Venga, será divertido!",
+    "en": "At 8 drinks, you switch the torrent from FreeBSD to Microsoft Bob. C'mon, it'll be fun!",
+    "noteEn": "The English field preserves the official xkcd title text. The Spanish archive changes ‘At 8 drinks’ to Tras 8 tragos (‘after 8 drinks’) and renders ‘C'mon’ as ¡Venga! (‘come on’)."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-guía",
+      "kind": "word",
+      "promptEs": "guía",
+      "answerEn": "guide; set of instructions",
+      "noteEn": "Guía can name a person who leads others or a written explanation that helps someone understand or do something. The surrounding context selects the sense.",
+      "example": { "es": "Leí una guía para principiantes.", "en": "I read a beginner's guide." },
+      "tags": ["word", "instructions", "feminine noun", "A2"]
+    },
+    {
+      "id": "word-entender",
+      "kind": "word",
+      "promptEs": "entender",
+      "answerEn": "to understand",
+      "noteEn": "Entender is the unchanged dictionary form. Its present forms change the stressed e to ie in most persons: entiendo, entiendes, entiende, and entienden.",
+      "example": { "es": "Quiero entender el problema.", "en": "I want to understand the problem." },
+      "tags": ["word", "understanding", "infinitive", "A1"]
+    },
+    {
+      "id": "word-diagramas",
+      "kind": "word",
+      "promptEs": "diagramas",
+      "answerEn": "diagrams; charts",
+      "noteEn": "Diagramas is plural. Although it ends in -a, diagrama is masculine: el diagrama and los diagramas.",
+      "example": { "es": "Los diagramas explican el proceso.", "en": "The diagrams explain the process." },
+      "tags": ["word", "diagram", "plural", "masculine -ma noun", "A2"]
+    },
+    {
+      "id": "word-diagrama",
+      "kind": "word",
+      "promptEs": "diagrama",
+      "answerEn": "diagram; chart",
+      "noteEn": "Diagrama is masculine despite its -a ending: el diagrama. Many Spanish nouns ending in -ma and derived from Greek follow this pattern.",
+      "example": { "es": "El diagrama muestra tres pasos.", "en": "The diagram shows three steps." },
+      "tags": ["word", "diagram", "masculine -ma noun", "A2"]
+    },
+    {
+      "id": "word-flujo--process-sequence",
+      "kind": "word",
+      "promptEs": "flujo",
+      "answerEn": "flow; sequence through a process",
+      "noteEn": "Flujo can describe movement through a process. In diagrama de flujo, it refers to the routes that connect steps and decisions; this is broader than a stream of data or one program's control flow.",
+      "example": { "es": "El diagrama muestra el flujo del trabajo.", "en": "The diagram shows the workflow." },
+      "tags": ["word", "flowchart", "process", "sense split", "B1"]
+    },
+    {
+      "id": "word-presentada--presented-feminine",
+      "kind": "word",
+      "promptEs": "presentada",
+      "answerEn": "presented; shown (feminine singular)",
+      "noteEn": "Presentada is the feminine singular completed-action form of presentar. It can describe a feminine noun such as guía, idea, or propuesta.",
+      "example": { "es": "La idea fue presentada ayer.", "en": "The idea was presented yesterday." },
+      "tags": ["word", "presentar", "participle", "feminine singular", "A2"]
+    },
+    {
+      "id": "word-entiendes",
+      "kind": "word",
+      "promptEs": "entiendes",
+      "answerEn": "you understand; do you understand? (informal singular)",
+      "noteEn": "Entiendes is the present tú form of entender. The stressed e changes to ie: entender becomes entiendes.",
+      "example": { "es": "¿Entiendes esta explicación?", "en": "Do you understand this explanation?" },
+      "tags": ["word", "entender", "present", "informal you", "A1"]
+    },
+    {
+      "id": "word-bien--approving-reaction",
+      "kind": "word",
+      "promptEs": "bien",
+      "answerEn": "good; great (an approving reaction)",
+      "noteEn": "Used by itself after a result or answer, bien can show approval, like ‘good’ or ‘great.’ This differs from bien meaning ‘well’ or opening a response as ‘all right.’",
+      "example": { "es": "—Ya terminé. —Bien.", "en": "‘I’ve finished.’ ‘Good.’" },
+      "tags": ["word", "reaction", "approval", "sense split", "A1"]
+    },
+    {
+      "id": "word-tragos--alcoholic-drinks",
+      "kind": "word",
+      "promptEs": "tragos",
+      "answerEn": "drinks; alcoholic drinks",
+      "noteEn": "Trago literally can be a swallow or sip. In a count such as dos tragos, it commonly refers to alcoholic drinks.",
+      "example": { "es": "Tomaron dos tragos en el bar.", "en": "They had two drinks at the bar." },
+      "tags": ["word", "drink", "alcohol", "plural", "A2"]
+    },
+    {
+      "id": "word-tomar--have-drink",
+      "kind": "word",
+      "promptEs": "tomar",
+      "answerEn": "to have; to drink (a drink)",
+      "noteEn": "Tomar has several uses. With a beverage or the vague object algo in a social invitation, it commonly means to have something to drink.",
+      "example": { "es": "Vamos a tomar un café.", "en": "We are going to have a coffee." },
+      "tags": ["word", "tomar", "drink", "social invitation", "A2"]
+    },
+    {
+      "id": "word-a--probar-infinitive",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; links probar to an action being tried",
+      "noteEn": "When probar means making an attempt, Spanish can use a before the following action in its unchanged dictionary form: probar a abrir, probar a llamar.",
+      "example": { "es": "Prueba a reiniciar el móvil.", "en": "Try restarting the phone." },
+      "tags": ["word", "probar", "verb complement", "A2"]
+    },
+    {
+      "id": "word-línea--drawn-line",
+      "kind": "word",
+      "promptEs": "línea",
+      "answerEn": "line; drawn connecting line",
+      "noteEn": "Línea can be a visible stroke connecting points or shapes. This is distinct from línea meaning a phone connection, helpline, or the word inside en línea, ‘online.’",
+      "example": { "es": "Traza una línea entre los dos cuadros.", "en": "Draw a line between the two boxes." },
+      "tags": ["word", "line", "diagram", "sense split", "A1"]
+    },
+    {
+      "id": "word-etiquetada--labeled",
+      "kind": "word",
+      "promptEs": "etiquetada",
+      "answerEn": "labeled; marked with a label (feminine singular)",
+      "noteEn": "Etiquetada is the feminine singular completed-action form of etiquetar. As a describing word, it matches a feminine singular noun.",
+      "example": { "es": "Sigue la flecha etiquetada ‘salida’.", "en": "Follow the arrow labeled ‘exit.’" },
+      "tags": ["word", "label", "participle", "feminine singular", "A2"]
+    },
+    {
+      "id": "word-etiquetadas--labeled-ones",
+      "kind": "word",
+      "promptEs": "etiquetadas",
+      "answerEn": "labeled; the labeled ones (feminine plural)",
+      "noteEn": "Etiquetadas is feminine plural. After las, it can stand for previously mentioned feminine plural things without repeating their noun: las etiquetadas means ‘the labeled ones.’",
+      "example": { "es": "De las cajas, abre las etiquetadas ‘libros’.", "en": "Of the boxes, open the ones labeled ‘books.’" },
+      "tags": ["word", "label", "omitted noun", "feminine plural", "A2"]
+    },
+    {
+      "id": "word-si--protest-after-pero",
+      "kind": "word",
+      "promptEs": "si",
+      "answerEn": "but; why, when…? (introducing a protest after pero)",
+      "noteEn": "Unaccented si does not always introduce an if-condition. After pero, it can open an objection by pointing to a fact the listener is overlooking: ¡Pero si ya lo sabes!",
+      "example": { "es": "¡Pero si la puerta está abierta!", "en": "But the door is already open!" },
+      "tags": ["word", "si", "objection", "discourse", "B1"]
+    },
+    {
+      "id": "word-seguido--followed",
+      "kind": "word",
+      "promptEs": "seguido",
+      "answerEn": "followed",
+      "noteEn": "Seguido is the completed-action form of seguir, ‘to follow.’ After a form of haber, it stays unchanged: he seguido, has seguido, han seguido.",
+      "example": { "es": "Has seguido las instrucciones.", "en": "You have followed the instructions." },
+      "tags": ["word", "seguir", "participle", "A2"]
+    },
+    {
+      "id": "word-pregunta--question",
+      "kind": "word",
+      "promptEs": "pregunta",
+      "answerEn": "question",
+      "noteEn": "Pregunta is a feminine noun when it names a question. The same spelling can also be a command meaning ‘ask’; context distinguishes the two uses.",
+      "example": { "es": "Tengo una pregunta.", "en": "I have a question." },
+      "tags": ["word", "question", "feminine noun", "sense split", "A1"]
+    },
+    {
+      "id": "phrase-diagrama-de-flujo",
+      "kind": "phrase",
+      "promptEs": "diagrama(s) de flujo",
+      "questionEn": "What is the Spanish term for a flowchart or flow diagram?",
+      "answerEn": "Say diagrama de flujo; use diagramas de flujo for more than one.",
+      "noteEn": "Diagrama is masculine: el diagrama de flujo and los diagramas de flujo. Spanish uses de between the main noun and flujo, while English usually combines the idea into ‘flowchart.’",
+      "example": { "es": "Dibujamos un diagrama de flujo sencillo.", "en": "We drew a simple flowchart." },
+      "tags": ["phrase", "flowchart", "diagram", "technical vocabulary", "A2"]
+    },
+    {
+      "id": "grammar-probar-a-infinitive",
+      "kind": "grammar",
+      "promptEs": "probar a + verbo en forma de diccionario",
+      "questionEn": "How can you suggest trying an action to see whether it works?",
+      "answerEn": "Use a form of probar, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The unchanged form ends in -ar, -er, or -ir: prueba a llamar, probamos a abrir. Probar con instead introduces a person, thing, or option rather than an action verb.",
+      "example": { "es": "Prueba a cerrar la ventana.", "en": "Try closing the window." },
+      "tags": ["grammar", "probar", "infinitive", "attempt", "A2"]
+    },
+    {
+      "id": "phrase-tomar-algo",
+      "kind": "phrase",
+      "promptEs": "tomar algo · invitación social",
+      "questionEn": "How can you casually suggest going for a drink or something to eat?",
+      "answerEn": "Use a form of tomar followed by algo.",
+      "noteEn": "Literally, algo is ‘something,’ but tomar algo commonly means having a drink or a light bite in a social setting. The situation supplies what is consumed.",
+      "example": { "es": "¿Quieres tomar algo después del trabajo?", "en": "Do you want to get a drink after work?" },
+      "tags": ["phrase", "tomar", "invitation", "food and drink", "A2"]
+    },
+    {
+      "id": "phrase-pero-si--objection",
+      "kind": "phrase",
+      "promptEs": "¡pero si…! · objeción",
+      "questionEn": "How can you object by pointing out a fact that contradicts what was just said?",
+      "answerEn": "Begin with ¡pero si…! and then state the overlooked fact.",
+      "noteEn": "Here si has no accent and does not mean ‘if.’ The pair pero si introduces surprised disagreement, often like English ‘but…!’ or ‘why, …!’ depending on context.",
+      "example": { "es": "¡Pero si hoy es domingo!", "en": "But today is Sunday!" },
+      "tags": ["phrase", "objection", "discourse", "si", "B1"]
+    },
+    {
+      "id": "concept-flowchart-decision-logic",
+      "kind": "concept",
+      "promptEs": "diagrama de flujo · pasos y ramas sí/no",
+      "questionEn": "How does a flowchart represent a process with decisions?",
+      "answerEn": "It connects steps with arrows and sends a decision along different labeled branches, often ‘yes’ and ‘no.’",
+      "noteEn": "A flowchart makes the possible routes through a process visible. Rectangles commonly show steps, diamonds show decisions, and branch labels determine which path to follow. The comic turns those conventions into a self-referential test of whether the reader can follow the chart.",
+      "example": { "es": "El diagrama de flujo separa las respuestas sí y no.", "en": "The flowchart separates the yes and no answers." },
+      "tags": ["concept", "flowchart", "decision tree", "diagram", "logic"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-diagramas-de-flujo:guide-title",
+      "labelEs": "UNA GUÍA PARA ENTENDER DIAGRAMAS DE FLUJO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w01", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00001" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w02", "text": "GUÍA", "normalized": "guía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00002" }], "cardIds": ["word-guía"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w03", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00003" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w04", "text": "ENTENDER", "normalized": "entender", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00005" }], "cardIds": ["word-entender", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w05", "text": "DIAGRAMAS", "normalized": "diagramas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00006" }], "cardIds": ["word-diagramas", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00007" }], "cardIds": ["word-de--type-classifier", "phrase-diagrama-de-flujo"] },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:w07", "text": "FLUJO", "normalized": "flujo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00008" }], "cardIds": ["word-flujo--process-sequence", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-diagramas-de-flujo:guide-title:w03", "es-xkcd-diagramas-de-flujo:guide-title:w04"], "exampleEs": "PARA ENTENDER", "explanationEn": "Para introduces the purpose, and entender stays in its unchanged -er dictionary form." },
+        { "id": "es-xkcd-diagramas-de-flujo:guide-title:app-flowchart", "cardId": "phrase-diagrama-de-flujo", "participantWordIds": ["es-xkcd-diagramas-de-flujo:guide-title:w05", "es-xkcd-diagramas-de-flujo:guide-title:w06", "es-xkcd-diagramas-de-flujo:guide-title:w07"], "exampleEs": "DIAGRAMAS DE FLUJO", "explanationEn": "Diagramas supplies the plural head noun, de links it to the type, and flujo identifies the process-flow kind of diagram." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:subtitle",
+      "labelEs": "PRESENTADA COMO DIAGRAMA DE FLUJO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:w01", "text": "PRESENTADA", "normalized": "presentada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00009" }], "cardIds": ["word-presentada--presented-feminine"] },
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:w02", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00010" }], "cardIds": ["word-como--role"] },
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:w03", "text": "DIAGRAMA", "normalized": "diagrama", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00011" }], "cardIds": ["word-diagrama", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00012" }], "cardIds": ["word-de--type-classifier", "phrase-diagrama-de-flujo"] },
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:w05", "text": "FLUJO", "normalized": "flujo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00013" }], "cardIds": ["word-flujo--process-sequence", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:subtitle:app-flowchart", "cardId": "phrase-diagrama-de-flujo", "participantWordIds": ["es-xkcd-diagramas-de-flujo:subtitle:w03", "es-xkcd-diagramas-de-flujo:subtitle:w04", "es-xkcd-diagramas-de-flujo:subtitle:w05"], "exampleEs": "DIAGRAMA DE FLUJO", "explanationEn": "Diagrama is the singular head noun, de links it to its type, and flujo completes the conventional Spanish term." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:start",
+      "labelEs": "INICIO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:start:w01", "text": "INICIO", "normalized": "inicio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00004" }], "cardIds": ["word-inicio"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:understand-question",
+      "labelEs": "¿ENTIENDES LOS DIAGRAMAS DE FLUJO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:w01", "text": "ENTIENDES", "normalized": "entiendes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00016" }], "cardIds": ["word-entiendes"] },
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:w02", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00017" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:w03", "text": "DIAGRAMAS", "normalized": "diagramas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00018" }], "cardIds": ["word-diagramas", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00019" }], "cardIds": ["word-de--type-classifier", "phrase-diagrama-de-flujo"] },
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:w05", "text": "FLUJO", "normalized": "flujo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00020" }], "cardIds": ["word-flujo--process-sequence", "phrase-diagrama-de-flujo", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:understand-question:app-flowchart", "cardId": "phrase-diagrama-de-flujo", "participantWordIds": ["es-xkcd-diagramas-de-flujo:understand-question:w03", "es-xkcd-diagramas-de-flujo:understand-question:w04", "es-xkcd-diagramas-de-flujo:understand-question:w05"], "exampleEs": "DIAGRAMAS DE FLUJO", "explanationEn": "The plural diagramas, the classifier link de, and flujo form the standard term for flowcharts." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:understand-yes",
+      "labelEs": "SÍ",
+      "explicitBounds": [{ "x": 21.6, "y": 21.15, "width": 2.5, "height": 3.6 }],
+      "geometryRationale": "Vision missed this handwritten branch label; the measured box covers only SÍ above the outgoing line.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:understand-yes:w01", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 21.6, "y": 21.15, "width": 2.5, "height": 3.6 }], "geometryRationale": "The tight direct box restores the omitted yes label without absorbing the decision diamond or arrow line.", "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:good",
+      "labelEs": "BIEN",
+      "explicitBounds": [{ "x": 54.3, "y": 23.2, "width": 4.65, "height": 3.1 }],
+      "geometryRationale": "The OCR box included the surrounding process rectangle; this measured box isolates the word inside it.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:good:w01", "text": "BIEN", "normalized": "bien", "explicitBounds": [{ "x": 54.3, "y": 23.2, "width": 4.65, "height": 3.1 }], "geometryRationale": "The direct box covers only the four handwritten letters.", "cardIds": ["word-bien--approving-reaction"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:good-yes",
+      "labelEs": "SÍ",
+      "explicitBounds": [{ "x": 60.05, "y": 20.4, "width": 2.55, "height": 3.9 }],
+      "geometryRationale": "The OCR merged this branch label with BIEN and the surrounding lines; the measured box isolates SÍ.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:good-yes:w01", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 60.05, "y": 20.4, "width": 2.55, "height": 3.9 }], "geometryRationale": "The direct box includes the written accent and letters but excludes the arrow line below.", "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:take-something",
+      "labelEs": "VAMOS A TOMAR ALGO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:w01", "text": "VAMOS", "normalized": "vamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00026" }], "cardIds": ["word-vamos--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00027" }], "cardIds": ["word-a--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:w03", "text": "TOMAR", "normalized": "tomar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00031" }], "cardIds": ["word-tomar--have-drink", "grammar-ir-a-infinitive", "phrase-tomar-algo"] },
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:w04", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00032" }], "cardIds": ["word-algo", "phrase-tomar-algo"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:app-going-to", "cardId": "grammar-ir-a-infinitive", "participantWordIds": ["es-xkcd-diagramas-de-flujo:take-something:w01", "es-xkcd-diagramas-de-flujo:take-something:w02", "es-xkcd-diagramas-de-flujo:take-something:w03"], "exampleEs": "VAMOS A TOMAR", "explanationEn": "Vamos supplies the ‘we are going’ form, a is the required link, and tomar stays in its unchanged -ar form." },
+        { "id": "es-xkcd-diagramas-de-flujo:take-something:app-social-drink", "cardId": "phrase-tomar-algo", "participantWordIds": ["es-xkcd-diagramas-de-flujo:take-something:w03", "es-xkcd-diagramas-de-flujo:take-something:w04"], "exampleEs": "TOMAR ALGO", "explanationEn": "Tomar names having food or drink, while algo leaves the exact refreshment open for the situation to supply." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:six-drinks",
+      "labelEs": "6 TRAGOS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:six-drinks:w01", "text": "TRAGOS", "normalized": "tragos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00025" }], "cardIds": ["word-tragos--alcoholic-drinks"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-diagramas-de-flujo:six-drinks:excluded-six", "text": "6", "reason": "number", "rationale": "The digit counts drinks and is not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00024" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:install-suggestion",
+      "labelEs": "OYE, ¡DEBERÍAMOS PROBAR A INSTALAR FREEBSD!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:w01", "text": "OYE", "normalized": "oye", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00022" }], "cardIds": ["word-oye--attention", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:w02", "text": "DEBERÍAMOS", "normalized": "deberíamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00023" }, { "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00028" }], "cardIds": ["word-deberíamos", "grammar-deber-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:w03", "text": "PROBAR", "normalized": "probar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00029" }], "cardIds": ["word-probar", "grammar-deber-infinitive", "grammar-probar-a-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00030" }], "cardIds": ["word-a--probar-infinitive", "grammar-probar-a-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:w05", "text": "INSTALAR", "normalized": "instalar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00033" }], "cardIds": ["word-instalar", "grammar-probar-a-infinitive"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:excluded-freebsd", "text": "FREEBSD", "reason": "non-spanish-text", "rationale": "FreeBSD is an unchanged operating-system proper name, not Spanish lexical vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00034" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:app-attention-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-diagramas-de-flujo:install-suggestion:w01"], "exampleEs": "OYE", "explanationEn": "Oye is the irregular positive command used to get one familiar listener's attention." },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:app-should", "cardId": "grammar-deber-infinitive", "participantWordIds": ["es-xkcd-diagramas-de-flujo:install-suggestion:w02", "es-xkcd-diagramas-de-flujo:install-suggestion:w03"], "exampleEs": "DEBERÍAMOS PROBAR", "explanationEn": "Deberíamos supplies advice for ‘we,’ while probar remains in its unchanged -ar dictionary form." },
+        { "id": "es-xkcd-diagramas-de-flujo:install-suggestion:app-try-action", "cardId": "grammar-probar-a-infinitive", "participantWordIds": ["es-xkcd-diagramas-de-flujo:install-suggestion:w03", "es-xkcd-diagramas-de-flujo:install-suggestion:w04", "es-xkcd-diagramas-de-flujo:install-suggestion:w05"], "exampleEs": "PROBAR A INSTALAR", "explanationEn": "Probar introduces the attempt, a links it to the action, and instalar stays in its unchanged -ar form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:understand-no",
+      "labelEs": "NO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:understand-no:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00021" }], "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-yes-line",
+      "labelEs": "BIEN. ¿VES LA LÍNEA ETIQUETADA \"SÍ\"?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w01", "text": "BIEN", "normalized": "bien", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00035" }], "cardIds": ["word-bien--discourse"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w02", "text": "VES", "normalized": "ves", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00039" }], "cardIds": ["word-ves"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00040" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w04", "text": "LÍNEA", "normalized": "línea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00041" }], "cardIds": ["word-línea--drawn-line", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w05", "text": "ETIQUETADA", "normalized": "etiquetada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00045" }], "cardIds": ["word-etiquetada--labeled", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:w06", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00046" }], "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:app-description-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-diagramas-de-flujo:see-yes-line:w04", "es-xkcd-diagramas-de-flujo:see-yes-line:w05"], "exampleEs": "LÍNEA ETIQUETADA", "explanationEn": "Línea names the feminine singular thing first, and etiquetada follows it as the description." },
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line:app-description-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-diagramas-de-flujo:see-yes-line:w04", "es-xkcd-diagramas-de-flujo:see-yes-line:w05"], "exampleEs": "LÍNEA ETIQUETADA", "explanationEn": "Etiquetada uses its feminine singular form because it describes the feminine singular noun línea." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-yes-line-yes",
+      "labelEs": "SÍ",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0018" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line-yes:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00038" }], "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-lines",
+      "labelEs": "...Y PUEDES VER LAS ETIQUETADAS \"NO\"?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w01", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00036" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w02", "text": "PUEDES", "normalized": "puedes", "explicitBounds": [{ "x": 40, "y": 44.55, "width": 6, "height": 3.4 }], "geometryRationale": "Vision omitted the final S; the measured box covers the complete visible PUEDES without the diamond border.", "cardIds": ["word-puedes", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w03", "text": "VER", "normalized": "ver", "explicitBounds": [{ "x": 38.75, "y": 47.5, "width": 3.45, "height": 2.75 }], "geometryRationale": "Vision read only ER; the direct box restores the complete VER letters.", "cardIds": ["word-ver", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w04", "text": "LAS", "normalized": "las", "explicitBounds": [{ "x": 42.15, "y": 47.15, "width": 3.15, "height": 2.85 }], "geometryRationale": "Vision omitted the final S; this measured box covers the complete LAS without reaching the neighboring words.", "cardIds": ["word-las--omitted-feminine-plural", "grammar-article-adjective-omitted-noun"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w05", "text": "ETIQUETADAS", "normalized": "etiquetadas", "explicitBounds": [{ "x": 36.7, "y": 49.35, "width": 10.9, "height": 3.45 }], "geometryRationale": "Vision fused this line with the quoted label below; the measured box isolates ETIQUETADAS.", "cardIds": ["word-etiquetadas--labeled-ones", "grammar-article-adjective-omitted-noun", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:w06", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 39.6, "y": 51.8, "width": 7.2, "height": 3.2 }], "geometryRationale": "Vision merged the quoted NO with ETIQUETADAS; this measured box covers the label and adjacent punctuation while stopping above the diamond border.", "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:app-can-see", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-diagramas-de-flujo:see-no-lines:w02", "es-xkcd-diagramas-de-flujo:see-no-lines:w03"], "exampleEs": "PUEDES VER", "explanationEn": "Puedes changes for one informal listener, while ver remains in its unchanged -er dictionary form." },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines:app-omitted-lines", "cardId": "grammar-article-adjective-omitted-noun", "participantWordIds": ["es-xkcd-diagramas-de-flujo:see-no-lines:w04", "es-xkcd-diagramas-de-flujo:see-no-lines:w05"], "exampleEs": "LAS ETIQUETADAS", "explanationEn": "Las and etiquetadas stay feminine plural because they stand for the already mentioned líneas without repeating that noun." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-lines-yes",
+      "labelEs": "SÍ",
+      "explicitBounds": [{ "x": 51.15, "y": 44.9, "width": 2.85, "height": 4.2 }],
+      "geometryRationale": "Vision missed this branch label; the direct measured box covers only SÍ above the outgoing line.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines-yes:w01", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 51.15, "y": 44.9, "width": 2.85, "height": 4.2 }], "geometryRationale": "The box includes the accent and letters while excluding the nearby diamond and route line.", "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-lines-no",
+      "labelEs": "NO",
+      "explicitBounds": [{ "x": 42.65, "y": 57.45, "width": 3.25, "height": 3.35 }],
+      "geometryRationale": "Vision missed the downward branch label below the central decision; this direct box isolates NO.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-lines-no:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 42.65, "y": 57.45, "width": 3.25, "height": 3.35 }], "geometryRationale": "The measured word box excludes the arrow shaft and both diamond edges.", "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:followed-twice",
+      "labelEs": "¡PERO SI LAS HAS SEGUIDO DOS VECES!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0031" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w01", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00051" }], "cardIds": ["word-pero", "phrase-pero-si--objection"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w02", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00052" }], "cardIds": ["word-si--protest-after-pero", "phrase-pero-si--objection"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w03", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00054" }], "cardIds": ["word-las--direct-object-feminine-plural"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w04", "text": "HAS", "normalized": "has", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00055" }], "cardIds": ["word-has", "grammar-present-perfect"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w05", "text": "SEGUIDO", "normalized": "seguido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00056" }], "cardIds": ["word-seguido--followed", "grammar-present-perfect"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w06", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00062" }], "cardIds": ["word-dos"] },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:w07", "text": "VECES", "normalized": "veces", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00063" }], "cardIds": ["word-veces--a-veces"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:app-objection", "cardId": "phrase-pero-si--objection", "participantWordIds": ["es-xkcd-diagramas-de-flujo:followed-twice:w01", "es-xkcd-diagramas-de-flujo:followed-twice:w02"], "exampleEs": "¡PERO SI…!", "explanationEn": "Pero si opens a surprised objection; the following words supply the fact that contradicts the prior answer." },
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-diagramas-de-flujo:followed-twice:w04", "es-xkcd-diagramas-de-flujo:followed-twice:w05"], "exampleEs": "HAS SEGUIDO", "explanationEn": "Has is the present helper for one informal listener, and seguido is seguir's completed-action form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:followed-twice-yes",
+      "labelEs": "SÍ",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0027" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice-yes:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00053" }], "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:followed-twice-no",
+      "labelEs": "NO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0037" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:followed-twice-no:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00072" }], "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:not-a-question",
+      "labelEs": "(ESO NO ERA UNA PREGUNTA)",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:not-a-question:w01", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00057" }], "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-diagramas-de-flujo:not-a-question:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00058" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-diagramas-de-flujo:not-a-question:w03", "text": "ERA", "normalized": "era", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00059" }], "cardIds": ["word-era"] },
+        { "id": "es-xkcd-diagramas-de-flujo:not-a-question:w04", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00060" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-diagramas-de-flujo:not-a-question:w05", "text": "PREGUNTA", "normalized": "pregunta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00061" }], "cardIds": ["word-pregunta--question"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:dismissal",
+      "labelEs": "QUE LE DEN",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0024" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:dismissal:w01", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00047" }], "cardIds": ["word-que--fixed-que-le-den", "phrase-que-le-den-a"] },
+        { "id": "es-xkcd-diagramas-de-flujo:dismissal:w02", "text": "LE", "normalized": "le", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00048" }], "cardIds": ["word-le--fixed-que-le-den", "phrase-que-le-den-a"] },
+        { "id": "es-xkcd-diagramas-de-flujo:dismissal:w03", "text": "DEN", "normalized": "den", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00049" }], "cardIds": ["word-den--fixed-que-le-den", "phrase-que-le-den-a"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:dismissal:app-dismissal", "cardId": "phrase-que-le-den-a", "participantWordIds": ["es-xkcd-diagramas-de-flujo:dismissal:w01", "es-xkcd-diagramas-de-flujo:dismissal:w02", "es-xkcd-diagramas-de-flujo:dismissal:w03"], "exampleEs": "QUE LE DEN", "explanationEn": "Que, le, and den form the forceful dismissal; the rejected target stays unstated because the route makes it clear." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-yes-line-no",
+      "labelEs": "NO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0025" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-yes-line-no:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00050" }], "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-labeled",
+      "labelEs": "PERO VES LAS ETIQUETADAS \"NO\".",
+      "explicitBounds": [{ "x": 5.2, "y": 71.9, "width": 14.1, "height": 8.2 }],
+      "geometryRationale": "Vision fused the second line with the adjacent SÍ branch; this measured region covers only the three text lines inside the decision diamond.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:w01", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00064" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:w02", "text": "VES", "normalized": "ves", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00065" }], "cardIds": ["word-ves"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:w03", "text": "LAS", "normalized": "las", "explicitBounds": [{ "x": 5.25, "y": 74.7, "width": 3.3, "height": 3.25 }], "geometryRationale": "The OCR box was over-tall and began after the L; this measured box isolates the complete LAS.", "cardIds": ["word-las--omitted-feminine-plural", "grammar-article-adjective-omitted-noun"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:w04", "text": "ETIQUETADAS", "normalized": "etiquetadas", "explicitBounds": [{ "x": 8.2, "y": 74.7, "width": 11, "height": 3.25 }], "geometryRationale": "The original OCR box included the route label to the right; the measured box follows only ETIQUETADAS.", "cardIds": ["word-etiquetadas--labeled-ones", "grammar-article-adjective-omitted-noun", "concept-flowchart-decision-logic"] },
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:w05", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00071" }], "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled:app-omitted-lines", "cardId": "grammar-article-adjective-omitted-noun", "participantWordIds": ["es-xkcd-diagramas-de-flujo:see-no-labeled:w03", "es-xkcd-diagramas-de-flujo:see-no-labeled:w04"], "exampleEs": "LAS ETIQUETADAS", "explanationEn": "Las and etiquetadas remain feminine plural because the understood noun líneas is not repeated." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-labeled-yes",
+      "labelEs": "SÍ",
+      "explicitBounds": [{ "x": 19.95, "y": 72.2, "width": 2.65, "height": 4 }],
+      "geometryRationale": "Vision fused this route label with the neighboring decision text; the measured box isolates SÍ.",
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled-yes:w01", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 19.95, "y": 72.2, "width": 2.65, "height": 4 }], "geometryRationale": "The direct box covers the accent and letters without touching the outgoing route line.", "cardIds": ["word-sí", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:echo-question",
+      "labelEs": "¿QUÉ QUÉ?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0034" },
+        { "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0035" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:echo-question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00069" }], "cardIds": ["word-qué--echo-question", "question-words"] },
+        { "id": "es-xkcd-diagramas-de-flujo:echo-question:w02", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00070" }], "cardIds": ["word-qué--echo-question", "question-words"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:echo-question:app-question-accents", "cardId": "question-words", "participantWordIds": ["es-xkcd-diagramas-de-flujo:echo-question:w01", "es-xkcd-diagramas-de-flujo:echo-question:w02"], "exampleEs": "¿QUÉ QUÉ?", "explanationEn": "Both copies of qué carry the written accent because each repeats the questioned information in a surprised echo." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:see-no-labeled-no",
+      "labelEs": "NO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0038" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:see-no-labeled-no:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00073" }], "cardIds": ["word-no", "concept-flowchart-decision-logic"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:listen",
+      "labelEs": "ESCUCHA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0040" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:listen:w01", "text": "ESCUCHA", "normalized": "escucha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00076" }], "cardIds": ["word-escucha--command", "grammar-affirmative-tu-command"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:listen:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-diagramas-de-flujo:listen:w01"], "exampleEs": "ESCUCHA", "explanationEn": "Escucha is the positive command for one familiar listener." }
+      ]
+    },
+    {
+      "id": "es-xkcd-diagramas-de-flujo:hate",
+      "labelEs": "TE ODIO",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-diagramas-de-flujo:ocr-line-0039" }],
+      "words": [
+        { "id": "es-xkcd-diagramas-de-flujo:hate:w01", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00074" }], "cardIds": ["word-te--direct", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-diagramas-de-flujo:hate:w02", "text": "ODIO", "normalized": "odio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diagramas-de-flujo:ocr-token-00075" }], "cardIds": ["word-odio", "grammar-direct-object-pronoun-before-finite-verb"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-diagramas-de-flujo:hate:app-object-pronoun", "cardId": "grammar-direct-object-pronoun-before-finite-verb", "participantWordIds": ["es-xkcd-diagramas-de-flujo:hate:w01", "es-xkcd-diagramas-de-flujo:hate:w02"], "exampleEs": "TE ODIO", "explanationEn": "Te replaces the familiar listener as the direct object and comes before the changed verb odio." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-declive",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Decline",
+  "titleEs": "Declive",
+  "titleText": {
+    "es": "—También hay un pico en la transformada de Fourier justo en el mes que... —Te conviene callarte ahora mismo.",
+    "en": "'There's also a spike on the Fourier transform at the one-month mark where --' 'You want to stop talking right now.'",
+    "noteEn": "The Spanish archive preserves the Fourier-transform reference and leaves its one-month observation unfinished after justo en el mes que."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-comenzó--began",
+      "kind": "word",
+      "promptEs": "comenzó",
+      "answerEn": "began; started",
+      "noteEn": "Comenzó is comenzar's completed-past form for one person or thing. The written accent marks the stress on the final ó.",
+      "example": { "es": "La película comenzó tarde.", "en": "The movie began late." },
+      "tags": ["word", "completed past", "beginning", "A2"]
+    },
+    { "id": "word-declive", "kind": "word", "promptEs": "declive", "answerEn": "decline; downturn", "noteEn": "", "tags": ["word", "change", "noun", "B1"] },
+    {
+      "id": "word-empezaste--started",
+      "kind": "word",
+      "promptEs": "empezaste",
+      "answerEn": "you started; you began (informal singular)",
+      "noteEn": "Empezaste is empezar's completed-past form for one familiar person addressed as tú. When an action follows, Spanish places a before that action verb's unchanged dictionary form.",
+      "example": { "es": "Empezaste a leer ayer.", "en": "You started reading yesterday." },
+      "tags": ["word", "completed past", "informal you", "A2"]
+    },
+    { "id": "word-coincidencia", "kind": "word", "promptEs": "coincidencia", "answerEn": "coincidence", "noteEn": "", "tags": ["word", "noun", "B1"] },
+    {
+      "id": "concept-fourier-transform",
+      "kind": "concept",
+      "promptEs": "transformada de Fourier",
+      "questionEn": "What does a Fourier transform reveal about changing data?",
+      "answerEn": "It rewrites a changing signal as a collection of repeating frequencies. A strong peak can reveal a prominent repeating cycle.",
+      "noteEn": "The title text extends the graphing joke by claiming that a Fourier analysis finds a one-month pattern in the relationship data.",
+      "tags": ["concept", "mathematics", "signal processing", "data analysis"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-declive:graph-symbols",
+      "labelEs": "↑ ♥",
+      "explicitBounds": [
+        { "x": 8.2353, "y": 33.195, "width": 2.5882, "height": 13.6929 },
+        { "x": 6.3529, "y": 48.1328, "width": 5.1765, "height": 7.4689 }
+      ],
+      "geometryRationale": "OCR omitted both meaningful graph labels; these separately measured rectangles tightly cover the upward arrow and heart without absorbing the graph axes.",
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-declive:graph-symbols:excluded-upward-arrow",
+          "text": "↑",
+          "reason": "symbol",
+          "rationale": "This arrow indicates the graph's upward direction and is a symbol rather than a Spanish lexical word.",
+          "explicitBounds": [{ "x": 8.2353, "y": 33.195, "width": 2.5882, "height": 13.6929 }],
+          "geometryRationale": "This measured box covers the complete detached upward arrow and stops before the nearby vertical graph axis."
+        },
+        {
+          "id": "es-xkcd-declive:graph-symbols:excluded-heart",
+          "text": "♥",
+          "reason": "symbol",
+          "rationale": "This heart labels the relationship quantity plotted on the graph and is a symbol rather than a Spanish lexical word.",
+          "explicitBounds": [{ "x": 6.3529, "y": 48.1328, "width": 5.1765, "height": 7.4689 }],
+          "geometryRationale": "This measured box tightly covers the standalone heart outline without touching the graph axis."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-declive:relationship-decline",
+      "labelEs": "NUESTRA RELACIÓN COMENZÓ SU DECLIVE EN ESTE PUNTO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-declive:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-declive:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-declive:relationship-decline:w01", "text": "NUESTRA", "normalized": "nuestra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00001" }], "cardIds": ["word-nuestra"] },
+        { "id": "es-xkcd-declive:relationship-decline:w02", "text": "RELACIÓN", "normalized": "relación", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00002" }], "cardIds": ["word-relación", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:relationship-decline:w03", "text": "COMENZÓ", "normalized": "comenzó", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00003" }], "cardIds": ["word-comenzó--began", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:relationship-decline:w04", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00004" }], "cardIds": ["word-su--third-person-possessive"] },
+        { "id": "es-xkcd-declive:relationship-decline:w05", "text": "DECLIVE", "normalized": "declive", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00005" }], "cardIds": ["word-declive", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:relationship-decline:w06", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00006" }], "cardIds": ["word-en--at-location"] },
+        { "id": "es-xkcd-declive:relationship-decline:w07", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00007" }], "cardIds": ["word-este"] },
+        { "id": "es-xkcd-declive:relationship-decline:w08", "text": "PUNTO", "normalized": "punto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00008" }], "cardIds": ["word-punto--curve-location", "concept-correlation-causation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-declive:graphing-reply",
+      "labelEs": "ESO FUE CUANDO EMPEZASTE A HACER GRÁFICAS DE TODO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-declive:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-declive:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-declive:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-declive:graphing-reply:w01", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00009" }], "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-declive:graphing-reply:w02", "text": "FUE", "normalized": "fue", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00010" }], "cardIds": ["word-fue--preterite-ser"] },
+        { "id": "es-xkcd-declive:graphing-reply:w03", "text": "CUANDO", "normalized": "cuando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00011" }], "cardIds": ["word-cuando--when", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:graphing-reply:w04", "text": "EMPEZASTE", "normalized": "empezaste", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00012" }], "cardIds": ["word-empezaste--started", "grammar-empezar-a-infinitive", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:graphing-reply:w05", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00013" }], "cardIds": ["word-a--infinitive-link", "grammar-empezar-a-infinitive"] },
+        { "id": "es-xkcd-declive:graphing-reply:w06", "text": "HACER", "normalized": "hacer", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00014" }], "cardIds": ["word-hacer--make", "grammar-empezar-a-infinitive", "concept-correlation-causation"] },
+        { "id": "es-xkcd-declive:graphing-reply:w07", "text": "GRÁFICAS", "normalized": "gráficas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00015" }], "cardIds": ["word-gráficas", "concept-correlation-causation", "concept-fourier-transform"] },
+        { "id": "es-xkcd-declive:graphing-reply:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00016" }], "cardIds": ["word-de--about-topic"] },
+        { "id": "es-xkcd-declive:graphing-reply:w09", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00017" }], "cardIds": ["word-todo"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-declive:graphing-reply:app-start-action",
+          "cardId": "grammar-empezar-a-infinitive",
+          "participantWordIds": [
+            "es-xkcd-declive:graphing-reply:w04",
+            "es-xkcd-declive:graphing-reply:w05",
+            "es-xkcd-declive:graphing-reply:w06"
+          ],
+          "exampleEs": "EMPEZASTE A HACER",
+          "explanationEn": "Empezaste changes for one familiar person and completed past time, a links it to the action, and hacer stays in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-declive:coincidence-reaction",
+      "labelEs": "¡COINCIDENCIA!",
+      "explicitBounds": [{ "x": 49.7255, "y": 66.0482, "width": 28.7467, "height": 9.076 }],
+      "geometryRationale": "OCR prefixed a piece of the graph curve to this line; this tight rectangle isolates only the printed reaction and its punctuation.",
+      "words": [
+        { "id": "es-xkcd-declive:coincidence-reaction:w01", "text": "COINCIDENCIA", "normalized": "coincidencia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-declive:ocr-token-00018" }], "cardIds": ["word-coincidencia", "concept-correlation-causation"] }
+      ],
+      "applications": []
+    }
+  ]
+}

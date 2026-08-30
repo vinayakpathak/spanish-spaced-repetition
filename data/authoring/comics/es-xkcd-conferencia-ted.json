@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-conferencia-ted",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "TED Talk",
+  "titleEs": "Conferencia TED",
+  "titleText": {
+    "es": "El veto de la UAI vino después del incidente ",
+    "en": "The IAU ban came after the 'redefinition of 'planet' to include the IAU president's mom' incident.",
+    "noteEn": "The Spanish archive metadata is truncated after incidente because the page places unescaped quotation marks inside its HTML title attribute. The page continues with the same invented planet-redefinition insult preserved in the complete official English title text; UAI is the Spanish abbreviation for the International Astronomical Union, called the IAU in English."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-bienvenidos",
+      "kind": "word",
+      "promptEs": "bienvenidos",
+      "answerEn": "welcome (addressing a mixed or all-male group)",
+      "noteEn": "Bienvenidos is the masculine plural form of bienvenido. Use bienvenidas for an all-female group.",
+      "example": { "es": "Bienvenidos a nuestra ciudad.", "en": "Welcome to our city." },
+      "tags": ["word", "greeting", "plural", "A1"]
+    },
+    {
+      "id": "word-charla--public-talk",
+      "kind": "word",
+      "promptEs": "charla",
+      "answerEn": "talk; presentation to an audience",
+      "noteEn": "Charla can mean a spoken presentation for an audience. That is distinct from its conversational sense, where it means an informal chat or discussion.",
+      "example": { "es": "Marta dio una charla sobre astronomía.", "en": "Marta gave a talk about astronomy." },
+      "tags": ["word", "presentation", "public speaking", "A2"]
+    },
+    {
+      "id": "word-sois--vosotros",
+      "kind": "word",
+      "promptEs": "sois",
+      "answerEn": "you all are (informal plural, mainly in Spain)",
+      "noteEn": "Sois is the present form of ser used with vosotros or vosotras, the informal way to address several people in Spain.",
+      "example": { "es": "Vosotros sois muy amables.", "en": "You all are very kind." },
+      "tags": ["word", "ser", "vosotros", "Spain", "A1"]
+    },
+    {
+      "id": "word-de--partitive-some",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of; links ‘some’ to the larger group",
+      "noteEn": "After algunos or algunas, de introduces the group from which the smaller set is chosen. Spanish normally keeps the matching article before that group: algunos de los, algunas de las.",
+      "example": { "es": "Algunas de las ventanas están abiertas.", "en": "Some of the windows are open." },
+      "tags": ["word", "preposition", "partitive", "A2"]
+    },
+    { "id": "word-innovadores", "kind": "word", "promptEs": "innovadores", "answerEn": "innovators (masculine or mixed plural)", "noteEn": "", "tags": ["word", "people", "plural", "A2"] },
+    {
+      "id": "word-brillantes--brilliant",
+      "kind": "word",
+      "promptEs": "brillantes",
+      "answerEn": "brilliant; brightest after más (plural)",
+      "noteEn": "Brillante can describe a bright light or, figuratively, a very intelligent or impressive person. Its plural is brillantes for every gender.",
+      "example": { "es": "Son investigadoras brillantes.", "en": "They are brilliant researchers." },
+      "tags": ["word", "description", "intelligence", "plural", "A2"]
+    },
+    { "id": "word-honor", "kind": "word", "promptEs": "honor", "answerEn": "honor", "noteEn": "", "tags": ["word", "noun", "A2"] },
+    {
+      "id": "word-hablaros--to-you-all",
+      "kind": "word",
+      "promptEs": "hablaros",
+      "answerEn": "to speak to you all (informal plural, mainly in Spain)",
+      "noteEn": "Hablaros joins hablar, the unchanged dictionary form meaning ‘to speak,’ with os, the short word for several people addressed informally in Spain.",
+      "example": { "es": "Quiero hablaros de una idea.", "en": "I want to speak to you all about an idea." },
+      "tags": ["word", "verb", "attached pronoun", "vosotros", "A2"]
+    },
+    { "id": "word-necesita", "kind": "word", "promptEs": "necesita", "answerEn": "needs; requires", "noteEn": "", "tags": ["word", "verb", "A1"] },
+    {
+      "id": "word-vuestra--plural-your",
+      "kind": "word",
+      "promptEs": "vuestra",
+      "answerEn": "your (informal plural in Spain; before one feminine thing)",
+      "noteEn": "Vuestra says that something belongs to several people addressed informally. Its feminine singular ending matches the one feminine thing owned, not the number or gender of the owners.",
+      "example": { "es": "Esta es vuestra mesa.", "en": "This is your table." },
+      "tags": ["word", "possessive", "vosotros", "agreement", "A2"]
+    },
+    { "id": "word-cerrar", "kind": "word", "promptEs": "cerrar", "answerEn": "to close; end", "noteEn": "", "tags": ["word", "verb", "A1"] },
+    { "id": "word-emoticono", "kind": "word", "promptEs": "emoticono", "answerEn": "emoticon", "noteEn": "", "tags": ["word", "internet", "punctuation", "A2"] },
+    { "id": "word-enunciado", "kind": "word", "promptEs": "enunciado", "answerEn": "statement; sentence", "noteEn": "", "tags": ["word", "language", "noun", "B1"] },
+    {
+      "id": "word-parentesis--plural",
+      "kind": "word",
+      "promptEs": "paréntesis",
+      "answerEn": "parentheses (plural)",
+      "noteEn": "Paréntesis is written the same way in singular and plural. Context words reveal the number: un paréntesis is one parenthesis, while dos paréntesis is two parentheses.",
+      "example": { "es": "La frase contiene dos paréntesis.", "en": "The sentence contains two parentheses." },
+      "tags": ["word", "punctuation", "invariant plural", "A2"]
+    },
+    {
+      "id": "word-se--ocurrirsele",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; marks the ‘come to mind’ use of ocurrir",
+      "noteEn": "In the pattern se me/te/le/nos/os/les ocurre, se is required before the short word naming the person who has the idea. It does not mean that the idea acts on itself.",
+      "example": { "es": "Se nos ocurre una solución.", "en": "A solution occurs to us." },
+      "tags": ["word", "ocurrir", "idea", "pronoun", "B1"]
+    },
+    {
+      "id": "word-ocurre--comes-to-mind",
+      "kind": "word",
+      "promptEs": "ocurre",
+      "answerEn": "occurs to; comes to mind",
+      "noteEn": "With se and a short recipient word such as me or le, ocurre presents an idea as coming to someone rather than simply reporting that an event happens.",
+      "example": { "es": "Se le ocurre otra opción.", "en": "Another option occurs to her." },
+      "tags": ["word", "verb", "idea", "B1"]
+    },
+    {
+      "id": "word-descompensado--unbalanced",
+      "kind": "word",
+      "promptEs": "descompensado",
+      "answerEn": "unbalanced; visually mismatched (masculine singular)",
+      "noteEn": "The prefix des- reverses compensado here: the parts no longer look balanced or well matched.",
+      "example": { "es": "El dibujo quedó descompensado.", "en": "The drawing ended up looking unbalanced." },
+      "tags": ["word", "description", "visual balance", "B1"]
+    },
+    { "id": "word-conferencias", "kind": "word", "promptEs": "conferencias", "answerEn": "conferences; formal talks (plural)", "noteEn": "", "tags": ["word", "events", "plural", "A2"] },
+    {
+      "id": "word-en--relative-banned-from",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "from; at (introducing where a ban applies)",
+      "noteEn": "After estar vetado, en introduces the place, event, or setting where the ban applies. Natural English often uses ‘from’ or ‘at’ rather than the usual literal ‘in.’",
+      "example": { "es": "Está vetado en varios estadios.", "en": "He is banned from several stadiums." },
+      "tags": ["word", "preposition", "ban", "relative clause", "B1"]
+    },
+    {
+      "id": "word-las--relative-article",
+      "kind": "word",
+      "promptEs": "las",
+      "answerEn": "the feminine plural article inside las que (‘which’)",
+      "noteEn": "After a preposition, las can join que to refer back to feminine plural things. Las matches those things; que itself does not change.",
+      "example": { "es": "Son las salas en las que trabajamos.", "en": "They are the rooms that we work in." },
+      "tags": ["word", "article", "relative clause", "feminine plural", "B1"]
+    },
+    {
+      "id": "word-vetado--banned",
+      "kind": "word",
+      "promptEs": "vetado",
+      "answerEn": "banned; barred (masculine singular)",
+      "noteEn": "Vetado is the masculine singular completed-action form of vetar. After estar, it describes the resulting state of being barred.",
+      "example": { "es": "El jugador está vetado.", "en": "The player is banned." },
+      "tags": ["word", "ban", "completed action", "B1"]
+    },
+    { "id": "word-unión--organization", "kind": "word", "promptEs": "unión", "answerEn": "union; association or organization", "noteEn": "", "tags": ["word", "organization", "noun", "A2"] },
+    { "id": "word-astronómica", "kind": "word", "promptEs": "astronómica", "answerEn": "astronomical (feminine singular)", "noteEn": "", "tags": ["word", "astronomy", "description", "A2"] },
+    { "id": "word-internacional", "kind": "word", "promptEs": "internacional", "answerEn": "international", "noteEn": "", "tags": ["word", "description", "A2"] },
+    { "id": "word-conferencia", "kind": "word", "promptEs": "conferencia", "answerEn": "conference; formal talk", "noteEn": "", "tags": ["word", "events", "A2"] },
+    { "id": "word-canadiense", "kind": "word", "promptEs": "canadiense", "answerEn": "Canadian", "noteEn": "Canadiense has the same singular form for masculine and feminine nouns.", "example": { "es": "Es una científica canadiense.", "en": "She is a Canadian scientist." }, "tags": ["word", "nationality", "description", "A1"] },
+    { "id": "word-paleontología", "kind": "word", "promptEs": "paleontología", "answerEn": "paleontology", "noteEn": "", "tags": ["word", "science", "A2"] },
+    {
+      "id": "word-convenciones--events",
+      "kind": "word",
+      "promptEs": "convenciones",
+      "answerEn": "conventions; organized gatherings (plural)",
+      "noteEn": "Here convención means an organized event or gathering. The same word can also mean an agreed practice or rule, which is a different sense.",
+      "example": { "es": "La ciudad recibe varias convenciones cada año.", "en": "The city hosts several conventions each year." },
+      "tags": ["word", "events", "sense split", "A2"]
+    },
+    {
+      "id": "word-furry--subculture",
+      "kind": "word",
+      "promptEs": "furry",
+      "answerEn": "furry; related to fans of anthropomorphic animal characters",
+      "noteEn": "Spanish commonly borrows the English word furry for this subculture. When it modifies an event or group, it is often left unchanged for gender and number.",
+      "example": { "es": "Hay una convención furry este fin de semana.", "en": "There is a furry convention this weekend." },
+      "tags": ["word", "loanword", "subculture", "B1"]
+    },
+    {
+      "id": "word-eeuu",
+      "kind": "word",
+      "promptEs": "eeuu",
+      "answerEn": "US; United States (Spanish abbreviation)",
+      "noteEn": "EEUU abbreviates Estados Unidos. The repeated E and U show that both words are plural; formal writing often adds periods and a space as EE. UU.",
+      "example": { "es": "La empresa vende sus productos en EEUU.", "en": "The company sells its products in the US." },
+      "tags": ["word", "abbreviation", "countries", "A2"]
+    },
+    { "id": "word-sociedad--association", "kind": "word", "promptEs": "sociedad", "answerEn": "society; association or organization", "noteEn": "", "tags": ["word", "organization", "A2"] },
+    {
+      "id": "word-repostera--baking",
+      "kind": "word",
+      "promptEs": "repostera",
+      "answerEn": "baking; confectionery-related (feminine singular)",
+      "noteEn": "Repostera can describe something connected with making cakes, pastries, and other sweets. Its feminine ending matches a feminine singular noun.",
+      "example": { "es": "Visitamos una feria repostera.", "en": "We visited a baking fair." },
+      "tags": ["word", "baking", "description", "B1"]
+    },
+    { "id": "word-convención", "kind": "word", "promptEs": "convención", "answerEn": "convention; organized gathering", "noteEn": "", "tags": ["word", "events", "A2"] },
+    { "id": "word-asiática", "kind": "word", "promptEs": "asiática", "answerEn": "Asian (feminine singular)", "noteEn": "", "tags": ["word", "geography", "description", "A1"] },
+    { "id": "word-entrenamiento", "kind": "word", "promptEs": "entrenamiento", "answerEn": "training", "noteEn": "", "tags": ["word", "learning", "noun", "A2"] },
+    { "id": "word-delfines", "kind": "word", "promptEs": "delfines", "answerEn": "dolphins", "noteEn": "", "tags": ["word", "animals", "plural", "A1"] },
+    {
+      "id": "grammar-algunos-de-grupo",
+      "kind": "grammar",
+      "promptEs": "algunos/algunas de los/las…",
+      "questionEn": "How do you say ‘some of’ a named group?",
+      "answerEn": "Use algunos or algunas, then de, then los or las and the group.",
+      "noteEn": "Choose algunos before a masculine or mixed set and algunas before a feminine set. Los or las agrees with the larger group that follows. This pattern selects a smaller set from that larger group.",
+      "example": { "es": "Algunas de las profesoras llegaron.", "en": "Some of the teachers arrived." },
+      "tags": ["grammar", "partitive", "quantity", "A2"]
+    },
+    {
+      "id": "phrase-es-un-honor-infinitive",
+      "kind": "phrase",
+      "promptEs": "es un honor hacer algo",
+      "questionEn": "How do you say that doing something is an honor?",
+      "answerEn": "Use es un honor, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as hablar, conocer, or recibir. Es can change when the time changes, but the action verb after honor stays in that dictionary form.",
+      "example": { "es": "Es un honor conocerla.", "en": "It is an honor to meet you." },
+      "tags": ["phrase", "honor", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-entre-parentesis",
+      "kind": "phrase",
+      "promptEs": "entre paréntesis",
+      "questionEn": "How do you say that text is written in parentheses?",
+      "answerEn": "Use entre paréntesis for ‘in parentheses.’",
+      "noteEn": "Entre usually means ‘between,’ but this conventional expression describes words placed between an opening and a closing parenthesis. Paréntesis has the same written form for one parenthesis and for more than one.",
+      "example": { "es": "Escribe la fecha entre paréntesis.", "en": "Write the date in parentheses." },
+      "tags": ["phrase", "punctuation", "writing", "A2"]
+    },
+    {
+      "id": "phrase-ocurrirsele-algo",
+      "kind": "phrase",
+      "promptEs": "se me/te/le/nos/os/les ocurre una idea",
+      "questionEn": "How do you say that an idea occurs to someone or comes to mind?",
+      "answerEn": "Put se before me, te, le, nos, os, or les, then use ocurre for one idea or ocurren for several.",
+      "noteEn": "The short word after se identifies who has the idea: me for me, te for informal you, le for one other person or formal you, nos for us, os for informal plural you in Spain, and les for several other people. The verb agrees with the idea, not with that person: ocurre una idea but ocurren dos ideas.",
+      "example": { "es": "Se me ocurre una solución.", "en": "A solution occurs to me." },
+      "tags": ["phrase", "ideas", "pronouns", "ocurrir", "B1"]
+    },
+    {
+      "id": "concept-emoticon-parenthesis-ambiguity",
+      "kind": "concept",
+      "promptEs": "emoticono · paréntesis · descompensado",
+      "questionEn": "Why can a parenthetical statement ending in an emoticon look ambiguous?",
+      "answerEn": "One closing parenthesis can look like both the smile's mouth and the end of the parenthetical text; adding another clarifies the structure but can make the face look odd.",
+      "noteEn": "The two rejected versions trade grammatical clarity against visual balance. The joke treats this tiny punctuation problem as an urgent topic for a prestigious talk.",
+      "tags": ["concept", "emoticons", "punctuation", "typography", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-conferencia-ted:introduction",
+      "labelEs": "HOLA, SOY RANDALL. BIENVENIDOS A MI CHARLA TED.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:introduction:w01", "text": "HOLA", "normalized": "hola", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00006" }], "cardIds": ["word-hola"] },
+        { "id": "es-xkcd-conferencia-ted:introduction:w02", "text": "SOY", "normalized": "soy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00007" }], "cardIds": ["word-soy--identity"] },
+        { "id": "es-xkcd-conferencia-ted:introduction:w03", "text": "BIENVENIDOS", "normalized": "bienvenidos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00014" }], "cardIds": ["word-bienvenidos"] },
+        { "id": "es-xkcd-conferencia-ted:introduction:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00015" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-conferencia-ted:introduction:w05", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00016" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-conferencia-ted:introduction:w06", "text": "CHARLA", "normalized": "charla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00024" }], "cardIds": ["word-charla--public-talk"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:introduction:excluded-randall", "text": "RANDALL", "reason": "non-spanish-text", "rationale": "Randall is the speaker's unchanged personal name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00008" }] },
+        { "id": "es-xkcd-conferencia-ted:introduction:excluded-ted", "text": "TED", "reason": "non-spanish-text", "rationale": "TED is the unchanged proper name and acronym of the conference series, not Spanish lexical vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00025" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:audience-address",
+      "labelEs": "SOIS ALGUNOS DE LOS INNOVADORES MÁS BRILLANTES, DE MUCHOS CAMPOS, ES UN HONOR HABLAROS DE UN PROBLEMA QUE NECESITA DESESPERADAMENTE DE VUESTRA ATENCIÓN:",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:audience-address:w01", "text": "SOIS", "normalized": "sois", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00001" }], "cardIds": ["word-sois--vosotros", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w02", "text": "ALGUNOS", "normalized": "algunos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00002" }], "cardIds": ["word-algunos", "grammar-algunos-de-grupo"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00003" }], "cardIds": ["word-de--partitive-some", "grammar-algunos-de-grupo"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w04", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00004" }], "cardIds": ["word-los", "grammar-algunos-de-grupo", "grammar-relative-superlative"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w05", "text": "INNOVADORES", "normalized": "innovadores", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00005" }], "cardIds": ["word-innovadores", "grammar-algunos-de-grupo", "grammar-relative-superlative"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w06", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00009" }], "cardIds": ["word-más--superlative", "grammar-relative-superlative"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w07", "text": "BRILLANTES", "normalized": "brillantes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00010" }], "cardIds": ["word-brillantes--brilliant", "grammar-relative-superlative"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00011" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w09", "text": "MUCHOS", "normalized": "muchos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00012" }], "cardIds": ["word-muchos"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w10", "text": "CAMPOS", "normalized": "campos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00013" }], "cardIds": ["word-campos--academic-fields"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w11", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00017" }], "cardIds": ["word-es--impersonal-evaluation", "phrase-es-un-honor-infinitive"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w12", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00018" }], "cardIds": ["word-un", "phrase-es-un-honor-infinitive"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w13", "text": "HONOR", "normalized": "honor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00019" }], "cardIds": ["word-honor", "phrase-es-un-honor-infinitive"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w14", "text": "HABLAROS", "normalized": "hablaros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00020" }], "cardIds": ["word-hablaros--to-you-all", "phrase-es-un-honor-infinitive", "grammar-pronoun-attached-to-infinitive", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00021" }], "cardIds": ["word-de--about-topic"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w16", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00022" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w17", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00023" }, { "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00026" }], "cardIds": ["word-problema", "grammar-relative-que"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w18", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00027" }], "cardIds": ["word-que--relative", "grammar-relative-que"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w19", "text": "NECESITA", "normalized": "necesita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00028" }], "cardIds": ["word-necesita", "grammar-relative-que"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w20", "text": "DESESPERADAMENTE", "normalized": "desesperadamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00029" }, { "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00030" }], "cardIds": ["word-desesperadamente", "grammar-adverbs-mente"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w21", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00031" }], "cardIds": ["word-de--verb-complement"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w22", "text": "VUESTRA", "normalized": "vuestra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00032" }], "cardIds": ["word-vuestra--plural-your", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-conferencia-ted:audience-address:w23", "text": "ATENCIÓN", "normalized": "atención", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00033" }], "cardIds": ["word-atención"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-vosotros-sois", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w01"], "exampleEs": "SOIS", "explanationEn": "Sois is the present form of ser for the several people addressed informally in the form used mainly in Spain." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-some-group", "cardId": "grammar-algunos-de-grupo", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w02", "es-xkcd-conferencia-ted:audience-address:w03", "es-xkcd-conferencia-ted:audience-address:w04", "es-xkcd-conferencia-ted:audience-address:w05"], "exampleEs": "ALGUNOS DE LOS INNOVADORES", "explanationEn": "Algunos selects a masculine or mixed subset, and de los introduces the larger group named by innovadores." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-partitive-de", "cardId": "word-de--partitive-some", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w03"], "exampleEs": "ALGUNOS DE LOS INNOVADORES", "explanationEn": "This de connects algunos to the larger group from which that subset is selected." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-superlative", "cardId": "grammar-relative-superlative", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w04", "es-xkcd-conferencia-ted:audience-address:w05", "es-xkcd-conferencia-ted:audience-address:w06", "es-xkcd-conferencia-ted:audience-address:w07"], "exampleEs": "LOS INNOVADORES MÁS BRILLANTES", "explanationEn": "Los matches the plural group, innovadores names it, and más brillantes marks the highest degree of the description." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-relative-problem", "cardId": "grammar-relative-que", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w17", "es-xkcd-conferencia-ted:audience-address:w18", "es-xkcd-conferencia-ted:audience-address:w19"], "exampleEs": "PROBLEMA QUE NECESITA", "explanationEn": "Problema names the thing being described, que links it to the added information, and necesita supplies the verb inside that description." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-honor", "cardId": "phrase-es-un-honor-infinitive", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w11", "es-xkcd-conferencia-ted:audience-address:w12", "es-xkcd-conferencia-ted:audience-address:w13", "es-xkcd-conferencia-ted:audience-address:w14"], "exampleEs": "ES UN HONOR HABLAROS", "explanationEn": "Es un honor introduces the respectful evaluation, and hablaros supplies the following action in its unchanged dictionary form." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-attached-os", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w14"], "exampleEs": "HABLAROS", "explanationEn": "Os is attached directly to the unchanged verb hablar and identifies the several people addressed." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-vosotros-hablaros", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w14"], "exampleEs": "HABLAROS", "explanationEn": "The attached os refers to several people addressed informally, a form used mainly in Spain." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-mente", "cardId": "grammar-adverbs-mente", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w20"], "exampleEs": "DESESPERADAMENTE", "explanationEn": "Desesperada takes the ending -mente to form a word describing the urgent manner or degree of the need." },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-required-de", "cardId": "word-de--verb-complement", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w21"], "exampleEs": "NECESITA DESESPERADAMENTE DE", "explanationEn": "This de introduces what is required after necesita; natural English absorbs the relationship into the verb ‘need’ or ‘require.’" },
+        { "id": "es-xkcd-conferencia-ted:audience-address:app-vosotros-vuestra", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-conferencia-ted:audience-address:w22"], "exampleEs": "VUESTRA", "explanationEn": "Vuestra addresses several people informally and uses feminine singular agreement for the one feminine thing possessed." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:punctuation-question",
+      "labelEs": "¿CÓMO CERRAR CON UN EMOTICONO UN ENUNCIADO ENTRE PARÉNTESIS?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0010" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w01", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00034" }], "cardIds": ["word-cómo", "grammar-question-word-infinitive"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w02", "text": "CERRAR", "normalized": "cerrar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00035" }], "cardIds": ["word-cerrar", "grammar-question-word-infinitive"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w03", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00036" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00037" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w05", "text": "EMOTICONO", "normalized": "emoticono", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00038" }], "cardIds": ["word-emoticono", "concept-emoticon-parenthesis-ambiguity"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w06", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00039" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w07", "text": "ENUNCIADO", "normalized": "enunciado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00040" }], "cardIds": ["word-enunciado"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w08", "text": "ENTRE", "normalized": "entre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00041" }], "cardIds": ["word-entre", "phrase-entre-parentesis"] },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:w09", "text": "PARÉNTESIS", "normalized": "paréntesis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00042" }], "cardIds": ["word-parentesis--plural", "phrase-entre-parentesis", "concept-emoticon-parenthesis-ambiguity"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:app-how-to", "cardId": "grammar-question-word-infinitive", "participantWordIds": ["es-xkcd-conferencia-ted:punctuation-question:w01", "es-xkcd-conferencia-ted:punctuation-question:w02"], "exampleEs": "CÓMO CERRAR", "explanationEn": "Cómo asks for the unknown method and keeps its written accent; cerrar stays in its unchanged -ar dictionary form." },
+        { "id": "es-xkcd-conferencia-ted:punctuation-question:app-parentheses", "cardId": "phrase-entre-parentesis", "participantWordIds": ["es-xkcd-conferencia-ted:punctuation-question:w08", "es-xkcd-conferencia-ted:punctuation-question:w09"], "exampleEs": "ENTRE PARÉNTESIS", "explanationEn": "Entre and paréntesis form the conventional writing expression for material placed between the two punctuation marks." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:no-solution",
+      "labelEs": "NO SE ME OCURRE UNA BUENA FORMA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:no-solution:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00049" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w02", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00050" }], "cardIds": ["word-se--ocurrirsele", "phrase-ocurrirsele-algo"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w03", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00051" }], "cardIds": ["word-me--indirect", "phrase-ocurrirsele-algo"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w04", "text": "OCURRE", "normalized": "ocurre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00052" }], "cardIds": ["word-ocurre--comes-to-mind", "phrase-ocurrirsele-algo"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w05", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00053" }], "cardIds": ["word-una", "phrase-ocurrirsele-algo"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w06", "text": "BUENA", "normalized": "buena", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00054" }], "cardIds": ["word-buena--good-quality", "phrase-ocurrirsele-algo"] },
+        { "id": "es-xkcd-conferencia-ted:no-solution:w07", "text": "FORMA", "normalized": "forma", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00055" }], "cardIds": ["word-forma", "phrase-ocurrirsele-algo"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:no-solution:app-idea-occurs", "cardId": "phrase-ocurrirsele-algo", "participantWordIds": ["es-xkcd-conferencia-ted:no-solution:w02", "es-xkcd-conferencia-ted:no-solution:w03", "es-xkcd-conferencia-ted:no-solution:w04", "es-xkcd-conferencia-ted:no-solution:w05", "es-xkcd-conferencia-ted:no-solution:w06", "es-xkcd-conferencia-ted:no-solution:w07"], "exampleEs": "SE ME OCURRE UNA BUENA FORMA", "explanationEn": "Se marks the come-to-mind pattern, me identifies the person receiving the idea, ocurre agrees with one idea, and una buena forma fills that idea slot." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:first-option",
+      "labelEs": "...LINUX (O BSD :) SERÍA...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:first-option:w01", "text": "O", "normalized": "o", "explicitBounds": [{ "x": 68.6627, "y": 35.6962, "width": 3.1936, "height": 2.0253 }], "geometryRationale": "Vision fused the opening parenthesis into this short word; the measured box follows only the printed O.", "cardIds": ["word-o"] },
+        { "id": "es-xkcd-conferencia-ted:first-option:w02", "text": "SERÍA", "normalized": "sería", "explicitBounds": [{ "x": 80.6387, "y": 35.6962, "width": 8.9820, "height": 2.0253 }], "geometryRationale": "Vision included adjacent punctuation; the measured box isolates the five printed letters and accent.", "cardIds": ["word-seria--would-be"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:first-option:excluded-linux", "text": "LINUX", "reason": "non-spanish-text", "rationale": "Linux is the unchanged proper name of an operating system, not Spanish vocabulary.", "explicitBounds": [{ "x": 58.0838, "y": 35.6962, "width": 7.9840, "height": 2.0253 }], "geometryRationale": "Vision included the leading ellipsis; the measured box isolates the operating-system name." },
+        { "id": "es-xkcd-conferencia-ted:first-option:excluded-bsd", "text": "BSD", "reason": "non-spanish-text", "rationale": "BSD is the unchanged technical name and abbreviation for an operating-system family, not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 72.0559, "y": 35.6962, "width": 6.1876, "height": 2.0253 }], "geometryRationale": "Vision included adjacent parentheses; the measured box isolates the three-letter name." },
+        { "id": "es-xkcd-conferencia-ted:first-option:excluded-emoticon", "text": ":)", "reason": "symbol", "rationale": "This colon-and-parenthesis emoticon is punctuation art rather than a Spanish word.", "explicitBounds": [{ "x": 78.2435, "y": 35.6962, "width": 2.3952, "height": 2.0253 }], "geometryRationale": "Vision omitted the emoticon between BSD and SERÍA; this measured box isolates both printed marks." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:first-evaluation",
+      "labelEs": "parece descompensado",
+      "explicitBounds": [{ "x": 77.6447, "y": 37.2152, "width": 15.5689, "height": 5.6962 }],
+      "geometryRationale": "Vision merged the two slanted red handwritten words with each other and with the crossing annotation lines; this measured region follows the visible note.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:first-evaluation:w01", "text": "parece", "normalized": "parece", "explicitBounds": [{ "x": 81.2375, "y": 38.2278, "width": 3.7924, "height": 2.2785 }, { "x": 84.8303, "y": 37.7215, "width": 3.7924, "height": 2.0253 }, { "x": 88.4232, "y": 36.9620, "width": 3.3932, "height": 2.0253 }], "geometryRationale": "The OCR box overlaps DESCOMPENSADO and the red strike-through; three small measured boxes trace the rising handwritten PARECE without turning the blank diagonal area into a hotspot.", "cardIds": ["word-parece", "grammar-parecer-adjective"] },
+        { "id": "es-xkcd-conferencia-ted:first-evaluation:w02", "text": "descompensado", "normalized": "descompensado", "explicitBounds": [{ "x": 78.0439, "y": 40.7595, "width": 4.1916, "height": 2.0253 }, { "x": 81.6367, "y": 40.0000, "width": 4.3912, "height": 2.2785 }, { "x": 85.4291, "y": 39.2405, "width": 4.3912, "height": 2.2785 }, { "x": 89.2216, "y": 38.2278, "width": 4.1916, "height": 2.4051 }], "geometryRationale": "The OCR box overlaps PARECE and the red strike-through; four small measured boxes trace the rising handwritten DESCOMPENSADO without turning the blank diagonal area into a hotspot.", "cardIds": ["word-descompensado--unbalanced", "grammar-parecer-adjective", "concept-emoticon-parenthesis-ambiguity"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:first-evaluation:app-seems-unbalanced", "cardId": "grammar-parecer-adjective", "participantWordIds": ["es-xkcd-conferencia-ted:first-evaluation:w01", "es-xkcd-conferencia-ted:first-evaluation:w02"], "exampleEs": "parece descompensado", "explanationEn": "Parece reports an impression, and descompensado supplies the masculine singular description of the displayed option." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:second-option",
+      "labelEs": "...LINUX (O BSD :)) SERÍA...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0016" }],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:second-option:w01", "text": "O", "normalized": "o", "explicitBounds": [{ "x": 68.6627, "y": 42.7848, "width": 3.1936, "height": 2.0253 }], "geometryRationale": "Vision fused the opening parenthesis into this short word; the measured box follows only the printed O.", "cardIds": ["word-o"] },
+        { "id": "es-xkcd-conferencia-ted:second-option:w02", "text": "SERÍA", "normalized": "sería", "explicitBounds": [{ "x": 81.8363, "y": 42.7848, "width": 8.7824, "height": 2.0253 }], "geometryRationale": "Vision included adjacent punctuation; the measured box isolates the five printed letters and accent.", "cardIds": ["word-seria--would-be"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:second-option:excluded-linux", "text": "LINUX", "reason": "non-spanish-text", "rationale": "Linux is the unchanged proper name of an operating system, not Spanish vocabulary.", "explicitBounds": [{ "x": 58.0838, "y": 42.7848, "width": 7.9840, "height": 2.0253 }], "geometryRationale": "Vision included the leading ellipsis; the measured box isolates the operating-system name." },
+        { "id": "es-xkcd-conferencia-ted:second-option:excluded-bsd", "text": "BSD", "reason": "non-spanish-text", "rationale": "BSD is the unchanged technical name and abbreviation for an operating-system family, not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 72.0559, "y": 42.7848, "width": 6.1876, "height": 2.0253 }], "geometryRationale": "Vision included adjacent parentheses; the measured box isolates the three-letter name." },
+        { "id": "es-xkcd-conferencia-ted:second-option:excluded-emoticon", "text": ":))", "reason": "symbol", "rationale": "This colon-and-two-parentheses sequence combines an emoticon with closing punctuation and is not a Spanish word.", "explicitBounds": [{ "x": 78.2435, "y": 42.7848, "width": 3.5928, "height": 2.0253 }], "geometryRationale": "Vision omitted the punctuation sequence between BSD and SERÍA; this measured box isolates all three printed marks." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:second-evaluation",
+      "labelEs": "parece descompensado y raro",
+      "explicitBounds": [{ "x": 76.2475, "y": 45.3165, "width": 17.3653, "height": 6.5823 }],
+      "geometryRationale": "Vision merged the four slanted red handwritten words with each other and with the crossing annotation lines; this measured region follows the visible note.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:second-evaluation:w01", "text": "parece", "normalized": "parece", "explicitBounds": [{ "x": 81.0379, "y": 46.5823, "width": 3.7924, "height": 2.4051 }, { "x": 84.4311, "y": 45.9494, "width": 3.7924, "height": 2.1519 }, { "x": 87.8244, "y": 45.0633, "width": 3.9920, "height": 2.1519 }], "geometryRationale": "The OCR box overlaps the other diagonal annotation; three small measured boxes trace the rising handwritten PARECE without turning the blank diagonal area into a hotspot.", "cardIds": ["word-parece", "grammar-parecer-adjective"] },
+        { "id": "es-xkcd-conferencia-ted:second-evaluation:w02", "text": "descompensado", "normalized": "descompensado", "explicitBounds": [{ "x": 76.6467, "y": 48.6076, "width": 4.3912, "height": 2.4051 }, { "x": 80.4391, "y": 47.8481, "width": 4.3912, "height": 2.2785 }, { "x": 84.2315, "y": 47.0886, "width": 4.3912, "height": 2.2785 }, { "x": 88.0240, "y": 46.2025, "width": 4.5908, "height": 2.4051 }], "geometryRationale": "The OCR box overlaps PARECE and the following line; four small measured boxes trace the rising handwritten DESCOMPENSADO without turning the blank diagonal area into a hotspot.", "cardIds": ["word-descompensado--unbalanced", "grammar-parecer-adjective", "concept-emoticon-parenthesis-ambiguity"] },
+        { "id": "es-xkcd-conferencia-ted:second-evaluation:w03", "text": "y", "normalized": "y", "explicitBounds": [{ "x": 83.2335, "y": 49.3671, "width": 2.9940, "height": 2.4051 }], "geometryRationale": "Vision omitted this short red connector; this measured box isolates its handwritten glyph.", "cardIds": ["word-y", "grammar-parecer-adjective"] },
+        { "id": "es-xkcd-conferencia-ted:second-evaluation:w04", "text": "raro", "normalized": "raro", "explicitBounds": [{ "x": 86.0279, "y": 48.2278, "width": 3.5928, "height": 2.2785 }, { "x": 89.2216, "y": 47.4684, "width": 3.5928, "height": 2.5316 }], "geometryRationale": "Vision merged this slanted red word into the rest of the annotation; two small measured boxes trace RARO without covering the blank diagonal area.", "cardIds": ["word-raro--strange", "grammar-parecer-adjective", "concept-emoticon-parenthesis-ambiguity"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:second-evaluation:app-seems-unbalanced", "cardId": "grammar-parecer-adjective", "participantWordIds": ["es-xkcd-conferencia-ted:second-evaluation:w01", "es-xkcd-conferencia-ted:second-evaluation:w02", "es-xkcd-conferencia-ted:second-evaluation:w03", "es-xkcd-conferencia-ted:second-evaluation:w04"], "exampleEs": "parece descompensado y raro", "explanationEn": "Parece reports an impression, while descompensado y raro coordinate two masculine singular descriptions of the displayed option." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:banned-heading",
+      "labelEs": "CONFERENCIAS EN LAS QUE ESTOY VETADO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-conferencia-ted:ocr-line-0020" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w01", "text": "CONFERENCIAS", "normalized": "conferencias", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00062" }], "cardIds": ["word-conferencias"] },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w02", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00063" }], "cardIds": ["word-en--relative-banned-from", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w03", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00064" }], "cardIds": ["word-las--relative-article", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00065" }], "cardIds": ["word-que--relative", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w05", "text": "ESTOY", "normalized": "estoy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00066" }], "cardIds": ["word-estoy--state", "grammar-estar-participle-result-state"] },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:w06", "text": "VETADO", "normalized": "vetado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conferencia-ted:ocr-token-00067" }], "cardIds": ["word-vetado--banned", "grammar-estar-participle-result-state"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:banned-heading:app-relative", "cardId": "grammar-preposition-article-que-relative", "participantWordIds": ["es-xkcd-conferencia-ted:banned-heading:w02", "es-xkcd-conferencia-ted:banned-heading:w03", "es-xkcd-conferencia-ted:banned-heading:w04"], "exampleEs": "EN LAS QUE", "explanationEn": "En supplies the relationship required by the later ban, las matches the feminine plural conferencias, and que links back to them." },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:app-relative-en", "cardId": "word-en--relative-banned-from", "participantWordIds": ["es-xkcd-conferencia-ted:banned-heading:w02"], "exampleEs": "EN LAS QUE", "explanationEn": "This en is kept before las que because it introduces the events where the ban applies; natural English commonly uses ‘from.’" },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:app-relative-las", "cardId": "word-las--relative-article", "participantWordIds": ["es-xkcd-conferencia-ted:banned-heading:w03"], "exampleEs": "LAS QUE", "explanationEn": "Las matches the feminine plural conferencias referred to by the relative expression." },
+        { "id": "es-xkcd-conferencia-ted:banned-heading:app-result-state", "cardId": "grammar-estar-participle-result-state", "participantWordIds": ["es-xkcd-conferencia-ted:banned-heading:w05", "es-xkcd-conferencia-ted:banned-heading:w06"], "exampleEs": "ESTOY VETADO", "explanationEn": "Estoy presents the speaker's current state, and vetado is the masculine singular completed-action form describing that state." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-siggraph",
+      "labelEs": "-SIGGRAPH",
+      "explicitBounds": [{ "x": 42.1158, "y": 63.0380, "width": 14.7705, "height": 1.8987 }],
+      "geometryRationale": "Vision included the list dash in the token; this measured region preserves the full printed list entry.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:list-siggraph:excluded-siggraph", "text": "SIGGRAPH", "reason": "non-spanish-text", "rationale": "SIGGRAPH is the unchanged proper name and acronym of a conference, not Spanish vocabulary.", "explicitBounds": [{ "x": 43.5130, "y": 63.1646, "width": 13.3733, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the event name without bleeding into the tightly spaced next line." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-eurocrypt",
+      "labelEs": "-EUROCRYPT",
+      "explicitBounds": [{ "x": 42.1158, "y": 64.3038, "width": 16.3673, "height": 2.0253 }],
+      "geometryRationale": "Vision omitted this list line; this measured region preserves the full printed entry.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:list-eurocrypt:excluded-eurocrypt", "text": "EUROCRYPT", "reason": "non-spanish-text", "rationale": "EUROCRYPT is the unchanged proper name of a conference, not Spanish vocabulary.", "explicitBounds": [{ "x": 43.5130, "y": 64.4304, "width": 14.9701, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the event name without bleeding into the tightly spaced neighboring lines." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-defcon",
+      "labelEs": "-DEFCON",
+      "explicitBounds": [{ "x": 42.1158, "y": 65.5696, "width": 13.5729, "height": 2.0253 }],
+      "geometryRationale": "Vision omitted this list line; this measured region preserves the full printed entry.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:list-defcon:excluded-defcon", "text": "DEFCON", "reason": "non-spanish-text", "rationale": "DEFCON is the unchanged proper name of a conference, not Spanish vocabulary.", "explicitBounds": [{ "x": 43.5130, "y": 65.6962, "width": 12.1756, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the event name without bleeding into the tightly spaced neighboring lines." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-pycon",
+      "labelEs": "-PYCON",
+      "explicitBounds": [{ "x": 42.1158, "y": 66.8354, "width": 11.7764, "height": 2.0253 }],
+      "geometryRationale": "Vision omitted this list line; this measured region preserves the full printed entry.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:list-pycon:excluded-pycon", "text": "PYCON", "reason": "non-spanish-text", "rationale": "PyCon is the unchanged proper name of a conference, not Spanish vocabulary.", "explicitBounds": [{ "x": 43.5130, "y": 66.9620, "width": 10.3792, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the event name without bleeding into the neighboring lines." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-astronomical-union",
+      "labelEs": "-UNIÓN ASTRONÓMICA INTERNACIONAL",
+      "explicitBounds": [{ "x": 42.1158, "y": 68.4810, "width": 46.3074, "height": 2.0253 }],
+      "geometryRationale": "The first OCR token included the list dash and omitted written accents; these measured boxes preserve the printed entry and isolate its words.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:list-astronomical-union:w01", "text": "UNIÓN", "normalized": "unión", "explicitBounds": [{ "x": 43.5130, "y": 68.6076, "width": 9.1816, "height": 1.3924 }], "geometryRationale": "This measured box excludes the preceding list dash, preserves the printed accent omitted by OCR, and avoids the tightly spaced neighboring lines.", "cardIds": ["word-unión--organization", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-astronomical-union:w02", "text": "ASTRONÓMICA", "normalized": "astronómica", "explicitBounds": [{ "x": 53.2934, "y": 68.6076, "width": 20.5589, "height": 1.3924 }], "geometryRationale": "This measured box preserves the printed accent omitted by OCR and isolates the second word without bleeding into the next line.", "cardIds": ["word-astronómica", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-astronomical-union:w03", "text": "INTERNACIONAL", "normalized": "internacional", "explicitBounds": [{ "x": 74.4511, "y": 68.6076, "width": 13.9721, "height": 1.3924 }], "geometryRationale": "This measured box isolates the third word from its neighbors and the tightly spaced next line.", "cardIds": ["word-internacional", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:list-astronomical-union:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-conferencia-ted:list-astronomical-union:w01", "es-xkcd-conferencia-ted:list-astronomical-union:w02", "es-xkcd-conferencia-ted:list-astronomical-union:w03"], "exampleEs": "UNIÓN ASTRONÓMICA INTERNACIONAL", "explanationEn": "Unión comes first, followed by the two descriptions astronómica and internacional in the common neutral order." },
+        { "id": "es-xkcd-conferencia-ted:list-astronomical-union:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-conferencia-ted:list-astronomical-union:w01", "es-xkcd-conferencia-ted:list-astronomical-union:w02", "es-xkcd-conferencia-ted:list-astronomical-union:w03"], "exampleEs": "UNIÓN ASTRONÓMICA INTERNACIONAL", "explanationEn": "Astronómica uses feminine singular -a to match unión; internacional already has one singular form for both genders." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-canadian-paleontology",
+      "labelEs": "-CONFERENCIA CANADIENSE DE PALEONTOLOGÍA",
+      "explicitBounds": [{ "x": 42.1158, "y": 70.0000, "width": 41.1178, "height": 3.5443 }],
+      "geometryRationale": "Vision included the list dash in the first token and omitted the accent on PALEONTOLOGÍA; these measured boxes preserve the wrapped entry.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:w01", "text": "CONFERENCIA", "normalized": "conferencia", "explicitBounds": [{ "x": 43.5130, "y": 70.1266, "width": 18.1637, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the first word without bleeding into the wrapped line below.", "cardIds": ["word-conferencia", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:w02", "text": "CANADIENSE", "normalized": "canadiense", "explicitBounds": [{ "x": 62.2754, "y": 70.1266, "width": 15.7685, "height": 1.2658 }], "geometryRationale": "This measured box isolates the second word without bleeding into the wrapped line below.", "cardIds": ["word-canadiense", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 78.8423, "y": 70.1266, "width": 4.3912, "height": 1.2658 }], "geometryRationale": "This measured box isolates the noun-linking preposition without bleeding into the wrapped line below.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:w04", "text": "PALEONTOLOGÍA", "normalized": "paleontología", "explicitBounds": [{ "x": 43.5130, "y": 71.5190, "width": 23.9521, "height": 1.3924 }], "geometryRationale": "This measured box preserves the printed accent omitted by OCR and isolates the wrapped final word without bleeding into the next entry.", "cardIds": ["word-paleontología"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-conferencia-ted:list-canadian-paleontology:w01", "es-xkcd-conferencia-ted:list-canadian-paleontology:w02"], "exampleEs": "CONFERENCIA CANADIENSE", "explanationEn": "Conferencia names the event, and canadiense follows it as the description in the common neutral order." },
+        { "id": "es-xkcd-conferencia-ted:list-canadian-paleontology:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-conferencia-ted:list-canadian-paleontology:w01", "es-xkcd-conferencia-ted:list-canadian-paleontology:w02"], "exampleEs": "CONFERENCIA CANADIENSE", "explanationEn": "Canadiense matches the feminine singular conferencia but uses the same singular form with masculine nouns." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-us-furry-conventions",
+      "labelEs": "-TODAS LAS CONVENCIONES FURRY DE EEUU",
+      "explicitBounds": [{ "x": 42.1158, "y": 72.9114, "width": 46.7066, "height": 3.4177 }],
+      "geometryRationale": "Vision badly merged this two-line list entry; these measured boxes preserve every lexical unit while leaving the list dash as punctuation.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w01", "text": "TODAS", "normalized": "todas", "explicitBounds": [{ "x": 43.5130, "y": 73.0380, "width": 9.9800, "height": 1.2658 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates TODAS without bleeding into the wrapped line below.", "cardIds": ["word-todas"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w02", "text": "LAS", "normalized": "las", "explicitBounds": [{ "x": 54.0918, "y": 73.0380, "width": 6.1876, "height": 1.2658 }], "geometryRationale": "This measured box isolates LAS without bleeding into the wrapped line below.", "cardIds": ["word-las"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w03", "text": "CONVENCIONES", "normalized": "convenciones", "explicitBounds": [{ "x": 60.6786, "y": 73.0380, "width": 18.7625, "height": 1.2658 }], "geometryRationale": "This measured box isolates CONVENCIONES without bleeding into the wrapped line below.", "cardIds": ["word-convenciones--events", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w04", "text": "FURRY", "normalized": "furry", "explicitBounds": [{ "x": 80.0399, "y": 73.0380, "width": 8.7824, "height": 1.2658 }], "geometryRationale": "This measured box isolates the lexical loan FURRY rather than treating it as part of the adjacent word or wrapped line below.", "cardIds": ["word-furry--subculture", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 43.5130, "y": 74.4304, "width": 4.3912, "height": 1.2658 }], "geometryRationale": "This measured box isolates the first word on the wrapped line without bleeding into the next entry.", "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:w06", "text": "EEUU", "normalized": "eeuu", "explicitBounds": [{ "x": 48.5030, "y": 74.4304, "width": 8.5828, "height": 1.2658 }], "geometryRationale": "This measured box isolates the Spanish plural abbreviation omitted by OCR without bleeding into the next entry.", "cardIds": ["word-eeuu"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-conferencia-ted:list-us-furry-conventions:w03", "es-xkcd-conferencia-ted:list-us-furry-conventions:w04"], "exampleEs": "CONVENCIONES FURRY", "explanationEn": "Convenciones names the gatherings, and the borrowed describing word furry follows that noun." },
+        { "id": "es-xkcd-conferencia-ted:list-us-furry-conventions:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-conferencia-ted:list-us-furry-conventions:w03", "es-xkcd-conferencia-ted:list-us-furry-conventions:w04"], "exampleEs": "CONVENCIONES FURRY", "explanationEn": "The plural appears on convenciones; the borrowed adjective furry is used unchanged here rather than taking a Spanish plural ending." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-us-baking-society",
+      "labelEs": "-SOCIEDAD REPOSTERA DE EEUU",
+      "explicitBounds": [{ "x": 42.1158, "y": 75.6962, "width": 47.1058, "height": 2.0253 }],
+      "geometryRationale": "Vision omitted this list line; these measured boxes preserve and isolate all four printed words.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:w01", "text": "SOCIEDAD", "normalized": "sociedad", "explicitBounds": [{ "x": 43.5130, "y": 75.8228, "width": 15.3693, "height": 1.1392 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates SOCIEDAD without bleeding into the next entry.", "cardIds": ["word-sociedad--association", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:w02", "text": "REPOSTERA", "normalized": "repostera", "explicitBounds": [{ "x": 59.4810, "y": 75.8228, "width": 16.7665, "height": 1.1392 }], "geometryRationale": "This measured box isolates REPOSTERA without bleeding into the next entry.", "cardIds": ["word-repostera--baking", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 76.8463, "y": 75.8228, "width": 4.3912, "height": 1.1392 }], "geometryRationale": "This measured box isolates DE without bleeding into the next entry.", "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:w04", "text": "EEUU", "normalized": "eeuu", "explicitBounds": [{ "x": 81.8363, "y": 75.8228, "width": 7.3852, "height": 1.1392 }], "geometryRationale": "This measured box isolates the Spanish plural abbreviation omitted by OCR without bleeding into the next entry.", "cardIds": ["word-eeuu"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-conferencia-ted:list-us-baking-society:w01", "es-xkcd-conferencia-ted:list-us-baking-society:w02"], "exampleEs": "SOCIEDAD REPOSTERA", "explanationEn": "Sociedad names the organization, and repostera follows it as the description in the common neutral order." },
+        { "id": "es-xkcd-conferencia-ted:list-us-baking-society:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-conferencia-ted:list-us-baking-society:w01", "es-xkcd-conferencia-ted:list-us-baking-society:w02"], "exampleEs": "SOCIEDAD REPOSTERA", "explanationEn": "Repostera uses feminine singular -a to match the feminine singular noun sociedad." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training",
+      "labelEs": "-CONVENCIÓN ASIÁTICA DE ENTRENAMIENTO DE DELFINES",
+      "explicitBounds": [{ "x": 42.1158, "y": 76.9620, "width": 47.5049, "height": 3.6709 }],
+      "geometryRationale": "Vision omitted this wrapped list entry; the measured token boxes join the printed ENTRENA-/MIENTO line break into the single lexical word ENTRENAMIENTO.",
+      "words": [
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w01", "text": "CONVENCIÓN", "normalized": "convención", "explicitBounds": [{ "x": 43.5130, "y": 77.0886, "width": 17.7645, "height": 1.3924 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates CONVENCIÓN without bleeding into the wrapped line below.", "cardIds": ["word-convención", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w02", "text": "ASIÁTICA", "normalized": "asiática", "explicitBounds": [{ "x": 61.8762, "y": 77.0886, "width": 12.5749, "height": 1.3924 }], "geometryRationale": "This measured box isolates ASIÁTICA without bleeding into the wrapped line below.", "cardIds": ["word-asiática", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 75.0499, "y": 77.0886, "width": 4.3912, "height": 1.3924 }], "geometryRationale": "This measured box isolates the first noun-linking DE without bleeding into the wrapped line below.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w04", "text": "ENTRENAMIENTO", "normalized": "entrenamiento", "explicitBounds": [{ "x": 80.0399, "y": 77.0886, "width": 9.5808, "height": 1.3924 }, { "x": 43.5130, "y": 78.6076, "width": 10.7784, "height": 1.3924 }], "geometryRationale": "The comic wraps and hyphenates ENTRENA-/MIENTO; these two boxes preserve it as one printed Spanish word occurrence without bleeding into adjacent lines.", "cardIds": ["word-entrenamiento"] },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 54.8902, "y": 78.6076, "width": 4.3912, "height": 1.3924 }], "geometryRationale": "This measured box isolates the second noun-linking DE without bleeding into adjacent lines.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:w06", "text": "DELFINES", "normalized": "delfines", "explicitBounds": [{ "x": 59.8802, "y": 78.6076, "width": 13.7725, "height": 1.3924 }], "geometryRationale": "This measured box isolates DELFINES without bleeding into adjacent lines.", "cardIds": ["word-delfines"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-conferencia-ted:list-asian-dolphin-training:w01", "es-xkcd-conferencia-ted:list-asian-dolphin-training:w02"], "exampleEs": "CONVENCIÓN ASIÁTICA", "explanationEn": "Convención names the gathering, and asiática follows it as the description in the common neutral order." },
+        { "id": "es-xkcd-conferencia-ted:list-asian-dolphin-training:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-conferencia-ted:list-asian-dolphin-training:w01", "es-xkcd-conferencia-ted:list-asian-dolphin-training:w02"], "exampleEs": "CONVENCIÓN ASIÁTICA", "explanationEn": "Asiática uses feminine singular -a to match the feminine singular noun convención." }
+      ]
+    },
+    {
+      "id": "es-xkcd-conferencia-ted:list-ted",
+      "labelEs": "-TED",
+      "explicitBounds": [{ "x": 42.1158, "y": 80.1266, "width": 8.3832, "height": 2.2785 }],
+      "geometryRationale": "Vision omitted the final list line; this measured region preserves the full printed entry.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-conferencia-ted:list-ted:excluded-ted", "text": "TED", "reason": "non-spanish-text", "rationale": "TED is the unchanged proper name and acronym of the conference series, not Spanish vocabulary.", "explicitBounds": [{ "x": 43.5130, "y": 80.2532, "width": 6.9860, "height": 1.8987 }], "geometryRationale": "This measured box excludes the preceding list dash and isolates the event name." }
+      ],
+      "applications": []
+    }
+  ]
+}

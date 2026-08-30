@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-algoritmos-geneticos",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Genetic Algorithms",
+  "titleEs": "Algoritmos genéticos",
+  "titleText": {
+    "es": "Tan solo asegúrate de que no lo pones a maximizar en lugar de minimizar.",
+    "en": "Just make sure you don't have it maximize instead of minimize.",
+    "noteEn": "The Spanish archive translates the official warning about accidentally maximizing rather than minimizing the cost; both title texts depend on the optimization joke in the image."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-para--advice-topic",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "for; introduces the topic or field that advice applies to",
+      "noteEn": "After consejo, guía, or recomendación, para can introduce the area or situation in which the advice is meant to be used.",
+      "example": { "es": "Este consejo es para viajes largos.", "en": "This tip is for long trips." },
+      "tags": ["word", "preposition", "advice", "topic", "A2"]
+    },
+    {
+      "id": "word-genéticos",
+      "kind": "word",
+      "promptEs": "genéticos",
+      "answerEn": "genetic (masculine plural)",
+      "noteEn": "Genéticos describes masculine plural things as related to genes, inheritance, or a process modeled on biological evolution.",
+      "example": { "es": "Estudian varios factores genéticos.", "en": "They study several genetic factors." },
+      "tags": ["word", "genetics", "adjective", "masculine plural", "B1"]
+    },
+    {
+      "id": "word-incluye--command",
+      "kind": "word",
+      "promptEs": "incluye",
+      "answerEn": "include (informal singular command)",
+      "noteEn": "Incluye tells one familiar listener to include something. The same written form can mean ‘he, she, or formal you includes’ in a statement; the advice context makes it a command here.",
+      "example": { "es": "Incluye tu dirección en el formulario.", "en": "Include your address on the form." },
+      "tags": ["word", "command", "informal singular", "incluir", "A2"]
+    },
+    {
+      "id": "word-aptitud--fitness",
+      "kind": "word",
+      "promptEs": "aptitud",
+      "answerEn": "fitness; quality score (in an optimization algorithm)",
+      "noteEn": "In a genetic algorithm, aptitud is the measured quality assigned to a candidate solution. It is a technical use related to how well that candidate meets the goal, not a person's ordinary talent.",
+      "example": { "es": "El programa calcula la aptitud de cada solución.", "en": "The program calculates the fitness of each solution." },
+      "tags": ["word", "genetic algorithm", "optimization", "technical", "B2"]
+    },
+    {
+      "id": "phrase-funcion-de-aptitud",
+      "kind": "phrase",
+      "promptEs": "función de aptitud",
+      "questionEn": "What do you call the rule that scores candidate solutions in a genetic algorithm?",
+      "answerEn": "Use función de aptitud for ‘fitness function.’",
+      "noteEn": "Función names the scoring rule, de links it to the technical noun aptitud, and the complete phrase names the function used to compare candidate solutions. Depending on the setup, a program may seek a higher fitness score or a lower cost.",
+      "example": { "es": "La función de aptitud asigna una puntuación a cada solución.", "en": "The fitness function assigns a score to each solution." },
+      "tags": ["phrase", "genetic algorithm", "optimization", "technical", "B2"]
+    },
+    {
+      "id": "concept-genetic-algorithm-skynet-cost",
+      "kind": "concept",
+      "promptEs": "algoritmos genéticos · función de aptitud",
+      "questionEn": "Why does the enormous cost assigned to becoming Skynet matter to the joke?",
+      "answerEn": "A genetic algorithm searches for good candidate solutions by optimizing a fitness or cost function, so a huge cost can make an unwanted outcome extremely unattractive when the program minimizes cost.",
+      "noteEn": "Skynet is the hostile artificial intelligence in the Terminator stories. The code treats an AI takeover as just another outcome to penalize. The title-text warning completes the joke: if the program maximized this cost instead, the enormous number would encourage precisely that outcome.",
+      "tags": ["concept", "genetic algorithm", "fitness function", "Skynet", "optimization", "humor"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-algoritmos-geneticos:code-definition",
+      "labelEs": "def getCosteSolucion (codigoNavegacion):",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0001" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:code-definition:excluded-code",
+          "text": "def getCosteSolucion (codigoNavegacion):",
+          "reason": "non-spanish-text",
+          "rationale": "This is a Python-like function declaration with camel-case identifiers and programming punctuation, not ordinary Spanish prose.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0001" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:code-refueling-cost",
+      "labelEs": "costeRepostaje = 15",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0002" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:code-refueling-cost:excluded-code",
+          "text": "costeRepostaje = 15",
+          "reason": "non-spanish-text",
+          "rationale": "This entire printed unit is a code assignment containing an identifier, operator, and numeric value rather than Spanish prose.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0002" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:code-computation-cost",
+      "labelEs": "costeExtraDeComputacion = 8",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0003" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:code-computation-cost:excluded-code",
+          "text": "costeExtraDeComputacion = 8",
+          "reason": "non-spanish-text",
+          "rationale": "This entire printed unit is a code assignment containing a camel-case identifier, operator, and numeric value rather than Spanish prose.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0003" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:emphasis-arrow",
+      "labelEs": "→",
+      "explicitBounds": [{ "x": 3.1, "y": 38.6, "width": 15.3, "height": 17.5 }],
+      "geometryRationale": "Vision did not return a token for the large white arrow; this measured box follows the standalone symbol without reaching the adjacent code.",
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:emphasis-arrow:excluded-arrow",
+          "text": "→",
+          "reason": "symbol",
+          "rationale": "The arrow is a visual emphasis symbol rather than a Spanish lexical word.",
+          "explicitBounds": [{ "x": 3.1, "y": 38.6, "width": 15.3, "height": 17.5 }],
+          "geometryRationale": "The measured box covers the complete printed arrow and stops before the highlighted assignment."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:code-skynet-cost",
+      "labelEs": "costeDeQueEsteAlgoritmoSeConviertaEnSkynet = 999999999",
+      "explicitBounds": [{ "x": 18.5, "y": 42.8, "width": 79.4, "height": 10.8 }],
+      "geometryRationale": "Vision's line box began inside the adjacent emphasis arrow; this measured rectangle starts at the first code letter and covers the complete assignment.",
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:code-skynet-cost:excluded-code",
+          "text": "costeDeQueEsteAlgoritmoSeConviertaEnSkynet = 999999999",
+          "reason": "non-spanish-text",
+          "rationale": "This entire printed unit is a camel-case code assignment, including the Skynet name and numeric value, rather than ordinary Spanish prose.",
+          "explicitBounds": [{ "x": 18.5, "y": 42.8, "width": 79.4, "height": 10.8 }],
+          "geometryRationale": "The measured box isolates the code statement from the arrow immediately to its left."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:code-water-cost",
+      "labelEs": "costeDeCruzarAgua = 45",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0005" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-algoritmos-geneticos:code-water-cost:excluded-code",
+          "text": "costeDeCruzarAgua = 45",
+          "reason": "non-spanish-text",
+          "rationale": "This entire printed unit is a code assignment containing a camel-case identifier, operator, and numeric value rather than Spanish prose.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0005" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-algoritmos-geneticos:advice-caption",
+      "labelEs": "CONSEJO PARA LOS ALGORITMOS GENÉTICOS: INCLUYE SIEMPRE ESTO EN TU FUNCIÓN DE APTITUD",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-algoritmos-geneticos:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w01", "text": "CONSEJO", "normalized": "consejo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00014" }], "cardIds": ["word-consejo"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w02", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00015" }], "cardIds": ["word-para--advice-topic"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w03", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00016" }], "cardIds": ["word-los--generic-group"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w04", "text": "ALGORITMOS", "normalized": "algoritmos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00017" }], "cardIds": ["word-algoritmos", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-genetic-algorithm-skynet-cost"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w05", "text": "GENÉTICOS", "normalized": "genéticos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00018" }], "cardIds": ["word-genéticos", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-genetic-algorithm-skynet-cost"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w06", "text": "INCLUYE", "normalized": "incluye", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00019" }], "cardIds": ["word-incluye--command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w07", "text": "SIEMPRE", "normalized": "siempre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00020" }], "cardIds": ["word-siempre"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w08", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00021" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w09", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00022" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w10", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00023" }], "cardIds": ["word-tu"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w11", "text": "FUNCIÓN", "normalized": "función", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00024" }], "cardIds": ["word-función--mathematical", "phrase-funcion-de-aptitud", "concept-genetic-algorithm-skynet-cost"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w12", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00025" }], "cardIds": ["word-de--type-classifier", "phrase-funcion-de-aptitud"] },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:w13", "text": "APTITUD", "normalized": "aptitud", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-algoritmos-geneticos:ocr-token-00026" }], "cardIds": ["word-aptitud--fitness", "phrase-funcion-de-aptitud", "concept-genetic-algorithm-skynet-cost"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-algoritmos-geneticos:advice-caption:w04", "es-xkcd-algoritmos-geneticos:advice-caption:w05"], "exampleEs": "ALGORITMOS GENÉTICOS", "explanationEn": "Algoritmos names the technical objects first, and the neutral description genéticos follows it." },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-algoritmos-geneticos:advice-caption:w04", "es-xkcd-algoritmos-geneticos:advice-caption:w05"], "exampleEs": "ALGORITMOS GENÉTICOS", "explanationEn": "Genéticos uses masculine plural -os to match algoritmos." },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-algoritmos-geneticos:advice-caption:w06"], "exampleEs": "INCLUYE", "explanationEn": "Incluye is the positive command for one familiar listener." },
+        { "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-fitness-function", "cardId": "phrase-funcion-de-aptitud", "participantWordIds": ["es-xkcd-algoritmos-geneticos:advice-caption:w11", "es-xkcd-algoritmos-geneticos:advice-caption:w12", "es-xkcd-algoritmos-geneticos:advice-caption:w13"], "exampleEs": "FUNCIÓN DE APTITUD", "explanationEn": "Función names the scoring rule, de links it to its technical type, and aptitud names the score used to compare candidate solutions." }
+      ]
+    }
+  ]
+}
