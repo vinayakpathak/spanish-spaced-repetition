@@ -1,0 +1,840 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-viaje-en-el-tiempo",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Time Travel",
+  "titleEs": "Viaje en el tiempo",
+  "titleText": {
+    "es": "También empieza todas sus cartas con: «Querido <tu nombre> del futuro».",
+    "en": "She also starts every letter with \"Dear Future <your name>\".",
+    "noteEn": "The Spanish archive and official xkcd source both identify comic #630. The archive translates the official title text while preserving its angle-bracket name slot."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-vengo--come-from",
+      "kind": "word",
+      "promptEs": "vengo",
+      "answerEn": "I come; I come from",
+      "noteEn": "Vengo is the present form of venir for the speaker. With de or del, it identifies the speaker's origin.",
+      "example": {
+        "es": "Vengo del centro.",
+        "en": "I come from downtown."
+      },
+      "tags": [
+        "word",
+        "venir",
+        "origin",
+        "present",
+        "A1"
+      ]
+    },
+    {
+      "id": "word-queda--left",
+      "kind": "word",
+      "promptEs": "queda",
+      "answerEn": "is left; remains",
+      "noteEn": "Queda is singular here because the question asks whether any one item remains.",
+      "example": {
+        "es": "¿Queda pan?",
+        "en": "Is there any bread left?"
+      },
+      "tags": [
+        "word",
+        "quedar",
+        "remaining",
+        "present",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-algún--any-question",
+      "kind": "word",
+      "promptEs": "algún",
+      "answerEn": "any (before a masculine singular noun in a question)",
+      "noteEn": "Algún is the shortened form of alguno used directly before a masculine singular noun. In a question, natural English often uses “any.”",
+      "example": {
+        "es": "¿Hay algún problema?",
+        "en": "Is there any problem?"
+      },
+      "tags": [
+        "word",
+        "indefinite",
+        "question",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-donut",
+      "kind": "word",
+      "promptEs": "donut",
+      "answerEn": "doughnut; donut",
+      "noteEn": "Donut is a common borrowed food word in Spanish; dónut is also written with an accent in edited Spanish.",
+      "example": {
+        "es": "Compré un donut de chocolate.",
+        "en": "I bought a chocolate doughnut."
+      },
+      "tags": [
+        "word",
+        "food",
+        "loanword",
+        "A1"
+      ]
+    },
+    {
+      "id": "word-técnicamente",
+      "kind": "word",
+      "promptEs": "técnicamente",
+      "answerEn": "technically",
+      "noteEn": "Técnicamente describes something as true according to a strict or technical reading.",
+      "example": {
+        "es": "Técnicamente, la tienda sigue abierta.",
+        "en": "Technically, the shop is still open."
+      },
+      "tags": [
+        "word",
+        "adverb",
+        "manner",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-cierto--true-predicate",
+      "kind": "word",
+      "promptEs": "cierto",
+      "answerEn": "true; correct",
+      "noteEn": "After es, cierto describes a statement or claim as true.",
+      "example": {
+        "es": "Eso es cierto.",
+        "en": "That is true."
+      },
+      "tags": [
+        "word",
+        "truth",
+        "adjective",
+        "A1"
+      ]
+    },
+    {
+      "id": "word-preferiría--would-prefer",
+      "kind": "word",
+      "promptEs": "preferiría",
+      "answerEn": "I would prefer",
+      "noteEn": "Preferiría keeps the full verb preferir and adds -ía. This conditional form makes the preference sound less direct.",
+      "example": {
+        "es": "Preferiría esperar aquí.",
+        "en": "I would prefer to wait here."
+      },
+      "tags": [
+        "word",
+        "preferir",
+        "conditional",
+        "politeness",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-dejara--preferred-action",
+      "kind": "word",
+      "promptEs": "dejara",
+      "answerEn": "that she stop; she would stop (after a preference)",
+      "noteEn": "Here dejara is the special form of dejar used for an action the speaker wants another person to take. Ordinary deja changes to dejara after preferiría que.",
+      "example": {
+        "es": "Preferiría que Marta dejara la puerta abierta.",
+        "en": "I would prefer Marta to leave the door open."
+      },
+      "tags": [
+        "word",
+        "dejar",
+        "preference",
+        "subjunctive",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-de--after-antes-noun",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "before; required after antes when a noun follows",
+      "noteEn": "Antes de comes before a noun or an unchanged action verb. The two Spanish words often correspond to the single English word “before.”",
+      "example": {
+        "es": "Llegué antes de la cena.",
+        "en": "I arrived before dinner."
+      },
+      "tags": [
+        "word",
+        "time",
+        "antes de",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-frases",
+      "kind": "word",
+      "promptEs": "frases",
+      "answerEn": "sentences; phrases",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "language",
+        "plural",
+        "A1"
+      ]
+    },
+    {
+      "id": "grammar-alguno-to-algun-before-masculine-noun",
+      "kind": "grammar",
+      "promptEs": "alguno → algún + nombre masculino singular",
+      "questionEn": "What happens to alguno when it comes directly before one masculine noun?",
+      "answerEn": "Shorten alguno to algún directly before a masculine singular noun.",
+      "noteEn": "The final -o disappears and the written accent remains: alguno can stand alone, but algún día and algún libro place the shortened form before a masculine singular noun. Feminine alguna does not shorten.",
+      "example": {
+        "es": "Necesito algún consejo.",
+        "en": "I need some advice."
+      },
+      "tags": [
+        "grammar",
+        "indefinite",
+        "shortened adjective",
+        "A2"
+      ]
+    },
+    {
+      "id": "grammar-quedar-remaining-quantity",
+      "kind": "grammar",
+      "promptEs": "quedar + cantidad restante",
+      "questionEn": "How can you say that some amount or item is still left?",
+      "answerEn": "Use quedar with the thing or amount that remains: queda for one thing and quedan for more than one.",
+      "noteEn": "The remaining thing controls the verb. Use queda with a singular or uncounted thing, as in queda café, and quedan with plural things, as in quedan dos entradas.",
+      "example": {
+        "es": "Quedan tres minutos.",
+        "en": "There are three minutes left."
+      },
+      "tags": [
+        "grammar",
+        "quedar",
+        "remaining",
+        "agreement",
+        "A2"
+      ]
+    },
+    {
+      "id": "grammar-aunque-indicative-known-fact",
+      "kind": "grammar",
+      "promptEs": "aunque + hecho presentado como cierto",
+      "questionEn": "How do you introduce a contrast while presenting the following information as a known fact?",
+      "answerEn": "Use aunque, then the ordinary verb form used for a fact.",
+      "noteEn": "Aunque means “although” or “even though.” When the speaker treats the information as real or already established, the following verb stays in the ordinary fact form: es, tiene, or ocurrió. A different special form can appear when the point is uncertain or hypothetical.",
+      "example": {
+        "es": "Aunque llueve, salimos.",
+        "en": "Although it is raining, we are going out."
+      },
+      "tags": [
+        "grammar",
+        "aunque",
+        "contrast",
+        "indicative",
+        "B1"
+      ]
+    },
+    {
+      "id": "grammar-preferir-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "preferir que + acción de otra persona",
+      "questionEn": "How do you express a preference about what another person does?",
+      "answerEn": "Use a form of preferir, then que, then a specially changed form of the other person's action.",
+      "noteEn": "The form after que is called the subjunctive: it presents a wanted action rather than a stated fact. For an -ar verb, the ending changes to an -e-family form: hablas becomes hable, and dejas can become deje or dejara depending on the time and tone.",
+      "example": {
+        "es": "Prefiero que Marta llame mañana.",
+        "en": "I prefer Marta to call tomorrow."
+      },
+      "tags": [
+        "grammar",
+        "preferir",
+        "subjunctive",
+        "preference",
+        "B1"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-viaje-en-el-tiempo:traveler-question",
+      "labelEs": "VENGO DEL AÑO 1983 PARA DECIR ESTO: ¿QUEDA ALGÚN DONUT?",
+      "geometryRefs": [
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0001"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0002"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0003"
+        }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w01",
+          "text": "VENGO",
+          "normalized": "vengo",
+          "cardIds": [
+            "word-vengo--come-from"
+          ],
+          "explicitBounds": [
+            {
+              "x": 12.782,
+              "y": 3.8462,
+              "width": 19.4549,
+              "height": 5.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w02",
+          "text": "DEL",
+          "normalized": "del",
+          "cardIds": [
+            "word-del--from-time"
+          ],
+          "explicitBounds": [
+            {
+              "x": 33.0827,
+              "y": 3.8462,
+              "width": 10.1504,
+              "height": 5.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w03",
+          "text": "AÑO",
+          "normalized": "año",
+          "cardIds": [
+            "word-año"
+          ],
+          "explicitBounds": [
+            {
+              "x": 44.0789,
+              "y": 3.8462,
+              "width": 12.688,
+              "height": 5.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w04",
+          "text": "PARA",
+          "normalized": "para",
+          "cardIds": [
+            "word-para",
+            "grammar-para-infinitive-purpose"
+          ],
+          "explicitBounds": [
+            {
+              "x": 72.8383,
+              "y": 3.8462,
+              "width": 13.6278,
+              "height": 5.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w05",
+          "text": "DECIR",
+          "normalized": "decir",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00006"
+            }
+          ],
+          "cardIds": [
+            "word-decir",
+            "grammar-para-infinitive-purpose"
+          ]
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w06",
+          "text": "ESTO",
+          "normalized": "esto",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00007"
+            }
+          ],
+          "cardIds": [
+            "word-esto"
+          ]
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w07",
+          "text": "QUEDA",
+          "normalized": "queda",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00008"
+            }
+          ],
+          "cardIds": [
+            "word-queda--left",
+            "grammar-quedar-remaining-quantity",
+            "grammar-yes-no-question"
+          ]
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w08",
+          "text": "ALGÚN",
+          "normalized": "algún",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00009"
+            }
+          ],
+          "cardIds": [
+            "word-algún--any-question",
+            "grammar-alguno-to-algun-before-masculine-noun",
+            "grammar-quedar-remaining-quantity",
+            "grammar-yes-no-question"
+          ]
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:w09",
+          "text": "DONUT",
+          "normalized": "donut",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00010"
+            }
+          ],
+          "cardIds": [
+            "word-donut",
+            "grammar-alguno-to-algun-before-masculine-noun",
+            "grammar-quedar-remaining-quantity",
+            "grammar-yes-no-question"
+          ]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:excluded-1983",
+          "text": "1983",
+          "reason": "number",
+          "rationale": "1983 is a year numeral rather than a Spanish lexical word.",
+          "explicitBounds": [
+            {
+              "x": 57.6128,
+              "y": 3.8462,
+              "width": 14.3797,
+              "height": 5.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-purpose",
+          "cardId": "grammar-para-infinitive-purpose",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w04",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w05"
+          ],
+          "exampleEs": "PARA DECIR",
+          "explanationEn": "Para introduces the purpose, and decir remains in its unchanged -ir dictionary form."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-remaining",
+          "cardId": "grammar-quedar-remaining-quantity",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w07",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w08",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w09"
+          ],
+          "exampleEs": "QUEDA ALGÚN DONUT",
+          "explanationEn": "Queda is singular because the possible remaining item is one donut, and algún leaves its existence open."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-algun",
+          "cardId": "grammar-alguno-to-algun-before-masculine-noun",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w08",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w09"
+          ],
+          "exampleEs": "ALGÚN DONUT",
+          "explanationEn": "Algún is the shortened form used directly before the masculine singular noun donut."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-yes-no",
+          "cardId": "grammar-yes-no-question",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w07",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w08",
+            "es-xkcd-viaje-en-el-tiempo:traveler-question:w09"
+          ],
+          "exampleEs": "¿QUEDA ALGÚN DONUT?",
+          "explanationEn": "The ordinary statement order remains; question marks and intonation make it a yes-or-no question without an extra helper word."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-viaje-en-el-tiempo:request",
+      "labelEs": "AUNQUE ES TÉCNICAMENTE CIERTO, PREFERIRÍA QUE DEJARA DE DECIR ESO ANTES DE TODAS SUS FRASES.",
+      "geometryRefs": [
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0004"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0005"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0006"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-viaje-en-el-tiempo:ocr-line-0007"
+        }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w01",
+          "text": "AUNQUE",
+          "normalized": "aunque",
+          "cardIds": [
+            "word-aunque",
+            "grammar-aunque-indicative-known-fact"
+          ],
+          "explicitBounds": [
+            {
+              "x": 3.0075,
+              "y": 80.1282,
+              "width": 22.8383,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w02",
+          "text": "ES",
+          "normalized": "es",
+          "cardIds": [
+            "word-es",
+            "grammar-aunque-indicative-known-fact"
+          ],
+          "explicitBounds": [
+            {
+              "x": 26.6917,
+              "y": 80.1282,
+              "width": 8.4586,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w03",
+          "text": "TÉCNICAMENTE",
+          "normalized": "técnicamente",
+          "cardIds": [
+            "word-técnicamente",
+            "grammar-adverbs-mente",
+            "grammar-aunque-indicative-known-fact"
+          ],
+          "explicitBounds": [
+            {
+              "x": 35.9962,
+              "y": 80.1282,
+              "width": 41.4474,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w04",
+          "text": "CIERTO",
+          "normalized": "cierto",
+          "cardIds": [
+            "word-cierto--true-predicate",
+            "grammar-aunque-indicative-known-fact"
+          ],
+          "explicitBounds": [
+            {
+              "x": 5.2632,
+              "y": 85.2564,
+              "width": 19.4549,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w05",
+          "text": "PREFERIRÍA",
+          "normalized": "preferiría",
+          "cardIds": [
+            "word-preferiría--would-prefer",
+            "grammar-simple-conditional",
+            "grammar-preferir-que-subjunctive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 25.5639,
+              "y": 85.2564,
+              "width": 31.297,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w06",
+          "text": "QUE",
+          "normalized": "que",
+          "cardIds": [
+            "word-que--clause-link",
+            "grammar-preferir-que-subjunctive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 57.7068,
+              "y": 85.2564,
+              "width": 11.8421,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w07",
+          "text": "DEJARA",
+          "normalized": "dejara",
+          "cardIds": [
+            "word-dejara--preferred-action",
+            "grammar-preferir-que-subjunctive",
+            "phrase-dejar-de-infinitive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 70.3947,
+              "y": 85.2564,
+              "width": 20.5827,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w08",
+          "text": "DE",
+          "normalized": "de",
+          "cardIds": [
+            "word-de--fixed-dejar-de",
+            "phrase-dejar-de-infinitive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 5.2632,
+              "y": 89.7436,
+              "width": 5.2632,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w09",
+          "text": "DECIR",
+          "normalized": "decir",
+          "cardIds": [
+            "word-decir",
+            "phrase-dejar-de-infinitive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 11.2782,
+              "y": 89.7436,
+              "width": 16.5414,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w10",
+          "text": "ESO",
+          "normalized": "eso",
+          "cardIds": [
+            "word-eso"
+          ],
+          "explicitBounds": [
+            {
+              "x": 28.5714,
+              "y": 89.7436,
+              "width": 11.2782,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w11",
+          "text": "ANTES",
+          "normalized": "antes",
+          "cardIds": [
+            "word-antes--before-event"
+          ],
+          "explicitBounds": [
+            {
+              "x": 40.6015,
+              "y": 89.7436,
+              "width": 18.797,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w12",
+          "text": "DE",
+          "normalized": "de",
+          "cardIds": [
+            "word-de--after-antes-noun"
+          ],
+          "explicitBounds": [
+            {
+              "x": 60.1504,
+              "y": 89.7436,
+              "width": 7.5188,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w13",
+          "text": "TODAS",
+          "normalized": "todas",
+          "cardIds": [
+            "word-todas"
+          ],
+          "explicitBounds": [
+            {
+              "x": 68.4211,
+              "y": 89.7436,
+              "width": 18.0451,
+              "height": 4.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle extended into an adjacent printed row; this checked vertical tightening preserves one direct hotspot."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w14",
+          "text": "SUS",
+          "normalized": "sus",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00024"
+            }
+          ],
+          "cardIds": [
+            "word-sus--her"
+          ]
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:w15",
+          "text": "FRASES",
+          "normalized": "frases",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-viaje-en-el-tiempo:ocr-token-00025"
+            }
+          ],
+          "cardIds": [
+            "word-frases"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:app-known-fact",
+          "cardId": "grammar-aunque-indicative-known-fact",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:request:w01",
+            "es-xkcd-viaje-en-el-tiempo:request:w02",
+            "es-xkcd-viaje-en-el-tiempo:request:w03",
+            "es-xkcd-viaje-en-el-tiempo:request:w04"
+          ],
+          "exampleEs": "AUNQUE ES TÉCNICAMENTE CIERTO",
+          "explanationEn": "Aunque introduces a contrast, while es presents the modified description técnicamente cierto as an accepted fact."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:app-mente",
+          "cardId": "grammar-adverbs-mente",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:request:w03"
+          ],
+          "exampleEs": "TÉCNICAMENTE",
+          "explanationEn": "Técnica takes its feminine singular form before -mente is added to create the manner word técnicamente."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:app-conditional",
+          "cardId": "grammar-simple-conditional",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:request:w05"
+          ],
+          "exampleEs": "PREFERIRÍA",
+          "explanationEn": "Preferir keeps its full dictionary form and adds -ía to make the speaker's less-direct “would prefer” form."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:app-preference",
+          "cardId": "grammar-preferir-que-subjunctive",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:request:w05",
+            "es-xkcd-viaje-en-el-tiempo:request:w06",
+            "es-xkcd-viaje-en-el-tiempo:request:w07"
+          ],
+          "exampleEs": "PREFERIRÍA QUE DEJARA",
+          "explanationEn": "Preferiría states the preference, que introduces the other person's action, and dejara uses the specially changed wanted-action form."
+        },
+        {
+          "id": "es-xkcd-viaje-en-el-tiempo:request:app-stop",
+          "cardId": "phrase-dejar-de-infinitive",
+          "participantWordIds": [
+            "es-xkcd-viaje-en-el-tiempo:request:w07",
+            "es-xkcd-viaje-en-el-tiempo:request:w08",
+            "es-xkcd-viaje-en-el-tiempo:request:w09"
+          ],
+          "exampleEs": "DEJARA DE DECIR",
+          "explanationEn": "Dejara changes to fit the preference, de is the required link, and decir stays in its unchanged dictionary form as the action to stop."
+        }
+      ]
+    }
+  ]
+}

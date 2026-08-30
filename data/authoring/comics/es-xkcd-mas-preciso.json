@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-mas-preciso",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "More Accurate",
+  "titleEs": "Más preciso",
+  "titleText": {
+    "es": "Vivimos en un mundo donde hay verdaderas flotas de robots asesinos patrullando los cielos. En algún momento dejamos el presente y nos metimos en el futuro.",
+    "en": "We live in a world where there are actual fleets of robot assassins patrolling the skies. At some point there, we left the present and entered the future.",
+    "noteEn": "The Spanish text is the exact title attribute in the Spanish archive, and the English text is the exact official xkcd title attribute."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-enviado--sent",
+      "kind": "word",
+      "promptEs": "enviado",
+      "answerEn": "sent (after a form of haber)",
+      "noteEn": "Enviado is the completed-action form of enviar. After han, it says that more than one person or thing has sent something or someone.",
+      "example": { "es": "Han enviado el paquete esta mañana.", "en": "They sent the package this morning." },
+      "tags": ["word", "participle", "verbs", "A2"]
+    },
+    {
+      "id": "word-asesino--killer-adjective",
+      "kind": "word",
+      "promptEs": "asesino",
+      "answerEn": "killer; murderous (masculine singular description)",
+      "noteEn": "After a masculine singular noun, asesino can describe something designed or used to kill. As a noun, asesino can also mean a male killer.",
+      "example": { "es": "La novela presenta un virus asesino.", "en": "The novel features a killer virus." },
+      "tags": ["word", "adjective", "danger", "B1"]
+    },
+    {
+      "id": "word-matarte",
+      "kind": "word",
+      "promptEs": "matarte",
+      "answerEn": "to kill you (one familiar person)",
+      "noteEn": "Matar stays in its unchanged dictionary form, and te attaches to its end for the person affected.",
+      "example": { "es": "Ese humo podría matarte.", "en": "That smoke could kill you." },
+      "tags": ["word", "verbs", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-salvarte",
+      "kind": "word",
+      "promptEs": "salvarte",
+      "answerEn": "to save you (one familiar person)",
+      "noteEn": "Salvar stays in its unchanged dictionary form, and te attaches to its end for the person being saved.",
+      "example": { "es": "El chaleco puede salvarte.", "en": "The life jacket can save you." },
+      "tags": ["word", "verbs", "attached pronoun", "A2"]
+    },
+    { "id": "word-fuerte", "kind": "word", "promptEs": "fuerte", "answerEn": "strong", "noteEn": "Fuerte has the same singular form for masculine and feminine nouns; its plural is fuertes.", "example": { "es": "Necesitamos una cuerda fuerte.", "en": "We need a strong rope." }, "tags": ["word", "adjective", "strength", "A1"] },
+    {
+      "id": "word-lucharé",
+      "kind": "word",
+      "promptEs": "lucharé",
+      "answerEn": "I will fight; I will struggle",
+      "noteEn": "Lucharé keeps the full verb luchar and adds -é for a future action by the speaker.",
+      "example": { "es": "Lucharé por una solución justa.", "en": "I will fight for a fair solution." },
+      "tags": ["word", "verbs", "future", "A2"]
+    },
+    {
+      "id": "word-boom--explosion-sound",
+      "kind": "word",
+      "promptEs": "boom",
+      "answerEn": "boom; the sound of an explosion",
+      "noteEn": "This comic keeps the internationally familiar English-style spelling BOOM as a printed sound effect. Spanish also commonly writes the sound as bum.",
+      "example": { "es": "¡Bum! La caja cayó al suelo.", "en": "Boom! The box fell to the floor." },
+      "tags": ["word", "sound effect", "onomatopoeia"]
+    },
+    {
+      "id": "concept-terminator-catchphrase-vs-robot-assassin",
+      "kind": "concept",
+      "promptEs": "VEN CONMIGO SI QUIERES VIVIR · ROBOT ASESINO · BOOM",
+      "answerEn": "a Terminator-style rescue interrupted by the kind of robot attack the story imagines",
+      "noteEn": "Calling to Sarah with the famous rescue line signals the Terminator films. The would-be protector then faces an airborne robot assassin and is immediately interrupted by an explosion. The title, More Accurate, contrasts the heroic movie setup with a world where remote robotic weapons already exist.",
+      "tags": ["concept", "film reference", "technology", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-mas-preciso:protector-warning",
+      "labelEs": "¡SARAH! ¡VEN CONMIGO SI QUIERES VIVIR! ¡HAN ENVIADO A UN ROBOT ASESINO PARA MATARTE!",
+      "explicitBounds": [{ "x": 0.7, "y": 6.6, "width": 20.0, "height": 40.0 }],
+      "geometryRationale": "The measured panel-one rectangle encloses the complete five-row warning without entering the neighboring panel.",
+      "words": [
+        { "id": "es-xkcd-mas-preciso:protector-warning:w01", "text": "VEN", "normalized": "ven", "explicitBounds": [{ "x": 8.9865, "y": 7.2165, "width": 4.8649, "height": 7.2165 }], "geometryRationale": "The original OCR row overlapped adjacent lines; this direct row-height box isolates VEN.", "cardIds": ["word-ven--come-command", "grammar-affirmative-tu-command", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w02", "text": "CONMIGO", "normalized": "conmigo", "explicitBounds": [{ "x": 14.0541, "y": 7.2165, "width": 6.4865, "height": 7.2165 }, { "x": 0.8108, "y": 14.433, "width": 3.0743, "height": 7.2165 }], "geometryRationale": "The printed word wraps after CONMI; two checked row-height boxes cover its two visible pieces without covering another word.", "cardIds": ["word-conmigo--with-me", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w03", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 4.1216, "y": 14.433, "width": 2.1284, "height": 7.2165 }], "geometryRationale": "The original OCR row overlapped adjacent lines; this direct row-height box isolates SI.", "cardIds": ["word-si", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w04", "text": "QUIERES", "normalized": "quieres", "explicitBounds": [{ "x": 6.4865, "y": 14.433, "width": 8.0405, "height": 7.2165 }], "geometryRationale": "The original OCR row overlapped adjacent lines; this direct row-height box isolates QUIERES.", "cardIds": ["word-quieres", "grammar-querer-infinitive", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w05", "text": "VIVIR", "normalized": "vivir", "explicitBounds": [{ "x": 14.7635, "y": 14.433, "width": 5.5068, "height": 7.2165 }], "geometryRationale": "The original OCR row overlapped adjacent lines; this direct row-height box isolates VIVIR.", "cardIds": ["word-vivir", "grammar-querer-infinitive", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w06", "text": "HAN", "normalized": "han", "explicitBounds": [{ "x": 0.8108, "y": 21.6495, "width": 5.1689, "height": 8.2473 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-han", "grammar-present-perfect"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w07", "text": "ENVIADO", "normalized": "enviado", "explicitBounds": [{ "x": 6.2838, "y": 21.6495, "width": 7.9054, "height": 8.2473 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-enviado--sent", "grammar-present-perfect"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w08", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 14.4932, "y": 21.6495, "width": 1.5203, "height": 8.2473 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-a--personal-a-person-denoting", "grammar-personal-a"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w09", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 16.3176, "y": 21.6495, "width": 3.1419, "height": 8.2473 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-un", "grammar-personal-a"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w10", "text": "ROBOT", "normalized": "robot", "explicitBounds": [{ "x": 0.8108, "y": 29.8969, "width": 6.2162, "height": 8.2474 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-robot", "grammar-personal-a", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w11", "text": "ASESINO", "normalized": "asesino", "explicitBounds": [{ "x": 7.2973, "y": 29.8969, "width": 8.1081, "height": 8.2474 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-asesino--killer-adjective", "grammar-personal-a", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-terminator-catchphrase-vs-robot-assassin"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w12", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 15.6757, "y": 29.8969, "width": 4.8649, "height": 8.2474 }], "geometryRationale": "The original OCR row overlapped the line below; this checked direct box stops at that next row.", "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-mas-preciso:protector-warning:w13", "text": "MATARTE", "normalized": "matarte", "explicitBounds": [{ "x": 0.8108, "y": 38.1443, "width": 9.4595, "height": 8.2474 }], "geometryRationale": "This checked direct row-height box isolates the final printed word above the character drawing.", "cardIds": ["word-matarte", "grammar-para-infinitive-purpose", "grammar-pronoun-attached-to-infinitive"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-mas-preciso:protector-warning:excluded-sarah", "text": "SARAH", "reason": "non-spanish-text", "rationale": "SARAH is a personal name identifying the film character, not Spanish vocabulary.", "explicitBounds": [{ "x": 1.0811, "y": 7.2165, "width": 7.7027, "height": 7.2165 }], "geometryRationale": "The original OCR line overlaps the following row; this direct row-height box isolates the printed name and its adjacent opening mark." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w01"], "exampleEs": "VEN", "explanationEn": "Ven is the irregular positive command used to tell one familiar person to come." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-want-to-live", "cardId": "grammar-querer-infinitive", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w04", "es-xkcd-mas-preciso:protector-warning:w05"], "exampleEs": "QUIERES VIVIR", "explanationEn": "Quieres matches one familiar listener, and vivir stays in its unchanged dictionary form as the desired action." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w06", "es-xkcd-mas-preciso:protector-warning:w07"], "exampleEs": "HAN ENVIADO", "explanationEn": "Han is the present helper for a plural sender, and enviado is enviar's completed-action form." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-personal-a", "cardId": "grammar-personal-a", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w08", "es-xkcd-mas-preciso:protector-warning:w09", "es-xkcd-mas-preciso:protector-warning:w10", "es-xkcd-mas-preciso:protector-warning:w11"], "exampleEs": "A UN ROBOT ASESINO", "explanationEn": "A marks the person-like robot as the direct recipient of the sending action, and the following noun phrase identifies that agent." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-killer-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w10", "es-xkcd-mas-preciso:protector-warning:w11"], "exampleEs": "ROBOT ASESINO", "explanationEn": "Asesino follows robot to classify it as a robot designed to kill." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-killer-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w10", "es-xkcd-mas-preciso:protector-warning:w11"], "exampleEs": "ROBOT ASESINO", "explanationEn": "Asesino uses masculine singular -o to match the masculine singular noun robot." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w12", "es-xkcd-mas-preciso:protector-warning:w13"], "exampleEs": "PARA MATARTE", "explanationEn": "Para introduces the robot's purpose, and matar stays in its unchanged dictionary form inside matarte." },
+        { "id": "es-xkcd-mas-preciso:protector-warning:app-attached-te", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-mas-preciso:protector-warning:w13"], "exampleEs": "MATARTE", "explanationEn": "Te attaches to the end of the dictionary form matar and identifies the familiar listener as the person affected." }
+      ]
+    },
+    {
+      "id": "es-xkcd-mas-preciso:protector-promise",
+      "labelEs": "ESTOY AQUÍ PARA SALVARTE. PUEDE QUE NO SEA TAN FUERTE Y RÁPIDO COMO UNA MÁQUINA, PERO LUCHARÉ PARA...",
+      "explicitBounds": [{ "x": 23.4, "y": 2.7, "width": 24.1, "height": 39.0 }],
+      "geometryRationale": "The measured panel-two rectangle encloses all five printed rows while excluding the character drawing below and both neighboring panels.",
+      "words": [
+        { "id": "es-xkcd-mas-preciso:protector-promise:w01", "text": "ESTOY", "normalized": "estoy", "explicitBounds": [{ "x": 24.0541, "y": 3.0928, "width": 5.9459, "height": 6.1856 }], "geometryRationale": "The OCR row overlapped the row below; this checked direct box stops at the next row.", "cardIds": ["word-estoy--location", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w02", "text": "AQUÍ", "normalized": "aquí", "explicitBounds": [{ "x": 30.2703, "y": 3.0928, "width": 4.8649, "height": 6.1856 }], "geometryRationale": "The OCR row overlapped the row below; this checked direct box stops at the next row.", "cardIds": ["word-aquí"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w03", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 35.4054, "y": 3.0928, "width": 4.8649, "height": 6.1856 }], "geometryRationale": "The OCR row overlapped the row below; this checked direct box stops at the next row.", "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w04", "text": "SALVARTE", "normalized": "salvarte", "explicitBounds": [{ "x": 40.5405, "y": 3.0928, "width": 4.5946, "height": 6.1856 }, { "x": 23.7838, "y": 9.2784, "width": 6.6892, "height": 8.2474 }], "geometryRationale": "The printed word wraps after SAL; two checked row-height boxes cover its two visible pieces without covering another word.", "cardIds": ["word-salvarte", "grammar-para-infinitive-purpose", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w05", "text": "PUEDE", "normalized": "puede", "explicitBounds": [{ "x": 30.777, "y": 9.2784, "width": 6.3851, "height": 8.2474 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-puede--possibility", "grammar-puede-que-subjunctive"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w06", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 37.4662, "y": 9.2784, "width": 4.2568, "height": 8.2474 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-que--puede-que", "grammar-puede-que-subjunctive"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w07", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 42.027, "y": 9.2784, "width": 2.8378, "height": 8.2474 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w08", "text": "SEA", "normalized": "sea", "explicitBounds": [{ "x": 23.7838, "y": 17.5258, "width": 4.2568, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-sea--subjunctive-ser", "grammar-puede-que-subjunctive"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w09", "text": "TAN", "normalized": "tan", "explicitBounds": [{ "x": 28.3446, "y": 17.5258, "width": 3.6486, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-tan--comparison", "grammar-tan-como-comparison"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w10", "text": "FUERTE", "normalized": "fuerte", "explicitBounds": [{ "x": 32.2973, "y": 17.5258, "width": 7.2973, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-fuerte", "grammar-tan-como-comparison"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w11", "text": "Y", "normalized": "y", "explicitBounds": [{ "x": 39.8986, "y": 17.5258, "width": 1.2162, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-y", "grammar-tan-como-comparison"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w12", "text": "RÁPIDO", "normalized": "rápido", "explicitBounds": [{ "x": 41.4189, "y": 17.5258, "width": 5.3378, "height": 7.2165 }, { "x": 24.0541, "y": 24.7423, "width": 2.7365, "height": 7.2165 }], "geometryRationale": "The printed word wraps after RÁPI; two checked row-height boxes cover its two visible pieces without covering another word.", "cardIds": ["word-rapido", "grammar-tan-como-comparison"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w13", "text": "COMO", "normalized": "como", "explicitBounds": [{ "x": 27.0946, "y": 24.7423, "width": 5.777, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-como--comparison", "grammar-tan-como-comparison"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w14", "text": "UNA", "normalized": "una", "explicitBounds": [{ "x": 33.1757, "y": 24.7423, "width": 3.9527, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-una"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w15", "text": "MÁQUINA", "normalized": "máquina", "explicitBounds": [{ "x": 37.4324, "y": 24.7423, "width": 9.5946, "height": 7.2165 }], "geometryRationale": "The OCR row crossed into the row below; this checked direct box stops at the next row.", "cardIds": ["word-máquina"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w16", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 23.7838, "y": 31.9588, "width": 5.1689, "height": 9.2784 }], "geometryRationale": "This direct box isolates PERO on the final text row above the drawing.", "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w17", "text": "LUCHARÉ", "normalized": "lucharé", "explicitBounds": [{ "x": 29.2568, "y": 31.9588, "width": 8.2095, "height": 9.2784 }], "geometryRationale": "This direct box isolates LUCHARÉ on the final text row above the drawing.", "cardIds": ["word-lucharé", "grammar-simple-future"] },
+        { "id": "es-xkcd-mas-preciso:protector-promise:w18", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 37.7703, "y": 31.9588, "width": 6.8243, "height": 9.2784 }], "geometryRationale": "This direct box isolates the interrupted final PARA and its trailing ellipsis above the drawing.", "cardIds": ["word-para"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-estar-location", "cardId": "grammar-ser-identity-estar-location", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w01"], "exampleEs": "ESTOY", "explanationEn": "Estoy is a form of estar because the speaker is stating his location rather than his identity." },
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w03", "es-xkcd-mas-preciso:protector-promise:w04"], "exampleEs": "PARA SALVARTE", "explanationEn": "Para introduces the reason for being here, and salvar stays in its unchanged dictionary form inside salvarte." },
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-attached-te", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w04"], "exampleEs": "SALVARTE", "explanationEn": "Te attaches to the dictionary form salvar and identifies the familiar listener as the person being saved." },
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-maybe", "cardId": "grammar-puede-que-subjunctive", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w05", "es-xkcd-mas-preciso:protector-promise:w06", "es-xkcd-mas-preciso:protector-promise:w08"], "exampleEs": "PUEDE QUE NO SEA", "explanationEn": "Puede que presents the description as possible rather than certain, and ser changes to the possibility form sea; no negates that form." },
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-equal-comparison", "cardId": "grammar-tan-como-comparison", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w09", "es-xkcd-mas-preciso:protector-promise:w10", "es-xkcd-mas-preciso:protector-promise:w11", "es-xkcd-mas-preciso:protector-promise:w12", "es-xkcd-mas-preciso:protector-promise:w13"], "exampleEs": "TAN FUERTE Y RÁPIDO COMO", "explanationEn": "Tan sets the degree of the coordinated descriptions fuerte y rápido, and como introduces the comparison point." },
+        { "id": "es-xkcd-mas-preciso:protector-promise:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-mas-preciso:protector-promise:w17"], "exampleEs": "LUCHARÉ", "explanationEn": "Lucharé keeps the full verb luchar and adds the speaker's future ending -é." }
+      ]
+    },
+    {
+      "id": "es-xkcd-mas-preciso:explosion-sound",
+      "labelEs": "BOOM",
+      "explicitBounds": [{ "x": 51.0, "y": 2.6, "width": 22.8, "height": 38.0 }],
+      "geometryRationale": "The measured panel-three rectangle covers the large handwritten explosion sound and excludes both neighboring panels.",
+      "words": [
+        { "id": "es-xkcd-mas-preciso:explosion-sound:w01", "text": "BOOM", "normalized": "boom", "explicitBounds": [{ "x": 51.3514, "y": 3.0928, "width": 22.1622, "height": 37.1134 }], "geometryRationale": "The checked direct rectangle follows the full large handwritten sound effect without entering another panel.", "cardIds": ["word-boom--explosion-sound", "concept-terminator-catchphrase-vs-robot-assassin"] }
+      ],
+      "applications": []
+    }
+  ]
+}

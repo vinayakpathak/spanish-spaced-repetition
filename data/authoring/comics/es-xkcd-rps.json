@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-rps",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "RPS",
+  "titleEs": "RPS",
+  "titleText": {
+    "es": "",
+    "en": "It looks good, but it needs more postfixins.",
+    "noteEn": "The Spanish archive has an empty title-text attribute. The official English title text makes a second joke by blending “postfix” with “fixings.” The Spanish raster translates the caption while preserving the image's reverse-Polish-notation arrangement: the sausage appears to the right of, and therefore after, the bun in left-to-right reading order."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-salchicha",
+      "kind": "word",
+      "promptEs": "salchicha",
+      "answerEn": "sausage",
+      "noteEn": "Salchicha is a feminine naming word, so descriptions of it use feminine forms such as polaca and inversa.",
+      "example": { "es": "Calentaron una salchicha.", "en": "They heated a sausage." },
+      "tags": ["word", "food", "feminine noun", "A1"]
+    },
+    {
+      "id": "word-polaca--polish",
+      "kind": "word",
+      "promptEs": "polaca",
+      "answerEn": "Polish; from Poland (feminine singular)",
+      "noteEn": "Polaca describes a feminine singular person or thing as Polish. The masculine singular form is polaco.",
+      "example": { "es": "Compró una revista polaca.", "en": "She bought a Polish magazine." },
+      "tags": ["word", "nationality", "adjective", "feminine singular"]
+    },
+    {
+      "id": "word-inversa--reverse",
+      "kind": "word",
+      "promptEs": "inversa",
+      "answerEn": "reverse; inverted (feminine singular)",
+      "noteEn": "Inversa describes a feminine singular thing whose order or direction is reversed. The masculine singular form is inverso.",
+      "example": { "es": "Siguieron la ruta inversa.", "en": "They followed the reverse route." },
+      "tags": ["word", "order", "adjective", "feminine singular"]
+    },
+    {
+      "id": "concept-reverse-polish-sausage-pun",
+      "kind": "concept",
+      "promptEs": "salchicha polaca inversa",
+      "answerEn": "a literal “reverse Polish sausage” arranged like reverse Polish notation",
+      "noteEn": "Reverse Polish notation places an operator after its operands. The image similarly puts the Polish sausage to the right of the empty bun—after it in left-to-right reading order—turning the separated hot dog into a postfix-style visual pun. The Spanish caption preserves the wordplay exactly.",
+      "tags": ["concept", "reverse Polish notation", "wordplay", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-rps:caption",
+      "labelEs": "SALCHICHA POLACA INVERSA",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-rps:ocr-line-0001" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-rps:caption:w01",
+          "text": "SALCHICHA",
+          "normalized": "salchicha",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-rps:ocr-token-00001" }],
+          "cardIds": ["word-salchicha", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-reverse-polish-sausage-pun"]
+        },
+        {
+          "id": "es-xkcd-rps:caption:w02",
+          "text": "POLACA",
+          "normalized": "polaca",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-rps:ocr-token-00002" }],
+          "cardIds": ["word-polaca--polish", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-reverse-polish-sausage-pun"]
+        },
+        {
+          "id": "es-xkcd-rps:caption:w03",
+          "text": "INVERSA",
+          "normalized": "inversa",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-rps:ocr-token-00003" }],
+          "cardIds": ["word-inversa--reverse", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-reverse-polish-sausage-pun"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-rps:caption:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": ["es-xkcd-rps:caption:w01", "es-xkcd-rps:caption:w02", "es-xkcd-rps:caption:w03"],
+          "exampleEs": "SALCHICHA POLACA INVERSA",
+          "explanationEn": "Polaca and inversa both follow the naming word salchicha in the common neutral order for descriptions."
+        },
+        {
+          "id": "es-xkcd-rps:caption:app-adjective-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": ["es-xkcd-rps:caption:w01", "es-xkcd-rps:caption:w02", "es-xkcd-rps:caption:w03"],
+          "exampleEs": "SALCHICHA POLACA INVERSA",
+          "explanationEn": "Because salchicha is feminine singular, both descriptions use their feminine singular -a forms: polaca and inversa."
+        }
+      ]
+    }
+  ]
+}
