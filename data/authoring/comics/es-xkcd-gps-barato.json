@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-gps-barato",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Cheap GPS",
+  "titleEs": "GPS barato",
+  "titleText": {
+    "es": "En lugar de usar software de mapas, en cierta ocasión escribí un programa en Perl que, dados un receptor GPS USB y un destino, imprimía 'IZQUIERDA', 'DERECHA' o 'RECTO' según mi orientación.",
+    "en": "In lieu of mapping software, I once wrote a Perl program which, given a USB GPS receiver and a destination, printed 'LEFT' 'RIGHT' OR 'STRAIGHT' based on my heading.",
+    "noteEn": "The title text describes another deliberately minimal navigation program, reinforcing the joke about replacing full mapping software with very crude guidance."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-frío--proximity-game",
+      "kind": "word",
+      "promptEs": "frío",
+      "answerEn": "cold; far from the target in a hot-and-cold game",
+      "noteEn": "In the guessing game, temperature words describe distance rather than actual heat. Frío tells the searcher that they are far from the hidden object or chosen place.",
+      "example": { "es": "¡Frío! Busca en otra habitación.", "en": "Cold! Look in another room." },
+      "tags": ["word", "figurative sense", "proximity", "game", "A2"]
+    },
+    {
+      "id": "word-templado--proximity-game",
+      "kind": "word",
+      "promptEs": "templado",
+      "answerEn": "warm; getting closer to the target in a hot-and-cold game",
+      "noteEn": "Templado literally describes a mild or warm temperature. As a game clue, it marks progress between frío, which is far away, and caliente, which is very close.",
+      "example": { "es": "Templado... Acércate un poco más.", "en": "Warm... Come a little closer." },
+      "tags": ["word", "figurative sense", "proximity", "game", "A2"]
+    },
+    {
+      "id": "word-caliente--proximity-game",
+      "kind": "word",
+      "promptEs": "caliente",
+      "answerEn": "hot; very close to the target in a hot-and-cold game",
+      "noteEn": "In the game, caliente is not a report about temperature. It tells the searcher that the hidden object or chosen place is very near.",
+      "example": { "es": "¡Caliente! Está cerca de tu mano.", "en": "Hot! It is near your hand." },
+      "tags": ["word", "figurative sense", "proximity", "game", "A2"]
+    },
+    {
+      "id": "concept-hot-and-cold-proximity-game",
+      "kind": "concept",
+      "promptEs": "juego de «frío» y «caliente»",
+      "answerEn": "a guessing game in which ‘cold’ means far from the target, ‘warm’ means closer, and ‘hot’ means very close",
+      "noteEn": "The handheld unit gives only these proximity clues instead of turn-by-turn directions. Turning the children's guessing game into a navigation system is what makes this an intentionally cheap GPS.",
+      "tags": ["concept", "game", "proximity", "GPS", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-gps-barato:device-display",
+      "labelEs": "FRÍO",
+      "explicitBounds": [{ "x": 56.5, "y": 33.7, "width": 7.0, "height": 8.0 }],
+      "geometryRationale": "OCR missed the word printed on the handheld screen, so this box was measured directly inside the display.",
+      "words": [
+        {
+          "id": "es-xkcd-gps-barato:device-display:w01",
+          "text": "FRÍO",
+          "normalized": "frío",
+          "explicitBounds": [{ "x": 57.0, "y": 35.2, "width": 5.3, "height": 5.3 }],
+          "geometryRationale": "OCR mistook unrelated dashboard-gauge marks for text and omitted this clearly printed FRÍO on the GPS display.",
+          "cardIds": ["word-frío--proximity-game", "concept-hot-and-cold-proximity-game"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gps-barato:first-cue",
+      "labelEs": "FRÍO...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-gps-barato:ocr-line-0001" }],
+      "words": [
+        {
+          "id": "es-xkcd-gps-barato:first-cue:w01",
+          "text": "FRÍO",
+          "normalized": "frío",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gps-barato:ocr-token-00001" }],
+          "cardIds": ["word-frío--proximity-game", "concept-hot-and-cold-proximity-game"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gps-barato:second-cue",
+      "labelEs": "TEMPLADO...",
+      "explicitBounds": [{ "x": 72.9529, "y": 25.1012, "width": 25.8065, "height": 7.2874 }],
+      "geometryRationale": "OCR included the nearby speech-pointer artwork as a less-than sign, so this measured box isolates only TEMPLADO and its ellipsis.",
+      "words": [
+        {
+          "id": "es-xkcd-gps-barato:second-cue:w01",
+          "text": "TEMPLADO",
+          "normalized": "templado",
+          "explicitBounds": [{ "x": 72.9529, "y": 25.1012, "width": 25.8065, "height": 7.2874 }],
+          "geometryRationale": "The OCR token extended left across the pointer line; this direct measurement begins at the printed T in TEMPLADO.",
+          "cardIds": ["word-templado--proximity-game", "concept-hot-and-cold-proximity-game"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gps-barato:third-cue",
+      "labelEs": "¡CALIENTE!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-gps-barato:ocr-line-0004" }],
+      "words": [
+        {
+          "id": "es-xkcd-gps-barato:third-cue:w01",
+          "text": "CALIENTE",
+          "normalized": "caliente",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gps-barato:ocr-token-00004" }],
+          "cardIds": ["word-caliente--proximity-game", "concept-hot-and-cold-proximity-game"]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gps-barato:fourth-cue",
+      "labelEs": "FRÍO...",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-gps-barato:ocr-line-0005" }],
+      "words": [
+        {
+          "id": "es-xkcd-gps-barato:fourth-cue:w01",
+          "text": "FRÍO",
+          "normalized": "frío",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gps-barato:ocr-token-00005" }],
+          "cardIds": ["word-frío--proximity-game", "concept-hot-and-cold-proximity-game"]
+        }
+      ],
+      "applications": []
+    }
+  ]
+}

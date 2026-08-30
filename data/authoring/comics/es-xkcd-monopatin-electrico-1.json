@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-monopatin-electrico-1",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Electric Skateboard (Double Comic)",
+  "titleEs": "Monopatín eléctrico (cómic doble)",
+  "titleText": {
+    "es": "Los vehículos peligrosos, las colinas y la filosofía van de la mano.",
+    "en": "Unsafe vehicles, hills, and philosophy go hand in hand."
+  },
+  "cardDefinitions": [
+    { "id": "word-monopatín", "kind": "word", "promptEs": "monopatín", "answerEn": "skateboard", "noteEn": "", "tags": ["word", "transport", "A1"] },
+    { "id": "word-eléctrico", "kind": "word", "promptEs": "eléctrico", "answerEn": "electric", "noteEn": "", "tags": ["word", "adjective", "A1"] },
+    { "id": "word-patinar", "kind": "word", "promptEs": "patinar", "answerEn": "to skate", "noteEn": "", "tags": ["word", "movement", "A1"] },
+    {
+      "id": "word-nos--faltar-experiencer",
+      "kind": "word",
+      "promptEs": "nos",
+      "answerEn": "marks us as the people who are missing or lacking something",
+      "noteEn": "With faltar, Spanish presents the absent thing as the subject and uses nos for the affected people. Nos falta tiempo therefore describes time as what is lacking for us.",
+      "example": { "es": "Nos falta una silla.", "en": "We are missing a chair." },
+      "tags": ["word", "faltar", "affected person", "A2"]
+    },
+    {
+      "id": "word-falta--is-missing",
+      "kind": "word",
+      "promptEs": "falta",
+      "answerEn": "is missing; is lacking",
+      "noteEn": "Falta is singular because the one missing thing controls the verb. For several missing things, Spanish uses faltan instead.",
+      "example": { "es": "Falta una página.", "en": "A page is missing." },
+      "tags": ["word", "faltar", "present", "A2"]
+    },
+    {
+      "id": "word-cuesta--slope",
+      "kind": "word",
+      "promptEs": "cuesta",
+      "answerEn": "slope; hill",
+      "noteEn": "As a noun, cuesta is a sloping stretch of ground. It is different from cuesta meaning ‘it costs’ or ‘it is difficult.’",
+      "example": { "es": "La cuesta termina junto al parque.", "en": "The hill ends beside the park." },
+      "tags": ["word", "landform", "sense distinction", "A2"]
+    },
+    { "id": "word-arriba--up", "kind": "word", "promptEs": "arriba", "answerEn": "up; above", "noteEn": "", "tags": ["word", "direction", "A1"] },
+    { "id": "word-fantástico", "kind": "word", "promptEs": "fantástico", "answerEn": "fantastic; amazing", "noteEn": "", "tags": ["word", "evaluation", "A1"] },
+    { "id": "word-rodando", "kind": "word", "promptEs": "rodando", "answerEn": "rolling; gliding", "noteEn": "", "tags": ["word", "movement", "gerund", "A2"] },
+    { "id": "word-abajo", "kind": "word", "promptEs": "abajo", "answerEn": "down; below", "noteEn": "", "tags": ["word", "direction", "A1"] },
+    { "id": "word-empujando", "kind": "word", "promptEs": "empujando", "answerEn": "pushing", "noteEn": "", "tags": ["word", "movement", "gerund", "A2"] },
+    { "id": "word-rodar", "kind": "word", "promptEs": "rodar", "answerEn": "to roll; to glide", "noteEn": "", "tags": ["word", "movement", "A2"] },
+    { "id": "word-sentidos--directions", "kind": "word", "promptEs": "sentidos", "answerEn": "directions; ways", "noteEn": "", "tags": ["word", "direction", "plural", "A2"] },
+    { "id": "word-depende", "kind": "word", "promptEs": "depende", "answerEn": "it depends", "noteEn": "", "tags": ["word", "decision", "present", "A2"] },
+    {
+      "id": "word-de--depender-complement",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "on; required after depender before what decides the result",
+      "noteEn": "Spanish keeps de after depender. English usually expresses the same link with ‘on,’ as in depende del precio.",
+      "example": { "es": "Depende del clima.", "en": "It depends on the weather." },
+      "tags": ["word", "depender de", "verb complement", "A2"]
+    },
+    {
+      "id": "word-a--dedicar-target",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "to; introduces what time, effort, or a life is devoted to",
+      "noteEn": "Dedicar links the thing being devoted to its purpose or recipient with a. In a question, that a can move to the front with qué.",
+      "example": { "es": "Dedico una hora a la lectura.", "en": "I devote an hour to reading." },
+      "tags": ["word", "dedicar", "verb complement", "A2"]
+    },
+    {
+      "id": "word-quieras--want-open-choice",
+      "kind": "word",
+      "promptEs": "quieras",
+      "answerEn": "you want (informal singular, with the choice left open)",
+      "noteEn": "Quieras is a form of querer used when the speaker treats the choice as open or not yet settled. The ordinary statement form is quieres; the e changes to ie in both forms, and quieras uses -as here.",
+      "example": { "es": "Elige lo que quieras.", "en": "Choose whatever you want." },
+      "tags": ["word", "querer", "subjunctive", "open choice", "A2"]
+    },
+    { "id": "word-dedicar--devote", "kind": "word", "promptEs": "dedicar", "answerEn": "to devote; to dedicate", "noteEn": "", "tags": ["word", "time and effort", "A2"] },
+    {
+      "id": "word-verás--discourse-marker",
+      "kind": "word",
+      "promptEs": "verás",
+      "answerEn": "you see; look (introducing an explanation)",
+      "noteEn": "Verás literally has the future form ‘you will see.’ In conversation it can instead introduce a clarification, much like English ‘you see.’",
+      "example": { "es": "Verás, el plan ha cambiado.", "en": "You see, the plan has changed." },
+      "tags": ["word", "discourse marker", "sense distinction", "A2"]
+    },
+    { "id": "word-filosofía", "kind": "word", "promptEs": "filosofía", "answerEn": "philosophy", "noteEn": "", "tags": ["word", "ideas", "A2"] },
+    { "id": "word-ensamblador", "kind": "word", "promptEs": "ensamblador", "answerEn": "assembly language", "noteEn": "", "tags": ["word", "computing", "programming language", "B1"] },
+    { "id": "word-programador", "kind": "word", "promptEs": "programador", "answerEn": "programmer", "noteEn": "", "tags": ["word", "computing", "profession", "A2"] },
+    {
+      "id": "word-pasar--switch-from-to",
+      "kind": "word",
+      "promptEs": "pasar",
+      "answerEn": "to switch; to move (from one thing to another)",
+      "noteEn": "Pasar has several meanings. With de for a starting point and a for an endpoint, it describes changing from one option, stage, or system to another.",
+      "example": { "es": "Pasamos del tren al autobús.", "en": "We switched from the train to the bus." },
+      "tags": ["word", "change", "pasar de a", "A2"]
+    },
+    { "id": "word-a--transition-endpoint", "kind": "word", "promptEs": "a", "answerEn": "to; introduces the endpoint of a change", "noteEn": "", "tags": ["word", "change", "preposition", "A2"] },
+    {
+      "id": "word-das--darse-cuenta",
+      "kind": "word",
+      "promptEs": "das",
+      "answerEn": "no separate English word; the verb part of te das cuenta, ‘you realize’",
+      "noteEn": "Das normally means ‘you give.’ Inside darse cuenta, it combines with the matching small pronoun and cuenta to express realizing or noticing.",
+      "example": { "es": "¿Te das cuenta del cambio?", "en": "Do you notice the change?" },
+      "tags": ["word", "darse cuenta", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-perdías--wasted-time",
+      "kind": "word",
+      "promptEs": "perdías",
+      "answerEn": "you were wasting; you used to waste",
+      "noteEn": "Perdías is an imperfect past form of perder. The -ías ending presents the wasted time as an ongoing or repeated past situation rather than one completed loss.",
+      "example": { "es": "Antes perdías tiempo esperando.", "en": "You used to waste time waiting." },
+      "tags": ["word", "perder tiempo", "imperfect", "A2"]
+    },
+    { "id": "word-aburridas", "kind": "word", "promptEs": "aburridas", "answerEn": "boring (feminine plural)", "noteEn": "", "tags": ["word", "description", "agreement", "A1"] },
+    {
+      "id": "word-hacerlas--do-them",
+      "kind": "word",
+      "promptEs": "hacerlas",
+      "answerEn": "to do them",
+      "noteEn": "Hacer is the unchanged dictionary form ‘to do.’ Las is attached to its end and stands for feminine plural things already mentioned.",
+      "example": { "es": "Prefiero hacerlas mañana.", "en": "I prefer to do them tomorrow." },
+      "tags": ["word", "infinitive", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-más--anymore-after-negative",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "anymore; any longer (after a negative verb)",
+      "noteEn": "Más usually means ‘more.’ After no and a verb, it can instead reinforce that an action no longer happens, especially in Latin American usage.",
+      "example": { "es": "No trabajo allí más.", "en": "I do not work there anymore." },
+      "tags": ["word", "negative", "time", "regional usage", "A2"]
+    },
+    { "id": "word-desarrollan--build-quality", "kind": "word", "promptEs": "desarrollan", "answerEn": "develop; build", "noteEn": "", "tags": ["word", "development", "present", "A2"] },
+    { "id": "word-carácter--personal-strength", "kind": "word", "promptEs": "carácter", "answerEn": "character; strength of character", "noteEn": "", "tags": ["word", "personality", "B1"] },
+    {
+      "id": "grammar-faltar-a-alguien",
+      "kind": "grammar",
+      "promptEs": "a alguien le falta(n) + cosa(s)",
+      "questionEn": "How do you say that someone is missing or does not have enough of something?",
+      "answerEn": "Use me, te, le, nos, os, or les for the affected person, then falta for one missing thing or faltan for several.",
+      "noteEn": "Spanish organizes this idea around the missing thing. The small person word shows who is affected, while faltar changes to agree with what is absent: me falta una llave but me faltan dos llaves.",
+      "example": { "es": "Nos faltan dos vasos.", "en": "We are missing two glasses." },
+      "tags": ["grammar", "faltar", "agreement", "A2"]
+    },
+    {
+      "id": "phrase-cuesta-arriba",
+      "kind": "phrase",
+      "promptEs": "cuesta arriba",
+      "questionEn": "How do you describe movement uphill?",
+      "answerEn": "Use cuesta arriba after a movement or position to mean ‘uphill.’",
+      "noteEn": "Cuesta names a slope, and arriba supplies the upward direction. Together they form the conventional direction phrase cuesta arriba; the opposite is cuesta abajo.",
+      "example": { "es": "La bicicleta avanza cuesta arriba.", "en": "The bicycle moves uphill." },
+      "tags": ["phrase", "direction", "movement", "A2"]
+    },
+    {
+      "id": "phrase-depender-de",
+      "kind": "phrase",
+      "promptEs": "depender de + factor o decisión",
+      "questionEn": "How do you say that an outcome depends on a person, fact, or choice?",
+      "answerEn": "Use a form of depender, then de, then the factor or decision that controls the outcome.",
+      "noteEn": "Depender changes for the subject and time, but de stays before the deciding factor. De combines with el to make del; before a question word it remains separate, as in depende de qué elijas.",
+      "example": { "es": "La fecha depende del clima.", "en": "The date depends on the weather." },
+      "tags": ["phrase", "depender de", "verb complement", "A2"]
+    },
+    {
+      "id": "grammar-hacer-target-role",
+      "kind": "grammar",
+      "promptEs": "causa + me/te/nos/los + hacer + oficio o papel resultante",
+      "questionEn": "How do you say that something makes a person become or count as a certain kind of person?",
+      "answerEn": "Name the cause, put the affected-person word before the matching form of hacer, and then name the resulting role or kind of person.",
+      "noteEn": "The affected-person word such as me, te, nos, or los stands before hacer. A profession or role can then appear without un or una when it describes what the person becomes, as in la práctica te hace mejor músico. An article can appear in other phrasings, so the key pattern is the resulting role after hacer.",
+      "example": { "es": "La experiencia te hace mejor guía.", "en": "Experience makes you a better guide." },
+      "tags": ["grammar", "hacer", "causation", "resulting role", "B1"]
+    },
+    {
+      "id": "phrase-pasar-de-a",
+      "kind": "phrase",
+      "promptEs": "pasar de + punto inicial + a + punto final",
+      "questionEn": "How do you say that someone or something switches from one option or stage to another?",
+      "answerEn": "Use a form of pasar, then de before the starting point and a before the endpoint.",
+      "noteEn": "Pasar changes for the person and time. De and a mark the two ends of the change and both remain visible, even when the endpoints are names, systems, or ideas rather than places.",
+      "example": { "es": "Pasamos de una idea a un plan.", "en": "We moved from an idea to a plan." },
+      "tags": ["phrase", "change", "from to", "A2"]
+    },
+    {
+      "id": "concept-c-assembly-python-abstraction",
+      "kind": "concept",
+      "promptEs": "C, ensamblador y Python · nivel de abstracción",
+      "answerEn": "C and assembly expose more low-level computer details, while Python handles more of those details for the programmer",
+      "noteEn": "Lower-level languages can demand more manual work but also reveal how the machine operates. The comic compares the relief of using a powered skateboard with moving to Python, then jokes that the tedious work in C or assembly might build programming skill and personal character.",
+      "tags": ["concept", "programming languages", "abstraction", "C", "assembly", "Python", "xkcd joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-1-announcement",
+      "labelEs": "¡MIRA! ¡UN MONOPATÍN ELÉCTRICO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-1-announcement:w01", "text": "MIRA", "normalized": "mira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00004" }], "cardIds": ["word-mira--imperative"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-1-announcement:w02", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00005" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-1-announcement:w03", "text": "MONOPATÍN", "normalized": "monopatín", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00006" }, { "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00009" }], "cardIds": ["word-monopatín"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-1-announcement:w04", "text": "ELÉCTRICO", "normalized": "eléctrico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00010" }], "cardIds": ["word-eléctrico"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-1-reaction",
+      "labelEs": "¡GENIAL!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0007" }],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-1-reaction:w01", "text": "GENIAL", "normalized": "genial", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00012" }], "cardIds": ["word-genial--great"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-2-motor-sound",
+      "labelEs": "RRRR",
+      "explicitBounds": [{ "x": 32.84, "y": 19.61, "width": 4.33, "height": 3.08 }],
+      "geometryRationale": "OCR omitted this first printed motor whir; the measured rectangle covers the four repeated letters without the board artwork.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-2-motor-sound:excluded-whir", "text": "RRRR", "reason": "non-spanish-text", "rationale": "This is a nonlexical motor-whir sound effect rather than a Spanish vocabulary item.", "explicitBounds": [{ "x": 32.84, "y": 19.61, "width": 4.33, "height": 3.08 }], "geometryRationale": "OCR omitted this first printed motor whir; the measured rectangle covers the four repeated letters without the board artwork." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-3-concern",
+      "labelEs": "SIENTO QUE NOS FALTA ALGO...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:w01", "text": "SIENTO", "normalized": "siento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00001" }], "cardIds": ["word-siento--feel"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00002" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:w03", "text": "NOS", "normalized": "nos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00007" }], "cardIds": ["word-nos--faltar-experiencer", "grammar-faltar-a-alguien"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:w04", "text": "FALTA", "normalized": "falta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00008" }], "cardIds": ["word-falta--is-missing", "grammar-faltar-a-alguien"] },
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:w05", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00011" }], "cardIds": ["word-algo", "grammar-faltar-a-alguien"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-concern:app-faltar", "cardId": "grammar-faltar-a-alguien", "participantWordIds": ["es-xkcd-monopatin-electrico-1:panel-3-concern:w03", "es-xkcd-monopatin-electrico-1:panel-3-concern:w04", "es-xkcd-monopatin-electrico-1:panel-3-concern:w05"], "exampleEs": "NOS FALTA ALGO", "explanationEn": "Nos marks the affected pair, falta agrees with the one missing thing, and algo fills that missing-thing role." }
+      ]
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-3-agreement",
+      "labelEs": "SÍ...",
+      "explicitBounds": [{ "x": 59.15, "y": 10.37, "width": 4.05, "height": 3.08 }],
+      "geometryRationale": "OCR omitted this small agreement beside the second rider; the measured rectangle isolates the complete printed response.",
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-3-agreement:w01", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 59.55, "y": 10.37, "width": 2.1, "height": 2.6 }], "geometryRationale": "OCR omitted this small agreement beside the second rider; the measured rectangle isolates only the two printed letters.", "cardIds": ["word-sí"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-4-music",
+      "labelEs": "♪ ♪ ♪",
+      "explicitBounds": [
+        { "x": 73.7838, "y": 1.1345, "width": 1.6216, "height": 3.2415 },
+        { "x": 77.7027, "y": 1.4587, "width": 1.4865, "height": 2.4311 },
+        { "x": 81.2162, "y": 1.2966, "width": 1.8919, "height": 2.5932 }
+      ],
+      "geometryRationale": "OCR recognized only part of these three printed musical-note glyphs; the three measured rectangles isolate every note individually.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-4-music:excluded-notes", "text": "♪ ♪ ♪", "reason": "symbol", "rationale": "These three musical-note glyphs indicate music and are symbols rather than Spanish words.", "explicitBounds": [{ "x": 73.7838, "y": 1.1345, "width": 1.6216, "height": 3.2415 }, { "x": 77.7027, "y": 1.4587, "width": 1.4865, "height": 2.4311 }, { "x": 81.2162, "y": 1.2966, "width": 1.8919, "height": 2.5932 }], "geometryRationale": "OCR recognized only part of these three printed musical-note glyphs; the three measured rectangles isolate every note individually." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:panel-4-motor-sound",
+      "labelEs": "RRRR",
+      "explicitBounds": [{ "x": 67.3, "y": 19.61, "width": 4.35, "height": 3.08 }],
+      "geometryRationale": "OCR included adjacent vibration and wheel artwork in this sound-effect line; the measured rectangle isolates the four printed letters.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:panel-4-motor-sound:excluded-whir", "text": "RRRR", "reason": "non-spanish-text", "rationale": "This is a nonlexical motor-whir sound effect rather than a Spanish vocabulary item.", "explicitBounds": [{ "x": 67.3, "y": 19.61, "width": 4.35, "height": 3.08 }], "geometryRationale": "OCR included adjacent vibration and wheel artwork in this sound-effect line; the measured rectangle isolates the four printed letters." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:uphill-motor-sound",
+      "labelEs": "RRRRRR",
+      "explicitBounds": [{ "x": 0.68, "y": 54.62, "width": 6.22, "height": 4.21 }],
+      "geometryRationale": "OCR omitted this longer printed motor whir on the incline; the measured rectangle covers all six repeated letters.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-motor-sound:excluded-whir", "text": "RRRRRR", "reason": "non-spanish-text", "rationale": "This is a nonlexical motor-whir sound effect rather than a Spanish vocabulary item.", "explicitBounds": [{ "x": 0.68, "y": 54.62, "width": 6.22, "height": 4.21 }], "geometryRationale": "OCR omitted this longer printed motor whir on the incline; the measured rectangle covers all six repeated letters." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:uphill-reflection",
+      "labelEs": "PATINAR CUESTA ARRIBA ASÍ ES FANTÁSTICO. AÑOS RODANDO HACIA ABAJO Y EMPUJANDO HACIA ARRIBA, Y DE PRONTO AHORA ES RODAR EN AMBOS SENTIDOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0017" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w01", "text": "PATINAR", "normalized": "patinar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00017" }], "cardIds": ["word-patinar"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w02", "text": "CUESTA", "normalized": "cuesta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00018" }], "cardIds": ["word-cuesta--slope", "phrase-cuesta-arriba"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w03", "text": "ARRIBA", "normalized": "arriba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00019" }], "cardIds": ["word-arriba--up", "phrase-cuesta-arriba"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w04", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00021" }], "cardIds": ["word-así--like-that"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w05", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00022" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w06", "text": "FANTÁSTICO", "normalized": "fantástico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00023" }], "cardIds": ["word-fantástico"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w07", "text": "AÑOS", "normalized": "años", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00024" }], "cardIds": ["word-años"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w08", "text": "RODANDO", "normalized": "rodando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00025" }], "cardIds": ["word-rodando"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w09", "text": "HACIA", "normalized": "hacia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00026" }], "cardIds": ["word-hacia"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w10", "text": "ABAJO", "normalized": "abajo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00027" }], "cardIds": ["word-abajo"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w11", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00028" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w12", "text": "EMPUJANDO", "normalized": "empujando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00029" }, { "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00032" }], "cardIds": ["word-empujando"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w13", "text": "HACIA", "normalized": "hacia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00033" }], "cardIds": ["word-hacia"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w14", "text": "ARRIBA", "normalized": "arriba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00034" }], "cardIds": ["word-arriba--up"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w15", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00035" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w16", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00036" }], "cardIds": ["word-de--fixed-de-pronto", "phrase-de-pronto"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w17", "text": "PRONTO", "normalized": "pronto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00037" }], "cardIds": ["word-pronto--suddenly", "phrase-de-pronto"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w18", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00038" }], "cardIds": ["word-ahora"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w19", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00039" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w20", "text": "RODAR", "normalized": "rodar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00040" }], "cardIds": ["word-rodar"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w21", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00041" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w22", "text": "AMBOS", "normalized": "ambos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00042" }], "cardIds": ["word-ambos"] },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:w23", "text": "SENTIDOS", "normalized": "sentidos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00043" }], "cardIds": ["word-sentidos--directions"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:app-uphill", "cardId": "phrase-cuesta-arriba", "participantWordIds": ["es-xkcd-monopatin-electrico-1:uphill-reflection:w02", "es-xkcd-monopatin-electrico-1:uphill-reflection:w03"], "exampleEs": "CUESTA ARRIBA", "explanationEn": "Cuesta names the slope and arriba supplies the upward direction, forming the conventional expression for uphill movement." },
+        { "id": "es-xkcd-monopatin-electrico-1:uphill-reflection:app-suddenly", "cardId": "phrase-de-pronto", "participantWordIds": ["es-xkcd-monopatin-electrico-1:uphill-reflection:w16", "es-xkcd-monopatin-electrico-1:uphill-reflection:w17"], "exampleEs": "DE PRONTO", "explanationEn": "De and pronto form the fixed time expression that marks a sudden change." }
+      ]
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:language-comparison",
+      "labelEs": "ES COMO PASAR DE C A PYTHON. NO TE DAS CUENTA DE CUÁNTO TIEMPO PERDÍAS EN LAS COSAS ABURRIDAS HASTA QUE YA NO TIENES QUE HACERLAS MÁS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0033" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0034" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w01", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00069" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w02", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00070" }], "cardIds": ["word-como--comparison"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w03", "text": "PASAR", "normalized": "pasar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00071" }], "cardIds": ["word-pasar--switch-from-to", "phrase-pasar-de-a", "concept-c-assembly-python-abstraction"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00072" }], "cardIds": ["word-de--from", "phrase-pasar-de-a"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w05", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 43.15, "y": 73.14, "width": 1.45, "height": 2.27 }], "geometryRationale": "OCR fused the adjacent programming-language name and this preposition; the measured rectangle isolates only the printed A.", "cardIds": ["word-a--transition-endpoint", "phrase-pasar-de-a"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w06", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00075" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w07", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00076" }], "cardIds": ["word-te--pronominal-marker", "phrase-darse-cuenta-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w08", "text": "DAS", "normalized": "das", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00077" }], "cardIds": ["word-das--darse-cuenta", "phrase-darse-cuenta-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w09", "text": "CUENTA", "normalized": "cuenta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00078" }], "cardIds": ["word-cuenta--darse-cuenta", "phrase-darse-cuenta-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00083" }], "cardIds": ["word-de--darse-cuenta", "phrase-darse-cuenta-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w11", "text": "CUÁNTO", "normalized": "cuánto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00084" }], "cardIds": ["word-cuánto", "phrase-darse-cuenta-de", "question-words"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w12", "text": "TIEMPO", "normalized": "tiempo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00085" }], "cardIds": ["word-tiempo", "phrase-darse-cuenta-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w13", "text": "PERDÍAS", "normalized": "perdías", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00086" }], "cardIds": ["word-perdías--wasted-time", "grammar-past-contrast"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w14", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00089" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w15", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00090" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w16", "text": "COSAS", "normalized": "cosas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00091" }], "cardIds": ["word-cosas"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w17", "text": "ABURRIDAS", "normalized": "aburridas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00092" }], "cardIds": ["word-aburridas"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w18", "text": "HASTA", "normalized": "hasta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00095" }], "cardIds": ["word-hasta", "grammar-hasta-que-indicative-fact"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w19", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00096" }], "cardIds": ["word-que--until-link", "grammar-hasta-que-indicative-fact"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w20", "text": "YA", "normalized": "ya", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00097" }], "cardIds": ["word-ya--no-longer", "phrase-ya-no"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w21", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00098" }], "cardIds": ["word-no", "phrase-ya-no"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w22", "text": "TIENES", "normalized": "tienes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00099" }], "cardIds": ["word-tienes", "grammar-hasta-que-indicative-fact", "phrase-ya-no", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w23", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00100" }], "cardIds": ["word-que--tener-que", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w24", "text": "HACERLAS", "normalized": "hacerlas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00101" }], "cardIds": ["word-hacerlas--do-them", "grammar-tener-que-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:w25", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00102" }], "cardIds": ["word-más--anymore-after-negative"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:excluded-c", "text": "C", "reason": "non-spanish-text", "rationale": "C is the one-letter proper name of a programming language, not a Spanish lexical word.", "explicitBounds": [{ "x": 41.22, "y": 73.14, "width": 1.35, "height": 2.27 }], "geometryRationale": "OCR fused this language name with the following preposition; the measured rectangle isolates only the printed C." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:excluded-python", "text": "PYTHON", "reason": "non-spanish-text", "rationale": "Python is the unchanged proper name of a programming language, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00074" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-switch", "cardId": "phrase-pasar-de-a", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w03", "es-xkcd-monopatin-electrico-1:language-comparison:w04", "es-xkcd-monopatin-electrico-1:language-comparison:w05"], "exampleEs": "PASAR DE C A PYTHON", "explanationEn": "Pasar gives the change, de marks C as the starting system, and a marks Python as the endpoint." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-realize", "cardId": "phrase-darse-cuenta-de", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w07", "es-xkcd-monopatin-electrico-1:language-comparison:w08", "es-xkcd-monopatin-electrico-1:language-comparison:w09", "es-xkcd-monopatin-electrico-1:language-comparison:w10", "es-xkcd-monopatin-electrico-1:language-comparison:w11", "es-xkcd-monopatin-electrico-1:language-comparison:w12"], "exampleEs": "TE DAS CUENTA DE CUÁNTO TIEMPO", "explanationEn": "Te matches the listener, das and cuenta form the realization expression, and de cuánto tiempo begins the quantity being noticed." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w11"], "exampleEs": "CUÁNTO", "explanationEn": "Cuánto keeps its accent because it introduces an embedded question about amount, even without question marks." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-imperfect", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w13"], "exampleEs": "PERDÍAS", "explanationEn": "The -ías imperfect ending presents the wasted time as an ongoing or repeated past situation rather than one bounded loss." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-until-fact", "cardId": "grammar-hasta-que-indicative-fact", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w18", "es-xkcd-monopatin-electrico-1:language-comparison:w19", "es-xkcd-monopatin-electrico-1:language-comparison:w22"], "exampleEs": "HASTA QUE YA NO TIENES", "explanationEn": "Hasta que introduces the reached endpoint, and tienes stays in the ordinary present form because that endpoint is presented as a known result." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-no-longer", "cardId": "phrase-ya-no", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w20", "es-xkcd-monopatin-electrico-1:language-comparison:w21", "es-xkcd-monopatin-electrico-1:language-comparison:w22"], "exampleEs": "YA NO TIENES", "explanationEn": "Ya no marks a change from the earlier situation, and tienes is the present verb describing what is no longer true." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-have-to", "cardId": "grammar-tener-que-infinitive", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w22", "es-xkcd-monopatin-electrico-1:language-comparison:w23", "es-xkcd-monopatin-electrico-1:language-comparison:w24"], "exampleEs": "TIENES QUE HACERLAS", "explanationEn": "Tienes changes for the listener, que links it to the required action, and hacer remains unchanged before the attached las." },
+        { "id": "es-xkcd-monopatin-electrico-1:language-comparison:app-attached-object", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-monopatin-electrico-1:language-comparison:w24"], "exampleEs": "HACERLAS", "explanationEn": "Las attaches directly to the unchanged verb hacer and stands for the feminine plural things already mentioned." }
+      ]
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:low-level-claim",
+      "labelEs": "PERO PROGRAMAR EN C O ENSAMBLADOR TE HACE MEJOR PROGRAMADOR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w01", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00058" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w02", "text": "PROGRAMAR", "normalized": "programar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00059" }], "cardIds": ["word-programar", "grammar-hacer-target-role", "concept-c-assembly-python-abstraction"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00060" }], "cardIds": ["word-en", "grammar-hacer-target-role"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w04", "text": "O", "normalized": "o", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00062" }], "cardIds": ["word-o", "grammar-hacer-target-role"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w05", "text": "ENSAMBLADOR", "normalized": "ensamblador", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00063" }], "cardIds": ["word-ensamblador", "grammar-hacer-target-role", "concept-c-assembly-python-abstraction"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w06", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00064" }], "cardIds": ["word-te--direct", "grammar-hacer-target-role"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w07", "text": "HACE", "normalized": "hace", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00065" }], "cardIds": ["word-hace--makes-state", "grammar-hacer-target-role"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w08", "text": "MEJOR", "normalized": "mejor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00067" }], "cardIds": ["word-mejor--better", "grammar-hacer-target-role"] },
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:w09", "text": "PROGRAMADOR", "normalized": "programador", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00068" }], "cardIds": ["word-programador", "grammar-hacer-target-role", "concept-c-assembly-python-abstraction"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:excluded-c", "text": "C", "reason": "non-spanish-text", "rationale": "C is the one-letter proper name of a programming language, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00061" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-monopatin-electrico-1:low-level-claim:app-make-role", "cardId": "grammar-hacer-target-role", "participantWordIds": ["es-xkcd-monopatin-electrico-1:low-level-claim:w02", "es-xkcd-monopatin-electrico-1:low-level-claim:w03", "es-xkcd-monopatin-electrico-1:low-level-claim:w04", "es-xkcd-monopatin-electrico-1:low-level-claim:w05", "es-xkcd-monopatin-electrico-1:low-level-claim:w06", "es-xkcd-monopatin-electrico-1:low-level-claim:w07", "es-xkcd-monopatin-electrico-1:low-level-claim:w08", "es-xkcd-monopatin-electrico-1:low-level-claim:w09"], "exampleEs": "PROGRAMAR EN C O ENSAMBLADOR TE HACE MEJOR PROGRAMADOR", "explanationEn": "Programar en C o ensamblador supplies the cause, te marks the affected person, hace carries the change, and mejor programador names the resulting role." }
+      ]
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:character-claim",
+      "labelEs": "QUIZÁS LAS COSAS ABURRIDAS DESARROLLAN EL CARÁCTER.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0032" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w01", "text": "QUIZÁS", "normalized": "quizás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00079" }], "cardIds": ["word-quizás"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w02", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00080" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w03", "text": "COSAS", "normalized": "cosas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00081" }], "cardIds": ["word-cosas"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w04", "text": "ABURRIDAS", "normalized": "aburridas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00082" }, { "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00087" }], "cardIds": ["word-aburridas"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w05", "text": "DESARROLLAN", "normalized": "desarrollan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00088" }], "cardIds": ["word-desarrollan--build-quality"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00093" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-monopatin-electrico-1:character-claim:w07", "text": "CARÁCTER", "normalized": "carácter", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00094" }], "cardIds": ["word-carácter--personal-strength"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:philosophy-preface",
+      "labelEs": "SÍ... PERO DEPENDE DE A QUÉ QUIERAS DEDICAR TU VIDA. VERÁS, MI FILOSOFÍA ES...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-monopatin-electrico-1:ocr-line-0024" }
+      ],
+      "words": [
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00044" }], "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w02", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00045" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w03", "text": "DEPENDE", "normalized": "depende", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00046" }, { "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00047" }], "cardIds": ["word-depende", "phrase-depender-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00048" }], "cardIds": ["word-de--depender-complement", "phrase-depender-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w05", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00049" }], "cardIds": ["word-a--dedicar-target", "phrase-depender-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w06", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00050" }], "cardIds": ["word-qué--interrogative", "phrase-depender-de", "question-words"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w07", "text": "QUIERAS", "normalized": "quieras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00051" }], "cardIds": ["word-quieras--want-open-choice", "phrase-depender-de", "grammar-querer-infinitive"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w08", "text": "DEDICAR", "normalized": "dedicar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00052" }], "cardIds": ["word-dedicar--devote", "phrase-depender-de", "grammar-querer-infinitive"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w09", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00053" }], "cardIds": ["word-tu", "phrase-depender-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w10", "text": "VIDA", "normalized": "vida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00054" }], "cardIds": ["word-vida", "phrase-depender-de"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w11", "text": "VERÁS", "normalized": "verás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00055" }], "cardIds": ["word-verás--discourse-marker"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w12", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00056" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w13", "text": "FILOSOFÍA", "normalized": "filosofía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00057" }], "cardIds": ["word-filosofía"] },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:w14", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-monopatin-electrico-1:ocr-token-00066" }], "cardIds": ["word-es"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:app-depends", "cardId": "phrase-depender-de", "participantWordIds": ["es-xkcd-monopatin-electrico-1:philosophy-preface:w03", "es-xkcd-monopatin-electrico-1:philosophy-preface:w04", "es-xkcd-monopatin-electrico-1:philosophy-preface:w05", "es-xkcd-monopatin-electrico-1:philosophy-preface:w06", "es-xkcd-monopatin-electrico-1:philosophy-preface:w07", "es-xkcd-monopatin-electrico-1:philosophy-preface:w08", "es-xkcd-monopatin-electrico-1:philosophy-preface:w09", "es-xkcd-monopatin-electrico-1:philosophy-preface:w10"], "exampleEs": "DEPENDE DE A QUÉ QUIERAS DEDICAR TU VIDA", "explanationEn": "Depende supplies the changing verb, de introduces the deciding factor, and the following indirect question fills that factor slot." },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-monopatin-electrico-1:philosophy-preface:w06"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its accent because it names an open choice inside the larger statement, even without its own question marks." },
+        { "id": "es-xkcd-monopatin-electrico-1:philosophy-preface:app-want-action", "cardId": "grammar-querer-infinitive", "participantWordIds": ["es-xkcd-monopatin-electrico-1:philosophy-preface:w07", "es-xkcd-monopatin-electrico-1:philosophy-preface:w08"], "exampleEs": "QUIERAS DEDICAR", "explanationEn": "Quieras is the form of querer selected for the open choice, while dedicar remains in its unchanged -ar dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-monopatin-electrico-1:crash-sound",
+      "labelEs": "+ WHAM +",
+      "explicitBounds": [
+        { "x": 74.0541, "y": 40.5186, "width": 1.8919, "height": 3.4036 },
+        { "x": 75.8108, "y": 32.7391, "width": 16.3514, "height": 11.1831 },
+        { "x": 92.027, "y": 32.0908, "width": 2.5676, "height": 3.5656 }
+      ],
+      "geometryRationale": "OCR fused the two printed plus symbols with the diagonal crash word; three measured rectangles isolate the exact visible units.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-monopatin-electrico-1:crash-sound:excluded-left-plus", "text": "+", "reason": "symbol", "rationale": "This printed plus-shaped impact mark is a visual crash symbol rather than a Spanish word.", "occurrence": 1, "explicitBounds": [{ "x": 74.0541, "y": 40.5186, "width": 1.8919, "height": 3.4036 }], "geometryRationale": "OCR fused this left impact symbol with WHAM; the measured rectangle isolates only the printed plus." },
+        { "id": "es-xkcd-monopatin-electrico-1:crash-sound:excluded-wham", "text": "WHAM", "reason": "non-spanish-text", "rationale": "WHAM is the unchanged English crash sound effect from the official source, not Spanish vocabulary.", "explicitBounds": [{ "x": 75.8108, "y": 32.7391, "width": 16.3514, "height": 11.1831 }], "geometryRationale": "OCR included neighboring impact symbols in its box; the measured rectangle tightly encloses only the four diagonal letters." },
+        { "id": "es-xkcd-monopatin-electrico-1:crash-sound:excluded-right-plus", "text": "+", "reason": "symbol", "rationale": "This printed plus-shaped impact mark is a visual crash symbol rather than a Spanish word.", "occurrence": 2, "explicitBounds": [{ "x": 92.027, "y": 32.0908, "width": 2.5676, "height": 3.5656 }], "geometryRationale": "OCR fused this right impact symbol with WHAM; the measured rectangle isolates only the printed plus." }
+      ],
+      "applications": []
+    }
+  ]
+}

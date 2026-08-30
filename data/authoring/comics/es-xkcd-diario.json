@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-diario",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Journal",
+  "titleEs": "Diario",
+  "titleText": {
+    "es": "Y el diario está lleno con todas las cosas que le diría a ella si yo fuera agradable como tú. Lo quemo cuando está lleno.",
+    "en": "And the journal is filled with all the things I'd say to her if I were nice like you. I burn it when it's full.",
+    "noteEn": "The title text sharpens the joke: Black Hat writes down the kind things he withholds from the woman, then burns the journal."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-desde--starting-time",
+      "kind": "word",
+      "promptEs": "desde",
+      "answerEn": "since; from (a starting time)",
+      "noteEn": "Desde marks the point when a period begins. Before a question word such as cuándo, it asks for that starting point.",
+      "example": { "es": "Trabajo aquí desde enero.", "en": "I have worked here since January." },
+      "tags": ["word", "time", "starting point", "A1"]
+    },
+    {
+      "id": "word-llevas--keep",
+      "kind": "word",
+      "promptEs": "llevas",
+      "answerEn": "you keep; you maintain (informal singular)",
+      "noteEn": "Llevar often means ‘to carry’ or ‘to wear,’ but with a journal, record, or account it can mean to keep or maintain it.",
+      "example": { "es": "Llevas un registro muy claro.", "en": "You keep a very clear record." },
+      "tags": ["word", "llevar", "record keeping", "A2"]
+    },
+    {
+      "id": "word-diario--journal",
+      "kind": "word",
+      "promptEs": "diario",
+      "answerEn": "journal; diary",
+      "noteEn": "",
+      "tags": ["word", "writing", "A1"]
+    },
+    {
+      "id": "phrase-llevar-un-diario",
+      "kind": "phrase",
+      "promptEs": "llevar un diario",
+      "questionEn": "How do you say that someone keeps a journal or diary?",
+      "answerEn": "Use a form of llevar with diario.",
+      "noteEn": "Llevar changes to show who keeps the journal and when. In this collocation it means ‘to keep’ or ‘maintain,’ not to carry the journal physically.",
+      "example": { "es": "Marta lleva un diario de viaje.", "en": "Marta keeps a travel journal." },
+      "tags": ["phrase", "collocation", "writing", "A2"]
+    },
+    {
+      "id": "word-tren",
+      "kind": "word",
+      "promptEs": "tren",
+      "answerEn": "train",
+      "noteEn": "",
+      "tags": ["word", "transport", "A1"]
+    },
+    {
+      "id": "word-finjo",
+      "kind": "word",
+      "promptEs": "finjo",
+      "answerEn": "I pretend",
+      "noteEn": "Finjo is the present ‘I’ form of fingir, ‘to pretend.’ Its g changes to j before the ending -o.",
+      "example": { "es": "Finjo estar ocupado.", "en": "I pretend to be busy." },
+      "tags": ["word", "fingir", "first person", "A2"]
+    },
+    {
+      "id": "word-escribo",
+      "kind": "word",
+      "promptEs": "escribo",
+      "answerEn": "I write",
+      "noteEn": "",
+      "tags": ["word", "escribir", "first person", "A1"]
+    },
+    {
+      "id": "word-a--fixed-esperar-a-que",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; required in esperar a que",
+      "noteEn": "When esperar means waiting for an event, Spanish uses a between esperar and que. Keep all three pieces together: esperar a que.",
+      "example": { "es": "Espero a que termine la lluvia.", "en": "I am waiting for the rain to end." },
+      "tags": ["word", "fixed construction", "waiting", "B1"]
+    },
+    {
+      "id": "word-que--fixed-esperar-a-que",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "no separate English word; completes esperar a que before an awaited event",
+      "noteEn": "Que introduces the event being awaited after esperar a. English usually folds this link into ‘wait for’ rather than translating que separately.",
+      "example": { "es": "Esperamos a que llegue el autobús.", "en": "We are waiting for the bus to arrive." },
+      "tags": ["word", "fixed construction", "waiting", "B1"]
+    },
+    {
+      "id": "grammar-esperar-a-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "esperar a que + subjuntivo",
+      "questionEn": "How do you say that someone waits for another person or event to do something?",
+      "answerEn": "Use a form of esperar, then a que, then put the awaited action in the subjunctive form.",
+      "noteEn": "The subjunctive is a special verb form used here because the awaited event has not happened yet. Esperar changes for the person and time; a que stays fixed. The awaited verb changes too: ordinary llega becomes llegue in espero a que llegue. If the waiting person will perform the later action, Spanish instead uses esperar a followed by the action verb's unchanged dictionary form.",
+      "example": { "es": "Espero a que llegue Marta.", "en": "I am waiting for Marta to arrive." },
+      "tags": ["grammar", "waiting", "subjunctive", "B1"]
+    },
+    {
+      "id": "word-tímida",
+      "kind": "word",
+      "promptEs": "tímida",
+      "answerEn": "shy (feminine singular)",
+      "noteEn": "",
+      "tags": ["word", "adjective", "A1"]
+    },
+    {
+      "id": "word-se--sentarse",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; marks sentarse, ‘to sit down’",
+      "noteEn": "Sentarse uses a matching short word: me, te, se, nos, or os. Use se with él, ella, usted, ellos, ellas, or ustedes.",
+      "example": { "es": "Ella se sienta junto a la ventana.", "en": "She sits down by the window." },
+      "tags": ["word", "sentarse", "pronominal verb", "A2"]
+    },
+    {
+      "id": "word-siente--sit-down-subjunctive",
+      "kind": "word",
+      "promptEs": "siente",
+      "answerEn": "sits down (subjunctive form after se)",
+      "noteEn": "Se siente here comes from sentarse, ‘to sit down,’ not sentirse, ‘to feel.’ After wording that presents the sitting as still awaited, ordinary se sienta changes to the special form se siente.",
+      "example": { "es": "Espero a que Luis se siente.", "en": "I am waiting for Luis to sit down." },
+      "tags": ["word", "sentarse", "subjunctive", "B1"]
+    },
+    {
+      "id": "word-enfrente",
+      "kind": "word",
+      "promptEs": "enfrente",
+      "answerEn": "opposite; across from",
+      "noteEn": "Enfrente can describe the position directly opposite. Enfrente de adds the person or thing that serves as the reference point.",
+      "example": { "es": "Me senté enfrente de Ana.", "en": "I sat across from Ana." },
+      "tags": ["word", "position", "A2"]
+    },
+    {
+      "id": "word-miro",
+      "kind": "word",
+      "promptEs": "miro",
+      "answerEn": "I look",
+      "noteEn": "",
+      "tags": ["word", "mirar", "first person", "A1"]
+    },
+    {
+      "id": "word-haya--existential-subjunctive",
+      "kind": "word",
+      "promptEs": "haya",
+      "answerEn": "there is; there is to be (subjunctive form)",
+      "noteEn": "Haya is the special form related to hay, ‘there is’ or ‘there are.’ It appears when the existence of something is awaited, wanted, doubted, or otherwise not presented as an established fact.",
+      "example": { "es": "Espero a que haya sitio.", "en": "I am waiting for there to be space." },
+      "tags": ["word", "haber", "existence", "subjunctive", "B1"]
+    },
+    {
+      "id": "word-contacto--contact",
+      "kind": "word",
+      "promptEs": "contacto",
+      "answerEn": "contact",
+      "noteEn": "",
+      "tags": ["word", "A2"]
+    },
+    {
+      "id": "word-visual--visual",
+      "kind": "word",
+      "promptEs": "visual",
+      "answerEn": "visual; related to sight",
+      "noteEn": "",
+      "tags": ["word", "sight", "A2"]
+    },
+    {
+      "id": "phrase-contacto-visual",
+      "kind": "phrase",
+      "promptEs": "contacto visual",
+      "questionEn": "How do you say ‘eye contact’ in Spanish?",
+      "answerEn": "Use contacto visual.",
+      "noteEn": "Spanish names this kind of contact with visual, ‘related to sight.’ It does not use the word ojo, ‘eye,’ in this expression.",
+      "example": { "es": "Evita el contacto visual.", "en": "She avoids eye contact." },
+      "tags": ["phrase", "collocation", "body language", "A2"]
+    },
+    {
+      "id": "word-bajo--lower",
+      "kind": "word",
+      "promptEs": "bajo",
+      "answerEn": "I lower",
+      "noteEn": "Bajo is the present ‘I’ form of bajar here. The same written form can also mean ‘low’ or ‘under’ in other contexts.",
+      "example": { "es": "Bajo el volumen.", "en": "I lower the volume." },
+      "tags": ["word", "bajar", "first person", "A2"]
+    },
+    {
+      "id": "phrase-bajar-la-mirada",
+      "kind": "phrase",
+      "promptEs": "bajar la mirada",
+      "questionEn": "How do you say that someone lowers their gaze or looks down?",
+      "answerEn": "Use a form of bajar followed by la mirada.",
+      "noteEn": "Bajar changes for the person and time. La mirada stays as the thing being lowered and refers to the person's gaze rather than a physical object.",
+      "example": { "es": "Marta baja la mirada.", "en": "Marta lowers her gaze." },
+      "tags": ["phrase", "collocation", "body language", "A2"]
+    },
+    {
+      "id": "word-timidez",
+      "kind": "word",
+      "promptEs": "timidez",
+      "answerEn": "shyness; timidity",
+      "noteEn": "",
+      "tags": ["word", "emotion", "A2"]
+    },
+    {
+      "id": "word-sonrojo--blush",
+      "kind": "word",
+      "promptEs": "sonrojo",
+      "answerEn": "I blush",
+      "noteEn": "Sonrojo is the present ‘I’ form of sonrojarse, ‘to blush.’ In this use it appears with me: me sonrojo.",
+      "example": { "es": "Me sonrojo con facilidad.", "en": "I blush easily." },
+      "tags": ["word", "sonrojarse", "first person", "A2"]
+    },
+    {
+      "id": "word-empieza--starts",
+      "kind": "word",
+      "promptEs": "empieza",
+      "answerEn": "starts; begins",
+      "noteEn": "",
+      "tags": ["word", "empezar", "A1"]
+    },
+    {
+      "id": "word-sonreírme",
+      "kind": "word",
+      "promptEs": "sonreírme",
+      "answerEn": "to smile at me",
+      "noteEn": "Sonreír means ‘to smile.’ The short word me is attached to its end and identifies the person receiving the smile; the written accent on í remains.",
+      "example": { "es": "Quiere sonreírme.", "en": "She wants to smile at me." },
+      "tags": ["word", "sonreír", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-pongo--roll-eyes",
+      "kind": "word",
+      "promptEs": "pongo",
+      "answerEn": "I roll (my eyes; in poner los ojos en blanco)",
+      "noteEn": "Pongo is the present ‘I’ form of poner, normally ‘to put.’ In the complete expression poner los ojos en blanco, natural English uses ‘to roll one's eyes.’",
+      "example": { "es": "Pongo los ojos en blanco sin querer.", "en": "I roll my eyes unintentionally." },
+      "tags": ["word", "poner", "idiomatic sense", "A2"]
+    },
+    {
+      "id": "word-en--fixed-poner-ojos-en-blanco",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "no separate English word; part of poner los ojos en blanco",
+      "noteEn": "En links ojos to blanco inside the fixed expression for rolling one's eyes. Translate the complete expression rather than this en on its own.",
+      "example": { "es": "No pongas los ojos en blanco.", "en": "Don't roll your eyes." },
+      "tags": ["word", "fixed expression", "body language", "A2"]
+    },
+    {
+      "id": "word-blanco--eye-roll",
+      "kind": "word",
+      "promptEs": "blanco",
+      "answerEn": "no separate English word; completes the expression for rolling one's eyes",
+      "noteEn": "Blanco ordinarily means ‘white.’ In poner los ojos en blanco, it is a fixed part of the expression rather than a separate color description in natural English.",
+      "example": { "es": "Él puso los ojos en blanco.", "en": "He rolled his eyes." },
+      "tags": ["word", "fixed expression", "body language", "A2"]
+    },
+    {
+      "id": "phrase-poner-los-ojos-en-blanco",
+      "kind": "phrase",
+      "promptEs": "poner los ojos en blanco",
+      "questionEn": "How do you say that someone rolls their eyes?",
+      "answerEn": "Use a form of poner followed by los ojos en blanco.",
+      "noteEn": "Only poner changes for the person and time; los ojos en blanco stays fixed. The expression describes the familiar gesture of showing annoyance, disbelief, or impatience and is not translated word by word.",
+      "example": { "es": "Clara puso los ojos en blanco.", "en": "Clara rolled her eyes." },
+      "tags": ["phrase", "idiom", "body language", "A2"]
+    },
+    {
+      "id": "word-lanzo--cast-look",
+      "kind": "word",
+      "promptEs": "lanzo",
+      "answerEn": "I cast; I give (a look)",
+      "noteEn": "Lanzar usually means ‘to throw.’ With mirada, it forms the conventional expression for casting or giving someone a look.",
+      "example": { "es": "Lanzo una mirada al reloj.", "en": "I cast a glance at the clock." },
+      "tags": ["word", "lanzar", "look", "A2"]
+    },
+    {
+      "id": "word-rápida--quick",
+      "kind": "word",
+      "promptEs": "rápida",
+      "answerEn": "quick; brief (feminine singular)",
+      "noteEn": "",
+      "tags": ["word", "adjective", "A1"]
+    },
+    {
+      "id": "phrase-lanzarle-una-mirada",
+      "kind": "phrase",
+      "promptEs": "lanzarle una mirada a alguien",
+      "questionEn": "How do you say that someone gives another person a look?",
+      "answerEn": "Use a form of lanzar and una mirada, with a short person word such as le to mark who receives the look.",
+      "noteEn": "Lanzar changes for the person and time. The short word identifies who receives the look: me for me, te for you, le for him or her, nos for us, os for you all in Spain, and les for them. A named recipient can follow a, as in le lanza una mirada a Luis.",
+      "example": { "es": "Marta le lanza una mirada a Luis.", "en": "Marta gives Luis a look." },
+      "tags": ["phrase", "collocation", "indirect object", "A2"]
+    },
+    {
+      "id": "word-retomo--resume",
+      "kind": "word",
+      "promptEs": "retomo",
+      "answerEn": "I resume; I return to",
+      "noteEn": "",
+      "tags": ["word", "retomar", "first person", "A2"]
+    },
+    {
+      "id": "word-escritura--writing",
+      "kind": "word",
+      "promptEs": "escritura",
+      "answerEn": "writing; the act of writing",
+      "noteEn": "",
+      "tags": ["word", "writing", "A2"]
+    },
+    {
+      "id": "word-alienación",
+      "kind": "word",
+      "promptEs": "alienación",
+      "answerEn": "alienation; social estrangement",
+      "noteEn": "",
+      "tags": ["word", "emotion", "B1"]
+    },
+    {
+      "id": "word-le--affected-person",
+      "kind": "word",
+      "promptEs": "le",
+      "answerEn": "her; marks the person affected by a situation or result",
+      "noteEn": "Le can identify one person affected by what happens even when natural English does not use ‘to.’ A phrase beginning with a can make that person explicit: se le queda a Ana.",
+      "example": { "es": "A Laura se le quedó esa sensación.", "en": "That feeling stayed with Laura." },
+      "tags": ["word", "indirect object", "affected person", "B1"]
+    },
+    {
+      "id": "word-queda--remains",
+      "kind": "word",
+      "promptEs": "queda",
+      "answerEn": "stays; remains",
+      "noteEn": "",
+      "tags": ["word", "quedar", "A2"]
+    },
+    {
+      "id": "word-para--lasting-duration",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "for (a span of time)",
+      "noteEn": "Para can introduce a period assigned to or covered by something, such as a reservation or pass. When simply describing how long an action continues, durante is often more natural.",
+      "example": { "es": "La reserva es para toda la tarde.", "en": "The reservation is for the whole afternoon." },
+      "tags": ["word", "duration", "time", "A2"]
+    },
+    {
+      "id": "grammar-todo-article-time-period",
+      "kind": "grammar",
+      "promptEs": "todo/toda + artículo + período de tiempo",
+      "questionEn": "How do you say that something lasts for an entire day, night, or other time period?",
+      "answerEn": "Put todo or toda before the usual word for ‘the’ and the time period: todo el día, toda la noche.",
+      "noteEn": "Todo changes to match the time word: use todo with a masculine word such as día and toda with a feminine word such as noche. Spanish keeps el or la in this pattern even though natural English normally omits ‘the’ and says ‘all day’ or ‘all night.’",
+      "example": { "es": "Trabajé toda la tarde.", "en": "I worked all afternoon." },
+      "tags": ["grammar", "time expressions", "agreement", "A2"]
+    },
+    {
+      "id": "word-repugnante",
+      "kind": "word",
+      "promptEs": "repugnante",
+      "answerEn": "disgusting; repulsive",
+      "noteEn": "",
+      "tags": ["word", "description", "A2"]
+    },
+    {
+      "id": "word-podemos",
+      "kind": "word",
+      "promptEs": "podemos",
+      "answerEn": "we can",
+      "noteEn": "",
+      "tags": ["word", "poder", "A1"]
+    },
+    {
+      "id": "word-agradable--pleasant",
+      "kind": "word",
+      "promptEs": "agradable",
+      "answerEn": "nice; pleasant",
+      "noteEn": "",
+      "tags": ["word", "description", "A1"]
+    },
+    {
+      "id": "word-evitarlo--help-it",
+      "kind": "word",
+      "promptEs": "evitarlo",
+      "answerEn": "to help it; to avoid it",
+      "noteEn": "Evitar means ‘to avoid,’ and lo, ‘it,’ is attached to the end. In no puedo evitarlo, natural English commonly says ‘I can't help it.’",
+      "example": { "es": "No pude evitarlo.", "en": "I couldn't help it." },
+      "tags": ["word", "evitar", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-quitarle--take-away-from",
+      "kind": "word",
+      "promptEs": "quitarle",
+      "answerEn": "to take away from him or her",
+      "noteEn": "Quitar means ‘to take away’ or ‘remove.’ The attached le identifies the person deprived of something; the thing being taken normally follows.",
+      "example": { "es": "Quiero quitarle el juguete.", "en": "I want to take the toy away from him." },
+      "tags": ["word", "quitar", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-caramelo",
+      "kind": "word",
+      "promptEs": "caramelo",
+      "answerEn": "candy; sweet",
+      "noteEn": "",
+      "tags": ["word", "food", "A1"]
+    },
+    {
+      "id": "word-a--quitar-source",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "from; introduces the person something is taken from",
+      "noteEn": "After quitarle, a can introduce or clarify the person who loses the thing. Natural English uses ‘from’ even though Spanish uses a.",
+      "example": { "es": "Le quitan el balón a Pablo.", "en": "They take the ball away from Pablo." },
+      "tags": ["word", "quitar", "affected person", "A2"]
+    },
+    {
+      "id": "grammar-quitarle-algo-a-alguien",
+      "kind": "grammar",
+      "promptEs": "me/te/le/nos/os/les + quitar + cosa (+ a alguien)",
+      "questionEn": "How do you say that someone takes one thing away from another person?",
+      "answerEn": "Use a short person word such as me or le with quitar, then name the thing taken away. You can add a + person to clarify who loses it.",
+      "noteEn": "Quitar changes for the person and time. The short word identifies who loses the thing: me, te, le, nos, os, or les. With an unchanged dictionary-form verb, attach it as in quitarle; with a changed verb, place it before, as in le quita or me quitaste. Spanish can repeat or clarify the affected person after a, even though English uses ‘from’ or a possessive.",
+      "example": { "es": "Ana le quita el juguete a Luis.", "en": "Ana takes the toy away from Luis." },
+      "tags": ["grammar", "quitar", "indirect object", "A2"]
+    },
+    {
+      "id": "word-solitario--lonely",
+      "kind": "word",
+      "promptEs": "solitario",
+      "answerEn": "lonely; solitary (masculine singular)",
+      "noteEn": "",
+      "tags": ["word", "description", "A2"]
+    },
+    {
+      "id": "word-depresivo--gloomy",
+      "kind": "word",
+      "promptEs": "depresivo",
+      "answerEn": "depressive; gloomy (masculine singular)",
+      "noteEn": "Depresivo can describe a depressive tendency or a gloomy quality. Deprimido is more usual for saying that someone feels depressed at a particular moment.",
+      "example": { "es": "La novela tiene un tono depresivo.", "en": "The novel has a gloomy tone." },
+      "tags": ["word", "description", "emotion", "B1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-diario:question",
+      "labelEs": "¿DESDE CUÁNDO LLEVAS UN DIARIO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diario:question:w01", "text": "DESDE", "normalized": "desde", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00015" }], "cardIds": ["word-desde--starting-time"] },
+        { "id": "es-xkcd-diario:question:w02", "text": "CUÁNDO", "normalized": "cuándo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00024" }], "cardIds": ["word-cuándo--interrogative"] },
+        { "id": "es-xkcd-diario:question:w03", "text": "LLEVAS", "normalized": "llevas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00045" }], "cardIds": ["word-llevas--keep", "phrase-llevar-un-diario"] },
+        { "id": "es-xkcd-diario:question:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00046" }], "cardIds": ["word-un", "phrase-llevar-un-diario"] },
+        { "id": "es-xkcd-diario:question:w05", "text": "DIARIO", "normalized": "diario", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00058" }], "cardIds": ["word-diario--journal", "phrase-llevar-un-diario"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:question:app-keep-journal",
+          "cardId": "phrase-llevar-un-diario",
+          "participantWordIds": ["es-xkcd-diario:question:w03", "es-xkcd-diario:question:w04", "es-xkcd-diario:question:w05"],
+          "exampleEs": "LLEVAS UN DIARIO",
+          "explanationEn": "Llevas is the form of llevar for one familiar person, and un diario supplies the record being kept."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-diario:train-routine",
+      "labelEs": "AH, EN EL TREN FINJO QUE ESCRIBO EN ÉL Y ESPERO A QUE UNA CHICA TÍMIDA SE SIENTE ENFRENTE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0028" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diario:train-routine:w01", "text": "AH", "normalized": "ah", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00003" }], "cardIds": ["word-ah--realization"] },
+        { "id": "es-xkcd-diario:train-routine:w02", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00004" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-diario:train-routine:w03", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00005" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-diario:train-routine:w04", "text": "TREN", "normalized": "tren", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00006" }], "cardIds": ["word-tren"] },
+        { "id": "es-xkcd-diario:train-routine:w05", "text": "FINJO", "normalized": "finjo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00025" }], "cardIds": ["word-finjo"] },
+        { "id": "es-xkcd-diario:train-routine:w06", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00026" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-diario:train-routine:w07", "text": "ESCRIBO", "normalized": "escribo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00027" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00032" }], "cardIds": ["word-escribo"] },
+        { "id": "es-xkcd-diario:train-routine:w08", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00033" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-diario:train-routine:w09", "text": "ÉL", "normalized": "él", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00034" }], "cardIds": ["word-él--masculine-thing"] },
+        { "id": "es-xkcd-diario:train-routine:w10", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00035" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:train-routine:w11", "text": "ESPERO", "normalized": "espero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00059" }], "cardIds": ["word-espero--wait", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w12", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00060" }], "cardIds": ["word-a--fixed-esperar-a-que", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w13", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00061" }], "cardIds": ["word-que--fixed-esperar-a-que", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w14", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00062" }], "cardIds": ["word-una", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w15", "text": "CHICA", "normalized": "chica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00063" }], "cardIds": ["word-chica--young-woman", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w16", "text": "TÍMIDA", "normalized": "tímida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00064" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00074" }], "cardIds": ["word-tímida", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w17", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00075" }], "cardIds": ["word-se--sentarse", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w18", "text": "SIENTE", "normalized": "siente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00076" }], "cardIds": ["word-siente--sit-down-subjunctive", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:train-routine:w19", "text": "ENFRENTE", "normalized": "enfrente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00083" }], "cardIds": ["word-enfrente"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:train-routine:app-wait-for-sitting",
+          "cardId": "grammar-esperar-a-que-subjunctive",
+          "participantWordIds": ["es-xkcd-diario:train-routine:w11", "es-xkcd-diario:train-routine:w12", "es-xkcd-diario:train-routine:w13", "es-xkcd-diario:train-routine:w14", "es-xkcd-diario:train-routine:w15", "es-xkcd-diario:train-routine:w16", "es-xkcd-diario:train-routine:w17", "es-xkcd-diario:train-routine:w18"],
+          "exampleEs": "ESPERO A QUE UNA CHICA TÍMIDA SE SIENTE",
+          "explanationEn": "Espero a que presents an awaited event; una chica tímida names who will perform it, and se siente is the special form of sentarse used because the sitting is not yet a fact."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-diario:eye-contact-routine",
+      "labelEs": "MIRO HACIA ELLA Y ESPERO A QUE HAYA CONTACTO VISUAL, LUEGO BAJO LA MIRADA CON TIMIDEZ Y, SI PUEDO, ME SONROJO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0027" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diario:eye-contact-routine:w01", "text": "MIRO", "normalized": "miro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00007" }], "cardIds": ["word-miro"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w02", "text": "HACIA", "normalized": "hacia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00008" }], "cardIds": ["word-hacia"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w03", "text": "ELLA", "normalized": "ella", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00009" }], "cardIds": ["word-ella"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w04", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00010" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w05", "text": "ESPERO", "normalized": "espero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00028" }], "cardIds": ["word-espero--wait", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w06", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00029" }], "cardIds": ["word-a--fixed-esperar-a-que", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w07", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00030" }], "cardIds": ["word-que--fixed-esperar-a-que", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w08", "text": "HAYA", "normalized": "haya", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00031" }], "cardIds": ["word-haya--existential-subjunctive", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w09", "text": "CONTACTO", "normalized": "contacto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00040" }], "cardIds": ["word-contacto--contact", "phrase-contacto-visual", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w10", "text": "VISUAL", "normalized": "visual", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00041" }], "cardIds": ["word-visual--visual", "phrase-contacto-visual", "grammar-esperar-a-que-subjunctive"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w11", "text": "LUEGO", "normalized": "luego", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00052" }], "cardIds": ["word-luego"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w12", "text": "BAJO", "normalized": "bajo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00053" }], "cardIds": ["word-bajo--lower", "phrase-bajar-la-mirada"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w13", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00054" }], "cardIds": ["word-la--article", "phrase-bajar-la-mirada"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w14", "text": "MIRADA", "normalized": "mirada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00055" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00069" }], "cardIds": ["word-mirada--look", "phrase-bajar-la-mirada"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w15", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00070" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w16", "text": "TIMIDEZ", "normalized": "timidez", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00071" }], "cardIds": ["word-timidez"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w17", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00072" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w18", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00073" }], "cardIds": ["word-si"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w19", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00080" }], "cardIds": ["word-puedo"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w20", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00081" }], "cardIds": ["word-me--pronominal-marker"] },
+        { "id": "es-xkcd-diario:eye-contact-routine:w21", "text": "SONROJO", "normalized": "sonrojo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00082" }], "cardIds": ["word-sonrojo--blush"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:eye-contact-routine:app-wait-for-contact",
+          "cardId": "grammar-esperar-a-que-subjunctive",
+          "participantWordIds": ["es-xkcd-diario:eye-contact-routine:w05", "es-xkcd-diario:eye-contact-routine:w06", "es-xkcd-diario:eye-contact-routine:w07", "es-xkcd-diario:eye-contact-routine:w08", "es-xkcd-diario:eye-contact-routine:w09", "es-xkcd-diario:eye-contact-routine:w10"],
+          "exampleEs": "ESPERO A QUE HAYA CONTACTO VISUAL",
+          "explanationEn": "Espero a que sets up an awaited event, haya is the special existential form used because it is not yet a fact, and contacto visual names what the speaker is waiting to exist."
+        },
+        {
+          "id": "es-xkcd-diario:eye-contact-routine:app-eye-contact",
+          "cardId": "phrase-contacto-visual",
+          "participantWordIds": ["es-xkcd-diario:eye-contact-routine:w09", "es-xkcd-diario:eye-contact-routine:w10"],
+          "exampleEs": "CONTACTO VISUAL",
+          "explanationEn": "Contacto and visual form the conventional two-word expression taught by this card."
+        },
+        {
+          "id": "es-xkcd-diario:eye-contact-routine:app-lower-gaze",
+          "cardId": "phrase-bajar-la-mirada",
+          "participantWordIds": ["es-xkcd-diario:eye-contact-routine:w12", "es-xkcd-diario:eye-contact-routine:w13", "es-xkcd-diario:eye-contact-routine:w14"],
+          "exampleEs": "BAJO LA MIRADA",
+          "explanationEn": "Bajo is the first-person form of bajar, while la mirada names the gaze being lowered."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-diario:smile-routine",
+      "labelEs": "LUEGO, CUANDO VEO QUE ELLA EMPIEZA A SONREÍRME, PONGO LOS OJOS EN BLANCO Y LE LANZO UNA MIRADA RÁPIDA, Y RETOMO LA ESCRITURA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0026" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diario:smile-routine:w01", "text": "LUEGO", "normalized": "luego", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00011" }], "cardIds": ["word-luego"] },
+        { "id": "es-xkcd-diario:smile-routine:w02", "text": "CUANDO", "normalized": "cuando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00012" }], "cardIds": ["word-cuando--when"] },
+        { "id": "es-xkcd-diario:smile-routine:w03", "text": "VEO", "normalized": "veo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00013" }], "cardIds": ["word-veo"] },
+        { "id": "es-xkcd-diario:smile-routine:w04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00014" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-diario:smile-routine:w05", "text": "ELLA", "normalized": "ella", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00020" }], "cardIds": ["word-ella"] },
+        { "id": "es-xkcd-diario:smile-routine:w06", "text": "EMPIEZA", "normalized": "empieza", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00021" }], "cardIds": ["word-empieza--starts", "grammar-empezar-a-infinitive"] },
+        { "id": "es-xkcd-diario:smile-routine:w07", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00022" }], "cardIds": ["word-a--infinitive-link", "grammar-empezar-a-infinitive"] },
+        { "id": "es-xkcd-diario:smile-routine:w08", "text": "SONREÍRME", "normalized": "sonreírme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00023" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00036" }], "cardIds": ["word-sonreírme", "grammar-empezar-a-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-diario:smile-routine:w09", "text": "PONGO", "normalized": "pongo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00037" }], "cardIds": ["word-pongo--roll-eyes", "phrase-poner-los-ojos-en-blanco"] },
+        { "id": "es-xkcd-diario:smile-routine:w10", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00038" }], "cardIds": ["word-los", "phrase-poner-los-ojos-en-blanco"] },
+        { "id": "es-xkcd-diario:smile-routine:w11", "text": "OJOS", "normalized": "ojos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00039" }], "cardIds": ["word-ojos", "phrase-poner-los-ojos-en-blanco"] },
+        { "id": "es-xkcd-diario:smile-routine:w12", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00047" }], "cardIds": ["word-en--fixed-poner-ojos-en-blanco", "phrase-poner-los-ojos-en-blanco"] },
+        { "id": "es-xkcd-diario:smile-routine:w13", "text": "BLANCO", "normalized": "blanco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00048" }], "cardIds": ["word-blanco--eye-roll", "phrase-poner-los-ojos-en-blanco"] },
+        { "id": "es-xkcd-diario:smile-routine:w14", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00049" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:smile-routine:w15", "text": "LE", "normalized": "le", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00050" }], "cardIds": ["word-le--recipient-feminine", "phrase-lanzarle-una-mirada"] },
+        { "id": "es-xkcd-diario:smile-routine:w16", "text": "LANZO", "normalized": "lanzo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00051" }], "cardIds": ["word-lanzo--cast-look", "phrase-lanzarle-una-mirada"] },
+        { "id": "es-xkcd-diario:smile-routine:w17", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00065" }], "cardIds": ["word-una", "phrase-lanzarle-una-mirada"] },
+        { "id": "es-xkcd-diario:smile-routine:w18", "text": "MIRADA", "normalized": "mirada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00066" }], "cardIds": ["word-mirada--look", "phrase-lanzarle-una-mirada"] },
+        { "id": "es-xkcd-diario:smile-routine:w19", "text": "RÁPIDA", "normalized": "rápida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00067" }], "cardIds": ["word-rápida--quick"] },
+        { "id": "es-xkcd-diario:smile-routine:w20", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00068" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:smile-routine:w21", "text": "RETOMO", "normalized": "retomo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00077" }], "cardIds": ["word-retomo--resume"] },
+        { "id": "es-xkcd-diario:smile-routine:w22", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00078" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-diario:smile-routine:w23", "text": "ESCRITURA", "normalized": "escritura", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00079" }], "cardIds": ["word-escritura--writing"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:smile-routine:app-start-smiling",
+          "cardId": "grammar-empezar-a-infinitive",
+          "participantWordIds": ["es-xkcd-diario:smile-routine:w06", "es-xkcd-diario:smile-routine:w07", "es-xkcd-diario:smile-routine:w08"],
+          "exampleEs": "EMPIEZA A SONREÍRME",
+          "explanationEn": "Empieza marks the beginning, a links it to the action, and sonreír remains in its unchanged dictionary form with me attached."
+        },
+        {
+          "id": "es-xkcd-diario:smile-routine:app-attached-me",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-diario:smile-routine:w08"],
+          "exampleEs": "SONREÍRME",
+          "explanationEn": "Me is attached directly to the unchanged verb sonreír, and the written accent on í remains."
+        },
+        {
+          "id": "es-xkcd-diario:smile-routine:app-roll-eyes",
+          "cardId": "phrase-poner-los-ojos-en-blanco",
+          "participantWordIds": ["es-xkcd-diario:smile-routine:w09", "es-xkcd-diario:smile-routine:w10", "es-xkcd-diario:smile-routine:w11", "es-xkcd-diario:smile-routine:w12", "es-xkcd-diario:smile-routine:w13"],
+          "exampleEs": "PONGO LOS OJOS EN BLANCO",
+          "explanationEn": "Pongo is the first-person form of poner, followed by the fixed words los ojos en blanco."
+        },
+        {
+          "id": "es-xkcd-diario:smile-routine:app-give-look",
+          "cardId": "phrase-lanzarle-una-mirada",
+          "participantWordIds": ["es-xkcd-diario:smile-routine:w15", "es-xkcd-diario:smile-routine:w16", "es-xkcd-diario:smile-routine:w17", "es-xkcd-diario:smile-routine:w18"],
+          "exampleEs": "LE LANZO UNA MIRADA",
+          "explanationEn": "Le marks the person receiving the look, lanzo is the first-person form of lanzar, and una mirada names the look."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-diario:alienation-caption",
+      "labelEs": "LA ALIENACIÓN SE LE QUEDA PARA TODO EL DÍA. ES GENIAL.",
+      "explicitBounds": [{ "x": 53.2432, "y": 81.4815, "width": 19.7297, "height": 18.5185 }],
+      "geometryRationale": "OCR omitted SE, LE, the L in EL, and the initial D in DÍA, so this box was measured from the complete printed caption.",
+      "words": [
+        { "id": "es-xkcd-diario:alienation-caption:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00092" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-diario:alienation-caption:w02", "text": "ALIENACIÓN", "normalized": "alienación", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00093" }], "cardIds": ["word-alienación"] },
+        { "id": "es-xkcd-diario:alienation-caption:w03", "text": "SE", "normalized": "se", "explicitBounds": [{ "x": 67.7027, "y": 81.4815, "width": 2.2973, "height": 6.4815 }], "geometryRationale": "OCR skipped the clearly printed SE between ALIENACIÓN and LE, so its box was measured directly from the raster.", "cardIds": ["word-se--quedarse-remain"] },
+        { "id": "es-xkcd-diario:alienation-caption:w04", "text": "LE", "normalized": "le", "explicitBounds": [{ "x": 70.6757, "y": 81.4815, "width": 2.1622, "height": 6.4815 }], "geometryRationale": "OCR skipped the clearly printed LE after SE, so its box was measured directly from the raster.", "cardIds": ["word-le--affected-person"] },
+        { "id": "es-xkcd-diario:alienation-caption:w05", "text": "QUEDA", "normalized": "queda", "explicitBounds": [{ "x": 53.3784, "y": 87.037, "width": 6.6216, "height": 6.0185 }], "geometryRationale": "OCR fused this middle-row word with text above and below, so its isolated box was measured directly from the raster.", "cardIds": ["word-queda--remains"] },
+        { "id": "es-xkcd-diario:alienation-caption:w06", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 60, "y": 87.037, "width": 4.8649, "height": 6.0185 }], "geometryRationale": "OCR fused this middle-row word with text above and below, so its isolated box was measured directly from the raster.", "cardIds": ["word-para--lasting-duration"] },
+        { "id": "es-xkcd-diario:alienation-caption:w07", "text": "TODO", "normalized": "todo", "explicitBounds": [{ "x": 65, "y": 87.037, "width": 5.2703, "height": 6.0185 }], "geometryRationale": "OCR fused this middle-row word with text above and below, so its isolated box was measured directly from the raster.", "cardIds": ["word-todo", "grammar-todo-article-time-period"] },
+        { "id": "es-xkcd-diario:alienation-caption:w08", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 70.8108, "y": 87.037, "width": 2.2973, "height": 6.0185 }], "geometryRationale": "OCR recognized only E and used a box spanning multiple rows, so the complete printed EL was measured directly from the raster.", "cardIds": ["word-el--article", "grammar-todo-article-time-period"] },
+        { "id": "es-xkcd-diario:alienation-caption:w09", "text": "DÍA", "normalized": "día", "explicitBounds": [{ "x": 53.5135, "y": 93.0556, "width": 3.1081, "height": 6.0185 }], "geometryRationale": "OCR recognized only IA and missed the printed initial D, so the complete DÍA box was measured directly from the raster.", "cardIds": ["word-día", "grammar-todo-article-time-period"] },
+        { "id": "es-xkcd-diario:alienation-caption:w10", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00107" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-diario:alienation-caption:w11", "text": "GENIAL", "normalized": "genial", "explicitBounds": [{ "x": 60.8108, "y": 93.0556, "width": 6.6216, "height": 6.0185 }], "geometryRationale": "OCR stopped before the final printed letters and punctuation, so the complete GENIAL box was measured directly from the raster.", "cardIds": ["word-genial--great"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:alienation-caption:app-para-duration",
+          "cardId": "word-para--lasting-duration",
+          "participantWordIds": ["es-xkcd-diario:alienation-caption:w06"],
+          "exampleEs": "PARA TODO EL DÍA",
+          "explanationEn": "Para introduces the stated span here. With quedarse and a simple elapsed duration, many speakers would more naturally use durante todo el día."
+        },
+        {
+          "id": "es-xkcd-diario:alienation-caption:app-whole-day",
+          "cardId": "grammar-todo-article-time-period",
+          "participantWordIds": ["es-xkcd-diario:alienation-caption:w07", "es-xkcd-diario:alienation-caption:w08", "es-xkcd-diario:alienation-caption:w09"],
+          "exampleEs": "TODO EL DÍA",
+          "explanationEn": "Todo matches the masculine time word día, and Spanish keeps the article el between them."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-diario:criticism",
+      "labelEs": "ERES REPUGNANTE. POR ESTAS COSAS NO PODEMOS SALIR CON GENTE AGRADABLE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-diario:ocr-line-0018" }
+      ],
+      "words": [
+        { "id": "es-xkcd-diario:criticism:w01", "text": "ERES", "normalized": "eres", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00001" }], "cardIds": ["word-eres"] },
+        { "id": "es-xkcd-diario:criticism:w02", "text": "REPUGNANTE", "normalized": "repugnante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00002" }], "cardIds": ["word-repugnante"] },
+        { "id": "es-xkcd-diario:criticism:w03", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00016" }], "cardIds": ["word-por--cause"] },
+        { "id": "es-xkcd-diario:criticism:w04", "text": "ESTAS", "normalized": "estas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00017" }], "cardIds": ["word-estas--demonstrative"] },
+        { "id": "es-xkcd-diario:criticism:w05", "text": "COSAS", "normalized": "cosas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00018" }], "cardIds": ["word-cosas"] },
+        { "id": "es-xkcd-diario:criticism:w06", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00019" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-diario:criticism:w07", "text": "PODEMOS", "normalized": "podemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00042" }], "cardIds": ["word-podemos"] },
+        { "id": "es-xkcd-diario:criticism:w08", "text": "SALIR", "normalized": "salir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00043" }], "cardIds": ["word-salir--go-out-socially"] },
+        { "id": "es-xkcd-diario:criticism:w09", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00044" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-diario:criticism:w10", "text": "GENTE", "normalized": "gente", "explicitBounds": [{ "x": 77.7027, "y": 23.1481, "width": 5.8108, "height": 6.0185 }], "geometryRationale": "OCR made this box two rows tall, so the isolated printed GENTE was measured directly from the raster.", "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-diario:criticism:w11", "text": "AGRADABLE", "normalized": "agradable", "explicitBounds": [{ "x": 83.9189, "y": 23.1481, "width": 10.6757, "height": 6.0185 }], "geometryRationale": "OCR included the diagonal speaker-tail artwork below this word, so the isolated printed AGRADABLE was measured directly from the raster.", "cardIds": ["word-agradable--pleasant"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-diario:candy-comparison",
+      "labelEs": "NO PUEDO EVITARLO. ES COMO QUITARLE UN CARAMELO A UN NIÑO SOLITARIO Y DEPRESIVO.",
+      "explicitBounds": [{ "x": 76.0811, "y": 64.8148, "width": 18.6486, "height": 35.1852 }],
+      "geometryRationale": "OCR omitted NO and PUEDO and fused overlapping lines, so this box was measured from the complete printed response.",
+      "words": [
+        { "id": "es-xkcd-diario:candy-comparison:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 76.7568, "y": 64.8148, "width": 2.4324, "height": 6.0185 }], "geometryRationale": "OCR omitted the clearly printed NO at the start of the response, so its box was measured directly from the raster.", "cardIds": ["word-no", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-diario:candy-comparison:w02", "text": "PUEDO", "normalized": "puedo", "explicitBounds": [{ "x": 80.1351, "y": 64.8148, "width": 5, "height": 6.0185 }], "geometryRationale": "OCR omitted the clearly printed PUEDO after NO, so its box was measured directly from the raster.", "cardIds": ["word-puedo", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-diario:candy-comparison:w03", "text": "EVITARLO", "normalized": "evitarlo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00087" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00088" }], "cardIds": ["word-evitarlo--help-it", "phrase-no-poder-evitar", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-diario:candy-comparison:w04", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00085" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-diario:candy-comparison:w05", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00086" }], "cardIds": ["word-como--comparison"] },
+        { "id": "es-xkcd-diario:candy-comparison:w06", "text": "QUITARLE", "normalized": "quitarle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00089" }], "cardIds": ["word-quitarle--take-away-from", "grammar-pronoun-attached-to-infinitive", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00090" }], "cardIds": ["word-un", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w08", "text": "CARAMELO", "normalized": "caramelo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00091" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00094" }], "cardIds": ["word-caramelo", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w09", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00095" }], "cardIds": ["word-a--quitar-source", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w10", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00096" }], "cardIds": ["word-un", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w11", "text": "NIÑO", "normalized": "niño", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00097" }], "cardIds": ["word-niño", "grammar-quitarle-algo-a-alguien"] },
+        { "id": "es-xkcd-diario:candy-comparison:w12", "text": "SOLITARIO", "normalized": "solitario", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00102" }], "cardIds": ["word-solitario--lonely"] },
+        { "id": "es-xkcd-diario:candy-comparison:w13", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00103" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-diario:candy-comparison:w14", "text": "DEPRESIVO", "normalized": "depresivo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00104" }, { "source": "ocr-token", "id": "es-xkcd-diario:ocr-token-00105" }], "cardIds": ["word-depresivo--gloomy"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-diario:candy-comparison:app-cannot-help",
+          "cardId": "phrase-no-poder-evitar",
+          "participantWordIds": ["es-xkcd-diario:candy-comparison:w01", "es-xkcd-diario:candy-comparison:w02", "es-xkcd-diario:candy-comparison:w03"],
+          "exampleEs": "NO PUEDO EVITARLO",
+          "explanationEn": "No negates puedo, and evitarlo keeps evitar in its unchanged dictionary form with lo attached."
+        },
+        {
+          "id": "es-xkcd-diario:candy-comparison:app-attached-lo",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-diario:candy-comparison:w03"],
+          "exampleEs": "EVITARLO",
+          "explanationEn": "Lo is attached directly to the unchanged verb evitar and identifies the thing that cannot be avoided."
+        },
+        {
+          "id": "es-xkcd-diario:candy-comparison:app-attached-le",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-diario:candy-comparison:w06"],
+          "exampleEs": "QUITARLE",
+          "explanationEn": "Le is attached directly to the unchanged verb quitar and identifies the person affected by the removal."
+        },
+        {
+          "id": "es-xkcd-diario:candy-comparison:app-take-away",
+          "cardId": "grammar-quitarle-algo-a-alguien",
+          "participantWordIds": ["es-xkcd-diario:candy-comparison:w06", "es-xkcd-diario:candy-comparison:w07", "es-xkcd-diario:candy-comparison:w08", "es-xkcd-diario:candy-comparison:w09", "es-xkcd-diario:candy-comparison:w10", "es-xkcd-diario:candy-comparison:w11"],
+          "exampleEs": "QUITARLE UN CARAMELO A UN NIÑO",
+          "explanationEn": "Quitar has le attached for the affected person, un caramelo fills the thing slot, and a un niño makes that person explicit."
+        }
+      ]
+    }
+  ]
+}
