@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-gripe-porcina",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Swine Flu",
+  "titleEs": "Gripe porcina",
+  "titleText": {
+    "es": "Las epidemias de gripe azotan con más fuerza a los adultos jóvenes porque sus sistemas inmunitarios reaccionan con más fuerza, así que para permanecer sanos tenéis que pasaros las próximas semanas borrachos y privados de sueño.",
+    "en": "Flu epidemics hit young adults harder because their immune systems react more strongly, so to stay healthy you all have to spend the next few weeks drunk and sleep-deprived.",
+    "noteEn": "This translates the Spanish archive text. The official English title text adds that this behavior is meant to keep the immune system ‘suppressed’; that final purpose is absent from the Spanish archive. The joke reverses ordinary health advice by treating a weakened immune response as protection."
+  },
+  "cardDefinitions": [
+    { "id": "word-observar", "kind": "word", "promptEs": "observar", "answerEn": "to observe; to watch", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-pánico", "kind": "word", "promptEs": "pánico", "answerEn": "panic", "noteEn": "", "tags": ["word", "emotion", "A2"] },
+    { "id": "word-desinformado", "kind": "word", "promptEs": "desinformado", "answerEn": "uninformed; based on poor information (masculine singular)", "noteEn": "", "tags": ["word", "adjective", "information", "B1"] },
+    { "id": "word-gripe", "kind": "word", "promptEs": "gripe", "answerEn": "flu; influenza", "noteEn": "", "tags": ["word", "health", "A2"] },
+    { "id": "word-porcina", "kind": "word", "promptEs": "porcina", "answerEn": "swine; porcine (feminine singular)", "noteEn": "Porcina describes something related to pigs. Its -a ending matches a feminine singular noun such as gripe.", "example": { "es": "La granja aplica controles de sanidad porcina.", "en": "The farm applies swine-health controls." }, "tags": ["word", "adjective", "animals", "B1"] },
+    { "id": "word-comí", "kind": "word", "promptEs": "comí", "answerEn": "I ate", "noteEn": "", "tags": ["word", "verb", "past", "A2"] },
+    { "id": "word-cerdo--meat", "kind": "word", "promptEs": "cerdo", "answerEn": "pork; pig meat", "noteEn": "Cerdo can name the animal or its meat. This card is for the food meaning.", "example": { "es": "No como cerdo.", "en": "I do not eat pork." }, "tags": ["word", "food", "animals", "A1"] },
+    { "id": "word-cerdo--animal", "kind": "word", "promptEs": "cerdo", "answerEn": "pig", "noteEn": "This card is for the animal, not pork as food.", "example": { "es": "El cerdo duerme en el establo.", "en": "The pig sleeps in the barn." }, "tags": ["word", "animal", "A1"] },
+    { "id": "word-cinta--tape", "kind": "word", "promptEs": "cinta", "answerEn": "tape", "noteEn": "", "tags": ["word", "object", "A2"] },
+    { "id": "word-americana--duct-tape", "kind": "word", "promptEs": "americana", "answerEn": "duct, inside cinta americana (“duct tape”)", "noteEn": "Americana ordinarily means ‘American’ in the feminine singular. In Spain, the fixed name cinta americana refers to strong cloth-backed duct tape.", "example": { "es": "Necesito cinta americana para arreglarlo.", "en": "I need duct tape to fix it." }, "tags": ["word", "fixed expression", "Spain", "B1"] },
+    { "id": "word-sellar", "kind": "word", "promptEs": "sellar", "answerEn": "to seal", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-contra--protection", "kind": "word", "promptEs": "contra", "answerEn": "against; from (a threat)", "noteEn": "Contra can introduce the danger that a barrier, medicine, or precaution is meant to stop.", "example": { "es": "Esta crema protege contra el sol.", "en": "This cream protects against the sun." }, "tags": ["word", "preposition", "protection", "A2"] },
+    { "id": "word-conseguirla--obtain-it", "kind": "word", "promptEs": "conseguirla", "answerEn": "to get it; to obtain it", "noteEn": "Conseguir is the unchanged dictionary form ‘to get.’ La is attached to its end and replaces one feminine thing.", "example": { "es": "Quiero conseguirla hoy.", "en": "I want to get it today." }, "tags": ["word", "verb", "attached pronoun", "A2"] },
+    { "id": "word-salir--go-outside", "kind": "word", "promptEs": "salir", "answerEn": "to go out; to go outside", "noteEn": "", "tags": ["word", "movement", "A1"] },
+    { "id": "word-para--time-until-event", "kind": "word", "promptEs": "para", "answerEn": "before; until, after an amount of remaining time", "noteEn": "After an expression such as queda tiempo, para que can introduce the later event that the remaining time leads up to. It does not express a desired purpose in this use.", "example": { "es": "Queda una hora para que empiece la película.", "en": "There is one hour left until the film starts." }, "tags": ["word", "time connector", "B1"] },
+    { "id": "word-que--time-event-after-para", "kind": "word", "promptEs": "que", "answerEn": "no separate English word; completes the time connector after para", "noteEn": "Here que joins para to a full later event with its own changed verb.", "example": { "es": "Faltan dos días para que llegue Marta.", "en": "There are two days left until Marta arrives." }, "tags": ["word", "time connector", "B1"] },
+    { "id": "word-castigo", "kind": "word", "promptEs": "castigo", "answerEn": "punishment", "noteEn": "", "tags": ["word", "noun", "A2"] },
+    { "id": "word-lesbianas", "kind": "word", "promptEs": "lesbianas", "answerEn": "lesbians", "noteEn": "", "tags": ["word", "people", "A2"] },
+    { "id": "word-nanobots", "kind": "word", "promptEs": "nanobots", "answerEn": "nanobots; microscopic robots", "noteEn": "", "tags": ["word", "technology", "B1"] },
+    { "id": "word-caído--fallen", "kind": "word", "promptEs": "caído", "answerEn": "fallen; fallen down", "noteEn": "Caído is the completed-action form of caer, ‘to fall.’", "example": { "es": "El vaso se ha caído.", "en": "The glass has fallen." }, "tags": ["word", "verb", "participle", "A2"] },
+    { "id": "word-escaleras", "kind": "word", "promptEs": "escaleras", "answerEn": "stairs; staircase", "noteEn": "", "tags": ["word", "place", "A1"] },
+    { "id": "word-blanca--white", "kind": "word", "promptEs": "blanca", "answerEn": "white (feminine singular)", "noteEn": "", "tags": ["word", "color", "adjective", "A1"] },
+    { "id": "word-sobresale", "kind": "word", "promptEs": "sobresale", "answerEn": "sticks out; protrudes", "noteEn": "", "tags": ["word", "verb", "B1"] },
+    { "id": "word-brazo", "kind": "word", "promptEs": "brazo", "answerEn": "arm", "noteEn": "", "tags": ["word", "body", "A1"] },
+    { "id": "word-suena--sounds-like", "kind": "word", "promptEs": "suena", "answerEn": "sounds; seems (before a comparison with a)", "noteEn": "A form of sonar followed by a can compare the impression something gives with another thing.", "example": { "es": "Eso suena a excusa.", "en": "That sounds like an excuse." }, "tags": ["word", "verb", "impression", "A2"] },
+    { "id": "word-a--sonar-complement", "kind": "word", "promptEs": "a", "answerEn": "like; required after sonar before the comparison", "noteEn": "In sonar a algo, the preposition a links the impression to what it resembles.", "example": { "es": "La historia suena a broma.", "en": "The story sounds like a joke." }, "tags": ["word", "verb complement", "A2"] },
+    { "id": "word-sífilis", "kind": "word", "promptEs": "sífilis", "answerEn": "syphilis", "noteEn": "", "tags": ["word", "health", "B1"] },
+    { "id": "word-vacunas", "kind": "word", "promptEs": "vacunas", "answerEn": "vaccines", "noteEn": "", "tags": ["word", "health", "A2"] },
+    { "id": "word-vinculadas", "kind": "word", "promptEs": "vinculadas", "answerEn": "linked; associated (feminine plural)", "noteEn": "Vinculadas describes more than one thing named by a feminine noun. The usual link to the related thing is a.", "example": { "es": "Las cuentas están vinculadas al mismo correo.", "en": "The accounts are linked to the same email address." }, "tags": ["word", "adjective", "association", "B1"] },
+    { "id": "word-autismo", "kind": "word", "promptEs": "autismo", "answerEn": "autism", "noteEn": "", "tags": ["word", "health", "B1"] },
+    { "id": "word-chupando--licking", "kind": "word", "promptEs": "chupando", "answerEn": "licking", "noteEn": "", "tags": ["word", "verb", "gerund", "A2"] },
+    { "id": "word-autista", "kind": "word", "promptEs": "autista", "answerEn": "autistic (singular)", "noteEn": "Autista has the same singular form with masculine and feminine nouns.", "example": { "es": "Es una estudiante autista.", "en": "She is an autistic student." }, "tags": ["word", "adjective", "people", "B1"] },
+    { "id": "word-protegerme", "kind": "word", "promptEs": "protegerme", "answerEn": "to protect myself", "noteEn": "Proteger is the unchanged dictionary form ‘to protect.’ Me attaches to its end and makes the speaker the person protected.", "example": { "es": "Uso guantes para protegerme.", "en": "I use gloves to protect myself." }, "tags": ["word", "verb", "attached pronoun", "A2"] },
+    {
+      "id": "phrase-gripe-porcina",
+      "kind": "phrase",
+      "promptEs": "gripe porcina",
+      "questionEn": "What does gripe porcina mean?",
+      "answerEn": "It means ‘swine flu.’",
+      "noteEn": "Gripe means flu. Porcina means related to pigs and takes its feminine singular form to match the feminine noun gripe.",
+      "example": { "es": "El hospital confirmó un caso de gripe porcina.", "en": "The hospital confirmed a case of swine flu." },
+      "tags": ["phrase", "health", "adjective", "A2"]
+    },
+    {
+      "id": "phrase-cinta-americana",
+      "kind": "phrase",
+      "promptEs": "cinta americana",
+      "questionEn": "What does cinta americana name in Spain?",
+      "answerEn": "It means ‘duct tape.’",
+      "noteEn": "This is a fixed regional name for strong cloth-backed adhesive tape. Other places may prefer cinta adhesiva or cinta de tela.",
+      "example": { "es": "Cierra la caja con cinta americana.", "en": "Seal the box with duct tape." },
+      "tags": ["phrase", "Spain", "objects", "A2"]
+    },
+    {
+      "id": "phrase-quedarle-tiempo-a-alguien",
+      "kind": "phrase",
+      "promptEs": "quedarle tiempo a alguien",
+      "questionEn": "How do you say how much time someone has left?",
+      "answerEn": "Put me, te, le, nos, os, or les before quedar, and make quedar singular or plural to match the time amount that remains.",
+      "noteEn": "Spanish presents the time as remaining to the person. Use queda with one remaining unit and quedan with plural units: me queda una hora, but me quedan dos horas. The small word before quedar identifies who has that time left. You may add a + a name or person to clarify who: A Marta le quedan dos horas.",
+      "example": { "es": "A Marta le quedan dos horas.", "en": "Marta has two hours left." },
+      "tags": ["phrase", "remaining time", "pronouns", "A2"]
+    },
+    {
+      "id": "grammar-para-que-future-event-after-time",
+      "kind": "grammar",
+      "promptEs": "tiempo restante + para que + evento futuro",
+      "questionEn": "How do you name the later event that a remaining amount of time leads up to?",
+      "answerEn": "After the remaining-time expression, use para que and put the later event's verb in its special not-yet-a-fact form.",
+      "noteEn": "That special form is called the subjunctive. It appears because the later event is still ahead: ordinary empieza becomes empiece, and ordinary llega becomes llegue. In this time construction, para que means that the stated time remains before or until the event; it is not giving a purpose.",
+      "example": { "es": "Quedan dos horas para que empiece el partido.", "en": "There are two hours left until the match starts." },
+      "tags": ["grammar", "time connector", "future event", "subjunctive", "B1"]
+    },
+    {
+      "id": "phrase-sonar-a",
+      "kind": "phrase",
+      "promptEs": "algo suena a + comparación",
+      "questionEn": "How do you say that something sounds like something else?",
+      "answerEn": "Use a form of sonar, then a, then the thing it resembles.",
+      "noteEn": "Sonar changes to match the person or thing producing the impression and the time: suena for one present thing, suenan for several. The word a stays unchanged before the comparison.",
+      "example": { "es": "Ese plan suena a desastre.", "en": "That plan sounds like a disaster." },
+      "tags": ["phrase", "impression", "verb complement", "A2"]
+    },
+    {
+      "id": "phrase-estar-vinculado-a",
+      "kind": "phrase",
+      "promptEs": "estar vinculado/a a + algo",
+      "questionEn": "How do you say that one thing is linked to another?",
+      "answerEn": "Use a form of estar, then vinculado changed to match the linked thing, then a before the related thing.",
+      "noteEn": "Estar changes to match the linked person or thing and the time: está for one present item and están for several. Vinculada describes one feminine-noun item, vinculados several masculine or mixed items, and vinculadas several feminine-noun items. The linking word a stays unchanged, but it combines with el as al.",
+      "example": { "es": "La cuenta está vinculada al teléfono.", "en": "The account is linked to the phone." },
+      "tags": ["phrase", "association", "agreement", "B1"]
+    },
+    {
+      "id": "concept-2009-swine-flu-twitter-panic",
+      "kind": "concept",
+      "promptEs": "gripe porcina · pánico desinformado en Twitter",
+      "answerEn": "The 2009 H1N1 outbreak was widely called ‘swine flu.’ Twitter's then-new real-time search made it easy to watch rumors, fear, and wildly mistaken self-diagnoses spread alongside genuine news.",
+      "noteEn": "The strip turns a live search page into a rapid sample of online panic: unrelated injuries, conspiracy claims, and impossible precautions are all attributed to the same outbreak.",
+      "tags": ["concept", "2009 H1N1", "social media", "misinformation", "comic joke"]
+    },
+    {
+      "id": "concept-vaccines-autism-misinformation",
+      "kind": "concept",
+      "promptEs": "vacunas · autismo · desinformación",
+      "answerEn": "The claim that vaccines cause autism is false. Extensive research across large populations has found that vaccines do not cause autism.",
+      "noteEn": "The comic places that false claim inside a stream of absurd health misinformation. The later action toward an autistic child extends the joke by showing a dangerous conclusion drawn from the same false premise.",
+      "tags": ["concept", "vaccine safety", "autism", "misinformation", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-gripe-porcina:narration",
+      "labelEs": "TWITTER ES GENIAL PARA OBSERVAR CÓMO SE DESARROLLA EL PÁNICO DESINFORMADO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-gripe-porcina:narration:w01", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00002" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w02", "text": "GENIAL", "normalized": "genial", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00003" }], "cardIds": ["word-genial--great"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w03", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00004" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w04", "text": "OBSERVAR", "normalized": "observar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00005" }], "cardIds": ["word-observar", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w05", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00006" }], "cardIds": ["word-cómo", "question-words"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w06", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00007" }], "cardIds": ["word-se--desarrollarse-project"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w07", "text": "DESARROLLA", "normalized": "desarrolla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00008" }], "cardIds": ["word-desarrolla--progresses"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w08", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00009" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w09", "text": "PÁNICO", "normalized": "pánico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00010" }], "cardIds": ["word-pánico", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:narration:w10", "text": "DESINFORMADO", "normalized": "desinformado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00011" }], "cardIds": ["word-desinformado", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:narration:excluded-twitter", "text": "TWITTER", "reason": "non-spanish-text", "rationale": "This is the unchanged social-network brand name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00001" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:narration:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-gripe-porcina:narration:w03", "es-xkcd-gripe-porcina:narration:w04"], "exampleEs": "PARA OBSERVAR", "explanationEn": "Para introduces the purpose, and observar remains in its unchanged -ar dictionary form." },
+        { "id": "es-xkcd-gripe-porcina:narration:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-gripe-porcina:narration:w05"], "exampleEs": "CÓMO", "explanationEn": "Cómo keeps its accent because it introduces an indirect question about the manner of the development." },
+        { "id": "es-xkcd-gripe-porcina:narration:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-gripe-porcina:narration:w09", "es-xkcd-gripe-porcina:narration:w10"], "exampleEs": "PÁNICO DESINFORMADO", "explanationEn": "Pánico names the thing first, and the neutral description desinformado follows it." },
+        { "id": "es-xkcd-gripe-porcina:narration:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-gripe-porcina:narration:w09", "es-xkcd-gripe-porcina:narration:w10"], "exampleEs": "PÁNICO DESINFORMADO", "explanationEn": "Desinformado uses masculine singular -o to match the masculine singular noun pánico." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:search-bar",
+      "labelEs": "twitter GRIPE PORCINA SEARCH",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-gripe-porcina:search-bar:w01", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00014" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:search-bar:w02", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00015" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:search-bar:excluded-logo", "text": "twitter", "reason": "non-spanish-text", "rationale": "This is the unchanged Twitter logo, not a Spanish lexical item.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00012" }] },
+        { "id": "es-xkcd-gripe-porcina:search-bar:excluded-search", "text": "SEARCH", "reason": "non-spanish-text", "rationale": "This interface button is printed in English, not Spanish.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00013" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:search-bar:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:search-bar:w01", "es-xkcd-gripe-porcina:search-bar:w02"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:results-heading",
+      "labelEs": "REALTIME RESULTS FOR GRIPE PORCINA 0.05",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-gripe-porcina:results-heading:w01", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00019" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:results-heading:w02", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00020" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:results-heading:excluded-english", "text": "REALTIME RESULTS FOR", "reason": "non-spanish-text", "rationale": "This results-page heading is printed in English, not Spanish.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00016" }, { "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00017" }, { "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00018" }] },
+        { "id": "es-xkcd-gripe-porcina:results-heading:excluded-time", "text": "0.05", "reason": "number", "rationale": "This is a numeric search-time display, not Spanish vocabulary.", "explicitBounds": [{ "x": 90.0, "y": 16.0112, "width": 6.1905, "height": 1.6854 }], "geometryRationale": "Vision emitted two duplicate token boxes for the single printed decimal display." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:results-heading:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:results-heading:w01", "es-xkcd-gripe-porcina:results-heading:w02"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:results-status",
+      "labelEs": "1,918 MORE RESULTS SINCE YOU STARTED SEARCHING. REFRESH TO SEE.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0008" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:results-status:excluded-count", "text": "1,918", "reason": "number", "rationale": "This is the numeric count of new search results, not Spanish vocabulary.", "explicitBounds": [{ "x": 5.2381, "y": 19.6629, "width": 7.5, "height": 1.6854 }], "geometryRationale": "Vision duplicated the count inside two overlapping OCR tokens, so this measured box covers it once." },
+        { "id": "es-xkcd-gripe-porcina:results-status:excluded-english", "text": "MORE RESULTS SINCE YOU STARTED SEARCHING. REFRESH TO SEE.", "reason": "non-spanish-text", "rationale": "This live-search status and refresh instruction is printed in English, not Spanish.", "explicitBounds": [{ "x": 13.0952, "y": 19.6629, "width": 81.1905, "height": 1.6854 }], "geometryRationale": "Vision fused REFRESH and TO; this measured row box covers the complete English status text." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-1",
+      "labelEs": "SKEEVE37: DIOS, ¡AYER COMÍ CERDO ANTES DE SABER NADA SOBRE LA GRIPE PORCINA!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0010" }
+      ],
+      "words": [
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w01", "text": "DIOS", "normalized": "dios", "explicitBounds": [{"x": 35.3571, "y": 25.2809, "width": 8.9286, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-dios--exclamation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w02", "text": "AYER", "normalized": "ayer", "explicitBounds": [{"x": 44.881, "y": 25.2809, "width": 8.9286, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-ayer"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w03", "text": "COMÍ", "normalized": "comí", "explicitBounds": [{"x": 54.4048, "y": 25.2809, "width": 8.3333, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-comí"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w04", "text": "CERDO", "normalized": "cerdo", "explicitBounds": [{"x": 63.3333, "y": 25.2809, "width": 9.5238, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-cerdo--meat"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w05", "text": "ANTES", "normalized": "antes", "explicitBounds": [{"x": 73.4524, "y": 25.2809, "width": 10.119, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-antes--before-event", "grammar-antes-de-infinitive"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-1:w06", "text": "DE", "normalized": "de", "explicitBounds": [{"x": 84.1667, "y": 25.2809, "width": 4.4048, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-de--fixed-antes-de-infinitive", "grammar-antes-de-infinitive"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w07", "text": "SABER", "normalized": "saber", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00040" }], "cardIds": ["word-saber", "grammar-antes-de-infinitive"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w08", "text": "NADA", "normalized": "nada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00041" }], "cardIds": ["word-nada"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w09", "text": "SOBRE", "normalized": "sobre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00042" }], "cardIds": ["word-sobre--about"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w10", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00043" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w11", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00044" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:w12", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00045" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        {"id": "es-xkcd-gripe-porcina:tweet-1:excluded-username", "text": "SKEEVE37", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "explicitBounds": [{"x": 18.0952, "y": 25.2809, "width": 16.6667, "height": 2.528}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."}
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-1:app-before-action", "cardId": "grammar-antes-de-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-1:w05", "es-xkcd-gripe-porcina:tweet-1:w06", "es-xkcd-gripe-porcina:tweet-1:w07"], "exampleEs": "ANTES DE SABER", "explanationEn": "Antes de introduces the earlier boundary, and saber stays in its unchanged -er dictionary form." },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:app-nada-anything", "cardId": "word-nada", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-1:w08"], "exampleEs": "ANTES DE SABER NADA", "explanationEn": "Here nada appears without no because antes de frames saber as an action that had not happened; natural English uses ‘anything.’" },
+        { "id": "es-xkcd-gripe-porcina:tweet-1:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-1:w11", "es-xkcd-gripe-porcina:tweet-1:w12"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-1-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.5, "y": 31.25, "width": 73.2, "height": 1.75 }],
+      "geometryRationale": "Vision stopped before the final interface links; this measured row covers the complete pale metadata line.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-1-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.5, "y": 31.25, "width": 73.2, "height": 1.75 }], "geometryRationale": "Vision stopped before the final interface links; this measured row covers the complete pale metadata line." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-2",
+      "labelEs": "HANNELOREEC: SIN CINTA AMERICANA NO PUEDO SELLAR LA PUERTA CONTRA LA GRIPE PORCINA, PERO NO PUEDO CONSEGUIRLA SIN SALIR FUERA. ¡AYUDA!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0014" }
+      ],
+      "words": [
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w01", "text": "SIN", "normalized": "sin", "explicitBounds": [{"x": 41.9048, "y": 35.9551, "width": 6.25, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-sin"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w02", "text": "CINTA", "normalized": "cinta", "explicitBounds": [{"x": 48.5714, "y": 35.9551, "width": 9.1667, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-cinta--tape", "phrase-cinta-americana"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w03", "text": "AMERICANA", "normalized": "americana", "explicitBounds": [{"x": 58.1548, "y": 35.9551, "width": 17.0833, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-americana--duct-tape", "phrase-cinta-americana"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w04", "text": "NO", "normalized": "no", "explicitBounds": [{"x": 75.6548, "y": 35.9551, "width": 5, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-no"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w05", "text": "PUEDO", "normalized": "puedo", "explicitBounds": [{"x": 81.0714, "y": 35.9551, "width": 10.3571, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-puedo", "grammar-poder-infinitive"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w06", "text": "SELLAR", "normalized": "sellar", "explicitBounds": [{"x": 18.5714, "y": 37.9213, "width": 11.4286, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-sellar", "grammar-poder-infinitive"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w07", "text": "LA", "normalized": "la", "explicitBounds": [{"x": 30.4762, "y": 37.9213, "width": 4.2857, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-la--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w08", "text": "PUERTA", "normalized": "puerta", "explicitBounds": [{"x": 35.2381, "y": 37.9213, "width": 11.9048, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-puerta"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w09", "text": "CONTRA", "normalized": "contra", "explicitBounds": [{"x": 47.619, "y": 37.9213, "width": 12.381, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-contra--protection"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w10", "text": "LA", "normalized": "la", "explicitBounds": [{"x": 60.4762, "y": 37.9213, "width": 3.8095, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-la--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w11", "text": "GRIPE", "normalized": "gripe", "explicitBounds": [{"x": 64.7619, "y": 37.9213, "width": 9.5238, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w12", "text": "PORCINA", "normalized": "porcina", "explicitBounds": [{"x": 74.7619, "y": 37.9213, "width": 13.8095, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-2:w13", "text": "PERO", "normalized": "pero", "explicitBounds": [{"x": 89.0476, "y": 37.9213, "width": 8.5714, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-pero"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w14", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00068" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w15", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00069" }], "cardIds": ["word-puedo", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w16", "text": "CONSEGUIRLA", "normalized": "conseguirla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00070" }], "cardIds": ["word-conseguirla--obtain-it", "grammar-poder-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w17", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00071" }], "cardIds": ["word-sin", "grammar-sin-infinitive"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w18", "text": "SALIR", "normalized": "salir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00072" }], "cardIds": ["word-salir--go-outside", "grammar-sin-infinitive"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w19", "text": "FUERA", "normalized": "fuera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00073" }], "cardIds": ["word-fuera--outside"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:w20", "text": "AYUDA", "normalized": "ayuda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00074" }], "cardIds": ["word-ayuda--plea"] }
+      ],
+      "excludedUnits": [
+        {"id": "es-xkcd-gripe-porcina:tweet-2:excluded-username", "text": "HANNELOREEC", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "explicitBounds": [{"x": 18.5714, "y": 35.9551, "width": 22.9167, "height": 1.9661}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."}
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-duct-tape", "cardId": "phrase-cinta-americana", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w02", "es-xkcd-gripe-porcina:tweet-2:w03"], "exampleEs": "CINTA AMERICANA", "explanationEn": "Cinta and americana form the conventional Spanish name used here for duct tape." },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-can-seal", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w05", "es-xkcd-gripe-porcina:tweet-2:w06"], "exampleEs": "PUEDO SELLAR", "explanationEn": "Puedo changes for the speaker, while sellar stays in its unchanged -ar dictionary form." },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w11", "es-xkcd-gripe-porcina:tweet-2:w12"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-can-get", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w15", "es-xkcd-gripe-porcina:tweet-2:w16"], "exampleEs": "PUEDO CONSEGUIRLA", "explanationEn": "Puedo changes for the speaker, while conseguir remains in its unchanged -ir form with la attached." },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-attached-la", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w16"], "exampleEs": "CONSEGUIRLA", "explanationEn": "La attaches to the unchanged verb conseguir and replaces one feminine thing." },
+        { "id": "es-xkcd-gripe-porcina:tweet-2:app-without-going", "cardId": "grammar-sin-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-2:w17", "es-xkcd-gripe-porcina:tweet-2:w18"], "exampleEs": "SIN SALIR", "explanationEn": "Sin introduces an action that does not happen, and salir stays in its unchanged -ir dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-2-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.7, "y": 42.8, "width": 72.9, "height": 1.8 }],
+      "geometryRationale": "Vision split and truncated the pale interface row; this measured box covers the complete line.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-2-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.7, "y": 42.8, "width": 72.9, "height": 1.8 }], "geometryRationale": "Vision split and truncated the pale interface row; this measured box covers the complete line." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-3",
+      "labelEs": "PAULYSHOREFAN: ¿CUÁNTO TIEMPO ME QUEDA PARA QUE LA GRIPE PORCINA LLEGUE A MADAGASCAR?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0018" }
+      ],
+      "words": [
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w01", "text": "CUÁNTO", "normalized": "cuánto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00086" }], "cardIds": ["word-cuánto", "question-words"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w02", "text": "TIEMPO", "normalized": "tiempo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00087" }], "cardIds": ["word-tiempo", "phrase-quedarle-tiempo-a-alguien"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w03", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00088" }], "cardIds": ["word-me--indirect", "phrase-quedarle-tiempo-a-alguien"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w04", "text": "QUEDA", "normalized": "queda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00089" }], "cardIds": ["word-queda--remains", "phrase-quedarle-tiempo-a-alguien"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w05", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00090" }], "cardIds": ["word-para--time-until-event", "grammar-para-que-future-event-after-time"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w06", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00091" }], "cardIds": ["word-que--time-event-after-para", "grammar-para-que-future-event-after-time"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w07", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00092" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w08", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00093" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w09", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00094" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w10", "text": "LLEGUE", "normalized": "llegue", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00095" }], "cardIds": ["word-llegue--future-event", "grammar-para-que-future-event-after-time"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:w11", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00096" }], "cardIds": ["word-a--destination"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-3:excluded-username", "text": "PAULYSHOREFAN", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00085" }] },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:excluded-madagascar", "text": "MADAGASCAR", "reason": "non-spanish-text", "rationale": "This is the unchanged proper name of a country, not a Spanish vocabulary target.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00097" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-3:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-3:w01"], "exampleEs": "CUÁNTO", "explanationEn": "Cuánto carries an accent because it directly asks about an amount." },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:app-time-left", "cardId": "phrase-quedarle-tiempo-a-alguien", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-3:w02", "es-xkcd-gripe-porcina:tweet-3:w03", "es-xkcd-gripe-porcina:tweet-3:w04"], "exampleEs": "TIEMPO ME QUEDA", "explanationEn": "Tiempo is the amount remaining, me marks the person who has it left, and queda agrees with the singular noun tiempo." },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:app-time-before-event", "cardId": "grammar-para-que-future-event-after-time", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-3:w05", "es-xkcd-gripe-porcina:tweet-3:w06", "es-xkcd-gripe-porcina:tweet-3:w10"], "exampleEs": "PARA QUE LA GRIPE PORCINA LLEGUE", "explanationEn": "After the remaining-time expression, para que introduces the event still ahead, and llegue is the special future-event form of llegar." },
+        { "id": "es-xkcd-gripe-porcina:tweet-3:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-3:w08", "es-xkcd-gripe-porcina:tweet-3:w09"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-3-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.8, "y": 53.45, "width": 72.8, "height": 1.8 }],
+      "geometryRationale": "Vision stopped before the action links; this measured box covers the complete pale interface row.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-3-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.8, "y": 53.45, "width": 72.8, "height": 1.8 }], "geometryRationale": "Vision stopped before the action links; this measured box covers the complete pale interface row." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-4",
+      "labelEs": "CRACKMONKEY74: ¡LA GRIPE PORCINA ES EL CASTIGO DE DIOS POR LA ACLU, LAS LESBIANAS, EL 11S Y LOS NANOBOTS!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0022" }
+      ],
+      "words": [
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w01", "text": "LA", "normalized": "la", "explicitBounds": [{"x": 45.2381, "y": 57.5843, "width": 5.7143, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-la--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w02", "text": "GRIPE", "normalized": "gripe", "explicitBounds": [{"x": 51.4286, "y": 57.5843, "width": 9.0476, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w03", "text": "PORCINA", "normalized": "porcina", "explicitBounds": [{"x": 60.9524, "y": 57.5843, "width": 13.3333, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w04", "text": "ES", "normalized": "es", "explicitBounds": [{"x": 74.7619, "y": 57.5843, "width": 4.2857, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-es"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w05", "text": "EL", "normalized": "el", "explicitBounds": [{"x": 79.5238, "y": 57.5843, "width": 4.2857, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-el--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w06", "text": "CASTIGO", "normalized": "castigo", "explicitBounds": [{"x": 84.2857, "y": 57.5843, "width": 12.8571, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-castigo"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w07", "text": "DE", "normalized": "de", "explicitBounds": [{"x": 18.5714, "y": 59.5506, "width": 3.8095, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-de--ownership"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w08", "text": "DIOS", "normalized": "dios", "explicitBounds": [{"x": 22.8571, "y": 59.5506, "width": 8.0952, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-dios"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w09", "text": "POR", "normalized": "por", "explicitBounds": [{"x": 31.4286, "y": 59.5506, "width": 6.6667, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-por--cause"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w10", "text": "LA", "normalized": "la", "explicitBounds": [{"x": 38.5714, "y": 59.5506, "width": 4.2857, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-la--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w11", "text": "LAS", "normalized": "las", "explicitBounds": [{"x": 53.8095, "y": 59.5506, "width": 6.6667, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-las--generic-group"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w12", "text": "LESBIANAS", "normalized": "lesbianas", "explicitBounds": [{"x": 60.9524, "y": 59.5506, "width": 17.619, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-lesbianas"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w13", "text": "EL", "normalized": "el", "explicitBounds": [{"x": 79.0476, "y": 59.5506, "width": 3.8095, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-el--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:w14", "text": "Y", "normalized": "y", "explicitBounds": [{"x": 89.0476, "y": 59.5506, "width": 2.8571, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-y"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-4:w15", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00122" }], "cardIds": ["word-los--generic-group"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-4:w16", "text": "NANOBOTS", "normalized": "nanobots", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00123" }], "cardIds": ["word-nanobots"] }
+      ],
+      "excludedUnits": [
+        {"id": "es-xkcd-gripe-porcina:tweet-4:excluded-username", "text": "CRACKMONKEY74", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "explicitBounds": [{"x": 18.0952, "y": 57.5843, "width": 26.6667, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:excluded-aclu", "text": "ACLU", "reason": "non-spanish-text", "rationale": "This is the unchanged acronym of an organization, not a Spanish lexical word.", "explicitBounds": [{"x": 43.3333, "y": 59.5506, "width": 10, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."},
+        {"id": "es-xkcd-gripe-porcina:tweet-4:excluded-11s", "text": "11S", "reason": "non-spanish-text", "rationale": "This is the alphanumeric Spanish shorthand for the September 11 attacks, not a lexical word.", "explicitBounds": [{"x": 83.3333, "y": 59.5506, "width": 5.2381, "height": 1.9662}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."}
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-4:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-4:w02", "es-xkcd-gripe-porcina:tweet-4:w03"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-4-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.8, "y": 64.1, "width": 72.8, "height": 1.8 }],
+      "geometryRationale": "This measured box follows the complete pale metadata row without reaching the neighboring tweet text.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-4-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.8, "y": 64.1, "width": 72.8, "height": 1.8 }], "geometryRationale": "This measured box follows the complete pale metadata row without reaching the neighboring tweet text." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-5",
+      "labelEs": "TWILIGHT7531: ¡ME HE CAÍDO POR LAS ESCALERAS Y SE HA OÍDO UN CRAC Y HAY UNA COSA BLANCA QUE SOBRESALE DE MI BRAZO. ¿ES LA GRIPE PORCINA?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0026" }
+      ],
+      "words": [
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w01", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00136" }], "cardIds": ["word-me--pronominal-marker"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w02", "text": "HE", "normalized": "he", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00137" }], "cardIds": ["word-he", "grammar-present-perfect"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w03", "text": "CAÍDO", "normalized": "caído", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00138" }], "cardIds": ["word-caído--fallen", "grammar-present-perfect"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w04", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00139" }], "cardIds": ["word-por--through"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w05", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00140" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w06", "text": "ESCALERAS", "normalized": "escaleras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00141" }], "cardIds": ["word-escaleras"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w07", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00142" }], "cardIds": ["word-y"] },
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w08", "text": "SE", "normalized": "se", "explicitBounds": [{"x": 18.0952, "y": 70.2247, "width": 4.1667, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-se--passive-unnamed-doer", "grammar-se-passive-unnamed-doer"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w09", "text": "HA", "normalized": "ha", "explicitBounds": [{"x": 22.6786, "y": 70.2247, "width": 4.5833, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-ha", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w10", "text": "OÍDO", "normalized": "oído", "explicitBounds": [{"x": 27.6786, "y": 70.2247, "width": 7.9167, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-oído--heard", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w11", "text": "UN", "normalized": "un", "explicitBounds": [{"x": 36.0119, "y": 70.2247, "width": 5, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-un"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w12", "text": "CRAC", "normalized": "crac", "explicitBounds": [{"x": 41.6667, "y": 70.2247, "width": 7.1428, "height": 1.6853}], "geometryRationale": "Vision fused CRAC and the following Y; this measured row-height box isolates CRAC without intruding into the next line.", "cardIds": ["word-crac--cracking-sound"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w13", "text": "Y", "normalized": "y", "explicitBounds": [{"x": 50, "y": 70.2247, "width": 2.1429, "height": 1.6853}], "geometryRationale": "Vision fused this conjunction with CRAC; this measured row-height box isolates Y without intruding into the next line.", "cardIds": ["word-y"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w14", "text": "HAY", "normalized": "hay", "explicitBounds": [{"x": 52.2619, "y": 70.2247, "width": 6.25, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-hay"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w15", "text": "UNA", "normalized": "una", "explicitBounds": [{"x": 58.9286, "y": 70.2247, "width": 6.6667, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-una"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w16", "text": "COSA", "normalized": "cosa", "explicitBounds": [{"x": 66.0119, "y": 70.2247, "width": 8.3333, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-cosa", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "grammar-relative-que"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w17", "text": "BLANCA", "normalized": "blanca", "explicitBounds": [{"x": 74.7619, "y": 70.2247, "width": 11.6667, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-blanca--white", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-5:w18", "text": "QUE", "normalized": "que", "explicitBounds": [{"x": 86.8452, "y": 70.2247, "width": 6.9643, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-que--relative", "grammar-relative-que"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w19", "text": "SOBRESALE", "normalized": "sobresale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00153" }], "cardIds": ["word-sobresale", "grammar-relative-que"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w20", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00154" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w21", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00155" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w22", "text": "BRAZO", "normalized": "brazo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00156" }], "cardIds": ["word-brazo"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w23", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00157" }], "cardIds": ["word-es", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w24", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00158" }], "cardIds": ["word-la--article", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w25", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00159" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "grammar-yes-no-question", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:w26", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00160" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "grammar-yes-no-question", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-5:excluded-username", "text": "TWILIGHT7531", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00134" }, { "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00135" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-fallen-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w02", "es-xkcd-gripe-porcina:tweet-5:w03"], "exampleEs": "HE CAÍDO", "explanationEn": "He is the helper for the speaker, and caído is caer's completed-action form." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-heard-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w09", "es-xkcd-gripe-porcina:tweet-5:w10"], "exampleEs": "HA OÍDO", "explanationEn": "Ha is the singular third-person helper, and oído is oír's completed-action form." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-passive-heard", "cardId": "grammar-se-passive-unnamed-doer", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w08", "es-xkcd-gripe-porcina:tweet-5:w09", "es-xkcd-gripe-porcina:tweet-5:w10"], "exampleEs": "SE HA OÍDO", "explanationEn": "Se leaves the hearer unnamed, while ha oído supplies the completed hearing event." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-white-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w16", "es-xkcd-gripe-porcina:tweet-5:w17"], "exampleEs": "COSA BLANCA", "explanationEn": "Cosa names the thing first, and the neutral color description blanca follows it." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-white-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w16", "es-xkcd-gripe-porcina:tweet-5:w17"], "exampleEs": "COSA BLANCA", "explanationEn": "Blanca uses feminine singular -a to match the feminine singular noun cosa." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-relative", "cardId": "grammar-relative-que", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w16", "es-xkcd-gripe-porcina:tweet-5:w18", "es-xkcd-gripe-porcina:tweet-5:w19"], "exampleEs": "COSA BLANCA QUE SOBRESALE", "explanationEn": "Cosa is the thing being described, que links it to more information, and sobresale supplies that information." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-yes-no", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w23", "es-xkcd-gripe-porcina:tweet-5:w24", "es-xkcd-gripe-porcina:tweet-5:w25", "es-xkcd-gripe-porcina:tweet-5:w26"], "exampleEs": "¿ES LA GRIPE PORCINA?", "explanationEn": "The ordinary statement order stays in place; the question marks and intonation turn it into a yes-or-no question without an extra helper word." },
+        { "id": "es-xkcd-gripe-porcina:tweet-5:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-5:w25", "es-xkcd-gripe-porcina:tweet-5:w26"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-5-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.8, "y": 75.1, "width": 72.4, "height": 1.75 }],
+      "geometryRationale": "This measured box follows the complete pale metadata row without reaching the neighboring tweet text.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-5-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.8, "y": 75.1, "width": 72.4, "height": 1.75 }], "geometryRationale": "This measured box follows the complete pale metadata row without reaching the neighboring tweet text." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-6",
+      "labelEs": "WIGU: @UNTOWARD: NO, ESO SUENA A SÍFILIS, NO A GRIPE PORCINA. ¿QUÉ DICES QUE HAS HECHO CON UN CERDO?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0030" }
+      ],
+      "words": [
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w01", "text": "NO", "normalized": "no", "explicitBounds": [{"x": 49.6429, "y": 78.6517, "width": 6.4286, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-no"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w02", "text": "ESO", "normalized": "eso", "explicitBounds": [{"x": 56.6071, "y": 78.6517, "width": 6.4286, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-eso"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w03", "text": "SUENA", "normalized": "suena", "explicitBounds": [{"x": 63.5714, "y": 78.6517, "width": 10.1786, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-suena--sounds-like", "phrase-sonar-a"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w04", "text": "A", "normalized": "a", "explicitBounds": [{"x": 74.2857, "y": 78.6517, "width": 2.6786, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-a--sonar-complement", "phrase-sonar-a"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w05", "text": "SÍFILIS", "normalized": "sífilis", "explicitBounds": [{"x": 77.5, "y": 78.6517, "width": 11.7857, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-sífilis", "phrase-sonar-a"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:w06", "text": "NO", "normalized": "no", "explicitBounds": [{"x": 89.8214, "y": 78.6517, "width": 4.9405, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-no"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w07", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00179" }], "cardIds": ["word-a--sonar-complement", "phrase-sonar-a"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w08", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00180" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "phrase-sonar-a", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w09", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00181" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "phrase-sonar-a", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w10", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00182" }], "cardIds": ["word-qué--interrogative", "question-words"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w11", "text": "DICES", "normalized": "dices", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00183" }], "cardIds": ["word-dices"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w12", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00184" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w13", "text": "HAS", "normalized": "has", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00185" }], "cardIds": ["word-has", "grammar-present-perfect"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w14", "text": "HECHO", "normalized": "hecho", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00186" }], "cardIds": ["word-hecho--done", "grammar-present-perfect"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w15", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00187" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w16", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00188" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:w17", "text": "CERDO", "normalized": "cerdo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00189" }], "cardIds": ["word-cerdo--animal"] }
+      ],
+      "excludedUnits": [
+        {"id": "es-xkcd-gripe-porcina:tweet-6:excluded-wigu", "text": "WIGU", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "explicitBounds": [{"x": 18.5714, "y": 78.6517, "width": 8.5714, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."},
+        {"id": "es-xkcd-gripe-porcina:tweet-6:excluded-mention", "text": "UNTOWARD", "reason": "non-spanish-text", "rationale": "This is an unchanged account mention, not Spanish vocabulary.", "explicitBounds": [{"x": 27.6786, "y": 78.6517, "width": 21.4286, "height": 2.2471}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."}
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-6:app-sounds-like", "cardId": "phrase-sonar-a", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-6:w03", "es-xkcd-gripe-porcina:tweet-6:w04", "es-xkcd-gripe-porcina:tweet-6:w05", "es-xkcd-gripe-porcina:tweet-6:w07", "es-xkcd-gripe-porcina:tweet-6:w08", "es-xkcd-gripe-porcina:tweet-6:w09"], "exampleEs": "SUENA A SÍFILIS, NO A GRIPE PORCINA", "explanationEn": "Suena supplies the comparison verb, and each a introduces one compared diagnosis." },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-6:w08", "es-xkcd-gripe-porcina:tweet-6:w09"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-6:w10"], "exampleEs": "QUÉ", "explanationEn": "Qué carries an accent because it directly asks for the thing being discussed." },
+        { "id": "es-xkcd-gripe-porcina:tweet-6:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-6:w13", "es-xkcd-gripe-porcina:tweet-6:w14"], "exampleEs": "HAS HECHO", "explanationEn": "Has is the helper for one familiar listener, and hecho is hacer's irregular completed-action form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-6-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.8, "y": 85.75, "width": 72.8, "height": 1.75 }],
+      "geometryRationale": "Vision stopped before the final interface links; this measured row covers the complete pale metadata line.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-6-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.8, "y": 85.75, "width": 72.8, "height": 1.75 }], "geometryRationale": "Vision stopped before the final interface links; this measured row covers the complete pale metadata line." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-7",
+      "labelEs": "2011SENIORSRULE: MI PADRE DICE QUE LAS VACUNAS CONTRA LA GRIPE ESTÁN VINCULADAS AL AUTISMO, ASÍ QUE ESTOY CHUPANDO UN NIÑO AUTISTA PARA PROTEGERME DE LA GRIPE PORCINA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0033" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0034" },
+        { "source": "ocr-line", "id": "es-xkcd-gripe-porcina:ocr-line-0035" }
+      ],
+      "words": [
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w01", "text": "MI", "normalized": "mi", "explicitBounds": [{"x": 46.9048, "y": 89.0449, "width": 5, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-mi"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w02", "text": "PADRE", "normalized": "padre", "explicitBounds": [{"x": 52.3214, "y": 89.0449, "width": 9.5833, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-padre"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w03", "text": "DICE", "normalized": "dice", "explicitBounds": [{"x": 62.3214, "y": 89.0449, "width": 6.6667, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-dice"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w04", "text": "QUE", "normalized": "que", "explicitBounds": [{"x": 69.4048, "y": 89.0449, "width": 7.0833, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-que--clause-link"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w05", "text": "LAS", "normalized": "las", "explicitBounds": [{"x": 76.9048, "y": 89.0449, "width": 5.8333, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-las--generic-group"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w06", "text": "VACUNAS", "normalized": "vacunas", "explicitBounds": [{"x": 83.1548, "y": 89.0449, "width": 13.9881, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-vacunas", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w07", "text": "CONTRA", "normalized": "contra", "explicitBounds": [{"x": 19.0476, "y": 90.7303, "width": 11.9048, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-contra--protection"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w08", "text": "LA", "normalized": "la", "explicitBounds": [{"x": 31.4286, "y": 90.7303, "width": 4.2857, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-la--article"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w09", "text": "GRIPE", "normalized": "gripe", "explicitBounds": [{"x": 36.1905, "y": 90.7303, "width": 9.0476, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-gripe", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w10", "text": "ESTÁN", "normalized": "están", "explicitBounds": [{"x": 45.7143, "y": 90.7303, "width": 10, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-estan--location", "phrase-estar-vinculado-a"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w11", "text": "VINCULADAS", "normalized": "vinculadas", "explicitBounds": [{"x": 56.1905, "y": 90.7303, "width": 18.5714, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-vinculadas", "phrase-estar-vinculado-a", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w12", "text": "AL", "normalized": "al", "explicitBounds": [{"x": 75.2381, "y": 90.7303, "width": 4.2857, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-al--contraction", "phrase-estar-vinculado-a"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w13", "text": "AUTISMO", "normalized": "autismo", "explicitBounds": [{"x": 80, "y": 90.7303, "width": 15.7143, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-autismo", "phrase-estar-vinculado-a", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w14", "text": "ASÍ", "normalized": "así", "explicitBounds": [{"x": 18.5714, "y": 92.4157, "width": 5.4167, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-así--result-link", "phrase-asi-que"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w15", "text": "QUE", "normalized": "que", "explicitBounds": [{"x": 24.4048, "y": 92.4157, "width": 6.6667, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-que--result-link", "phrase-asi-que"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w16", "text": "ESTOY", "normalized": "estoy", "explicitBounds": [{"x": 31.4881, "y": 92.4157, "width": 10.4167, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-estoy--progressive-auxiliary", "grammar-estar-gerundio"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w17", "text": "CHUPANDO", "normalized": "chupando", "explicitBounds": [{"x": 42.3214, "y": 92.4157, "width": 15.8333, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-chupando--licking", "grammar-estar-gerundio", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w18", "text": "UN", "normalized": "un", "explicitBounds": [{"x": 58.5714, "y": 92.4157, "width": 4.5833, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-un"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w19", "text": "NIÑO", "normalized": "niño", "explicitBounds": [{"x": 63.5714, "y": 92.4157, "width": 8.3333, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-niño", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w20", "text": "AUTISTA", "normalized": "autista", "explicitBounds": [{"x": 72.3214, "y": 92.4157, "width": 13.3333, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-autista", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-vaccines-autism-misinformation"]},
+        {"id": "es-xkcd-gripe-porcina:tweet-7:w21", "text": "PARA", "normalized": "para", "explicitBounds": [{"x": 86.0714, "y": 92.4157, "width": 7.7381, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row.", "cardIds": ["word-para", "grammar-para-infinitive-purpose"]},
+        { "id": "es-xkcd-gripe-porcina:tweet-7:w22", "text": "PROTEGERME", "normalized": "protegerme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00220" }], "cardIds": ["word-protegerme", "grammar-para-infinitive-purpose", "grammar-pronoun-attached-to-infinitive", "concept-vaccines-autism-misinformation"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:w23", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00221" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:w24", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00222" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:w25", "text": "GRIPE", "normalized": "gripe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00223" }], "cardIds": ["word-gripe", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:w26", "text": "PORCINA", "normalized": "porcina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-gripe-porcina:ocr-token-00224" }], "cardIds": ["word-porcina", "phrase-gripe-porcina", "concept-2009-swine-flu-twitter-panic"] }
+      ],
+      "excludedUnits": [
+        {"id": "es-xkcd-gripe-porcina:tweet-7:excluded-username", "text": "2011SENIORSRULE", "reason": "non-spanish-text", "rationale": "This is a fictional account username, not Spanish vocabulary.", "explicitBounds": [{"x": 18.5714, "y": 89.0449, "width": 27.9167, "height": 1.6853}], "geometryRationale": "Measured row-height box isolates this printed unit without intruding into the next text row."}
+      ],
+      "applications": [
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-linked-to", "cardId": "phrase-estar-vinculado-a", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w10", "es-xkcd-gripe-porcina:tweet-7:w11", "es-xkcd-gripe-porcina:tweet-7:w12", "es-xkcd-gripe-porcina:tweet-7:w13"], "exampleEs": "ESTÁN VINCULADAS AL AUTISMO", "explanationEn": "Están supplies the state for the plural vacunas, vinculadas takes its feminine plural form to match vacunas, and al introduces the claimed association target." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-result", "cardId": "phrase-asi-que", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w14", "es-xkcd-gripe-porcina:tweet-7:w15"], "exampleEs": "ASÍ QUE", "explanationEn": "The fixed connector así que introduces the result drawn from the preceding claim." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-progressive", "cardId": "grammar-estar-gerundio", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w16", "es-xkcd-gripe-porcina:tweet-7:w17"], "exampleEs": "ESTOY CHUPANDO", "explanationEn": "Estoy changes for the speaker, and chupando is the ongoing -ando form of chupar." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-autistic-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w19", "es-xkcd-gripe-porcina:tweet-7:w20"], "exampleEs": "NIÑO AUTISTA", "explanationEn": "Niño names the person first, and the neutral description autista follows it." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-autistic-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w19", "es-xkcd-gripe-porcina:tweet-7:w20"], "exampleEs": "NIÑO AUTISTA", "explanationEn": "Autista stays singular and uses the same -ista form for masculine and feminine nouns; niño supplies the masculine singular context." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w21", "es-xkcd-gripe-porcina:tweet-7:w22"], "exampleEs": "PARA PROTEGERME", "explanationEn": "Para introduces the intended purpose, and proteger stays in its unchanged -er form with me attached." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-attached-me", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w22"], "exampleEs": "PROTEGERME", "explanationEn": "Me attaches to the unchanged verb proteger and makes the speaker the person protected." },
+        { "id": "es-xkcd-gripe-porcina:tweet-7:app-flu-term", "cardId": "phrase-gripe-porcina", "participantWordIds": ["es-xkcd-gripe-porcina:tweet-7:w25", "es-xkcd-gripe-porcina:tweet-7:w26"], "exampleEs": "GRIPE PORCINA", "explanationEn": "Gripe names the illness, and porcina specifies its association with pigs." }
+      ]
+    },
+    {
+      "id": "es-xkcd-gripe-porcina:tweet-7-metadata",
+      "labelEs": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET",
+      "explicitBounds": [{ "x": 18.5, "y": 96.45, "width": 72.7, "height": 1.8 }],
+      "geometryRationale": "Vision split the final pale interface row; this measured box covers the complete line.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-gripe-porcina:tweet-7-metadata:excluded-interface", "text": "LESS THAN 10 SECONDS AGO FROM WEB · REPLY · VIEW TWEET", "reason": "non-spanish-text", "rationale": "This timestamp and action row is Twitter interface text printed in English.", "explicitBounds": [{ "x": 18.5, "y": 96.45, "width": 72.7, "height": 1.8 }], "geometryRationale": "Vision split the final pale interface row; this measured box covers the complete line." }
+      ],
+      "applications": []
+    }
+  ]
+}

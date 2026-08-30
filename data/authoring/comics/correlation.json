@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "id": "correlation",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Correlation",
+  "titleEs": "Correlación",
+  "titleText": {
+    "es": "La correlación no implica causalidad, pero sí que alza las cejas de forma sugerente y hace gestos furtivos mientras mueve los labios diciendo: ",
+    "en": "Correlation doesn't imply causation, but it does waggle its eyebrows suggestively and gesture furtively while mouthing 'look over there'.",
+    "noteEn": "The Spanish archive metadata is truncated after diciendo: because the page puts unescaped quotation marks inside its HTML title attribute. The raw page continues with mira por ahí, matching the complete official English title text preserved here."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-dejé--stopped",
+      "kind": "word",
+      "promptEs": "dejé",
+      "answerEn": "I stopped (doing something)",
+      "noteEn": "Here dejé is the completed-past form of dejar in dejar de followed by an action, the pattern for stopping that activity. Without de, dejé commonly means “I left” or “I left something in a state.”",
+      "example": { "es": "Dejé de correr.", "en": "I stopped running." },
+      "tags": ["word", "dejar de", "completed past", "A2"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "correlation:former-belief",
+      "labelEs": "SOLÍA CREER QUE LA CORRELACIÓN IMPLICABA CAUSALIDAD.",
+      "explicitBounds": [{ "x": 1.0000, "y": 4.0000, "width": 31.7000, "height": 27.8000 }],
+      "geometryRationale": "Vision merged all three panels, clipped several initials at the panel borders, and split IMPLI-/CABA at its printed line break; this measured region isolates the first speaker's three-line bubble while the two referenced fragments preserve one lexical occurrence IMPLICABA.",
+      "words": [
+        {
+          "id": "correlation:former-belief:w01",
+          "text": "SOLÍA",
+          "normalized": "solía",
+          "explicitBounds": [{ "x": 1.5251, "y": 5.3763, "width": 8.7146, "height": 8.6022 }],
+          "geometryRationale": "Vision read OLIA and dropped the initial S and written accent; this measured box covers the complete printed SOLÍA.",
+          "cardIds": ["word-solía", "grammar-soler", "grammar-past-contrast"]
+        },
+        {
+          "id": "correlation:former-belief:w02",
+          "text": "CREER",
+          "normalized": "creer",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00005" }],
+          "cardIds": ["word-creer", "grammar-soler"]
+        },
+        {
+          "id": "correlation:former-belief:w03",
+          "text": "QUE",
+          "normalized": "que",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00006" }],
+          "cardIds": ["word-que--clause-link"]
+        },
+        {
+          "id": "correlation:former-belief:w04",
+          "text": "LA",
+          "normalized": "la",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00007" }],
+          "cardIds": ["word-la--article"]
+        },
+        {
+          "id": "correlation:former-belief:w05",
+          "text": "CORRELACIÓN",
+          "normalized": "correlación",
+          "explicitBounds": [{ "x": 1.5251, "y": 13.9785, "width": 20.2683, "height": 7.5269 }],
+          "geometryRationale": "Vision read ORRELACION, dropping the initial C and accent; this measured box covers the full printed CORRELACIÓN.",
+          "cardIds": ["word-correlación", "concept-correlation-causation"]
+        },
+        {
+          "id": "correlation:former-belief:w06",
+          "text": "IMPLICABA",
+          "normalized": "implicaba",
+          "explicitBounds": [
+            { "x": 22.1739, "y": 13.9785, "width": 8.9325, "height": 7.5269 },
+            { "x": 1.3043, "y": 21.5054, "width": 7.8261, "height": 9.6774 }
+          ],
+          "geometryRationale": "The comic wraps IMPLI-/CABA across two printed lines. The first measured box stops before the line-break hyphen, and the second covers CABA; together they preserve one lexical occurrence IMPLICABA.",
+          "cardIds": ["word-implicaba", "grammar-past-contrast", "concept-correlation-causation"]
+        },
+        {
+          "id": "correlation:former-belief:w07",
+          "text": "CAUSALIDAD",
+          "normalized": "causalidad",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00021" }],
+          "cardIds": ["word-causalidad", "concept-correlation-causation"]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "correlation:former-belief:app-soler",
+          "cardId": "grammar-soler",
+          "participantWordIds": ["correlation:former-belief:w01", "correlation:former-belief:w02"],
+          "exampleEs": "SOLÍA CREER",
+          "explanationEn": "Solía is the past-habit form of soler, and creer stays in its unchanged dictionary form."
+        },
+        {
+          "id": "correlation:former-belief:app-past-solia",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": ["correlation:former-belief:w01"],
+          "exampleEs": "SOLÍA",
+          "explanationEn": "Solía uses the imperfect because it presents the speaker's former repeated or continuing outlook as background."
+        },
+        {
+          "id": "correlation:former-belief:app-past-implicaba",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": ["correlation:former-belief:w06"],
+          "exampleEs": "IMPLICABA",
+          "explanationEn": "Implicaba uses the imperfect because it describes the content of that former background belief rather than a new completed event."
+        }
+      ]
+    },
+    {
+      "id": "correlation:statistics-course",
+      "labelEs": "LUEGO DI UNA ASIGNATURA DE ESTADÍSTICA Y DEJÉ DE CREERLO.",
+      "explicitBounds": [{ "x": 37.0000, "y": 3.5000, "width": 28.5000, "height": 36.0000 }],
+      "geometryRationale": "Vision merged all three panels and misread UNA; this measured region isolates the second speaker's four-line bubble.",
+      "words": [
+        {
+          "id": "correlation:statistics-course:w01",
+          "text": "LUEGO",
+          "normalized": "luego",
+          "explicitBounds": [{ "x": 37.8166, "y": 4.1746, "width": 9.8017, "height": 8.7286 }],
+          "geometryRationale": "This measured vertical band isolates LUEGO from the tightly spaced line below.",
+          "cardIds": ["word-luego"]
+        },
+        {
+          "id": "correlation:statistics-course:w02",
+          "text": "DI",
+          "normalized": "di",
+          "explicitBounds": [{ "x": 48.0882, "y": 4.1746, "width": 3.4431, "height": 8.7286 }],
+          "geometryRationale": "This measured vertical band isolates DI from the tightly spaced line below.",
+          "cardIds": ["word-di", "grammar-past-contrast", "phrase-dar-una-asignatura"]
+        },
+        {
+          "id": "correlation:statistics-course:w03",
+          "text": "UNA",
+          "normalized": "una",
+          "explicitBounds": [{ "x": 52.0012, "y": 4.1746, "width": 6.7039, "height": 8.7286 }],
+          "geometryRationale": "Vision misread the stylized U as LI; this measured box covers UNA without bleeding into the line below.",
+          "cardIds": ["word-una", "phrase-dar-una-asignatura"]
+        },
+        {
+          "id": "correlation:statistics-course:w04",
+          "text": "ASIGNATURA",
+          "normalized": "asignatura",
+          "explicitBounds": [{ "x": 37.3913, "y": 12.9032, "width": 18.2609, "height": 7.2851 }],
+          "geometryRationale": "This measured vertical band isolates ASIGNATURA between the tightly spaced neighboring lines.",
+          "cardIds": ["word-asignatura", "phrase-dar-una-asignatura"]
+        },
+        {
+          "id": "correlation:statistics-course:w05",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [{ "x": 56.0870, "y": 12.9032, "width": 4.7826, "height": 7.2851 }],
+          "geometryRationale": "This measured vertical band isolates DE between the tightly spaced neighboring lines.",
+          "cardIds": ["word-de--noun-classifier"]
+        },
+        {
+          "id": "correlation:statistics-course:w06",
+          "text": "ESTADÍSTICA",
+          "normalized": "estadística",
+          "explicitBounds": [{ "x": 37.8089, "y": 20.1883, "width": 18.6214, "height": 8.8440 }],
+          "geometryRationale": "This measured vertical band isolates ESTADÍSTICA between the tightly spaced neighboring lines.",
+          "cardIds": ["word-estadística"]
+        },
+        {
+          "id": "correlation:statistics-course:w07",
+          "text": "Y",
+          "normalized": "y",
+          "explicitBounds": [{ "x": 56.8842, "y": 20.1883, "width": 2.6982, "height": 8.8440 }],
+          "geometryRationale": "This measured vertical band isolates Y between the tightly spaced neighboring lines.",
+          "cardIds": ["word-y"]
+        },
+        {
+          "id": "correlation:statistics-course:w08",
+          "text": "DEJÉ",
+          "normalized": "dejé",
+          "explicitBounds": [{ "x": 37.8261, "y": 29.0323, "width": 7.8261, "height": 9.6774 }],
+          "geometryRationale": "This measured box isolates DEJÉ on the final text line without overlapping the line above.",
+          "cardIds": ["word-dejé--stopped", "grammar-past-contrast", "phrase-dejar-de-infinitive"]
+        },
+        {
+          "id": "correlation:statistics-course:w09",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [{ "x": 46.1413, "y": 29.0323, "width": 4.4022, "height": 9.6774 }],
+          "geometryRationale": "This measured box isolates DE on the final text line without overlapping the line above.",
+          "cardIds": ["word-de--verb-complement", "phrase-dejar-de-infinitive"]
+        },
+        {
+          "id": "correlation:statistics-course:w10",
+          "text": "CREERLO",
+          "normalized": "creerlo",
+          "explicitBounds": [{ "x": 51.0326, "y": 29.0323, "width": 14.1848, "height": 9.6774 }],
+          "geometryRationale": "This measured box isolates CREERLO on the final text line without overlapping the line above.",
+          "cardIds": ["word-creerlo", "phrase-dejar-de-infinitive", "grammar-pronoun-attached-to-infinitive"]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "correlation:statistics-course:app-past-di",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": ["correlation:statistics-course:w02"],
+          "exampleEs": "DI",
+          "explanationEn": "Di uses the preterite to present taking the course as one completed event that advances the account."
+        },
+        {
+          "id": "correlation:statistics-course:app-course",
+          "cardId": "phrase-dar-una-asignatura",
+          "participantWordIds": ["correlation:statistics-course:w02", "correlation:statistics-course:w03", "correlation:statistics-course:w04"],
+          "exampleEs": "DI UNA ASIGNATURA",
+          "explanationEn": "The official source makes clear that this wording intends the course-taking sense. In much modern Spanish, dar una asignatura more readily means teaching it, so a student can use cursar or hacer una asignatura to avoid the ambiguity."
+        },
+        {
+          "id": "correlation:statistics-course:app-field-de",
+          "cardId": "word-de--noun-classifier",
+          "participantWordIds": ["correlation:statistics-course:w05"],
+          "exampleEs": "ASIGNATURA DE ESTADÍSTICA",
+          "explanationEn": "Here de links asignatura to the field it covers; English often puts the field directly before the word course."
+        },
+        {
+          "id": "correlation:statistics-course:app-past-deje",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": ["correlation:statistics-course:w08"],
+          "exampleEs": "DEJÉ",
+          "explanationEn": "Dejé uses the preterite because the change in belief is presented as a completed event."
+        },
+        {
+          "id": "correlation:statistics-course:app-stop-believing",
+          "cardId": "phrase-dejar-de-infinitive",
+          "participantWordIds": ["correlation:statistics-course:w08", "correlation:statistics-course:w09", "correlation:statistics-course:w10"],
+          "exampleEs": "DEJÉ DE CREERLO",
+          "explanationEn": "Dejé changes for the speaker and completed past, de stays fixed, and creer remains in its dictionary form with lo attached."
+        },
+        {
+          "id": "correlation:statistics-course:app-attached-lo",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["correlation:statistics-course:w10"],
+          "exampleEs": "CREERLO",
+          "explanationEn": "Creer is the unchanged dictionary form, and attached lo stands for the previously mentioned belief."
+        }
+      ]
+    },
+    {
+      "id": "correlation:apparent-help",
+      "labelEs": "PARECE QUE ESA CLASE TE AYUDÓ.",
+      "explicitBounds": [{ "x": 68.7000, "y": 6.0000, "width": 27.0000, "height": 18.2000 }],
+      "geometryRationale": "Vision merged the panel with the later reply and clipped the initials of PARECE and CLASE; this measured region isolates the first two lines in the third panel.",
+      "words": [
+        {
+          "id": "correlation:apparent-help:w01",
+          "text": "PARECE",
+          "normalized": "parece",
+          "explicitBounds": [{ "x": 69.0632, "y": 7.5269, "width": 12.0237, "height": 7.5269 }],
+          "geometryRationale": "Vision read ARECE and dropped the initial P at the panel edge; this measured band covers PARECE without bleeding into the line below.",
+          "cardIds": ["word-parece", "phrase-parece-que"]
+        },
+        {
+          "id": "correlation:apparent-help:w02",
+          "text": "QUE",
+          "normalized": "que",
+          "explicitBounds": [{ "x": 81.5761, "y": 7.5269, "width": 6.8478, "height": 7.5269 }],
+          "geometryRationale": "This measured vertical band isolates QUE from the tightly spaced line below.",
+          "cardIds": ["word-que--clause-link", "phrase-parece-que"]
+        },
+        {
+          "id": "correlation:apparent-help:w03",
+          "text": "ESA",
+          "normalized": "esa",
+          "explicitBounds": [{ "x": 88.9130, "y": 7.5269, "width": 6.3043, "height": 7.5269 }],
+          "geometryRationale": "This measured vertical band isolates ESA from the tightly spaced line below.",
+          "cardIds": ["word-esa", "phrase-parece-que"]
+        },
+        {
+          "id": "correlation:apparent-help:w04",
+          "text": "CLASE",
+          "normalized": "clase",
+          "explicitBounds": [{ "x": 69.0632, "y": 15.0538, "width": 10.5020, "height": 8.6022 }],
+          "geometryRationale": "Vision read LASE and dropped the initial C at the panel edge; this measured box covers the complete printed CLASE.",
+          "cardIds": ["word-clase", "phrase-parece-que"]
+        },
+        {
+          "id": "correlation:apparent-help:w05",
+          "text": "TE",
+          "normalized": "te",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00016" }],
+          "cardIds": ["word-te--direct", "phrase-parece-que"]
+        },
+        {
+          "id": "correlation:apparent-help:w06",
+          "text": "AYUDÓ",
+          "normalized": "ayudó",
+          "geometryRefs": [{ "source": "ocr-token", "id": "correlation:ocr-token-00017" }],
+          "cardIds": ["word-ayudó", "phrase-parece-que", "grammar-past-contrast", "concept-correlation-causation"]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "correlation:apparent-help:app-seems",
+          "cardId": "phrase-parece-que",
+          "participantWordIds": ["correlation:apparent-help:w01", "correlation:apparent-help:w02", "correlation:apparent-help:w03", "correlation:apparent-help:w04", "correlation:apparent-help:w05", "correlation:apparent-help:w06"],
+          "exampleEs": "PARECE QUE ESA CLASE TE AYUDÓ",
+          "explanationEn": "Parece que introduces the following complete statement as an inference from the available evidence rather than as a certainty."
+        },
+        {
+          "id": "correlation:apparent-help:app-past-helped",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": ["correlation:apparent-help:w06"],
+          "exampleEs": "AYUDÓ",
+          "explanationEn": "Ayudó uses the preterite because the possible help is viewed as one completed result."
+        }
+      ]
+    },
+    {
+      "id": "correlation:maybe-reply",
+      "labelEs": "BUENO, QUIZÁ.",
+      "explicitBounds": [{ "x": 75.0000, "y": 28.0000, "width": 23.3000, "height": 15.0000 }],
+      "geometryRationale": "Vision included both speech-tail strokes in oversized token boxes; this measured region isolates only the short reply in the third panel.",
+      "words": [
+        {
+          "id": "correlation:maybe-reply:w01",
+          "text": "BUENO",
+          "normalized": "bueno",
+          "explicitBounds": [{ "x": 75.8170, "y": 31.8919, "width": 12.4183, "height": 10.2703 }],
+          "geometryRationale": "This measured box isolates BUENO from the speech-tail stroke that Vision included below and to its left.",
+          "cardIds": ["word-bueno"]
+        },
+        {
+          "id": "correlation:maybe-reply:w02",
+          "text": "QUIZÁ",
+          "normalized": "quizá",
+          "explicitBounds": [{ "x": 89.1068, "y": 31.8919, "width": 9.1503, "height": 10.2703 }],
+          "geometryRationale": "This measured box isolates QUIZÁ, including its accent, from the nearby speech-tail stroke.",
+          "cardIds": ["word-quizá", "concept-correlation-causation"]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    }
+  ]
+}
