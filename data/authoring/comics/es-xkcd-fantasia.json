@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-fantasia",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Fantasy",
+  "titleEs": "Fantasía",
+  "titleText": {
+    "es": "Supongo que si ella aceptara las realidades irracionales, difícilmente estaría en mis fantasías.",
+    "en": "I guess if she accepted irrational realities, she'd hardly be my fantasy."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-hubiera--hypothetical-existence",
+      "kind": "word",
+      "promptEs": "hubiera",
+      "answerEn": "there were; there existed, in an unreal or wished-for situation",
+      "noteEn": "Hubiera is a special form of haber used when existence is imagined rather than presented as fact. After si, it often introduces a wish or an unreal condition.",
+      "example": { "es": "¡Si hubiera una solución!", "en": "If only there were a solution!" },
+      "tags": ["word", "haber", "hypothetical", "B1"]
+    },
+    {
+      "id": "word-alguna--any-hypothetical",
+      "kind": "word",
+      "promptEs": "alguna",
+      "answerEn": "any; some possible",
+      "noteEn": "With an imagined or uncertain possibility, alguna can have the natural English sense “any.” It is feminine because it describes a feminine noun, such as idea or manera.",
+      "example": { "es": "¿Hay alguna salida?", "en": "Is there any way out?" },
+      "tags": ["word", "indefinite", "hypothetical", "A2"]
+    },
+    { "id": "word-de--manera-de-que", "kind": "word", "promptEs": "de", "answerEn": "no separate English word; links manera to the result it would make possible", "noteEn": "In una manera de que..., de joins “a way” to a clause describing what that way would allow.", "example": { "es": "Buscamos una manera de que todos participen.", "en": "We are looking for a way for everyone to participate." }, "tags": ["word", "preposition", "manera de que", "B1"] },
+    {
+      "id": "word-pudiéramos--hypothetical-could",
+      "kind": "word",
+      "promptEs": "pudiéramos",
+      "answerEn": "we could; we might be able to, in an imagined situation",
+      "noteEn": "Pudiéramos is a special form of poder used for a hypothetical possibility involving “we.” Compare podemos, “we can,” for a possibility presented as real now.",
+      "example": { "es": "Ojalá pudiéramos quedarnos.", "en": "I wish we could stay." },
+      "tags": ["word", "poder", "hypothetical", "first person plural", "B1"]
+    },
+    { "id": "word-juntos", "kind": "word", "promptEs": "juntos", "answerEn": "together", "noteEn": "", "tags": ["word", "adverbial adjective", "A1"] },
+    { "id": "word-de--tener-suerte-complement", "kind": "word", "promptEs": "de", "answerEn": "to; in being, after tener suerte", "noteEn": "Tener suerte uses de before the action or circumstance that is fortunate.", "example": { "es": "Tengo suerte de vivir aquí.", "en": "I am lucky to live here." }, "tags": ["word", "preposition", "tener suerte", "A2"] },
+    {
+      "id": "word-tenernos--each-other",
+      "kind": "word",
+      "promptEs": "tenernos",
+      "answerEn": "to have each other; to have us",
+      "noteEn": "The action word tener means “to have.” The attached nos normally means “us”; when the same two or more people both do and receive the action, context gives it the reciprocal sense “each other.”",
+      "example": { "es": "Es bueno tenernos cerca.", "en": "It is good to have each other nearby." },
+      "tags": ["word", "tener", "attached pronoun", "reciprocal", "A2"]
+    },
+    { "id": "word-a--fixed-a-todo-esto", "kind": "word", "promptEs": "a", "answerEn": "part of a todo esto: by the way; speaking of that", "noteEn": "This a belongs to the fixed transition a todo esto rather than marking a destination.", "example": { "es": "A todo esto, ¿qué hora es?", "en": "By the way, what time is it?" }, "tags": ["word", "fixed expression", "discourse", "A2"] },
+    { "id": "word-todo--fixed-a-todo-esto", "kind": "word", "promptEs": "todo", "answerEn": "part of a todo esto: by the way; speaking of that", "noteEn": "Inside this fixed transition, todo does not simply mean “all” on its own.", "example": { "es": "A todo esto, ¿qué hora es?", "en": "By the way, what time is it?" }, "tags": ["word", "fixed expression", "discourse", "A2"] },
+    { "id": "word-esto--fixed-a-todo-esto", "kind": "word", "promptEs": "esto", "answerEn": "part of a todo esto: by the way; speaking of that", "noteEn": "Inside this fixed transition, esto points back loosely to the topic before introducing a related thought.", "example": { "es": "A todo esto, ¿qué hora es?", "en": "By the way, what time is it?" }, "tags": ["word", "fixed expression", "discourse", "A2"] },
+    { "id": "word-empezó", "kind": "word", "promptEs": "empezó", "answerEn": "it started; it began", "noteEn": "", "tags": ["word", "empezar", "past", "A1"] },
+    { "id": "word-recuerdo--remember", "kind": "word", "promptEs": "recuerdo", "answerEn": "I remember", "noteEn": "This is a present form of recordar. With no before it, no recuerdo means “I don't remember.”", "example": { "es": "Recuerdo su nombre.", "en": "I remember her name." }, "tags": ["word", "recordar", "present", "first person", "A1"] },
+    {
+      "id": "word-acabamos--ended-up-state",
+      "kind": "word",
+      "promptEs": "acabamos",
+      "answerEn": "we ended up; we finished in a resulting state",
+      "noteEn": "Acabamos can mean “we finish,” but followed directly by a word describing a state, it tells the final condition that resulted.",
+      "example": { "es": "Acabamos agotados.", "en": "We ended up exhausted." },
+      "tags": ["word", "acabar", "resulting state", "A2"]
+    },
+    {
+      "id": "word-imaginarlo--imagine-it",
+      "kind": "word",
+      "promptEs": "imaginarlo",
+      "answerEn": "to imagine it",
+      "noteEn": "Imaginar is the unchanged dictionary form “to imagine.” The attached lo means “it” and names what is being imagined.",
+      "example": { "es": "No puedo imaginarlo.", "en": "I can't imagine it." },
+      "tags": ["word", "imaginar", "attached pronoun", "A2"]
+    },
+    { "id": "word-sucediendo--happening", "kind": "word", "promptEs": "sucediendo", "answerEn": "happening", "noteEn": "", "tags": ["word", "suceder", "gerund", "A2"] },
+    { "id": "word-sí--emphatic-affirmation", "kind": "word", "promptEs": "sí", "answerEn": "really does; indeed, as part of sí que", "noteEn": "The accent distinguishes affirmative sí from conditional si, “if.” Before que and a changed verb, sí adds strong confirmation rather than answering a yes-or-no question by itself.", "example": { "es": "Ana sí que trabaja mucho.", "en": "Ana really does work a lot." }, "tags": ["word", "emphasis", "sí que", "A2"] },
+    { "id": "word-que--si-que-emphasis", "kind": "word", "promptEs": "que", "answerEn": "part of sí que, which strongly confirms what follows", "noteEn": "In this pattern, que works with sí to add emphasis; it does not introduce an English “that” clause.", "example": { "es": "Eso sí que ayuda.", "en": "That really does help." }, "tags": ["word", "emphasis", "sí que", "A2"] },
+    { "id": "word-pone--put-to-test", "kind": "word", "promptEs": "pone", "answerEn": "puts; subjects, as part of poner a prueba", "noteEn": "Pone is a form of poner. In poner a prueba, the expression means to test someone or something.", "example": { "es": "El viaje pone a prueba su paciencia.", "en": "The trip tests her patience." }, "tags": ["word", "poner", "fixed expression", "A2"] },
+    { "id": "word-a--fixed-poner-a-prueba", "kind": "word", "promptEs": "a", "answerEn": "part of poner a prueba: to test", "noteEn": "In the fixed expression poner a prueba, a has no useful separate English translation.", "example": { "es": "La pregunta me pone a prueba.", "en": "The question tests me." }, "tags": ["word", "fixed expression", "poner a prueba", "A2"] },
+    { "id": "word-prueba--fixed-poner-a-prueba", "kind": "word", "promptEs": "prueba", "answerEn": "test; part of poner a prueba, to test", "noteEn": "Prueba is “test,” and with poner a it forms the conventional expression poner a prueba.", "example": { "es": "La pregunta me pone a prueba.", "en": "The question tests me." }, "tags": ["word", "fixed expression", "poner a prueba", "A2"] },
+    { "id": "word-límites", "kind": "word", "promptEs": "límites", "answerEn": "limits; boundaries", "noteEn": "", "tags": ["word", "plural noun", "A2"] },
+    { "id": "word-fantasía", "kind": "word", "promptEs": "fantasía", "answerEn": "fantasy; imagined scenario", "noteEn": "", "tags": ["word", "imagination", "A1"] },
+    { "id": "word-eso--thats-it", "kind": "word", "promptEs": "eso", "answerEn": "that, in the reaction eso es: that's it", "noteEn": "Eso normally points to an idea or thing as “that.” In the reaction eso es, it identifies an explanation or answer as the right one.", "example": { "es": "—¿La llave azul? —¡Eso es!", "en": "“The blue key?” “That's it!”" }, "tags": ["word", "demonstrative", "fixed reaction", "A2"] },
+    { "id": "word-es--thats-it", "kind": "word", "promptEs": "es", "answerEn": "is, in the reaction eso es: that's it", "noteEn": "This form of ser combines with eso in a conventional reaction that recognizes the answer or realization.", "example": { "es": "—¿La llave azul? —¡Eso es!", "en": "“The blue key?” “That's it!”" }, "tags": ["word", "ser", "fixed reaction", "A2"] },
+    { "id": "word-única", "kind": "word", "promptEs": "única", "answerEn": "only; sole", "noteEn": "", "tags": ["word", "adjective", "A1"] },
+    { "id": "word-explicación", "kind": "word", "promptEs": "explicación", "answerEn": "explanation", "noteEn": "", "tags": ["word", "noun", "A1"] },
+    { "id": "word-transitoria", "kind": "word", "promptEs": "transitoria", "answerEn": "temporary; fleeting", "noteEn": "", "tags": ["word", "adjective", "B1"] },
+    { "id": "word-desapareceremos", "kind": "word", "promptEs": "desapareceremos", "answerEn": "we will disappear", "noteEn": "The ending -emos added to desaparecer marks a future action by “we.”", "example": { "es": "Desapareceremos antes del amanecer.", "en": "We will disappear before dawn." }, "tags": ["word", "desaparecer", "future", "first person plural", "A2"] },
+    {
+      "id": "word-termine--future-trigger-subjunctive",
+      "kind": "word",
+      "promptEs": "termine",
+      "answerEn": "it ends; it finishes, referring to a future event after en cuanto",
+      "noteEn": "Termine is a special form of terminar used because the ending has not happened yet. Spanish commonly uses this form after en cuanto when looking forward to a future event.",
+      "example": { "es": "Saldré en cuanto termine.", "en": "I will leave as soon as it ends." },
+      "tags": ["word", "terminar", "future time clause", "B1"]
+    },
+    { "id": "word-perderé", "kind": "word", "promptEs": "perderé", "answerEn": "I will lose", "noteEn": "The ending -é added to perder marks a future action by “I.”", "example": { "es": "Perderé el tren.", "en": "I will miss the train." }, "tags": ["word", "perder", "future", "first person", "A2"] },
+    { "id": "word-perderás", "kind": "word", "promptEs": "perderás", "answerEn": "you will lose", "noteEn": "The ending -ás added to perder marks a future action by informal singular “you.”", "example": { "es": "Perderás la oportunidad.", "en": "You will lose the opportunity." }, "tags": ["word", "perder", "future", "second person", "A2"] },
+    { "id": "word-me--irse-marker", "kind": "word", "promptEs": "me", "answerEn": "myself; marks irse, to leave", "noteEn": "With a form of ir, me can mark irse, which can mean “to leave” rather than simply “to go.”", "example": { "es": "Me voy a ir pronto.", "en": "I am going to leave soon." }, "tags": ["word", "pronoun", "irse", "A2"] },
+    { "id": "word-ir--leave", "kind": "word", "promptEs": "ir", "answerEn": "to leave (as part of irse)", "noteEn": "Ir normally means “to go.” With a matching small pronoun, as in me voy a ir or nos vamos a ir, it can express leaving.", "example": { "es": "Nos vamos a ir temprano.", "en": "We are going to leave early." }, "tags": ["word", "ir", "irse", "A2"] },
+    { "id": "word-quemar", "kind": "word", "promptEs": "quemar", "answerEn": "to burn", "noteEn": "", "tags": ["word", "verb", "A1"] },
+    { "id": "word-puto--vulgar-intensifier", "kind": "word", "promptEs": "puto", "answerEn": "fucking; damned, a vulgar intensifier", "noteEn": "Before a noun, puto can add strong anger or contempt rather than describing a literal property. It is offensive or very informal, so avoid it in polite settings.", "example": { "es": "¡Apaga ese puto ruido!", "en": "Turn off that fucking noise!" }, "tags": ["word", "vulgar", "intensifier", "B1"] },
+    { "id": "word-quema--burn-command", "kind": "word", "promptEs": "quema", "answerEn": "burn; an informal command to one person", "noteEn": "For the affirmative informal command of a regular -ar verb, use the same form as the ordinary él/ella present: quemar becomes quema.", "example": { "es": "Quema la carta.", "en": "Burn the letter." }, "tags": ["word", "quemar", "command", "A2"] },
+    { "id": "word-fuego", "kind": "word", "promptEs": "fuego", "answerEn": "fire", "noteEn": "", "tags": ["word", "noun", "A1"] },
+    { "id": "word-limpiaré--cleanse", "kind": "word", "promptEs": "limpiaré", "answerEn": "I will clean; I will cleanse", "noteEn": "The ending -é added to limpiar marks a future action by “I.” In a dramatic context, clean can carry the stronger sense “cleanse.”", "example": { "es": "Limpiaré la cocina mañana.", "en": "I will clean the kitchen tomorrow." }, "tags": ["word", "limpiar", "future", "first person", "A2"] },
+    { "id": "word-demoníaco", "kind": "word", "promptEs": "demoníaco", "answerEn": "demonic; devilish", "noteEn": "", "tags": ["word", "adjective", "B1"] },
+    {
+      "id": "grammar-si-imperfect-subjunctive-wish",
+      "kind": "grammar",
+      "promptEs": "¡si tuviera...! / ¡si hubiera...!",
+      "questionEn": "How can you begin a wish about a situation that is not real now?",
+      "answerEn": "Use si followed by a special past-looking verb form such as tuviera or hubiera.",
+      "noteEn": "Si means “if.” For an unreal present wish, the next verb takes a form often ending in -ra: tener becomes tuviera, and haber becomes hubiera. This form is called the imperfect subjunctive; in this use it marks the situation as imagined, not a claim about the past. The wish can stand alone as an exclamation.",
+      "example": { "es": "¡Si tuviera más tiempo!", "en": "If only I had more time!" },
+      "tags": ["grammar", "si", "wish", "hypothetical", "B1"]
+    },
+    {
+      "id": "grammar-manera-de-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "una manera de que alguien haga algo",
+      "questionEn": "How do you describe a way that would let someone do something?",
+      "answerEn": "Use una manera de que, then name the person and put their action in the special form used for a desired or merely possible result.",
+      "noteEn": "Manera names the way, and de que introduces the result it would make possible. When that result is wanted, searched for, or hypothetical rather than stated as a fact, Spanish changes the action verb: participan becomes participen, and pueden becomes puedan. This special form is called the subjunctive.",
+      "example": { "es": "Buscamos una manera de que todos participen.", "en": "We are looking for a way for everyone to participate." },
+      "tags": ["grammar", "manera de que", "possibility", "subjunctive", "B1"]
+    },
+    {
+      "id": "grammar-tener-suerte-de-infinitive",
+      "kind": "grammar",
+      "promptEs": "tener suerte de + acción",
+      "questionEn": "How do you say that someone is lucky to do or have something?",
+      "answerEn": "Use the matching form of tener, then suerte de, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Tener changes to match the lucky person: tengo suerte, tienes suerte, tenemos suerte. De connects that good fortune to the action. The following action stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir, such as vivir.",
+      "example": { "es": "Tenemos suerte de vivir aquí.", "en": "We are lucky to live here." },
+      "tags": ["grammar", "tener suerte", "de", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-el-uno-al-otro",
+      "kind": "phrase",
+      "promptEs": "el uno al otro",
+      "questionEn": "How do you make it explicit that two people do something to each other?",
+      "answerEn": "Use el uno al otro for two masculine people or a mixed pair; change the endings when the people are feminine.",
+      "noteEn": "The expression literally pairs “the one” with “the other.” Use la una a la otra for two feminine people. It often appears with nos, se, or another small object word when the verb needs one.",
+      "example": { "es": "Nos ayudamos el uno al otro.", "en": "We help each other." },
+      "tags": ["phrase", "reciprocal", "each other", "A2"]
+    },
+    {
+      "id": "phrase-a-todo-esto",
+      "kind": "phrase",
+      "promptEs": "a todo esto",
+      "questionEn": "What does a todo esto do when someone changes or reconnects the topic?",
+      "answerEn": "It means “by the way,” “speaking of that,” or “after all that.”",
+      "noteEn": "Speakers use a todo esto to introduce a thought prompted by what came before, often a question that has just occurred to them. Its meaning comes from the whole expression, not by translating its three words separately.",
+      "example": { "es": "A todo esto, ¿cuándo empieza la reunión?", "en": "By the way, when does the meeting start?" },
+      "tags": ["phrase", "discourse marker", "topic transition", "A2"]
+    },
+    {
+      "id": "grammar-acabar-resulting-state",
+      "kind": "grammar",
+      "promptEs": "acabar + estado final",
+      "questionEn": "How do you say that someone or something ended up in a particular state?",
+      "answerEn": "Use the matching form of acabar followed directly by a word that describes the final state.",
+      "noteEn": "Acabar often means “to finish.” Without de and followed by a state word, it can instead describe the condition that resulted: acabó vacío means it ended up empty. The state word changes for gender and number when it is an adjective: vacía, vacíos, or vacías.",
+      "example": { "es": "La caja acabó vacía.", "en": "The box ended up empty." },
+      "tags": ["grammar", "acabar", "resulting state", "B1"]
+    },
+    {
+      "id": "grammar-es-adjective-infinitive-evaluation",
+      "kind": "grammar",
+      "promptEs": "es + descripción + acción",
+      "questionEn": "How do you evaluate an action as easy, difficult, important, or similar?",
+      "answerEn": "Use es, then the describing word, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Es presents a general judgment, such as es fácil or es difícil. The action being judged stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir: aprender, salir, imaginar. There is no separate “it” before es in Spanish.",
+      "example": { "es": "Es fácil aprender con práctica.", "en": "It is easy to learn with practice." },
+      "tags": ["grammar", "impersonal es", "evaluation", "infinitive", "A2"]
+    },
+    {
+      "id": "grammar-si-que-emphasis",
+      "kind": "grammar",
+      "promptEs": "sí que + verbo",
+      "questionEn": "How do you strongly confirm that something really is true?",
+      "answerEn": "Put sí que before the changed verb to mean “really does,” “certainly is,” or “indeed.”",
+      "noteEn": "The accent on sí matters: sí confirms, while si without an accent means “if.” Que is part of this emphatic pattern and does not need a separate “that” in English. The following verb still changes normally for the person and time.",
+      "example": { "es": "Marta sí que sabe cocinar.", "en": "Marta really does know how to cook." },
+      "tags": ["grammar", "sí que", "emphasis", "A2"]
+    },
+    {
+      "id": "phrase-poner-a-prueba",
+      "kind": "phrase",
+      "promptEs": "poner algo o a alguien a prueba",
+      "questionEn": "How do you say that something tests a person, ability, or limit?",
+      "answerEn": "Use the matching form of poner, name what is tested, and add a prueba; the position of the tested item can vary.",
+      "noteEn": "Poner is literally “to put,” but poner a prueba is the conventional expression “to test” or “to put to the test.” With a person, Spanish normally marks that person with a: poner a Marta a prueba. With a thing, the thing can follow poner directly.",
+      "example": { "es": "Este problema pone a prueba nuestra paciencia.", "en": "This problem tests our patience." },
+      "tags": ["phrase", "poner a prueba", "testing", "A2"]
+    },
+    {
+      "id": "phrase-eso-es",
+      "kind": "phrase",
+      "promptEs": "¡eso es!",
+      "questionEn": "What can you say when you suddenly recognize the right answer or explanation?",
+      "answerEn": "Say ¡Eso es! to mean “That's it!” or “Exactly!”",
+      "noteEn": "This short reaction confirms that the idea just mentioned is the answer. It is more idiomatic than translating eso and es separately in this use.",
+      "example": { "es": "—¿La puerta azul? —¡Eso es!", "en": "“The blue door?” “That's it!”" },
+      "tags": ["phrase", "reaction", "realization", "A2"]
+    },
+    {
+      "id": "grammar-en-cuanto-subjunctive-future",
+      "kind": "grammar",
+      "promptEs": "en cuanto + acción futura",
+      "questionEn": "How do you say that one future action will happen as soon as another one happens?",
+      "answerEn": "Use a future statement, then en cuanto and a special form of the action that has not happened yet.",
+      "noteEn": "En cuanto means “as soon as.” When the event after it is still in the future, Spanish uses a special verb form called the subjunctive: llega becomes llegue, and termina becomes termine. The other clause can use the future, as in llamaré, to say what will happen then. For a habitual fact, use the ordinary present instead.",
+      "example": { "es": "Te llamaré en cuanto llegue.", "en": "I will call you as soon as I arrive." },
+      "tags": ["grammar", "en cuanto", "future time clause", "subjunctive", "B1"]
+    },
+    {
+      "id": "phrase-hacer-ruido",
+      "kind": "phrase",
+      "promptEs": "hacer ruido",
+      "questionEn": "How do you say “to make noise” in Spanish?",
+      "answerEn": "Use the matching form of hacer followed by ruido.",
+      "noteEn": "Spanish conventionally pairs hacer, “to make or do,” with ruido, “noise.” Hacer changes for the person and time: hago ruido, hacen ruido, hizo ruido.",
+      "example": { "es": "Los vecinos hacen mucho ruido.", "en": "The neighbors make a lot of noise." },
+      "tags": ["phrase", "hacer ruido", "collocation", "A1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-fantasia:wish",
+      "labelEs": "SI HUBIERA ALGUNA MANERA DE QUE PUDIÉRAMOS ESTAR JUNTOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:wish:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00004" }], "cardIds": ["word-si", "grammar-si-imperfect-subjunctive-wish"] },
+        { "id": "es-xkcd-fantasia:wish:w02", "text": "HUBIERA", "normalized": "hubiera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00005" }], "cardIds": ["word-hubiera--hypothetical-existence", "grammar-si-imperfect-subjunctive-wish"] },
+        { "id": "es-xkcd-fantasia:wish:w03", "text": "ALGUNA", "normalized": "alguna", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00006" }], "cardIds": ["word-alguna--any-hypothetical"] },
+        { "id": "es-xkcd-fantasia:wish:w04", "text": "MANERA", "normalized": "manera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00007" }], "cardIds": ["word-manera", "grammar-manera-de-que-subjunctive"] },
+        { "id": "es-xkcd-fantasia:wish:w05", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00008" }], "cardIds": ["word-de--manera-de-que", "grammar-manera-de-que-subjunctive"] },
+        { "id": "es-xkcd-fantasia:wish:w06", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00022" }], "cardIds": ["word-que--clause-link", "grammar-manera-de-que-subjunctive"] },
+        { "id": "es-xkcd-fantasia:wish:w07", "text": "PUDIÉRAMOS", "normalized": "pudiéramos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00023" }], "cardIds": ["word-pudiéramos--hypothetical-could", "grammar-manera-de-que-subjunctive"] },
+        { "id": "es-xkcd-fantasia:wish:w08", "text": "ESTAR", "normalized": "estar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00024" }], "cardIds": ["word-estar--state-infinitive", "grammar-manera-de-que-subjunctive"] },
+        { "id": "es-xkcd-fantasia:wish:w09", "text": "JUNTOS", "normalized": "juntos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00025" }], "cardIds": ["word-juntos", "grammar-manera-de-que-subjunctive"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:wish:app-unreal-wish",
+          "cardId": "grammar-si-imperfect-subjunctive-wish",
+          "participantWordIds": ["es-xkcd-fantasia:wish:w01", "es-xkcd-fantasia:wish:w02"],
+          "exampleEs": "SI HUBIERA",
+          "explanationEn": "Si introduces the wished-for situation, and hubiera presents existence as imagined rather than real."
+        },
+        {
+          "id": "es-xkcd-fantasia:wish:app-way-for-result",
+          "cardId": "grammar-manera-de-que-subjunctive",
+          "participantWordIds": [
+            "es-xkcd-fantasia:wish:w04", "es-xkcd-fantasia:wish:w05", "es-xkcd-fantasia:wish:w06",
+            "es-xkcd-fantasia:wish:w07", "es-xkcd-fantasia:wish:w08", "es-xkcd-fantasia:wish:w09"
+          ],
+          "exampleEs": "MANERA DE QUE PUDIÉRAMOS ESTAR JUNTOS",
+          "explanationEn": "Manera de que introduces the result the imagined way would permit; pudiéramos marks that ability as hypothetical, and estar juntos supplies the possible action and state."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:lucky",
+      "labelEs": "TENEMOS TANTA SUERTE DE TENERNOS EL UNO AL OTRO. A TODO ESTO, ¿CÓMO EMPEZÓ?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0009" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:lucky:w01", "text": "TENEMOS", "normalized": "tenemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00001" }], "cardIds": ["word-tenemos", "grammar-tener-suerte-de-infinitive"] },
+        { "id": "es-xkcd-fantasia:lucky:w02", "text": "TANTA", "normalized": "tanta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00002" }], "cardIds": ["word-tanta--so-much"] },
+        { "id": "es-xkcd-fantasia:lucky:w03", "text": "SUERTE", "normalized": "suerte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00003" }], "cardIds": ["word-suerte", "grammar-tener-suerte-de-infinitive"] },
+        { "id": "es-xkcd-fantasia:lucky:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00014" }], "cardIds": ["word-de--tener-suerte-complement", "grammar-tener-suerte-de-infinitive"] },
+        { "id": "es-xkcd-fantasia:lucky:w05", "text": "TENERNOS", "normalized": "tenernos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00015" }], "cardIds": ["word-tenernos--each-other", "grammar-tener-suerte-de-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-fantasia:lucky:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00016" }], "cardIds": ["word-el--article", "phrase-el-uno-al-otro"] },
+        { "id": "es-xkcd-fantasia:lucky:w07", "text": "UNO", "normalized": "uno", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00017" }], "cardIds": ["word-uno--one-person", "phrase-el-uno-al-otro"] },
+        { "id": "es-xkcd-fantasia:lucky:w08", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00026" }], "cardIds": ["word-al--contraction", "phrase-el-uno-al-otro"] },
+        { "id": "es-xkcd-fantasia:lucky:w09", "text": "OTRO", "normalized": "otro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00027" }], "cardIds": ["word-otro", "phrase-el-uno-al-otro"] },
+        { "id": "es-xkcd-fantasia:lucky:w10", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00028" }], "cardIds": ["word-a--fixed-a-todo-esto", "phrase-a-todo-esto"] },
+        { "id": "es-xkcd-fantasia:lucky:w11", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00029" }], "cardIds": ["word-todo--fixed-a-todo-esto", "phrase-a-todo-esto"] },
+        { "id": "es-xkcd-fantasia:lucky:w12", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00030" }], "cardIds": ["word-esto--fixed-a-todo-esto", "phrase-a-todo-esto"] },
+        { "id": "es-xkcd-fantasia:lucky:w13", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00033" }], "cardIds": ["word-cómo"] },
+        { "id": "es-xkcd-fantasia:lucky:w14", "text": "EMPEZÓ", "normalized": "empezó", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00034" }], "cardIds": ["word-empezó"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:lucky:app-lucky-to",
+          "cardId": "grammar-tener-suerte-de-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:lucky:w01", "es-xkcd-fantasia:lucky:w03", "es-xkcd-fantasia:lucky:w04", "es-xkcd-fantasia:lucky:w05"],
+          "exampleEs": "TENEMOS TANTA SUERTE DE TENERNOS",
+          "explanationEn": "Tenemos identifies the fortunate people, suerte names the good fortune, and de connects it to tenernos, whose action stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-fantasia:lucky:app-attached-nos",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:lucky:w05"],
+          "exampleEs": "TENERNOS",
+          "explanationEn": "Nos is attached to the end of tener, the unchanged -er form, and supplies the people received by the action."
+        },
+        {
+          "id": "es-xkcd-fantasia:lucky:app-each-other",
+          "cardId": "phrase-el-uno-al-otro",
+          "participantWordIds": ["es-xkcd-fantasia:lucky:w06", "es-xkcd-fantasia:lucky:w07", "es-xkcd-fantasia:lucky:w08", "es-xkcd-fantasia:lucky:w09"],
+          "exampleEs": "EL UNO AL OTRO",
+          "explanationEn": "The full four-word expression makes the reciprocal relationship between the two people explicit."
+        },
+        {
+          "id": "es-xkcd-fantasia:lucky:app-topic-transition",
+          "cardId": "phrase-a-todo-esto",
+          "participantWordIds": ["es-xkcd-fantasia:lucky:w10", "es-xkcd-fantasia:lucky:w11", "es-xkcd-fantasia:lucky:w12"],
+          "exampleEs": "A TODO ESTO",
+          "explanationEn": "The three words form a transition that reconnects the conversation before the following question."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:dont-remember",
+      "labelEs": "YO, EH... NO LO RECUERDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0015" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-fantasia:dont-remember:w01", "text": "YO", "normalized": "yo",
+          "explicitBounds": [{ "x": 52.8378, "y": 36.3445, "width": 2.7027, "height": 2.7311 }],
+          "geometryRationale": "OCR fused the four tiny reply words into two tall columns; this box was measured directly around YO in the full-resolution raster.",
+          "cardIds": ["word-yo"]
+        },
+        {
+          "id": "es-xkcd-fantasia:dont-remember:w02", "text": "EH", "normalized": "eh",
+          "explicitBounds": [{ "x": 56.7568, "y": 36.5546, "width": 5.4054, "height": 2.521 }],
+          "geometryRationale": "OCR fused the four tiny reply words into two tall columns; this box was measured directly around EH and its trailing ellipsis.",
+          "cardIds": ["word-eh--hesitation"]
+        },
+        {
+          "id": "es-xkcd-fantasia:dont-remember:w03", "text": "NO", "normalized": "no",
+          "explicitBounds": [{ "x": 52.8378, "y": 39.4958, "width": 2.5676, "height": 2.7311 }],
+          "geometryRationale": "OCR fused the four tiny reply words into two tall columns; this box was measured directly around NO in the full-resolution raster.",
+          "cardIds": ["word-no"]
+        },
+        {
+          "id": "es-xkcd-fantasia:dont-remember:w04", "text": "LO", "normalized": "lo",
+          "explicitBounds": [{ "x": 56.3514, "y": 39.4958, "width": 2.5676, "height": 2.7311 }],
+          "geometryRationale": "OCR fused the four tiny reply words into two tall columns; this box was measured directly around LO in the full-resolution raster.",
+          "cardIds": ["word-lo--object-pronoun"]
+        },
+        { "id": "es-xkcd-fantasia:dont-remember:w05", "text": "RECUERDO", "normalized": "recuerdo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00048" }], "cardIds": ["word-recuerdo--remember"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-fantasia:how-together",
+      "labelEs": "NO, EN SERIO, ¿CÓMO ACABAMOS JUNTOS? ES DIFÍCIL IMAGINARLO SUCEDIENDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:how-together:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00009" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-fantasia:how-together:w02", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00010" }], "cardIds": ["word-en--fixed-en-serio", "phrase-en-serio"] },
+        { "id": "es-xkcd-fantasia:how-together:w03", "text": "SERIO", "normalized": "serio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00011" }], "cardIds": ["word-serio", "phrase-en-serio"] },
+        { "id": "es-xkcd-fantasia:how-together:w04", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00012" }], "cardIds": ["word-cómo"] },
+        {
+          "id": "es-xkcd-fantasia:how-together:w05", "text": "ACABAMOS", "normalized": "acabamos",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00013" }, { "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00018" }],
+          "cardIds": ["word-acabamos--ended-up-state", "grammar-acabar-resulting-state"]
+        },
+        { "id": "es-xkcd-fantasia:how-together:w06", "text": "JUNTOS", "normalized": "juntos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00019" }], "cardIds": ["word-juntos", "grammar-acabar-resulting-state"] },
+        { "id": "es-xkcd-fantasia:how-together:w07", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00020" }], "cardIds": ["word-es--impersonal-evaluation", "grammar-es-adjective-infinitive-evaluation"] },
+        { "id": "es-xkcd-fantasia:how-together:w08", "text": "DIFÍCIL", "normalized": "difícil", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00021" }], "cardIds": ["word-difícil", "grammar-es-adjective-infinitive-evaluation"] },
+        { "id": "es-xkcd-fantasia:how-together:w09", "text": "IMAGINARLO", "normalized": "imaginarlo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00031" }], "cardIds": ["word-imaginarlo--imagine-it", "grammar-es-adjective-infinitive-evaluation", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-fantasia:how-together:w10", "text": "SUCEDIENDO", "normalized": "sucediendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00032" }], "cardIds": ["word-sucediendo--happening"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:how-together:app-seriously",
+          "cardId": "phrase-en-serio",
+          "participantWordIds": ["es-xkcd-fantasia:how-together:w02", "es-xkcd-fantasia:how-together:w03"],
+          "exampleEs": "EN SERIO",
+          "explanationEn": "En and serio form the fixed conversational expression that signals a sincere, non-joking question."
+        },
+        {
+          "id": "es-xkcd-fantasia:how-together:app-resulting-state",
+          "cardId": "grammar-acabar-resulting-state",
+          "participantWordIds": ["es-xkcd-fantasia:how-together:w05", "es-xkcd-fantasia:how-together:w06"],
+          "exampleEs": "ACABAMOS JUNTOS",
+          "explanationEn": "Acabamos names the resulting outcome for “we,” and juntos is the state in which they ended up."
+        },
+        {
+          "id": "es-xkcd-fantasia:how-together:app-evaluation",
+          "cardId": "grammar-es-adjective-infinitive-evaluation",
+          "participantWordIds": ["es-xkcd-fantasia:how-together:w07", "es-xkcd-fantasia:how-together:w08", "es-xkcd-fantasia:how-together:w09"],
+          "exampleEs": "ES DIFÍCIL IMAGINARLO",
+          "explanationEn": "Es difícil supplies the general judgment, while imaginarlo is the unchanged -ar action being judged."
+        },
+        {
+          "id": "es-xkcd-fantasia:how-together:app-attached-lo",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:how-together:w09"],
+          "exampleEs": "IMAGINARLO",
+          "explanationEn": "Lo is attached to imaginar, the unchanged -ar form, and supplies the thing imagined."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:limits",
+      "labelEs": "SÍ QUE PONE A PRUEBA LOS LÍMITES DE LA FANTASÍA...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:limits:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00035" }], "cardIds": ["word-sí--emphatic-affirmation", "grammar-si-que-emphasis"] },
+        { "id": "es-xkcd-fantasia:limits:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00036" }], "cardIds": ["word-que--si-que-emphasis", "grammar-si-que-emphasis"] },
+        { "id": "es-xkcd-fantasia:limits:w03", "text": "PONE", "normalized": "pone", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00037" }], "cardIds": ["word-pone--put-to-test", "grammar-si-que-emphasis", "phrase-poner-a-prueba"] },
+        { "id": "es-xkcd-fantasia:limits:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00038" }], "cardIds": ["word-a--fixed-poner-a-prueba", "phrase-poner-a-prueba"] },
+        { "id": "es-xkcd-fantasia:limits:w05", "text": "PRUEBA", "normalized": "prueba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00039" }], "cardIds": ["word-prueba--fixed-poner-a-prueba", "phrase-poner-a-prueba"] },
+        { "id": "es-xkcd-fantasia:limits:w06", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00040" }], "cardIds": ["word-los", "phrase-poner-a-prueba"] },
+        {
+          "id": "es-xkcd-fantasia:limits:w07", "text": "LÍMITES", "normalized": "límites",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00041" }, { "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00042" }],
+          "cardIds": ["word-límites", "phrase-poner-a-prueba"]
+        },
+        { "id": "es-xkcd-fantasia:limits:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00043" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fantasia:limits:w09", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00044" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fantasia:limits:w10", "text": "FANTASÍA", "normalized": "fantasía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00045" }], "cardIds": ["word-fantasía"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:limits:app-emphasis",
+          "cardId": "grammar-si-que-emphasis",
+          "participantWordIds": ["es-xkcd-fantasia:limits:w01", "es-xkcd-fantasia:limits:w02", "es-xkcd-fantasia:limits:w03"],
+          "exampleEs": "SÍ QUE PONE",
+          "explanationEn": "Sí que adds strong confirmation before pone, the verb whose truth is being emphasized."
+        },
+        {
+          "id": "es-xkcd-fantasia:limits:app-test",
+          "cardId": "phrase-poner-a-prueba",
+          "participantWordIds": ["es-xkcd-fantasia:limits:w03", "es-xkcd-fantasia:limits:w04", "es-xkcd-fantasia:limits:w05", "es-xkcd-fantasia:limits:w06", "es-xkcd-fantasia:limits:w07"],
+          "exampleEs": "PONE A PRUEBA LOS LÍMITES",
+          "explanationEn": "Pone a prueba supplies the testing expression, and los límites fills its role as the thing being tested."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:realization",
+      "labelEs": "¿FANTASÍA? ¡ESO ES!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0016" }],
+      "words": [
+        { "id": "es-xkcd-fantasia:realization:w01", "text": "FANTASÍA", "normalized": "fantasía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00049" }], "cardIds": ["word-fantasía"] },
+        { "id": "es-xkcd-fantasia:realization:w02", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00050" }], "cardIds": ["word-eso--thats-it", "phrase-eso-es"] },
+        { "id": "es-xkcd-fantasia:realization:w03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00051" }], "cardIds": ["word-es--thats-it", "phrase-eso-es"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:realization:app-thats-it",
+          "cardId": "phrase-eso-es",
+          "participantWordIds": ["es-xkcd-fantasia:realization:w02", "es-xkcd-fantasia:realization:w03"],
+          "exampleEs": "¡ESO ES!",
+          "explanationEn": "Eso es is used as a complete reaction recognizing the preceding idea as the answer."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:fantasy-explanation",
+      "labelEs": "DIOS MÍO, ES LA ÚNICA EXPLICACIÓN: SOMOS OBJETOS EN ALGUNA FANTASÍA TRANSITORIA. ¡DESAPARECEREMOS EN CUANTO TERMINE!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0024" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w01", "text": "DIOS", "normalized": "dios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00052" }], "cardIds": ["word-dios--exclamation", "phrase-dios-mio"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w02", "text": "MÍO", "normalized": "mío", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00053" }], "cardIds": ["word-mío", "phrase-dios-mio"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00054" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00055" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w05", "text": "ÚNICA", "normalized": "única", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00056" }], "cardIds": ["word-única"] },
+        {
+          "id": "es-xkcd-fantasia:fantasy-explanation:w06", "text": "EXPLICACIÓN", "normalized": "explicación",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00057" }, { "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00066" }],
+          "cardIds": ["word-explicación"]
+        },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w07", "text": "SOMOS", "normalized": "somos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00067" }], "cardIds": ["word-somos--identity"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w08", "text": "OBJETOS", "normalized": "objetos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00068" }], "cardIds": ["word-objetos"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w09", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00069" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w10", "text": "ALGUNA", "normalized": "alguna", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00076" }], "cardIds": ["word-alguna"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w11", "text": "FANTASÍA", "normalized": "fantasía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00077" }], "cardIds": ["word-fantasía"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w12", "text": "TRANSITORIA", "normalized": "transitoria", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00078" }], "cardIds": ["word-transitoria"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w13", "text": "DESAPARECEREMOS", "normalized": "desapareceremos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00081" }], "cardIds": ["word-desapareceremos", "grammar-simple-future", "grammar-en-cuanto-subjunctive-future"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w14", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00082" }], "cardIds": ["word-en--fixed-en-cuanto", "grammar-en-cuanto-subjunctive-future"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w15", "text": "CUANTO", "normalized": "cuanto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00083" }], "cardIds": ["word-cuanto--fixed-en-cuanto", "grammar-en-cuanto-subjunctive-future"] },
+        { "id": "es-xkcd-fantasia:fantasy-explanation:w16", "text": "TERMINE", "normalized": "termine", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00084" }], "cardIds": ["word-termine--future-trigger-subjunctive", "grammar-en-cuanto-subjunctive-future"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:fantasy-explanation:app-my-god",
+          "cardId": "phrase-dios-mio",
+          "participantWordIds": ["es-xkcd-fantasia:fantasy-explanation:w01", "es-xkcd-fantasia:fantasy-explanation:w02"],
+          "exampleEs": "DIOS MÍO",
+          "explanationEn": "Dios mío is the complete emotional exclamation used before the speaker's realization."
+        },
+        {
+          "id": "es-xkcd-fantasia:fantasy-explanation:app-future-disappear",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-fantasia:fantasy-explanation:w13"],
+          "exampleEs": "DESAPARECEREMOS",
+          "explanationEn": "The full verb keeps desaparecer and adds the future ending -emos for “we.”"
+        },
+        {
+          "id": "es-xkcd-fantasia:fantasy-explanation:app-as-soon-as",
+          "cardId": "grammar-en-cuanto-subjunctive-future",
+          "participantWordIds": ["es-xkcd-fantasia:fantasy-explanation:w13", "es-xkcd-fantasia:fantasy-explanation:w14", "es-xkcd-fantasia:fantasy-explanation:w15", "es-xkcd-fantasia:fantasy-explanation:w16"],
+          "exampleEs": "DESAPARECEREMOS EN CUANTO TERMINE",
+          "explanationEn": "Desapareceremos states the later future result; en cuanto introduces its future trigger, and termine uses the special form for an ending that has not happened yet."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:lose-each-other",
+      "labelEs": "TE PERDERÉ Y ME PERDERÁS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0029" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:lose-each-other:w01", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00088" }], "cardIds": ["word-te--direct"] },
+        { "id": "es-xkcd-fantasia:lose-each-other:w02", "text": "PERDERÉ", "normalized": "perderé", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00089" }], "cardIds": ["word-perderé", "grammar-simple-future"] },
+        { "id": "es-xkcd-fantasia:lose-each-other:w03", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00090" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-fantasia:lose-each-other:w04", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00091" }], "cardIds": ["word-me--direct"] },
+        { "id": "es-xkcd-fantasia:lose-each-other:w05", "text": "PERDERÁS", "normalized": "perderás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00092" }], "cardIds": ["word-perderás", "grammar-simple-future"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:lose-each-other:app-future-i",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-fantasia:lose-each-other:w02"],
+          "exampleEs": "PERDERÉ",
+          "explanationEn": "Perder keeps its full dictionary form and adds -é for a future action by “I.”"
+        },
+        {
+          "id": "es-xkcd-fantasia:lose-each-other:app-future-you",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-fantasia:lose-each-other:w05"],
+          "exampleEs": "PERDERÁS",
+          "explanationEn": "Perder keeps its full dictionary form and adds -ás for a future action by informal singular “you.”"
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:oh-god",
+      "labelEs": "OH DIOS.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0030" }],
+      "words": [
+        { "id": "es-xkcd-fantasia:oh-god:w01", "text": "OH", "normalized": "oh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00093" }], "cardIds": ["word-oh"] },
+        { "id": "es-xkcd-fantasia:oh-god:w02", "text": "DIOS", "normalized": "dios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00094" }], "cardIds": ["word-dios--exclamation"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-fantasia:burn-world",
+      "labelEs": "BIEN, NO ME VOY A IR SIN HACER RUIDO. VOY A QUEMAR ESTE PUTO MUNDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:burn-world:w01", "text": "BIEN", "normalized": "bien", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00058" }], "cardIds": ["word-bien--discourse"] },
+        { "id": "es-xkcd-fantasia:burn-world:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00059" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-fantasia:burn-world:w03", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00060" }], "cardIds": ["word-me--irse-marker"] },
+        { "id": "es-xkcd-fantasia:burn-world:w04", "text": "VOY", "normalized": "voy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00061" }], "cardIds": ["word-voy", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w05", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00062" }], "cardIds": ["word-a--infinitive-link", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w06", "text": "IR", "normalized": "ir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00063" }], "cardIds": ["word-ir--leave", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w07", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00064" }], "cardIds": ["word-sin", "grammar-sin-infinitive"] },
+        {
+          "id": "es-xkcd-fantasia:burn-world:w08", "text": "HACER", "normalized": "hacer",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00065" }, { "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00070" }],
+          "cardIds": ["word-hacer--make", "grammar-sin-infinitive", "phrase-hacer-ruido"]
+        },
+        { "id": "es-xkcd-fantasia:burn-world:w09", "text": "RUIDO", "normalized": "ruido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00071" }], "cardIds": ["word-ruido", "phrase-hacer-ruido"] },
+        { "id": "es-xkcd-fantasia:burn-world:w10", "text": "VOY", "normalized": "voy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00072" }], "cardIds": ["word-voy", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w11", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00073" }], "cardIds": ["word-a--infinitive-link", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w12", "text": "QUEMAR", "normalized": "quemar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00074" }], "cardIds": ["word-quemar", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-fantasia:burn-world:w13", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00075" }], "cardIds": ["word-este"] },
+        { "id": "es-xkcd-fantasia:burn-world:w14", "text": "PUTO", "normalized": "puto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00079" }], "cardIds": ["word-puto--vulgar-intensifier"] },
+        { "id": "es-xkcd-fantasia:burn-world:w15", "text": "MUNDO", "normalized": "mundo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00080" }], "cardIds": ["word-mundo"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:burn-world:app-going-to-leave",
+          "cardId": "grammar-ir-a-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:burn-world:w04", "es-xkcd-fantasia:burn-world:w05", "es-xkcd-fantasia:burn-world:w06"],
+          "exampleEs": "VOY A IR",
+          "explanationEn": "Voy changes for the speaker, a links to the planned action, and ir stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-fantasia:burn-world:app-without-action",
+          "cardId": "grammar-sin-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:burn-world:w07", "es-xkcd-fantasia:burn-world:w08"],
+          "exampleEs": "SIN HACER",
+          "explanationEn": "Sin introduces the action that is absent, and hacer remains in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-fantasia:burn-world:app-make-noise",
+          "cardId": "phrase-hacer-ruido",
+          "participantWordIds": ["es-xkcd-fantasia:burn-world:w08", "es-xkcd-fantasia:burn-world:w09"],
+          "exampleEs": "HACER RUIDO",
+          "explanationEn": "Hacer and ruido form the conventional Spanish pairing for making noise."
+        },
+        {
+          "id": "es-xkcd-fantasia:burn-world:app-going-to-burn",
+          "cardId": "grammar-ir-a-infinitive",
+          "participantWordIds": ["es-xkcd-fantasia:burn-world:w10", "es-xkcd-fantasia:burn-world:w11", "es-xkcd-fantasia:burn-world:w12"],
+          "exampleEs": "VOY A QUEMAR",
+          "explanationEn": "Voy changes for the speaker, a links to the planned action, and quemar stays in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:burn-command",
+      "labelEs": "¡QUEMA EL MUNDO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0027" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:burn-command:w01", "text": "QUEMA", "normalized": "quema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00085" }], "cardIds": ["word-quema--burn-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-fantasia:burn-command:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00086" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fantasia:burn-command:w03", "text": "MUNDO", "normalized": "mundo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00087" }], "cardIds": ["word-mundo"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:burn-command:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-fantasia:burn-command:w01"],
+          "exampleEs": "¡QUEMA!",
+          "explanationEn": "Quema is the positive informal command addressed to one person, formed from quemar."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:fire",
+      "labelEs": "¡FUEGO! ¡FUEGO! LIMPIARÉ ESTE LUGAR DEMONÍACO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0032" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fantasia:fire:w01", "text": "FUEGO", "normalized": "fuego", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00095" }], "cardIds": ["word-fuego"] },
+        { "id": "es-xkcd-fantasia:fire:w02", "text": "FUEGO", "normalized": "fuego", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00096" }], "cardIds": ["word-fuego"] },
+        { "id": "es-xkcd-fantasia:fire:w03", "text": "LIMPIARÉ", "normalized": "limpiaré", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00097" }], "cardIds": ["word-limpiaré--cleanse", "grammar-simple-future"] },
+        { "id": "es-xkcd-fantasia:fire:w04", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00098" }], "cardIds": ["word-este"] },
+        { "id": "es-xkcd-fantasia:fire:w05", "text": "LUGAR", "normalized": "lugar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00099" }], "cardIds": ["word-lugar"] },
+        { "id": "es-xkcd-fantasia:fire:w06", "text": "DEMONÍACO", "normalized": "demoníaco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fantasia:ocr-token-00100" }], "cardIds": ["word-demoníaco"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-fantasia:fire:app-future-clean",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-fantasia:fire:w03"],
+          "exampleEs": "LIMPIARÉ",
+          "explanationEn": "Limpiar keeps its full dictionary form and adds -é for a future action by “I.”"
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-fantasia:question-symbol",
+      "labelEs": "??",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0026" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-fantasia:question-symbol:excluded-question-marks",
+          "text": "??",
+          "reason": "symbol",
+          "rationale": "These two question-mark symbols show the character's silent confusion and are not Spanish lexical words.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fantasia:ocr-line-0026" }]
+        }
+      ],
+      "applications": []
+    }
+  ]
+}

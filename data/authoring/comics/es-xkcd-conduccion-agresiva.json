@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-conduccion-agresiva",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Road Rage",
+  "titleEs": "Conducción agresiva",
+  "titleText": {
+    "es": "Vale, ahora que la sensación de pérdida le atenaza, pega un frenazo.",
+    "en": "Okay, now just as the loss hits him, slam on the brakes.",
+    "noteEn": "The title text reveals the final step of the retaliation: after the synthesized voice makes the tailgater feel a sudden personal loss, the driver plans to brake sharply."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-tipo--guy",
+      "kind": "word",
+      "promptEs": "tipo",
+      "answerEn": "guy; man",
+      "noteEn": "In informal speech, tipo can refer to a man as “guy.” In other contexts, it can instead mean a type or kind.",
+      "example": { "es": "Ese tipo vive cerca.", "en": "That guy lives nearby." },
+      "tags": ["word", "person", "informal", "A1"]
+    },
+    {
+      "id": "word-pegado--very-close",
+      "kind": "word",
+      "promptEs": "pegado",
+      "answerEn": "right up against; very close",
+      "noteEn": "Pegado comes from pegar, “to stick.” With estar and a, it can describe someone or something pressed against or extremely close to another person or thing.",
+      "example": { "es": "El armario está pegado a la pared.", "en": "The wardrobe is right up against the wall." },
+      "tags": ["word", "adjective", "proximity", "A2"]
+    },
+    {
+      "id": "word-echaré--take-a-look",
+      "kind": "word",
+      "promptEs": "echaré",
+      "answerEn": "I'll take, as part of echar un vistazo",
+      "noteEn": "Echar has many meanings, including “to throw” or “to put.” In echar un vistazo, it forms the conventional expression “to take a look.” The ending -é marks a future action by “I.”",
+      "example": { "es": "Echaré un vistazo al informe.", "en": "I'll take a look at the report." },
+      "tags": ["word", "echar", "future", "fixed expression", "A2"]
+    },
+    { "id": "word-vistazo", "kind": "word", "promptEs": "vistazo", "answerEn": "glance; quick look", "noteEn": "", "tags": ["word", "noun", "A2"] },
+    {
+      "id": "word-su--his",
+      "kind": "word",
+      "promptEs": "su",
+      "answerEn": "his",
+      "noteEn": "Su agrees with the possessed thing, not with the owner. The same Spanish form can mean his, her, its, their, or formal your; the surrounding context identifies the owner.",
+      "example": { "es": "Carlos abre su portátil.", "en": "Carlos opens his laptop." },
+      "tags": ["word", "possessive", "third person", "A1"]
+    },
+    { "id": "word-encendido--powered-on", "kind": "word", "promptEs": "encendido", "answerEn": "on; powered on", "noteEn": "For a device, encendido means switched on or running. It is the describing form made from encender, “to turn on.”", "example": { "es": "El ordenador está encendido.", "en": "The computer is on." }, "tags": ["word", "technology", "state", "A2"] },
+    {
+      "id": "word-probablemente",
+      "kind": "word",
+      "promptEs": "probablemente",
+      "answerEn": "probably",
+      "noteEn": "Probablemente combines probable with -mente to describe a claim as likely rather than certain.",
+      "example": { "es": "Probablemente llegará tarde.", "en": "She will probably arrive late." },
+      "tags": ["word", "adverb", "probability", "A2"]
+    },
+    { "id": "word-asiento", "kind": "word", "promptEs": "asiento", "answerEn": "seat", "noteEn": "", "tags": ["word", "vehicle", "noun", "A1"] },
+    {
+      "id": "word-de--rear-position",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; links an item to atrás to describe it as the back or rear one",
+      "noteEn": "Spanish can put de atrás after an object to identify the one positioned at the back. Natural English usually puts “back” before the noun.",
+      "example": { "es": "Usamos la puerta de atrás.", "en": "We use the back door." },
+      "tags": ["word", "preposition", "position", "A2"]
+    },
+    {
+      "id": "word-se--autoconectarse",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "itself; marks autoconectarse, to connect automatically",
+      "noteEn": "Autoconectarse uses a matching small word for the thing that connects: me, te, se, nos, or os. Use se with one third-person thing that connects itself or connects automatically.",
+      "example": { "es": "El teléfono se autoconecta a la red.", "en": "The phone connects to the network automatically." },
+      "tags": ["word", "pronoun", "pronominal verb", "technology", "A2"]
+    },
+    {
+      "id": "word-autoconecta--automatically-connects",
+      "kind": "word",
+      "promptEs": "autoconecta",
+      "answerEn": "connects automatically; auto-connects",
+      "noteEn": "Autoconecta is a present form used with one device or connection. With se, it describes that thing connecting without the user starting the connection manually.",
+      "example": { "es": "La tableta se autoconecta.", "en": "The tablet connects automatically." },
+      "tags": ["word", "technology", "present", "A2"]
+    },
+    { "id": "word-buscamos--look-for", "kind": "word", "promptEs": "buscamos", "answerEn": "we look for; we search for", "noteEn": "Buscamos is the present form of buscar for a group that includes the speaker.", "example": { "es": "Buscamos una solución.", "en": "We are looking for a solution." }, "tags": ["word", "buscar", "present", "first person plural", "A1"] },
+    {
+      "id": "word-exploit--security",
+      "kind": "word",
+      "promptEs": "exploit",
+      "answerEn": "security exploit; a way to take advantage of a software flaw",
+      "noteEn": "Spanish computing language borrows the English noun exploit. It names code or a method that uses a vulnerability to make a system do something unintended.",
+      "example": { "es": "El equipo corrigió el exploit.", "en": "The team fixed the exploit." },
+      "tags": ["word", "computing", "security", "loanword", "B1"]
+    },
+    {
+      "id": "word-remoto--network",
+      "kind": "word",
+      "promptEs": "remoto",
+      "answerEn": "remote; usable over a network without physical access",
+      "noteEn": "In computing, remoto describes access or an action performed from another machine or location through a network.",
+      "example": { "es": "El servidor permite acceso remoto.", "en": "The server allows remote access." },
+      "tags": ["word", "computing", "adjective", "B1"]
+    },
+    { "id": "word-instalamos", "kind": "word", "promptEs": "instalamos", "answerEn": "we install", "noteEn": "", "tags": ["word", "instalar", "present", "first person plural", "A1"] },
+    { "id": "word-sintetizador", "kind": "word", "promptEs": "sintetizador", "answerEn": "synthesizer", "noteEn": "A sintetizador de voz is a speech synthesizer: software or hardware that produces spoken audio.", "example": { "es": "El sintetizador produce una voz artificial.", "en": "The synthesizer produces an artificial voice." }, "tags": ["word", "technology", "audio", "B1"] },
+    {
+      "id": "word-probamos--try-option",
+      "kind": "word",
+      "promptEs": "probamos",
+      "answerEn": "we try; we test an option",
+      "noteEn": "Probamos is a present form of probar for a group including the speaker. With con, it introduces a person, thing, or approach chosen to see whether it works.",
+      "example": { "es": "Probamos con otra clave.", "en": "We try another key." },
+      "tags": ["word", "probar", "present", "first person plural", "A2"]
+    },
+    { "id": "word-psicológico", "kind": "word", "promptEs": "psicológico", "answerEn": "psychological", "noteEn": "", "tags": ["word", "adjective", "B1"] },
+    { "id": "word-oscuro--sinister", "kind": "word", "promptEs": "oscuro", "answerEn": "dark; sinister", "noteEn": "Oscuro can describe low light literally. Applied to an idea or action, it can instead suggest something disturbing, sinister, or morally grim.", "example": { "es": "La historia tiene un final oscuro.", "en": "The story has a dark ending." }, "tags": ["word", "adjective", "figurative", "B1"] },
+    { "id": "word-ella--subject", "kind": "word", "promptEs": "ella", "answerEn": "she", "noteEn": "Ella is the feminine singular subject pronoun. Spanish often leaves subject pronouns unstated, but ella can be included for clarity or emphasis.", "example": { "es": "Ella vive aquí.", "en": "She lives here." }, "tags": ["word", "subject pronoun", "feminine", "A1"] },
+    {
+      "id": "word-fuera--counterfactual-ser",
+      "kind": "word",
+      "promptEs": "fuera",
+      "answerEn": "were; were the case, in an unreal condition",
+      "noteEn": "Fuera is a special form of ser used for a hypothetical situation. In si no fuera por..., it introduces something without which the result would be different. Do not confuse it with fuera meaning “outside.”",
+      "example": { "es": "Si fuera fácil, todos lo harían.", "en": "If it were easy, everyone would do it." },
+      "tags": ["word", "ser", "hypothetical", "B1"]
+    },
+    {
+      "id": "word-por--fixed-si-no-fuera-por",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "no separate English word; completes si no fuera por, if it weren't for",
+      "noteEn": "In the fixed counterfactual expression si no fuera por, por introduces the person or thing whose presence changes the result.",
+      "example": { "es": "Si no fuera por Ana, llegaríamos tarde.", "en": "If it weren't for Ana, we would arrive late." },
+      "tags": ["word", "fixed expression", "counterfactual", "B1"]
+    },
+    {
+      "id": "word-seguiría--would-still-be",
+      "kind": "word",
+      "promptEs": "seguiría",
+      "answerEn": "would still be; would remain",
+      "noteEn": "Seguir normally means “to continue.” Before a word describing a condition, it means to remain or still be in that condition. The ending -ía makes this an imagined “would” result.",
+      "example": { "es": "Sin ayuda, la puerta seguiría cerrada.", "en": "Without help, the door would still be closed." },
+      "tags": ["word", "seguir", "conditional", "state", "B1"]
+    },
+    { "id": "word-viva--alive", "kind": "word", "promptEs": "viva", "answerEn": "alive (feminine singular)", "noteEn": "Viva is the feminine singular form of vivo and matches one feminine person or thing.", "example": { "es": "La planta sigue viva.", "en": "The plant is still alive." }, "tags": ["word", "adjective", "state", "A2"] },
+    {
+      "id": "phrase-estar-pegado-a",
+      "kind": "phrase",
+      "promptEs": "estar pegado/pegada a alguien o algo",
+      "questionEn": "How do you say that someone or something is stuck to, pressed against, or extremely close to another thing?",
+      "answerEn": "Use the matching form of estar, then pegado, pegada, pegados, or pegadas, followed by a and the reference person or thing.",
+      "noteEn": "Estar changes for the person and time. Pegado changes to match the person or thing being described. A introduces what it is attached or very close to. The expression can describe literal contact or, from context, unusually close proximity.",
+      "example": { "es": "La mesa está pegada a la pared.", "en": "The table is right up against the wall." },
+      "tags": ["phrase", "proximity", "estar", "adjective", "A2"]
+    },
+    {
+      "id": "phrase-echar-un-vistazo",
+      "kind": "phrase",
+      "promptEs": "echar un vistazo a algo",
+      "questionEn": "How do you say that someone takes a quick look at something?",
+      "answerEn": "Use the matching form of echar followed by un vistazo; use a before the thing being viewed when it is stated.",
+      "noteEn": "Echar has many literal meanings, but echar un vistazo is a conventional expression for looking briefly. Only echar changes for the person and time: echo, echas, echó, echaré. Un vistazo stays together.",
+      "example": { "es": "Voy a echar un vistazo al mapa.", "en": "I'm going to take a look at the map." },
+      "tags": ["phrase", "echar un vistazo", "looking", "A2"]
+    },
+    {
+      "id": "grammar-adverbs-mente",
+      "kind": "grammar",
+      "promptEs": "adjetivo femenino singular + -mente",
+      "questionEn": "How do you turn many describing words into words such as “quickly,” “clearly,” or “probably”?",
+      "answerEn": "Use the feminine singular form of the describing word and add -mente. If its masculine and feminine forms are identical, simply add -mente.",
+      "noteEn": "For an adjective that changes, use its -a form: claro becomes clara and then claramente. For one form shared by both genders, probable becomes probablemente. The new word usually describes how an action happens or how the speaker judges a claim.",
+      "example": { "es": "Lucía responde claramente.", "en": "Lucía answers clearly." },
+      "tags": ["grammar", "adverbs", "mente", "word formation", "A2"]
+    },
+    {
+      "id": "phrase-si-no-fuera-por",
+      "kind": "phrase",
+      "promptEs": "si no fuera por alguien o algo",
+      "questionEn": "How do you say “if it weren't for” a person or thing that changes the outcome?",
+      "answerEn": "Use si no fuera por, then name the person or thing. Si no fuese por is an equally valid alternative.",
+      "noteEn": "This expression presents an unreal alternative: without the named factor, the result would be different. Fuera and fuese are two forms of the same hypothetical verb here. The result commonly uses a Spanish “would” form ending in -ría.",
+      "example": { "es": "Si no fuera por Ana, llegaríamos tarde.", "en": "If it weren't for Ana, we would arrive late." },
+      "tags": ["phrase", "counterfactual", "si", "B1"]
+    },
+    {
+      "id": "concept-remote-security-exploit",
+      "kind": "concept",
+      "promptEs": "exploit remoto",
+      "answerEn": "a method that uses a software vulnerability through a network, without physical access to the target device",
+      "noteEn": "A remote exploit may let an attacker make a vulnerable machine run unintended actions or code from elsewhere. The comic relies on that idea when the nearby laptop is altered through its wireless connection.",
+      "tags": ["concept", "computing", "cybersecurity", "remote exploit"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-conduccion-agresiva:tailgater",
+      "labelEs": "ESE TIPO ESTÁ MUY PEGADO A MÍ.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0005" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w01", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00001" }], "cardIds": ["word-ese--demonstrative"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w02", "text": "TIPO", "normalized": "tipo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00002" }], "cardIds": ["word-tipo--guy"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w03", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00003" }], "cardIds": ["word-está", "phrase-estar-pegado-a"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w04", "text": "MUY", "normalized": "muy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00004" }], "cardIds": ["word-muy"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w05", "text": "PEGADO", "normalized": "pegado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00013" }], "cardIds": ["word-pegado--very-close", "phrase-estar-pegado-a"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w06", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00014" }], "cardIds": ["word-a--attachment", "phrase-estar-pegado-a"] },
+        { "id": "es-xkcd-conduccion-agresiva:tailgater:w07", "text": "MÍ", "normalized": "mí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00015" }], "cardIds": ["word-mí--after-preposition", "phrase-estar-pegado-a"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:tailgater:app-right-behind",
+          "cardId": "phrase-estar-pegado-a",
+          "participantWordIds": [
+            "es-xkcd-conduccion-agresiva:tailgater:w03",
+            "es-xkcd-conduccion-agresiva:tailgater:w05",
+            "es-xkcd-conduccion-agresiva:tailgater:w06",
+            "es-xkcd-conduccion-agresiva:tailgater:w07"
+          ],
+          "exampleEs": "ESTÁ MUY PEGADO A MÍ",
+          "explanationEn": "Está sets the current position, pegado describes extreme closeness, and a mí supplies the person used as the point of reference; muy only strengthens the degree."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:take-look",
+      "labelEs": "ECHARÉ UN VISTAZO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0012" }],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:take-look:w01", "text": "ECHARÉ", "normalized": "echaré", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00031" }], "cardIds": ["word-echaré--take-a-look", "phrase-echar-un-vistazo", "grammar-simple-future"] },
+        { "id": "es-xkcd-conduccion-agresiva:take-look:w02", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00032" }], "cardIds": ["word-un", "phrase-echar-un-vistazo"] },
+        { "id": "es-xkcd-conduccion-agresiva:take-look:w03", "text": "VISTAZO", "normalized": "vistazo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00033" }], "cardIds": ["word-vistazo", "phrase-echar-un-vistazo"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:take-look:app-quick-look",
+          "cardId": "phrase-echar-un-vistazo",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:take-look:w01", "es-xkcd-conduccion-agresiva:take-look:w02", "es-xkcd-conduccion-agresiva:take-look:w03"],
+          "exampleEs": "ECHARÉ UN VISTAZO",
+          "explanationEn": "Echaré supplies the future form of echar, while un vistazo completes the conventional quick-look expression."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:take-look:app-future",
+          "cardId": "grammar-simple-future",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:take-look:w01"],
+          "exampleEs": "ECHARÉ",
+          "explanationEn": "Echar keeps its full dictionary form and adds -é for a future action by “I.”"
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:laptop",
+      "labelEs": "SU PORTÁTIL ESTÁ ENCENDIDO, PROBABLEMENTE EN EL ASIENTO DE ATRÁS. Y... SÍ, SU WIFI SE AUTOCONECTA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w01", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00008" }], "cardIds": ["word-su--his"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w02", "text": "PORTÁTIL", "normalized": "portátil", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00009" }], "cardIds": ["word-portátil--laptop"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w03", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00010" }], "cardIds": ["word-está"] },
+        {
+          "id": "es-xkcd-conduccion-agresiva:laptop:w04", "text": "ENCENDIDO", "normalized": "encendido",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00011" }, { "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00019" }],
+          "cardIds": ["word-encendido--powered-on"]
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:laptop:w05", "text": "PROBABLEMENTE", "normalized": "probablemente",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00020" }, { "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00025" }],
+          "cardIds": ["word-probablemente", "grammar-adverbs-mente"]
+        },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w06", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00026" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w07", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00027" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w08", "text": "ASIENTO", "normalized": "asiento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00028" }], "cardIds": ["word-asiento"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00029" }], "cardIds": ["word-de--rear-position"] },
+        {
+          "id": "es-xkcd-conduccion-agresiva:laptop:w10", "text": "ATRÁS", "normalized": "atrás",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00030" }, { "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00039" }],
+          "cardIds": ["word-atrás--backward"]
+        },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w11", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00040" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w12", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00041" }], "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w13", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00042" }], "cardIds": ["word-su--his"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w14", "text": "WIFI", "normalized": "wifi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00043" }], "cardIds": ["word-wifi--wireless-network"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w15", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00044" }], "cardIds": ["word-se--autoconectarse"] },
+        { "id": "es-xkcd-conduccion-agresiva:laptop:w16", "text": "AUTOCONECTA", "normalized": "autoconecta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00045" }], "cardIds": ["word-autoconecta--automatically-connects"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:laptop:app-mente-adverb",
+          "cardId": "grammar-adverbs-mente",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:laptop:w05"],
+          "exampleEs": "PROBABLEMENTE",
+          "explanationEn": "Probable has the same masculine and feminine form, so adding -mente creates probablemente, the word that marks the location claim as likely rather than certain."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:attack-plan",
+      "labelEs": "AHORA BUSCAMOS ALGÚN EXPLOIT REMOTO... INSTALAMOS UN SINTETIZADOR DE VOZ... Y PROBAMOS CON ALGO PSICOLÓGICO Y OSCURO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w01", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00005" }], "cardIds": ["word-ahora"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w02", "text": "BUSCAMOS", "normalized": "buscamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00006" }], "cardIds": ["word-buscamos--look-for"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w03", "text": "ALGÚN", "normalized": "algún", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00007" }], "cardIds": ["word-algún"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w04", "text": "EXPLOIT", "normalized": "exploit", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00016" }], "cardIds": ["word-exploit--security", "concept-remote-security-exploit"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w05", "text": "REMOTO", "normalized": "remoto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00017" }], "cardIds": ["word-remoto--network", "concept-remote-security-exploit"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w06", "text": "INSTALAMOS", "normalized": "instalamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00021" }], "cardIds": ["word-instalamos"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00022" }], "cardIds": ["word-un"] },
+        {
+          "id": "es-xkcd-conduccion-agresiva:attack-plan:w08", "text": "SINTETIZADOR", "normalized": "sintetizador",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00023" }, { "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00036" }],
+          "cardIds": ["word-sintetizador"]
+        },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00037" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w10", "text": "VOZ", "normalized": "voz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00038" }], "cardIds": ["word-voz"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w11", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00046" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w12", "text": "PROBAMOS", "normalized": "probamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00047" }], "cardIds": ["word-probamos--try-option", "phrase-probar-con-opcion"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w13", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00052" }], "cardIds": ["word-con--probar-option", "phrase-probar-con-opcion"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w14", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00053" }], "cardIds": ["word-algo", "phrase-probar-con-opcion"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w15", "text": "PSICOLÓGICO", "normalized": "psicológico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00056" }], "cardIds": ["word-psicológico", "phrase-probar-con-opcion"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w16", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00060" }], "cardIds": ["word-y", "phrase-probar-con-opcion"] },
+        { "id": "es-xkcd-conduccion-agresiva:attack-plan:w17", "text": "OSCURO", "normalized": "oscuro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00061" }], "cardIds": ["word-oscuro--sinister", "phrase-probar-con-opcion"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:attack-plan:app-try-option",
+          "cardId": "phrase-probar-con-opcion",
+          "participantWordIds": [
+            "es-xkcd-conduccion-agresiva:attack-plan:w12", "es-xkcd-conduccion-agresiva:attack-plan:w13",
+            "es-xkcd-conduccion-agresiva:attack-plan:w14", "es-xkcd-conduccion-agresiva:attack-plan:w15",
+            "es-xkcd-conduccion-agresiva:attack-plan:w16", "es-xkcd-conduccion-agresiva:attack-plan:w17"
+          ],
+          "exampleEs": "PROBAMOS CON ALGO PSICOLÓGICO Y OSCURO",
+          "explanationEn": "Probamos changes for “we,” con introduces the chosen approach, and algo psicológico y oscuro fills the complete option being tried."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:greeting",
+      "labelEs": "HOLA.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:greeting:w01", "text": "HOLA", "normalized": "hola", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00012" }], "cardIds": ["word-hola"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:questions",
+      "labelEs": "¿QUÉ? ¿QUIÉN ESTÁ AHÍ?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:questions:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00018" }], "cardIds": ["word-qué--interrogative", "question-words"] },
+        { "id": "es-xkcd-conduccion-agresiva:questions:w02", "text": "QUIÉN", "normalized": "quién", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00024" }], "cardIds": ["word-quién--interrogative", "question-words"] },
+        { "id": "es-xkcd-conduccion-agresiva:questions:w03", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00034" }], "cardIds": ["word-está"] },
+        { "id": "es-xkcd-conduccion-agresiva:questions:w04", "text": "AHÍ", "normalized": "ahí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00035" }], "cardIds": ["word-ahí--there"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:questions:app-what",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:questions:w01"],
+          "exampleEs": "¿QUÉ?",
+          "explanationEn": "Qué carries a written accent because it directly asks what. The unaccented connector que has a different job."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:questions:app-who",
+          "cardId": "question-words",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:questions:w02"],
+          "exampleEs": "¿QUIÉN",
+          "explanationEn": "Quién carries a written accent because it directly asks who. The plural form is quiénes."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:accusation",
+      "labelEs": "SI NO FUERA POR TI, ELLA SEGUIRÍA VIVA.",
+      "explicitBounds": [{ "x": 77.027, "y": 34.2593, "width": 15.4054, "height": 15.7407 }],
+      "geometryRationale": "OCR omitted both TI and the final line VIVA, so this measured region covers all three visibly printed lines of the accusation.",
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00048" }], "cardIds": ["word-si", "phrase-si-no-fuera-por", "grammar-si-imperfect-subjunctive-conditional"] },
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00049" }], "cardIds": ["word-no", "phrase-si-no-fuera-por"] },
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w03", "text": "FUERA", "normalized": "fuera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00050" }], "cardIds": ["word-fuera--counterfactual-ser", "phrase-si-no-fuera-por", "grammar-si-imperfect-subjunctive-conditional"] },
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w04", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00051" }], "cardIds": ["word-por--fixed-si-no-fuera-por", "phrase-si-no-fuera-por"] },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:w05", "text": "TI", "normalized": "ti",
+          "explicitBounds": [{ "x": 77.1622, "y": 39.8148, "width": 2.1622, "height": 5.5556 }],
+          "geometryRationale": "OCR omitted the visibly printed word TI; this box was measured directly around TI and its comma in the full-resolution raster.",
+          "cardIds": ["word-ti--after-preposition", "phrase-si-no-fuera-por"]
+        },
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w06", "text": "ELLA", "normalized": "ella", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00054" }], "cardIds": ["word-ella--subject"] },
+        { "id": "es-xkcd-conduccion-agresiva:accusation:w07", "text": "SEGUIRÍA", "normalized": "seguiría", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00055" }], "cardIds": ["word-seguiría--would-still-be", "grammar-si-imperfect-subjunctive-conditional", "grammar-simple-conditional", "grammar-seguir-state"] },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:w08", "text": "VIVA", "normalized": "viva",
+          "explicitBounds": [{ "x": 77.1622, "y": 45.3704, "width": 4.0541, "height": 4.6296 }],
+          "geometryRationale": "OCR omitted the visibly printed word VIVA; this tight box was measured directly around its four letters in the full-resolution raster.",
+          "cardIds": ["word-viva--alive", "grammar-seguir-state"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-if-not-for",
+          "cardId": "phrase-si-no-fuera-por",
+          "participantWordIds": [
+            "es-xkcd-conduccion-agresiva:accusation:w01", "es-xkcd-conduccion-agresiva:accusation:w02",
+            "es-xkcd-conduccion-agresiva:accusation:w03", "es-xkcd-conduccion-agresiva:accusation:w04",
+            "es-xkcd-conduccion-agresiva:accusation:w05"
+          ],
+          "exampleEs": "SI NO FUERA POR TI",
+          "explanationEn": "Si no fuera por forms the fixed counterfactual opening, and ti fills the person whose presence is said to change the outcome."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-conditional-if",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:accusation:w01"],
+          "exampleEs": "SI",
+          "explanationEn": "Si introduces the imagined condition. It has no accent when it means “if.”"
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-conditional-condition",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:accusation:w03"],
+          "exampleEs": "FUERA",
+          "explanationEn": "Fuera is the -ra form of ser used for the unreal condition; fuese would be an equally valid alternative."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-conditional-result",
+          "cardId": "grammar-si-imperfect-subjunctive-conditional",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:accusation:w07"],
+          "exampleEs": "SEGUIRÍA",
+          "explanationEn": "Seguiría is the conditional, or “would,” form that supplies the imagined result."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-simple-conditional",
+          "cardId": "grammar-simple-conditional",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:accusation:w07"],
+          "exampleEs": "SEGUIRÍA",
+          "explanationEn": "Seguir keeps its whole dictionary form and adds -ía for a “would” action or state involving one person."
+        },
+        {
+          "id": "es-xkcd-conduccion-agresiva:accusation:app-continuing-state",
+          "cardId": "grammar-seguir-state",
+          "participantWordIds": ["es-xkcd-conduccion-agresiva:accusation:w07", "es-xkcd-conduccion-agresiva:accusation:w08"],
+          "exampleEs": "SEGUIRÍA VIVA",
+          "explanationEn": "Seguiría gives the hypothetical continuation, and viva is the feminine state that would continue."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-conduccion-agresiva:reaction",
+      "labelEs": "OH DIOS.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-conduccion-agresiva:ocr-line-0022" }],
+      "words": [
+        { "id": "es-xkcd-conduccion-agresiva:reaction:w01", "text": "OH", "normalized": "oh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00057" }], "cardIds": ["word-oh"] },
+        { "id": "es-xkcd-conduccion-agresiva:reaction:w02", "text": "DIOS", "normalized": "dios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-conduccion-agresiva:ocr-token-00058" }], "cardIds": ["word-dios--exclamation"] }
+      ],
+      "applications": []
+    }
+  ]
+}

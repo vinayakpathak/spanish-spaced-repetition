@@ -1,0 +1,686 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-agujeros-de-seguridad",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Security Holes",
+  "titleEs": "Agujeros de seguridad",
+  "titleText": {
+    "es": "Historia real (de Randall Munroe): tuve que hacer varios intentos para subir esta tira porque mi clave SSH estaba en la lista negra.",
+    "en": "True story (from Randall Munroe): I had to make several attempts to upload this strip because my SSH key was blacklisted.",
+    "noteEn": "The Spanish archive explicitly identifies Randall Munroe in parentheses; the official English title text begins simply with ‘True story.’ Both versions refer to an SSH key affected by the real Debian OpenSSL weak-key incident."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-comentar--code",
+      "kind": "word",
+      "promptEs": "comentar",
+      "answerEn": "to comment out; to disable a line of code by marking it as a comment",
+      "noteEn": "In programming, comentar can mean turning executable code into a comment so that the computer ignores it. This is more specific than ordinary comentar, ‘to comment on something.’",
+      "example": { "es": "Voy a comentar esta línea mientras pruebo el programa.", "en": "I am going to comment out this line while I test the program." },
+      "tags": ["word", "verb", "programming", "code", "B1"]
+    },
+    {
+      "id": "word-urgencia",
+      "kind": "word",
+      "promptEs": "urgencia",
+      "answerEn": "urgency; rush; urgent situation",
+      "noteEn": "Urgencia can name either the need to act quickly or the urgent situation causing that pressure.",
+      "example": { "es": "Arreglaron el fallo con urgencia.", "en": "They fixed the fault urgently." },
+      "tags": ["word", "noun", "urgency", "B1"]
+    },
+    {
+      "id": "word-por--urgency-action",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "to; connects an urgency or rush to the action prompting it",
+      "noteEn": "After a noun such as urgencia or prisa, por can introduce the action someone is eager or pressed to complete. Natural English often uses ‘to’ instead of translating por as ‘for.’",
+      "example": { "es": "Había prisa por terminar.", "en": "There was a rush to finish." },
+      "tags": ["word", "preposition", "urgency", "infinitive", "B1"]
+    },
+    {
+      "id": "word-fiasco",
+      "kind": "word",
+      "promptEs": "fiasco",
+      "answerEn": "fiasco; major embarrassing failure",
+      "noteEn": "A fiasco is a conspicuous failure, especially one involving confusion, poor planning, or public embarrassment.",
+      "example": { "es": "El lanzamiento fue un fiasco.", "en": "The launch was a fiasco." },
+      "tags": ["word", "noun", "failure", "B1"]
+    },
+    {
+      "id": "word-se--passive-unnamed-doer",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "marks an action whose doer is not named",
+      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "example": { "es": "Se encontraron varios errores.", "en": "Several errors were found." },
+      "tags": ["word", "passive se", "unnamed agent", "B1"]
+    },
+    {
+      "id": "word-descubierto--haber-participle",
+      "kind": "word",
+      "promptEs": "descubierto",
+      "answerEn": "discovered; found (completed-action form used after haber)",
+      "noteEn": "Descubierto is the irregular completed-action form of descubrir. After a form of haber, it stays unchanged: he descubierto, han descubierto, and so on.",
+      "example": { "es": "Han descubierto un error nuevo.", "en": "They have discovered a new error." },
+      "tags": ["word", "verb", "past participle", "present perfect", "A2"]
+    },
+    {
+      "id": "word-serie--group",
+      "kind": "word",
+      "promptEs": "serie",
+      "answerEn": "series; set; succession",
+      "noteEn": "Una serie de introduces a related group or succession of people, things, or events.",
+      "example": { "es": "Hubo una serie de problemas.", "en": "There was a series of problems." },
+      "tags": ["word", "noun", "group", "B1"]
+    },
+    {
+      "id": "word-de--security-domain",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; links a hole or problem to the field of security",
+      "noteEn": "Spanish uses de in compounds such as agujero de seguridad and problema de seguridad. English normally puts ‘security’ directly before the other noun.",
+      "example": { "es": "Encontraron un problema de seguridad.", "en": "They found a security problem." },
+      "tags": ["word", "preposition", "noun compound", "security", "B1"]
+    },
+    {
+      "id": "word-importantes",
+      "kind": "word",
+      "promptEs": "importantes",
+      "answerEn": "important; major (plural)",
+      "noteEn": "Importante has the same masculine and feminine singular form. The plural importantes ends in -es.",
+      "example": { "es": "Quedan varios asuntos importantes.", "en": "Several important matters remain." },
+      "tags": ["word", "adjective", "plural", "A2"]
+    },
+    {
+      "id": "word-afectado",
+      "kind": "word",
+      "promptEs": "afectado",
+      "answerEn": "affected (masculine singular)",
+      "noteEn": "Afectado describes a masculine singular person or thing that experiences the effect of a problem or event.",
+      "example": { "es": "El sistema afectado está desconectado.", "en": "The affected system is disconnected." },
+      "tags": ["word", "adjective", "past participle", "technology", "A2"]
+    },
+    {
+      "id": "word-vulnerable",
+      "kind": "word",
+      "promptEs": "vulnerable",
+      "answerEn": "vulnerable; open to harm or attack",
+      "noteEn": "Vulnerable has the same form for masculine and feminine singular nouns. Use vulnerable a before the danger or influence involved.",
+      "example": { "es": "El servidor es vulnerable a ese ataque.", "en": "The server is vulnerable to that attack." },
+      "tags": ["word", "adjective", "risk", "security", "B1"]
+    },
+    {
+      "id": "word-a--vulnerable-complement",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "to; introduces the danger after vulnerable",
+      "noteEn": "The adjective vulnerable normally takes a before the attack, influence, or problem that can cause harm.",
+      "example": { "es": "La planta es vulnerable al frío.", "en": "The plant is vulnerable to the cold." },
+      "tags": ["word", "preposition", "adjective complement", "B1"]
+    },
+    {
+      "id": "word-cifrado",
+      "kind": "word",
+      "promptEs": "cifrado",
+      "answerEn": "cipher; encryption; encoded form",
+      "noteEn": "As a noun, cifrado can name a method or system for encoding information. The verb cifrar means ‘to encrypt’ or ‘to encode.’",
+      "example": { "es": "Este cifrado es fácil de romper.", "en": "This cipher is easy to break." },
+      "tags": ["word", "noun", "cryptography", "security", "B2"]
+    },
+    {
+      "id": "word-da--grant",
+      "kind": "word",
+      "promptEs": "da",
+      "answerEn": "gives; grants",
+      "noteEn": "Da is the present form of dar used with one other person or thing. In technical contexts, dar acceso means ‘to grant access.’",
+      "example": { "es": "La tarjeta da acceso al edificio.", "en": "The card grants access to the building." },
+      "tags": ["word", "verb", "dar", "access", "A2"]
+    },
+    {
+      "id": "word-acceso",
+      "kind": "word",
+      "promptEs": "acceso",
+      "answerEn": "access; entry; permission to use something",
+      "noteEn": "Acceso can refer to physical entry or permission to use a system, account, or resource.",
+      "example": { "es": "No tengo acceso a esa cuenta.", "en": "I do not have access to that account." },
+      "tags": ["word", "noun", "access", "technology", "A2"]
+    },
+    {
+      "id": "word-pide--request",
+      "kind": "word",
+      "promptEs": "pide",
+      "answerEn": "is asked; is requested (with se)",
+      "noteEn": "Pide is the present form of pedir used with one other person or thing. With passive se, se pide focuses on what is requested rather than who requests it.",
+      "example": { "es": "Se pide una contraseña.", "en": "A password is requested." },
+      "tags": ["word", "verb", "pedir", "passive se", "A2"]
+    },
+    {
+      "id": "word-adulación",
+      "kind": "word",
+      "promptEs": "adulación",
+      "answerEn": "flattery",
+      "noteEn": "Adulación is exaggerated praise used to please or influence someone.",
+      "example": { "es": "No se dejó convencer por la adulación.", "en": "He was not persuaded by flattery." },
+      "tags": ["word", "noun", "praise", "B2"]
+    },
+    {
+      "id": "word-de--ownership",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "belonging to; often expressed with ’s in English",
+      "noteEn": "De can connect a thing to its owner. Spanish says el libro de Ana where English can say ‘Ana’s book.’",
+      "example": { "es": "Es el ordenador de Luis.", "en": "It is Luis's computer." },
+      "tags": ["word", "preposition", "ownership", "A1"]
+    },
+    {
+      "id": "word-usuario",
+      "kind": "word",
+      "promptEs": "usuario",
+      "answerEn": "user (masculine singular or generic)",
+      "noteEn": "Usuario is a person who uses a service, device, or computer account. The feminine form is usuaria.",
+      "example": { "es": "Cada usuario tiene una contraseña.", "en": "Each user has a password." },
+      "tags": ["word", "noun", "person", "technology", "A2"]
+    },
+    {
+      "id": "word-amigo",
+      "kind": "word",
+      "promptEs": "amigo",
+      "answerEn": "friend (masculine singular)",
+      "noteEn": "Amigo can identify a male friend or appear as the masculine dictionary form when discussing the word itself.",
+      "example": { "es": "Pablo es un buen amigo.", "en": "Pablo is a good friend." },
+      "tags": ["word", "noun", "friendship", "A1"]
+    },
+    {
+      "id": "word-élfico",
+      "kind": "word",
+      "promptEs": "élfico",
+      "answerEn": "Elvish; relating to elves or an elf language",
+      "noteEn": "Élfico can describe something associated with fantasy elves. Used after en, it can name an Elvish language.",
+      "example": { "es": "La inscripción está escrita en élfico.", "en": "The inscription is written in Elvish." },
+      "tags": ["word", "adjective", "language", "fantasy", "B1"]
+    },
+    {
+      "id": "word-resulta--turns-out",
+      "kind": "word",
+      "promptEs": "resulta",
+      "answerEn": "it turns out",
+      "noteEn": "Resulta que introduces information that has just been discovered, is surprising, or changes the listener's understanding.",
+      "example": { "es": "Resulta que la tienda está cerrada.", "en": "It turns out that the store is closed." },
+      "tags": ["word", "verb", "discovery", "discourse", "B1"]
+    },
+    {
+      "id": "word-que--after-resulta",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "that; introduces what turns out to be true",
+      "noteEn": "After resulta, que opens the newly revealed statement. Learn resulta que together as ‘it turns out that.’",
+      "example": { "es": "Resulta que tenías razón.", "en": "It turns out that you were right." },
+      "tags": ["word", "clause link", "discourse", "B1"]
+    },
+    {
+      "id": "word-distro",
+      "kind": "word",
+      "promptEs": "distro",
+      "answerEn": "software distribution; distro",
+      "noteEn": "Distro is informal technical shorthand for distribución, especially a packaged version of an operating system such as a Linux distribution.",
+      "example": { "es": "Probé una distro diferente de Linux.", "en": "I tried a different Linux distribution." },
+      "tags": ["word", "noun", "computing", "informal", "B2"]
+    },
+    {
+      "id": "word-varios",
+      "kind": "word",
+      "promptEs": "varios",
+      "answerEn": "several; various (masculine plural)",
+      "noteEn": "Varios before a plural noun means more than one, usually an unspecified small number or range.",
+      "example": { "es": "Probamos varios diseños.", "en": "We tried several designs." },
+      "tags": ["word", "quantity", "masculine plural", "A2"]
+    },
+    {
+      "id": "word-temas--interface",
+      "kind": "word",
+      "promptEs": "temas",
+      "answerEn": "themes; visual appearance packages",
+      "noteEn": "In software, a tema is a coordinated set of colors, images, and styles that changes how an interface looks. In other contexts, tema can mean ‘topic.’",
+      "example": { "es": "La aplicación incluye varios temas oscuros.", "en": "The application includes several dark themes." },
+      "tags": ["word", "noun", "software", "interface", "B1"]
+    },
+    {
+      "id": "word-personalizados",
+      "kind": "word",
+      "promptEs": "personalizados",
+      "answerEn": "custom; customized (masculine plural)",
+      "noteEn": "Personalizados describes masculine plural things adapted to a particular person, purpose, or preference.",
+      "example": { "es": "Vendemos diseños personalizados.", "en": "We sell custom designs." },
+      "tags": ["word", "adjective", "customization", "masculine plural", "B1"]
+    },
+    {
+      "id": "word-firme--voice",
+      "kind": "word",
+      "promptEs": "firme",
+      "answerEn": "firm; stern (describing a voice)",
+      "noteEn": "When firme describes a voice or tone, it means controlled, confident, and not yielding. This is different from merely saying that a hand or object does not shake.",
+      "example": { "es": "Respondió con voz firme.", "en": "She answered in a firm voice." },
+      "tags": ["word", "adjective", "voice", "manner", "B1"]
+    },
+    {
+      "id": "grammar-se-passive-unnamed-doer",
+      "kind": "grammar",
+      "promptEs": "se + verbo en tercera persona (sin nombrar quién actúa)",
+      "questionEn": "How can Spanish focus on an action or result without naming who does it?",
+      "answerEn": "Put se before a third-person verb and state what happens; the person doing it can remain unnamed.",
+      "noteEn": "English often uses a passive form. Spanish may use se with a simple verb or with a completed construction such as se han encontrado. Other uses of se follow different patterns.",
+      "example": { "es": "Se publicaron los resultados.", "en": "The results were published." },
+      "tags": ["grammar", "passive se", "unnamed agent", "B1"]
+    },
+    {
+      "id": "phrase-agujero-de-seguridad",
+      "kind": "phrase",
+      "promptEs": "agujero de seguridad",
+      "questionEn": "How do you name a weakness that can be exploited in a system?",
+      "answerEn": "Say agujero de seguridad; use agujeros de seguridad for more than one.",
+      "noteEn": "The expression literally uses ‘hole of security,’ while natural English puts the field first: ‘security hole.’ Vulnerabilidad de seguridad is another common technical term.",
+      "example": { "es": "El parche corrige un agujero de seguridad.", "en": "The patch fixes a security hole." },
+      "tags": ["phrase", "technology", "security", "B1"]
+    },
+    {
+      "id": "phrase-vulnerable-a",
+      "kind": "phrase",
+      "promptEs": "vulnerable a/al + riesgo",
+      "questionEn": "How do you say what danger or influence something is vulnerable to?",
+      "answerEn": "Use vulnerable a before the danger; a and el combine as al.",
+      "noteEn": "The describing word vulnerable stays the same in masculine and feminine singular. Its complement begins with a, even when English uses ‘to.’",
+      "example": { "es": "Este material es vulnerable al agua.", "en": "This material is vulnerable to water." },
+      "tags": ["phrase", "adjective complement", "risk", "B1"]
+    },
+    {
+      "id": "phrase-dar-acceso",
+      "kind": "phrase",
+      "promptEs": "dar acceso",
+      "questionEn": "How do you say that something grants or provides access?",
+      "answerEn": "Use a form of dar followed by acceso; use a before the place, system, or resource when it is stated.",
+      "noteEn": "The form of dar changes with the subject: da acceso, dan acceso, dio acceso, and so on.",
+      "example": { "es": "La llave da acceso al almacén.", "en": "The key grants access to the warehouse." },
+      "tags": ["phrase", "access", "technology", "A2"]
+    },
+    {
+      "id": "phrase-resulta-que",
+      "kind": "phrase",
+      "promptEs": "resulta que + información revelada",
+      "questionEn": "How do you introduce a surprising fact that has just become clear?",
+      "answerEn": "Use resulta que, then state the newly revealed information.",
+      "noteEn": "Resulta que often corresponds to ‘it turns out that.’ It frames the next statement as a discovery or correction to what someone expected.",
+      "example": { "es": "Resulta que ya se conocían.", "en": "It turns out that they already knew each other." },
+      "tags": ["phrase", "discourse", "discovery", "B1"]
+    },
+    {
+      "id": "concept-debian-openssl-security-hole-parody",
+      "kind": "concept",
+      "promptEs": "fiasco de Debian-OpenSSL · agujeros de seguridad · sistemas vulnerables",
+      "answerEn": "the comic turns a real Debian OpenSSL weak-key incident into a list of absurd security flaws in other operating systems",
+      "noteEn": "Debian's 2008 OpenSSL vulnerability made cryptographic keys predictable and affected SSH keys, matching the title text about a blacklisted key. The left panels joke that essential safeguards were commented out; the table then invents vulnerabilities based on stereotypes, fantasy references, and software reputations.",
+      "tags": ["concept", "computer security", "OpenSSL", "Linux", "joke reference"]
+    },
+    {
+      "id": "concept-caesar-cipher",
+      "kind": "concept",
+      "promptEs": "cifrado César",
+      "answerEn": "a simple substitution cipher that shifts every letter by the same fixed number of positions",
+      "noteEn": "The method is associated with Julius Caesar. Because there are very few possible shifts, it is easy to test every key; calling a modern operating system vulnerable to it is intentionally absurd.",
+      "tags": ["concept", "cryptography", "cipher", "history"]
+    },
+    {
+      "id": "concept-jeff-goldblum-powerbook-independence-day",
+      "kind": "concept",
+      "promptEs": "PowerBook de Jeff Goldblum",
+      "answerEn": "a reference to Independence Day, where Jeff Goldblum's character uses a PowerBook to help upload a virus to the alien mothership",
+      "noteEn": "The comic turns that film scene into a mock software vulnerability: merely encountering the named laptop supposedly threatens the operating system.",
+      "tags": ["concept", "film", "Independence Day", "PowerBook", "joke reference"]
+    },
+    {
+      "id": "concept-speak-friend-and-enter",
+      "kind": "concept",
+      "promptEs": "decir “amigo” en élfico",
+      "answerEn": "a reference to the Doors of Durin in The Lord of the Rings, opened by saying mellon, the Elvish word for “friend”",
+      "noteEn": "The comic reimagines the fantasy door's spoken solution as a laughably weak computer-access rule.",
+      "tags": ["concept", "The Lord of the Rings", "Elvish", "password", "joke reference"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:commenting-thought",
+      "labelEs": "SÓLO VOY A COMENTAR ESTAS LÍNEAS...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w01", "text": "SÓLO", "normalized": "sólo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00001" }], "cardIds": ["word-sólo--only"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w02", "text": "VOY", "normalized": "voy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00002" }], "cardIds": ["word-voy", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00003" }], "cardIds": ["word-a--near-future", "grammar-ir-a-infinitive"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w04", "text": "COMENTAR", "normalized": "comentar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00004" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00009" }], "cardIds": ["word-comentar--code", "grammar-ir-a-infinitive", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w05", "text": "ESTAS", "normalized": "estas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00010" }], "cardIds": ["word-estas--demonstrative"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:w06", "text": "LÍNEAS", "normalized": "líneas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00011" }], "cardIds": ["word-líneas--text", "concept-debian-openssl-security-hole-parody"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:commenting-thought:app-near-future",
+          "cardId": "grammar-ir-a-infinitive",
+          "participantWordIds": ["es-xkcd-agujeros-de-seguridad:commenting-thought:w02", "es-xkcd-agujeros-de-seguridad:commenting-thought:w03", "es-xkcd-agujeros-de-seguridad:commenting-thought:w04"],
+          "exampleEs": "VOY A COMENTAR",
+          "explanationEn": "Voy changes for the speaker, a links it to the planned action, and comentar stays in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:code-md-update",
+      "labelEs": "//MD_update(&m, buf, j);",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0009" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:code-md-update:excluded-code",
+          "text": "//MD_update(&m, buf, j);",
+          "reason": "non-spanish-text",
+          "rationale": "This is a commented programming-language function call and identifier sequence, not Spanish lexical text.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0009" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:code-no-crash",
+      "labelEs": "//no_colgarse();",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0020" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:code-no-crash:excluded-code",
+          "text": "//no_colgarse();",
+          "reason": "non-spanish-text",
+          "rationale": "Although the identifier contains Spanish-looking pieces, the whole printed unit is a commented code identifier and call, not ordinary Spanish prose.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0020" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:code-prevent-attack",
+      "labelEs": "//evitar_el_11S();",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0027" }],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:code-prevent-attack:excluded-code",
+          "text": "//evitar_el_11S();",
+          "reason": "non-spanish-text",
+          "rationale": "This entire printed unit is a commented programming identifier and function call, including the numeric abbreviation, rather than ordinary Spanish curriculum text.",
+          "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0027" }]
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:security-introduction",
+      "labelEs": "DURANTE LA URGENCIA POR ARREGLAR EL FIASCO DE DEBIAN-OPENSSL, SE HAN DESCUBIERTO UNA SERIE DE AGUJEROS DE SEGURIDAD IMPORTANTES:",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w01", "text": "DURANTE", "normalized": "durante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00005" }], "cardIds": ["word-durante"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00006" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w03", "text": "URGENCIA", "normalized": "urgencia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00007" }], "cardIds": ["word-urgencia"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w04", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00008" }], "cardIds": ["word-por--urgency-action"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w05", "text": "ARREGLAR", "normalized": "arreglar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00012" }], "cardIds": ["word-arreglar--fix"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00013" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w07", "text": "FIASCO", "normalized": "fiasco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00014" }], "cardIds": ["word-fiasco", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00015" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w09", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00017" }], "cardIds": ["word-se--passive-unnamed-doer", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w10", "text": "HAN", "normalized": "han", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00018" }], "cardIds": ["word-han", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w11", "text": "DESCUBIERTO", "normalized": "descubierto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00019" }], "cardIds": ["word-descubierto--haber-participle", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w12", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00020" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w13", "text": "SERIE", "normalized": "serie", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00021" }], "cardIds": ["word-serie--group"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w14", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00022" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w15", "text": "AGUJEROS", "normalized": "agujeros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00023" }], "cardIds": ["word-agujeros", "phrase-agujero-de-seguridad", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w16", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00024" }], "cardIds": ["word-de--security-domain", "phrase-agujero-de-seguridad"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w17", "text": "SEGURIDAD", "normalized": "seguridad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00025" }], "cardIds": ["word-seguridad", "phrase-agujero-de-seguridad", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:security-introduction:w18", "text": "IMPORTANTES", "normalized": "importantes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00026" }], "cardIds": ["word-importantes"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:security-introduction:excluded-debian-openssl",
+          "text": "DEBIAN-OPENSSL",
+          "reason": "non-spanish-text",
+          "rationale": "Debian and OpenSSL are unchanged software-project names joined in the printed incident label, not Spanish lexical words.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00016" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:security-introduction:app-present-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": ["es-xkcd-agujeros-de-seguridad:security-introduction:w10", "es-xkcd-agujeros-de-seguridad:security-introduction:w11"],
+          "exampleEs": "HAN DESCUBIERTO",
+          "explanationEn": "Han supplies the present form of haber for a plural reference, and descubierto is descubrir's irregular completed-action form."
+        },
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:security-introduction:app-passive-se",
+          "cardId": "grammar-se-passive-unnamed-doer",
+          "participantWordIds": ["es-xkcd-agujeros-de-seguridad:security-introduction:w09", "es-xkcd-agujeros-de-seguridad:security-introduction:w10", "es-xkcd-agujeros-de-seguridad:security-introduction:w11"],
+          "exampleEs": "SE HAN DESCUBIERTO",
+          "explanationEn": "Se leaves the discoverer unnamed, while han descubierto presents the discovery as completed and relevant now."
+        },
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:security-introduction:app-security-hole",
+          "cardId": "phrase-agujero-de-seguridad",
+          "participantWordIds": ["es-xkcd-agujeros-de-seguridad:security-introduction:w15", "es-xkcd-agujeros-de-seguridad:security-introduction:w16", "es-xkcd-agujeros-de-seguridad:security-introduction:w17"],
+          "exampleEs": "AGUJEROS DE SEGURIDAD",
+          "explanationEn": "Agujeros is plural, de links the compound, and seguridad identifies the technical field in which the weaknesses exist."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:affected-heading",
+      "labelEs": "SISTEMA AFECTADO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0012" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:affected-heading:w01", "text": "SISTEMA", "normalized": "sistema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00032" }], "cardIds": ["word-sistema", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:affected-heading:w02", "text": "AFECTADO", "normalized": "afectado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00036" }], "cardIds": ["word-afectado", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:affected-heading:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:affected-heading:w01", "es-xkcd-agujeros-de-seguridad:affected-heading:w02"], "exampleEs": "SISTEMA AFECTADO", "explanationEn": "Sistema names the thing, and the neutral descriptive adjective afectado follows it." },
+        { "id": "es-xkcd-agujeros-de-seguridad:affected-heading:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:affected-heading:w01", "es-xkcd-agujeros-de-seguridad:affected-heading:w02"], "exampleEs": "SISTEMA AFECTADO", "explanationEn": "Although sistema ends in -a, it is masculine, so the matching singular adjective is afectado." }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:problem-heading",
+      "labelEs": "PROBLEMA DE SEGURIDAD",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:problem-heading:w01", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00033" }], "cardIds": ["word-problema"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:problem-heading:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00034" }], "cardIds": ["word-de--security-domain"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:problem-heading:w03", "text": "SEGURIDAD", "normalized": "seguridad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00035" }], "cardIds": ["word-seguridad"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:fedora-row",
+      "labelEs": "FEDORA CORE — VULNERABLE A CIERTO CIFRADO CÉSAR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:w01", "text": "VULNERABLE", "normalized": "vulnerable", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00037" }], "cardIds": ["word-vulnerable", "phrase-vulnerable-a", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00038" }], "cardIds": ["word-a--vulnerable-complement", "phrase-vulnerable-a"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:w03", "text": "CIERTO", "normalized": "cierto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00039" }], "cardIds": ["word-cierto--particular", "phrase-vulnerable-a"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:w04", "text": "CIFRADO", "normalized": "cifrado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00042" }], "cardIds": ["word-cifrado", "phrase-vulnerable-a", "concept-debian-openssl-security-hole-parody", "concept-caesar-cipher"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:excluded-fedora", "text": "FEDORA CORE", "reason": "non-spanish-text", "rationale": "Fedora Core is the unchanged proper name of a Linux distribution, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00040" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00041" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:fedora-row:excluded-caesar", "text": "CÉSAR", "reason": "non-spanish-text", "rationale": "César is the historical proper name retained inside the conventional cipher name, not a general Spanish vocabulary word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00043" }] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-agujeros-de-seguridad:fedora-row:app-vulnerable",
+          "cardId": "phrase-vulnerable-a",
+          "participantWordIds": ["es-xkcd-agujeros-de-seguridad:fedora-row:w01", "es-xkcd-agujeros-de-seguridad:fedora-row:w02", "es-xkcd-agujeros-de-seguridad:fedora-row:w03", "es-xkcd-agujeros-de-seguridad:fedora-row:w04"],
+          "exampleEs": "VULNERABLE A CIERTO CIFRADO CÉSAR",
+          "explanationEn": "Vulnerable describes the system, a introduces the risk, and cierto cifrado names the particular cipher involved; the proper name remains visible but unscheduled."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:xandros-row",
+      "labelEs": "XANDROS (EEE PC) — DA ACCESO ROOT SI SE LE PIDE CON VOZ FIRME.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w01", "text": "DA", "normalized": "da", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00044" }], "cardIds": ["word-da--grant", "phrase-dar-acceso", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w02", "text": "ACCESO", "normalized": "acceso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00045" }], "cardIds": ["word-acceso", "phrase-dar-acceso", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w03", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00047" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w04", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00048" }], "cardIds": ["word-se--passive-unnamed-doer", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w05", "text": "LE", "normalized": "le", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00049" }], "cardIds": ["word-le--affected-receiver-thing"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w06", "text": "PIDE", "normalized": "pide", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00053" }], "cardIds": ["word-pide--request", "grammar-si-present-real-condition", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w07", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00054" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w08", "text": "VOZ", "normalized": "voz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00055" }], "cardIds": ["word-voz", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:w09", "text": "FIRME", "normalized": "firme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00056" }], "cardIds": ["word-firme--voice", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:excluded-xandros", "text": "XANDROS", "reason": "non-spanish-text", "rationale": "Xandros is the unchanged proper name of a Linux distribution, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00050" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:excluded-eee-pc", "text": "EEE PC", "reason": "non-spanish-text", "rationale": "EEE PC is the unchanged commercial computer-model name in parentheses, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00051" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00052" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:excluded-root", "text": "ROOT", "reason": "non-spanish-text", "rationale": "Root is the unchanged Unix account label for the highest-privilege user, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00046" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:app-give-access", "cardId": "phrase-dar-acceso", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:xandros-row:w01", "es-xkcd-agujeros-de-seguridad:xandros-row:w02"], "exampleEs": "DA ACCESO", "explanationEn": "Da is the present form of dar for the system, and acceso names what it grants." },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:xandros-row:w03", "es-xkcd-agujeros-de-seguridad:xandros-row:w06"], "exampleEs": "SI SE LE PIDE", "explanationEn": "Si introduces the possible condition, and pide remains an ordinary present-time form; se and le belong to the request construction between them." },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:app-passive-request", "cardId": "grammar-se-passive-unnamed-doer", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:xandros-row:w04", "es-xkcd-agujeros-de-seguridad:xandros-row:w06"], "exampleEs": "SE LE PIDE", "explanationEn": "Se leaves the requester unnamed, while pide supplies the present request action; le identifies the system receiving the request." },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:xandros-row:w08", "es-xkcd-agujeros-de-seguridad:xandros-row:w09"], "exampleEs": "VOZ FIRME", "explanationEn": "Voz names the thing, and the neutral descriptive adjective firme follows it." },
+        { "id": "es-xkcd-agujeros-de-seguridad:xandros-row:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:xandros-row:w08", "es-xkcd-agujeros-de-seguridad:xandros-row:w09"], "exampleEs": "VOZ FIRME", "explanationEn": "Firme has one singular form for both genders, so it already matches the feminine singular noun voz." }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:gentoo-row",
+      "labelEs": "GENTOO — VULNERABLE A LA ADULACIÓN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:w01", "text": "VULNERABLE", "normalized": "vulnerable", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00059" }], "cardIds": ["word-vulnerable", "phrase-vulnerable-a", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00060" }], "cardIds": ["word-a--vulnerable-complement", "phrase-vulnerable-a"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00062" }], "cardIds": ["word-la--article", "phrase-vulnerable-a"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:w04", "text": "ADULACIÓN", "normalized": "adulación", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00063" }], "cardIds": ["word-adulación", "phrase-vulnerable-a"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:excluded-gentoo", "text": "GENTOO", "reason": "non-spanish-text", "rationale": "Gentoo is the unchanged proper name of a Linux distribution, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00061" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:gentoo-row:app-vulnerable", "cardId": "phrase-vulnerable-a", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:gentoo-row:w01", "es-xkcd-agujeros-de-seguridad:gentoo-row:w02", "es-xkcd-agujeros-de-seguridad:gentoo-row:w03", "es-xkcd-agujeros-de-seguridad:gentoo-row:w04"], "exampleEs": "VULNERABLE A LA ADULACIÓN", "explanationEn": "Vulnerable describes the system, a introduces the risk, and la adulación names that risk." }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:olpc-row",
+      "labelEs": "OLPC OS — VULNERABLE AL POWERBOOK DE JEFF GOLDBLUM.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0026" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:w01", "text": "VULNERABLE", "normalized": "vulnerable", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00064" }], "cardIds": ["word-vulnerable", "phrase-vulnerable-a", "concept-debian-openssl-security-hole-parody", "concept-jeff-goldblum-powerbook-independence-day"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:w02", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00065" }], "cardIds": ["word-al--contraction", "phrase-vulnerable-a"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00069" }], "cardIds": ["word-de--ownership", "phrase-vulnerable-a", "concept-jeff-goldblum-powerbook-independence-day"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:excluded-olpc-os", "text": "OLPC OS", "reason": "non-spanish-text", "rationale": "OLPC OS is the unchanged operating-system project label, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00067" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00068" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:excluded-powerbook", "text": "POWERBOOK", "reason": "non-spanish-text", "rationale": "PowerBook is the unchanged Apple product-family name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00066" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:excluded-jeff-goldblum", "text": "JEFF GOLDBLUM", "reason": "non-spanish-text", "rationale": "Jeff Goldblum is a person's proper name retained from the source joke, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00070" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00071" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:olpc-row:app-vulnerable", "cardId": "phrase-vulnerable-a", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:olpc-row:w01", "es-xkcd-agujeros-de-seguridad:olpc-row:w02", "es-xkcd-agujeros-de-seguridad:olpc-row:w03"], "exampleEs": "VULNERABLE AL POWERBOOK DE JEFF GOLDBLUM", "explanationEn": "Vulnerable takes al before the named device, and de marks the device's owner; the product and personal names remain visible but unscheduled." }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:slackware-row",
+      "labelEs": "SLACKWARE — DA ACCESO ROOT SI EL USUARIO DICE \"AMIGO\" EN ÉLFICO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-agujeros-de-seguridad:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w01", "text": "DA", "normalized": "da", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00075" }], "cardIds": ["word-da--grant", "phrase-dar-acceso", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w02", "text": "ACCESO", "normalized": "acceso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00076" }], "cardIds": ["word-acceso", "phrase-dar-acceso", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w03", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00078" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w04", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00079" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w05", "text": "USUARIO", "normalized": "usuario", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00080" }, { "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00082" }], "cardIds": ["word-usuario"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w06", "text": "DICE", "normalized": "dice", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00083" }], "cardIds": ["word-dice", "grammar-si-present-real-condition", "concept-speak-friend-and-enter"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w07", "text": "AMIGO", "normalized": "amigo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00084" }], "cardIds": ["word-amigo", "concept-debian-openssl-security-hole-parody", "concept-speak-friend-and-enter"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w08", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00085" }], "cardIds": ["word-en", "concept-speak-friend-and-enter"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:w09", "text": "ÉLFICO", "normalized": "élfico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00086" }], "cardIds": ["word-élfico", "concept-debian-openssl-security-hole-parody", "concept-speak-friend-and-enter"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:excluded-slackware", "text": "SLACKWARE", "reason": "non-spanish-text", "rationale": "Slackware is the unchanged proper name of a Linux distribution, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00081" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:excluded-root", "text": "ROOT", "reason": "non-spanish-text", "rationale": "Root is the unchanged Unix account label for the highest-privilege user, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00077" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:app-give-access", "cardId": "phrase-dar-acceso", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:slackware-row:w01", "es-xkcd-agujeros-de-seguridad:slackware-row:w02"], "exampleEs": "DA ACCESO", "explanationEn": "Da is the present form of dar for the system, and acceso names what it grants." },
+        { "id": "es-xkcd-agujeros-de-seguridad:slackware-row:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:slackware-row:w03", "es-xkcd-agujeros-de-seguridad:slackware-row:w06"], "exampleEs": "SI EL USUARIO DICE \"AMIGO\" EN ÉLFICO", "explanationEn": "Si introduces the possible condition, and dice stays in the ordinary present form; the intervening words state its subject and content." }
+      ]
+    },
+    {
+      "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row",
+      "labelEs": "UBUNTU — RESULTA QUE ESTA DISTRO NO ES MÁS QUE WINDOWS VISTA CON VARIOS TEMAS PERSONALIZADOS.",
+      "explicitBounds": [{ "x": 33.18, "y": 87.85, "width": 64.62, "height": 11.75 }],
+      "geometryRationale": "Vision recognized only the row label and final word, so this checked rectangle covers the complete two-cell Ubuntu row.",
+      "words": [
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w01", "text": "RESULTA", "normalized": "resulta", "explicitBounds": [{ "x": 54.77, "y": 88.24, "width": 11.76, "height": 2.28 }], "geometryRationale": "Vision omitted this clearly printed first word; the measured box follows its handwritten glyphs.", "cardIds": ["word-resulta--turns-out", "phrase-resulta-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 67.14, "y": 88.24, "width": 5.27, "height": 2.28 }], "geometryRationale": "Vision omitted this clearly printed connector; the measured box follows its handwritten glyphs.", "cardIds": ["word-que--after-resulta", "phrase-resulta-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w03", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 72.82, "y": 88.24, "width": 6.29, "height": 2.28 }], "geometryRationale": "Vision omitted this clearly printed demonstrative; the measured box follows its handwritten glyphs.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w04", "text": "DISTRO", "normalized": "distro", "explicitBounds": [{ "x": 79.51, "y": 88.24, "width": 11.97, "height": 2.28 }], "geometryRationale": "Vision omitted this clearly printed technical noun; the measured box follows its handwritten glyphs.", "cardIds": ["word-distro", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w05", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 54.77, "y": 90.70, "width": 3.85, "height": 2.47 }], "geometryRationale": "Vision omitted this clearly printed negative word; the measured box follows its handwritten glyphs.", "cardIds": ["word-no", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w06", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 59.03, "y": 90.70, "width": 3.65, "height": 2.47 }], "geometryRationale": "Vision omitted this clearly printed verb; the measured box follows its handwritten glyphs.", "cardIds": ["word-es", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w07", "text": "MÁS", "normalized": "más", "explicitBounds": [{ "x": 63.08, "y": 90.70, "width": 6.29, "height": 2.47 }], "geometryRationale": "Vision omitted this clearly printed accented word; the measured box follows its handwritten glyphs.", "cardIds": ["word-más--fixed-no-ser-mas-que", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w08", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 69.78, "y": 90.70, "width": 5.48, "height": 2.47 }], "geometryRationale": "Vision omitted this clearly printed fixed-expression word; the measured box follows its handwritten glyphs.", "cardIds": ["word-que--fixed-no-ser-mas-que", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w09", "text": "CON", "normalized": "con", "explicitBounds": [{ "x": 63.49, "y": 93.17, "width": 5.88, "height": 2.66 }], "geometryRationale": "Vision omitted this clearly printed preposition; the measured box follows its handwritten glyphs.", "cardIds": ["word-con", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w10", "text": "VARIOS", "normalized": "varios", "explicitBounds": [{ "x": 69.78, "y": 93.17, "width": 11.16, "height": 2.66 }], "geometryRationale": "Vision omitted this clearly printed quantity word; the measured box follows its handwritten glyphs.", "cardIds": ["word-varios", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w11", "text": "TEMAS", "normalized": "temas", "explicitBounds": [{ "x": 81.34, "y": 93.17, "width": 10.75, "height": 2.66 }], "geometryRationale": "Vision omitted this clearly printed software noun; the measured box follows its handwritten glyphs.", "cardIds": ["word-temas--interface", "phrase-no-ser-mas-que", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-debian-openssl-security-hole-parody"] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:w12", "text": "PERSONALIZADOS", "normalized": "personalizados", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00088" }], "cardIds": ["word-personalizados", "phrase-no-ser-mas-que", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:excluded-ubuntu", "text": "UBUNTU", "reason": "non-spanish-text", "rationale": "Ubuntu is the unchanged proper name of a Linux distribution, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-agujeros-de-seguridad:ocr-token-00087" }] },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:excluded-windows-vista", "text": "WINDOWS VISTA", "reason": "non-spanish-text", "rationale": "Windows Vista is the unchanged commercial operating-system name, not Spanish vocabulary.", "explicitBounds": [{ "x": 75.66, "y": 90.70, "width": 16.23, "height": 2.47 }, { "x": 54.77, "y": 93.17, "width": 8.32, "height": 2.66 }], "geometryRationale": "Vision omitted both words of this wrapped product name; the two measured boxes follow WINDOWS and VISTA separately." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:app-turns-out", "cardId": "phrase-resulta-que", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:ubuntu-row:w01", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w02"], "exampleEs": "RESULTA QUE", "explanationEn": "Resulta frames a discovery, and que opens the information that has become clear." },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:app-nothing-but", "cardId": "phrase-no-ser-mas-que", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:ubuntu-row:w05", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w06", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w07", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w08", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w09", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w10", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w11", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w12"], "exampleEs": "NO ES MÁS QUE WINDOWS VISTA CON VARIOS TEMAS PERSONALIZADOS", "explanationEn": "No negates es, más que restricts the identification, and con varios temas personalizados completes the description of the excluded product name." },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:ubuntu-row:w11", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w12"], "exampleEs": "TEMAS PERSONALIZADOS", "explanationEn": "Temas names the software items, and the neutral descriptive adjective personalizados follows it." },
+        { "id": "es-xkcd-agujeros-de-seguridad:ubuntu-row:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-agujeros-de-seguridad:ubuntu-row:w11", "es-xkcd-agujeros-de-seguridad:ubuntu-row:w12"], "exampleEs": "TEMAS PERSONALIZADOS", "explanationEn": "Personalizados takes masculine plural -os to match temas." }
+      ]
+    }
+  ]
+}
