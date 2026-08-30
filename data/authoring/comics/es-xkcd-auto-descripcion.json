@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-auto-descripcion",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Self-Description",
+  "titleEs": "Auto-descripción",
+  "titleText": {
+    "es": "Los contenidos de cualquier viñeta son dependientes de los contenidos de todas las viñetas incluyendo a ella misma. El grafo de las dependencias entre viñetas es completo y bidireccional, y cada nodo tiene un ciclo. Este texto tiene doscientos setenta y tres caracteres.",
+    "en": "The contents of any one panel are dependent on the contents of every panel including itself. The graph of panel dependencies is complete and bidirectional, and each node has a loop. The mouseover text has two hundred and forty-two characters.",
+    "noteEn": "The Spanish text is the exact title attribute in the Spanish archive; the English text is the exact official xkcd title attribute, whose stated character count intentionally differs."
+  },
+  "cardDefinitions": [
+    { "id": "word-porción", "kind": "word", "promptEs": "porción", "answerEn": "portion; share", "noteEn": "", "tags": ["word", "quantity", "A2"] },
+    { "id": "word-tinta", "kind": "word", "promptEs": "tinta", "answerEn": "ink", "noteEn": "", "tags": ["word", "materials", "A1"] },
+    { "id": "word-viñeta--comic-panel", "kind": "word", "promptEs": "viñeta", "answerEn": "comic panel", "noteEn": "Viñeta can also mean a small illustration or vignette. As a comics term, it names one framed panel of a comic strip.", "example": { "es": "La primera viñeta no tiene diálogo.", "en": "The first comic panel has no dialogue." }, "tags": ["word", "comics", "sense split", "A2"] },
+    { "id": "word-posición", "kind": "word", "promptEs": "posición", "answerEn": "position; location", "noteEn": "", "tags": ["word", "space", "A2"] },
+    {
+      "id": "concept-self-description-recursive-panels",
+      "kind": "concept",
+      "promptEs": "porción · cantidad · posición · viñetas dentro de la imagen",
+      "answerEn": "each panel measures the same image, and the position panel contains smaller copies of all three panels",
+      "noteEn": "The strip is self-describing: one panel labels the white and black portions, another graphs black ink by panel, and the last plots where that ink appears. Because the final plot contains thumbnails of the panels, its own content contributes recursively to the quantities and positions it depicts.",
+      "tags": ["concept", "self-reference", "visualization", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-auto-descripcion:white-portion",
+      "labelEs": "PORCIÓN DE ESTA IMAGEN QUE ES BLANCA.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0001" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0004" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0007" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0010" }],
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:white-portion:w01", "text": "PORCIÓN", "normalized": "porción", "explicitBounds": [{ "x": 0.8108, "y": 3.3333, "width": 6.4865, "height": 6.6 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-porción", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 0.7992, "y": 10.9659, "width": 2.1856, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w03", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 3.2315, "y": 10.9659, "width": 4.0774, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w04", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 1.0811, "y": 18.8889, "width": 5.473, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-imagen", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w05", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 6.7568, "y": 18.8889, "width": 3.5135, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w06", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 0.8088, "y": 25.5229, "width": 2.1661, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-auto-descripcion:white-portion:w07", "text": "BLANCA", "normalized": "blanca", "explicitBounds": [{ "x": 3.2413, "y": 25.5229, "width": 6.2202, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-blanca--white", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:white-portion:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:white-portion:w04", "es-xkcd-auto-descripcion:white-portion:w07"], "exampleEs": "IMAGEN QUE ES BLANCA", "explanationEn": "Blanca uses feminine singular -a to match feminine singular imagen; que es links them." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:black-portion",
+      "labelEs": "PORCIÓN DE ESTA IMAGEN QUE ES NEGRA.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0011" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0012" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0013" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0016" }],
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:black-portion:w01", "text": "PORCIÓN", "normalized": "porción", "explicitBounds": [{ "x": 0.8061, "y": 68.8301, "width": 6.496, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-porción", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 0.8108, "y": 76.6667, "width": 2.1622, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w03", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 3.2432, "y": 76.6667, "width": 4.0541, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w04", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 0.7876, "y": 83.3, "width": 5.6214, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-imagen", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w05", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 6.7327, "y": 83.3, "width": 3.8311, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w06", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 0.8108, "y": 91.1111, "width": 2.3649, "height": 6 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-auto-descripcion:black-portion:w07", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 3.4122, "y": 91.1111, "width": 4.9662, "height": 6 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-negra", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:black-portion:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:black-portion:w04", "es-xkcd-auto-descripcion:black-portion:w07"], "exampleEs": "IMAGEN QUE ES NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular imagen; que es links them." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:ink-quantity",
+      "labelEs": "CANTIDAD DE TINTA NEGRA POR VIÑETA: 1 2 3",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0002" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0005" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0008" }],
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w01", "text": "CANTIDAD", "normalized": "cantidad", "explicitBounds": [{ "x": 34.8649, "y": 5.5556, "width": 7.027, "height": 6.2 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-cantidad", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 42.1622, "y": 5.5556, "width": 2.1622, "height": 6.2 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-de--after-quantity"] },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w03", "text": "TINTA", "normalized": "tinta", "explicitBounds": [{ "x": 34.5912, "y": 12.1593, "width": 4.3311, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-tinta", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w04", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 39.1858, "y": 12.1593, "width": 5.1419, "height": 5.8 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-negra", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w05", "text": "POR", "normalized": "por", "explicitBounds": [{ "x": 34.5946, "y": 18.8889, "width": 3.2432, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-por--per-unit"] },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:w06", "text": "VIÑETA", "normalized": "viñeta", "explicitBounds": [{ "x": 38.1081, "y": 18.8889, "width": 5.9459, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-viñeta--comic-panel", "concept-self-description-recursive-panels"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:excluded-1", "text": "1", "reason": "number", "rationale": "This is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 41.82, "y": 86.10, "width": 1.10, "height": 7.20 }], "geometryRationale": "OCR omitted this graph numeral; the measured box isolates the printed 1 beneath the first bar." },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:excluded-2", "text": "2", "reason": "number", "rationale": "This is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 48.92, "y": 84.70, "width": 1.30, "height": 7.50 }], "geometryRationale": "The OCR box was row-sized; this measured box isolates the printed 2 beneath the second bar." },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:excluded-3", "text": "3", "reason": "number", "rationale": "This is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 56.18, "y": 86.10, "width": 1.15, "height": 7.20 }], "geometryRationale": "OCR omitted this graph numeral; the measured box isolates the printed 3 beneath the third bar." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-auto-descripcion:ink-quantity:w03", "es-xkcd-auto-descripcion:ink-quantity:w04"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra follows tinta in the common neutral order for a description." },
+        { "id": "es-xkcd-auto-descripcion:ink-quantity:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:ink-quantity:w03", "es-xkcd-auto-descripcion:ink-quantity:w04"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular tinta." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:ink-position",
+      "labelEs": "POSICIÓN DE LA TINTA NEGRA EN ESTA IMAGEN: 0 0",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0003" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0006" }, { "source": "ocr-line", "id": "es-xkcd-auto-descripcion:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:ink-position:w01", "text": "POSICIÓN", "normalized": "posición", "explicitBounds": [{ "x": 69.4353, "y": 6.1564, "width": 7.0426, "height": 7 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-posición", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 76.731, "y": 6.1564, "width": 1.8748, "height": 7 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w03", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 78.8589, "y": 6.1564, "width": 2.5166, "height": 7 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w04", "text": "TINTA", "normalized": "tinta", "explicitBounds": [{ "x": 69.4595, "y": 14.4444, "width": 4.4932, "height": 5.9 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-tinta", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w05", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 74.1892, "y": 14.4444, "width": 4.7297, "height": 5.9 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-negra", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w06", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 79.1554, "y": 14.4444, "width": 2.4662, "height": 5.9 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-en"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w07", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 69.4533, "y": 20.9866, "width": 3.7962, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:ink-position:w08", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 73.5073, "y": 20.9866, "width": 6.4988, "height": 6.5 }], "geometryRationale": "Vision used a full-row or multi-row height; this measured row-tight box isolates the printed word.", "cardIds": ["word-imagen", "concept-self-description-recursive-panels"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-auto-descripcion:ink-position:excluded-y-zero", "text": "0", "occurrence": 1, "reason": "number", "rationale": "This is the vertical-axis zero label, not a Spanish lexical word.", "explicitBounds": [{ "x": 69.18, "y": 69.20, "width": 1.20, "height": 6.20 }], "geometryRationale": "OCR omitted the axis label; this measured box isolates the printed vertical-axis zero." },
+        { "id": "es-xkcd-auto-descripcion:ink-position:excluded-x-zero", "text": "0", "occurrence": 2, "reason": "number", "rationale": "This is the horizontal-axis zero label, not a Spanish lexical word.", "explicitBounds": [{ "x": 70.20, "y": 78.70, "width": 1.20, "height": 6.20 }], "geometryRationale": "OCR omitted the axis label; this measured box isolates the printed horizontal-axis zero." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:ink-position:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-auto-descripcion:ink-position:w04", "es-xkcd-auto-descripcion:ink-position:w05"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra follows tinta in the common neutral order for a description." },
+        { "id": "es-xkcd-auto-descripcion:ink-position:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:ink-position:w04", "es-xkcd-auto-descripcion:ink-position:w05"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular tinta." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:inset-white-portion",
+      "labelEs": "PORCIÓN DE ESTA IMAGEN QUE ES BLANCA.",
+      "explicitBounds": [{ "x": 71.62, "y": 46.30, "width": 2.95, "height": 7.20 }],
+      "geometryRationale": "OCR omitted this legible first-level inset label; the measured box encloses only its four tiny printed rows.",
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w01", "text": "PORCIÓN", "normalized": "porción", "explicitBounds": [{ "x": 71.76, "y": 46.67, "width": 0.95, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-porción", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 71.76, "y": 48.33, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w03", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 72.16, "y": 48.33, "width": 0.55, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w04", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 71.76, "y": 50.00, "width": 0.82, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-imagen", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w05", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 72.70, "y": 50.00, "width": 0.55, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w06", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 71.76, "y": 51.67, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:w07", "text": "BLANCA", "normalized": "blanca", "explicitBounds": [{ "x": 72.16, "y": 51.67, "width": 0.82, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-blanca--white", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:inset-white-portion:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:inset-white-portion:w04", "es-xkcd-auto-descripcion:inset-white-portion:w07"], "exampleEs": "IMAGEN QUE ES BLANCA", "explanationEn": "Blanca uses feminine singular -a to match feminine singular imagen; que es links them." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:inset-black-portion",
+      "labelEs": "PORCIÓN DE ESTA IMAGEN QUE ES NEGRA.",
+      "explicitBounds": [{ "x": 71.62, "y": 63.90, "width": 2.95, "height": 7.20 }],
+      "geometryRationale": "OCR omitted this legible first-level inset label; the measured box encloses only its four tiny printed rows.",
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w01", "text": "PORCIÓN", "normalized": "porción", "explicitBounds": [{ "x": 71.76, "y": 64.44, "width": 0.95, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-porción", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 71.76, "y": 66.11, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w03", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 72.16, "y": 66.11, "width": 0.55, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w04", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 71.76, "y": 67.78, "width": 0.82, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-imagen", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w05", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 72.70, "y": 67.78, "width": 0.55, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w06", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 71.76, "y": 69.44, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:w07", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 72.16, "y": 69.44, "width": 0.70, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-negra", "grammar-adjective-gender-agreement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:inset-black-portion:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:inset-black-portion:w04", "es-xkcd-auto-descripcion:inset-black-portion:w07"], "exampleEs": "IMAGEN QUE ES NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular imagen; que es links them." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:inset-ink-quantity",
+      "labelEs": "CANTIDAD DE TINTA NEGRA POR VIÑETA: 1 2 3",
+      "explicitBounds": [{ "x": 80.20, "y": 46.20, "width": 8.50, "height": 25.20 }],
+      "geometryRationale": "OCR omitted this first-level inset panel; the measured region encloses its legible label and three category numerals.",
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w01", "text": "CANTIDAD", "normalized": "cantidad", "explicitBounds": [{ "x": 80.41, "y": 46.67, "width": 0.95, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-cantidad", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 81.49, "y": 46.67, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-de--after-quantity"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w03", "text": "TINTA", "normalized": "tinta", "explicitBounds": [{ "x": 80.41, "y": 48.33, "width": 0.68, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-tinta", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w04", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 81.22, "y": 48.33, "width": 0.70, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-negra", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w05", "text": "POR", "normalized": "por", "explicitBounds": [{ "x": 80.41, "y": 50.00, "width": 0.42, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-por--per-unit"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:w06", "text": "VIÑETA", "normalized": "viñeta", "explicitBounds": [{ "x": 80.95, "y": 50.00, "width": 0.82, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-viñeta--comic-panel", "concept-self-description-recursive-panels"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:excluded-1", "text": "1", "reason": "number", "rationale": "This tiny first-level inset label is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 81.75, "y": 68.20, "width": 0.42, "height": 2.30 }], "geometryRationale": "OCR omitted the first-level inset numeral; this measured micro-box isolates the printed 1." },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:excluded-2", "text": "2", "reason": "number", "rationale": "This tiny first-level inset label is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 83.85, "y": 67.50, "width": 0.42, "height": 2.30 }], "geometryRationale": "OCR omitted the first-level inset numeral; this measured micro-box isolates the printed 2." },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:excluded-3", "text": "3", "reason": "number", "rationale": "This tiny first-level inset label is a graph category numeral, not a Spanish lexical word.", "explicitBounds": [{ "x": 85.92, "y": 68.20, "width": 0.42, "height": 2.30 }], "geometryRationale": "OCR omitted the first-level inset numeral; this measured micro-box isolates the printed 3." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-auto-descripcion:inset-ink-quantity:w03", "es-xkcd-auto-descripcion:inset-ink-quantity:w04"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra follows tinta in the common neutral order for a description." },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-quantity:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:inset-ink-quantity:w03", "es-xkcd-auto-descripcion:inset-ink-quantity:w04"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular tinta." }
+      ]
+    },
+    {
+      "id": "es-xkcd-auto-descripcion:inset-ink-position",
+      "labelEs": "POSICIÓN DE LA TINTA NEGRA EN ESTA IMAGEN: 0 0",
+      "explicitBounds": [{ "x": 88.75, "y": 46.20, "width": 9.25, "height": 25.20 }],
+      "geometryRationale": "OCR omitted this first-level inset panel; the measured region encloses its legible label and two axis-zero labels.",
+      "words": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w01", "text": "POSICIÓN", "normalized": "posición", "explicitBounds": [{ "x": 89.05, "y": 46.67, "width": 0.95, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-posición", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 90.14, "y": 46.67, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w03", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 90.54, "y": 46.67, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w04", "text": "TINTA", "normalized": "tinta", "explicitBounds": [{ "x": 89.05, "y": 48.33, "width": 0.68, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-tinta", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-self-description-recursive-panels"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w05", "text": "NEGRA", "normalized": "negra", "explicitBounds": [{ "x": 89.86, "y": 48.33, "width": 0.70, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-negra", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w06", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 90.68, "y": 48.33, "width": 0.28, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-en"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w07", "text": "ESTA", "normalized": "esta", "explicitBounds": [{ "x": 89.05, "y": 50.00, "width": 0.55, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:w08", "text": "IMAGEN", "normalized": "imagen", "explicitBounds": [{ "x": 89.73, "y": 50.00, "width": 0.82, "height": 1.12 }], "geometryRationale": "OCR omitted the legible first-level inset word; this measured micro-box follows its printed pixels.", "cardIds": ["word-imagen", "concept-self-description-recursive-panels"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:excluded-y-zero", "text": "0", "occurrence": 1, "reason": "number", "rationale": "This tiny first-level inset label is the vertical-axis zero, not a Spanish lexical word.", "explicitBounds": [{ "x": 89.05, "y": 59.70, "width": 0.42, "height": 2.30 }], "geometryRationale": "OCR omitted the first-level inset axis label; this measured micro-box isolates the vertical zero." },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:excluded-x-zero", "text": "0", "occurrence": 2, "reason": "number", "rationale": "This tiny first-level inset label is the horizontal-axis zero, not a Spanish lexical word.", "explicitBounds": [{ "x": 89.45, "y": 67.70, "width": 0.42, "height": 2.30 }], "geometryRationale": "OCR omitted the first-level inset axis label; this measured micro-box isolates the horizontal zero." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-auto-descripcion:inset-ink-position:w04", "es-xkcd-auto-descripcion:inset-ink-position:w05"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra follows tinta in the common neutral order for a description." },
+        { "id": "es-xkcd-auto-descripcion:inset-ink-position:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-auto-descripcion:inset-ink-position:w04", "es-xkcd-auto-descripcion:inset-ink-position:w05"], "exampleEs": "TINTA NEGRA", "explanationEn": "Negra uses feminine singular -a to match feminine singular tinta." }
+      ]
+    }
+  ]
+}

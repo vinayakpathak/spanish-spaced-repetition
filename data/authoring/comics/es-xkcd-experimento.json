@@ -1,0 +1,971 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-experimento",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Experiment",
+  "titleEs": "Experimento",
+  "titleText": {
+    "es": "Los otros dos siguen perdidos en el plano infinito con densidad uniforme.",
+    "en": "The other two are still lost on the infinite plane of uniform density.",
+    "noteEn": "The Spanish archive and official xkcd source both identify comic #669. The Spanish title text directly translates the official note about the two missing subjects. The raster restores the DÓNDE accent, corrects ALGUIEN, joins ROZAMIENTO and EMBUSTEROS across printed line breaks, and leaves the fading marks after ME untranscribed because no further lexical word is visible."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-les--gustar-experiencer",
+      "kind": "word",
+      "promptEs": "les",
+      "answerEn": "to them; marks the group that likes or dislikes something",
+      "noteEn": "With gustar, les identifies several people who experience the liking. It does not by itself mean “they.”",
+      "example": {
+        "es": "A mis amigos les gusta bailar.",
+        "en": "My friends like dancing."
+      },
+      "tags": [
+        "word",
+        "gustar",
+        "pronoun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-gusta--plural-group-likes",
+      "kind": "word",
+      "promptEs": "gusta",
+      "answerEn": "they like; is pleasing to them",
+      "noteEn": "Gusta remains singular when what is liked is one activity in its unchanged dictionary form, even when the people who like it are plural.",
+      "example": {
+        "es": "A ellas les gusta leer.",
+        "en": "They like reading."
+      },
+      "tags": [
+        "word",
+        "gustar",
+        "present",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-vacío--physics-vacuum",
+      "kind": "word",
+      "promptEs": "vacío",
+      "answerEn": "vacuum; empty space",
+      "noteEn": "In physics, el vacío is a region treated as containing no matter or air.",
+      "example": {
+        "es": "La cámara funciona en el vacío.",
+        "en": "The chamber works in a vacuum."
+      },
+      "tags": [
+        "word",
+        "physics",
+        "technical",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-rozamiento",
+      "kind": "word",
+      "promptEs": "rozamiento",
+      "answerEn": "friction",
+      "noteEn": "Rozamiento is the resistive force between surfaces or through a medium; fricción is a common synonym.",
+      "example": {
+        "es": "El rozamiento frena la caja.",
+        "en": "Friction slows the box."
+      },
+      "tags": [
+        "word",
+        "physics",
+        "technical",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-después--fixed-despues-de-todo",
+      "kind": "word",
+      "promptEs": "después",
+      "answerEn": "after all (as part of después de todo)",
+      "noteEn": "Después begins the fixed expression después de todo, which adds a conclusion or correction after considering the circumstances.",
+      "example": {
+        "es": "Después de todo, tenías razón.",
+        "en": "After all, you were right."
+      },
+      "tags": [
+        "word",
+        "discourse",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-de--fixed-despues-de-todo",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; middle of después de todo",
+      "noteEn": "De links después and todo inside the fixed expression después de todo.",
+      "example": {
+        "es": "Después de todo, podemos esperar.",
+        "en": "After all, we can wait."
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-todo--fixed-despues-de-todo",
+      "kind": "word",
+      "promptEs": "todo",
+      "answerEn": "all (completing después de todo, after all)",
+      "noteEn": "Todo completes the fixed expression después de todo.",
+      "example": {
+        "es": "Después de todo, salió bien.",
+        "en": "After all, it turned out well."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-embusteros",
+      "kind": "word",
+      "promptEs": "embusteros",
+      "answerEn": "liars; frauds",
+      "noteEn": "Embusteros is masculine or mixed plural. The feminine plural form is embusteras.",
+      "example": {
+        "es": "No creas a esos embusteros.",
+        "en": "Do not believe those liars."
+      },
+      "tags": [
+        "word",
+        "people",
+        "insult",
+        "B1"
+      ]
+    },
+    {
+      "id": "grammar-a-group-les-gusta-infinitive",
+      "kind": "grammar",
+      "promptEs": "a + grupo + (no) les gusta + infinitivo",
+      "questionEn": "How do you say that a named group of people likes or dislikes doing an activity?",
+      "answerEn": "Name the group after a, use les, then gusta, then the activity verb in its unchanged dictionary form; put no before les to make it negative.",
+      "noteEn": "Les points back to the named group. Gusta stays singular because an activity is treated as one liked thing, and the activity verb remains in its dictionary form ending in -ar, -er, or -ir. Spanish therefore says a mis amigos les gusta correr, even though the friends are plural.",
+      "example": {
+        "es": "A mis vecinos no les gusta madrugar.",
+        "en": "My neighbors do not like getting up early."
+      },
+      "tags": [
+        "grammar",
+        "gustar",
+        "plural experiencer",
+        "A2"
+      ]
+    },
+    {
+      "id": "phrase-despues-de-todo",
+      "kind": "phrase",
+      "promptEs": "después de todo",
+      "questionEn": "How do you add “after all” when giving a final reason, reminder, or changed conclusion?",
+      "answerEn": "Use después de todo.",
+      "noteEn": "The three words stay together as a discourse expression. It does not normally refer to one event occurring later than everything else; instead it asks the listener to consider all the circumstances before the conclusion.",
+      "example": {
+        "es": "Después de todo, no fue tan difícil.",
+        "en": "After all, it was not so difficult."
+      },
+      "tags": [
+        "phrase",
+        "discourse",
+        "A2"
+      ]
+    },
+    {
+      "id": "concept-idealized-frictionless-vacuum-experiment",
+      "kind": "concept",
+      "promptEs": "vacío · sin rozamiento · experimento ideal",
+      "questionEn": "Why are a vacuum and zero friction central to the joke?",
+      "answerEn": "Physics problems often remove air resistance and friction to create simple idealized models; the comic turns those assumptions into a place where real professors have been deposited.",
+      "noteEn": "Ideal conditions make equations easier by eliminating forces that complicate motion. The experiment treats those textbook simplifications as a literal environment and then mocks the professors for disliking the conditions they routinely impose on imagined objects. The official title text adds that two other subjects remain lost on an infinite plane of uniform density.",
+      "tags": [
+        "concept",
+        "xkcd joke",
+        "physics",
+        "thought experiment"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-experimento:waking-question",
+      "labelEs": "UF... ¿QUÉ HA PASADO?",
+      "explicitBounds": [
+        {
+          "x": 29.7,
+          "y": 14.5,
+          "width": 9,
+          "height": 15
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [
+        {
+          "id": "es-xkcd-experimento:waking-question:w01",
+          "text": "UF",
+          "normalized": "uf",
+          "explicitBounds": [
+            {
+              "x": 30.2703,
+              "y": 14.9068,
+              "width": 3.2432,
+              "height": 3.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-uf"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:waking-question:w02",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "explicitBounds": [
+            {
+              "x": 30,
+              "y": 21.118,
+              "width": 4.0541,
+              "height": 3.3
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-qué--interrogative",
+            "question-words"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:waking-question:w03",
+          "text": "HA",
+          "normalized": "ha",
+          "explicitBounds": [
+            {
+              "x": 34.2568,
+              "y": 21.118,
+              "width": 2.2297,
+              "height": 3.3
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-ha",
+            "grammar-present-perfect"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:waking-question:w04",
+          "text": "PASADO",
+          "normalized": "pasado",
+          "explicitBounds": [
+            {
+              "x": 30.2703,
+              "y": 24.8447,
+              "width": 7.8378,
+              "height": 3.5
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-pasado--happened",
+            "grammar-present-perfect"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "es-xkcd-experimento:waking-question:app-completed-event",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-experimento:waking-question:w03",
+            "es-xkcd-experimento:waking-question:w04"
+          ],
+          "exampleEs": "HA PASADO",
+          "explanationEn": "Ha is the present helper for a singular event, and pasado is pasar's completed-action form in the question."
+        },
+        {
+          "id": "es-xkcd-experimento:waking-question:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-experimento:waking-question:w02"
+          ],
+          "exampleEs": "QUÉ",
+          "explanationEn": "Qué carries a written accent because it directly asks what happened."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-experimento:location-question",
+      "labelEs": "¿DÓNDE ESTOY?",
+      "explicitBounds": [
+        {
+          "x": 42.2,
+          "y": 1.5,
+          "width": 16.5,
+          "height": 6
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [
+        {
+          "id": "es-xkcd-experimento:location-question:w01",
+          "text": "DÓNDE",
+          "normalized": "dónde",
+          "explicitBounds": [
+            {
+              "x": 42.7027,
+              "y": 1.8634,
+              "width": 7.0946,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-dónde--direct-question",
+            "question-words"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:location-question:w02",
+          "text": "ESTOY",
+          "normalized": "estoy",
+          "explicitBounds": [
+            {
+              "x": 50.2703,
+              "y": 1.8634,
+              "width": 7.8378,
+              "height": 4.2
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-estoy--location"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "es-xkcd-experimento:location-question:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-experimento:location-question:w01"
+          ],
+          "exampleEs": "DÓNDE",
+          "explanationEn": "Dónde carries a written accent because it directly asks for a location."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-experimento:transition-sound",
+      "labelEs": "FSSSSSSSSS",
+      "explicitBounds": [
+        {
+          "x": 50,
+          "y": 8,
+          "width": 23.5,
+          "height": 7
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-experimento:transition-sound:excluded-fsssssssss",
+          "text": "FSSSSSSSSS",
+          "reason": "symbol",
+          "rationale": "FSSSSSSSSS is a fading or transport sound effect rather than a Spanish lexical word.",
+          "explicitBounds": [
+            {
+              "x": 50.4054,
+              "y": 8.0745,
+              "width": 22.8378,
+              "height": 5.3
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-experimento:fading-plea",
+      "labelEs": "¡AYUDA! ¡QUE ALGUIEN ME...",
+      "explicitBounds": [
+        {
+          "x": 47.2,
+          "y": 20.7,
+          "width": 12.5,
+          "height": 14
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [
+        {
+          "id": "es-xkcd-experimento:fading-plea:w01",
+          "text": "AYUDA",
+          "normalized": "ayuda",
+          "explicitBounds": [
+            {
+              "x": 47.5676,
+              "y": 21.118,
+              "width": 7.8378,
+              "height": 3.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-ayuda--plea"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:fading-plea:w02",
+          "text": "QUE",
+          "normalized": "que",
+          "explicitBounds": [
+            {
+              "x": 48.3784,
+              "y": 26.087,
+              "width": 3.6486,
+              "height": 3.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-que--wish"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:fading-plea:w03",
+          "text": "ALGUIEN",
+          "normalized": "alguien",
+          "explicitBounds": [
+            {
+              "x": 52.3311,
+              "y": 26.087,
+              "width": 6.5878,
+              "height": 3.8
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-alguien"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:fading-plea:w04",
+          "text": "ME",
+          "normalized": "me",
+          "explicitBounds": [
+            {
+              "x": 48.6486,
+              "y": 30.4348,
+              "width": 2.2297,
+              "height": 3.3
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-me--direct"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-experimento:professors-comment",
+      "labelEs": "JE. PARECE QUE A LOS PROFESORES DE FÍSICA NO LES GUSTA TRABAJAR EN EL VACÍO Y SIN ROZAMIENTO DESPUÉS DE TODO.",
+      "explicitBounds": [
+        {
+          "x": 81.6,
+          "y": 52.8,
+          "width": 18,
+          "height": 23
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [
+        {
+          "id": "es-xkcd-experimento:professors-comment:w01",
+          "text": "JE",
+          "normalized": "je",
+          "explicitBounds": [
+            {
+              "x": 81.8919,
+              "y": 53.4161,
+              "width": 2.1622,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-je--heh"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w02",
+          "text": "PARECE",
+          "normalized": "parece",
+          "explicitBounds": [
+            {
+              "x": 85,
+              "y": 53.4161,
+              "width": 5.1351,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-parece",
+            "phrase-parece-que"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w03",
+          "text": "QUE",
+          "normalized": "que",
+          "explicitBounds": [
+            {
+              "x": 90.8108,
+              "y": 53.4161,
+              "width": 2.973,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-que--clause-link",
+            "phrase-parece-que"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w04",
+          "text": "A",
+          "normalized": "a",
+          "explicitBounds": [
+            {
+              "x": 94.3243,
+              "y": 53.4161,
+              "width": 0.8108,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-a--gustar-experiencer",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w05",
+          "text": "LOS",
+          "normalized": "los",
+          "explicitBounds": [
+            {
+              "x": 95.8108,
+              "y": 53.4161,
+              "width": 2.7027,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-los",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w06",
+          "text": "PROFESORES",
+          "normalized": "profesores",
+          "explicitBounds": [
+            {
+              "x": 81.8919,
+              "y": 57.4534,
+              "width": 8.6486,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-profesores",
+            "grammar-a-group-les-gusta-infinitive",
+            "concept-idealized-frictionless-vacuum-experiment"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w07",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [
+            {
+              "x": 91.2162,
+              "y": 57.4534,
+              "width": 1.6216,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-de--of"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w08",
+          "text": "FÍSICA",
+          "normalized": "física",
+          "explicitBounds": [
+            {
+              "x": 93.6486,
+              "y": 57.4534,
+              "width": 4.0541,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-física",
+            "concept-idealized-frictionless-vacuum-experiment"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w09",
+          "text": "NO",
+          "normalized": "no",
+          "explicitBounds": [
+            {
+              "x": 81.8919,
+              "y": 60.8696,
+              "width": 1.8919,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-no",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w10",
+          "text": "LES",
+          "normalized": "les",
+          "explicitBounds": [
+            {
+              "x": 84.5946,
+              "y": 60.8696,
+              "width": 2.4324,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-les--gustar-experiencer",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w11",
+          "text": "GUSTA",
+          "normalized": "gusta",
+          "explicitBounds": [
+            {
+              "x": 87.7027,
+              "y": 60.8696,
+              "width": 4.0541,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-gusta--plural-group-likes",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w12",
+          "text": "TRABAJAR",
+          "normalized": "trabajar",
+          "explicitBounds": [
+            {
+              "x": 92.7027,
+              "y": 60.8696,
+              "width": 6.6216,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-trabajar",
+            "grammar-a-group-les-gusta-infinitive"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w13",
+          "text": "EN",
+          "normalized": "en",
+          "explicitBounds": [
+            {
+              "x": 81.8919,
+              "y": 64.2857,
+              "width": 1.7568,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-en"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w14",
+          "text": "EL",
+          "normalized": "el",
+          "explicitBounds": [
+            {
+              "x": 84.4595,
+              "y": 64.2857,
+              "width": 1.4865,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-el--article"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w15",
+          "text": "VACÍO",
+          "normalized": "vacío",
+          "explicitBounds": [
+            {
+              "x": 86.7568,
+              "y": 64.2857,
+              "width": 4.0541,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-vacío--physics-vacuum",
+            "concept-idealized-frictionless-vacuum-experiment"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w16",
+          "text": "Y",
+          "normalized": "y",
+          "explicitBounds": [
+            {
+              "x": 91.3514,
+              "y": 64.2857,
+              "width": 0.8108,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-y"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w17",
+          "text": "SIN",
+          "normalized": "sin",
+          "explicitBounds": [
+            {
+              "x": 92.8378,
+              "y": 64.2857,
+              "width": 2.1622,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-sin"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w18",
+          "text": "ROZAMIENTO",
+          "normalized": "rozamiento",
+          "explicitBounds": [
+            {
+              "x": 95.8108,
+              "y": 64.2857,
+              "width": 2.2973,
+              "height": 2.4845
+            },
+            {
+              "x": 81.8919,
+              "y": 67.7019,
+              "width": 6.8919,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-rozamiento",
+            "concept-idealized-frictionless-vacuum-experiment"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w19",
+          "text": "DESPUÉS",
+          "normalized": "después",
+          "explicitBounds": [
+            {
+              "x": 89.5946,
+              "y": 67.7019,
+              "width": 5.8108,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-después--fixed-despues-de-todo",
+            "phrase-despues-de-todo"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w20",
+          "text": "DE",
+          "normalized": "de",
+          "explicitBounds": [
+            {
+              "x": 96.0811,
+              "y": 67.7019,
+              "width": 1.7568,
+              "height": 2.4845
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-de--fixed-despues-de-todo",
+            "phrase-despues-de-todo"
+          ]
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:w21",
+          "text": "TODO",
+          "normalized": "todo",
+          "explicitBounds": [
+            {
+              "x": 81.8919,
+              "y": 71.118,
+              "width": 3.9189,
+              "height": 3.1056
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-todo--fixed-despues-de-todo",
+            "phrase-despues-de-todo"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        {
+          "id": "es-xkcd-experimento:professors-comment:app-seems",
+          "cardId": "phrase-parece-que",
+          "participantWordIds": [
+            "es-xkcd-experimento:professors-comment:w02",
+            "es-xkcd-experimento:professors-comment:w03"
+          ],
+          "exampleEs": "PARECE QUE",
+          "explanationEn": "Parece and que form the conventional introduction to an apparent conclusion."
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:app-group-dislikes-activity",
+          "cardId": "grammar-a-group-les-gusta-infinitive",
+          "participantWordIds": [
+            "es-xkcd-experimento:professors-comment:w04",
+            "es-xkcd-experimento:professors-comment:w05",
+            "es-xkcd-experimento:professors-comment:w06",
+            "es-xkcd-experimento:professors-comment:w09",
+            "es-xkcd-experimento:professors-comment:w10",
+            "es-xkcd-experimento:professors-comment:w11",
+            "es-xkcd-experimento:professors-comment:w12"
+          ],
+          "exampleEs": "A LOS PROFESORES DE FÍSICA NO LES GUSTA TRABAJAR",
+          "explanationEn": "A los profesores names the plural group, no makes the preference negative, les points back to that group, and trabajar remains in its unchanged -ar dictionary form."
+        },
+        {
+          "id": "es-xkcd-experimento:professors-comment:app-after-all",
+          "cardId": "phrase-despues-de-todo",
+          "participantWordIds": [
+            "es-xkcd-experimento:professors-comment:w19",
+            "es-xkcd-experimento:professors-comment:w20",
+            "es-xkcd-experimento:professors-comment:w21"
+          ],
+          "exampleEs": "DESPUÉS DE TODO",
+          "explanationEn": "The three words work together as a final reconsidering expression rather than a literal sequence in time."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-experimento:liars",
+      "labelEs": "EMBUSTEROS.",
+      "explicitBounds": [
+        {
+          "x": 93.5,
+          "y": 71.5,
+          "width": 6.3,
+          "height": 9
+        }
+      ],
+      "geometryRationale": "This checked region box encloses only the source-ordered printed text assigned to this coherent caption or speech unit.",
+      "words": [
+        {
+          "id": "es-xkcd-experimento:liars:w01",
+          "text": "EMBUSTEROS",
+          "normalized": "embusteros",
+          "explicitBounds": [
+            {
+              "x": 94.0541,
+              "y": 72.0497,
+              "width": 5.4054,
+              "height": 3.4
+            },
+            {
+              "x": 93.7838,
+              "y": 75.7764,
+              "width": 4.8649,
+              "height": 3.4
+            }
+          ],
+          "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
+          "cardIds": [
+            "word-embusteros",
+            "concept-idealized-frictionless-vacuum-experiment"
+          ]
+        }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    }
+  ]
+}
