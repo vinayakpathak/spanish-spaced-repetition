@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-exito",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Success",
+  "titleEs": "Éxito",
+  "titleText": {
+    "es": "El 40% de las instalaciones de OpenBSD conducen a un ataque de tiburones. Es el único bug de seguridad que tienen.",
+    "en": "40% of OpenBSD installs lead to shark attacks. It's their only standing security issue.",
+    "noteEn": "The title text turns the comic's escalating upgrade disaster into a joke about OpenBSD's strong security reputation: its only remaining 'security issue' is supposedly sharks."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-se--desarrollarse-project",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; helps desarrollarse mean ‘to develop or progress’",
+      "noteEn": "With a project, plan, or situation as the subject, desarrollarse describes how it unfolds or progresses without naming an outside doer.",
+      "example": { "es": "La reunión se desarrolla con calma.", "en": "The meeting is progressing calmly." },
+      "tags": ["word", "pronominal verb", "development", "B1"]
+    },
+    {
+      "id": "word-desarrolla--progresses",
+      "kind": "word",
+      "promptEs": "desarrolla",
+      "answerEn": "develops; progresses (with se)",
+      "noteEn": "Desarrolla is the present form used with one project or situation. With se, it describes that subject unfolding over time.",
+      "example": { "es": "La historia se desarrolla lentamente.", "en": "The story develops slowly." },
+      "tags": ["word", "verb", "present", "development", "B1"]
+    },
+    { "id": "word-proyecto", "kind": "word", "promptEs": "proyecto", "answerEn": "project", "noteEn": "", "tags": ["word", "noun", "A2"] },
+    { "id": "word-éxito", "kind": "word", "promptEs": "éxito", "answerEn": "success", "noteEn": "", "tags": ["word", "noun", "A2"] },
+    {
+      "id": "word-se--hacerse-change",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; helps hacerse mean ‘to become’",
+      "noteEn": "With a describing word, hacerse can present a gradual or noticeable change in the subject's state.",
+      "example": { "es": "Los días se hacen más largos.", "en": "The days are getting longer." },
+      "tags": ["word", "pronominal verb", "change", "A2"]
+    },
+    {
+      "id": "word-hacen--become",
+      "kind": "word",
+      "promptEs": "hacen",
+      "answerEn": "they become; get (with se)",
+      "noteEn": "Hacen normally means ‘they make,’ but se hacen followed by a description can say that several things become or grow that way.",
+      "example": { "es": "Las noches se hacen frías.", "en": "The nights grow cold." },
+      "tags": ["word", "verb", "change", "plural", "A2"]
+    },
+    {
+      "id": "word-dual--dual-boot",
+      "kind": "word",
+      "promptEs": "dual",
+      "answerEn": "dual; using two systems (in arranque dual)",
+      "noteEn": "In computing, arranque dual is a setup that lets one machine start either of two installed operating systems.",
+      "example": { "es": "El portátil tiene arranque dual.", "en": "The laptop has dual boot." },
+      "tags": ["word", "computing", "adjective", "B1"]
+    },
+    {
+      "id": "word-poco--short-time",
+      "kind": "word",
+      "promptEs": "poco",
+      "answerEn": "a short time; soon (inside dentro de poco)",
+      "noteEn": "After dentro de, poco names an unspecified short interval from now. The full phrase dentro de poco means ‘soon’ or ‘before long.’",
+      "example": { "es": "Volveré dentro de poco.", "en": "I'll be back soon." },
+      "tags": ["word", "time", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-quedaré--state",
+      "kind": "word",
+      "promptEs": "quedaré",
+      "answerEn": "I will end up; I will remain (with me)",
+      "noteEn": "Quedaré is the future form for the speaker. With me and a describing word, it states the resulting or continuing condition.",
+      "example": { "es": "Me quedaré tranquilo.", "en": "I will remain calm." },
+      "tags": ["word", "quedarse", "future", "state", "A2"]
+    },
+    { "id": "word-contento", "kind": "word", "promptEs": "contento", "answerEn": "happy; satisfied (masculine singular)", "noteEn": "", "tags": ["word", "adjective", "state", "A1"] },
+    {
+      "id": "word-dejar--leave-state",
+      "kind": "word",
+      "promptEs": "dejar",
+      "answerEn": "to leave; to keep (something in a state)",
+      "noteEn": "Dejar can mean not changing something, especially when the following words describe the state in which it remains.",
+      "example": { "es": "Voy a dejar la puerta abierta.", "en": "I'm going to leave the door open." },
+      "tags": ["word", "verb", "state", "A2"]
+    },
+    { "id": "word-estaba--state", "kind": "word", "promptEs": "estaba", "answerEn": "it was; used to be (a past state)", "noteEn": "", "tags": ["word", "estar", "imperfect", "past", "A2"] },
+    {
+      "id": "word-al--fixed-al-principio",
+      "kind": "word",
+      "promptEs": "al",
+      "answerEn": "at the; begins al principio, ‘at the beginning’",
+      "noteEn": "Al is the required contraction of a + el. With principio it locates something at the beginning of a process or period.",
+      "example": { "es": "Al principio fue difícil.", "en": "At the beginning it was difficult." },
+      "tags": ["word", "contraction", "time", "A2"]
+    },
+    {
+      "id": "word-principio--fixed-al-principio",
+      "kind": "word",
+      "promptEs": "principio",
+      "answerEn": "beginning; start (as part of al principio)",
+      "noteEn": "Al principio places a state or event at the beginning of a process, story, or period.",
+      "example": { "es": "No entendí al principio.", "en": "I didn't understand at first." },
+      "tags": ["word", "time", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-sobremesa--desktop-computer",
+      "kind": "word",
+      "promptEs": "sobremesa",
+      "answerEn": "desktop computer",
+      "noteEn": "El sobremesa is a shortened form of el ordenador de sobremesa. In other contexts, la sobremesa can instead mean the conversation and time spent at the table after a meal.",
+      "example": { "es": "Uso un sobremesa en la oficina.", "en": "I use a desktop computer at the office." },
+      "tags": ["word", "computing", "noun", "B1"]
+    },
+    {
+      "id": "word-perdida--lost",
+      "kind": "word",
+      "promptEs": "perdida",
+      "answerEn": "lost; hopeless (feminine singular)",
+      "noteEn": "With causa, perdida forms causa perdida, a situation no longer expected to succeed.",
+      "example": { "es": "Todos creen que es una causa perdida.", "en": "Everyone thinks it is a lost cause." },
+      "tags": ["word", "adjective", "fixed expression", "B1"]
+    },
+    { "id": "word-arreglar--fix", "kind": "word", "promptEs": "arreglar", "answerEn": "to fix; to repair", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-surgieron", "kind": "word", "promptEs": "surgieron", "answerEn": "they arose; appeared", "noteEn": "", "tags": ["word", "verb", "completed past", "B1"] },
+    {
+      "id": "word-portátil--laptop",
+      "kind": "word",
+      "promptEs": "portátil",
+      "answerEn": "laptop computer",
+      "noteEn": "As a noun in computing, el portátil is a laptop. As an adjective, portátil means portable.",
+      "example": { "es": "Mi portátil necesita una batería nueva.", "en": "My laptop needs a new battery." },
+      "tags": ["word", "computing", "noun", "A2"]
+    },
+    { "id": "word-suerte", "kind": "word", "promptEs": "suerte", "answerEn": "luck", "noteEn": "", "tags": ["word", "noun", "A1"] },
+    { "id": "word-tiburones", "kind": "word", "promptEs": "tiburones", "answerEn": "sharks", "noteEn": "", "tags": ["word", "animal", "noun", "plural"] },
+    { "id": "word-nos--direct", "kind": "word", "promptEs": "nos", "answerEn": "us (the people directly affected)", "noteEn": "", "tags": ["word", "object marker", "plural", "A2"] },
+    {
+      "id": "word-dejarán--leave-alone",
+      "kind": "word",
+      "promptEs": "dejarán",
+      "answerEn": "they will leave (someone alone)",
+      "noteEn": "Dejarán is the future form used for they. With an object and en paz, it means that they will stop bothering that person.",
+      "example": { "es": "Nos dejarán en paz mañana.", "en": "They will leave us alone tomorrow." },
+      "tags": ["word", "verb", "future", "fixed expression", "A2"]
+    },
+    {
+      "id": "word-en--fixed-dejar-en-paz",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "no separate English word; links dejar to paz in dejar en paz",
+      "noteEn": "En is required inside the expression dejar a alguien en paz, meaning to leave someone alone or stop bothering them.",
+      "example": { "es": "Deja al perro en paz.", "en": "Leave the dog alone." },
+      "tags": ["word", "fixed expression", "preposition", "A2"]
+    },
+    {
+      "id": "word-paz--fixed-dejar-en-paz",
+      "kind": "word",
+      "promptEs": "paz",
+      "answerEn": "alone; in peace (inside dejar en paz)",
+      "noteEn": "Paz normally means peace. In dejar a alguien en paz, the full expression means leaving that person alone or no longer bothering them.",
+      "example": { "es": "Por favor, déjame en paz.", "en": "Please leave me alone." },
+      "tags": ["word", "fixed expression", "noun", "A2"]
+    },
+    {
+      "id": "word-lleguemos",
+      "kind": "word",
+      "promptEs": "lleguemos",
+      "answerEn": "we reach; we arrive (an awaited-event form)",
+      "noteEn": "Lleguemos is the special form used for we after expressions such as hasta que when the arrival is still in the future.",
+      "example": { "es": "Espera hasta que lleguemos.", "en": "Wait until we arrive." },
+      "tags": ["word", "verb", "subjunctive", "we", "B1"]
+    },
+    { "id": "word-aguas--waters", "kind": "word", "promptEs": "aguas", "answerEn": "waters; an area of water", "noteEn": "", "tags": ["word", "noun", "plural", "geography"] },
+    { "id": "word-profundas", "kind": "word", "promptEs": "profundas", "answerEn": "deep (feminine plural)", "noteEn": "", "tags": ["word", "adjective", "plural", "A2"] },
+    { "id": "word-volvemos--return", "kind": "word", "promptEs": "volvemos", "answerEn": "we return; we get back", "noteEn": "", "tags": ["word", "verb", "present", "we", "A2"] },
+    {
+      "id": "word-con--fixed-con-vida",
+      "kind": "word",
+      "promptEs": "con",
+      "answerEn": "no separate English word; begins con vida, ‘alive’",
+      "noteEn": "Con vida describes a person or animal as still living, often after danger or rescue.",
+      "example": { "es": "Encontraron al excursionista con vida.", "en": "They found the hiker alive." },
+      "tags": ["word", "fixed expression", "state", "A2"]
+    },
+    {
+      "id": "word-volverás--repeat-action",
+      "kind": "word",
+      "promptEs": "volverás",
+      "answerEn": "you will do again (with a + action)",
+      "noteEn": "Volverás is the future form for informal singular you. Followed by a and an unchanged action verb, it says that the action will happen again.",
+      "example": { "es": "Volverás a intentarlo.", "en": "You will try again." },
+      "tags": ["word", "verb", "future", "repetition", "A2"]
+    },
+    {
+      "id": "word-más--fixed-nunca-mas",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "again; anymore (completing nunca más)",
+      "noteEn": "After nunca, más extends the negative into the future: nunca más means ‘never again.’",
+      "example": { "es": "No volvió nunca más.", "en": "He never came back again." },
+      "tags": ["word", "fixed expression", "negative", "A2"]
+    },
+    {
+      "id": "grammar-hacerse-adjective-change",
+      "kind": "grammar",
+      "promptEs": "hacerse + descripción",
+      "questionEn": "How can you say that a person or thing becomes or gradually grows a certain way?",
+      "answerEn": "Use the matching form of hacerse followed by the word that describes the new state.",
+      "noteEn": "The short marker and hacer form change with the subject: me hago, te haces, se hace, nos hacemos, and so on. The describing word matches the person or thing in number and, when its form changes, gender.",
+      "example": { "es": "Las tardes se hacen más cortas.", "en": "The afternoons are getting shorter." },
+      "tags": ["grammar", "change of state", "hacerse", "A2"]
+    },
+    {
+      "id": "grammar-cada-vez-mas-description",
+      "kind": "grammar",
+      "promptEs": "cada vez más (y más) + descripción",
+      "questionEn": "How do you say that a quality keeps increasing over time?",
+      "answerEn": "Put cada vez más before the describing word; repeat y más for extra emphasis.",
+      "noteEn": "Cada vez más means ‘increasingly’ or ‘more and more.’ The emphatic form cada vez más y más stresses that the change continues. The final describing word still matches what it describes.",
+      "example": { "es": "Las calles son cada vez más estrechas.", "en": "The streets are getting narrower and narrower." },
+      "tags": ["grammar", "degree", "change", "comparison", "A2"]
+    },
+    {
+      "id": "phrase-arranque-dual",
+      "kind": "phrase",
+      "promptEs": "arranque dual",
+      "questionEn": "What is the Spanish expression for a computer setup that can start either of two operating systems?",
+      "answerEn": "Use arranque dual.",
+      "noteEn": "Arranque is the startup or boot process. Dual says that two systems are available; the user chooses one when the computer starts.",
+      "example": { "es": "Configuré un arranque dual con Linux.", "en": "I set up dual boot with Linux." },
+      "tags": ["phrase", "computing", "operating system", "B1"]
+    },
+    {
+      "id": "phrase-al-principio",
+      "kind": "phrase",
+      "promptEs": "al principio",
+      "questionEn": "How do you say “at the beginning” or “at first”?",
+      "answerEn": "Use al principio.",
+      "noteEn": "Al combines a + el. Al principio can locate something at the beginning of a process, or contrast an initial situation with what happened later.",
+      "example": { "es": "Al principio todo parecía sencillo.", "en": "At first everything seemed simple." },
+      "tags": ["phrase", "time", "sequence", "A2"]
+    },
+    {
+      "id": "phrase-causa-perdida",
+      "kind": "phrase",
+      "promptEs": "(una) causa perdida",
+      "questionEn": "How do you describe a situation that seems hopeless and no longer worth trying to save?",
+      "answerEn": "Call it una causa perdida.",
+      "noteEn": "The literal words are ‘a lost cause.’ Perdida is feminine because it describes causa. The expression can refer to a project, effort, or situation, not only a social cause.",
+      "example": { "es": "El viejo motor es una causa perdida.", "en": "The old engine is a lost cause." },
+      "tags": ["phrase", "idiom", "failure", "B1"]
+    },
+    {
+      "id": "phrase-tener-suerte",
+      "kind": "phrase",
+      "promptEs": "tener suerte",
+      "questionEn": "How do you say that someone is lucky or has good luck?",
+      "answerEn": "Use the matching form of tener followed by suerte.",
+      "noteEn": "Spanish builds this with tener, ‘to have’: tengo suerte, tienes suerte, tenemos suerte. Do not use ser before suerte for this meaning.",
+      "example": { "es": "Tuvimos suerte con el tiempo.", "en": "We were lucky with the weather." },
+      "tags": ["phrase", "luck", "tener", "A2"]
+    },
+    {
+      "id": "phrase-dejar-en-paz",
+      "kind": "phrase",
+      "promptEs": "dejar a alguien en paz",
+      "questionEn": "How do you tell or say that someone should be left alone and no longer bothered?",
+      "answerEn": "Use a form of dejar, identify the affected person, and add en paz.",
+      "noteEn": "The affected person can appear as me, te, lo, la, nos, or another object form. En paz stays fixed: déjame en paz means ‘leave me alone.’",
+      "example": { "es": "Dejaron a Marta en paz.", "en": "They left Marta alone." },
+      "tags": ["phrase", "fixed expression", "object", "A2"]
+    },
+    {
+      "id": "phrase-con-vida",
+      "kind": "phrase",
+      "promptEs": "con vida",
+      "questionEn": "How do you say that someone is still alive after danger or when found?",
+      "answerEn": "Use con vida.",
+      "noteEn": "The phrase can follow verbs such as volver, encontrar, rescatar, or salir. Natural English usually uses the adjective ‘alive’ rather than translating con separately.",
+      "example": { "es": "Los rescataron con vida.", "en": "They rescued them alive." },
+      "tags": ["phrase", "state", "survival", "A2"]
+    },
+    {
+      "id": "phrase-nunca-mas",
+      "kind": "phrase",
+      "promptEs": "nunca más",
+      "questionEn": "How do you say that something will never happen again?",
+      "answerEn": "Use nunca más.",
+      "noteEn": "Nunca supplies ‘never’ and más extends it to ‘again’ or ‘anymore.’ If the phrase follows a verb that already has no before it, Spanish keeps both negatives.",
+      "example": { "es": "No quiero verlo nunca más.", "en": "I never want to see it again." },
+      "tags": ["phrase", "negative", "time", "A2"]
+    },
+    {
+      "id": "concept-openbsd-shark-security",
+      "kind": "concept",
+      "promptEs": "OpenBSD · seguridad · ataque de tiburones",
+      "answerEn": "OpenBSD is an operating system known for emphasizing security; the comic invents shark attacks as its absurd remaining security problem.",
+      "noteEn": "The worsening computer repair ends with the characters in shark-filled water. The title text pretends that 40% of OpenBSD installations cause shark attacks and calls that the system's only standing security issue.",
+      "tags": ["concept", "OpenBSD", "computing", "security", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-exito:narration",
+      "labelEs": "MIENTRAS SE DESARROLLA UN PROYECTO, LAS PERSPECTIVAS DE ÉXITO SE HACEN CADA VEZ MÁS Y MÁS PEQUEÑAS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:narration:w01", "text": "MIENTRAS", "normalized": "mientras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00001" }], "cardIds": ["word-mientras"] },
+        { "id": "es-xkcd-exito:narration:w02", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00002" }], "cardIds": ["word-se--desarrollarse-project"] },
+        { "id": "es-xkcd-exito:narration:w03", "text": "DESARROLLA", "normalized": "desarrolla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00003" }], "cardIds": ["word-desarrolla--progresses"] },
+        { "id": "es-xkcd-exito:narration:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00004" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-exito:narration:w05", "text": "PROYECTO", "normalized": "proyecto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00005" }], "cardIds": ["word-proyecto"] },
+        { "id": "es-xkcd-exito:narration:w06", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00006" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-exito:narration:w07", "text": "PERSPECTIVAS", "normalized": "perspectivas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00007" }], "cardIds": ["word-perspectivas"] },
+        { "id": "es-xkcd-exito:narration:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00008" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-exito:narration:w09", "text": "ÉXITO", "normalized": "éxito", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00009" }], "cardIds": ["word-éxito"] },
+        { "id": "es-xkcd-exito:narration:w10", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00010" }], "cardIds": ["word-se--hacerse-change", "grammar-hacerse-adjective-change"] },
+        { "id": "es-xkcd-exito:narration:w11", "text": "HACEN", "normalized": "hacen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00011" }], "cardIds": ["word-hacen--become", "grammar-hacerse-adjective-change"] },
+        { "id": "es-xkcd-exito:narration:w12", "text": "CADA", "normalized": "cada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00012" }], "cardIds": ["word-cada", "grammar-cada-vez-mas-description"] },
+        { "id": "es-xkcd-exito:narration:w13", "text": "VEZ", "normalized": "vez", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00013" }], "cardIds": ["word-vez", "grammar-cada-vez-mas-description"] },
+        { "id": "es-xkcd-exito:narration:w14", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00014" }], "cardIds": ["word-más--more", "grammar-cada-vez-mas-description"] },
+        { "id": "es-xkcd-exito:narration:w15", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00015" }], "cardIds": ["word-y", "grammar-cada-vez-mas-description"] },
+        { "id": "es-xkcd-exito:narration:w16", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00016" }], "cardIds": ["word-más--more", "grammar-cada-vez-mas-description"] },
+        { "id": "es-xkcd-exito:narration:w17", "text": "PEQUEÑAS", "normalized": "pequeñas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00017" }], "cardIds": ["word-pequeñas", "grammar-hacerse-adjective-change", "grammar-cada-vez-mas-description"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:narration:app-hacerse-change", "cardId": "grammar-hacerse-adjective-change", "participantWordIds": ["es-xkcd-exito:narration:w10", "es-xkcd-exito:narration:w11", "es-xkcd-exito:narration:w17"], "exampleEs": "SE HACEN CADA VEZ MÁS Y MÁS PEQUEÑAS", "explanationEn": "Se hacen presents a gradual change in the plural perspectivas, and pequeñas is feminine plural to match them." },
+        { "id": "es-xkcd-exito:narration:app-increasing-degree", "cardId": "grammar-cada-vez-mas-description", "participantWordIds": ["es-xkcd-exito:narration:w12", "es-xkcd-exito:narration:w13", "es-xkcd-exito:narration:w14", "es-xkcd-exito:narration:w15", "es-xkcd-exito:narration:w16", "es-xkcd-exito:narration:w17"], "exampleEs": "CADA VEZ MÁS Y MÁS PEQUEÑAS", "explanationEn": "Cada vez más marks an increasing degree, and y más repeats the increase for emphasis before the final description." }
+      ]
+    },
+    {
+      "id": "es-xkcd-exito:zero-hours-label",
+      "labelEs": "0 HORAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-exito:zero-hours-label:w01", "text": "HORAS", "normalized": "horas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00019" }], "cardIds": ["word-horas"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-exito:zero-hours-label:excluded-zero", "text": "0", "reason": "number", "rationale": "This is the panel's elapsed-hour number, not Spanish vocabulary; Vision read the handwritten zero as the letter O.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00018" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-exito:zero-hours-plan",
+      "labelEs": "VALE, DEBERÍA PODER TENER UN ARRANQUE DUAL CON OPENBSD DENTRO DE POCO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:zero-hours-plan:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00020" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w02", "text": "DEBERÍA", "normalized": "debería", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00021" }], "cardIds": ["word-debería", "grammar-deberia-expectation"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w03", "text": "PODER", "normalized": "poder", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00022" }], "cardIds": ["word-poder--be-able", "grammar-deberia-expectation", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w04", "text": "TENER", "normalized": "tener", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00023" }], "cardIds": ["word-tener--have", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w05", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00024" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w06", "text": "ARRANQUE", "normalized": "arranque", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00025" }], "cardIds": ["word-arranque--startup-noun", "phrase-arranque-dual", "concept-openbsd-shark-security"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w07", "text": "DUAL", "normalized": "dual", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00026" }], "cardIds": ["word-dual--dual-boot", "phrase-arranque-dual", "concept-openbsd-shark-security"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w08", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00027" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w09", "text": "DENTRO", "normalized": "dentro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00029" }], "cardIds": ["word-dentro--future-time", "phrase-dentro-de-duration"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00030" }], "cardIds": ["word-de--fixed-dentro-de", "phrase-dentro-de-duration"] },
+        { "id": "es-xkcd-exito:zero-hours-plan:w11", "text": "POCO", "normalized": "poco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00031" }], "cardIds": ["word-poco--short-time", "phrase-dentro-de-duration"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-exito:zero-hours-plan:excluded-openbsd", "text": "OPENBSD", "reason": "non-spanish-text", "rationale": "This is the unchanged proper name of an operating system, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00028" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:zero-hours-plan:app-expected-ability", "cardId": "grammar-deberia-expectation", "participantWordIds": ["es-xkcd-exito:zero-hours-plan:w02", "es-xkcd-exito:zero-hours-plan:w03"], "exampleEs": "DEBERÍA PODER", "explanationEn": "Debería presents the ability as expected, while poder remains in its unchanged dictionary form." },
+        { "id": "es-xkcd-exito:zero-hours-plan:app-poder-tener", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-exito:zero-hours-plan:w03", "es-xkcd-exito:zero-hours-plan:w04"], "exampleEs": "PODER TENER", "explanationEn": "Poder is itself unchanged after debería, and tener stays unchanged after poder to name the ability." },
+        { "id": "es-xkcd-exito:zero-hours-plan:app-dual-boot", "cardId": "phrase-arranque-dual", "participantWordIds": ["es-xkcd-exito:zero-hours-plan:w06", "es-xkcd-exito:zero-hours-plan:w07"], "exampleEs": "ARRANQUE DUAL", "explanationEn": "Arranque names the computer's startup process and dual says that two operating systems can be selected." },
+        { "id": "es-xkcd-exito:zero-hours-plan:app-soon", "cardId": "phrase-dentro-de-duration", "participantWordIds": ["es-xkcd-exito:zero-hours-plan:w09", "es-xkcd-exito:zero-hours-plan:w10", "es-xkcd-exito:zero-hours-plan:w11"], "exampleEs": "DENTRO DE POCO", "explanationEn": "Dentro de introduces a future interval, and poco makes that interval an unspecified short time." }
+      ]
+    },
+    {
+      "id": "es-xkcd-exito:six-hours-label",
+      "labelEs": "6 HORAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0009" }],
+      "words": [{ "id": "es-xkcd-exito:six-hours-label:w01", "text": "HORAS", "normalized": "horas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00033" }], "cardIds": ["word-horas"] }],
+      "excludedUnits": [{ "id": "es-xkcd-exito:six-hours-label:excluded-six", "text": "6", "reason": "number", "rationale": "This is the panel's elapsed-hour number, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00032" }] }],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-exito:six-hours-goal",
+      "labelEs": "ME QUEDARÉ CONTENTO SI PUEDO DEJAR EL SISTEMA TAL Y COMO ESTABA AL PRINCIPIO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:six-hours-goal:w01", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00034" }], "cardIds": ["word-me--pronominal-marker", "grammar-quedarse-state"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w02", "text": "QUEDARÉ", "normalized": "quedaré", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00035" }], "cardIds": ["word-quedaré--state", "grammar-quedarse-state", "grammar-simple-future"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w03", "text": "CONTENTO", "normalized": "contento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00036" }], "cardIds": ["word-contento", "grammar-quedarse-state"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w04", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00037" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w05", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00038" }], "cardIds": ["word-puedo", "grammar-si-present-real-condition", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w06", "text": "DEJAR", "normalized": "dejar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00039" }], "cardIds": ["word-dejar--leave-state", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w07", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00040" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w08", "text": "SISTEMA", "normalized": "sistema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00041" }], "cardIds": ["word-sistema"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w09", "text": "TAL", "normalized": "tal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00042" }], "cardIds": ["word-tal--tal-y-como", "phrase-tal-y-como"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w10", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00043" }], "cardIds": ["word-y", "phrase-tal-y-como"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w11", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00044" }], "cardIds": ["word-como", "phrase-tal-y-como"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w12", "text": "ESTABA", "normalized": "estaba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00045" }], "cardIds": ["word-estaba--state", "phrase-tal-y-como", "grammar-past-contrast"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w13", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00046" }], "cardIds": ["word-al--fixed-al-principio", "phrase-tal-y-como", "phrase-al-principio"] },
+        { "id": "es-xkcd-exito:six-hours-goal:w14", "text": "PRINCIPIO", "normalized": "principio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00047" }], "cardIds": ["word-principio--fixed-al-principio", "phrase-tal-y-como", "phrase-al-principio"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:six-hours-goal:app-quedarse-state", "cardId": "grammar-quedarse-state", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w01", "es-xkcd-exito:six-hours-goal:w02", "es-xkcd-exito:six-hours-goal:w03"], "exampleEs": "ME QUEDARÉ CONTENTO", "explanationEn": "Me and quedaré form the first-person future of quedarse, and contento names the resulting state." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w02"], "exampleEs": "QUEDARÉ", "explanationEn": "Quedar keeps its complete dictionary stem and adds -é for what the speaker will do; me marks the pronominal verb separately." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-real-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w04", "es-xkcd-exito:six-hours-goal:w05"], "exampleEs": "SI PUEDO", "explanationEn": "Si introduces a condition treated as possible, and puedo uses the ordinary present form." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-poder-dejar", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w05", "es-xkcd-exito:six-hours-goal:w06"], "exampleEs": "PUEDO DEJAR", "explanationEn": "Puedo changes for the speaker, while dejar stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-tal-y-como", "cardId": "phrase-tal-y-como", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w09", "es-xkcd-exito:six-hours-goal:w10", "es-xkcd-exito:six-hours-goal:w11", "es-xkcd-exito:six-hours-goal:w12", "es-xkcd-exito:six-hours-goal:w13", "es-xkcd-exito:six-hours-goal:w14"], "exampleEs": "TAL Y COMO ESTABA AL PRINCIPIO", "explanationEn": "Tal y como introduces the exact earlier state, and estaba al principio supplies that complete comparison." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-past-state", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w12"], "exampleEs": "ESTABA", "explanationEn": "Estaba uses the imperfect because it presents the system's earlier condition as a continuing background state." },
+        { "id": "es-xkcd-exito:six-hours-goal:app-at-first", "cardId": "phrase-al-principio", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w13", "es-xkcd-exito:six-hours-goal:w14"], "exampleEs": "AL PRINCIPIO", "explanationEn": "Al is a + el, and principio names the initial point of the repair process." }
+      ]
+    },
+    {
+      "id": "es-xkcd-exito:ten-hours-label",
+      "labelEs": "10 HORAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0014" }],
+      "words": [{ "id": "es-xkcd-exito:ten-hours-label:w01", "text": "HORAS", "normalized": "horas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00049" }], "cardIds": ["word-horas"] }],
+      "excludedUnits": [{ "id": "es-xkcd-exito:ten-hours-label:excluded-ten", "text": "10", "reason": "number", "rationale": "This is the panel's elapsed-hour number, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00048" }] }],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-exito:ten-hours-assessment",
+      "labelEs": "BUENO, EL SOBREMESA ES UNA CAUSA PERDIDA, PERO CREO QUE PUEDO ARREGLAR LOS PROBLEMAS QUE SURGIERON EN EL PORTÁTIL.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:ten-hours-assessment:w01", "text": "BUENO", "normalized": "bueno", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00050" }], "cardIds": ["word-bueno"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00051" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w03", "text": "SOBREMESA", "normalized": "sobremesa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00052" }], "cardIds": ["word-sobremesa--desktop-computer"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w04", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00053" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w05", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00054" }], "cardIds": ["word-una", "phrase-causa-perdida"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w06", "text": "CAUSA", "normalized": "causa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00055" }], "cardIds": ["word-causa", "phrase-causa-perdida"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w07", "text": "PERDIDA", "normalized": "perdida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00056" }], "cardIds": ["word-perdida--lost", "phrase-causa-perdida"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w08", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00057" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w09", "text": "CREO", "normalized": "creo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00058" }], "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w10", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00059" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w11", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00060" }], "cardIds": ["word-puedo", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w12", "text": "ARREGLAR", "normalized": "arreglar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00061" }], "cardIds": ["word-arreglar--fix", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w13", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00062" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w14", "text": "PROBLEMAS", "normalized": "problemas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00063" }], "cardIds": ["word-problemas", "grammar-relative-que"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w15", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00064" }], "cardIds": ["word-que--relative", "grammar-relative-que"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w16", "text": "SURGIERON", "normalized": "surgieron", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00065" }], "cardIds": ["word-surgieron", "grammar-relative-que", "grammar-past-contrast"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w17", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00066" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w18", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00067" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-exito:ten-hours-assessment:w19", "text": "PORTÁTIL", "normalized": "portátil", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00068" }], "cardIds": ["word-portátil--laptop"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:ten-hours-assessment:app-lost-cause", "cardId": "phrase-causa-perdida", "participantWordIds": ["es-xkcd-exito:ten-hours-assessment:w05", "es-xkcd-exito:ten-hours-assessment:w06", "es-xkcd-exito:ten-hours-assessment:w07"], "exampleEs": "UNA CAUSA PERDIDA", "explanationEn": "Causa is feminine, so perdida matches it; together the words label a situation that now seems hopeless." },
+        { "id": "es-xkcd-exito:ten-hours-assessment:app-poder-fix", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-exito:ten-hours-assessment:w11", "es-xkcd-exito:ten-hours-assessment:w12"], "exampleEs": "PUEDO ARREGLAR", "explanationEn": "Puedo changes for the speaker, while arreglar stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-exito:ten-hours-assessment:app-relative", "cardId": "grammar-relative-que", "participantWordIds": ["es-xkcd-exito:ten-hours-assessment:w14", "es-xkcd-exito:ten-hours-assessment:w15", "es-xkcd-exito:ten-hours-assessment:w16"], "exampleEs": "PROBLEMAS QUE SURGIERON", "explanationEn": "Que connects problemas to the added information supplied by surgieron." },
+        { "id": "es-xkcd-exito:ten-hours-assessment:app-completed-past", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-exito:ten-hours-assessment:w16"], "exampleEs": "SURGIERON", "explanationEn": "Surgieron presents the problems' appearance as a completed past event, not a continuing background state." }
+      ]
+    },
+    {
+      "id": "es-xkcd-exito:twenty-four-hours-label",
+      "labelEs": "24 HORAS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0020" }],
+      "words": [{ "id": "es-xkcd-exito:twenty-four-hours-label:w01", "text": "HORAS", "normalized": "horas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00070" }], "cardIds": ["word-horas"] }],
+      "excludedUnits": [{ "id": "es-xkcd-exito:twenty-four-hours-label:excluded-twenty-four", "text": "24", "reason": "number", "rationale": "This is the panel's elapsed-hour number, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00069" }] }],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-exito:shark-plan",
+      "labelEs": "SI TENEMOS SUERTE, LOS TIBURONES NOS DEJARÁN EN PAZ HASTA QUE LLEGUEMOS A AGUAS POCO PROFUNDAS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:shark-plan:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00071" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-exito:shark-plan:w02", "text": "TENEMOS", "normalized": "tenemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00072" }], "cardIds": ["word-tenemos", "grammar-si-present-real-condition", "phrase-tener-suerte"] },
+        { "id": "es-xkcd-exito:shark-plan:w03", "text": "SUERTE", "normalized": "suerte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00073" }], "cardIds": ["word-suerte", "phrase-tener-suerte"] },
+        { "id": "es-xkcd-exito:shark-plan:w04", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00074" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-exito:shark-plan:w05", "text": "TIBURONES", "normalized": "tiburones", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00075" }], "cardIds": ["word-tiburones", "concept-openbsd-shark-security"] },
+        { "id": "es-xkcd-exito:shark-plan:w06", "text": "NOS", "normalized": "nos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00076" }], "cardIds": ["word-nos--direct", "phrase-dejar-en-paz"] },
+        { "id": "es-xkcd-exito:shark-plan:w07", "text": "DEJARÁN", "normalized": "dejarán", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00077" }], "cardIds": ["word-dejarán--leave-alone", "phrase-dejar-en-paz", "grammar-simple-future"] },
+        { "id": "es-xkcd-exito:shark-plan:w08", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00078" }], "cardIds": ["word-en--fixed-dejar-en-paz", "phrase-dejar-en-paz"] },
+        { "id": "es-xkcd-exito:shark-plan:w09", "text": "PAZ", "normalized": "paz", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00079" }], "cardIds": ["word-paz--fixed-dejar-en-paz", "phrase-dejar-en-paz"] },
+        { "id": "es-xkcd-exito:shark-plan:w10", "text": "HASTA", "normalized": "hasta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00080" }], "cardIds": ["word-hasta", "grammar-hasta-que-subjunctive"] },
+        { "id": "es-xkcd-exito:shark-plan:w11", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00081" }], "cardIds": ["word-que--until-link", "grammar-hasta-que-subjunctive"] },
+        { "id": "es-xkcd-exito:shark-plan:w12", "text": "LLEGUEMOS", "normalized": "lleguemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00082" }], "cardIds": ["word-lleguemos", "grammar-hasta-que-subjunctive"] },
+        { "id": "es-xkcd-exito:shark-plan:w13", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00083" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-exito:shark-plan:w14", "text": "AGUAS", "normalized": "aguas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00084" }], "cardIds": ["word-aguas--waters"] },
+        { "id": "es-xkcd-exito:shark-plan:w15", "text": "POCO", "normalized": "poco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00085" }], "cardIds": ["word-poco--not-very"] },
+        { "id": "es-xkcd-exito:shark-plan:w16", "text": "PROFUNDAS", "normalized": "profundas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00086" }], "cardIds": ["word-profundas"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:shark-plan:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-exito:shark-plan:w01", "es-xkcd-exito:shark-plan:w02"], "exampleEs": "SI TENEMOS", "explanationEn": "Si presents a genuinely possible condition, and tenemos stays in the ordinary present form." },
+        { "id": "es-xkcd-exito:shark-plan:app-have-luck", "cardId": "phrase-tener-suerte", "participantWordIds": ["es-xkcd-exito:shark-plan:w02", "es-xkcd-exito:shark-plan:w03"], "exampleEs": "TENEMOS SUERTE", "explanationEn": "Tenemos changes for we, while suerte completes the fixed way of describing luck." },
+        { "id": "es-xkcd-exito:shark-plan:app-leave-alone", "cardId": "phrase-dejar-en-paz", "participantWordIds": ["es-xkcd-exito:shark-plan:w06", "es-xkcd-exito:shark-plan:w07", "es-xkcd-exito:shark-plan:w08", "es-xkcd-exito:shark-plan:w09"], "exampleEs": "NOS DEJARÁN EN PAZ", "explanationEn": "Nos names the affected people, dejarán is the plural future action, and en paz completes the fixed expression." },
+        { "id": "es-xkcd-exito:shark-plan:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-exito:shark-plan:w07"], "exampleEs": "DEJARÁN", "explanationEn": "Dejar keeps its complete dictionary form and adds -án for what they will do." },
+        { "id": "es-xkcd-exito:shark-plan:app-until-awaited", "cardId": "grammar-hasta-que-subjunctive", "participantWordIds": ["es-xkcd-exito:shark-plan:w10", "es-xkcd-exito:shark-plan:w11", "es-xkcd-exito:shark-plan:w12"], "exampleEs": "HASTA QUE LLEGUEMOS", "explanationEn": "Hasta que introduces the limit, and lleguemos uses the special awaited-event form because the arrival has not happened yet." }
+      ]
+    },
+    {
+      "id": "es-xkcd-exito:no-more-upgrades",
+      "labelEs": "SI VOLVEMOS CON VIDA, NO VOLVERÁS A ACTUALIZAR NADA NUNCA MÁS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-exito:ocr-line-0026" }
+      ],
+      "words": [
+        { "id": "es-xkcd-exito:no-more-upgrades:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00087" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w02", "text": "VOLVEMOS", "normalized": "volvemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00088" }], "cardIds": ["word-volvemos--return", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w03", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00089" }], "cardIds": ["word-con--fixed-con-vida", "phrase-con-vida"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w04", "text": "VIDA", "normalized": "vida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00090" }], "cardIds": ["word-vida", "phrase-con-vida"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w05", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00091" }], "cardIds": ["word-no", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w06", "text": "VOLVERÁS", "normalized": "volverás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00092" }], "cardIds": ["word-volverás--repeat-action", "phrase-volver-a-infinitive", "grammar-simple-future", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w07", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00093" }], "cardIds": ["word-a--repetition-link", "phrase-volver-a-infinitive", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w08", "text": "ACTUALIZAR", "normalized": "actualizar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00094" }], "cardIds": ["word-actualizar--update", "phrase-volver-a-infinitive", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w09", "text": "NADA", "normalized": "nada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00095" }], "cardIds": ["word-nada", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w10", "text": "NUNCA", "normalized": "nunca", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00096" }], "cardIds": ["word-nunca", "phrase-nunca-mas", "grammar-negative-concord"] },
+        { "id": "es-xkcd-exito:no-more-upgrades:w11", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-exito:ocr-token-00097" }], "cardIds": ["word-más--fixed-nunca-mas", "phrase-nunca-mas", "grammar-negative-concord"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-exito:no-more-upgrades:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w01", "es-xkcd-exito:no-more-upgrades:w02"], "exampleEs": "SI VOLVEMOS", "explanationEn": "Si introduces the possible condition, and volvemos uses the ordinary present form even though the return is still in the future." },
+        { "id": "es-xkcd-exito:no-more-upgrades:app-alive", "cardId": "phrase-con-vida", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w03", "es-xkcd-exito:no-more-upgrades:w04"], "exampleEs": "CON VIDA", "explanationEn": "Con vida forms the fixed description for returning while still alive." },
+        { "id": "es-xkcd-exito:no-more-upgrades:app-repeat", "cardId": "phrase-volver-a-infinitive", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w06", "es-xkcd-exito:no-more-upgrades:w07", "es-xkcd-exito:no-more-upgrades:w08"], "exampleEs": "VOLVERÁS A ACTUALIZAR", "explanationEn": "Volverás changes for informal singular you in the future, a links it to actualizar, and actualizar stays unchanged." },
+        { "id": "es-xkcd-exito:no-more-upgrades:app-future", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w06"], "exampleEs": "VOLVERÁS", "explanationEn": "Volver keeps its complete dictionary form and adds -ás for informal singular you in the future." },
+        { "id": "es-xkcd-exito:no-more-upgrades:app-never-again", "cardId": "phrase-nunca-mas", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w10", "es-xkcd-exito:no-more-upgrades:w11"], "exampleEs": "NUNCA MÁS", "explanationEn": "Nunca supplies the negative and más extends it into ‘again’ or ‘anymore.’" },
+        { "id": "es-xkcd-exito:no-more-upgrades:app-negative-concord", "cardId": "grammar-negative-concord", "participantWordIds": ["es-xkcd-exito:no-more-upgrades:w05", "es-xkcd-exito:no-more-upgrades:w06", "es-xkcd-exito:no-more-upgrades:w07", "es-xkcd-exito:no-more-upgrades:w08", "es-xkcd-exito:no-more-upgrades:w09", "es-xkcd-exito:no-more-upgrades:w10", "es-xkcd-exito:no-more-upgrades:w11"], "exampleEs": "NO VOLVERÁS A ACTUALIZAR NADA NUNCA MÁS", "explanationEn": "No stays before the verb phrase while nada and nunca más add matching negative information after it; Spanish keeps all of these negatives together." }
+      ]
+    }
+  ]
+}

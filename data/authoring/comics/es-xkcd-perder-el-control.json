@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-perder-el-control",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Getting Out of Hand",
+  "titleEs": "Perder el control",
+  "titleText": {
+    "es": "La función de la Wikipedia como extensión cerebral, aunque un poco problemática, también mola mucho.",
+    "en": "Wikipedia's role as brain-extension, while a little troubling, is also really cool.",
+    "noteEn": "The Spanish title text uses the colloquial phrase mola mucho for “is really cool.”"
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-juego--play-activity",
+      "kind": "word",
+      "promptEs": "juego",
+      "answerEn": "play; activity",
+      "noteEn": "",
+      "tags": ["word", "noun", "activity"]
+    },
+    {
+      "id": "phrase-juego-sexual",
+      "kind": "phrase",
+      "promptEs": "juego sexual",
+      "questionEn": "How do you refer to sexual play, including activity that builds arousal before intercourse?",
+      "answerEn": "Use juego sexual for sexual play; depending on context, it can refer to foreplay.",
+      "noteEn": "Juego sexual is broader than English “foreplay”: it can name different kinds of consensual sexual activity, so the surrounding context determines whether “foreplay” is the best English meaning.",
+      "example": {
+        "es": "Hablaron de sus preferencias para el juego sexual.",
+        "en": "They talked about their preferences for sexual play."
+      },
+      "tags": ["phrase", "collocation", "relationships", "B1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-perder-el-control:laptop-heading",
+      "labelEs": "JUEGO SEXUAL",
+      "geometryRefs": [
+        {
+          "source": "override-line",
+          "id": "manual-newspaper-masthead"
+        }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-perder-el-control:laptop-heading:word-juego",
+          "text": "JUEGO",
+          "normalized": "juego",
+          "geometryRefs": [
+            {
+              "source": "override-token",
+              "id": "manual-juego"
+            }
+          ],
+          "cardIds": [
+            "word-juego--play-activity",
+            "phrase-juego-sexual"
+          ]
+        },
+        {
+          "id": "es-xkcd-perder-el-control:laptop-heading:word-sexual",
+          "text": "SEXUAL",
+          "normalized": "sexual",
+          "geometryRefs": [
+            {
+              "source": "override-token",
+              "id": "manual-sexual"
+            }
+          ],
+          "cardIds": [
+            "word-sexual",
+            "phrase-juego-sexual"
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-perder-el-control:laptop-heading:app-juego-sexual",
+          "cardId": "phrase-juego-sexual",
+          "participantWordIds": [
+            "es-xkcd-perder-el-control:laptop-heading:word-juego",
+            "es-xkcd-perder-el-control:laptop-heading:word-sexual"
+          ],
+          "exampleEs": "JUEGO SEXUAL",
+          "explanationEn": "Juego and sexual form the fixed topic label; the shared card explains the expression's range without adding any surrounding sentence."
+        }
+      ]
+    }
+  ]
+}

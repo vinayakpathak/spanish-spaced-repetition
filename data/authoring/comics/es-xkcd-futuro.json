@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-futuro",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Future",
+  "titleEs": "Futuro",
+  "titleText": {
+    "es": "",
+    "en": "But the past was much too cramped!",
+    "noteEn": "The official title text extends the visual joke by treating the past as another physical space with too little room."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-ven--come-command",
+      "kind": "word",
+      "promptEs": "ven",
+      "answerEn": "come (informal command to one person)",
+      "noteEn": "Ven is the irregular positive command of venir, ‘to come,’ for tú, the familiar singular ‘you.’",
+      "example": {
+        "es": "Ven aquí, por favor.",
+        "en": "Come here, please."
+      },
+      "tags": ["word", "command", "venir", "A1"]
+    },
+    {
+      "id": "word-explorar",
+      "kind": "word",
+      "promptEs": "explorar",
+      "answerEn": "to explore",
+      "noteEn": "",
+      "tags": ["word", "verb", "A1"]
+    },
+    {
+      "id": "grammar-venir-a-infinitive-purpose",
+      "kind": "grammar",
+      "promptEs": "venir a + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone comes in order to do an activity?",
+      "answerEn": "Use a form of venir, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Venir changes for the person, time, or command: viene, vinieron, ven, and so on. The activity after a stays in its dictionary form ending in -ar, -er, or -ir. This lesson is about literal movement for a purpose; other figurative uses of venir a are separate.",
+      "example": {
+        "es": "Lucía viene a estudiar.",
+        "en": "Lucía comes to study."
+      },
+      "tags": ["grammar", "movement", "purpose", "infinitive", "A1"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-futuro:invitation",
+      "labelEs": "¡VEN A EXPLORAR EL FUTURO CONMIGO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-futuro:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-futuro:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-futuro:ocr-line-0004" }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-futuro:invitation:w01",
+          "text": "VEN",
+          "normalized": "ven",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00001" }],
+          "cardIds": ["word-ven--come-command", "grammar-affirmative-tu-command", "grammar-venir-a-infinitive-purpose"]
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:w02",
+          "text": "A",
+          "normalized": "a",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00002" }],
+          "cardIds": ["word-a--infinitive-link", "grammar-venir-a-infinitive-purpose"]
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:w03",
+          "text": "EXPLORAR",
+          "normalized": "explorar",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00003" }],
+          "cardIds": ["word-explorar", "grammar-venir-a-infinitive-purpose"]
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:w04",
+          "text": "EL",
+          "normalized": "el",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00006" }],
+          "cardIds": ["word-el--article"]
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:w05",
+          "text": "FUTURO",
+          "normalized": "futuro",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00007" }],
+          "cardIds": ["word-futuro"]
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:w06",
+          "text": "CONMIGO",
+          "normalized": "conmigo",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00008" }],
+          "cardIds": ["word-conmigo--with-me"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-futuro:invitation:app-tu-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": ["es-xkcd-futuro:invitation:w01"],
+          "exampleEs": "VEN",
+          "explanationEn": "Ven is the irregular positive command of venir for one familiar listener."
+        },
+        {
+          "id": "es-xkcd-futuro:invitation:app-come-do",
+          "cardId": "grammar-venir-a-infinitive-purpose",
+          "participantWordIds": [
+            "es-xkcd-futuro:invitation:w01",
+            "es-xkcd-futuro:invitation:w02",
+            "es-xkcd-futuro:invitation:w03"
+          ],
+          "exampleEs": "VEN A EXPLORAR",
+          "explanationEn": "Ven carries the informal invitation, a links it to the activity, and explorar stays in its unchanged dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-futuro:reply",
+      "labelEs": "NO PUEDO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-futuro:ocr-line-0002" }],
+      "words": [
+        {
+          "id": "es-xkcd-futuro:reply:w01",
+          "text": "NO",
+          "normalized": "no",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00004" }],
+          "cardIds": ["word-no"]
+        },
+        {
+          "id": "es-xkcd-futuro:reply:w02",
+          "text": "PUEDO",
+          "normalized": "puedo",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-futuro:ocr-token-00005" }],
+          "cardIds": ["word-puedo", "grammar-poder-ellipsis"]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-futuro:reply:app-poder-ellipsis",
+          "cardId": "grammar-poder-ellipsis",
+          "participantWordIds": ["es-xkcd-futuro:reply:w02"],
+          "exampleEs": "PUEDO",
+          "explanationEn": "Puedo stands alone because the preceding invitation already makes the missing action clear."
+        }
+      ]
+    }
+  ]
+}

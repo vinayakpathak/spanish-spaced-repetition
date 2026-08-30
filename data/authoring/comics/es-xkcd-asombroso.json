@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-asombroso",
+  "titleEs": "Asombroso",
+  "titleEn": "Startling",
+  "titleText": {
+    "es": "En realidad, el futuro llegó hará unos 3 años.",
+    "en": "We actually reached the future about three years ago.",
+    "noteEn": "The joke treats suddenly noticing that it is already the twenty-first century as a recurring surprise; the title text says that the imagined ‘future’ had in fact arrived several years earlier."
+  },
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-pocos--few",
+      "kind": "word",
+      "promptEs": "pocos",
+      "answerEn": "few (masculine plural)",
+      "noteEn": "Pocos describes a small number of masculine plural things. Use pocas with a feminine plural noun.",
+      "example": {
+        "es": "Quedan pocos días.",
+        "en": "Few days remain."
+      },
+      "tags": ["word", "quantity", "agreement", "A1"]
+    },
+    {
+      "id": "word-meses",
+      "kind": "word",
+      "promptEs": "meses",
+      "answerEn": "months",
+      "noteEn": "",
+      "tags": ["word", "time", "noun", "A1"]
+    },
+    {
+      "id": "phrase-cada-pocos-time-periods",
+      "kind": "phrase",
+      "promptEs": "cada pocos/pocas + períodos de tiempo",
+      "questionEn": "How do you say that something happens every few days, weeks, months, or similar periods?",
+      "answerEn": "Use cada, then pocos or pocas, then the plural time period.",
+      "noteEn": "Pocos or pocas matches the time noun: cada pocos días, cada pocas semanas, cada pocos meses. This describes a recurring interval without saying its exact length.",
+      "example": {
+        "es": "Nos reunimos cada pocas semanas.",
+        "en": "We meet every few weeks."
+      },
+      "tags": ["phrase", "time", "frequency", "A2"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-asombroso:narration",
+      "labelEs": "TODAVÍA ME PASA CADA POCOS MESES.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-asombroso:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-asombroso:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-asombroso:narration:w01", "text": "TODAVÍA", "normalized": "todavía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00001" }], "cardIds": ["word-todavía--still"] },
+        { "id": "es-xkcd-asombroso:narration:w02", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00002" }], "cardIds": ["word-me--indirect", "grammar-pasarle-algo-a-alguien"] },
+        { "id": "es-xkcd-asombroso:narration:w03", "text": "PASA", "normalized": "pasa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00003" }], "cardIds": ["word-pasa--happens", "grammar-pasarle-algo-a-alguien"] },
+        { "id": "es-xkcd-asombroso:narration:w04", "text": "CADA", "normalized": "cada", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00004" }], "cardIds": ["word-cada", "phrase-cada-pocos-time-periods"] },
+        { "id": "es-xkcd-asombroso:narration:w05", "text": "POCOS", "normalized": "pocos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00005" }], "cardIds": ["word-pocos--few", "phrase-cada-pocos-time-periods"] },
+        { "id": "es-xkcd-asombroso:narration:w06", "text": "MESES", "normalized": "meses", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00006" }], "cardIds": ["word-meses", "phrase-cada-pocos-time-periods"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-asombroso:narration:app-happens-to-me",
+          "cardId": "grammar-pasarle-algo-a-alguien",
+          "participantWordIds": [
+            "es-xkcd-asombroso:narration:w02",
+            "es-xkcd-asombroso:narration:w03"
+          ],
+          "exampleEs": "ME PASA",
+          "explanationEn": "Me identifies the person affected, while pasa presents a recurring event whose content is understood from the situation."
+        },
+        {
+          "id": "es-xkcd-asombroso:narration:app-every-few-months",
+          "cardId": "phrase-cada-pocos-time-periods",
+          "participantWordIds": [
+            "es-xkcd-asombroso:narration:w04",
+            "es-xkcd-asombroso:narration:w05",
+            "es-xkcd-asombroso:narration:w06"
+          ],
+          "exampleEs": "CADA POCOS MESES",
+          "explanationEn": "Cada marks recurrence, pocos gives an inexact small number, and meses names the repeated time unit."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-asombroso:exclamation",
+      "labelEs": "JODER, ESTAMOS EN EL SIGLO XXI.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-asombroso:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-asombroso:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-asombroso:exclamation:w01", "text": "JODER", "normalized": "joder", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00007" }], "cardIds": ["word-joder--exclamation"] },
+        { "id": "es-xkcd-asombroso:exclamation:w02", "text": "ESTAMOS", "normalized": "estamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00008" }], "cardIds": ["word-estamos"] },
+        { "id": "es-xkcd-asombroso:exclamation:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00009" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-asombroso:exclamation:w04", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00010" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-asombroso:exclamation:w05", "text": "SIGLO", "normalized": "siglo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00011" }], "cardIds": ["word-siglo", "grammar-siglo-roman-numeral"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-asombroso:exclamation:excluded-century-number",
+          "text": "XXI",
+          "reason": "number",
+          "rationale": "XXI is a Roman numeral naming the century, not a Spanish lexical word; the linked century-pattern card explains how it is read.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00012" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-asombroso:exclamation:app-century-number",
+          "cardId": "grammar-siglo-roman-numeral",
+          "participantWordIds": ["es-xkcd-asombroso:exclamation:w05"],
+          "exampleEs": "SIGLO XXI",
+          "explanationEn": "Siglo comes before the Roman numeral XXI, which is read veintiuno when naming the twenty-first century."
+        }
+      ]
+    }
+  ]
+}

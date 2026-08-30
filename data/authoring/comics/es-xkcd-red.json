@@ -1,0 +1,604 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-red",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Network",
+  "titleEs": "Red",
+  "titleText": {
+    "es": "Hasta ahora, los virus han sido muy decepcionantes en el frente para ",
+    "en": "Viruses so far have been really disappointing on the 'disable the internet' front, and time is running out. When Linux/Mac win in a decade or so the game will be over.",
+    "noteEn": "The Spanish archive metadata is truncated immediately before its quoted phrase because the page's title attribute contains unescaped quotation marks. The official English title text darkens the playful malware aquarium by joking that computer viruses are running out of time to disable the internet before a future platform shift ends their opportunity."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-bonita--pretty",
+      "kind": "word",
+      "promptEs": "bonita",
+      "answerEn": "pretty; nice-looking (feminine singular)",
+      "noteEn": "Bonita is the feminine form of bonito. Spanish can leave the noun unstated when it is already obvious, while the -a ending still points to one feminine thing.",
+      "example": { "es": "—¿Te gusta la mesa? —Sí, es bonita.", "en": "—Do you like the table? —Yes, it is pretty." },
+      "tags": ["word", "adjective", "agreement", "A1"]
+    },
+    {
+      "id": "word-eh--agreement-tag",
+      "kind": "word",
+      "promptEs": "eh",
+      "answerEn": "huh?; isn't it? (asking for agreement)",
+      "noteEn": "Placed after a comment, eh can turn it into a casual request for the listener to agree. This differs from hesitation eh, meaning ‘uh,’ or an attention-getting ‘hey.’",
+      "example": { "es": "Hace frío, ¿eh?", "en": "It is cold, isn't it?" },
+      "tags": ["word", "conversation", "agreement", "A2"]
+    },
+    {
+      "id": "word-puñado--quantity",
+      "kind": "word",
+      "promptEs": "puñado",
+      "answerEn": "handful; a small bunch (with un ... de)",
+      "noteEn": "A puñado is literally the amount that fits in one hand. Un puñado de is also used figuratively for a modest group or amount.",
+      "example": { "es": "Tengo un puñado de ideas.", "en": "I have a handful of ideas." },
+      "tags": ["word", "quantity", "noun", "A2"]
+    },
+    { "id": "word-máquinas", "kind": "word", "promptEs": "máquinas", "answerEn": "machines", "noteEn": "", "tags": ["word", "noun", "plural", "A1"] },
+    { "id": "word-virtuales", "kind": "word", "promptEs": "virtuales", "answerEn": "virtual (plural)", "noteEn": "", "tags": ["word", "technology", "adjective", "A2"] },
+    {
+      "id": "word-puestas--networked",
+      "kind": "word",
+      "promptEs": "puestas",
+      "answerEn": "connected; networked (feminine plural, with en red)",
+      "noteEn": "Puestas is the feminine plural completed-action form of poner, normally ‘to put.’ In poner algo en red, the expression means connecting devices so they form a network.",
+      "example": { "es": "Las impresoras están puestas en red.", "en": "The printers are networked." },
+      "tags": ["word", "technology", "completed-action form", "B1"]
+    },
+    {
+      "id": "word-enganchadas--connected",
+      "kind": "word",
+      "promptEs": "enganchadas",
+      "answerEn": "hooked up; connected (feminine plural)",
+      "noteEn": "Enganchar literally involves hooking or attaching something. With equipment or a service, it can describe things hooked up or connected to it.",
+      "example": { "es": "Las cámaras están enganchadas al sistema.", "en": "The cameras are hooked up to the system." },
+      "tags": ["word", "connection", "technology", "B1"]
+    },
+    { "id": "word-ejecutan", "kind": "word", "promptEs": "ejecutan", "answerEn": "they run; they execute (software or files)", "noteEn": "", "tags": ["word", "verb", "technology", "A2"] },
+    {
+      "id": "word-adjuntos--email-attachments",
+      "kind": "word",
+      "promptEs": "adjuntos",
+      "answerEn": "attachments (files sent with email)",
+      "noteEn": "Adjunto can mean ‘attached.’ Used as a noun in email, an adjunto is a file included with the message.",
+      "example": { "es": "Abrí los adjuntos del mensaje.", "en": "I opened the message attachments." },
+      "tags": ["word", "email", "noun", "A2"]
+    },
+    { "id": "word-correo--email", "kind": "word", "promptEs": "correo", "answerEn": "email; mail", "noteEn": "", "tags": ["word", "communication", "technology", "A1"] },
+    { "id": "word-comparten", "kind": "word", "promptEs": "comparten", "answerEn": "they share", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-ficheros", "kind": "word", "promptEs": "ficheros", "answerEn": "computer files", "noteEn": "", "tags": ["word", "technology", "noun", "plural", "A2"] },
+    { "id": "word-tienen", "kind": "word", "promptEs": "tienen", "answerEn": "they have", "noteEn": "", "tags": ["word", "verb", "A1"] },
+    {
+      "id": "word-ningún",
+      "kind": "word",
+      "promptEs": "ningún",
+      "answerEn": "no; not any (before a masculine singular noun)",
+      "noteEn": "Ningún is used directly before a masculine singular noun. When it comes after the verb, Spanish normally also keeps no before the verb: no tengo ningún problema.",
+      "example": { "es": "No vimos ningún error.", "en": "We did not see any error." },
+      "tags": ["word", "negation", "determiner", "A2"]
+    },
+    {
+      "id": "word-parche--software-update",
+      "kind": "word",
+      "promptEs": "parche",
+      "answerEn": "patch; corrective software update",
+      "noteEn": "In computing, a parche is a small software update intended to correct a defect or security weakness.",
+      "example": { "es": "Instalaron un parche para corregir el fallo.", "en": "They installed a patch to fix the flaw." },
+      "tags": ["word", "software", "security", "B1"]
+    },
+    { "id": "word-instalado", "kind": "word", "promptEs": "instalado", "answerEn": "installed (masculine singular)", "noteEn": "", "tags": ["word", "technology", "completed-action form", "A2"] },
+    { "id": "word-prácticamente", "kind": "word", "promptEs": "prácticamente", "answerEn": "practically; almost", "noteEn": "", "tags": ["word", "adverb", "A2"] },
+    {
+      "id": "word-virus--computer-malware",
+      "kind": "word",
+      "promptEs": "virus",
+      "answerEn": "computer virus; computer viruses",
+      "noteEn": "The written form virus is the same for one virus and several viruses; surrounding words such as el, un, los, or muchos show the number.",
+      "example": { "es": "Detectaron varios virus en el equipo.", "en": "They detected several viruses on the computer." },
+      "tags": ["word", "malware", "number", "technology", "A2"]
+    },
+    {
+      "id": "word-troyanos--malware",
+      "kind": "word",
+      "promptEs": "troyanos",
+      "answerEn": "Trojan programs; Trojan malware",
+      "noteEn": "A computer troyano pretends to be useful or harmless so that someone will allow malicious code to run.",
+      "example": { "es": "El archivo ocultaba dos troyanos.", "en": "The file hid two Trojan programs." },
+      "tags": ["word", "malware", "technology", "B1"]
+    },
+    {
+      "id": "word-gusanos--malware",
+      "kind": "word",
+      "promptEs": "gusanos",
+      "answerEn": "computer worms",
+      "noteEn": "In computing, a gusano is malicious code that can copy itself and spread from one system to another, often through a network.",
+      "example": { "es": "Los gusanos se propagaron por la red.", "en": "The worms spread through the network." },
+      "tags": ["word", "malware", "technology", "B1"]
+    },
+    {
+      "id": "word-polimórfico--malware",
+      "kind": "word",
+      "promptEs": "polimórfico",
+      "answerEn": "polymorphic; able to change form (masculine singular)",
+      "noteEn": "Polimórfico literally means ‘having many forms.’ Polymorphic malicious code changes its visible code pattern while preserving its behavior, which can make simple signature matching harder.",
+      "example": { "es": "Analizaron un programa polimórfico.", "en": "They analyzed a polymorphic program." },
+      "tags": ["word", "malware", "technology", "B2"]
+    },
+    { "id": "word-exótico", "kind": "word", "promptEs": "exótico", "answerEn": "exotic; unusual (masculine singular)", "noteEn": "", "tags": ["word", "adjective", "A2"] },
+    { "id": "word-monitorización", "kind": "word", "promptEs": "monitorización", "answerEn": "monitoring", "noteEn": "", "tags": ["word", "technology", "noun", "B1"] },
+    { "id": "word-añade", "kind": "word", "promptEs": "añade", "answerEn": "it adds", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-quita--removes", "kind": "word", "promptEs": "quita", "answerEn": "it removes; takes away", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    {
+      "id": "word-al--fixed-al-azar",
+      "kind": "word",
+      "promptEs": "al",
+      "answerEn": "no separate English word; begins al azar, ‘at random’",
+      "noteEn": "Al is normally the combined form of a and el. In the fixed expression al azar, the two words work together to mean that no deliberate choice or pattern is used.",
+      "example": { "es": "Tomó una tarjeta al azar.", "en": "She took a card at random." },
+      "tags": ["word", "fixed expression", "chance", "A2"]
+    },
+    {
+      "id": "word-azar--fixed-al-azar",
+      "kind": "word",
+      "promptEs": "azar",
+      "answerEn": "chance; randomness (in al azar, ‘at random’)",
+      "noteEn": "Azar is chance or randomness. The fixed expression al azar describes a choice or action made without a deliberate pattern.",
+      "example": { "es": "Tomó una tarjeta al azar.", "en": "She took a card at random." },
+      "tags": ["word", "fixed expression", "chance", "A2"]
+    },
+    { "id": "word-pantalla", "kind": "word", "promptEs": "pantalla", "answerEn": "screen; display", "noteEn": "", "tags": ["word", "technology", "noun", "A1"] },
+    { "id": "word-muestra--displays", "kind": "word", "promptEs": "muestra", "answerEn": "it shows; displays", "noteEn": "", "tags": ["word", "verb", "technology", "A2"] },
+    {
+      "id": "word-moviéndose",
+      "kind": "word",
+      "promptEs": "moviéndose",
+      "answerEn": "moving; moving around",
+      "noteEn": "Moverse becomes moviendo for an action in progress, and se attaches to the end. The written accent keeps the word stressed in the same place: moviéndose.",
+      "example": { "es": "Vimos al gato moviéndose bajo la mesa.", "en": "We saw the cat moving under the table." },
+      "tags": ["word", "moverse", "ongoing action", "B1"]
+    },
+    { "id": "word-creciendo", "kind": "word", "promptEs": "creciendo", "answerEn": "growing", "noteEn": "", "tags": ["word", "verb", "ongoing action", "A2"] },
+    { "id": "word-luchando--struggling", "kind": "word", "promptEs": "luchando", "answerEn": "fighting; struggling", "noteEn": "", "tags": ["word", "verb", "ongoing action", "A2"] },
+    { "id": "word-acuarios", "kind": "word", "promptEs": "acuarios", "answerEn": "aquariums", "noteEn": "", "tags": ["word", "noun", "plural", "A2"] },
+    {
+      "id": "word-buenos--fixed-buenos-dias",
+      "kind": "word",
+      "promptEs": "buenos",
+      "answerEn": "no separate English word; begins buenos días, a daytime greeting",
+      "noteEn": "Buenos is the masculine plural form of bueno, but buenos días is learned and used as one conventional greeting rather than assembled word by word.",
+      "example": { "es": "Buenos días, señora Ruiz.", "en": "Good morning, Ms. Ruiz." },
+      "tags": ["word", "greeting", "fixed expression", "A1"]
+    },
+    {
+      "id": "word-días--fixed-buenos-dias",
+      "kind": "word",
+      "promptEs": "días",
+      "answerEn": "no separate English word; completes buenos días, a daytime greeting",
+      "noteEn": "Días ordinarily means ‘days.’ In buenos días, the plural form is part of the standard greeting used in the morning and, in some places, into the early afternoon.",
+      "example": { "es": "Buenos días, señora Ruiz.", "en": "Good morning, Ms. Ruiz." },
+      "tags": ["word", "greeting", "fixed expression", "A1"]
+    },
+    {
+      "id": "word-os--pronominal-apanarse",
+      "kind": "word",
+      "promptEs": "os",
+      "answerEn": "no separate English word; helps apañáis refer to you all managing or getting along",
+      "noteEn": "Apañarse uses a matching small word: me, te, se, nos, os, or se. Os is the form for informal ‘you all,’ used mainly in Spain.",
+      "example": { "es": "¿Os apañáis bien juntos?", "en": "Do you all manage well together?" },
+      "tags": ["word", "pronominal verb", "Spain", "A2"]
+    },
+    {
+      "id": "word-apañáis--get-along",
+      "kind": "word",
+      "promptEs": "apañáis",
+      "answerEn": "you all manage; get along (informal plural, mainly Spain)",
+      "noteEn": "Apañarse is a conversational verb for managing, coping, or sorting things out. When two or more people are named together, it can ask how they manage together or whether they get along.",
+      "example": { "es": "Los dos compañeros se apañan bien.", "en": "The two coworkers get along well." },
+      "tags": ["word", "colloquial", "Spain", "B1"]
+    },
+    { "id": "word-bonito--affectionate", "kind": "word", "promptEs": "bonito", "answerEn": "pretty; cute (masculine singular, affectionate here)", "noteEn": "", "tags": ["word", "adjective", "affection", "A1"] },
+    {
+      "id": "phrase-un-puñado-de",
+      "kind": "phrase",
+      "promptEs": "un puñado de algo",
+      "questionEn": "How do you describe a small group or amount as a handful or a bunch?",
+      "answerEn": "Use un puñado de before the name of the people, things, or substance in the handful.",
+      "noteEn": "Puñado literally names what fits in one hand. The full expression un puñado de also works figuratively for a modest group or amount. It can introduce plural countable things, as in un puñado de entradas, or a substance, as in un puñado de arroz or un puñado de tierra.",
+      "example": { "es": "Queda un puñado de entradas.", "en": "A handful of tickets remain." },
+      "tags": ["phrase", "quantity", "A2"]
+    },
+    {
+      "id": "phrase-poner-en-red",
+      "kind": "phrase",
+      "promptEs": "poner algo en red",
+      "questionEn": "How do you say that devices are connected together as a network?",
+      "answerEn": "Use a form of poner, name the devices, and add en red.",
+      "noteEn": "Poner changes for the person and time, while en red stays fixed. To describe an existing result, use puesto, puesta, puestos, or puestas so its ending matches the connected thing: las impresoras están puestas en red.",
+      "example": { "es": "Pusimos los ordenadores en red.", "en": "We networked the computers." },
+      "tags": ["phrase", "networking", "technology", "B1"]
+    },
+    {
+      "id": "grammar-entre-todos-collectively",
+      "kind": "grammar",
+      "promptEs": "entre todos/todas + verbo",
+      "questionEn": "How do you say that the members of a group do or have something collectively?",
+      "answerEn": "Begin with entre todos or entre todas, then use the verb for the group.",
+      "noteEn": "Here entre means the contribution or result is shared across the group, much like ‘between them’ or ‘all together.’ Choose todos for a masculine or mixed group and todas for an all-feminine group or feminine plural things.",
+      "example": { "es": "Entre todos pagamos la cena.", "en": "Between us, we all paid for dinner." },
+      "tags": ["grammar", "collective action", "agreement", "A2"]
+    },
+    {
+      "id": "phrase-todo-tipo-de",
+      "kind": "phrase",
+      "promptEs": "todo tipo de + nombre",
+      "questionEn": "How do you say that there are all kinds of something?",
+      "answerEn": "Use todo tipo de before the name of the thing.",
+      "noteEn": "Tipo stays singular inside this fixed quantity expression. The following noun names the category whose many varieties are included.",
+      "example": { "es": "La tienda vende todo tipo de libros.", "en": "The shop sells all kinds of books." },
+      "tags": ["phrase", "variety", "quantity", "A2"]
+    },
+    {
+      "id": "phrase-al-azar",
+      "kind": "phrase",
+      "promptEs": "al azar",
+      "questionEn": "How do you say that a choice or action is made at random?",
+      "answerEn": "Use al azar after the choice or action.",
+      "noteEn": "Al azar is a fixed expression meaning that no deliberate pattern determines the result. Al is the combined form of a and el, while azar means chance or randomness.",
+      "example": { "es": "Eligieron un número al azar.", "en": "They chose a number at random." },
+      "tags": ["phrase", "chance", "A2"]
+    },
+    {
+      "id": "phrase-buenos-dias",
+      "kind": "phrase",
+      "promptEs": "buenos días",
+      "questionEn": "How do you greet someone in the morning or early part of the day?",
+      "answerEn": "Say buenos días.",
+      "noteEn": "Buenos días is a conventional plural greeting. It is normally used in the morning and can extend into the early afternoon depending on the place and situation.",
+      "example": { "es": "—Buenos días, Marta. —Buenos días.", "en": "—Good morning, Marta. —Good morning." },
+      "tags": ["phrase", "greeting", "A1"]
+    },
+    {
+      "id": "phrase-apanarse-together",
+      "kind": "phrase",
+      "promptEs": "apañarse dos o más personas",
+      "questionEn": "How can you ask whether two or more people manage together or get along?",
+      "answerEn": "Use a matching form of apañarse, naming those people as the ones managing together.",
+      "noteEn": "Apañarse is conversational and especially common in Spain. Its small marker changes according to who is managing: me apaño, te apañas, se apaña, nos apañamos, os apañáis, se apañan. With several people together, context can give it the sense of managing together or getting along.",
+      "example": { "es": "Los dos vecinos se apañan bien.", "en": "The two neighbors get along well." },
+      "tags": ["phrase", "relationships", "colloquial", "Spain", "B1"]
+    },
+    {
+      "id": "concept-warhol-worm",
+      "kind": "concept",
+      "promptEs": "gusano Warhol",
+      "answerEn": "A Warhol worm is a proposed very fast network worm designed to find and infect most vulnerable hosts in well under an hour, potentially about fifteen minutes.",
+      "noteEn": "The name alludes to the saying about everyone receiving fifteen minutes of fame. Security researchers used it for a worm strategy combining an initial list of likely targets with coordinated scanning.",
+      "tags": ["concept", "computer security", "malware", "Warhol worm"]
+    },
+    {
+      "id": "concept-virtual-malware-aquarium",
+      "kind": "concept",
+      "promptEs": "acuario virtual de malware · Blaster y W32.Welchia",
+      "answerEn": "The deliberately vulnerable virtual network lets malware spread while a display turns the infections into aquarium-like creatures that the owner treats as pets.",
+      "noteEn": "Blaster and Welchia, also called Nachi, were real Windows network worms. Welchia attempted to remove Blaster and apply security updates, which adds another joke to asking whether the two ‘pets’ are getting along.",
+      "tags": ["concept", "computer security", "malware", "personification", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-red:display-reaction",
+      "labelEs": "¿BONITA, EH?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-red:display-reaction:w01", "text": "BONITA", "normalized": "bonita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00001" }], "cardIds": ["word-bonita--pretty"] },
+        { "id": "es-xkcd-red:display-reaction:w02", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00002" }], "cardIds": ["word-eh--agreement-tag"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-red:display-reaction:app-implied-feminine",
+          "cardId": "word-bonita--pretty",
+          "participantWordIds": ["es-xkcd-red:display-reaction:w01"],
+          "exampleEs": "BONITA",
+          "explanationEn": "The unstated thing being admired is feminine in Spanish, so the describing word appears as bonita."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-red:display-question",
+      "labelEs": "¿QUÉ ES?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-red:display-question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00003" }], "cardIds": ["word-qué--interrogative"] },
+        { "id": "es-xkcd-red:display-question:w02", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00004" }], "cardIds": ["word-es"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-red:network-setup",
+      "labelEs": "TENGO UN PUÑADO DE MÁQUINAS VIRTUALES CON WINDOWS PUESTAS EN RED Y ENGANCHADAS A INTERNET. EJECUTAN ADJUNTOS DE CORREO, COMPARTEN FICHEROS Y NO TIENEN NINGÚN PARCHE DE SEGURIDAD INSTALADO. ENTRE TODAS TIENEN PRÁCTICAMENTE TODOS LOS VIRUS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0034" }
+      ],
+      "words": [
+        { "id": "es-xkcd-red:network-setup:w01", "text": "TENGO", "normalized": "tengo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00009" }], "cardIds": ["word-tengo"] },
+        { "id": "es-xkcd-red:network-setup:w02", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00010" }], "cardIds": ["word-un", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w03", "text": "PUÑADO", "normalized": "puñado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00011" }], "cardIds": ["word-puñado--quantity", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00012" }], "cardIds": ["word-de--after-quantity", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w05", "text": "MÁQUINAS", "normalized": "máquinas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00013" }], "cardIds": ["word-máquinas", "phrase-un-puñado-de", "phrase-poner-en-red", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:network-setup:w06", "text": "VIRTUALES", "normalized": "virtuales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00018" }], "cardIds": ["word-virtuales", "phrase-un-puñado-de", "phrase-poner-en-red", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:network-setup:w07", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00019" }], "cardIds": ["word-con", "phrase-un-puñado-de", "phrase-poner-en-red"] },
+        { "id": "es-xkcd-red:network-setup:w08", "text": "PUESTAS", "normalized": "puestas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00021" }], "cardIds": ["word-puestas--networked", "phrase-un-puñado-de", "phrase-poner-en-red"] },
+        { "id": "es-xkcd-red:network-setup:w09", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00033" }], "cardIds": ["word-en", "phrase-un-puñado-de", "phrase-poner-en-red"] },
+        { "id": "es-xkcd-red:network-setup:w10", "text": "RED", "normalized": "red", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00034" }], "cardIds": ["word-red--network", "phrase-un-puñado-de", "phrase-poner-en-red", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:network-setup:w11", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00035" }], "cardIds": ["word-y", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w12", "text": "ENGANCHADAS", "normalized": "enganchadas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00036" }], "cardIds": ["word-enganchadas--connected", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w13", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00037" }], "cardIds": ["word-a--attachment", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w14", "text": "INTERNET", "normalized": "internet", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00038" }], "cardIds": ["word-internet", "phrase-un-puñado-de"] },
+        { "id": "es-xkcd-red:network-setup:w15", "text": "EJECUTAN", "normalized": "ejecutan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00047" }], "cardIds": ["word-ejecutan"] },
+        { "id": "es-xkcd-red:network-setup:w16", "text": "ADJUNTOS", "normalized": "adjuntos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00048" }], "cardIds": ["word-adjuntos--email-attachments"] },
+        { "id": "es-xkcd-red:network-setup:w17", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00049" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-red:network-setup:w18", "text": "CORREO", "normalized": "correo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00050" }], "cardIds": ["word-correo--email"] },
+        { "id": "es-xkcd-red:network-setup:w19", "text": "COMPARTEN", "normalized": "comparten", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00058" }], "cardIds": ["word-comparten"] },
+        { "id": "es-xkcd-red:network-setup:w20", "text": "FICHEROS", "normalized": "ficheros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00059" }], "cardIds": ["word-ficheros"] },
+        { "id": "es-xkcd-red:network-setup:w21", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00060" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-red:network-setup:w22", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00061" }], "cardIds": ["word-no", "grammar-negative-concord", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w23", "text": "TIENEN", "normalized": "tienen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00062" }], "cardIds": ["word-tienen", "grammar-negative-concord", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w24", "text": "NINGÚN", "normalized": "ningún", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00069" }], "cardIds": ["word-ningún", "grammar-negative-concord", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w25", "text": "PARCHE", "normalized": "parche", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00070" }], "cardIds": ["word-parche--software-update", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w26", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00071" }], "cardIds": ["word-de--type-classifier", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w27", "text": "SEGURIDAD", "normalized": "seguridad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00072" }], "cardIds": ["word-seguridad", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w28", "text": "INSTALADO", "normalized": "instalado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00077" }], "cardIds": ["word-instalado", "grammar-tener-object-participle"] },
+        { "id": "es-xkcd-red:network-setup:w29", "text": "ENTRE", "normalized": "entre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00083" }], "cardIds": ["word-entre", "grammar-entre-todos-collectively"] },
+        { "id": "es-xkcd-red:network-setup:w30", "text": "TODAS", "normalized": "todas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00084" }], "cardIds": ["word-todas", "grammar-entre-todos-collectively"] },
+        { "id": "es-xkcd-red:network-setup:w31", "text": "TIENEN", "normalized": "tienen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00086" }], "cardIds": ["word-tienen", "grammar-entre-todos-collectively"] },
+        { "id": "es-xkcd-red:network-setup:w32", "text": "PRÁCTICAMENTE", "normalized": "prácticamente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00087" }, { "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00088" }], "cardIds": ["word-prácticamente"] },
+        { "id": "es-xkcd-red:network-setup:w33", "text": "TODOS", "normalized": "todos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00089" }], "cardIds": ["word-todos"] },
+        { "id": "es-xkcd-red:network-setup:w34", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00090" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-red:network-setup:w35", "text": "VIRUS", "normalized": "virus", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00098" }], "cardIds": ["word-virus--computer-malware", "concept-virtual-malware-aquarium"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-red:network-setup:excluded-windows",
+          "text": "WINDOWS",
+          "reason": "non-spanish-text",
+          "rationale": "Windows is the English-language product name of the operating system, not a Spanish lexical word.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00020" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-red:network-setup:app-handful",
+          "cardId": "phrase-un-puñado-de",
+          "participantWordIds": ["es-xkcd-red:network-setup:w02", "es-xkcd-red:network-setup:w03", "es-xkcd-red:network-setup:w04", "es-xkcd-red:network-setup:w05", "es-xkcd-red:network-setup:w06", "es-xkcd-red:network-setup:w07", "es-xkcd-red:network-setup:w08", "es-xkcd-red:network-setup:w09", "es-xkcd-red:network-setup:w10", "es-xkcd-red:network-setup:w11", "es-xkcd-red:network-setup:w12", "es-xkcd-red:network-setup:w13", "es-xkcd-red:network-setup:w14"],
+          "exampleEs": "UN PUÑADO DE MÁQUINAS VIRTUALES CON WINDOWS PUESTAS EN RED Y ENGANCHADAS A INTERNET",
+          "explanationEn": "Un puñado de supplies the figurative quantity, and the following noun group identifies the machines included in that modest collection."
+        },
+        {
+          "id": "es-xkcd-red:network-setup:app-networked",
+          "cardId": "phrase-poner-en-red",
+          "participantWordIds": ["es-xkcd-red:network-setup:w05", "es-xkcd-red:network-setup:w06", "es-xkcd-red:network-setup:w07", "es-xkcd-red:network-setup:w08", "es-xkcd-red:network-setup:w09", "es-xkcd-red:network-setup:w10"],
+          "exampleEs": "MÁQUINAS VIRTUALES CON WINDOWS PUESTAS EN RED",
+          "explanationEn": "Puestas matches the feminine plural máquinas, while en red gives their connected network state."
+        },
+        {
+          "id": "es-xkcd-red:network-setup:app-negative-concord",
+          "cardId": "grammar-negative-concord",
+          "participantWordIds": ["es-xkcd-red:network-setup:w22", "es-xkcd-red:network-setup:w23", "es-xkcd-red:network-setup:w24"],
+          "exampleEs": "NO TIENEN NINGÚN",
+          "explanationEn": "No stays before tienen because the second negative, ningún, appears after that verb."
+        },
+        {
+          "id": "es-xkcd-red:network-setup:app-installed-state",
+          "cardId": "grammar-tener-object-participle",
+          "participantWordIds": ["es-xkcd-red:network-setup:w22", "es-xkcd-red:network-setup:w23", "es-xkcd-red:network-setup:w24", "es-xkcd-red:network-setup:w25", "es-xkcd-red:network-setup:w26", "es-xkcd-red:network-setup:w27", "es-xkcd-red:network-setup:w28"],
+          "exampleEs": "NO TIENEN NINGÚN PARCHE DE SEGURIDAD INSTALADO",
+          "explanationEn": "No and ningún make the object negative, tienen introduces what is or is not possessed, and instalado matches the masculine singular parche as a description of its resulting state."
+        },
+        {
+          "id": "es-xkcd-red:network-setup:app-collectively",
+          "cardId": "grammar-entre-todos-collectively",
+          "participantWordIds": ["es-xkcd-red:network-setup:w29", "es-xkcd-red:network-setup:w30", "es-xkcd-red:network-setup:w31"],
+          "exampleEs": "ENTRE TODAS TIENEN",
+          "explanationEn": "Todas refers back to the feminine plural machines, and entre presents what they possess collectively."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-red:malware-description",
+      "labelEs": "HAY TROYANOS, GUSANOS WARHOL Y TODO TIPO DE CÓDIGO POLIMÓRFICO EXÓTICO. UN SISTEMA DE MONITORIZACIÓN AÑADE Y QUITA MÁQUINAS AL AZAR. LA PANTALLA MUESTRA LOS VIRUS MOVIÉNDOSE POR LA RED, CRECIENDO Y LUCHANDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0028" }
+      ],
+      "words": [
+        { "id": "es-xkcd-red:malware-description:w01", "text": "HAY", "normalized": "hay", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00005" }], "cardIds": ["word-hay"] },
+        { "id": "es-xkcd-red:malware-description:w02", "text": "TROYANOS", "normalized": "troyanos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00006" }], "cardIds": ["word-troyanos--malware"] },
+        { "id": "es-xkcd-red:malware-description:w03", "text": "GUSANOS", "normalized": "gusanos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00007" }], "cardIds": ["word-gusanos--malware", "concept-warhol-worm"] },
+        { "id": "es-xkcd-red:malware-description:w04", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00022" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-red:malware-description:w05", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00023" }], "cardIds": ["word-todo", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w06", "text": "TIPO", "normalized": "tipo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00024" }], "cardIds": ["word-tipo--kind", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00025" }], "cardIds": ["word-de--type-classifier", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w08", "text": "CÓDIGO", "normalized": "código", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00026" }], "cardIds": ["word-codigo--computer-code", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w09", "text": "POLIMÓRFICO", "normalized": "polimórfico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00027" }, { "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00039" }], "cardIds": ["word-polimórfico--malware", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w10", "text": "EXÓTICO", "normalized": "exótico", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00040" }], "cardIds": ["word-exótico", "phrase-todo-tipo-de"] },
+        { "id": "es-xkcd-red:malware-description:w11", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00041" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-red:malware-description:w12", "text": "SISTEMA", "normalized": "sistema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00042" }], "cardIds": ["word-sistema"] },
+        { "id": "es-xkcd-red:malware-description:w13", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00043" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-red:malware-description:w14", "text": "MONITORIZACIÓN", "normalized": "monitorización", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00051" }], "cardIds": ["word-monitorización"] },
+        { "id": "es-xkcd-red:malware-description:w15", "text": "AÑADE", "normalized": "añade", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00052" }], "cardIds": ["word-añade"] },
+        { "id": "es-xkcd-red:malware-description:w16", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00053" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-red:malware-description:w17", "text": "QUITA", "normalized": "quita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00054" }], "cardIds": ["word-quita--removes"] },
+        { "id": "es-xkcd-red:malware-description:w18", "text": "MÁQUINAS", "normalized": "máquinas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00063" }], "cardIds": ["word-máquinas"] },
+        { "id": "es-xkcd-red:malware-description:w19", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00064" }], "cardIds": ["word-al--fixed-al-azar", "phrase-al-azar"] },
+        { "id": "es-xkcd-red:malware-description:w20", "text": "AZAR", "normalized": "azar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00065" }], "cardIds": ["word-azar--fixed-al-azar", "phrase-al-azar"] },
+        { "id": "es-xkcd-red:malware-description:w21", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00066" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-red:malware-description:w22", "text": "PANTALLA", "normalized": "pantalla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00067" }], "cardIds": ["word-pantalla"] },
+        { "id": "es-xkcd-red:malware-description:w23", "text": "MUESTRA", "normalized": "muestra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00073" }], "cardIds": ["word-muestra--displays"] },
+        { "id": "es-xkcd-red:malware-description:w24", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00074" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-red:malware-description:w25", "text": "VIRUS", "normalized": "virus", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00075" }], "cardIds": ["word-virus--computer-malware", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:malware-description:w26", "text": "MOVIÉNDOSE", "normalized": "moviéndose", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00076" }], "cardIds": ["word-moviéndose"] },
+        { "id": "es-xkcd-red:malware-description:w27", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00078" }], "cardIds": ["word-por--through"] },
+        { "id": "es-xkcd-red:malware-description:w28", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00079" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-red:malware-description:w29", "text": "RED", "normalized": "red", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00080" }], "cardIds": ["word-red--network", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:malware-description:w30", "text": "CRECIENDO", "normalized": "creciendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00081" }], "cardIds": ["word-creciendo"] },
+        { "id": "es-xkcd-red:malware-description:w31", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00082" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-red:malware-description:w32", "text": "LUCHANDO", "normalized": "luchando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00085" }], "cardIds": ["word-luchando--struggling"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-red:malware-description:excluded-warhol",
+          "text": "WARHOL",
+          "reason": "non-spanish-text",
+          "rationale": "Warhol is an English-language surname used inside the technical name ‘Warhol worm,’ not Spanish vocabulary.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00008" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-red:malware-description:app-all-kinds",
+          "cardId": "phrase-todo-tipo-de",
+          "participantWordIds": ["es-xkcd-red:malware-description:w05", "es-xkcd-red:malware-description:w06", "es-xkcd-red:malware-description:w07", "es-xkcd-red:malware-description:w08", "es-xkcd-red:malware-description:w09", "es-xkcd-red:malware-description:w10"],
+          "exampleEs": "TODO TIPO DE CÓDIGO POLIMÓRFICO EXÓTICO",
+          "explanationEn": "Todo tipo de introduces an unrestricted variety, and the following noun group names the code included in that variety."
+        },
+        {
+          "id": "es-xkcd-red:malware-description:app-random",
+          "cardId": "phrase-al-azar",
+          "participantWordIds": ["es-xkcd-red:malware-description:w19", "es-xkcd-red:malware-description:w20"],
+          "exampleEs": "AL AZAR",
+          "explanationEn": "Al azar says the adding and removing follow no deliberate selection pattern."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-red:aquarium-comment",
+      "labelEs": "SABES QUE LA GENTE NORMAL TIENE ACUARIOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-red:aquarium-comment:w01", "text": "SABES", "normalized": "sabes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00014" }], "cardIds": ["word-sabes"] },
+        { "id": "es-xkcd-red:aquarium-comment:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00015" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-red:aquarium-comment:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00028" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-red:aquarium-comment:w04", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00029" }], "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-red:aquarium-comment:w05", "text": "NORMAL", "normalized": "normal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00032" }], "cardIds": ["word-normal--ordinary"] },
+        { "id": "es-xkcd-red:aquarium-comment:w06", "text": "TIENE", "normalized": "tiene", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00055" }], "cardIds": ["word-tiene"] },
+        { "id": "es-xkcd-red:aquarium-comment:w07", "text": "ACUARIOS", "normalized": "acuarios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00068" }], "cardIds": ["word-acuarios", "concept-virtual-malware-aquarium"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-red:malware-greeting",
+      "labelEs": "BUENOS DÍAS, BLASTER. ¿OS APAÑÁIS TÚ Y W32.WELCHIA?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0018" }
+      ],
+      "words": [
+        { "id": "es-xkcd-red:malware-greeting:w01", "text": "BUENOS", "normalized": "buenos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00016" }], "cardIds": ["word-buenos--fixed-buenos-dias", "phrase-buenos-dias"] },
+        { "id": "es-xkcd-red:malware-greeting:w02", "text": "DÍAS", "normalized": "días", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00017" }], "cardIds": ["word-días--fixed-buenos-dias", "phrase-buenos-dias"] },
+        { "id": "es-xkcd-red:malware-greeting:w03", "text": "OS", "normalized": "os", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00031" }], "cardIds": ["word-os--pronominal-apanarse", "phrase-apanarse-together"] },
+        { "id": "es-xkcd-red:malware-greeting:w04", "text": "APAÑÁIS", "normalized": "apañáis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00044" }], "cardIds": ["word-apañáis--get-along", "phrase-apanarse-together"] },
+        { "id": "es-xkcd-red:malware-greeting:w05", "text": "TÚ", "normalized": "tú", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00045" }], "cardIds": ["word-tú", "phrase-apanarse-together"] },
+        { "id": "es-xkcd-red:malware-greeting:w06", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00046" }], "cardIds": ["word-y", "phrase-apanarse-together"] }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-red:malware-greeting:excluded-blaster",
+          "text": "BLASTER",
+          "reason": "non-spanish-text",
+          "rationale": "Blaster is the English identifier of a specific computer worm, not a Spanish lexical word.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00030" }]
+        },
+        {
+          "id": "es-xkcd-red:malware-greeting:excluded-welchia",
+          "text": "W32.WELCHIA",
+          "reason": "non-spanish-text",
+          "rationale": "W32.Welchia is a technical malware identifier made from a platform code and proper name, not Spanish vocabulary.",
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00056" }, { "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00057" }]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-red:malware-greeting:app-greeting",
+          "cardId": "phrase-buenos-dias",
+          "participantWordIds": ["es-xkcd-red:malware-greeting:w01", "es-xkcd-red:malware-greeting:w02"],
+          "exampleEs": "BUENOS DÍAS",
+          "explanationEn": "Buenos días is used as the conventional daytime greeting before the addressee's name."
+        },
+        {
+          "id": "es-xkcd-red:malware-greeting:app-get-along",
+          "cardId": "phrase-apanarse-together",
+          "participantWordIds": ["es-xkcd-red:malware-greeting:w03", "es-xkcd-red:malware-greeting:w04", "es-xkcd-red:malware-greeting:w05", "es-xkcd-red:malware-greeting:w06"],
+          "exampleEs": "OS APAÑÁIS TÚ Y W32.WELCHIA",
+          "explanationEn": "Os and apañáis match an informal plural group, while tú y the named second worm identify the two being asked about together."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-red:pet-talk",
+      "labelEs": "¿QUIÉN ES MI VIRUS BONITO? ¡ERES TÚ! ¡SÍ, TÚ!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0033" },
+        { "source": "ocr-line", "id": "es-xkcd-red:ocr-line-0035" }
+      ],
+      "words": [
+        { "id": "es-xkcd-red:pet-talk:w01", "text": "QUIÉN", "normalized": "quién", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00091" }], "cardIds": ["word-quién--interrogative"] },
+        { "id": "es-xkcd-red:pet-talk:w02", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00092" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-red:pet-talk:w03", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00093" }], "cardIds": ["word-mi"] },
+        {
+          "id": "es-xkcd-red:pet-talk:w04",
+          "text": "VIRUS",
+          "normalized": "virus",
+          "explicitBounds": [{ "x": 92.7, "y": 89.4, "width": 4.8, "height": 3.8 }],
+          "geometryRationale": "Vision stopped before the final printed S, so this measured rectangle covers the complete word VIRUS.",
+          "cardIds": ["word-virus--computer-malware", "concept-virtual-malware-aquarium"]
+        },
+        { "id": "es-xkcd-red:pet-talk:w05", "text": "BONITO", "normalized": "bonito", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00095" }], "cardIds": ["word-bonito--affectionate", "concept-virtual-malware-aquarium"] },
+        { "id": "es-xkcd-red:pet-talk:w06", "text": "ERES", "normalized": "eres", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00096" }], "cardIds": ["word-eres"] },
+        { "id": "es-xkcd-red:pet-talk:w07", "text": "TÚ", "normalized": "tú", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00097" }], "cardIds": ["word-tú"] },
+        { "id": "es-xkcd-red:pet-talk:w08", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00099" }], "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-red:pet-talk:w09", "text": "TÚ", "normalized": "tú", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-red:ocr-token-00100" }], "cardIds": ["word-tú"] }
+      ],
+      "applications": []
+    }
+  ]
+}
