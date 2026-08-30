@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-equipos-para-ir-a-comprar",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Shopping Teams",
+  "titleEs": "Equipos para ir a comprar",
+  "titleText": {
+    "es": "Nunca volveré a comprar un aire acondicionado con mi administrador de sistemas.",
+    "en": "I am never going out to buy an air-conditioner with my sysadmin again.",
+    "noteEn": "The title text extends the joke about turning an ordinary purchase into a prolonged technical analysis."
+  },
+  "cardDefinitions": [
+    { "id": "word-equipos", "kind": "word", "promptEs": "equipos", "answerEn": "teams", "noteEn": "", "tags": ["word", "people", "plural"] },
+    { "id": "word-ir--go", "kind": "word", "promptEs": "ir", "answerEn": "to go", "noteEn": "", "tags": ["word", "movement", "infinitive"] },
+    { "id": "word-comprar", "kind": "word", "promptEs": "comprar", "answerEn": "to buy; to shop", "noteEn": "", "tags": ["word", "shopping", "infinitive"] },
+    { "id": "word-bueno--good-rating", "kind": "word", "promptEs": "bueno", "answerEn": "good (masculine singular)", "noteEn": "", "tags": ["word", "evaluation", "adjective"] },
+    {
+      "id": "word-no--non-category",
+      "kind": "word",
+      "promptEs": "no",
+      "answerEn": "non-; not a (before a category label)",
+      "noteEn": "Before a noun used as a label, no can divide people or things into a negative category, much like English non-. It remains a separate written word.",
+      "example": { "es": "La entrada para no miembros está cerrada.", "en": "The entrance for non-members is closed." },
+      "tags": ["word", "negation", "labels"]
+    },
+    {
+      "id": "word-cerebrito--nerd",
+      "kind": "word",
+      "promptEs": "cerebrito",
+      "answerEn": "brainiac; nerd",
+      "noteEn": "Cerebrito literally resembles “little brain,” but it is commonly a playful or mocking label for a very intellectual person. Tone decides whether it sounds affectionate or insulting.",
+      "example": { "es": "Mi hermano es un cerebrito de las matemáticas.", "en": "My brother is a math brainiac." },
+      "tags": ["word", "people", "colloquial"]
+    },
+    {
+      "id": "word-cerebritos--nerds",
+      "kind": "word",
+      "promptEs": "cerebritos",
+      "answerEn": "brainiacs; nerds",
+      "noteEn": "Cerebritos is the plural of cerebrito, a playful or mocking label for highly intellectual people rather than a literal reference to small brains.",
+      "example": { "es": "Los cerebritos resolvieron el acertijo.", "en": "The brainiacs solved the puzzle." },
+      "tags": ["word", "people", "colloquial", "plural"]
+    },
+    {
+      "id": "word-pillemos--lets-get",
+      "kind": "word",
+      "promptEs": "pillemos",
+      "answerEn": "let's get; let's grab",
+      "noteEn": "Pillemos is a “we” proposal form of pillar, an informal verb that can mean “to get” or “to grab.” The -emos ending turns pillar into a suggestion for the group.",
+      "example": { "es": "Pillemos un taxi.", "en": "Let's get a taxi." },
+      "tags": ["word", "proposal", "colloquial", "we-form"]
+    },
+    {
+      "id": "word-ese--pronoun",
+      "kind": "word",
+      "promptEs": "ese",
+      "answerEn": "that one (masculine singular)",
+      "noteEn": "When ese appears without a following noun, it stands in for a masculine singular thing already visible or understood.",
+      "example": { "es": "Prefiero ese.", "en": "I prefer that one." },
+      "tags": ["word", "demonstrative", "pronoun"]
+    },
+    {
+      "id": "word-qué--fixed-qué-tal",
+      "kind": "word",
+      "promptEs": "qué",
+      "answerEn": "how (as part of qué tal, “how about...?”)",
+      "noteEn": "In qué tal, qué keeps its accent and joins tal to ask for an opinion or propose an option. Translate the two words together rather than assigning qué its ordinary “what” meaning by itself.",
+      "example": { "es": "¿Qué tal esta mesa?", "en": "How about this table?" },
+      "tags": ["word", "fixed expression", "questions"]
+    },
+    {
+      "id": "word-tal--fixed-qué-tal",
+      "kind": "word",
+      "promptEs": "tal",
+      "answerEn": "no separate English word; completes qué tal, “how about...?”",
+      "noteEn": "Tal completes qué tal, a common expression used to ask how something is or to suggest an option. It does not have a useful separate English translation in this expression.",
+      "example": { "es": "¿Qué tal mañana?", "en": "How about tomorrow?" },
+      "tags": ["word", "fixed expression", "questions"]
+    },
+    {
+      "id": "word-sale--fixed-salir-a-cuenta",
+      "kind": "word",
+      "promptEs": "sale",
+      "answerEn": "is worthwhile; works out as good value (as part of salir a cuenta)",
+      "noteEn": "Sale normally comes from salir, “to go out,” but in salir a cuenta it describes whether a choice works out as worthwhile or good value.",
+      "example": { "es": "El pase mensual sale a cuenta.", "en": "The monthly pass is worthwhile." },
+      "tags": ["word", "fixed expression", "value"]
+    },
+    {
+      "id": "word-a--fixed-salir-a-cuenta",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; part of salir a cuenta",
+      "noteEn": "This a is required inside the fixed expression salir a cuenta, meaning that something works out as worthwhile or good value.",
+      "example": { "es": "Comprar el paquete sale a cuenta.", "en": "Buying the package is worthwhile." },
+      "tags": ["word", "fixed expression", "preposition"]
+    },
+    {
+      "id": "word-cuenta--fixed-salir-a-cuenta",
+      "kind": "word",
+      "promptEs": "cuenta",
+      "answerEn": "no separate English word; completes salir a cuenta, “to be worthwhile”",
+      "noteEn": "Cuenta can mean an account or a bill elsewhere. In salir a cuenta, the whole expression evaluates whether something is advantageous or good value.",
+      "example": { "es": "El billete de ida y vuelta sale a cuenta.", "en": "The round-trip ticket is good value." },
+      "tags": ["word", "fixed expression", "value"]
+    },
+    {
+      "id": "word-nos--beneficiary",
+      "kind": "word",
+      "promptEs": "nos",
+      "answerEn": "for us; to our advantage",
+      "noteEn": "Before a verb such as salir or resultar, nos can identify the people for whom an outcome is advantageous, costly, easy, or difficult.",
+      "example": { "es": "Nos resulta más barato viajar juntos.", "en": "It works out cheaper for us to travel together." },
+      "tags": ["word", "pronoun", "affected person"]
+    },
+    { "id": "word-mm", "kind": "word", "promptEs": "mm", "answerEn": "hmm", "noteEn": "", "tags": ["word", "interjection", "hesitation"] },
+    { "id": "word-seguro--certain", "kind": "word", "promptEs": "seguro", "answerEn": "sure; certain (masculine singular)", "noteEn": "", "tags": ["word", "certainty", "adjective"] },
+    { "id": "word-después--later", "kind": "word", "promptEs": "después", "answerEn": "later; afterward", "noteEn": "", "tags": ["word", "time"] },
+    { "id": "word-nuestra", "kind": "word", "promptEs": "nuestra", "answerEn": "our (before a feminine singular noun)", "noteEn": "", "tags": ["word", "possessive", "feminine"] },
+    { "id": "word-definición", "kind": "word", "promptEs": "definición", "answerEn": "definition", "noteEn": "", "tags": ["word", "ideas", "feminine"] },
+    {
+      "id": "word-poco--not-very",
+      "kind": "word",
+      "promptEs": "poco",
+      "answerEn": "not very; insufficiently (before an adjective)",
+      "noteEn": "Before a describing word, poco often says that a quality is present to an insufficient degree. Poco claro therefore means “not very clear,” while un poco claro would literally mean “a little clear.”",
+      "example": { "es": "La señal es poco visible.", "en": "The sign is not very visible." },
+      "tags": ["word", "degree", "adjective modifier"]
+    },
+    { "id": "word-clara--clear", "kind": "word", "promptEs": "clara", "answerEn": "clear (feminine singular)", "noteEn": "", "tags": ["word", "description", "feminine"] },
+    { "id": "word-valor", "kind": "word", "promptEs": "valor", "answerEn": "value; worth", "noteEn": "", "tags": ["word", "value", "masculine"] },
+    { "id": "word-vuestro", "kind": "word", "promptEs": "vuestro", "answerEn": "your (informal plural, before a masculine singular noun)", "noteEn": "", "tags": ["word", "possessive", "informal plural"] },
+    {
+      "id": "grammar-ir-a-infinitive-movement",
+      "kind": "grammar",
+      "promptEs": "ir a + infinitivo · movimiento con propósito",
+      "questionEn": "How do you say that someone physically goes to do an action?",
+      "answerEn": "Use a form of ir, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Ir changes for the person and time, while the final action stays in the dictionary form ending in -ar, -er, or -ir. Context can make this pattern describe real movement toward an activity, rather than the separate near-future meaning “going to do.”",
+      "example": { "es": "Fuimos a buscar pan.", "en": "We went to get bread." },
+      "tags": ["A2", "grammar", "movement", "purpose"]
+    },
+    {
+      "id": "grammar-nosotros-command",
+      "kind": "grammar",
+      "promptEs": "propuesta para nosotros: hablemos, comamos, vivamos",
+      "questionEn": "How do you propose an action for a group that includes yourself, like “let's talk”?",
+      "answerEn": "Use the special “we” proposal form: most -ar verbs take -emos, while most -er and -ir verbs take -amos.",
+      "noteEn": "Start from the verb's dictionary form, the unchanged form ending in -ar, -er, or -ir. Hablar becomes hablemos, comer becomes comamos, and vivir becomes vivamos. Some verbs also change their spelling or base, so learn unfamiliar forms as you meet them.",
+      "example": { "es": "Busquemos otra mesa.", "en": "Let's look for another table." },
+      "tags": ["A2", "grammar", "proposals", "we-form"]
+    },
+    {
+      "id": "phrase-qué-tal-option",
+      "kind": "phrase",
+      "promptEs": "¿qué tal + opción?",
+      "questionEn": "How do you ask for an opinion about an option or suggest it for consideration?",
+      "answerEn": "Use ¿qué tal...? before or around the option, much like “how about...?”",
+      "noteEn": "Qué keeps its written accent in the question. Tal completes this fixed expression, and the option can be a noun, a pronoun such as ese, or a time such as mañana.",
+      "example": { "es": "¿Qué tal el viernes?", "en": "How about Friday?" },
+      "tags": ["A1", "phrase", "suggestions", "questions"]
+    },
+    {
+      "id": "phrase-salir-a-cuenta",
+      "kind": "phrase",
+      "promptEs": "salir(le) (más) a cuenta",
+      "questionEn": "How do you say that a choice is worthwhile or works out as better value for someone?",
+      "answerEn": "Use a form of salir followed by a cuenta. Add más for “better value,” and place me, te, le, nos, os, or les before salir when naming who benefits.",
+      "noteEn": "This is a fixed use of salir; translating it as “to go out” would be misleading. Salir changes for the thing being evaluated, while a cuenta stays fixed. The short word before salir identifies the person affected, if one is stated.",
+      "example": { "es": "Nos sale más a cuenta el abono mensual.", "en": "The monthly pass works out as better value for us." },
+      "tags": ["B1", "phrase", "value", "shopping"]
+    },
+    {
+      "id": "grammar-duration-después",
+      "kind": "grammar",
+      "promptEs": "cantidad de tiempo + después",
+      "questionEn": "How do you say that something happens a stated amount of time later?",
+      "answerEn": "Put the length of time before después.",
+      "noteEn": "The duration comes first: tres días después means “three days later.” This differs from después de tres días, which presents the same duration after después and means “after three days.”",
+      "example": { "es": "Tres días después, llegó la carta.", "en": "Three days later, the letter arrived." },
+      "tags": ["A2", "grammar", "time", "sequence"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:title",
+      "labelEs": "EQUIPOS PARA IR A COMPRAR",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:w01", "text": "EQUIPOS", "normalized": "equipos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00001" }], "cardIds": ["word-equipos"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:w02", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00002" }], "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:w03", "text": "IR", "normalized": "ir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00003" }], "cardIds": ["word-ir--go", "grammar-para-infinitive-purpose", "grammar-ir-a-infinitive-movement"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00004" }], "cardIds": ["word-a--infinitive-link", "grammar-ir-a-infinitive-movement"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:w05", "text": "COMPRAR", "normalized": "comprar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00005" }], "cardIds": ["word-comprar", "grammar-ir-a-infinitive-movement"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:app-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:title:w02", "es-xkcd-equipos-para-ir-a-comprar:title:w03"], "exampleEs": "PARA IR", "explanationEn": "Para introduces the purpose, and ir remains in its unchanged dictionary form." },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:title:app-go-do", "cardId": "grammar-ir-a-infinitive-movement", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:title:w03", "es-xkcd-equipos-para-ir-a-comprar:title:w04", "es-xkcd-equipos-para-ir-a-comprar:title:w05"], "exampleEs": "IR A COMPRAR", "explanationEn": "Ir names physical going, a links it to the purpose action, and comprar stays in its dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:bad-heading",
+      "labelEs": "MALO: DOS NO CEREBRITOS",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-heading:w01", "text": "MALO", "normalized": "malo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00009" }], "cardIds": ["word-malo--bad-quality"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-heading:w02", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00015" }], "cardIds": ["word-dos"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-heading:w03", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00016" }], "cardIds": ["word-no--non-category"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-heading:w04", "text": "CEREBRITOS", "normalized": "cerebritos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00017" }], "cardIds": ["word-cerebritos--nerds"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading",
+      "labelEs": "BUENO: NO CEREBRITO + CEREBRITO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading:w01", "text": "BUENO", "normalized": "bueno", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00008" }], "cardIds": ["word-bueno--good-rating"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00012" }], "cardIds": ["word-no--non-category"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading:w03", "text": "CEREBRITO", "normalized": "cerebrito", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00013" }], "cardIds": ["word-cerebrito--nerd"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading:w04", "text": "CEREBRITO", "normalized": "cerebrito", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00014" }], "cardIds": ["word-cerebrito--nerd"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-heading:excluded-plus", "text": "+", "reason": "symbol", "rationale": "The printed plus sign combines the two team-member categories and is not a Spanish lexical word.", "explicitBounds": [{ "x": 50.25, "y": 19.18, "width": 1.45, "height": 3.55 }], "geometryRationale": "OCR included the plus sign in its line text but did not create a standalone token box for it." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-heading",
+      "labelEs": "MUY MALO: DOS CEREBRITOS",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-heading:w01", "text": "MUY", "normalized": "muy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00006" }], "cardIds": ["word-muy"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-heading:w02", "text": "MALO", "normalized": "malo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00007" }], "cardIds": ["word-malo--bad-quality"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-heading:w03", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00010" }], "cardIds": ["word-dos"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-heading:w04", "text": "CEREBRITOS", "normalized": "cerebritos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00011" }], "cardIds": ["word-cerebritos--nerds"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:bad-choice",
+      "labelEs": "PILLEMOS ESE.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-choice:w01", "text": "PILLEMOS", "normalized": "pillemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00023" }], "cardIds": ["word-pillemos--lets-get", "grammar-nosotros-command"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-choice:w02", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00024" }], "cardIds": ["word-ese--pronoun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-choice:app-lets", "cardId": "grammar-nosotros-command", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:bad-choice:w01"], "exampleEs": "PILLEMOS", "explanationEn": "Pillemos uses the group-proposal ending -emos to suggest an action that includes the speaker." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:bad-reply",
+      "labelEs": "VALE.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0016" }],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bad-reply:w01", "text": "VALE", "normalized": "vale", "explicitBounds": [{ "x": 11.85, "y": 35.08, "width": 7.65, "height": 4.08 }], "geometryRationale": "The OCR box extends far below the printed word into the speech-tail and nearby drawing, so a tighter word box is required.", "cardIds": ["word-vale"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:good-choice",
+      "labelEs": "PILLEMOS ESE.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0010" }],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-choice:w01", "text": "PILLEMOS", "normalized": "pillemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00021" }], "cardIds": ["word-pillemos--lets-get", "grammar-nosotros-command"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-choice:w02", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00022" }], "cardIds": ["word-ese--pronoun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-choice:app-lets", "cardId": "grammar-nosotros-command", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:good-choice:w01"], "exampleEs": "PILLEMOS", "explanationEn": "Pillemos uses the group-proposal ending -emos to suggest an action that includes the speaker." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis",
+      "labelEs": "ESPERA, CREO QUE EL OTRO SALE MÁS A CUENTA.",
+      "explicitBounds": [{ "x": 41.90, "y": 31.35, "width": 22.60, "height": 8.30 }],
+      "geometryRationale": "OCR clipped multiple edge letters and omitted EL in this bubble, so its source lines cannot contain every corrected word box.",
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w01", "text": "ESPERA", "normalized": "espera", "explicitBounds": [{ "x": 42.30, "y": 31.72, "width": 9.45, "height": 2.68 }], "geometryRationale": "OCR dropped the initial E and its token box begins at SPERA, so the full printed word needs an explicit box.", "cardIds": ["word-espera--wait-command"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w02", "text": "CREO", "normalized": "creo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00030" }], "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w03", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 58.28, "y": 31.72, "width": 5.70, "height": 2.68 }], "geometryRationale": "OCR produced only a narrow QI box for QUE, omitting most of the printed word, so the full glyph span is authored explicitly.", "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w04", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 42.30, "y": 33.55, "width": 3.15, "height": 2.92 }], "geometryRationale": "OCR omitted this independently printed EL entirely, so no reusable OCR token geometry exists for the word.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w05", "text": "OTRO", "normalized": "otro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00032" }], "cardIds": ["word-otro"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w06", "text": "SALE", "normalized": "sale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00033" }], "cardIds": ["word-sale--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w07", "text": "MÁS", "normalized": "más", "explicitBounds": [{ "x": 57.95, "y": 33.52, "width": 6.15, "height": 2.98 }], "geometryRationale": "OCR retained only the first letter of MÁS and its token box excludes the remaining printed letters, requiring a full explicit box.", "cardIds": ["word-más--more", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w08", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00041" }], "cardIds": ["word-a--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w09", "text": "CUENTA", "normalized": "cuenta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00042" }], "cardIds": ["word-cuenta--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-analysis:app-value", "cardId": "phrase-salir-a-cuenta", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:good-analysis:w06", "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w07", "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w08", "es-xkcd-equipos-para-ir-a-comprar:good-analysis:w09"], "exampleEs": "SALE MÁS A CUENTA", "explanationEn": "Sale supplies the changing form of salir, más strengthens the value comparison, and a cuenta completes the fixed expression." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:good-reply",
+      "labelEs": "VALE, EL OTRO.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0020" }],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-reply:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00046" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-reply:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00047" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:good-reply:w03", "text": "OTRO", "normalized": "otro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00048" }], "cardIds": ["word-otro"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-question",
+      "labelEs": "¿QUÉ TAL ESE?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00018" }], "cardIds": ["word-qué--fixed-qué-tal", "phrase-qué-tal-option"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w02", "text": "TAL", "normalized": "tal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00019" }], "cardIds": ["word-tal--fixed-qué-tal", "phrase-qué-tal-option"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w03", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00020" }], "cardIds": ["word-ese--pronoun", "phrase-qué-tal-option"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:app-option", "cardId": "phrase-qué-tal-option", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w01", "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w02", "es-xkcd-equipos-para-ir-a-comprar:very-bad-question:w03"], "exampleEs": "QUÉ TAL ESE", "explanationEn": "Qué tal asks for an opinion, and ese supplies the masculine option being considered." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis",
+      "labelEs": "CREO QUE EL OTRO NOS SALE MÁS A CUENTA...",
+      "explicitBounds": [{ "x": 76.45, "y": 31.18, "width": 20.20, "height": 8.35 }],
+      "geometryRationale": "Several OCR line boxes clip the first or final letters in this bubble, so the coherent bubble region needs a complete explicit envelope.",
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w01", "text": "CREO", "normalized": "creo", "explicitBounds": [{ "x": 76.95, "y": 31.35, "width": 5.85, "height": 2.98 }], "geometryRationale": "OCR dropped the initial C and its REO token box begins inside the printed word, so the full word is boxed explicitly.", "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00026" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w03", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00027" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w04", "text": "OTRO", "normalized": "otro", "explicitBounds": [{ "x": 90.42, "y": 31.35, "width": 5.75, "height": 2.98 }], "geometryRationale": "OCR clipped the final O and provided only an OTR-width token box, so the complete printed word needs an explicit box.", "cardIds": ["word-otro"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w05", "text": "NOS", "normalized": "nos", "explicitBounds": [{ "x": 76.90, "y": 33.88, "width": 4.95, "height": 2.70 }], "geometryRationale": "OCR dropped the initial N and its OS token box misses part of the printed word, requiring an explicit full-word box.", "cardIds": ["word-nos--beneficiary", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w06", "text": "SALE", "normalized": "sale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00036" }], "cardIds": ["word-sale--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w07", "text": "MÁS", "normalized": "más", "explicitBounds": [{ "x": 87.25, "y": 33.88, "width": 5.25, "height": 2.70 }], "geometryRationale": "OCR retained only MA and its box omits the final printed letter of MÁS, so the full word is boxed explicitly.", "cardIds": ["word-más--more", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w08", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00039" }], "cardIds": ["word-a--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w09", "text": "CUENTA", "normalized": "cuenta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00040" }], "cardIds": ["word-cuenta--fixed-salir-a-cuenta", "phrase-salir-a-cuenta"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:app-value", "cardId": "phrase-salir-a-cuenta", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w05", "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w06", "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w07", "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w08", "es-xkcd-equipos-para-ir-a-comprar:very-bad-analysis:w09"], "exampleEs": "NOS SALE MÁS A CUENTA", "explanationEn": "Nos names the people affected, sale supplies the changing verb, más makes the comparison, and a cuenta completes the fixed expression." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-doubt",
+      "labelEs": "MM, NO ESTOY SEGURO...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-doubt:w01", "text": "MM", "normalized": "mm", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00043" }], "cardIds": ["word-mm"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-doubt:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00044" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-doubt:w03", "text": "ESTOY", "normalized": "estoy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00045" }], "cardIds": ["word-estoy--state"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:very-bad-doubt:w04", "text": "SEGURO", "normalized": "seguro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00049" }], "cardIds": ["word-seguro--certain"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:later-caption",
+      "labelEs": "DOS HORAS DESPUÉS",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0023" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:later-caption:w01", "text": "DOS", "normalized": "dos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00050" }], "cardIds": ["word-dos", "grammar-duration-después"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:later-caption:w02", "text": "HORAS", "normalized": "horas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00051" }], "cardIds": ["word-horas", "grammar-duration-después"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:later-caption:w03", "text": "DESPUÉS", "normalized": "después", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00052" }], "cardIds": ["word-después--later", "grammar-duration-después"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:later-caption:app-duration", "cardId": "grammar-duration-después", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:later-caption:w01", "es-xkcd-equipos-para-ir-a-comprar:later-caption:w02", "es-xkcd-equipos-para-ir-a-comprar:later-caption:w03"], "exampleEs": "DOS HORAS DESPUÉS", "explanationEn": "Dos horas gives the duration, and después follows it to place the next moment that amount of time later." }
+      ]
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis",
+      "labelEs": "CREO QUE NUESTRO PRINCIPAL PROBLEMA ES NUESTRA DEFINICIÓN POCO CLARA DE VALOR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0031" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w01", "text": "CREO", "normalized": "creo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00053" }], "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00054" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w03", "text": "NUESTRO", "normalized": "nuestro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00055" }], "cardIds": ["word-nuestro"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w04", "text": "PRINCIPAL", "normalized": "principal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00059" }], "cardIds": ["word-principal"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w05", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00060" }], "cardIds": ["word-problema"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00062" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w07", "text": "NUESTRA", "normalized": "nuestra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00063" }], "cardIds": ["word-nuestra"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w08", "text": "DEFINICIÓN", "normalized": "definición", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00064" }], "cardIds": ["word-definición"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w09", "text": "POCO", "normalized": "poco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00067" }], "cardIds": ["word-poco--not-very"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w10", "text": "CLARA", "normalized": "clara", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00068" }], "cardIds": ["word-clara--clear"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00069" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-analysis:w12", "text": "VALOR", "normalized": "valor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00070" }], "cardIds": ["word-valor"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke",
+      "labelEs": "¡ESE NO ES VUESTRO PRINCIPAL PROBLEMA!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w01", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00056" }], "cardIds": ["word-ese--pronoun"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00057" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00058" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w04", "text": "VUESTRO", "normalized": "vuestro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00061" }], "cardIds": ["word-vuestro", "grammar-vosotros-informal-plural"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w05", "text": "PRINCIPAL", "normalized": "principal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00065" }], "cardIds": ["word-principal"] },
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w06", "text": "PROBLEMA", "normalized": "problema", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-equipos-para-ir-a-comprar:ocr-token-00066" }], "cardIds": ["word-problema"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:app-vuestro", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-equipos-para-ir-a-comprar:bottom-rebuke:w04"], "exampleEs": "VUESTRO", "explanationEn": "Vuestro addresses more than one person informally and matches the masculine singular thing possessed." }
+      ]
+    }
+  ]
+}

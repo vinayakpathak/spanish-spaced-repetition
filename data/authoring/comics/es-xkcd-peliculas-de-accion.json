@@ -1,0 +1,806 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-peliculas-de-accion",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Action Movies",
+  "titleEs": "Películas de acción",
+  "titleText": {
+    "es": "Según mi cuenta, solo 48 de los 158 minutos de La jungla de cristal 4 tienen acción. Eso es patético, tíos. Crank está mejor, pero necesita un mayor presupuesto y más Summer Glau.",
+    "en": "By my count, only 48 of the 158 minutes in Live Free or Die Hard have action. That's pathetic, guys. Crank is better, but needs a bigger budget and more Summer Glau.",
+    "noteEn": "La jungla de cristal 4 is the Spanish release title of Live Free or Die Hard. Summer Glau played River Tam in Firefly and Serenity; the final poster builds on that character's exceptional fighting ability."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-se--irse-time-passing",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; helps irse describe time passing or ending",
+      "noteEn": "Irse often means “to leave.” When its subject is a period of time, se helps give it the figurative sense of passing or coming to an end.",
+      "example": { "es": "El día se va muy rápido.", "en": "The day goes by very quickly." },
+      "tags": ["word", "pronominal verb", "irse", "time"]
+    },
+    {
+      "id": "word-va--time-passes",
+      "kind": "word",
+      "promptEs": "va",
+      "answerEn": "goes by; comes to an end (with se, of time)",
+      "noteEn": "Va is the present form of ir used with one person or thing. When a period of time is the subject of se va, the expression says that period is passing or ending.",
+      "example": { "es": "El verano se va.", "en": "Summer is coming to an end." },
+      "tags": ["word", "ir", "irse", "present", "time"]
+    },
+    { "id": "word-verano", "kind": "word", "promptEs": "verano", "answerEn": "summer", "noteEn": "", "tags": ["word", "time"] },
+    { "id": "word-película", "kind": "word", "promptEs": "película", "answerEn": "movie; film", "noteEn": "", "tags": ["word", "film"] },
+    { "id": "word-acción", "kind": "word", "promptEs": "acción", "answerEn": "action", "noteEn": "", "tags": ["word"] },
+    {
+      "id": "word-loca--wild",
+      "kind": "word",
+      "promptEs": "loca",
+      "answerEn": "wild; crazy (feminine singular)",
+      "noteEn": "Loca is the feminine singular form of loco. Applied to an adventure, idea, or entertainment, it can describe something wildly excessive or unrestrained rather than a medical condition.",
+      "example": { "es": "Fue una aventura loca.", "en": "It was a wild adventure." },
+      "tags": ["word", "adjective", "feminine", "informal"]
+    },
+    {
+      "id": "word-de--characteristic",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "with; having (introducing a characteristic)",
+      "noteEn": "De plus a noun phrase can describe what kind of thing something is or a characteristic it has. English may use “with,” “having,” or a compound adjective.",
+      "example": { "es": "Buscan una casa de gran tamaño.", "en": "They are looking for a large house." },
+      "tags": ["word", "preposition", "description"]
+    },
+    {
+      "id": "word-gran--large-budget",
+      "kind": "word",
+      "promptEs": "gran",
+      "answerEn": "large; big (before a singular noun)",
+      "noteEn": "Grande shortens to gran when it appears directly before a singular noun. With an amount such as a budget, gran describes large size.",
+      "example": { "es": "El proyecto necesita un gran presupuesto.", "en": "The project needs a large budget." },
+      "tags": ["word", "adjective", "grande", "apocope"]
+    },
+    { "id": "word-eh--confusion", "kind": "word", "promptEs": "eh", "answerEn": "huh?; what?", "noteEn": "Eh can show that the speaker is surprised or did not understand what was just said.", "example": { "es": "¿Eh? No te oí.", "en": "Huh? I didn't hear you." }, "tags": ["word", "interjection", "reaction"] },
+    { "id": "word-jungla", "kind": "word", "promptEs": "jungla", "answerEn": "jungle", "noteEn": "", "tags": ["word"] },
+    { "id": "word-cristal", "kind": "word", "promptEs": "cristal", "answerEn": "glass; crystal", "noteEn": "", "tags": ["word"] },
+    {
+      "id": "word-más--fixed-no-ser-mas-que",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "no more than; only (as part of no ser más que)",
+      "noteEn": "Más normally means “more.” Between a negative form of ser and que, it helps restrict something to the description that follows.",
+      "example": { "es": "No fue más que un error.", "en": "It was nothing more than a mistake." },
+      "tags": ["word", "fixed expression", "restriction"]
+    },
+    {
+      "id": "word-que--fixed-no-ser-mas-que",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "than; no separate word in the full expression “nothing but”",
+      "noteEn": "In no ser más que, que completes the restriction introduced by más. The form of ser changes for the person and time.",
+      "example": { "es": "Eso no es más que una idea.", "en": "That is nothing but an idea." },
+      "tags": ["word", "fixed expression", "restriction"]
+    },
+    {
+      "id": "word-tenía--had",
+      "kind": "word",
+      "promptEs": "tenía",
+      "answerEn": "it had; used to have",
+      "noteEn": "Tenía is a past form of tener. It presents a state or characteristic that held at that past time without marking its beginning or end.",
+      "example": { "es": "La casa tenía un jardín.", "en": "The house had a garden." },
+      "tags": ["word", "tener", "past", "imperfect"]
+    },
+    { "id": "word-mucho--large-amount", "kind": "word", "promptEs": "mucho", "answerEn": "much; a lot of", "noteEn": "", "tags": ["word", "quantity"] },
+    { "id": "word-diálogo", "kind": "word", "promptEs": "diálogo", "answerEn": "dialogue; talking", "noteEn": "", "tags": ["word", "film"] },
+    { "id": "word-cine", "kind": "word", "promptEs": "cine", "answerEn": "cinema; movie theater", "noteEn": "", "tags": ["word", "place", "film"] },
+    {
+      "id": "word-conté",
+      "kind": "word",
+      "promptEs": "conté",
+      "answerEn": "I counted; I tallied",
+      "noteEn": "Conté is a completed-past form of contar for the speaker. Contar can mean either “to count” or “to tell”; the surrounding context decides which sense applies.",
+      "example": { "es": "Conté las páginas ayer.", "en": "I counted the pages yesterday." },
+      "tags": ["word", "contar", "past", "first person"]
+    },
+    { "id": "word-minuto", "kind": "word", "promptEs": "minuto", "answerEn": "minute", "noteEn": "", "tags": ["word", "time"] },
+    {
+      "id": "word-a--fixed-minuto-a-minuto",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "by; links repeated units in minuto a minuto",
+      "noteEn": "Between two copies of the same unit, a can form a step-by-step expression such as minuto a minuto or día a día.",
+      "example": { "es": "La situación cambia día a día.", "en": "The situation changes day by day." },
+      "tags": ["word", "preposition", "distributive pattern"]
+    },
+    {
+      "id": "word-al--fixed-al-menos",
+      "kind": "word",
+      "promptEs": "al",
+      "answerEn": "no separate English word; begins al menos, “at least”",
+      "noteEn": "Al combines a and el, but the complete fixed expression al menos corresponds to “at least.”",
+      "example": { "es": "Necesitamos al menos una hora.", "en": "We need at least one hour." },
+      "tags": ["word", "fixed expression", "minimum"]
+    },
+    {
+      "id": "word-menos--fixed-al-menos",
+      "kind": "word",
+      "promptEs": "menos",
+      "answerEn": "least (as part of al menos)",
+      "noteEn": "Menos normally means “less” or “fewer.” With al, it forms the common expression al menos, “at least.”",
+      "example": { "es": "Hay al menos dos opciones.", "en": "There are at least two options." },
+      "tags": ["word", "fixed expression", "minimum"]
+    },
+    {
+      "id": "word-en--proportion",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "no separate English word; introduces the proportion being described",
+      "noteEn": "Spanish can use en before a percentage to state how much of something has a particular description. Natural English normally puts the percentage directly before that description, without a separate word for en.",
+      "example": { "es": "El trabajo está terminado en un 80%.", "en": "The work is 80% complete." },
+      "tags": ["word", "preposition", "percentage", "proportion"]
+    },
+    {
+      "id": "word-caminando",
+      "kind": "word",
+      "promptEs": "caminando",
+      "answerEn": "walking",
+      "noteEn": "Caminando is the -ando action form of caminar, “to walk.” This form can add an action happening at the same time.",
+      "example": { "es": "Entró caminando.", "en": "She came in walking." },
+      "tags": ["word", "caminar", "gerund"]
+    },
+    {
+      "id": "word-hablando",
+      "kind": "word",
+      "promptEs": "hablando",
+      "answerEn": "talking; speaking",
+      "noteEn": "Hablando is the -ando action form of hablar, “to speak.” This form can add an action happening at the same time.",
+      "example": { "es": "Salió hablando por teléfono.", "en": "He left while talking on the phone." },
+      "tags": ["word", "hablar", "gerund"]
+    },
+    { "id": "word-todas", "kind": "word", "promptEs": "todas", "answerEn": "all; every one (feminine plural)", "noteEn": "", "tags": ["word", "quantity", "feminine plural"] },
+    { "id": "word-esas", "kind": "word", "promptEs": "esas", "answerEn": "those (feminine plural)", "noteEn": "", "tags": ["word", "demonstrative", "feminine plural"] },
+    { "id": "word-películas", "kind": "word", "promptEs": "películas", "answerEn": "movies; films", "noteEn": "", "tags": ["word", "film", "plural"] },
+    {
+      "id": "word-por--fixed-por-una-vez",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "for (as part of por una vez, “for once”)",
+      "noteEn": "Por introduces the one exceptional occasion in the fixed expression por una vez.",
+      "example": { "es": "Por una vez, llegamos temprano.", "en": "For once, we arrived early." },
+      "tags": ["word", "fixed expression", "occasion"]
+    },
+    {
+      "id": "word-una--fixed-por-una-vez",
+      "kind": "word",
+      "promptEs": "una",
+      "answerEn": "one; a single (as part of por una vez)",
+      "noteEn": "Una agrees with the feminine noun vez. Together, por una vez means “for once” or “just this once.”",
+      "example": { "es": "Escúchame por una vez.", "en": "Listen to me for once." },
+      "tags": ["word", "fixed expression", "number", "feminine"]
+    },
+    {
+      "id": "word-querría--would-like",
+      "kind": "word",
+      "promptEs": "querría",
+      "answerEn": "I would like",
+      "noteEn": "Querría is a softened form of querer for the speaker. It can present a wish or request less directly than quiero, “I want.”",
+      "example": { "es": "Querría un café, por favor.", "en": "I would like a coffee, please." },
+      "tags": ["word", "querer", "conditional", "politeness"]
+    },
+    {
+      "id": "word-de--fixed-de-verdad-genuine",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; begins de verdad, “real or genuine”",
+      "noteEn": "After a noun, de verdad can distinguish a genuine example from something that only resembles it or bears the name.",
+      "example": { "es": "Necesito unas vacaciones de verdad.", "en": "I need a real vacation." },
+      "tags": ["word", "fixed expression", "authenticity"]
+    },
+    {
+      "id": "word-verdad--genuine",
+      "kind": "word",
+      "promptEs": "verdad",
+      "answerEn": "real; genuine (as part of de verdad)",
+      "noteEn": "Verdad by itself means “truth.” In de verdad after a noun, the whole expression can mean “real” or “genuine.”",
+      "example": { "es": "Es una amistad de verdad.", "en": "It is a genuine friendship." },
+      "tags": ["word", "fixed expression", "authenticity"]
+    },
+    {
+      "id": "word-exposición",
+      "kind": "word",
+      "promptEs": "exposición",
+      "answerEn": "exposition; background setup",
+      "noteEn": "In storytelling, exposición is the information that introduces the situation, characters, or background before the main events.",
+      "example": { "es": "La exposición presenta a los personajes.", "en": "The exposition introduces the characters." },
+      "tags": ["word", "storytelling", "film"]
+    },
+    {
+      "id": "word-seguidos",
+      "kind": "word",
+      "promptEs": "seguidos",
+      "answerEn": "followed (masculine plural)",
+      "noteEn": "Seguidos is the masculine plural form of seguido. It matches a masculine plural thing and uses de before what comes next.",
+      "example": { "es": "Dos días seguidos de descanso.", "en": "Two days followed by rest." },
+      "tags": ["word", "seguir", "participle", "plural"]
+    },
+    {
+      "id": "word-de--fixed-seguido-de",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "by; required after seguido before what follows",
+      "noteEn": "Spanish uses de after seguido, seguida, seguidos, or seguidas to introduce the next event or thing.",
+      "example": { "es": "Una pausa seguida de música.", "en": "A pause followed by music." },
+      "tags": ["word", "fixed complement", "sequence"]
+    },
+    { "id": "word-escena", "kind": "word", "promptEs": "escena", "answerEn": "scene", "noteEn": "", "tags": ["word", "film"] },
+    { "id": "word-perfecta", "kind": "word", "promptEs": "perfecta", "answerEn": "perfect (feminine singular)", "noteEn": "", "tags": ["word", "adjective", "feminine"] },
+    {
+      "id": "word-de--duration",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; introduces how long something lasts",
+      "noteEn": "Spanish can put de and an amount of time after a noun to describe its duration. English often puts the time before the noun instead: una película de dos horas becomes “a two-hour movie.”",
+      "example": { "es": "Vimos una película de dos horas.", "en": "We watched a two-hour movie." },
+      "tags": ["word", "preposition", "duration", "time"]
+    },
+    {
+      "id": "word-una--feminine-pronoun",
+      "kind": "word",
+      "promptEs": "una",
+      "answerEn": "one (feminine)",
+      "noteEn": "Una can stand on its own for one feminine person or thing when the noun is already understood. It is not introducing a new noun in this use.",
+      "example": { "es": "Quiero una que sea cómoda.", "en": "I want one that is comfortable." },
+      "tags": ["word", "pronoun", "feminine"]
+    },
+    {
+      "id": "word-tuviera",
+      "kind": "word",
+      "promptEs": "tuviera",
+      "answerEn": "had; would have (subjunctive form)",
+      "noteEn": "Tuviera is a special past form of tener used when the thing being described is sought, imagined, uncertain, or otherwise not presented as an established fact. For example, buscar una casa que tuviera jardín seeks a house with that feature rather than stating that a known house has it.",
+      "example": { "es": "Buscaba una casa que tuviera jardín.", "en": "She was looking for a house that had a garden." },
+      "tags": ["word", "tener", "subjunctive", "past"]
+    },
+    { "id": "word-enorme", "kind": "word", "promptEs": "enorme", "answerEn": "enormous; huge", "noteEn": "", "tags": ["word", "adjective"] },
+    {
+      "id": "word-buen",
+      "kind": "word",
+      "promptEs": "buen",
+      "answerEn": "good (before a masculine singular noun)",
+      "noteEn": "Bueno shortens to buen directly before a masculine singular noun.",
+      "example": { "es": "Es un buen libro.", "en": "It is a good book." },
+      "tags": ["word", "adjective", "bueno", "apocope"]
+    },
+    { "id": "word-coreógrafo", "kind": "word", "promptEs": "coreógrafo", "answerEn": "choreographer", "noteEn": "", "tags": ["word", "profession"] },
+    {
+      "id": "word-gran--excellent",
+      "kind": "word",
+      "promptEs": "gran",
+      "answerEn": "great; excellent (before a singular noun)",
+      "noteEn": "Grande shortens to gran directly before a singular noun. Before a person or work, gran often praises quality or importance rather than physical size.",
+      "example": { "es": "Ana es una gran médica.", "en": "Ana is a great doctor." },
+      "tags": ["word", "adjective", "grande", "quality", "apocope"]
+    },
+    { "id": "word-director", "kind": "word", "promptEs": "director", "answerEn": "director", "noteEn": "", "tags": ["word", "profession", "film"] },
+    {
+      "id": "word-deberían",
+      "kind": "word",
+      "promptEs": "deberían",
+      "answerEn": "they should; they ought to",
+      "noteEn": "Deberían is a softened recommendation form of deber for a plural subject. It is followed by the action verb in its unchanged dictionary form.",
+      "example": { "es": "Deberían hablar con ella.", "en": "They should speak with her." },
+      "tags": ["word", "deber", "conditional", "recommendation"]
+    },
+    {
+      "id": "word-centrarla",
+      "kind": "word",
+      "promptEs": "centrarla",
+      "answerEn": "to center it; to base it around something",
+      "noteEn": "Centrarla combines centrar, “to center,” with la, “her” or “it” for a feminine thing. The object word attaches to the end because centrar is in its unchanged dictionary form.",
+      "example": { "es": "Decidieron centrarla en una sola idea.", "en": "They decided to center it on one idea." },
+      "tags": ["word", "centrar", "attached pronoun", "infinitive"]
+    },
+    { "id": "word-personaje", "kind": "word", "promptEs": "personaje", "answerEn": "character", "noteEn": "", "tags": ["word", "storytelling"] },
+    {
+      "id": "word-conozcamos",
+      "kind": "word",
+      "promptEs": "conozcamos",
+      "answerEn": "we know; we are familiar with (subjunctive form)",
+      "noteEn": "Conozcamos is a special “we” form of conocer. It can appear in a description of a person, place, or thing being sought rather than one whose identity and characteristics are already established as fact.",
+      "example": { "es": "Busquemos un lugar que conozcamos.", "en": "Let's look for a place that we know." },
+      "tags": ["word", "conocer", "subjunctive", "first person plural"]
+    },
+    {
+      "id": "word-cansemos",
+      "kind": "word",
+      "promptEs": "cansemos",
+      "answerEn": "we get tired (subjunctive form)",
+      "noteEn": "Cansemos is a special “we” form of cansarse. It appears with nos, and de introduces what causes the tiredness. This form can appear inside a description of an unknown or desired person or thing.",
+      "example": { "es": "Quiero un juego del que no nos cansemos.", "en": "I want a game that we don't get tired of." },
+      "tags": ["word", "cansarse", "subjunctive", "first person plural"]
+    },
+    {
+      "id": "word-se--cargarse-take-out",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; marks cargarse a, “to take out”",
+      "noteEn": "The informal Spanish verb cargarse uses a matching small word such as me, te, or se. Cargarse a someone can mean to kill, beat, eliminate, or ruin them, depending on context.",
+      "example": { "es": "El villano se carga al guardia.", "en": "The villain takes out the guard." },
+      "tags": ["word", "pronominal verb", "informal", "cargarse"]
+    },
+    {
+      "id": "word-carga--take-out",
+      "kind": "word",
+      "promptEs": "carga",
+      "answerEn": "takes out; beats up (as part of se carga a)",
+      "noteEn": "Carga normally relates to carrying or loading. With se and a person introduced by a, cargarse can informally mean to take that person out, which may range from defeating or beating them to killing them.",
+      "example": { "es": "En la película, se carga a los enemigos.", "en": "In the movie, he takes out the enemies." },
+      "tags": ["word", "cargarse", "informal", "action"]
+    },
+    {
+      "id": "word-a--fixed-cargarse-a",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; introduces the person targeted by cargarse",
+      "noteEn": "Cargarse uses a before a person or person-like target. This is the same personal a that often marks a specific human object.",
+      "example": { "es": "El monstruo se cargó al héroe.", "en": "The monster took out the hero." },
+      "tags": ["word", "personal a", "cargarse", "informal"]
+    },
+    {
+      "id": "word-todo--everyone",
+      "kind": "word",
+      "promptEs": "todo",
+      "answerEn": "everyone; everybody (as part of todo el mundo)",
+      "noteEn": "Todo normally means “all” or “everything.” In the fixed expression todo el mundo, the complete phrase refers to everyone.",
+      "example": { "es": "Todo el mundo llegó temprano.", "en": "Everyone arrived early." },
+      "tags": ["word", "fixed expression", "people"]
+    },
+    {
+      "id": "phrase-irse--time-passing",
+      "kind": "phrase",
+      "promptEs": "irse · un período de tiempo",
+      "questionEn": "How can you say that a period of time passes or comes to an end?",
+      "answerEn": "Use the period of time as the subject of irse: se va for one period, or se van for several.",
+      "noteEn": "Irse often describes someone leaving. With a day, season, year, or other period as its subject, it figuratively describes time passing or ending. The verb matches a singular or plural period: se va el día, se van los meses. Past forms include se fue and se fueron.",
+      "example": { "es": "Se fue el invierno.", "en": "Winter came to an end." },
+      "tags": ["phrase", "irse", "time", "A2"]
+    },
+    {
+      "id": "phrase-pelicula-de-accion",
+      "kind": "phrase",
+      "promptEs": "película de acción",
+      "questionEn": "How do you name an action movie in Spanish?",
+      "answerEn": "Use película de acción; use películas de acción for more than one.",
+      "noteEn": "Spanish uses de to connect película to the genre acción. Película changes to películas for the plural, while acción stays singular in this genre label.",
+      "example": { "es": "Vimos una película de acción.", "en": "We watched an action movie." },
+      "tags": ["phrase", "collocation", "film", "A1"]
+    },
+    {
+      "id": "grammar-grande-to-gran-before-noun",
+      "kind": "grammar",
+      "promptEs": "grande → gran delante de un sustantivo singular",
+      "questionEn": "Why does grande sometimes appear as gran?",
+      "answerEn": "Shorten grande to gran when it comes directly before a singular noun.",
+      "noteEn": "Gran works before both masculine and feminine singular nouns: un gran libro, una gran idea. Grande remains after the noun: un libro grande. Before a noun, gran often means “great” or “important,” though an amount such as gran presupuesto can still mean large. Only the position changes this form; the noun decides whether the description is singular.",
+      "example": { "es": "Fue una gran idea.", "en": "It was a great idea." },
+      "tags": ["grammar", "adjective", "apocope", "A2"]
+    },
+    {
+      "id": "concept-die-hard-spanish-title",
+      "kind": "concept",
+      "promptEs": "La jungla de cristal",
+      "answerEn": "the Spanish release title of Die Hard",
+      "noteEn": "The title literally refers to a “jungle of glass,” echoing the first film's skyscraper setting. Later entries are numbered under the same Spanish series title; La jungla de cristal 4 is Live Free or Die Hard.",
+      "tags": ["concept", "film", "title localization", "Die Hard"]
+    },
+    {
+      "id": "phrase-no-ser-mas-que",
+      "kind": "phrase",
+      "promptEs": "no + ser + más que",
+      "questionEn": "How do you say that something is nothing but, or only, a particular thing?",
+      "answerEn": "Use no, a form of ser, then más que and the thing or description that remains.",
+      "noteEn": "Ser means “to be” and changes for time and subject: no es más que, no era más que, no fue más que. Más que normally introduces a comparison, but inside this negative frame it restricts the subject to only what follows.",
+      "example": { "es": "La llamada no fue más que una broma.", "en": "The call was nothing but a joke." },
+      "tags": ["phrase", "restriction", "ser", "B1"]
+    },
+    {
+      "id": "grammar-direct-object-pronoun-before-finite-verb",
+      "kind": "grammar",
+      "promptEs": "lo, la, los, las delante de un verbo conjugado",
+      "questionEn": "Where do you put the Spanish word for “it” or “them” when the main verb already shows who acts and when?",
+      "answerEn": "Put lo, la, los, or las directly before that verb.",
+      "noteEn": "These short words replace the person or thing directly affected by the action; that role is called the direct object. Choose lo or los for a masculine thing, la or las for a feminine thing, and match singular or plural. Before a verb form such as conté or vimos, write the short word separately in front: lo conté, las vimos. With an unchanged dictionary form, it can instead attach to the end, as in verlo.",
+      "example": { "es": "La película, la vimos ayer.", "en": "The movie—we watched it yesterday." },
+      "tags": ["grammar", "direct object", "pronoun", "A2"]
+    },
+    {
+      "id": "phrase-minuto-a-minuto",
+      "kind": "phrase",
+      "promptEs": "minuto a minuto",
+      "questionEn": "How do you say that something is tracked or changes minute by minute?",
+      "answerEn": "Use minuto a minuto.",
+      "noteEn": "Spanish can repeat a unit with a between the two copies to describe gradual or repeated progress: minuto a minuto, día a día, paso a paso. The repeated noun normally stays singular.",
+      "example": { "es": "Seguimos el partido minuto a minuto.", "en": "We followed the match minute by minute." },
+      "tags": ["phrase", "time", "distributive pattern", "A2"]
+    },
+    {
+      "id": "phrase-al-menos",
+      "kind": "phrase",
+      "promptEs": "al menos",
+      "questionEn": "How do you set a minimum and say “at least”?",
+      "answerEn": "Use al menos before or near the minimum amount or claim.",
+      "noteEn": "Al menos is a fixed expression. It can set a numerical minimum, as in al menos dos horas, or soften a claim by saying that it is true at the minimum.",
+      "example": { "es": "Invita a al menos tres personas.", "en": "Invite at least three people." },
+      "tags": ["phrase", "minimum", "quantity", "A2"]
+    },
+    {
+      "id": "phrase-por-una-vez",
+      "kind": "phrase",
+      "promptEs": "por una vez",
+      "questionEn": "How do you say “for once” when one occasion is an exception to the usual pattern?",
+      "answerEn": "Use por una vez.",
+      "noteEn": "The phrase singles out one exceptional occasion and often carries frustration or relief about what normally happens. Por una sola vez can add stronger emphasis to “just once.”",
+      "example": { "es": "Por una vez, nadie llegó tarde.", "en": "For once, nobody arrived late." },
+      "tags": ["phrase", "occasion", "exception", "A2"]
+    },
+    {
+      "id": "phrase-de-verdad--genuine",
+      "kind": "phrase",
+      "promptEs": "de verdad · uso descriptivo",
+      "questionEn": "How do you describe something as a real or genuine example of its kind?",
+      "answerEn": "Put de verdad after the noun.",
+      "noteEn": "A noun is a word for a person, place, thing, or idea. De verdad after that noun distinguishes a genuine example from something that only has the label or appearance. In other positions, de verdad can also mean “really” or “truly,” but this card focuses on the descriptive use after a noun.",
+      "example": { "es": "Necesito un descanso de verdad.", "en": "I need a real break." },
+      "tags": ["phrase", "authenticity", "noun description", "A2"]
+    },
+    {
+      "id": "phrase-seguido-de",
+      "kind": "phrase",
+      "promptEs": "seguido/a/os/as de",
+      "questionEn": "How do you say that one thing is followed by another?",
+      "answerEn": "Use the matching form of seguido, then de, then what comes next.",
+      "noteEn": "The ending of seguido matches the thing that comes first: un día seguido de descanso, una pausa seguida de música, dos días seguidos de descanso, dos pausas seguidas de música. De remains unchanged and introduces the later item or event.",
+      "example": { "es": "Hubo una charla seguida de preguntas.", "en": "There was a talk followed by questions." },
+      "tags": ["phrase", "sequence", "agreement", "A2"]
+    },
+    {
+      "id": "grammar-bueno-to-buen-before-masculine-noun",
+      "kind": "grammar",
+      "promptEs": "bueno → buen delante de un sustantivo masculino singular",
+      "questionEn": "Why does bueno sometimes appear as buen?",
+      "answerEn": "Shorten bueno to buen when it comes directly before a masculine singular noun.",
+      "noteEn": "Use un buen libro but el libro es bueno. The shortening happens only before a masculine singular noun. Before a feminine noun, use buena, as in una buena idea; in plural, use buenos or buenas.",
+      "example": { "es": "Carlos es un buen vecino.", "en": "Carlos is a good neighbor." },
+      "tags": ["grammar", "adjective", "apocope", "A1"]
+    },
+    {
+      "id": "phrase-cargarse-a-alguien",
+      "kind": "phrase",
+      "promptEs": "cargarse a alguien",
+      "questionEn": "What can the informal expression cargarse a alguien mean?",
+      "answerEn": "It means to take someone out—to kill, defeat, beat up, remove, or ruin them, depending on context.",
+      "noteEn": "Use a matching small word with cargar: me cargo, te cargas, se carga, nos cargamos, os cargáis, se cargan. A introduces the person or person-like target. This is informal and can sound violent; the exact result comes from context. Do not confuse it with cargar algo, which commonly means to carry, load, or charge something.",
+      "example": { "es": "En el juego, el dragón se carga a los soldados.", "en": "In the game, the dragon takes out the soldiers." },
+      "tags": ["phrase", "informal", "cargarse", "violence", "B1"]
+    },
+    {
+      "id": "phrase-todo-el-mundo",
+      "kind": "phrase",
+      "promptEs": "todo el mundo",
+      "questionEn": "How do you say “everyone” or “everybody”?",
+      "answerEn": "Use todo el mundo.",
+      "noteEn": "The words literally resemble “all the world,” but this fixed expression refers to all people in the relevant group. Grammatically it is singular, so a following present-time verb uses a singular form: todo el mundo sabe, not saben.",
+      "example": { "es": "Todo el mundo sabe la respuesta.", "en": "Everyone knows the answer." },
+      "tags": ["phrase", "people", "fixed expression", "A1"]
+    },
+    {
+      "id": "concept-river-tam-action-hero",
+      "kind": "concept",
+      "promptEs": "River Tam y Summer Glau",
+      "answerEn": "River Tam is Summer Glau's exceptionally dangerous fighter in Firefly and Serenity",
+      "noteEn": "River begins as a traumatized teenage genius and is later revealed to have extraordinary combat ability. The poster imagines an action movie built almost entirely around her beating opponents, while the title text asks for more Summer Glau.",
+      "tags": ["concept", "Firefly", "Serenity", "River Tam", "Summer Glau"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-peliculas-de-accion:opening",
+      "labelEs": "SE VA OTRO VERANO SIN UNA PELÍCULA DE ACCIÓN LOCA DE GRAN PRESUPUESTO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:opening:w01", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00001" }], "cardIds": ["word-se--irse-time-passing", "phrase-irse--time-passing"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w02", "text": "VA", "normalized": "va", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00002" }], "cardIds": ["word-va--time-passes", "phrase-irse--time-passing"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w03", "text": "OTRO", "normalized": "otro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00003" }], "cardIds": ["word-otro"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w04", "text": "VERANO", "normalized": "verano", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00004" }], "cardIds": ["word-verano"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w05", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00005" }], "cardIds": ["word-sin"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w06", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00006" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w07", "text": "PELÍCULA", "normalized": "película", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00010" }], "cardIds": ["word-película", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00011" }], "cardIds": ["word-de--type-classifier", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w09", "text": "ACCIÓN", "normalized": "acción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00012" }], "cardIds": ["word-acción", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w10", "text": "LOCA", "normalized": "loca", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00013" }], "cardIds": ["word-loca--wild"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00014" }], "cardIds": ["word-de--characteristic"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w12", "text": "GRAN", "normalized": "gran", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00015" }], "cardIds": ["word-gran--large-budget", "grammar-grande-to-gran-before-noun"] },
+        { "id": "es-xkcd-peliculas-de-accion:opening:w13", "text": "PRESUPUESTO", "normalized": "presupuesto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00016" }], "cardIds": ["word-presupuesto", "grammar-grande-to-gran-before-noun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:opening:app-time-passing", "cardId": "phrase-irse--time-passing", "participantWordIds": ["es-xkcd-peliculas-de-accion:opening:w01", "es-xkcd-peliculas-de-accion:opening:w02"], "exampleEs": "SE VA", "explanationEn": "Se and va form irse with the singular time period otro verano as their subject, so the phrase describes that period passing or ending." },
+        { "id": "es-xkcd-peliculas-de-accion:opening:app-action-movie", "cardId": "phrase-pelicula-de-accion", "participantWordIds": ["es-xkcd-peliculas-de-accion:opening:w07", "es-xkcd-peliculas-de-accion:opening:w08", "es-xkcd-peliculas-de-accion:opening:w09"], "exampleEs": "PELÍCULA DE ACCIÓN", "explanationEn": "De links película to the genre label acción." },
+        { "id": "es-xkcd-peliculas-de-accion:opening:app-gran-budget", "cardId": "grammar-grande-to-gran-before-noun", "participantWordIds": ["es-xkcd-peliculas-de-accion:opening:w12", "es-xkcd-peliculas-de-accion:opening:w13"], "exampleEs": "GRAN PRESUPUESTO", "explanationEn": "Grande appears in its shortened form gran because it comes directly before the singular noun presupuesto." }
+      ]
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:question",
+      "labelEs": "¿QUÉ? ¿MUCHO DIÁLOGO?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:question:w01", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00007" }], "cardIds": ["word-qué--interrogative"] },
+        { "id": "es-xkcd-peliculas-de-accion:question:w02", "text": "MUCHO", "normalized": "mucho", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00008" }], "cardIds": ["word-mucho--large-amount"] },
+        { "id": "es-xkcd-peliculas-de-accion:question:w03", "text": "DIÁLOGO", "normalized": "diálogo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00009" }], "cardIds": ["word-diálogo"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:die-hard-reaction",
+      "labelEs": "¿EH? ¡LA JUNGLA DE CRISTAL NO ERA MÁS QUE ACCIÓN!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0010" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w01", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00025" }], "cardIds": ["word-eh--confusion"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00026" }], "cardIds": ["word-la--article", "concept-die-hard-spanish-title"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w03", "text": "JUNGLA", "normalized": "jungla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00027" }], "cardIds": ["word-jungla", "concept-die-hard-spanish-title"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00028" }], "cardIds": ["word-de--of", "concept-die-hard-spanish-title"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w05", "text": "CRISTAL", "normalized": "cristal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00029" }], "cardIds": ["word-cristal", "concept-die-hard-spanish-title"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w06", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00030" }], "cardIds": ["word-no", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w07", "text": "ERA", "normalized": "era", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00031" }], "cardIds": ["word-era", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w08", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00032" }], "cardIds": ["word-más--fixed-no-ser-mas-que", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w09", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00033" }], "cardIds": ["word-que--fixed-no-ser-mas-que", "phrase-no-ser-mas-que"] },
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:w10", "text": "ACCIÓN", "normalized": "acción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00038" }], "cardIds": ["word-acción", "phrase-no-ser-mas-que"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:die-hard-reaction:app-only-action", "cardId": "phrase-no-ser-mas-que", "participantWordIds": ["es-xkcd-peliculas-de-accion:die-hard-reaction:w06", "es-xkcd-peliculas-de-accion:die-hard-reaction:w07", "es-xkcd-peliculas-de-accion:die-hard-reaction:w08", "es-xkcd-peliculas-de-accion:die-hard-reaction:w09", "es-xkcd-peliculas-de-accion:die-hard-reaction:w10"], "exampleEs": "NO ERA MÁS QUE ACCIÓN", "explanationEn": "No frames era negatively, era supplies the past form of ser, and más que restricts what remains to acción." }
+      ]
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:too-much-dialogue",
+      "labelEs": "NO, TENÍA MUCHO DIÁLOGO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:too-much-dialogue:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 13.5, "y": 10.72, "width": 4.35, "height": 1.45 }], "geometryRationale": "Vision omitted this short handwritten reply before TENÍA; the measured box follows only the visible word NO.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-peliculas-de-accion:too-much-dialogue:w02", "text": "TENÍA", "normalized": "tenía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00047" }], "cardIds": ["word-tenía--had"] },
+        { "id": "es-xkcd-peliculas-de-accion:too-much-dialogue:w03", "text": "MUCHO", "normalized": "mucho", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00048" }], "cardIds": ["word-mucho--large-amount"] },
+        { "id": "es-xkcd-peliculas-de-accion:too-much-dialogue:w04", "text": "DIÁLOGO", "normalized": "diálogo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00051" }], "cardIds": ["word-diálogo"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:cinema-sign",
+      "labelEs": "CINE 20",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0012" }],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:cinema-sign:w01", "text": "CINE", "normalized": "cine", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00042" }], "cardIds": ["word-cine"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-peliculas-de-accion:cinema-sign:excluded-20", "text": "20", "reason": "number", "rationale": "20 is the cinema's visible numerical label, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00043" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:tally",
+      "labelEs": "LO CONTÉ MINUTO A MINUTO. ES, AL MENOS EN UN 60%, GENTE CAMINANDO Y HABLANDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0011" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:tally:w01", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00017" }], "cardIds": ["word-lo--object-pronoun", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w02", "text": "CONTÉ", "normalized": "conté", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00018" }], "cardIds": ["word-conté", "grammar-direct-object-pronoun-before-finite-verb"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w03", "text": "MINUTO", "normalized": "minuto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00019" }], "cardIds": ["word-minuto", "phrase-minuto-a-minuto"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00020" }], "cardIds": ["word-a--fixed-minuto-a-minuto", "phrase-minuto-a-minuto"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w05", "text": "MINUTO", "normalized": "minuto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00021" }], "cardIds": ["word-minuto", "phrase-minuto-a-minuto"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00022" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w07", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00023" }], "cardIds": ["word-al--fixed-al-menos", "phrase-al-menos"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w08", "text": "MENOS", "normalized": "menos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00024" }], "cardIds": ["word-menos--fixed-al-menos", "phrase-al-menos"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w09", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00034" }], "cardIds": ["word-en--proportion"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w10", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00035" }], "cardIds": ["word-un--before-percentage"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w11", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00037" }], "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w12", "text": "CAMINANDO", "normalized": "caminando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00039" }], "cardIds": ["word-caminando"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w13", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00040" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-peliculas-de-accion:tally:w14", "text": "HABLANDO", "normalized": "hablando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00041" }], "cardIds": ["word-hablando"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-peliculas-de-accion:tally:excluded-percentage", "text": "60%", "reason": "measurement", "rationale": "60% is a numerical proportion, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00036" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:tally:app-object-before-verb", "cardId": "grammar-direct-object-pronoun-before-finite-verb", "participantWordIds": ["es-xkcd-peliculas-de-accion:tally:w01", "es-xkcd-peliculas-de-accion:tally:w02"], "exampleEs": "LO CONTÉ", "explanationEn": "Lo stands for the thing tallied and appears directly before the completed-past verb conté." },
+        { "id": "es-xkcd-peliculas-de-accion:tally:app-minute-by-minute", "cardId": "phrase-minuto-a-minuto", "participantWordIds": ["es-xkcd-peliculas-de-accion:tally:w03", "es-xkcd-peliculas-de-accion:tally:w04", "es-xkcd-peliculas-de-accion:tally:w05"], "exampleEs": "MINUTO A MINUTO", "explanationEn": "The same singular time unit appears on both sides of a to form the step-by-step pattern." },
+        { "id": "es-xkcd-peliculas-de-accion:tally:app-at-least", "cardId": "phrase-al-menos", "participantWordIds": ["es-xkcd-peliculas-de-accion:tally:w07", "es-xkcd-peliculas-de-accion:tally:w08"], "exampleEs": "AL MENOS", "explanationEn": "Al menos introduces the minimum proportion the speaker is claiming." }
+      ]
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:generalization",
+      "labelEs": "TODAS ESAS PELÍCULAS SON ASÍ.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:generalization:w01", "text": "TODAS", "normalized": "todas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00044" }], "cardIds": ["word-todas"] },
+        { "id": "es-xkcd-peliculas-de-accion:generalization:w02", "text": "ESAS", "normalized": "esas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00045" }], "cardIds": ["word-esas"] },
+        { "id": "es-xkcd-peliculas-de-accion:generalization:w03", "text": "PELÍCULAS", "normalized": "películas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00046" }], "cardIds": ["word-películas"] },
+        { "id": "es-xkcd-peliculas-de-accion:generalization:w04", "text": "SON", "normalized": "son", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00049" }], "cardIds": ["word-son"] },
+        { "id": "es-xkcd-peliculas-de-accion:generalization:w05", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00050" }], "cardIds": ["word-así--like-that"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:ideal-movie",
+      "labelEs": "POR UNA VEZ, QUERRÍA UNA PELÍCULA DE ACCIÓN DE VERDAD. 30 SEGUNDOS DE EXPOSICIÓN SEGUIDOS DE UNA ESCENA DE ACCIÓN PERFECTA DE 90 MINUTOS. UNA QUE TUVIERA UN PRESUPUESTO ENORME, UN BUEN COREÓGRAFO Y UN GRAN DIRECTOR.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0027" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w01", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00052" }], "cardIds": ["word-por--fixed-por-una-vez", "phrase-por-una-vez"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w02", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00053" }], "cardIds": ["word-una--fixed-por-una-vez", "phrase-por-una-vez"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w03", "text": "VEZ", "normalized": "vez", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00054" }], "cardIds": ["word-vez", "phrase-por-una-vez"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w04", "text": "QUERRÍA", "normalized": "querría", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00055" }], "cardIds": ["word-querría--would-like"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w05", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00056" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w06", "text": "PELÍCULA", "normalized": "película", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00057" }], "cardIds": ["word-película", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00062" }], "cardIds": ["word-de--type-classifier", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w08", "text": "ACCIÓN", "normalized": "acción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00063" }], "cardIds": ["word-acción", "phrase-pelicula-de-accion"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00064" }], "cardIds": ["word-de--fixed-de-verdad-genuine", "phrase-de-verdad--genuine"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w10", "text": "VERDAD", "normalized": "verdad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00065" }], "cardIds": ["word-verdad--genuine", "phrase-de-verdad--genuine"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w11", "text": "SEGUNDOS", "normalized": "segundos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00067" }], "cardIds": ["word-segundos"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w12", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00072" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w13", "text": "EXPOSICIÓN", "normalized": "exposición", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00073" }], "cardIds": ["word-exposición"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w14", "text": "SEGUIDOS", "normalized": "seguidos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00074" }], "cardIds": ["word-seguidos", "phrase-seguido-de"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00075" }], "cardIds": ["word-de--fixed-seguido-de", "phrase-seguido-de"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w16", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00076" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w17", "text": "ESCENA", "normalized": "escena", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00077" }], "cardIds": ["word-escena"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w18", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00078" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w19", "text": "ACCIÓN", "normalized": "acción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00079" }], "cardIds": ["word-acción"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w20", "text": "PERFECTA", "normalized": "perfecta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00080" }], "cardIds": ["word-perfecta"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w21", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00081" }], "cardIds": ["word-de--duration"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w22", "text": "MINUTOS", "normalized": "minutos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00086" }], "cardIds": ["word-minutos"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w23", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00087" }], "cardIds": ["word-una--feminine-pronoun", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w24", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00088" }], "cardIds": ["word-que--relative", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w25", "text": "TUVIERA", "normalized": "tuviera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00089" }], "cardIds": ["word-tuviera", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w26", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00090" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w27", "text": "PRESUPUESTO", "normalized": "presupuesto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00096" }], "cardIds": ["word-presupuesto"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w28", "text": "ENORME", "normalized": "enorme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00097" }], "cardIds": ["word-enorme"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w29", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00098" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w30", "text": "BUEN", "normalized": "buen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00099" }], "cardIds": ["word-buen", "grammar-bueno-to-buen-before-masculine-noun"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w31", "text": "COREÓGRAFO", "normalized": "coreógrafo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00100" }], "cardIds": ["word-coreógrafo", "grammar-bueno-to-buen-before-masculine-noun"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w32", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00101" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w33", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00102" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w34", "text": "GRAN", "normalized": "gran", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00103" }], "cardIds": ["word-gran--excellent", "grammar-grande-to-gran-before-noun"] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:w35", "text": "DIRECTOR", "normalized": "director", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00104" }], "cardIds": ["word-director", "grammar-grande-to-gran-before-noun"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:excluded-30", "text": "30", "reason": "number", "rationale": "30 is the numerical count of seconds, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00066" }] },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:excluded-90", "text": "90", "reason": "number", "rationale": "90 is the numerical count of minutes, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00085" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-for-once", "cardId": "phrase-por-una-vez", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w01", "es-xkcd-peliculas-de-accion:ideal-movie:w02", "es-xkcd-peliculas-de-accion:ideal-movie:w03"], "exampleEs": "POR UNA VEZ", "explanationEn": "Por una vez marks this occasion as the desired exception to the usual pattern." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-action-movie", "cardId": "phrase-pelicula-de-accion", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w06", "es-xkcd-peliculas-de-accion:ideal-movie:w07", "es-xkcd-peliculas-de-accion:ideal-movie:w08"], "exampleEs": "PELÍCULA DE ACCIÓN", "explanationEn": "De links película to the genre label acción." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-genuine", "cardId": "phrase-de-verdad--genuine", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w09", "es-xkcd-peliculas-de-accion:ideal-movie:w10"], "exampleEs": "DE VERDAD", "explanationEn": "De verdad follows the noun phrase it qualifies and marks the intended example as genuine." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-followed-by", "cardId": "phrase-seguido-de", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w14", "es-xkcd-peliculas-de-accion:ideal-movie:w15"], "exampleEs": "SEGUIDOS DE", "explanationEn": "Seguidos takes a masculine plural ending to match segundos, and de introduces the later sequence." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-indefinite-film", "cardId": "grammar-indefinite-relative-subjunctive", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w23", "es-xkcd-peliculas-de-accion:ideal-movie:w24", "es-xkcd-peliculas-de-accion:ideal-movie:w25"], "exampleEs": "UNA QUE TUVIERA", "explanationEn": "Una leaves the desired feminine thing unidentified; que then introduces tuviera in the special form used for its sought characteristic." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-good-choreographer", "cardId": "grammar-bueno-to-buen-before-masculine-noun", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w30", "es-xkcd-peliculas-de-accion:ideal-movie:w31"], "exampleEs": "BUEN COREÓGRAFO", "explanationEn": "Bueno appears as buen because it comes directly before the masculine singular noun coreógrafo." },
+        { "id": "es-xkcd-peliculas-de-accion:ideal-movie:app-great-director", "cardId": "grammar-grande-to-gran-before-noun", "participantWordIds": ["es-xkcd-peliculas-de-accion:ideal-movie:w34", "es-xkcd-peliculas-de-accion:ideal-movie:w35"], "exampleEs": "GRAN DIRECTOR", "explanationEn": "Grande appears in its shortened form gran because it comes directly before the singular noun director." }
+      ]
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:known-character",
+      "labelEs": "Y DEBERÍAN CENTRARLA EN UN PERSONAJE QUE YA CONOZCAMOS, ALGUIEN QUE NO NOS CANSEMOS DE VER.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w01", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00058" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w02", "text": "DEBERÍAN", "normalized": "deberían", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00059" }], "cardIds": ["word-deberían", "grammar-deber-infinitive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w03", "text": "CENTRARLA", "normalized": "centrarla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00060" }], "cardIds": ["word-centrarla", "grammar-deber-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w04", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00061" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w05", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00068" }], "cardIds": ["word-un", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w06", "text": "PERSONAJE", "normalized": "personaje", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00069" }], "cardIds": ["word-personaje", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w07", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00070" }], "cardIds": ["word-que--relative", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w08", "text": "YA", "normalized": "ya", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00071" }], "cardIds": ["word-ya--already"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w09", "text": "CONOZCAMOS", "normalized": "conozcamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00082" }], "cardIds": ["word-conozcamos", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w10", "text": "ALGUIEN", "normalized": "alguien", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00083" }], "cardIds": ["word-alguien", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w11", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00084" }], "cardIds": ["word-que--relative", "grammar-indefinite-relative-subjunctive"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w12", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00091" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w13", "text": "NOS", "normalized": "nos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00092" }], "cardIds": ["word-nos--pronominal-marker", "grammar-indefinite-relative-subjunctive", "phrase-cansarse-de"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w14", "text": "CANSEMOS", "normalized": "cansemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00093" }], "cardIds": ["word-cansemos", "grammar-indefinite-relative-subjunctive", "phrase-cansarse-de"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00094" }], "cardIds": ["word-de--verb-complement", "phrase-cansarse-de"] },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:w16", "text": "VER", "normalized": "ver", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00095" }], "cardIds": ["word-ver", "phrase-cansarse-de"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:known-character:app-should-center", "cardId": "grammar-deber-infinitive", "participantWordIds": ["es-xkcd-peliculas-de-accion:known-character:w02", "es-xkcd-peliculas-de-accion:known-character:w03"], "exampleEs": "DEBERÍAN CENTRARLA", "explanationEn": "Deberían carries the plural recommendation, while centrarla keeps centrar in its unchanged dictionary form." },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:app-attached-object", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-peliculas-de-accion:known-character:w03"], "exampleEs": "CENTRARLA", "explanationEn": "La attaches to the end of the unchanged verb centrar and stands for the feminine thing to be centered." },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:app-indefinite-known-character", "cardId": "grammar-indefinite-relative-subjunctive", "participantWordIds": ["es-xkcd-peliculas-de-accion:known-character:w05", "es-xkcd-peliculas-de-accion:known-character:w06", "es-xkcd-peliculas-de-accion:known-character:w07", "es-xkcd-peliculas-de-accion:known-character:w09"], "exampleEs": "UN PERSONAJE QUE YA CONOZCAMOS", "explanationEn": "Un personaje introduces the sought, not-yet-selected person; que then introduces conozcamos in the special form used for the desired characteristic." },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:app-indefinite-watchable-person", "cardId": "grammar-indefinite-relative-subjunctive", "participantWordIds": ["es-xkcd-peliculas-de-accion:known-character:w10", "es-xkcd-peliculas-de-accion:known-character:w11", "es-xkcd-peliculas-de-accion:known-character:w13", "es-xkcd-peliculas-de-accion:known-character:w14"], "exampleEs": "ALGUIEN QUE NO NOS CANSEMOS", "explanationEn": "Alguien leaves the desired person unidentified; que introduces the complete nos cansemos verb form used for that sought property." },
+        { "id": "es-xkcd-peliculas-de-accion:known-character:app-not-tire-of", "cardId": "phrase-cansarse-de", "participantWordIds": ["es-xkcd-peliculas-de-accion:known-character:w13", "es-xkcd-peliculas-de-accion:known-character:w14", "es-xkcd-peliculas-de-accion:known-character:w15", "es-xkcd-peliculas-de-accion:known-character:w16"], "exampleEs": "NOS CANSEMOS DE VER", "explanationEn": "Nos matches the “we” form cansemos, and de introduces ver as the activity that could cause the tiredness." }
+      ]
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:realization",
+      "labelEs": "CREO QUE AQUÍ TENEMOS ALGO...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0029" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:realization:w01", "text": "CREO", "normalized": "creo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00105" }], "cardIds": ["word-creo"] },
+        { "id": "es-xkcd-peliculas-de-accion:realization:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00106" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-peliculas-de-accion:realization:w03", "text": "AQUÍ", "normalized": "aquí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00107" }], "cardIds": ["word-aquí"] },
+        { "id": "es-xkcd-peliculas-de-accion:realization:w04", "text": "TENEMOS", "normalized": "tenemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00108" }], "cardIds": ["word-tenemos"] },
+        { "id": "es-xkcd-peliculas-de-accion:realization:w05", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00109" }], "cardIds": ["word-algo"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:poster-heading",
+      "labelEs": "ESTE VERANO RIVER TAM",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0031" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:poster-heading:w01", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00110" }], "cardIds": ["word-este"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-heading:w02", "text": "VERANO", "normalized": "verano", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00111" }], "cardIds": ["word-verano"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-peliculas-de-accion:poster-heading:excluded-river-tam", "text": "RIVER TAM", "reason": "non-spanish-text", "rationale": "River Tam is the English proper name of the fictional character on the poster, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0031" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-peliculas-de-accion:poster-tagline",
+      "labelEs": "SE CARGA A TODO EL MUNDO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-peliculas-de-accion:ocr-line-0033" }
+      ],
+      "words": [
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w01", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00113" }], "cardIds": ["word-se--cargarse-take-out", "phrase-cargarse-a-alguien"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w02", "text": "CARGA", "normalized": "carga", "explicitBounds": [{ "x": 33.6, "y": 88.78, "width": 35.25, "height": 4.73 }], "geometryRationale": "Vision fused CARGA with the following A; this measured rectangle follows only the five visible letters of CARGA.", "cardIds": ["word-carga--take-out", "phrase-cargarse-a-alguien", "concept-river-tam-action-hero"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w03", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 72.45, "y": 88.78, "width": 12.4, "height": 4.73 }], "geometryRationale": "Vision fused this standalone A with CARGA; this measured rectangle isolates the visibly separated final letter.", "cardIds": ["word-a--fixed-cargarse-a", "phrase-cargarse-a-alguien"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w04", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00115" }], "cardIds": ["word-todo--everyone", "phrase-cargarse-a-alguien", "phrase-todo-el-mundo"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00116" }], "cardIds": ["word-el--article", "phrase-cargarse-a-alguien", "phrase-todo-el-mundo"] },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:w06", "text": "MUNDO", "normalized": "mundo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-peliculas-de-accion:ocr-token-00117" }], "cardIds": ["word-mundo", "phrase-cargarse-a-alguien", "phrase-todo-el-mundo"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:app-take-out", "cardId": "phrase-cargarse-a-alguien", "participantWordIds": ["es-xkcd-peliculas-de-accion:poster-tagline:w01", "es-xkcd-peliculas-de-accion:poster-tagline:w02", "es-xkcd-peliculas-de-accion:poster-tagline:w03", "es-xkcd-peliculas-de-accion:poster-tagline:w04", "es-xkcd-peliculas-de-accion:poster-tagline:w05", "es-xkcd-peliculas-de-accion:poster-tagline:w06"], "exampleEs": "SE CARGA A TODO EL MUNDO", "explanationEn": "Se and carga form the informal verb cargarse, a introduces its human target, and todo el mundo fills that target slot." },
+        { "id": "es-xkcd-peliculas-de-accion:poster-tagline:app-everyone", "cardId": "phrase-todo-el-mundo", "participantWordIds": ["es-xkcd-peliculas-de-accion:poster-tagline:w04", "es-xkcd-peliculas-de-accion:poster-tagline:w05", "es-xkcd-peliculas-de-accion:poster-tagline:w06"], "exampleEs": "TODO EL MUNDO", "explanationEn": "Todo, el, and mundo form the fixed singular expression for the complete group of people." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-ascensor",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Elevator",
+  "titleEs": "Ascensor",
+  "titleText": {
+    "es": "Rápido, intentadlo con 'AMOR'.",
+    "en": "Quick, try it with 'LOVE'.",
+    "noteEn": "Intentadlo is an informal plural command used in Spain: intentad + lo, “try it.”"
+  },
+  "cardDefinitions": [
+    { "id": "word-certificado", "kind": "word", "promptEs": "certificado", "answerEn": "certificate", "noteEn": "", "tags": ["word", "document"] },
+    { "id": "word-inspección", "kind": "word", "promptEs": "inspección", "answerEn": "inspection", "noteEn": "", "tags": ["word", "safety", "document"] },
+    { "id": "word-planta--building-floor", "kind": "word", "promptEs": "planta", "answerEn": "floor; storey (of a building)", "noteEn": "Planta can mean a plant, the sole of a foot, or a floor in a building. On an elevator sign or building directory, planta means a floor of a building.", "example": { "es": "La oficina está en la tercera planta.", "en": "The office is on the third floor." }, "tags": ["word", "building", "floor", "polysemy"] },
+    { "id": "word-escribe--action-caption", "kind": "word", "promptEs": "escribe", "answerEn": "writes; is writing (action caption)", "noteEn": "Escribe is the present form of escribir for él, ella, or usted. The same written form can also be an informal command. In an action caption, it narrates what the person does.", "example": { "es": "Marta escribe una nota.", "en": "Marta writes a note." }, "tags": ["word", "escribir", "present", "third person", "caption"] },
+    { "id": "word-zepelin--printed-missing-accent", "kind": "word", "promptEs": "zepelin", "answerEn": "zeppelin; printed without the accent required in standard Spanish", "noteEn": "The visible label says ZEPELIN. Standard Spanish writes zepelín, with one p and an accent on í; the German/English proper name is Zeppelin, with two p's.", "example": { "es": "El zepelín cruzó el cielo.", "en": "The zeppelin crossed the sky." }, "tags": ["word", "airship", "printed anomaly", "spelling", "accent"] },
+    { "id": "word-pulsa--action-caption", "kind": "word", "promptEs": "pulsa", "answerEn": "presses; pushes (a button)", "noteEn": "Pulsa is the present form of pulsar for él, ella, or usted. It can also be an informal command; in an action caption it reports what the person does.", "example": { "es": "Ella pulsa el botón rojo.", "en": "She presses the red button." }, "tags": ["word", "pulsar", "present", "third person", "caption"] },
+    { "id": "word-ding--sound", "kind": "word", "promptEs": "ding", "answerEn": "ding (bell or elevator sound)", "noteEn": "", "tags": ["word", "onomatopoeia", "sound"] },
+    {
+      "id": "grammar-present-third-person-regular",
+      "kind": "grammar",
+      "promptEs": "presente regular para él/ella/usted",
+      "questionEn": "How do regular present-tense verbs change for “he,” “she,” or formal singular “you”?",
+      "answerEn": "For -ar verbs, replace -ar with -a; for -er and -ir verbs, replace the ending with -e.",
+      "noteEn": "Hablar becomes habla, comer becomes come, and escribir becomes escribe. Comics also use this same form as a short caption that reports one person's action. Some verbs are irregular and must be learned separately.",
+      "example": { "es": "Ella abre la ventana.", "en": "She opens the window." },
+      "tags": ["grammar", "present", "third person", "regular verbs", "A1"]
+    },
+    {
+      "id": "concept-zeppelin-airship",
+      "kind": "concept",
+      "promptEs": "zepelín / Zeppelin",
+      "answerEn": "a large rigid airship whose shape is held by an internal framework",
+      "noteEn": "The craft is named after German airship pioneer Ferdinand von Zeppelin. A blimp keeps its shape mainly from internal gas pressure; a Zeppelin-style rigid airship has a structural frame.",
+      "tags": ["concept", "airship", "transport", "history"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-ascensor:left-certificate",
+      "labelEs": "CERTIFICADO DE INSPECCIÓN",
+      "explicitBounds": [{ "x": 2.7, "y": 3.1, "width": 6.8, "height": 4.9 }],
+      "geometryRationale": "Vision omitted the small inspection certificate; this rectangle was measured from the first elevator panel.",
+      "words": [
+        { "id": "es-xkcd-ascensor:left-certificate:w01", "text": "CERTIFICADO", "normalized": "certificado", "explicitBounds": [{ "x": 3.2, "y": 3.8, "width": 4.7, "height": 1.3 }], "geometryRationale": "Measured directly over the first word on the certificate's top line.", "cardIds": ["word-certificado"] },
+        { "id": "es-xkcd-ascensor:left-certificate:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 8.0, "y": 3.8, "width": 1.1, "height": 1.3 }], "geometryRationale": "Measured directly over the final word on the certificate's top line.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-ascensor:left-certificate:w03", "text": "INSPECCIÓN", "normalized": "inspección", "explicitBounds": [{ "x": 4.4, "y": 5.2, "width": 4.4, "height": 1.4 }], "geometryRationale": "Measured directly over the certificate's second line.", "cardIds": ["word-inspección"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:left-floor-1",
+      "labelEs": "PLANTA 1",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:left-floor-1:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00001" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:left-floor-1:excluded-number", "text": "1", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00002" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:left-floor-2",
+      "labelEs": "PLANTA 2",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:left-floor-2:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00007" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:left-floor-2:excluded-number", "text": "2", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00008" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:left-floor-3",
+      "labelEs": "PLANTA 3",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0005" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:left-floor-3:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00009" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:left-floor-3:excluded-number", "text": "3", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00010" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:left-floor-4",
+      "labelEs": "PLANTA 4",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0007" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:left-floor-4:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00014" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:left-floor-4:excluded-number", "text": "4", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00015" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:first-writing",
+      "labelEs": "ESCRIBE",
+      "explicitBounds": [{ "x": 25.2, "y": 8.4, "width": 5.6, "height": 3.8 }],
+      "geometryRationale": "Vision omitted this diagonal action caption; the rectangle was measured directly over the first visible ESCRIBE caption.",
+      "words": [
+        { "id": "es-xkcd-ascensor:first-writing:w01", "text": "ESCRIBE", "normalized": "escribe", "explicitBounds": [{ "x": 25.5, "y": 8.7, "width": 5.0, "height": 3.3 }], "geometryRationale": "A tight box follows the first set of slanted printed letters.", "cardIds": ["word-escribe--action-caption", "grammar-present-third-person-regular"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-ascensor:first-writing:app-present", "cardId": "grammar-present-third-person-regular", "participantWordIds": ["es-xkcd-ascensor:first-writing:w01"], "exampleEs": "ESCRIBE", "explanationEn": "Escribir ends in -ir, so its regular present form for one other person replaces -ir with -e." }
+      ]
+    },
+    {
+      "id": "es-xkcd-ascensor:second-writing",
+      "labelEs": "ESCRIBE",
+      "explicitBounds": [{ "x": 25.3, "y": 12.3, "width": 5.8, "height": 3.9 }],
+      "geometryRationale": "Vision omitted this second diagonal action caption; the rectangle was measured directly over the second visible ESCRIBE caption.",
+      "words": [
+        { "id": "es-xkcd-ascensor:second-writing:w01", "text": "ESCRIBE", "normalized": "escribe", "explicitBounds": [{ "x": 25.6, "y": 12.6, "width": 5.0, "height": 3.3 }], "geometryRationale": "A tight box follows the second set of slanted printed letters.", "cardIds": ["word-escribe--action-caption", "grammar-present-third-person-regular"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-ascensor:second-writing:app-present", "cardId": "grammar-present-third-person-regular", "participantWordIds": ["es-xkcd-ascensor:second-writing:w01"], "exampleEs": "ESCRIBE", "explanationEn": "This repeated caption uses the same regular third-person present form to narrate the continued writing action." }
+      ]
+    },
+    {
+      "id": "es-xkcd-ascensor:right-certificate",
+      "labelEs": "CERTIFICADO DE INSPECCIÓN",
+      "explicitBounds": [{ "x": 53.0, "y": 3.1, "width": 6.9, "height": 4.9 }],
+      "geometryRationale": "Vision omitted the repeated small inspection certificate; this rectangle was measured from the fifth panel.",
+      "words": [
+        { "id": "es-xkcd-ascensor:right-certificate:w01", "text": "CERTIFICADO", "normalized": "certificado", "explicitBounds": [{ "x": 53.5, "y": 3.8, "width": 4.7, "height": 1.3 }], "geometryRationale": "Measured directly over the first word on the repeated certificate's top line.", "cardIds": ["word-certificado"] },
+        { "id": "es-xkcd-ascensor:right-certificate:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 58.3, "y": 3.8, "width": 1.1, "height": 1.3 }], "geometryRationale": "Measured directly over the final word on the repeated certificate's top line.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-ascensor:right-certificate:w03", "text": "INSPECCIÓN", "normalized": "inspección", "explicitBounds": [{ "x": 54.7, "y": 5.2, "width": 4.4, "height": 1.4 }], "geometryRationale": "Measured directly over the repeated certificate's second line.", "cardIds": ["word-inspección"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:right-floor-1",
+      "labelEs": "PLANTA 1",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:right-floor-1:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00003" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:right-floor-1:excluded-number", "text": "1", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00004" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:right-floor-2",
+      "labelEs": "PLANTA 2",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:right-floor-2:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00005" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:right-floor-2:excluded-number", "text": "2", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00006" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:right-floor-3",
+      "labelEs": "PLANTA 3",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-ascensor:ocr-line-0006" }],
+      "words": [
+        { "id": "es-xkcd-ascensor:right-floor-3:w01", "text": "PLANTA", "normalized": "planta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00012" }], "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:right-floor-3:excluded-number", "text": "3", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-ascensor:ocr-token-00013" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:right-floor-4",
+      "labelEs": "PLANTA 4",
+      "explicitBounds": [{ "x": 52.4, "y": 14.9, "width": 7.2, "height": 2.1 }],
+      "geometryRationale": "Vision missed this partly covered fourth-floor label; the bounds were measured directly from the fifth panel.",
+      "words": [
+        { "id": "es-xkcd-ascensor:right-floor-4:w01", "text": "PLANTA", "normalized": "planta", "explicitBounds": [{ "x": 53.8, "y": 15.0, "width": 4.0, "height": 1.7 }], "geometryRationale": "Measured over the visible PLANTA letters above the paper label.", "cardIds": ["word-planta--building-floor"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-ascensor:right-floor-4:excluded-number", "text": "4", "reason": "number", "rationale": "This is the elevator's floor number, not a Spanish lexical word.", "explicitBounds": [{ "x": 58.1, "y": 15.0, "width": 0.9, "height": 1.7 }], "geometryRationale": "Vision missed the partly obscured numeral; this box was measured directly." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:zeppelin-label",
+      "labelEs": "ZEPELIN",
+      "explicitBounds": [{ "x": 53.2, "y": 16.1, "width": 9.5, "height": 4.3 }],
+      "geometryRationale": "Vision omitted the handwritten destination label; the rectangle follows the paper bearing all seven visible letters.",
+      "words": [
+        { "id": "es-xkcd-ascensor:zeppelin-label:w01", "text": "ZEPELIN", "normalized": "zepelin", "explicitBounds": [{ "x": 53.5, "y": 16.8, "width": 8.6, "height": 3.1 }], "geometryRationale": "A tight direct box follows all seven handwritten letters.", "cardIds": ["word-zepelin--printed-missing-accent", "concept-zeppelin-airship"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-ascensor:pressing",
+      "labelEs": "PULSA",
+      "explicitBounds": [{ "x": 63.5, "y": 13.6, "width": 4.2, "height": 4.5 }],
+      "geometryRationale": "Vision omitted this diagonal action caption beside the pressed button; the rectangle was measured directly over the visible PULSA letters.",
+      "words": [
+        { "id": "es-xkcd-ascensor:pressing:w01", "text": "PULSA", "normalized": "pulsa", "explicitBounds": [{ "x": 63.7, "y": 13.9, "width": 3.8, "height": 4.0 }], "geometryRationale": "A tight box follows the five slanted letters.", "cardIds": ["word-pulsa--action-caption", "grammar-present-third-person-regular"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-ascensor:pressing:app-present", "cardId": "grammar-present-third-person-regular", "participantWordIds": ["es-xkcd-ascensor:pressing:w01"], "exampleEs": "PULSA", "explanationEn": "Pulsar ends in -ar, so its regular present form for one other person replaces -ar with -a." }
+      ]
+    },
+    {
+      "id": "es-xkcd-ascensor:ding",
+      "labelEs": "DING",
+      "explicitBounds": [{ "x": 89.0, "y": 3.0, "width": 5.6, "height": 4.2 }],
+      "geometryRationale": "Vision omitted the radiating elevator sound effect in the eighth small panel; this rectangle was measured directly.",
+      "words": [
+        { "id": "es-xkcd-ascensor:ding:w01", "text": "DING", "normalized": "ding", "explicitBounds": [{ "x": 89.6, "y": 3.5, "width": 4.2, "height": 2.8 }], "geometryRationale": "A tight box covers the four sound-effect letters without the surrounding rays.", "cardIds": ["word-ding--sound"] }
+      ],
+      "applications": []
+    }
+  ]
+}
