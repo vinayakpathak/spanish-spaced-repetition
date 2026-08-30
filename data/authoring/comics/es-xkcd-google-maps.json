@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-google-maps",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Google Maps",
+  "titleEs": "Google Maps",
+  "titleText": {
+    "es": "Aparentemente, Google asume que viajarás durante las horas operativas del ferry. Perdimos dos horas rodeando ese maldito lago (por no hablar del Hombre de Paja).",
+    "en": "Apparently Google assumes you're traveling during the ferry's normal operating hours. We lost two hours circling that damn lake (to say nothing of the Straw Man).",
+    "noteEn": "The Spanish archive closely follows the official English title text and translates Straw Man literally as Hombre de Paja."
+  },
+  "cardDefinitions": [
+    { "id": "word-carretera", "kind": "word", "promptEs": "carretera", "answerEn": "road; highway", "noteEn": "", "tags": ["word", "travel", "noun", "A1"] },
+    { "id": "word-hermano", "kind": "word", "promptEs": "hermano", "answerEn": "brother", "noteEn": "", "tags": ["word", "family", "noun", "A1"] },
+    {
+      "id": "word-dar--cause-problems",
+      "kind": "word",
+      "promptEs": "dar",
+      "answerEn": "to cause; to give (in dar problemas)",
+      "noteEn": "Dar usually means “to give.” In dar problemas, English naturally uses “cause” or “create” instead.",
+      "example": { "es": "Esa pieza puede dar problemas.", "en": "That part can cause problems." },
+      "tags": ["word", "dar", "cause", "sense split", "A2"]
+    },
+    {
+      "id": "word-por--approximate-position",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "around; at about (an approximate point)",
+      "noteEn": "Before a place in a sequence, por can mark an approximate position rather than a route or cause.",
+      "example": { "es": "La explicación aparece por la página diez.", "en": "The explanation appears around page ten." },
+      "tags": ["word", "preposition", "approximation", "A2"]
+    },
+    { "id": "word-indicaciones--directions", "kind": "word", "promptEs": "indicaciones", "answerEn": "directions; instructions", "noteEn": "", "tags": ["word", "navigation", "plural noun", "A1"] },
+    { "id": "word-ligeramente", "kind": "word", "promptEs": "ligeramente", "answerEn": "slightly; lightly", "noteEn": "", "tags": ["word", "degree", "adverb", "A2"] },
+    {
+      "id": "word-gira--turn-command",
+      "kind": "word",
+      "promptEs": "gira",
+      "answerEn": "turn (informal singular command)",
+      "noteEn": "Gira tells one familiar person to turn. It comes from girar, “to turn.”",
+      "example": { "es": "Gira aquí.", "en": "Turn here." },
+      "tags": ["word", "navigation", "command", "A1"]
+    },
+    { "id": "word-izquierda--direction", "kind": "word", "promptEs": "izquierda", "answerEn": "left; the left", "noteEn": "", "tags": ["word", "direction", "noun", "A1"] },
+    { "id": "word-derecha--direction", "kind": "word", "promptEs": "derecha", "answerEn": "right; the right", "noteEn": "", "tags": ["word", "direction", "noun", "A1"] },
+    {
+      "id": "word-continúa--continue-command",
+      "kind": "word",
+      "promptEs": "continúa",
+      "answerEn": "continue; keep going (informal singular command)",
+      "noteEn": "Continúa tells one familiar person to continue. The written accent keeps the stress on ú.",
+      "example": { "es": "Continúa por esta calle.", "en": "Continue along this street." },
+      "tags": ["word", "navigation", "command", "A2"]
+    },
+    { "id": "word-calle", "kind": "word", "promptEs": "calle", "answerEn": "street", "noteEn": "", "tags": ["word", "place", "noun", "A1"] },
+    { "id": "word-lago", "kind": "word", "promptEs": "lago", "answerEn": "lake", "noteEn": "", "tags": ["word", "geography", "noun", "A1"] },
+    { "id": "word-orilla", "kind": "word", "promptEs": "orilla", "answerEn": "shore; edge", "noteEn": "", "tags": ["word", "geography", "noun", "A2"] },
+    {
+      "id": "word-toma--take-transport-command",
+      "kind": "word",
+      "promptEs": "toma",
+      "answerEn": "take (a form of transport; informal command)",
+      "noteEn": "Toma tells one familiar person to use or board the named transport. It comes from tomar.",
+      "example": { "es": "Toma el autobús.", "en": "Take the bus." },
+      "tags": ["word", "transport", "command", "sense split", "A1"]
+    },
+    { "id": "word-ferry", "kind": "word", "promptEs": "ferry", "answerEn": "ferry", "noteEn": "Ferry is a borrowed noun used in Spanish for a boat that carries passengers or vehicles across water.", "example": { "es": "El ferry sale a las nueve.", "en": "The ferry leaves at nine." }, "tags": ["word", "transport", "loanword", "A2"] },
+    {
+      "id": "word-atraviesa--cross-command",
+      "kind": "word",
+      "promptEs": "atraviesa",
+      "answerEn": "cross; go across (informal singular command)",
+      "noteEn": "Atraviesa tells one familiar person to cross something from one side to the other.",
+      "example": { "es": "Atraviesa el puente.", "en": "Cross the bridge." },
+      "tags": ["word", "movement", "command", "A2"]
+    },
+    { "id": "word-tomar--take-transport", "kind": "word", "promptEs": "tomar", "answerEn": "to take; to use (transport)", "noteEn": "With a vehicle or service, tomar means using it to travel.", "example": { "es": "Vamos a tomar el tren.", "en": "We are going to take the train." }, "tags": ["word", "transport", "infinitive", "sense split", "A1"] },
+    { "id": "word-muelle", "kind": "word", "promptEs": "muelle", "answerEn": "dock; pier", "noteEn": "", "tags": ["word", "place", "noun", "A2"] },
+    { "id": "word-medianoche", "kind": "word", "promptEs": "medianoche", "answerEn": "midnight", "noteEn": "", "tags": ["word", "time", "noun", "A1"] },
+    {
+      "id": "word-más--past-time",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "past; later than (with a stated time)",
+      "noteEn": "Más normally means “more.” In a time expression such as es más de medianoche, it says the stated time has already passed.",
+      "example": { "es": "Son más de las diez.", "en": "It is past ten." },
+      "tags": ["word", "time", "sense split", "A2"]
+    },
+    {
+      "id": "word-de--past-time-after-mas",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; links más to the time already passed",
+      "noteEn": "Spanish uses más de before the stated time; English can express the whole combination with “past.”",
+      "example": { "es": "Ya es más de mediodía.", "en": "It is already past noon." },
+      "tags": ["word", "preposition", "time", "A2"]
+    },
+    { "id": "word-bosque", "kind": "word", "promptEs": "bosque", "answerEn": "forest; woods", "noteEn": "", "tags": ["word", "nature", "noun", "A1"] },
+    {
+      "id": "word-da--cause-feeling",
+      "kind": "word",
+      "promptEs": "da",
+      "answerEn": "causes; gives (a feeling)",
+      "noteEn": "Da is a present form of dar. With a feeling such as miedo, English normally uses “causes,” “makes ... feel,” or a verb such as “scares.”",
+      "example": { "es": "La oscuridad me da miedo.", "en": "The darkness scares me." },
+      "tags": ["word", "dar", "feeling", "sense split", "A2"]
+    },
+    {
+      "id": "word-guiaría",
+      "kind": "word",
+      "promptEs": "guiaría",
+      "answerEn": "would guide; would direct",
+      "noteEn": "Guiaría combines guiar with the -ía ending to describe what someone or something would do.",
+      "example": { "es": "Ella nos guiaría bien.", "en": "She would guide us well." },
+      "tags": ["word", "guiar", "conditional", "B1"]
+    },
+    {
+      "id": "word-déjame--let-me",
+      "kind": "word",
+      "promptEs": "déjame",
+      "answerEn": "let me; allow me",
+      "noteEn": "Déjame joins the affirmative command deja, “let,” to me, which marks the person receiving permission. The accent keeps the original stress after the pronoun is attached.",
+      "example": { "es": "Déjame pensar.", "en": "Let me think." },
+      "tags": ["word", "dejar", "command", "attached pronoun", "A2"]
+    },
+    { "id": "word-cerrado", "kind": "word", "promptEs": "cerrado", "answerEn": "closed (masculine singular)", "noteEn": "", "tags": ["word", "state", "adjective", "A1"] },
+    { "id": "word-trepa--climb-command", "kind": "word", "promptEs": "trepa", "answerEn": "climb; go up (informal singular command)", "noteEn": "Trepa tells one familiar person to climb. It comes from trepar.", "example": { "es": "Trepa con cuidado.", "en": "Climb carefully." }, "tags": ["word", "movement", "command", "A2"] },
+    { "id": "word-colina", "kind": "word", "promptEs": "colina", "answerEn": "hill", "noteEn": "", "tags": ["word", "geography", "noun", "A1"] },
+    { "id": "word-risco", "kind": "word", "promptEs": "risco", "answerEn": "crag; rocky ridge", "noteEn": "", "tags": ["word", "geography", "noun", "B1"] },
+    { "id": "word-ahorcado--hanged-man", "kind": "word", "promptEs": "ahorcado", "answerEn": "hanged man; person executed by hanging", "noteEn": "Ahorcado comes from ahorcar, “to hang by the neck.” As a noun it can name a person who has been hanged.", "example": { "es": "La leyenda habla de un ahorcado.", "en": "The legend tells of a hanged man." }, "tags": ["word", "person", "participle", "B1"] },
+    {
+      "id": "word-evitando",
+      "kind": "word",
+      "promptEs": "evitando",
+      "answerEn": "avoiding; while avoiding",
+      "noteEn": "Evitando is evitar with the -ando ending, which presents the avoiding as accompanying another action.",
+      "example": { "es": "Cruzó la plaza evitando la lluvia.", "en": "She crossed the square while avoiding the rain." },
+      "tags": ["word", "evitar", "gerund", "A2"]
+    },
+    { "id": "word-pumas", "kind": "word", "promptEs": "pumas", "answerEn": "pumas; mountain lions", "noteEn": "", "tags": ["word", "animals", "plural noun", "A2"] },
+    {
+      "id": "word-llegues",
+      "kind": "word",
+      "promptEs": "llegues",
+      "answerEn": "you arrive; you reach (special form for an event still ahead)",
+      "noteEn": "Llegues is a present subjunctive form of llegar. After cuando, it presents the arrival as a future event that has not happened yet.",
+      "example": { "es": "Llámame cuando llegues.", "en": "Call me when you arrive." },
+      "tags": ["word", "llegar", "subjunctive", "A2"]
+    },
+    { "id": "word-viejo--old", "kind": "word", "promptEs": "viejo", "answerEn": "old (masculine singular)", "noteEn": "", "tags": ["word", "age", "adjective", "A1"] },
+    { "id": "word-granero", "kind": "word", "promptEs": "granero", "answerEn": "barn", "noteEn": "", "tags": ["word", "building", "noun", "A2"] },
+    {
+      "id": "word-llama--knock",
+      "kind": "word",
+      "promptEs": "llama",
+      "answerEn": "knock (on a door; informal singular command)",
+      "noteEn": "Llamar usually means “to call.” In llamar a la puerta, it means knocking so that someone answers.",
+      "example": { "es": "Llama a la puerta antes de entrar.", "en": "Knock on the door before entering." },
+      "tags": ["word", "llamar", "door", "sense split", "A2"]
+    },
+    { "id": "word-segunda", "kind": "word", "promptEs": "segunda", "answerEn": "second (feminine singular)", "noteEn": "", "tags": ["word", "ordinal", "adjective", "A1"] },
+    { "id": "word-pregunta--ask-command", "kind": "word", "promptEs": "pregunta", "answerEn": "ask; ask for (informal singular command)", "noteEn": "Pregunta tells one familiar person to ask. With por, it means asking to speak to or find someone.", "example": { "es": "Pregunta por la directora.", "en": "Ask for the director." }, "tags": ["word", "preguntar", "command", "A2"] },
+    { "id": "word-por--preguntar-complement", "kind": "word", "promptEs": "por", "answerEn": "for; required after preguntar before the person sought", "noteEn": "Preguntar por alguien means asking to speak to, see, or locate that person.", "example": { "es": "Alguien preguntó por ti.", "en": "Someone asked for you." }, "tags": ["word", "preposition", "preguntar por", "A2"] },
+    {
+      "id": "word-dile--tell-him",
+      "kind": "word",
+      "promptEs": "dile",
+      "answerEn": "tell him/her; say to him/her (informal singular command)",
+      "noteEn": "Dile joins the command di, from decir, to le, which marks the person receiving the message.",
+      "example": { "es": "Dile a Marta que venga.", "en": "Tell Marta to come." },
+      "tags": ["word", "decir", "command", "attached pronoun", "A2"]
+    },
+    { "id": "word-piedras", "kind": "word", "promptEs": "piedras", "answerEn": "stones; rocks", "noteEn": "", "tags": ["word", "nature", "plural noun", "A1"] },
+    { "id": "word-danzantes", "kind": "word", "promptEs": "danzantes", "answerEn": "dancing; dancers (plural)", "noteEn": "Danzante can describe a person or thing that dances.", "example": { "es": "Vimos figuras danzantes.", "en": "We saw dancing figures." }, "tags": ["word", "dance", "adjective", "B1"] },
+    { "id": "word-descansan", "kind": "word", "promptEs": "descansan", "answerEn": "they rest; they are at rest", "noteEn": "", "tags": ["word", "descansar", "present", "A1"] },
+    {
+      "id": "word-dará",
+      "kind": "word",
+      "promptEs": "dará",
+      "answerEn": "will give",
+      "noteEn": "Dará is the future form of dar used with one person or thing.",
+      "example": { "es": "Ana te dará la llave.", "en": "Ana will give you the key." },
+      "tags": ["word", "dar", "future", "A2"]
+    },
+    { "id": "word-furgoneta", "kind": "word", "promptEs": "furgoneta", "answerEn": "van", "noteEn": "", "tags": ["word", "vehicle", "noun", "A2"] },
+    { "id": "word-cuidado--careful", "kind": "word", "promptEs": "cuidado", "answerEn": "careful; caution", "noteEn": "As a warning by itself, cuidado means “careful” or “watch out.”", "example": { "es": "¡Cuidado con el hielo!", "en": "Watch out for the ice!" }, "tags": ["word", "warning", "noun", "A1"] },
+    { "id": "word-baja--travel-down-command", "kind": "word", "promptEs": "baja", "answerEn": "go down; travel down (informal singular command)", "noteEn": "Baja tells one familiar person to move downward or along a descending route.", "example": { "es": "Baja por este camino.", "en": "Go down this path." }, "tags": ["word", "movement", "command", "sense split", "A2"] },
+    { "id": "word-vieja--old", "kind": "word", "promptEs": "vieja", "answerEn": "old (feminine singular)", "noteEn": "", "tags": ["word", "age", "adjective", "A1"] },
+    { "id": "word-mina", "kind": "word", "promptEs": "mina", "answerEn": "mine", "noteEn": "Here mina is the place where minerals are extracted, not the explosive device.", "example": { "es": "La mina está cerrada.", "en": "The mine is closed." }, "tags": ["word", "place", "noun", "sense split", "A2"] },
+    { "id": "word-espantapájaros", "kind": "word", "promptEs": "espantapájaros", "answerEn": "scarecrow", "noteEn": "Espantapájaros combines a form related to espantar, “to scare away,” with pájaros, “birds.” The compound has the same form in singular and plural.", "example": { "es": "Hay un espantapájaros en el campo.", "en": "There is a scarecrow in the field." }, "tags": ["word", "compound", "noun", "A2"] },
+    {
+      "id": "word-sientas--feel-subjunctive",
+      "kind": "word",
+      "promptEs": "sientas",
+      "answerEn": "you feel (special form for an event still ahead)",
+      "noteEn": "Sientas is a present subjunctive form of sentir. After cuando, it presents the feeling as a future event that has not happened yet.",
+      "example": { "es": "Descansa cuando sientas dolor.", "en": "Rest when you feel pain." },
+      "tags": ["word", "sentir", "subjunctive", "A2"]
+    },
+    { "id": "word-la--body-part-article-after-te", "kind": "word", "promptEs": "la", "answerEn": "your here; Spanish keeps “the” because te already marks the affected owner", "noteEn": "Spanish often uses an article before a body part when me, te, le, nos, or les already identifies whose body is affected.", "example": { "es": "Se te enfrían las manos.", "en": "Your hands get cold." }, "tags": ["word", "article", "body part", "possession", "A2"] },
+    { "id": "word-se--helarse", "kind": "word", "promptEs": "se", "answerEn": "no separate English word; marks helarse, “to freeze” or “go cold”", "noteEn": "The small word se turns helar, “to freeze something,” into helarse, where the subject itself freezes or goes cold.", "example": { "es": "El agua se hiela.", "en": "The water freezes." }, "tags": ["word", "helarse", "pronominal", "A2"] },
+    { "id": "word-hiela", "kind": "word", "promptEs": "hiela", "answerEn": "freezes; goes cold", "noteEn": "Hiela is a present form of helar. The e changes to ie in this form.", "example": { "es": "El lago se hiela en invierno.", "en": "The lake freezes in winter." }, "tags": ["word", "helar", "present", "A2"] },
+    { "id": "word-las--body-part-owner-clear", "kind": "word", "promptEs": "las", "answerEn": "your here; Spanish uses “the” before body parts whose owner is already clear", "noteEn": "Spanish commonly keeps the article before a body part and lets the surrounding pronoun or context identify the owner.", "example": { "es": "Me duelen las piernas.", "en": "My legs hurt." }, "tags": ["word", "article", "body part", "possession", "A2"] },
+    { "id": "word-venas", "kind": "word", "promptEs": "venas", "answerEn": "veins", "noteEn": "", "tags": ["word", "body", "plural noun", "A2"] },
+    { "id": "word-detén", "kind": "word", "promptEs": "detén", "answerEn": "stop (something; informal singular command)", "noteEn": "Detén is the command form of detener used with one familiar person. It takes a written accent.", "example": { "es": "Detén el coche aquí.", "en": "Stop the car here." }, "tags": ["word", "detener", "command", "A2"] },
+    { "id": "word-sal--leave-command", "kind": "word", "promptEs": "sal", "answerEn": "leave; get out (informal singular command)", "noteEn": "Sal is the irregular command form of salir for one familiar person.", "example": { "es": "Sal del edificio.", "en": "Get out of the building." }, "tags": ["word", "salir", "command", "A1"] },
+    { "id": "word-quédate--stay-command", "kind": "word", "promptEs": "quédate", "answerEn": "stay; remain (informal singular command)", "noteEn": "Quédate joins the command queda to te because the verb is quedarse, “to stay.” The accent preserves the original stress.", "example": { "es": "Quédate aquí.", "en": "Stay here." }, "tags": ["word", "quedarse", "command", "attached pronoun", "A2"] },
+    { "id": "word-quieto", "kind": "word", "promptEs": "quieto", "answerEn": "still; motionless (masculine singular)", "noteEn": "", "tags": ["word", "state", "adjective", "A1"] },
+    { "id": "word-salidas--exits", "kind": "word", "promptEs": "salidas", "answerEn": "exits; ways out", "noteEn": "", "tags": ["word", "place", "plural noun", "A1"] },
+    { "id": "word-norte", "kind": "word", "promptEs": "norte", "answerEn": "north", "noteEn": "", "tags": ["word", "direction", "noun", "A1"] },
+    { "id": "word-sur", "kind": "word", "promptEs": "sur", "answerEn": "south", "noteEn": "", "tags": ["word", "direction", "noun", "A1"] },
+    { "id": "word-este--east", "kind": "word", "promptEs": "este", "answerEn": "east", "noteEn": "Without a following noun, este can name the cardinal direction east; this is different from este meaning “this.”", "example": { "es": "El sol sale por el este.", "en": "The sun rises in the east." }, "tags": ["word", "direction", "sense split", "A1"] },
+    { "id": "word-bloqueadas", "kind": "word", "promptEs": "bloqueadas", "answerEn": "blocked (feminine plural)", "noteEn": "The -as ending matches a feminine plural noun.", "example": { "es": "Las puertas están bloqueadas.", "en": "The doors are blocked." }, "tags": ["word", "state", "participle", "agreement", "A2"] },
+    { "id": "word-lobo", "kind": "word", "promptEs": "lobo", "answerEn": "wolf", "noteEn": "", "tags": ["word", "animal", "noun", "A1"] },
+    { "id": "word-espectral", "kind": "word", "promptEs": "espectral", "answerEn": "spectral; ghostly", "noteEn": "", "tags": ["word", "supernatural", "adjective", "B1"] },
+    { "id": "word-le--temer-complement", "kind": "word", "promptEs": "le", "answerEn": "no separate English word; marks the person or thing feared with temerle", "noteEn": "In varieties that use temerle a, le appears with the verb and a introduces the feared target.", "example": { "es": "Le teme a la oscuridad.", "en": "He is afraid of the dark." }, "tags": ["word", "object pronoun", "temerle a", "A2"] },
+    { "id": "word-teme", "kind": "word", "promptEs": "teme", "answerEn": "fears; is afraid of", "noteEn": "Teme is a present form of temer used with one person or thing.", "example": { "es": "El perro teme el ruido.", "en": "The dog fears the noise." }, "tags": ["word", "temer", "present", "A2"] },
+    { "id": "word-al--temer-complement", "kind": "word", "promptEs": "al", "answerEn": "of; combines a + el before what is feared after temerle", "noteEn": "In temerle a algo, the required a combines with el to form al before a masculine singular target.", "example": { "es": "Le teme al trueno.", "en": "She is afraid of thunder." }, "tags": ["word", "contraction", "temerle a", "A2"] },
+    { "id": "word-equipo", "kind": "word", "promptEs": "equipo", "answerEn": "team", "noteEn": "Equipo can also mean equipment; here it names a group of people working together.", "example": { "es": "El equipo busca una solución.", "en": "The team is looking for a solution." }, "tags": ["word", "people", "noun", "sense split", "A1"] },
+    { "id": "word-ayudarte", "kind": "word", "promptEs": "ayudarte", "answerEn": "to help you", "noteEn": "Ayudarte joins ayudar, “to help,” to te, “you.” Spanish writes the two pieces as one word.", "example": { "es": "Quiero ayudarte.", "en": "I want to help you." }, "tags": ["word", "ayudar", "infinitive", "attached pronoun", "A1"] },
+    { "id": "word-dominas", "kind": "word", "promptEs": "dominas", "answerEn": "you master; you subdue", "noteEn": "Dominas is the ordinary present form of dominar for one familiar person.", "example": { "es": "Dominas bien la técnica.", "en": "You master the technique well." }, "tags": ["word", "dominar", "present", "A2"] },
+    { "id": "word-guiará", "kind": "word", "promptEs": "guiará", "answerEn": "will guide; will lead", "noteEn": "Guiará combines the unchanged verb guiar with the -á future ending for one person or thing.", "example": { "es": "La señal te guiará.", "en": "The sign will guide you." }, "tags": ["word", "guiar", "future", "A2"] },
+    { "id": "word-que--wish", "kind": "word", "promptEs": "que", "answerEn": "may; introduces a wish", "noteEn": "At the start of a stand-alone wish, que introduces the hoped-for event and is followed by a special subjunctive verb form.", "example": { "es": "Que tengas suerte.", "en": "May you have good luck." }, "tags": ["word", "wish", "subjunctive", "A2"] },
+    { "id": "word-ayude--wish-subjunctive", "kind": "word", "promptEs": "ayude", "answerEn": "may help; help (special wish form)", "noteEn": "Ayude is a present subjunctive form of ayudar. After wish-introducing que, it presents the helping as something hoped for.", "example": { "es": "Que la suerte te ayude.", "en": "May luck help you." }, "tags": ["word", "ayudar", "subjunctive", "wish", "A2"] },
+    {
+      "id": "phrase-dar-problemas",
+      "kind": "phrase",
+      "promptEs": "dar problemas",
+      "questionEn": "How do you say that something causes trouble or creates problems?",
+      "answerEn": "Use the matching form of dar followed by problema or problemas.",
+      "noteEn": "Dar literally means “to give,” but dar problemas is the conventional way to say that something causes trouble. Dar changes for the person, thing, and time; problemas stays a noun.",
+      "example": { "es": "Ese motor da problemas.", "en": "That engine causes problems." },
+      "tags": ["phrase", "collocation", "dar", "A2"]
+    },
+    {
+      "id": "phrase-girar-a-la-izquierda-o-derecha",
+      "kind": "phrase",
+      "promptEs": "girar a la izquierda / a la derecha",
+      "questionEn": "How do you tell someone to turn left or right?",
+      "answerEn": "Use the matching form of girar, then a la izquierda for left or a la derecha for right.",
+      "noteEn": "Only girar changes for the person and time. The directional part stays a la izquierda or a la derecha; the a is part of this standard navigation expression.",
+      "example": { "es": "Gira a la derecha en la esquina.", "en": "Turn right at the corner." },
+      "tags": ["phrase", "navigation", "directions", "A1"]
+    },
+    {
+      "id": "phrase-dar-miedo",
+      "kind": "phrase",
+      "promptEs": "algo da miedo (a alguien)",
+      "questionEn": "How do you say that something is scary or frightens someone?",
+      "answerEn": "Name the scary thing, use the matching form of dar, and add miedo. Use me, te, le, nos, os, or les when you need to name who feels afraid.",
+      "noteEn": "Spanish presents the source of fear as “giving fear.” Dar changes for that source; miedo stays unchanged. The small person marker identifies who feels the fear and can be omitted for a general statement.",
+      "example": { "es": "Los truenos me dan miedo.", "en": "Thunder scares me." },
+      "tags": ["phrase", "feeling", "dar", "A2"]
+    },
+    {
+      "id": "grammar-dejar-persona-infinitive",
+      "kind": "grammar",
+      "promptEs": "dejar + persona + infinitivo",
+      "questionEn": "How do you say that someone lets another person do something?",
+      "answerEn": "Use a form of dejar, mark the person receiving permission with me, te, le, nos, os, or les, and put the allowed action in its unchanged dictionary form.",
+      "noteEn": "The unchanged dictionary form is the verb ending in -ar, -er, or -ir. The person marker can stand before a changed form of dejar, join an affirmative command such as déjame, or in some structures join the following dictionary-form verb. Dejar changes for the person and time; the allowed action does not.",
+      "example": { "es": "Mi madre me deja conducir.", "en": "My mother lets me drive." },
+      "tags": ["grammar", "permission", "dejar", "infinitive", "A2"]
+    },
+    {
+      "id": "phrase-preguntar-por-alguien",
+      "kind": "phrase",
+      "promptEs": "preguntar por alguien",
+      "questionEn": "How do you ask to speak to, see, or find a particular person?",
+      "answerEn": "Use the matching form of preguntar, then por, then the person.",
+      "noteEn": "Preguntar alone means “to ask.” Preguntar por alguien conventionally means asking for that person or asking where that person is. Preguntar changes for the person and time; por stays unchanged.",
+      "example": { "es": "Preguntaron por la doctora.", "en": "They asked for the doctor." },
+      "tags": ["phrase", "preguntar por", "people", "A2"]
+    },
+    {
+      "id": "phrase-helársele-la-sangre-a-alguien",
+      "kind": "phrase",
+      "promptEs": "helársele la sangre a alguien",
+      "questionEn": "How do you say that someone's blood runs cold from fear?",
+      "answerEn": "Use a form of helarse with la sangre, and use me, te, le, nos, os, or les to mark the person who feels the fear.",
+      "noteEn": "Helar literally means “to freeze.” Se makes it helarse, where the blood itself goes cold, and the person marker identifies whose reaction it is. The form of helar changes for the time; sangre is singular, so the verb is singular.",
+      "example": { "es": "Al oír el grito, se me heló la sangre.", "en": "When I heard the scream, my blood ran cold." },
+      "tags": ["phrase", "idiom", "fear", "body", "B1"]
+    },
+    {
+      "id": "phrase-temerle-a-algo",
+      "kind": "phrase",
+      "promptEs": "temerle a alguien o algo",
+      "questionEn": "How do you say that someone is afraid of a particular person or thing using temerle?",
+      "answerEn": "Use the matching form of temer with le or les, then a before the person or thing that is feared.",
+      "noteEn": "In varieties that use this pattern, le or les appears with temer and a introduces the feared target. Temer changes for who feels the fear; le or les matches the target as singular or plural. Other varieties also use temer directly without le and a.",
+      "example": { "es": "Marta le teme al perro.", "en": "Marta is afraid of the dog." },
+      "tags": ["phrase", "temerle a", "fear", "regional variation", "B1"]
+    },
+    {
+      "id": "grammar-si-presente-futuro",
+      "kind": "grammar",
+      "promptEs": "si + presente → futuro",
+      "questionEn": "How do you say what will happen if a real possibility occurs?",
+      "answerEn": "Use si with an ordinary present-time verb form for the condition, then state the result with a future form.",
+      "noteEn": "Si introduces a condition treated as genuinely possible. Spanish normally keeps the verb immediately after si in the present form, not the future. The result can use the future, built here by keeping the action verb and adding an ending such as -é, -ás, -á, -emos, -éis, or -án.",
+      "example": { "es": "Si terminas pronto, cenaremos juntos.", "en": "If you finish early, we will have dinner together." },
+      "tags": ["grammar", "condition", "present", "future", "B1"]
+    },
+    {
+      "id": "grammar-que-subjunctive-wish",
+      "kind": "grammar",
+      "promptEs": "que + subjuntivo para un deseo",
+      "questionEn": "How do you express a stand-alone hope or wish for someone?",
+      "answerEn": "Begin with que, name who or what the wish concerns, and use a special subjunctive form for the hoped-for action.",
+      "noteEn": "The subjunctive is a special verb form used here because the event is wished for rather than stated as fact. For example, tener changes to tengas and ayudar changes to ayude. This stand-alone que does not need a preceding verb meaning “I hope.”",
+      "example": { "es": "Que tengas un buen viaje.", "en": "May you have a good trip." },
+      "tags": ["grammar", "wish", "subjunctive", "A2"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-google-maps:opening-caption",
+      "labelEs": "EL VIAJE POR CARRETERA CON MI HERMANO EMPEZÓ A DAR PROBLEMAS COMO POR LA PÁGINA TRES DE LAS INDICACIONES DE GOOGLE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:opening-caption:w01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00001" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w02", "text": "VIAJE", "normalized": "viaje", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00002" }], "cardIds": ["word-viaje"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w03", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00003" }], "cardIds": ["word-por--through"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w04", "text": "CARRETERA", "normalized": "carretera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00004" }], "cardIds": ["word-carretera"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w05", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00005" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w06", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00006" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w07", "text": "HERMANO", "normalized": "hermano", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00007" }], "cardIds": ["word-hermano"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w08", "text": "EMPEZÓ", "normalized": "empezó", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00008" }], "cardIds": ["word-empezó", "grammar-empezar-a-infinitive"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w09", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00009" }], "cardIds": ["word-a--infinitive-link", "grammar-empezar-a-infinitive"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w10", "text": "DAR", "normalized": "dar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00010" }], "cardIds": ["word-dar--cause-problems", "grammar-empezar-a-infinitive", "phrase-dar-problemas"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w11", "text": "PROBLEMAS", "normalized": "problemas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00011" }], "cardIds": ["word-problemas", "phrase-dar-problemas"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w12", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00012" }], "cardIds": ["word-como--approximation"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w13", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00013" }], "cardIds": ["word-por--approximate-position"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w14", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00014" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w15", "text": "PÁGINA", "normalized": "página", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00015" }], "cardIds": ["word-página"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w16", "text": "TRES", "normalized": "tres", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00016" }], "cardIds": ["word-tres"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w17", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00017" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w18", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00018" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w19", "text": "INDICACIONES", "normalized": "indicaciones", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00019" }], "cardIds": ["word-indicaciones--directions"] },
+        { "id": "es-xkcd-google-maps:opening-caption:w20", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00020" }], "cardIds": ["word-de--creator-source"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:opening-caption:excluded-google", "text": "GOOGLE", "reason": "non-spanish-text", "rationale": "Google is the retained English company and product proper name, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00021" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:opening-caption:app-begin-action", "cardId": "grammar-empezar-a-infinitive", "participantWordIds": ["es-xkcd-google-maps:opening-caption:w08", "es-xkcd-google-maps:opening-caption:w09", "es-xkcd-google-maps:opening-caption:w10"], "exampleEs": "EMPEZÓ A DAR", "explanationEn": "Empezó changes for a completed beginning, a links it to the action, and dar stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-google-maps:opening-caption:app-cause-problems", "cardId": "phrase-dar-problemas", "participantWordIds": ["es-xkcd-google-maps:opening-caption:w10", "es-xkcd-google-maps:opening-caption:w11"], "exampleEs": "DAR PROBLEMAS", "explanationEn": "Dar supplies the changing verb and problemas names the trouble caused in this conventional collocation." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-70",
+      "labelEs": "← 70. GIRA LIGERAMENTE A LA IZQUIERDA EN RT-22 11 KM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0004" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0005" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-70:w01", "text": "GIRA", "normalized": "gira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00023" }], "cardIds": ["word-gira--turn-command", "phrase-girar-a-la-izquierda-o-derecha", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-70:w02", "text": "LIGERAMENTE", "normalized": "ligeramente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00024" }], "cardIds": ["word-ligeramente"] },
+        { "id": "es-xkcd-google-maps:route-step-70:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00025" }], "cardIds": ["word-a--destination", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-70:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00026" }], "cardIds": ["word-la--article", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-70:w05", "text": "IZQUIERDA", "normalized": "izquierda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00027" }], "cardIds": ["word-izquierda--direction", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-70:w06", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00028" }], "cardIds": ["word-en"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-70:excluded-arrow", "text": "←", "reason": "symbol", "rationale": "This navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.0, "y": 4.35, "width": 5.3, "height": 1.5 }], "geometryRationale": "Vision omitted the left-pointing route arrow; this measured rectangle isolates the visible symbol." },
+        { "id": "es-xkcd-google-maps:route-step-70:excluded-step", "text": "70", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00022" }] },
+        { "id": "es-xkcd-google-maps:route-step-70:excluded-route", "text": "RT-22", "reason": "non-spanish-text", "rationale": "RT-22 is an alphanumeric road identifier rather than Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00029" }] },
+        { "id": "es-xkcd-google-maps:route-step-70:excluded-distance", "text": "11 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00030" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00031" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-70:app-turn-direction", "cardId": "phrase-girar-a-la-izquierda-o-derecha", "participantWordIds": ["es-xkcd-google-maps:route-step-70:w01", "es-xkcd-google-maps:route-step-70:w03", "es-xkcd-google-maps:route-step-70:w04", "es-xkcd-google-maps:route-step-70:w05"], "exampleEs": "GIRA LIGERAMENTE A LA IZQUIERDA", "explanationEn": "Gira is the command form, and a la izquierda supplies the standard leftward direction; ligeramente is an outside modifier that makes the turn slight." },
+        { "id": "es-xkcd-google-maps:route-step-70:app-tu-command-gira", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-70:w01"], "exampleEs": "GIRA", "explanationEn": "Gira is the positive informal singular command form of girar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-71",
+      "labelEs": "→ 71. GIRA A LA DERECHA Y CONTINÚA EN RT-22 4,2 KM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0006" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0007" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-71:w01", "text": "GIRA", "normalized": "gira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00033" }], "cardIds": ["word-gira--turn-command", "phrase-girar-a-la-izquierda-o-derecha", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00034" }], "cardIds": ["word-a--destination", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00035" }], "cardIds": ["word-la--article", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w04", "text": "DERECHA", "normalized": "derecha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00036" }], "cardIds": ["word-derecha--direction", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w05", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00037" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w06", "text": "CONTINÚA", "normalized": "continúa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00038" }], "cardIds": ["word-continúa--continue-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-71:w07", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00039" }], "cardIds": ["word-en"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-71:excluded-arrow", "text": "→", "reason": "symbol", "rationale": "This navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.7, "y": 6.45, "width": 5.0, "height": 1.5 }], "geometryRationale": "Vision omitted the right-pointing route arrow; this measured rectangle isolates the visible symbol." },
+        { "id": "es-xkcd-google-maps:route-step-71:excluded-step", "text": "71", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00032" }] },
+        { "id": "es-xkcd-google-maps:route-step-71:excluded-route", "text": "RT-22", "reason": "non-spanish-text", "rationale": "RT-22 is an alphanumeric road identifier rather than Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00040" }] },
+        { "id": "es-xkcd-google-maps:route-step-71:excluded-distance", "text": "4,2 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00041" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00042" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00043" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-71:app-turn-direction", "cardId": "phrase-girar-a-la-izquierda-o-derecha", "participantWordIds": ["es-xkcd-google-maps:route-step-71:w01", "es-xkcd-google-maps:route-step-71:w02", "es-xkcd-google-maps:route-step-71:w03", "es-xkcd-google-maps:route-step-71:w04"], "exampleEs": "GIRA A LA DERECHA", "explanationEn": "Gira is the command form, and a la derecha supplies the standard rightward direction." },
+        { "id": "es-xkcd-google-maps:route-step-71:app-tu-command-gira", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-71:w01"], "exampleEs": "GIRA", "explanationEn": "Gira is the positive informal singular command form of girar." },
+        { "id": "es-xkcd-google-maps:route-step-71:app-tu-command-continua", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-71:w06"], "exampleEs": "CONTINÚA", "explanationEn": "Continúa is the positive informal singular command form of continuar; its written accent keeps the stress on ú." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-72",
+      "labelEs": "← 72. GIRA A LA IZQUIERDA EN CALLE LAGO ORILLA 95 M",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0008" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-72:w01", "text": "GIRA", "normalized": "gira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00046" }], "cardIds": ["word-gira--turn-command", "phrase-girar-a-la-izquierda-o-derecha", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00047" }], "cardIds": ["word-a--destination", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00048" }], "cardIds": ["word-la--article", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w04", "text": "IZQUIERDA", "normalized": "izquierda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00049" }], "cardIds": ["word-izquierda--direction", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w05", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00050" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w06", "text": "CALLE", "normalized": "calle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00051" }], "cardIds": ["word-calle"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w07", "text": "LAGO", "normalized": "lago", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00052" }], "cardIds": ["word-lago"] },
+        { "id": "es-xkcd-google-maps:route-step-72:w08", "text": "ORILLA", "normalized": "orilla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00053" }], "cardIds": ["word-orilla"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-72:excluded-arrow", "text": "←", "reason": "symbol", "rationale": "This navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00044" }] },
+        { "id": "es-xkcd-google-maps:route-step-72:excluded-step", "text": "72", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00045" }] },
+        { "id": "es-xkcd-google-maps:route-step-72:excluded-distance", "text": "95 M", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00054" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00055" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-72:app-turn-direction", "cardId": "phrase-girar-a-la-izquierda-o-derecha", "participantWordIds": ["es-xkcd-google-maps:route-step-72:w01", "es-xkcd-google-maps:route-step-72:w02", "es-xkcd-google-maps:route-step-72:w03", "es-xkcd-google-maps:route-step-72:w04"], "exampleEs": "GIRA A LA IZQUIERDA", "explanationEn": "Gira is the command form, and a la izquierda supplies the standard leftward direction." },
+        { "id": "es-xkcd-google-maps:route-step-72:app-tu-command-gira", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-72:w01"], "exampleEs": "GIRA", "explanationEn": "Gira is the positive informal singular command form of girar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-73",
+      "labelEs": "→ 73. GIRA A LA DERECHA EN CALLE MUELLE 130 M",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0010" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-73:w01", "text": "GIRA", "normalized": "gira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00057" }], "cardIds": ["word-gira--turn-command", "phrase-girar-a-la-izquierda-o-derecha", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00058" }], "cardIds": ["word-a--destination", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00059" }], "cardIds": ["word-la--article", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w04", "text": "DERECHA", "normalized": "derecha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00060" }], "cardIds": ["word-derecha--direction", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w05", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00061" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w06", "text": "CALLE", "normalized": "calle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00062" }], "cardIds": ["word-calle"] },
+        { "id": "es-xkcd-google-maps:route-step-73:w07", "text": "MUELLE", "normalized": "muelle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00063" }], "cardIds": ["word-muelle"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-73:excluded-arrow", "text": "→", "reason": "symbol", "rationale": "This navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.8, "y": 10.5, "width": 5.0, "height": 1.5 }], "geometryRationale": "Vision omitted the right-pointing route arrow; this measured rectangle isolates the visible symbol." },
+        { "id": "es-xkcd-google-maps:route-step-73:excluded-step", "text": "73", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00056" }] },
+        { "id": "es-xkcd-google-maps:route-step-73:excluded-distance", "text": "130 M", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00064" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00065" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-73:app-turn-direction", "cardId": "phrase-girar-a-la-izquierda-o-derecha", "participantWordIds": ["es-xkcd-google-maps:route-step-73:w01", "es-xkcd-google-maps:route-step-73:w02", "es-xkcd-google-maps:route-step-73:w03", "es-xkcd-google-maps:route-step-73:w04"], "exampleEs": "GIRA A LA DERECHA", "explanationEn": "Gira is the command form, and a la derecha supplies the standard rightward direction." },
+        { "id": "es-xkcd-google-maps:route-step-73:app-tu-command-gira", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-73:w01"], "exampleEs": "GIRA", "explanationEn": "Gira is the positive informal singular command form of girar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-74-top",
+      "labelEs": "≈ 74. TOMA EL FERRY Y ATRAVIESA EL LAGO 4,5 KM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0012" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0013" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-74-top:w01", "text": "TOMA", "normalized": "toma", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00068" }], "cardIds": ["word-toma--take-transport-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00069" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w03", "text": "FERRY", "normalized": "ferry", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00070" }], "cardIds": ["word-ferry"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w04", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00071" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w05", "text": "ATRAVIESA", "normalized": "atraviesa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00072" }], "cardIds": ["word-atraviesa--cross-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00073" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:w07", "text": "LAGO", "normalized": "lago", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00074" }], "cardIds": ["word-lago"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-74-top:excluded-water-icon", "text": "≈", "reason": "symbol", "rationale": "This wavy route pictogram marks a water crossing and is not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00066" }] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:excluded-step", "text": "74", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00067" }] },
+        { "id": "es-xkcd-google-maps:route-step-74-top:excluded-distance", "text": "4,5 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00075" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00076" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00077" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-74-top:app-tu-command-toma", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-74-top:w01"], "exampleEs": "TOMA", "explanationEn": "Toma is the positive informal singular command form of tomar." },
+        { "id": "es-xkcd-google-maps:route-step-74-top:app-tu-command-atraviesa", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-74-top:w05"], "exampleEs": "ATRAVIESA", "explanationEn": "Atraviesa is the positive informal singular command form of atravesar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:dock-direction",
+      "labelEs": "VALE, AHORA POR LA CALLE MUELLE HASTA EL FERRY.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0020" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:dock-direction:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00082" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w02", "text": "AHORA", "normalized": "ahora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00083" }], "cardIds": ["word-ahora"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w03", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00089" }], "cardIds": ["word-por--through"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00090" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w05", "text": "CALLE", "normalized": "calle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00091" }], "cardIds": ["word-calle"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w06", "text": "MUELLE", "normalized": "muelle", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00098" }], "cardIds": ["word-muelle"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w07", "text": "HASTA", "normalized": "hasta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00099" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00100" }], "cardIds": ["word-hasta--destination"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w08", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00101" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:dock-direction:w09", "text": "FERRY", "normalized": "ferry", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00102" }], "cardIds": ["word-ferry"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-google-maps:ferry-question",
+      "labelEs": "¿TENEMOS QUE TOMAR UN FERRY? ES MÁS DE MEDIANOCHE Y ESTE BOSQUE DA MIEDO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0018" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:ferry-question:w01", "text": "TENEMOS", "normalized": "tenemos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00078" }], "cardIds": ["word-tenemos", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00079" }], "cardIds": ["word-que--tener-que", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w03", "text": "TOMAR", "normalized": "tomar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00080" }], "cardIds": ["word-tomar--take-transport", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00081" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w05", "text": "FERRY", "normalized": "ferry", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00084" }], "cardIds": ["word-ferry"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00085" }], "cardIds": ["word-es--impersonal-time"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w07", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00086" }], "cardIds": ["word-más--past-time"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00087" }], "cardIds": ["word-de--past-time-after-mas"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w09", "text": "MEDIANOCHE", "normalized": "medianoche", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00088" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00092" }], "cardIds": ["word-medianoche"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w10", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00093" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w11", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00094" }], "cardIds": ["word-este", "phrase-dar-miedo"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w12", "text": "BOSQUE", "normalized": "bosque", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00095" }], "cardIds": ["word-bosque", "phrase-dar-miedo"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w13", "text": "DA", "normalized": "da", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00096" }], "cardIds": ["word-da--cause-feeling", "phrase-dar-miedo"] },
+        { "id": "es-xkcd-google-maps:ferry-question:w14", "text": "MIEDO", "normalized": "miedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00097" }], "cardIds": ["word-miedo", "phrase-dar-miedo"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:ferry-question:app-have-to", "cardId": "grammar-tener-que-infinitive", "participantWordIds": ["es-xkcd-google-maps:ferry-question:w01", "es-xkcd-google-maps:ferry-question:w02", "es-xkcd-google-maps:ferry-question:w03"], "exampleEs": "TENEMOS QUE TOMAR", "explanationEn": "Tenemos changes for “we,” que completes the requirement pattern, and tomar stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-google-maps:ferry-question:app-cause-fear", "cardId": "phrase-dar-miedo", "participantWordIds": ["es-xkcd-google-maps:ferry-question:w11", "es-xkcd-google-maps:ferry-question:w12", "es-xkcd-google-maps:ferry-question:w13", "es-xkcd-google-maps:ferry-question:w14"], "exampleEs": "ESTE BOSQUE DA MIEDO", "explanationEn": "Este bosque fills the source slot, da is the matching present form of dar, and miedo names the feeling caused." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:maps-reassurance",
+      "labelEs": "GOOGLE MAPS NO NOS GUIARÍA MAL.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0021" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0022" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:maps-reassurance:w01", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00105" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-google-maps:maps-reassurance:w02", "text": "NOS", "normalized": "nos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00106" }], "cardIds": ["word-nos--direct"] },
+        { "id": "es-xkcd-google-maps:maps-reassurance:w03", "text": "GUIARÍA", "normalized": "guiaría", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00107" }], "cardIds": ["word-guiaría", "grammar-simple-conditional"] },
+        { "id": "es-xkcd-google-maps:maps-reassurance:w04", "text": "MAL", "normalized": "mal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00108" }], "cardIds": ["word-mal--wrong"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:maps-reassurance:excluded-google-maps", "text": "GOOGLE MAPS", "reason": "non-spanish-text", "rationale": "Google Maps is the retained English product proper name, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00103" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00104" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:maps-reassurance:app-conditional", "cardId": "grammar-simple-conditional", "participantWordIds": ["es-xkcd-google-maps:maps-reassurance:w03"], "exampleEs": "GUIARÍA", "explanationEn": "Guiaría keeps the whole dictionary form guiar and adds -ía to make a “would” form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:closed-sign",
+      "labelEs": "CERRADO",
+      "explicitBounds": [{ "x": 48.5, "y": 41.7, "width": 7.3, "height": 2.1 }],
+      "geometryRationale": "Vision omitted the tiny tilted sign on the ferry landing; this measured rectangle covers its complete printed word.",
+      "words": [
+        { "id": "es-xkcd-google-maps:closed-sign:w01", "text": "CERRADO", "normalized": "cerrado", "explicitBounds": [{ "x": 48.5, "y": 41.7, "width": 7.3, "height": 2.1 }], "geometryRationale": "Vision omitted the tiny tilted CERRADO sign; this measured rectangle covers the complete visible word.", "cardIds": ["word-cerrado"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-google-maps:directions-request",
+      "labelEs": "DÉJAME VER ESAS INDICACIONES.",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0023" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0024" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:directions-request:w01", "text": "DÉJAME", "normalized": "déjame", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00109" }], "cardIds": ["word-déjame--let-me", "grammar-dejar-persona-infinitive", "grammar-affirmative-tu-command", "grammar-informal-command"] },
+        { "id": "es-xkcd-google-maps:directions-request:w02", "text": "VER", "normalized": "ver", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00110" }], "cardIds": ["word-ver", "grammar-dejar-persona-infinitive"] },
+        { "id": "es-xkcd-google-maps:directions-request:w03", "text": "ESAS", "normalized": "esas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00111" }], "cardIds": ["word-esas"] },
+        { "id": "es-xkcd-google-maps:directions-request:w04", "text": "INDICACIONES", "normalized": "indicaciones", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00112" }], "cardIds": ["word-indicaciones--directions"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:directions-request:app-let-person-act", "cardId": "grammar-dejar-persona-infinitive", "participantWordIds": ["es-xkcd-google-maps:directions-request:w01", "es-xkcd-google-maps:directions-request:w02"], "exampleEs": "DÉJAME VER", "explanationEn": "Déjame combines the command form of dejar with me for the person receiving permission, and ver stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-google-maps:directions-request:app-tu-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:directions-request:w01"], "exampleEs": "DÉJAME", "explanationEn": "Deja is the positive informal singular command of dejar, with me attached." },
+        { "id": "es-xkcd-google-maps:directions-request:app-command-pronoun", "cardId": "grammar-informal-command", "participantWordIds": ["es-xkcd-google-maps:directions-request:w01"], "exampleEs": "DÉJAME", "explanationEn": "Me attaches to the end of the positive command deja, and the written accent keeps the original stress." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-74-bottom",
+      "labelEs": "≈ 74. TOMA EL FERRY Y ATRAVIESA EL LAGO 4,5 KM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0025" }, { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0026" }],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w01", "text": "TOMA", "normalized": "toma", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00115" }], "cardIds": ["word-toma--take-transport-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00116" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w03", "text": "FERRY", "normalized": "ferry", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00117" }], "cardIds": ["word-ferry"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w04", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00118" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w05", "text": "ATRAVIESA", "normalized": "atraviesa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00119" }], "cardIds": ["word-atraviesa--cross-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w06", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00120" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:w07", "text": "LAGO", "normalized": "lago", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00121" }], "cardIds": ["word-lago"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:excluded-water-icon", "text": "≈", "reason": "symbol", "rationale": "This wavy route pictogram marks a water crossing and is not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00113" }] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:excluded-step", "text": "74", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00114" }] },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:excluded-distance", "text": "4,5 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00122" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00123" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00124" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:app-tu-command-toma", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-74-bottom:w01"], "exampleEs": "TOMA", "explanationEn": "Toma is the positive informal singular command form of tomar." },
+        { "id": "es-xkcd-google-maps:route-step-74-bottom:app-tu-command-atraviesa", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-74-bottom:w05"], "exampleEs": "ATRAVIESA", "explanationEn": "Atraviesa is the positive informal singular command form of atravesar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-75",
+      "labelEs": "↗ 75. TREPA LA COLINA HASTA EL RISCO DEL AHORCADO, EVITANDO LOS PUMAS. 357 M",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0029" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-75:w01", "text": "TREPA", "normalized": "trepa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00127" }], "cardIds": ["word-trepa--climb-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00128" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w03", "text": "COLINA", "normalized": "colina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00129" }], "cardIds": ["word-colina"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w04", "text": "HASTA", "normalized": "hasta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00130" }], "cardIds": ["word-hasta--destination"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00131" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w06", "text": "RISCO", "normalized": "risco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00132" }], "cardIds": ["word-risco"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w07", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00133" }], "cardIds": ["word-del--of-the"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w08", "text": "AHORCADO", "normalized": "ahorcado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00134" }], "cardIds": ["word-ahorcado--hanged-man"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w09", "text": "EVITANDO", "normalized": "evitando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00137" }], "cardIds": ["word-evitando", "grammar-adverbial-gerund"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w10", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00138" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-google-maps:route-step-75:w11", "text": "PUMAS", "normalized": "pumas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00139" }], "cardIds": ["word-pumas"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-75:excluded-arrow", "text": "↗", "reason": "symbol", "rationale": "This diagonal navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00125" }] },
+        { "id": "es-xkcd-google-maps:route-step-75:excluded-step", "text": "75", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00126" }] },
+        { "id": "es-xkcd-google-maps:route-step-75:excluded-distance", "text": "357 M", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00135" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00136" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-75:app-accompanying-action", "cardId": "grammar-adverbial-gerund", "participantWordIds": ["es-xkcd-google-maps:route-step-75:w09"], "exampleEs": "EVITANDO", "explanationEn": "The -ando form presents the avoiding as an action that accompanies the climbing instruction." },
+        { "id": "es-xkcd-google-maps:route-step-75:app-tu-command-trepa", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-75:w01"], "exampleEs": "TREPA", "explanationEn": "Trepa is the positive informal singular command form of trepar." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-76",
+      "labelEs": "↶ 76. CUANDO LLEGUES A UN VIEJO GRANERO, VE A LA PARTE DE ATRÁS, LLAMA A LA SEGUNDA PUERTA Y PREGUNTA POR CHARLIE. 16 M",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0031" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0033" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-76:w01", "text": "CUANDO", "normalized": "cuando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00142" }], "cardIds": ["word-cuando--when", "grammar-cuando-future-subjunctive"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w02", "text": "LLEGUES", "normalized": "llegues", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00143" }], "cardIds": ["word-llegues", "grammar-cuando-future-subjunctive"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00144" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00145" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w05", "text": "VIEJO", "normalized": "viejo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00146" }], "cardIds": ["word-viejo--old", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w06", "text": "GRANERO", "normalized": "granero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00147" }], "cardIds": ["word-granero", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w07", "text": "VE", "normalized": "ve", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00148" }], "cardIds": ["word-ve--go-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w08", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00149" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w09", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00150" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w10", "text": "PARTE", "normalized": "parte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00153" }], "cardIds": ["word-parte--portion"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00154" }], "cardIds": ["word-de--rear-position"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w12", "text": "ATRÁS", "normalized": "atrás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00155" }], "cardIds": ["word-atrás--backward"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w13", "text": "LLAMA", "normalized": "llama", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00156" }], "cardIds": ["word-llama--knock", "phrase-llamar-a-la-puerta", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w14", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00157" }], "cardIds": ["word-a--fixed-llamar-a-la-puerta", "phrase-llamar-a-la-puerta"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w15", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00158" }], "cardIds": ["word-la--article", "phrase-llamar-a-la-puerta"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w16", "text": "SEGUNDA", "normalized": "segunda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00159" }], "cardIds": ["word-segunda", "grammar-ordinal-before-noun-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w17", "text": "PUERTA", "normalized": "puerta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00160" }], "cardIds": ["word-puerta", "phrase-llamar-a-la-puerta", "grammar-ordinal-before-noun-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w18", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00161" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w19", "text": "PREGUNTA", "normalized": "pregunta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00162" }], "cardIds": ["word-pregunta--ask-command", "phrase-preguntar-por-alguien", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-76:w20", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00163" }], "cardIds": ["word-por--preguntar-complement", "phrase-preguntar-por-alguien"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-76:excluded-turn-icon", "text": "↶", "reason": "symbol", "rationale": "This U-turn route icon is a navigation symbol rather than a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00140" }] },
+        { "id": "es-xkcd-google-maps:route-step-76:excluded-step", "text": "76", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00141" }] },
+        { "id": "es-xkcd-google-maps:route-step-76:excluded-charlie", "text": "CHARLIE", "reason": "non-spanish-text", "rationale": "Charlie is an English personal proper name retained in the Spanish translation, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00164" }] },
+        { "id": "es-xkcd-google-maps:route-step-76:excluded-distance", "text": "16 M", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00151" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00152" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-76:app-future-when", "cardId": "grammar-cuando-future-subjunctive", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w01", "es-xkcd-google-maps:route-step-76:w02"], "exampleEs": "CUANDO LLEGUES", "explanationEn": "Cuando introduces an arrival that has not happened yet, so llegar appears as llegues." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-old-barn-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w05", "es-xkcd-google-maps:route-step-76:w06"], "exampleEs": "VIEJO GRANERO", "explanationEn": "Viejo uses masculine singular -o to match the masculine singular noun granero." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-knock-door", "cardId": "phrase-llamar-a-la-puerta", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w13", "es-xkcd-google-maps:route-step-76:w14", "es-xkcd-google-maps:route-step-76:w15", "es-xkcd-google-maps:route-step-76:w17"], "exampleEs": "LLAMA A LA SEGUNDA PUERTA", "explanationEn": "Llama is the command form, and a la puerta completes the fixed door-knocking expression; segunda only identifies which door." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-ask-for-person", "cardId": "phrase-preguntar-por-alguien", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w19", "es-xkcd-google-maps:route-step-76:w20"], "exampleEs": "PREGUNTA POR CHARLIE", "explanationEn": "Pregunta is the command form of preguntar, and por introduces the person being sought." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-tu-command-ve", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w07"], "exampleEs": "VE", "explanationEn": "Ve is the irregular positive informal singular command of ir." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-tu-command-llama", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w13"], "exampleEs": "LLAMA", "explanationEn": "Llama is the positive informal singular command form of llamar." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-tu-command-pregunta", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w19"], "exampleEs": "PREGUNTA", "explanationEn": "Pregunta is the positive informal singular command form of preguntar." },
+        { "id": "es-xkcd-google-maps:route-step-76:app-ordinal-door", "cardId": "grammar-ordinal-before-noun-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-76:w16", "es-xkcd-google-maps:route-step-76:w17"], "exampleEs": "SEGUNDA PUERTA", "explanationEn": "Segunda comes before puerta and uses feminine singular -a to match that noun." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-77",
+      "labelEs": "■ 77. DILE A CHARLIE QUE LAS PIEDRAS DANZANTES NUNCA DESCANSAN. TE DARÁ SU FURGONETA. CUIDADO",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0034" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0035" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0036" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-77:w01", "text": "DILE", "normalized": "dile", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00167" }], "cardIds": ["word-dile--tell-him", "grammar-indirect-object-pronoun-plus-a-clarifier", "grammar-affirmative-tu-command", "grammar-informal-command"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00168" }], "cardIds": ["word-a--recipient", "grammar-indirect-object-pronoun-plus-a-clarifier"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00170" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w04", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00171" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w05", "text": "PIEDRAS", "normalized": "piedras", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00172" }], "cardIds": ["word-piedras", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w06", "text": "DANZANTES", "normalized": "danzantes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00173" }], "cardIds": ["word-danzantes", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w07", "text": "NUNCA", "normalized": "nunca", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00175" }], "cardIds": ["word-nunca"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w08", "text": "DESCANSAN", "normalized": "descansan", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00176" }], "cardIds": ["word-descansan"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w09", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00177" }], "cardIds": ["word-te--indirect"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w10", "text": "DARÁ", "normalized": "dará", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00178" }], "cardIds": ["word-dará", "grammar-simple-future"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w11", "text": "SU", "normalized": "su", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00179" }], "cardIds": ["word-su--his"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w12", "text": "FURGONETA", "normalized": "furgoneta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00180" }], "cardIds": ["word-furgoneta"] },
+        { "id": "es-xkcd-google-maps:route-step-77:w13", "text": "CUIDADO", "normalized": "cuidado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00174" }], "cardIds": ["word-cuidado--careful"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-77:excluded-van-icon", "text": "■", "reason": "symbol", "rationale": "This van pictogram is a route-step symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.6247, "y": 78.3806, "width": 4.9041, "height": 1.2146 }], "geometryRationale": "OCR misread the black van pictogram as the letter A; this measured box isolates the complete vehicle symbol without reaching the step number." },
+        { "id": "es-xkcd-google-maps:route-step-77:excluded-step", "text": "77", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00166" }] },
+        { "id": "es-xkcd-google-maps:route-step-77:excluded-charlie", "text": "CHARLIE", "reason": "non-spanish-text", "rationale": "Charlie is an English personal proper name retained in the Spanish translation, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00169" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-77:app-recipient-clarifier", "cardId": "grammar-indirect-object-pronoun-plus-a-clarifier", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w01", "es-xkcd-google-maps:route-step-77:w02"], "exampleEs": "DILE A CHARLIE", "explanationEn": "The le joined inside dile marks the receiver, while a introduces the explicit name that identifies that receiver." },
+        { "id": "es-xkcd-google-maps:route-step-77:app-future-give", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w10"], "exampleEs": "DARÁ", "explanationEn": "Dará keeps the irregular future base dar- and adds the -á ending for one future giver." },
+        { "id": "es-xkcd-google-maps:route-step-77:app-tu-command-dile", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w01"], "exampleEs": "DILE", "explanationEn": "Di is the irregular positive informal singular command of decir, with le attached." },
+        { "id": "es-xkcd-google-maps:route-step-77:app-command-pronoun-dile", "cardId": "grammar-informal-command", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w01"], "exampleEs": "DILE", "explanationEn": "Le attaches to the end of the positive command di, and the two pieces are written as one word." },
+        { "id": "es-xkcd-google-maps:route-step-77:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w05", "es-xkcd-google-maps:route-step-77:w06"], "exampleEs": "PIEDRAS DANZANTES", "explanationEn": "Piedras names the things first, and danzantes follows as their neutral description." },
+        { "id": "es-xkcd-google-maps:route-step-77:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-77:w05", "es-xkcd-google-maps:route-step-77:w06"], "exampleEs": "PIEDRAS DANZANTES", "explanationEn": "Danzantes uses plural -es to match piedras; the form danzante is the same for masculine and feminine nouns." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-78",
+      "labelEs": "■ 78. BAJA POR LA CARRETERA VIEJA MINA CON LA FURGONETA DE CHARLIE. NO DESPIERTES AL ESPANTAPÁJAROS. 27 KM",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0037" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0038" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0039" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0040" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-78:w01", "text": "BAJA", "normalized": "baja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00182" }], "cardIds": ["word-baja--travel-down-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w02", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00183" }], "cardIds": ["word-por--through"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00184" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w04", "text": "CARRETERA", "normalized": "carretera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00185" }], "cardIds": ["word-carretera"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w05", "text": "VIEJA", "normalized": "vieja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00186" }], "cardIds": ["word-vieja--old", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w06", "text": "MINA", "normalized": "mina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00187" }], "cardIds": ["word-mina", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w07", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00188" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00189" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w09", "text": "FURGONETA", "normalized": "furgoneta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00190" }], "cardIds": ["word-furgoneta"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00191" }], "cardIds": ["word-de--ownership"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w11", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00193" }], "cardIds": ["word-no", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w12", "text": "DESPIERTES", "normalized": "despiertes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00194" }], "cardIds": ["word-despiertes--negative-command", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w13", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00195" }], "cardIds": ["word-al--personal-a-contraction", "grammar-personal-a"] },
+        { "id": "es-xkcd-google-maps:route-step-78:w14", "text": "ESPANTAPÁJAROS", "normalized": "espantapájaros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00198" }], "cardIds": ["word-espantapájaros", "grammar-personal-a"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-78:excluded-scarecrow-icon", "text": "■", "reason": "symbol", "rationale": "This scarecrow pictogram is a route-step symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.6247, "y": 81.4575, "width": 4.4776, "height": 2.3482 }], "geometryRationale": "OCR omitted the scarecrow pictogram; this measured box tightly covers the complete symbol without reaching the step number." },
+        { "id": "es-xkcd-google-maps:route-step-78:excluded-step", "text": "78", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00181" }] },
+        { "id": "es-xkcd-google-maps:route-step-78:excluded-charlie", "text": "CHARLIE", "reason": "non-spanish-text", "rationale": "Charlie is an English personal proper name retained in the Spanish translation, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00192" }] },
+        { "id": "es-xkcd-google-maps:route-step-78:excluded-distance", "text": "27 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00196" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00197" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-78:app-tu-command-baja", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-78:w01"], "exampleEs": "BAJA", "explanationEn": "Baja is the positive informal singular command form of bajar." },
+        { "id": "es-xkcd-google-maps:route-step-78:app-old-mine-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-78:w05", "es-xkcd-google-maps:route-step-78:w06"], "exampleEs": "VIEJA MINA", "explanationEn": "Vieja uses feminine singular -a to match the feminine singular noun mina inside the road name." },
+        { "id": "es-xkcd-google-maps:route-step-78:app-negative-command", "cardId": "grammar-negative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-78:w11", "es-xkcd-google-maps:route-step-78:w12"], "exampleEs": "NO DESPIERTES", "explanationEn": "No begins the negative instruction, and despiertes is the special familiar negative-command form of despertar." },
+        { "id": "es-xkcd-google-maps:route-step-78:app-personal-a", "cardId": "grammar-personal-a", "participantWordIds": ["es-xkcd-google-maps:route-step-78:w13", "es-xkcd-google-maps:route-step-78:w14"], "exampleEs": "AL ESPANTAPÁJAROS", "explanationEn": "Al combines a and el; the personal a marks the personified scarecrow as the direct target of the action." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-79",
+      "labelEs": "→ 79. GIRA A LA IZQUIERDA EN COMSTOCK. CUANDO SIENTAS QUE LA SANGRE SE TE HIELA EN LAS VENAS, DETÉN LA FURGONETA Y SAL. 5,2 KM",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0041" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0042" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0043" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0044" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-79:w01", "text": "GIRA", "normalized": "gira", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00200" }], "cardIds": ["word-gira--turn-command", "phrase-girar-a-la-izquierda-o-derecha", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w02", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00201" }], "cardIds": ["word-a--destination", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00202" }], "cardIds": ["word-la--article", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w04", "text": "IZQUIERDA", "normalized": "izquierda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00203" }], "cardIds": ["word-izquierda--direction", "phrase-girar-a-la-izquierda-o-derecha"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w05", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00204" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w06", "text": "CUANDO", "normalized": "cuando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00206" }], "cardIds": ["word-cuando--when", "grammar-cuando-future-subjunctive"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w07", "text": "SIENTAS", "normalized": "sientas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00207" }], "cardIds": ["word-sientas--feel-subjunctive", "grammar-cuando-future-subjunctive"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w08", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00208" }], "cardIds": ["word-que--clause-link"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w09", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00209" }], "cardIds": ["word-la--body-part-article-after-te", "phrase-helársele-la-sangre-a-alguien", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w10", "text": "SANGRE", "normalized": "sangre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00210" }], "cardIds": ["word-sangre", "phrase-helársele-la-sangre-a-alguien", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w11", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00211" }], "cardIds": ["word-se--helarse", "phrase-helársele-la-sangre-a-alguien", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w12", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00212" }], "cardIds": ["word-te--affected-owner", "phrase-helársele-la-sangre-a-alguien", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w13", "text": "HIELA", "normalized": "hiela", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00213" }], "cardIds": ["word-hiela", "phrase-helársele-la-sangre-a-alguien", "grammar-definite-article-body-part-owner-clear", "grammar-e-ie-stem-change-present"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w14", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00214" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w15", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00215" }], "cardIds": ["word-las--body-part-owner-clear", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w16", "text": "VENAS", "normalized": "venas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00219" }], "cardIds": ["word-venas", "grammar-definite-article-body-part-owner-clear"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w17", "text": "DETÉN", "normalized": "detén", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00220" }], "cardIds": ["word-detén", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w18", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00221" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w19", "text": "FURGONETA", "normalized": "furgoneta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00222" }], "cardIds": ["word-furgoneta"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w20", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00223" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-79:w21", "text": "SAL", "normalized": "sal", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00224" }], "cardIds": ["word-sal--leave-command", "grammar-affirmative-tu-command"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-79:excluded-arrow", "text": "→", "reason": "symbol", "rationale": "This navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.8, "y": 85.4, "width": 5.0, "height": 1.5 }], "geometryRationale": "Vision omitted the right-pointing route arrow; this measured rectangle isolates the visible symbol." },
+        { "id": "es-xkcd-google-maps:route-step-79:excluded-step", "text": "79", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00199" }] },
+        { "id": "es-xkcd-google-maps:route-step-79:excluded-comstock", "text": "COMSTOCK", "reason": "non-spanish-text", "rationale": "Comstock is an English place proper name retained in the Spanish translation, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00205" }] },
+        { "id": "es-xkcd-google-maps:route-step-79:excluded-distance", "text": "5,2 KM", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00216" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00217" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00218" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-79:app-turn-direction", "cardId": "phrase-girar-a-la-izquierda-o-derecha", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w01", "es-xkcd-google-maps:route-step-79:w02", "es-xkcd-google-maps:route-step-79:w03", "es-xkcd-google-maps:route-step-79:w04"], "exampleEs": "GIRA A LA IZQUIERDA", "explanationEn": "Gira is the command form, and a la izquierda supplies the standard leftward direction." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-future-when", "cardId": "grammar-cuando-future-subjunctive", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w06", "es-xkcd-google-maps:route-step-79:w07"], "exampleEs": "CUANDO SIENTAS", "explanationEn": "Cuando introduces a feeling that has not happened yet, so sentir appears as sientas." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-blood-runs-cold", "cardId": "phrase-helársele-la-sangre-a-alguien", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w09", "es-xkcd-google-maps:route-step-79:w10", "es-xkcd-google-maps:route-step-79:w11", "es-xkcd-google-maps:route-step-79:w12", "es-xkcd-google-maps:route-step-79:w13"], "exampleEs": "LA SANGRE SE TE HIELA", "explanationEn": "Sangre is what goes cold, se forms helarse, te identifies the affected person, and hiela is singular to match sangre." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-body-part-article", "cardId": "grammar-definite-article-body-part-owner-clear", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w09", "es-xkcd-google-maps:route-step-79:w10", "es-xkcd-google-maps:route-step-79:w11", "es-xkcd-google-maps:route-step-79:w12", "es-xkcd-google-maps:route-step-79:w13"], "exampleEs": "LA SANGRE SE TE HIELA", "explanationEn": "Te already identifies the affected person, so Spanish uses la before sangre; la matches the feminine singular body-part noun." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-veins-article", "cardId": "grammar-definite-article-body-part-owner-clear", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w15", "es-xkcd-google-maps:route-step-79:w16"], "exampleEs": "LAS VENAS", "explanationEn": "The preceding te already identifies the affected person, so Spanish uses las before venas; las matches the feminine plural body-part noun." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-e-ie-change", "cardId": "grammar-e-ie-stem-change-present", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w13"], "exampleEs": "HIELA", "explanationEn": "Helar changes its stressed e to ie in the present form hiela." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-tu-command-gira", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w01"], "exampleEs": "GIRA", "explanationEn": "Gira is the positive informal singular command form of girar." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-tu-command-deten", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w17"], "exampleEs": "DETÉN", "explanationEn": "Detén is the irregular positive informal singular command of detener." },
+        { "id": "es-xkcd-google-maps:route-step-79:app-tu-command-sal", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-79:w21"], "exampleEs": "SAL", "explanationEn": "Sal is the irregular positive informal singular command of salir." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-80",
+      "labelEs": "↓ 80. QUÉDATE MUY QUIETO. LAS SALIDAS ESTÁN AL NORTE, SUR Y ESTE, PERO ESTÁN BLOQUEADAS POR UN LOBO ESPECTRAL. 0 M",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0045" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0046" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0047" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0048" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0049" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-80:w01", "text": "QUÉDATE", "normalized": "quédate", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00225" }], "cardIds": ["word-quédate--stay-command", "grammar-quedarse-state", "grammar-affirmative-tu-command", "grammar-informal-command"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w02", "text": "MUY", "normalized": "muy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00226" }], "cardIds": ["word-muy"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w03", "text": "QUIETO", "normalized": "quieto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00227" }], "cardIds": ["word-quieto", "grammar-quedarse-state"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w04", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00228" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w05", "text": "SALIDAS", "normalized": "salidas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00229" }], "cardIds": ["word-salidas--exits"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w06", "text": "ESTÁN", "normalized": "están", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00230" }], "cardIds": ["word-estan--location", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w07", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00231" }], "cardIds": ["word-al--contraction"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w08", "text": "NORTE", "normalized": "norte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00233" }], "cardIds": ["word-norte"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w09", "text": "SUR", "normalized": "sur", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00234" }], "cardIds": ["word-sur"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w10", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00235" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w11", "text": "ESTE", "normalized": "este", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00236" }], "cardIds": ["word-este--east"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w12", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00237" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w13", "text": "ESTÁN", "normalized": "están", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00238" }], "cardIds": ["word-estan--location", "grammar-estar-participle-result-state"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w14", "text": "BLOQUEADAS", "normalized": "bloqueadas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00239" }], "cardIds": ["word-bloqueadas", "grammar-estar-participle-result-state"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w15", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00242" }], "cardIds": ["word-por--passive-agent"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w16", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00243" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w17", "text": "LOBO", "normalized": "lobo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00244" }], "cardIds": ["word-lobo", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-80:w18", "text": "ESPECTRAL", "normalized": "espectral", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00245" }], "cardIds": ["word-espectral", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-80:excluded-arrow", "text": "↓", "reason": "symbol", "rationale": "This downward navigation arrow is a route-direction symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 4.0, "y": 89.8, "width": 5.0, "height": 2.0 }], "geometryRationale": "Vision omitted the downward route arrow; this measured rectangle isolates the visible symbol." },
+        { "id": "es-xkcd-google-maps:route-step-80:excluded-step", "text": "80", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00232" }] },
+        { "id": "es-xkcd-google-maps:route-step-80:excluded-distance", "text": "0 M", "reason": "measurement", "rationale": "This is a numerical route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00240" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00241" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-80:app-stay-state", "cardId": "grammar-quedarse-state", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w01", "es-xkcd-google-maps:route-step-80:w03"], "exampleEs": "QUÉDATE MUY QUIETO", "explanationEn": "Quédate is the command form of quedarse, quieto names the continuing state, and muy only strengthens that description." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-blocked-result", "cardId": "grammar-estar-participle-result-state", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w13", "es-xkcd-google-maps:route-step-80:w14"], "exampleEs": "ESTÁN BLOQUEADAS", "explanationEn": "Están presents a current state, and bloqueadas is the completed-action form with feminine plural -as to match salidas." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-tu-command-quedate", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w01"], "exampleEs": "QUÉDATE", "explanationEn": "Queda is the positive informal singular command of quedar, with te attached for quedarse." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-command-pronoun-quedate", "cardId": "grammar-informal-command", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w01"], "exampleEs": "QUÉDATE", "explanationEn": "Te attaches to the end of the positive command queda, and the written accent keeps the original stress." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-estar-location", "cardId": "grammar-ser-identity-estar-location", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w06"], "exampleEs": "ESTÁN", "explanationEn": "Están is a plural form of estar because it locates the exits." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-wolf-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w17", "es-xkcd-google-maps:route-step-80:w18"], "exampleEs": "LOBO ESPECTRAL", "explanationEn": "Lobo names the creature first, and espectral follows as its neutral description." },
+        { "id": "es-xkcd-google-maps:route-step-80:app-wolf-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-80:w17", "es-xkcd-google-maps:route-step-80:w18"], "exampleEs": "LOBO ESPECTRAL", "explanationEn": "Espectral stays singular to match lobo; this adjective has the same singular form for masculine and feminine nouns." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-maps:route-step-81",
+      "labelEs": "■ 81. EL LOBO ESPECTRAL SÓLO LE TEME AL FUEGO. EL EQUIPO DE GOOGLE MAPS NO PUEDE AYUDARTE MÁS, PERO SI DOMINAS AL LOBO, TE GUIARÁ. QUE DIOS TE AYUDE. ?? KM",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0050" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0051" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0052" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0053" },
+        { "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0054" }
+      ],
+      "words": [
+        { "id": "es-xkcd-google-maps:route-step-81:w01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00247" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w02", "text": "LOBO", "normalized": "lobo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00248" }], "cardIds": ["word-lobo", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w03", "text": "ESPECTRAL", "normalized": "espectral", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00249" }], "cardIds": ["word-espectral", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w04", "text": "SÓLO", "normalized": "sólo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00250" }], "cardIds": ["word-sólo--only"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w05", "text": "LE", "normalized": "le", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00251" }], "cardIds": ["word-le--temer-complement", "phrase-temerle-a-algo"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w06", "text": "TEME", "normalized": "teme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00252" }], "cardIds": ["word-teme", "phrase-temerle-a-algo"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w07", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00253" }], "cardIds": ["word-al--temer-complement", "phrase-temerle-a-algo"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w08", "text": "FUEGO", "normalized": "fuego", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00254" }], "cardIds": ["word-fuego", "phrase-temerle-a-algo"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w09", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00255" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w10", "text": "EQUIPO", "normalized": "equipo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00256" }], "cardIds": ["word-equipo"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00257" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w12", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00260" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w13", "text": "PUEDE", "normalized": "puede", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00261" }], "cardIds": ["word-puede--can", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w14", "text": "AYUDARTE", "normalized": "ayudarte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00262" }], "cardIds": ["word-ayudarte", "grammar-poder-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w15", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00264" }], "cardIds": ["word-más--anymore-after-negative"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w16", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00265" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w17", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00266" }], "cardIds": ["word-si", "grammar-si-presente-futuro"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w18", "text": "DOMINAS", "normalized": "dominas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00267" }], "cardIds": ["word-dominas", "grammar-si-presente-futuro"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w19", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00268" }], "cardIds": ["word-al--personal-a-contraction", "grammar-si-presente-futuro", "grammar-personal-a"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w20", "text": "LOBO", "normalized": "lobo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00269" }], "cardIds": ["word-lobo", "grammar-si-presente-futuro", "grammar-personal-a"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w21", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00270" }], "cardIds": ["word-te--direct", "grammar-si-presente-futuro"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w22", "text": "GUIARÁ", "normalized": "guiará", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00271" }], "cardIds": ["word-guiará", "grammar-simple-future", "grammar-si-presente-futuro"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w23", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00272" }], "cardIds": ["word-que--wish", "grammar-que-subjunctive-wish"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w24", "text": "DIOS", "normalized": "dios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00273" }], "cardIds": ["word-dios", "grammar-que-subjunctive-wish"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w25", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00274" }], "cardIds": ["word-te--direct", "grammar-que-subjunctive-wish"] },
+        { "id": "es-xkcd-google-maps:route-step-81:w26", "text": "AYUDE", "normalized": "ayude", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00275" }], "cardIds": ["word-ayude--wish-subjunctive", "grammar-que-subjunctive-wish"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-maps:route-step-81:excluded-spectral-wolf-icon", "text": "■", "reason": "symbol", "rationale": "This spectral-wolf pictogram is a route-step symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 3.4115, "y": 93.5223, "width": 5.7569, "height": 1.7814 }], "geometryRationale": "OCR omitted the spectral-wolf pictogram; this measured box tightly covers the complete symbol without reaching the step number." },
+        { "id": "es-xkcd-google-maps:route-step-81:excluded-step", "text": "81", "reason": "number", "rationale": "This is the numbered route step, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00246" }] },
+        { "id": "es-xkcd-google-maps:route-step-81:excluded-google-maps", "text": "GOOGLE MAPS", "reason": "non-spanish-text", "rationale": "Google Maps is the retained English product proper name, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00258" }, { "source": "ocr-token", "id": "es-xkcd-google-maps:ocr-token-00259" }] },
+        { "id": "es-xkcd-google-maps:route-step-81:excluded-unknown-distance", "text": "?? KM", "reason": "measurement", "rationale": "This is a deliberately unknown route distance and unit, not Spanish lexical curriculum text.", "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-google-maps:ocr-line-0052" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-maps:route-step-81:app-fear-target", "cardId": "phrase-temerle-a-algo", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w05", "es-xkcd-google-maps:route-step-81:w06", "es-xkcd-google-maps:route-step-81:w07", "es-xkcd-google-maps:route-step-81:w08"], "exampleEs": "LE TEME AL FUEGO", "explanationEn": "Le appears with teme, and al combines the required a with el before the particular thing feared." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-can-help", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w13", "es-xkcd-google-maps:route-step-81:w14"], "exampleEs": "PUEDE AYUDARTE", "explanationEn": "Puede changes for the singular team, while ayudarte keeps ayudar in its unchanged dictionary form with te attached." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-attached-you", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w14"], "exampleEs": "AYUDARTE", "explanationEn": "Te is attached to the end of the unchanged dictionary-form verb ayudar and written as one word." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-future-guide", "cardId": "grammar-simple-future", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w22"], "exampleEs": "GUIARÁ", "explanationEn": "Guiará keeps guiar and adds the -á future ending for one future guide." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-real-condition", "cardId": "grammar-si-presente-futuro", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w17", "es-xkcd-google-maps:route-step-81:w18", "es-xkcd-google-maps:route-step-81:w19", "es-xkcd-google-maps:route-step-81:w20", "es-xkcd-google-maps:route-step-81:w21", "es-xkcd-google-maps:route-step-81:w22"], "exampleEs": "SI DOMINAS AL LOBO, TE GUIARÁ", "explanationEn": "Si opens the possible condition, dominas stays in the ordinary present, and guiará carries the -á future ending for the result; al lobo and te fill the two verb slots." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-standalone-wish", "cardId": "grammar-que-subjunctive-wish", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w23", "es-xkcd-google-maps:route-step-81:w24", "es-xkcd-google-maps:route-step-81:w25", "es-xkcd-google-maps:route-step-81:w26"], "exampleEs": "QUE DIOS TE AYUDE", "explanationEn": "Que introduces the wish, Dios is its subject, te marks the affected person, and ayudar appears as the wished-for form ayude." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-wolf-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w02", "es-xkcd-google-maps:route-step-81:w03"], "exampleEs": "LOBO ESPECTRAL", "explanationEn": "Lobo names the creature first, and espectral follows as its neutral description." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-wolf-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w02", "es-xkcd-google-maps:route-step-81:w03"], "exampleEs": "LOBO ESPECTRAL", "explanationEn": "Espectral stays singular to match lobo; this adjective has the same singular form for masculine and feminine nouns." },
+        { "id": "es-xkcd-google-maps:route-step-81:app-personal-a", "cardId": "grammar-personal-a", "participantWordIds": ["es-xkcd-google-maps:route-step-81:w19", "es-xkcd-google-maps:route-step-81:w20"], "exampleEs": "AL LOBO", "explanationEn": "Al combines a and el; the personal a marks the animate wolf as the direct target of dominas." }
+      ]
+    }
+  ]
+}

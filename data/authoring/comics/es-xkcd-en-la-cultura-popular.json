@@ -1,0 +1,535 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-en-la-cultura-popular",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "In Popular Culture",
+  "titleEs": "En la cultura popular",
+  "titleText": {
+    "es": "Algún día la sección ",
+    "en": "Someday the 'in popular culture' section will have its own article with an 'in popular culture' section.  It will reference this title-text referencing it, and the blogosphere will implode.",
+    "noteEn": "Unescaped quotation marks truncate the Spanish archive metadata after sección. The intended Spanish source continues: ‘En la cultura popular’ tendrá su propio artículo con una sección ‘En la cultura popular’. En él se hará referencia a este texto ALT, que hace referencia a él, y la blogosfera implosionará. The Spanish raster also changes the official first reference from episode 6, ‘Our Mrs. Reynolds,’ to episode 7, ‘Jaynestown.’ Both source images deliberately cut off the Battlestar Galactica bullet at the lower edge."
+  },
+  "cardDefinitions": [
+    { "id": "word-madera", "kind": "word", "promptEs": "madera", "answerEn": "wood", "noteEn": "", "tags": ["word", "material", "noun", "A1"] },
+    {
+      "id": "word-tejido--biological-tissue",
+      "kind": "word",
+      "promptEs": "tejido",
+      "answerEn": "tissue; a structural material in a living organism",
+      "noteEn": "Tejido can also mean woven fabric. In biology, it names a group of similar cells that form part of a plant or animal.",
+      "example": { "es": "El tejido vegetal contiene agua.", "en": "Plant tissue contains water." },
+      "tags": ["word", "biology", "noun", "B1"]
+    },
+    {
+      "id": "word-duro--physically-hard",
+      "kind": "word",
+      "promptEs": "duro",
+      "answerEn": "hard; physically firm (masculine singular)",
+      "noteEn": "Here duro describes a material that resists pressure. In other contexts it can describe something difficult or someone acting harshly.",
+      "example": { "es": "El suelo está duro.", "en": "The ground is hard." },
+      "tags": ["word", "adjective", "physical property", "A2"]
+    },
+    { "id": "word-fibroso", "kind": "word", "promptEs": "fibroso", "answerEn": "fibrous (masculine singular)", "noteEn": "", "tags": ["word", "adjective", "material", "B1"] },
+    {
+      "id": "word-se--encontrarse-location",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; helps encontrarse mean ‘to be found’ or ‘to be located’",
+      "noteEn": "With this use of encontrarse, se matches the thing being located: se encuentra for one thing and se encuentran for more than one.",
+      "example": { "es": "La estación se encuentra cerca.", "en": "The station is located nearby." },
+      "tags": ["word", "pronoun", "encontrarse", "A2"]
+    },
+    {
+      "id": "word-encuentra--found-located",
+      "kind": "word",
+      "promptEs": "encuentra",
+      "answerEn": "is found; is located (with se)",
+      "noteEn": "Encuentra is the singular present form of encontrar. With the matching se before it, encontrarse can describe where something exists or is located.",
+      "example": { "es": "El museo se encuentra en el centro.", "en": "The museum is located downtown." },
+      "tags": ["word", "verb", "location", "A2"]
+    },
+    { "id": "word-plantas--living-plants", "kind": "word", "promptEs": "plantas", "answerEn": "plants (living organisms)", "noteEn": "", "tags": ["word", "biology", "noun", "A1"] },
+    {
+      "id": "word-usado--used-participle",
+      "kind": "word",
+      "promptEs": "usado",
+      "answerEn": "used; been used",
+      "noteEn": "Usado is usar's completed-action form. After a form of haber, it helps say that an action has happened; it does not change for gender in that construction.",
+      "example": { "es": "Hemos usado esta herramienta.", "en": "We have used this tool." },
+      "tags": ["word", "verb", "participle", "A2"]
+    },
+    { "id": "word-siglos", "kind": "word", "promptEs": "siglos", "answerEn": "centuries", "noteEn": "", "tags": ["word", "time", "noun", "A2"] },
+    {
+      "id": "word-tanto--both-correlation",
+      "kind": "word",
+      "promptEs": "tanto",
+      "answerEn": "both; introduces the first of two linked items",
+      "noteEn": "In tanto X como Y, tanto opens the first item and como introduces the second. The two items can be nouns, descriptions, or longer matching phrases.",
+      "example": { "es": "Sirve tanto para estudiar como para descansar.", "en": "It is useful both for studying and for resting." },
+      "tags": ["word", "connector", "comparison", "A2"]
+    },
+    {
+      "id": "word-combustible--fuel-noun",
+      "kind": "word",
+      "promptEs": "combustible",
+      "answerEn": "fuel (noun)",
+      "noteEn": "As a noun, combustible is a substance burned to produce heat or energy. As a describing word, it can instead mean combustible or flammable.",
+      "example": { "es": "El vehículo necesita combustible.", "en": "The vehicle needs fuel." },
+      "tags": ["word", "energy", "noun", "A2"]
+    },
+    {
+      "id": "word-material--substance",
+      "kind": "word",
+      "promptEs": "material",
+      "answerEn": "material; substance",
+      "noteEn": "Here material names a physical substance used to make or build something, rather than a collection of equipment or supplies.",
+      "example": { "es": "El vidrio es un material resistente.", "en": "Glass is a durable material." },
+      "tags": ["word", "substance", "noun", "A2"]
+    },
+    {
+      "id": "word-de--noun-classifier",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
+      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "example": { "es": "Necesito una taza de café.", "en": "I need a coffee cup." },
+      "tags": ["word", "preposition", "noun modifier", "A2"]
+    },
+    { "id": "word-construcción", "kind": "word", "promptEs": "construcción", "answerEn": "construction; building", "noteEn": "", "tags": ["word", "building", "noun", "A2"] },
+    {
+      "id": "word-libre--free-open",
+      "kind": "word",
+      "promptEs": "libre",
+      "answerEn": "free; open for people to use or share",
+      "noteEn": "Libre emphasizes freedom or lack of restriction. It is different from gratis, which specifically means that something costs no money.",
+      "example": { "es": "El proyecto usa software libre.", "en": "The project uses free and open-source software." },
+      "tags": ["word", "adjective", "freedom", "A2"]
+    },
+    {
+      "id": "word-tablas--wooden-boards",
+      "kind": "word",
+      "promptEs": "tablas",
+      "answerEn": "boards; planks",
+      "noteEn": "Tabla can mean a flat wooden board. The same written plural can also mean tables of information, so the pictured object determines the sense here.",
+      "example": { "es": "Compraron tablas para el suelo.", "en": "They bought boards for the floor." },
+      "tags": ["word", "wood", "noun", "A2"]
+    },
+    {
+      "id": "word-de--material",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of; made of or from (introducing a material)",
+      "noteEn": "After an object or an expression such as ser de or estar hecho de, de introduces the material that composes it.",
+      "example": { "es": "La puerta es de metal.", "en": "The door is made of metal." },
+      "tags": ["word", "preposition", "material", "A2"]
+    },
+    { "id": "word-cultura", "kind": "word", "promptEs": "cultura", "answerEn": "culture", "noteEn": "", "tags": ["word", "society", "noun", "A2"] },
+    {
+      "id": "word-popular--widely-known",
+      "kind": "word",
+      "promptEs": "popular",
+      "answerEn": "popular; widely known or shared",
+      "noteEn": "In cultura popular, popular refers to entertainment, ideas, and references widely shared by the public.",
+      "example": { "es": "Es una canción popular.", "en": "It is a popular song." },
+      "tags": ["word", "adjective", "culture", "A2"]
+    },
+    { "id": "word-editar", "kind": "word", "promptEs": "editar", "answerEn": "to edit", "noteEn": "", "tags": ["word", "verb", "writing", "A2"] },
+    { "id": "word-episodio", "kind": "word", "promptEs": "episodio", "answerEn": "episode", "noteEn": "", "tags": ["word", "television", "noun", "A2"] },
+    { "id": "word-recibe", "kind": "word", "promptEs": "recibe", "answerEn": "receives; gets", "noteEn": "", "tags": ["word", "verb", "receiving", "A2"] },
+    { "id": "word-palo--stick", "kind": "word", "promptEs": "palo", "answerEn": "stick; wooden rod", "noteEn": "", "tags": ["word", "object", "noun", "A2"] },
+    { "id": "word-lluvia", "kind": "word", "promptEs": "lluvia", "answerEn": "rain", "noteEn": "", "tags": ["word", "weather", "noun", "A1"] },
+    { "id": "word-aldeano", "kind": "word", "promptEs": "aldeano", "answerEn": "villager (masculine singular)", "noteEn": "", "tags": ["word", "person", "noun", "A2"] },
+    {
+      "id": "word-buffyverso--franchise-universe",
+      "kind": "word",
+      "promptEs": "buffyverso",
+      "answerEn": "the Buffyverse; the fictional universe of Buffy",
+      "noteEn": "Spanish fandom writing can add -verso to a name to refer to the shared fictional universe around it. This coined term behaves as a masculine noun after el.",
+      "example": { "es": "El personaje aparece en el buffyverso.", "en": "The character appears in the Buffyverse." },
+      "tags": ["word", "fandom", "fictional universe", "B1"]
+    },
+    {
+      "id": "word-suele",
+      "kind": "word",
+      "promptEs": "suele",
+      "answerEn": "usually; tends to (before an action verb)",
+      "noteEn": "Suele is the singular present form of soler. It is followed by another verb in its unchanged dictionary form to describe a habitual action.",
+      "example": { "es": "Ana suele caminar al trabajo.", "en": "Ana usually walks to work." },
+      "tags": ["word", "verb", "habit", "A2"]
+    },
+    { "id": "word-matar--kill", "kind": "word", "promptEs": "matar", "answerEn": "to kill", "noteEn": "", "tags": ["word", "verb", "A2"] },
+    { "id": "word-vampiros", "kind": "word", "promptEs": "vampiros", "answerEn": "vampires", "noteEn": "", "tags": ["word", "fiction", "noun", "A2"] },
+    {
+      "id": "word-estacas--stakes",
+      "kind": "word",
+      "promptEs": "estacas",
+      "answerEn": "stakes; pointed wooden posts",
+      "noteEn": "",
+      "tags": ["word", "wood", "object", "A2"]
+    },
+    { "id": "word-varita--wand", "kind": "word", "promptEs": "varita", "answerEn": "wand; small rod", "noteEn": "", "tags": ["word", "object", "noun", "A2"] },
+    {
+      "id": "word-hecha--made-feminine",
+      "kind": "word",
+      "promptEs": "hecha",
+      "answerEn": "made (feminine singular)",
+      "noteEn": "Hecha is the feminine singular form of hecho. With estar hecha de, it describes the material composing a feminine singular thing.",
+      "example": { "es": "La caja está hecha de cartón.", "en": "The box is made of cardboard." },
+      "tags": ["word", "participle", "agreement", "A2"]
+    },
+    { "id": "word-árbol", "kind": "word", "promptEs": "árbol", "answerEn": "tree", "noteEn": "", "tags": ["word", "nature", "noun", "A1"] },
+    { "id": "word-sagrado", "kind": "word", "promptEs": "sagrado", "answerEn": "sacred; holy (masculine singular)", "noteEn": "", "tags": ["word", "adjective", "belief", "A2"] },
+    { "id": "word-valla--fence", "kind": "word", "promptEs": "valla", "answerEn": "fence; barrier", "noteEn": "", "tags": ["word", "object", "noun", "A2"] },
+    { "id": "word-rodea", "kind": "word", "promptEs": "rodea", "answerEn": "surrounds; goes around", "noteEn": "", "tags": ["word", "verb", "position", "A2"] },
+    {
+      "id": "word-patio--back-yard",
+      "kind": "word",
+      "promptEs": "patio",
+      "answerEn": "yard; back yard; courtyard",
+      "noteEn": "Patio can describe an outdoor area beside or enclosed by a house. In a school setting, the same word can mean playground or schoolyard.",
+      "example": { "es": "Los niños juegan en el patio de la casa.", "en": "The children play in the yard of the house." },
+      "tags": ["word", "place", "noun", "A2"]
+    },
+    {
+      "id": "word-serie--tv-show",
+      "kind": "word",
+      "promptEs": "serie",
+      "answerEn": "television series; TV show",
+      "noteEn": "Here serie is a continuing television production made up of episodes, rather than a numerical sequence or a general group of things.",
+      "example": { "es": "Empezaron una serie nueva.", "en": "They started a new TV series." },
+      "tags": ["word", "television", "noun", "A2"]
+    },
+    {
+      "id": "phrase-encontrarse-en",
+      "kind": "phrase",
+      "promptEs": "encontrarse en + lugar",
+      "questionEn": "How do you say that something is found or located somewhere?",
+      "answerEn": "Use the matching form of encontrarse, then en, then the place.",
+      "noteEn": "Encontrarse contains the small matching word se in the dictionary form. In a sentence, both parts match what is located: la tienda se encuentra and las tiendas se encuentran. En introduces the location. This use describes where something is; it does not mean that two people meet each other.",
+      "example": { "es": "La biblioteca se encuentra en la plaza.", "en": "The library is located in the square." },
+      "tags": ["phrase", "location", "encontrarse", "A2"]
+    },
+    {
+      "id": "grammar-tanto-x-como-y",
+      "kind": "grammar",
+      "promptEs": "tanto X como Y",
+      "questionEn": "How do you link two items with the meaning ‘both one and the other’?",
+      "answerEn": "Put tanto before the first item and como before the second item.",
+      "noteEn": "The letters X and Y stand for the two parallel items being linked. Each item can itself begin with a preposition such as para, de, or como, so repeated words are possible. The two items should play the same grammatical role.",
+      "example": { "es": "Usamos la mesa tanto para comer como para trabajar.", "en": "We use the table both for eating and for working." },
+      "tags": ["grammar", "correlative", "both and", "A2"]
+    },
+    {
+      "id": "phrase-material-de-construccion",
+      "kind": "phrase",
+      "promptEs": "material de construcción",
+      "questionEn": "How do you refer to material used for building?",
+      "answerEn": "Use material de construcción for ‘construction material.’",
+      "noteEn": "This established combination uses de to link material to construcción, the activity of building. English places ‘construction’ directly before ‘material,’ while Spanish keeps the nouns joined by de.",
+      "example": { "es": "Necesitamos material de construcción resistente.", "en": "We need durable construction material." },
+      "tags": ["phrase", "collocation", "building", "A2"]
+    },
+    {
+      "id": "phrase-palo-de-lluvia",
+      "kind": "phrase",
+      "promptEs": "palo de lluvia",
+      "questionEn": "What is the Spanish name for the instrument called a rain stick?",
+      "answerEn": "Use palo de lluvia for ‘rain stick.’",
+      "noteEn": "A palo de lluvia is a hollow tube containing small pieces that make a rain-like sound when it is tilted. The established name joins palo and lluvia with de.",
+      "example": { "es": "Agitó un palo de lluvia durante la canción.", "en": "She shook a rain stick during the song." },
+      "tags": ["phrase", "instrument", "collocation", "A2"]
+    },
+    {
+      "id": "phrase-estar-hecho-de-material",
+      "kind": "phrase",
+      "promptEs": "estar hecho/a de + material",
+      "questionEn": "How do you say what material something is made from?",
+      "answerEn": "Use a form of estar, then hecho, hecha, hechos, or hechas to match the thing, then de and the material.",
+      "noteEn": "Estar changes for the thing and the time: está or estaba, for example. Hecho is the completed-action form of hacer, ‘to make,’ and changes to hecha, hechos, or hechas to match the thing described. De introduces the material; the plus sign in the prompt means that the material comes next.",
+      "example": { "es": "La mesa está hecha de metal.", "en": "The table is made of metal." },
+      "tags": ["phrase", "material", "agreement", "A2"]
+    },
+    {
+      "id": "grammar-ser-de-material",
+      "kind": "grammar",
+      "promptEs": "ser de + material",
+      "questionEn": "How can you state simply what material something is made of?",
+      "answerEn": "Use the matching form of ser, then de, then the material.",
+      "noteEn": "English normally says ‘is made of,’ but Spanish can omit a separate word for ‘made’: la taza es de vidrio. Only ser changes for the thing or time; de stays unchanged, and the plus sign in the prompt means that the material comes next.",
+      "example": { "es": "Las llaves son de metal.", "en": "The keys are made of metal." },
+      "tags": ["grammar", "material", "ser", "A2"]
+    },
+    {
+      "id": "concept-wikipedia-in-popular-culture-section",
+      "kind": "concept",
+      "promptEs": "Wikipedia · sección «En la cultura popular»",
+      "answerEn": "the joke parodies encyclopedia sections that collect every passing reference to a subject in entertainment",
+      "noteEn": "Wikipedia articles have often included ‘In popular culture’ sections listing appearances in films, television, books, and games. The comic applies that format to an extremely ordinary substance and fills it with trivial examples, while the recursive title text imagines the section itself receiving the same treatment.",
+      "tags": ["concept", "Wikipedia", "internet culture", "comic joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-en-la-cultura-popular:article-title",
+      "labelEs": "MADERA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0001" }],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:article-title:w01", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00001" }], "cardIds": ["word-madera"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:article-definition",
+      "labelEs": "LA MADERA ES UN TEJIDO DURO Y FIBROSO QUE SE ENCUENTRA EN MUCHAS PLANTAS. SE HA USADO DURANTE SIGLOS TANTO COMO COMBUSTIBLE COMO MATERIAL DE CONSTRUCCIÓN PARA...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0007" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00002" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w02", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00003" }], "cardIds": ["word-madera"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w03", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00004" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w04", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00005" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w05", "text": "TEJIDO", "normalized": "tejido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00006" }], "cardIds": ["word-tejido--biological-tissue", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w06", "text": "DURO", "normalized": "duro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00007" }], "cardIds": ["word-duro--physically-hard", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w07", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00008" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w08", "text": "FIBROSO", "normalized": "fibroso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00009" }], "cardIds": ["word-fibroso", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w09", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00010" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w10", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00011" }], "cardIds": ["word-se--encontrarse-location", "phrase-encontrarse-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w11", "text": "ENCUENTRA", "normalized": "encuentra", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00012" }], "cardIds": ["word-encuentra--found-located", "phrase-encontrarse-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w12", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00013" }], "cardIds": ["word-en", "phrase-encontrarse-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w13", "text": "MUCHAS", "normalized": "muchas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00014" }], "cardIds": ["word-muchas", "phrase-encontrarse-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w14", "text": "PLANTAS", "normalized": "plantas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00015" }], "cardIds": ["word-plantas--living-plants", "phrase-encontrarse-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w15", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00016" }], "cardIds": ["word-se--passive-unnamed-doer", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w16", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00017" }], "cardIds": ["word-ha", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w17", "text": "USADO", "normalized": "usado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00018" }], "cardIds": ["word-usado--used-participle", "grammar-present-perfect", "grammar-se-passive-unnamed-doer"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w18", "text": "DURANTE", "normalized": "durante", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00019" }], "cardIds": ["word-durante"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w19", "text": "SIGLOS", "normalized": "siglos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00020" }], "cardIds": ["word-siglos"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w20", "text": "TANTO", "normalized": "tanto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00022" }], "cardIds": ["word-tanto--both-correlation", "grammar-tanto-x-como-y"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w21", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00023" }], "cardIds": ["word-como--role", "grammar-tanto-x-como-y"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w22", "text": "COMBUSTIBLE", "normalized": "combustible", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00024" }], "cardIds": ["word-combustible--fuel-noun", "grammar-tanto-x-como-y"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w23", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00025" }], "cardIds": ["word-como--role", "grammar-tanto-x-como-y"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w24", "text": "MATERIAL", "normalized": "material", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00026" }], "cardIds": ["word-material--substance", "grammar-tanto-x-como-y", "phrase-material-de-construccion"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w25", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00027" }], "cardIds": ["word-de--noun-classifier", "grammar-tanto-x-como-y", "phrase-material-de-construccion"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w26", "text": "CONSTRUCCIÓN", "normalized": "construcción", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00028" }], "cardIds": ["word-construcción", "grammar-tanto-x-como-y", "phrase-material-de-construccion"] },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:w27", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00029" }], "cardIds": ["word-para--for-purpose-noun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w05", "es-xkcd-en-la-cultura-popular:article-definition:w06", "es-xkcd-en-la-cultura-popular:article-definition:w08"], "exampleEs": "TEJIDO DURO Y FIBROSO", "explanationEn": "Tejido names the material first; duro and fibroso follow it as two neutral descriptions joined by y." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w05", "es-xkcd-en-la-cultura-popular:article-definition:w06", "es-xkcd-en-la-cultura-popular:article-definition:w08"], "exampleEs": "TEJIDO DURO Y FIBROSO", "explanationEn": "Duro and fibroso use masculine singular -o because both describe the masculine singular noun tejido." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-location", "cardId": "phrase-encontrarse-en", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w10", "es-xkcd-en-la-cultura-popular:article-definition:w11", "es-xkcd-en-la-cultura-popular:article-definition:w12", "es-xkcd-en-la-cultura-popular:article-definition:w13", "es-xkcd-en-la-cultura-popular:article-definition:w14"], "exampleEs": "SE ENCUENTRA EN MUCHAS PLANTAS", "explanationEn": "Se encuentra is singular because the located material is singular, while en muchas plantas supplies the filled location." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w16", "es-xkcd-en-la-cultura-popular:article-definition:w17"], "exampleEs": "HA USADO", "explanationEn": "Ha supplies the present helper haber, and usado is usar's completed-action form." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-passive", "cardId": "grammar-se-passive-unnamed-doer", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w15", "es-xkcd-en-la-cultura-popular:article-definition:w16", "es-xkcd-en-la-cultura-popular:article-definition:w17"], "exampleEs": "SE HA USADO", "explanationEn": "Se leaves the people doing the using unnamed, while ha usado presents that use as completed and relevant to the present." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-both", "cardId": "grammar-tanto-x-como-y", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w20", "es-xkcd-en-la-cultura-popular:article-definition:w21", "es-xkcd-en-la-cultura-popular:article-definition:w22", "es-xkcd-en-la-cultura-popular:article-definition:w23", "es-xkcd-en-la-cultura-popular:article-definition:w24", "es-xkcd-en-la-cultura-popular:article-definition:w25", "es-xkcd-en-la-cultura-popular:article-definition:w26"], "exampleEs": "TANTO COMO COMBUSTIBLE COMO MATERIAL DE CONSTRUCCIÓN", "explanationEn": "Tanto opens the first role, como combustible, and the second como introduces the parallel role material de construcción." },
+        { "id": "es-xkcd-en-la-cultura-popular:article-definition:app-construction-material", "cardId": "phrase-material-de-construccion", "participantWordIds": ["es-xkcd-en-la-cultura-popular:article-definition:w24", "es-xkcd-en-la-cultura-popular:article-definition:w25", "es-xkcd-en-la-cultura-popular:article-definition:w26"], "exampleEs": "MATERIAL DE CONSTRUCCIÓN", "explanationEn": "De links material to construcción to form the established name for material intended for building." }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:logo-name-fragment",
+      "labelEs": "EDIA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0005" }],
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:logo-name-fragment:excluded-edia", "text": "EDIA", "reason": "non-spanish-text", "rationale": "Only the clipped ending of the proper name Wikipedia remains visible at the torn image edge, so it is not a complete Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00021" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:logo-tagline-fragment",
+      "labelEs": "EDIA LIBRE",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0008" }],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:logo-tagline-fragment:w01", "text": "LIBRE", "normalized": "libre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00031" }], "cardIds": ["word-libre--free-open"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:logo-tagline-fragment:excluded-edia", "text": "EDIA", "reason": "non-spanish-text", "rationale": "This is only the visible ending of the clipped Spanish word enciclopedia, not a complete lexical occurrence.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00030" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:image-caption",
+      "labelEs": "TABLAS DE MADERA",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:image-caption:w01", "text": "TABLAS", "normalized": "tablas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00032" }], "cardIds": ["word-tablas--wooden-boards"] },
+        { "id": "es-xkcd-en-la-cultura-popular:image-caption:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00033" }], "cardIds": ["word-de--material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:image-caption:w03", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00034" }], "cardIds": ["word-madera"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:section-heading",
+      "labelEs": "EN LA CULTURA POPULAR [EDITAR]",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0011" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:w01", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00035" }], "cardIds": ["word-en", "concept-wikipedia-in-popular-culture-section"] },
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00036" }], "cardIds": ["word-la--article", "concept-wikipedia-in-popular-culture-section"] },
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:w03", "text": "CULTURA", "normalized": "cultura", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00037" }], "cardIds": ["word-cultura", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-wikipedia-in-popular-culture-section"] },
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:w04", "text": "POPULAR", "normalized": "popular", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00038" }], "cardIds": ["word-popular--widely-known", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-wikipedia-in-popular-culture-section"] },
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:w05", "text": "EDITAR", "normalized": "editar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00039" }], "cardIds": ["word-editar", "concept-wikipedia-in-popular-culture-section"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-en-la-cultura-popular:section-heading:w03", "es-xkcd-en-la-cultura-popular:section-heading:w04"], "exampleEs": "CULTURA POPULAR", "explanationEn": "Cultura names the subject first, and popular follows it as the neutral description." },
+        { "id": "es-xkcd-en-la-cultura-popular:section-heading:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-en-la-cultura-popular:section-heading:w03", "es-xkcd-en-la-cultura-popular:section-heading:w04"], "exampleEs": "CULTURA POPULAR", "explanationEn": "Popular has one singular form for both genders, so it remains popular while describing the feminine singular noun cultura." }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:firefly-reference",
+      "labelEs": "■ EN EL EPISODIO 7 DE FIREFLY, \"JAYNESTOWN\", JAYNE RECIBE UN PALO DE LLUVIA DE UN ALDEANO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w01", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00040" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00041" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w03", "text": "EPISODIO", "normalized": "episodio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00042" }], "cardIds": ["word-episodio"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00044" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w05", "text": "RECIBE", "normalized": "recibe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00048" }], "cardIds": ["word-recibe"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w06", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00049" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w07", "text": "PALO", "normalized": "palo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00050" }], "cardIds": ["word-palo--stick", "phrase-palo-de-lluvia"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00051" }], "cardIds": ["word-de--noun-classifier", "phrase-palo-de-lluvia"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w09", "text": "LLUVIA", "normalized": "lluvia", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00052" }], "cardIds": ["word-lluvia", "phrase-palo-de-lluvia"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00053" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w11", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00054" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:w12", "text": "ALDEANO", "normalized": "aldeano", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00055" }], "cardIds": ["word-aldeano"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:excluded-bullet", "text": "■", "reason": "symbol", "rationale": "This square is a list bullet, not a Spanish lexical word.", "explicitBounds": [{ "x": 19.5896, "y": 62.5641, "width": 1.4925, "height": 1.1966 }], "geometryRationale": "OCR retained the bullet only in the line-level text; this measured box isolates the printed square." },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:excluded-episode-number", "text": "7", "reason": "number", "rationale": "This numeral identifies an episode and is not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00043" }] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:excluded-firefly", "text": "FIREFLY", "reason": "non-spanish-text", "rationale": "Firefly is the unchanged English title of a television series, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00045" }] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:excluded-jaynestown", "text": "JAYNESTOWN", "reason": "non-spanish-text", "rationale": "Jaynestown is the unchanged English episode title, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00046" }] },
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:excluded-jayne", "text": "JAYNE", "reason": "non-spanish-text", "rationale": "Jayne is a character's English given name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00047" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:firefly-reference:app-rain-stick", "cardId": "phrase-palo-de-lluvia", "participantWordIds": ["es-xkcd-en-la-cultura-popular:firefly-reference:w07", "es-xkcd-en-la-cultura-popular:firefly-reference:w08", "es-xkcd-en-la-cultura-popular:firefly-reference:w09"], "exampleEs": "PALO DE LLUVIA", "explanationEn": "Palo and lluvia are joined by de to form the established name of the instrument." }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:buffy-reference",
+      "labelEs": "■ EN EL BUFFYVERSO, BUFFY SUELE MATAR VAMPIROS USANDO ESTACAS DE MADERA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w01", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00056" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w02", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00057" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w03", "text": "BUFFYVERSO", "normalized": "buffyverso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00058" }], "cardIds": ["word-buffyverso--franchise-universe"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w04", "text": "SUELE", "normalized": "suele", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00060" }], "cardIds": ["word-suele", "grammar-soler"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w05", "text": "MATAR", "normalized": "matar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00061" }], "cardIds": ["word-matar--kill", "grammar-soler"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w06", "text": "VAMPIROS", "normalized": "vampiros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00062" }], "cardIds": ["word-vampiros"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w07", "text": "USANDO", "normalized": "usando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00063" }], "cardIds": ["word-usando", "grammar-adverbial-gerund"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w08", "text": "ESTACAS", "normalized": "estacas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00064" }], "cardIds": ["word-estacas--stakes"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00065" }], "cardIds": ["word-de--material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:w10", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00066" }], "cardIds": ["word-madera"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:excluded-bullet", "text": "■", "reason": "symbol", "rationale": "This square is a list bullet, not a Spanish lexical word.", "explicitBounds": [{ "x": 19.0299, "y": 71.9658, "width": 1.4925, "height": 1.1966 }], "geometryRationale": "OCR retained the bullet only in the line-level text; this measured box isolates the printed square." },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:excluded-buffy", "text": "BUFFY", "reason": "non-spanish-text", "rationale": "Buffy is a character's English given name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00059" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:app-usual-action", "cardId": "grammar-soler", "participantWordIds": ["es-xkcd-en-la-cultura-popular:buffy-reference:w04", "es-xkcd-en-la-cultura-popular:buffy-reference:w05"], "exampleEs": "SUELE MATAR", "explanationEn": "Suele changes for the singular subject, while matar stays in its unchanged -ar dictionary form." },
+        { "id": "es-xkcd-en-la-cultura-popular:buffy-reference:app-means", "cardId": "grammar-adverbial-gerund", "participantWordIds": ["es-xkcd-en-la-cultura-popular:buffy-reference:w07"], "exampleEs": "USANDO", "explanationEn": "The -ando form names the means by which the preceding habitual action is carried out." }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference",
+      "labelEs": "■ LA VARITA DE HARRY POTTER ESTÁ HECHA DE LA MADERA DE UN ÁRBOL SAGRADO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0017" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00067" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w02", "text": "VARITA", "normalized": "varita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00068" }], "cardIds": ["word-varita--wand"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00069" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w04", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00072" }], "cardIds": ["word-está", "phrase-estar-hecho-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w05", "text": "HECHA", "normalized": "hecha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00073" }], "cardIds": ["word-hecha--made-feminine", "phrase-estar-hecho-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w06", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00074" }], "cardIds": ["word-de--material", "phrase-estar-hecho-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w07", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00075" }], "cardIds": ["word-la--article", "phrase-estar-hecho-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w08", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00076" }], "cardIds": ["word-madera", "phrase-estar-hecho-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00077" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w10", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00078" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w11", "text": "ÁRBOL", "normalized": "árbol", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00079" }], "cardIds": ["word-árbol", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:w12", "text": "SAGRADO", "normalized": "sagrado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00080" }], "cardIds": ["word-sagrado", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:excluded-bullet", "text": "■", "reason": "symbol", "rationale": "This square is a list bullet, not a Spanish lexical word.", "explicitBounds": [{ "x": 18.6567, "y": 81.3675, "width": 1.6791, "height": 1.3675 }], "geometryRationale": "OCR retained the bullet only in the line-level text; this measured box isolates the printed square." },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:excluded-harry-potter", "text": "HARRY POTTER", "reason": "non-spanish-text", "rationale": "Harry Potter is the character's unchanged English name, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00070" }, { "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00071" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:app-made-of", "cardId": "phrase-estar-hecho-de-material", "participantWordIds": ["es-xkcd-en-la-cultura-popular:harry-potter-reference:w04", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w05", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w06", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w07", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w08"], "exampleEs": "ESTÁ HECHA DE LA MADERA", "explanationEn": "Está supplies the singular state, hecha matches the feminine singular object, and de la madera fills the material slot." },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-en-la-cultura-popular:harry-potter-reference:w11", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w12"], "exampleEs": "ÁRBOL SAGRADO", "explanationEn": "Árbol names the thing first, and sagrado follows it as the neutral description." },
+        { "id": "es-xkcd-en-la-cultura-popular:harry-potter-reference:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-en-la-cultura-popular:harry-potter-reference:w11", "es-xkcd-en-la-cultura-popular:harry-potter-reference:w12"], "exampleEs": "ÁRBOL SAGRADO", "explanationEn": "Sagrado uses masculine singular -o to match the masculine singular noun árbol." }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:simpsons-reference",
+      "labelEs": "■ LA VALLA QUE RODEA EL PATIO DE LA CASA DE LOS SIMPSON ES DE MADERA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-en-la-cultura-popular:ocr-line-0019" }
+      ],
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00081" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w02", "text": "VALLA", "normalized": "valla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00082" }], "cardIds": ["word-valla--fence"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00083" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w04", "text": "RODEA", "normalized": "rodea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00084" }], "cardIds": ["word-rodea"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w05", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00085" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w06", "text": "PATIO", "normalized": "patio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00086" }], "cardIds": ["word-patio--back-yard"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00087" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00088" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w09", "text": "CASA", "normalized": "casa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00089" }], "cardIds": ["word-casa"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00090" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w11", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00091" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w12", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00093" }], "cardIds": ["word-es", "grammar-ser-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w13", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00094" }], "cardIds": ["word-de--material", "grammar-ser-de-material"] },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:w14", "text": "MADERA", "normalized": "madera", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00095" }], "cardIds": ["word-madera", "grammar-ser-de-material"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:excluded-bullet", "text": "■", "reason": "symbol", "rationale": "This square is a list bullet, not a Spanish lexical word.", "explicitBounds": [{ "x": 18.6567, "y": 90.7692, "width": 1.4925, "height": 1.1966 }], "geometryRationale": "OCR retained the bullet only in the line-level text; this measured box isolates the printed square." },
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:excluded-simpson", "text": "SIMPSON", "reason": "non-spanish-text", "rationale": "Simpson is the family's unchanged English surname, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-en-la-cultura-popular:ocr-token-00092" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-en-la-cultura-popular:simpsons-reference:app-material", "cardId": "grammar-ser-de-material", "participantWordIds": ["es-xkcd-en-la-cultura-popular:simpsons-reference:w12", "es-xkcd-en-la-cultura-popular:simpsons-reference:w13", "es-xkcd-en-la-cultura-popular:simpsons-reference:w14"], "exampleEs": "ES DE MADERA", "explanationEn": "Es supplies the singular form of ser, and de madera names the material without a separate Spanish word for ‘made.’" }
+      ]
+    },
+    {
+      "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off",
+      "labelEs": "■ EN LA SERIE DE TV DE 2004, BATTLESTAR GALACTICA",
+      "explicitBounds": [{ "x": 18.6567, "y": 97.9522, "width": 72.7612, "height": 2.0478 }],
+      "geometryRationale": "The raster deliberately cuts this fifth bullet off at the lower image edge, and OCR misread the visible upper portions; this rectangle covers exactly the remaining printed line.",
+      "words": [
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:w01", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 22.9478, "y": 98.2906, "width": 3.3582, "height": 1.5385 }], "geometryRationale": "OCR fused and misread the deliberately clipped line; this measured box isolates the visible portion of EN.", "cardIds": ["word-en"] },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:w02", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 27.6119, "y": 98.2906, "width": 2.4254, "height": 1.5385 }], "geometryRationale": "OCR fused and misread the deliberately clipped line; this measured box isolates the visible portion of LA.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:w03", "text": "SERIE", "normalized": "serie", "explicitBounds": [{ "x": 31.5299, "y": 98.2906, "width": 6.903, "height": 1.5385 }], "geometryRationale": "OCR misread the deliberately clipped word; this measured box isolates its visible upper portion.", "cardIds": ["word-serie--tv-show"] },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:w04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 39.5522, "y": 98.2906, "width": 3.1716, "height": 1.5385 }], "geometryRationale": "OCR misread the deliberately clipped word; this measured box isolates its visible upper portion.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 48.5075, "y": 98.2906, "width": 2.9851, "height": 1.5385 }], "geometryRationale": "OCR fused this word with TV; this measured box isolates the visible upper portion of the second DE.", "cardIds": ["word-de--from"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:excluded-bullet", "text": "■", "reason": "symbol", "rationale": "This partially visible square is a list bullet, not a Spanish lexical word.", "explicitBounds": [{ "x": 19.0299, "y": 98.9744, "width": 1.3059, "height": 0.6838 }], "geometryRationale": "The image edge clips the bullet; this measured box covers its visible portion only." },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:excluded-tv", "text": "TV", "reason": "non-spanish-text", "rationale": "TV is an international abbreviation for television rather than a complete Spanish lexical word.", "explicitBounds": [{ "x": 43.8433, "y": 98.2906, "width": 3.3582, "height": 1.5385 }], "geometryRationale": "OCR fused TV with the following word on the deliberately clipped line; this measured box isolates its visible portion." },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:excluded-year", "text": "2004", "reason": "number", "rationale": "This numeral identifies a year and is not Spanish vocabulary.", "explicitBounds": [{ "x": 52.7985, "y": 98.2906, "width": 6.5299, "height": 1.5385 }], "geometryRationale": "OCR converted the clipped numeral into letters; this measured box isolates all four visible digits and the comma." },
+        { "id": "es-xkcd-en-la-cultura-popular:battlestar-reference-cut-off:excluded-battlestar-galactica", "text": "BATTLESTAR GALACTICA", "reason": "non-spanish-text", "rationale": "Battlestar Galactica is the unchanged English title of a television series, not Spanish vocabulary.", "explicitBounds": [{ "x": 61.0075, "y": 98.2906, "width": 29.8507, "height": 1.5385 }], "geometryRationale": "OCR split and misread the deliberately clipped title; this measured box covers the visible portions of both title words." }
+      ],
+      "applications": []
+    }
+  ]
+}

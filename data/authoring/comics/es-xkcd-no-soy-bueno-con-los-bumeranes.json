@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-no-soy-bueno-con-los-bumeranes",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "I Am Not Good with Boomerangs",
+  "titleEs": "No soy bueno con los bumeranes",
+  "titleText": {
+    "es": "Tira bonus: lee las viñetas de la derecha hacia abajo.",
+    "en": "Bonus strip: just read the rightmost panels straight down.",
+    "noteEn": "The title text identifies an alternate bonus reading: the four panels in the rightmost column form a second sequence when read straight down."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-dejo--end-relationship",
+      "kind": "word",
+      "promptEs": "dejo",
+      "answerEn": "I am leaving; I am ending a romantic relationship",
+      "noteEn": "Dejo is the present form of dejar used by the speaker. Dejar can mean leaving a thing somewhere; with a romantic partner as the person affected, it can mean ending the relationship.",
+      "example": {
+        "es": "Hoy dejo a mi pareja.",
+        "en": "Today I am leaving my partner."
+      },
+      "tags": ["word", "dejar", "relationship", "present", "A2"]
+    },
+    {
+      "id": "phrase-dejar-a-alguien--end-relationship",
+      "kind": "phrase",
+      "promptEs": "dejar a alguien (terminar una relación)",
+      "questionEn": "How do you say that someone leaves or breaks up with a romantic partner?",
+      "answerEn": "Use a form of dejar for the person ending the relationship, then identify the partner. A short word such as me or te goes before the changed form of dejar.",
+      "noteEn": "With a named or stated partner, put a before that person: dejó a su pareja. With a short word, put it before dejar: me dejó, te dejo. Dejar changes for who ends the relationship and when; context separates this sense from leaving an object somewhere.",
+      "example": {
+        "es": "Marta dejó a su pareja.",
+        "en": "Marta broke up with her partner."
+      },
+      "tags": ["phrase", "dejar", "relationship", "object pronoun", "A2"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell",
+      "labelEs": "TE DEJO.",
+      "geometryRefs": [
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:ocr-line-0005"
+        }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell:w01",
+          "text": "TE",
+          "normalized": "te",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:ocr-token-00005"
+            }
+          ],
+          "cardIds": [
+            "word-te--direct",
+            "phrase-dejar-a-alguien--end-relationship"
+          ]
+        },
+        {
+          "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell:w02",
+          "text": "DEJO",
+          "normalized": "dejo",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:ocr-token-00006"
+            }
+          ],
+          "cardIds": [
+            "word-dejo--end-relationship",
+            "phrase-dejar-a-alguien--end-relationship"
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell:app-end-relationship",
+          "cardId": "phrase-dejar-a-alguien--end-relationship",
+          "participantWordIds": [
+            "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell:w01",
+            "es-xkcd-no-soy-bueno-con-los-bumeranes:farewell:w02"
+          ],
+          "exampleEs": "TE DEJO",
+          "explanationEn": "Te identifies the familiar singular person affected, and dejo is the speaker's present form of dejar in its relationship-ending sense."
+        }
+      ]
+    }
+  ]
+}
