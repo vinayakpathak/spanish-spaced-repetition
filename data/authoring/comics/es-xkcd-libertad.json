@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-libertad",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Freedom",
+  "titleEs": "Libertad",
+  "titleText": {
+    "es": "A veces me aterroriza pensar la cantidad de opciones que tienen otras personas.",
+    "en": "Sometimes I'm terrified to realize how many options other people have.",
+    "noteEn": "The Spanish archive and official xkcd source both identify comic #706, and their title texts are preserved exactly. The authored transcript follows the visible Spanish raster: BUM is localized printed sound text, FIJI is a proper name, and the three printed stars are symbols. OCR omitted BUM and the stars, missed accents in DEBERÍA, SÍ, and CONVERSACIÓN, read ¿NO as 2NO, split twelve words at printed line wraps, and produced one spurious V after VEZ."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-me--impresionar-experiencer",
+      "kind": "word",
+      "promptEs": "me",
+      "answerEn": "me; to me (the person who feels the impression)",
+      "noteEn": "With impresionar, me identifies the person who experiences the reaction. The thing that causes that reaction is expressed separately and controls whether the verb is singular or plural.",
+      "example": { "es": "Me impresionan tus dibujos.", "en": "Your drawings impress me." },
+      "tags": ["word", "pronoun", "impresionar", "A2"]
+    },
+    {
+      "id": "word-impresiona--strikes",
+      "kind": "word",
+      "promptEs": "impresiona",
+      "answerEn": "impresses; strikes",
+      "noteEn": "Impresiona is the present form used when one singular thing causes a strong reaction or makes an impression.",
+      "example": { "es": "Me impresiona su paciencia.", "en": "Her patience impresses me." },
+      "tags": ["word", "impresionar", "present", "A2"]
+    },
+    {
+      "id": "word-es--fixed-es-decir",
+      "kind": "word",
+      "promptEs": "es",
+      "answerEn": "part of es decir: that is; in other words",
+      "noteEn": "Within the fixed linking expression es decir, es does not independently identify what something is; the two words work together as a clarifying connector.",
+      "example": { "es": "No puedo ir, es decir, tendrás que conducir.", "en": "I cannot go; in other words, you will have to drive." },
+      "tags": ["word", "fixed expression", "discourse", "A2"]
+    },
+    { "id": "word-puñetazo", "kind": "word", "promptEs": "puñetazo", "answerEn": "punch; blow with a fist", "noteEn": "", "tags": ["word", "action", "A2"] },
+    {
+      "id": "word-hablo--speak",
+      "kind": "word",
+      "promptEs": "hablo",
+      "answerEn": "I speak; I am talking",
+      "noteEn": "Hablo is the present form of hablar for yo. Spanish can use this simple present for an action happening now where English naturally uses ‘am talking.’",
+      "example": { "es": "Ahora hablo con Marta.", "en": "I am talking with Marta now." },
+      "tags": ["word", "hablar", "present", "A1"]
+    },
+    {
+      "id": "word-se--desplegarse",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "marks that events unfold or play out",
+      "noteEn": "In the pronominal use desplegarse, events develop or play out. Se is part of that verb use; it does not mean a separate person or thing.",
+      "example": { "es": "La historia se despliega lentamente.", "en": "The story unfolds slowly." },
+      "tags": ["word", "desplegarse", "pronominal verb", "B1"]
+    },
+    {
+      "id": "word-desplegarían--unfold",
+      "kind": "word",
+      "promptEs": "desplegarían",
+      "answerEn": "would unfold; would play out",
+      "noteEn": "Desplegarían is the conditional form for plural things. With se, it describes events that would develop or play out under an imagined condition.",
+      "example": { "es": "Después se desplegarían varios cambios.", "en": "Several changes would then unfold." },
+      "tags": ["word", "desplegarse", "conditional", "B1"]
+    },
+    { "id": "word-montón--large-amount", "kind": "word", "promptEs": "montón", "answerEn": "lot; large amount", "noteEn": "", "tags": ["word", "quantity", "A2"] },
+    { "id": "word-sucesos", "kind": "word", "promptEs": "sucesos", "answerEn": "events; happenings", "noteEn": "", "tags": ["word", "events", "A2"] },
+    {
+      "id": "word-potencial--possible",
+      "kind": "word",
+      "promptEs": "potencial",
+      "answerEn": "potential; possible",
+      "noteEn": "After a noun, potencial describes a capacity or effect that may become real but is not guaranteed.",
+      "example": { "es": "Es un riesgo potencial.", "en": "It is a potential risk." },
+      "tags": ["word", "possibility", "B1"]
+    },
+    {
+      "id": "word-de--capacidad-complement",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "to; of (linking capacidad to an action)",
+      "noteEn": "After capacidad, de introduces the action that someone or something is capable of doing. English usually uses ‘to’ before that action.",
+      "example": { "es": "Tiene la capacidad de adaptarse.", "en": "She has the ability to adapt." },
+      "tags": ["word", "preposition", "capacidad", "A2"]
+    },
+    {
+      "id": "word-cambiarme--change-my-life",
+      "kind": "word",
+      "promptEs": "cambiarme",
+      "answerEn": "to change something closely connected to me; for example, to change my life",
+      "noteEn": "Cambiar is the unchanged dictionary form, and attached me marks the person affected. Spanish can then use the definite article with the affected person's body part or closely associated possession.",
+      "example": { "es": "La noticia puede cambiarme la vida.", "en": "The news can change my life." },
+      "tags": ["word", "cambiar", "attached pronoun", "affected owner", "B1"]
+    },
+    {
+      "id": "word-la--owned-item-after-me",
+      "kind": "word",
+      "promptEs": "la",
+      "answerEn": "my; literally the (when me already marks the affected owner)",
+      "noteEn": "Spanish often uses the definite article with a body part or close possession when an object pronoun already identifies the affected owner. Me supplies ‘my,’ so la still agrees with the feminine noun.",
+      "example": { "es": "Me lavé la cara.", "en": "I washed my face." },
+      "tags": ["word", "definite article", "affected owner", "A2"]
+    },
+    {
+      "id": "word-me--impedir-person",
+      "kind": "word",
+      "promptEs": "me",
+      "answerEn": "me; the person being prevented",
+      "noteEn": "With impedir, me identifies the person who is prevented from doing the following action. Spanish does not add a word corresponding to English ‘from.’",
+      "example": { "es": "El ruido me impide dormir.", "en": "The noise prevents me from sleeping." },
+      "tags": ["word", "pronoun", "impedir", "A2"]
+    },
+    {
+      "id": "word-impiden--prevent",
+      "kind": "word",
+      "promptEs": "impiden",
+      "answerEn": "prevent; stop",
+      "noteEn": "Impiden is the present form of impedir for a plural subject. A short word for the affected person normally comes before impiden, and the prevented action follows it.",
+      "example": { "es": "Las obras nos impiden pasar.", "en": "The construction works prevent us from passing." },
+      "tags": ["word", "impedir", "present", "A2"]
+    },
+    {
+      "id": "word-golpearte",
+      "kind": "word",
+      "promptEs": "golpearte",
+      "answerEn": "to hit you",
+      "noteEn": "Golpear is the unchanged dictionary form ‘to hit,’ and attached te identifies the informal singular person being hit.",
+      "example": { "es": "No quiero golpearte.", "en": "I do not want to hit you." },
+      "tags": ["word", "golpear", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-desnudarme",
+      "kind": "word",
+      "promptEs": "desnudarme",
+      "answerEn": "to undress; to take my clothes off",
+      "noteEn": "Desnudar stays in its unchanged dictionary form and attached me marks that the speaker performs the action on themself.",
+      "example": { "es": "Voy a desnudarme antes de ducharme.", "en": "I am going to undress before showering." },
+      "tags": ["word", "desnudarse", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-coger--transport",
+      "kind": "word",
+      "promptEs": "coger",
+      "answerEn": "to take; to catch (transport)",
+      "noteEn": "In Spain, coger is ordinary for taking a bus, train, or plane. In parts of the Americas it can be vulgar, so tomar or agarrar may be preferred regionally.",
+      "example": { "es": "Cogemos el tren a las ocho.", "en": "We take the train at eight." },
+      "tags": ["word", "transport", "regional usage", "A2"]
+    },
+    {
+      "id": "word-obedecen--be-due-to",
+      "kind": "word",
+      "promptEs": "obedecen",
+      "answerEn": "are due to; arise from",
+      "noteEn": "With a reason introduced by a, obedecer can formally mean that something is caused by or explained by that reason, rather than literally obeying a person.",
+      "example": { "es": "Los cambios obedecen a nuevas normas.", "en": "The changes are due to new rules." },
+      "tags": ["word", "obedecer", "cause", "B1"]
+    },
+    {
+      "id": "word-a--obedecer-cause",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "to; because of (introducing a cause after obedecer)",
+      "noteEn": "In the formal cause expression obedecer a, this a introduces the reason or cause that explains something.",
+      "example": { "es": "El retraso obedece a un error.", "en": "The delay is due to an error." },
+      "tags": ["word", "preposition", "cause", "B1"]
+    },
+    { "id": "word-razones", "kind": "word", "promptEs": "razones", "answerEn": "reasons", "noteEn": "", "tags": ["word", "reason", "A1"] },
+    {
+      "id": "word-experimentar--experience",
+      "kind": "word",
+      "promptEs": "experimentar",
+      "answerEn": "to experience; to feel firsthand",
+      "noteEn": "Experimentar can mean to experience a feeling, condition, or situation directly; it need not mean conducting a scientific experiment.",
+      "example": { "es": "Queremos experimentar algo nuevo.", "en": "We want to experience something new." },
+      "tags": ["word", "experience", "infinitive", "A2"]
+    },
+    { "id": "word-libertad", "kind": "word", "promptEs": "libertad", "answerEn": "freedom; liberty", "noteEn": "", "tags": ["word", "abstract noun", "A2"] },
+    {
+      "id": "word-sí--concessive-acknowledgment",
+      "kind": "word",
+      "promptEs": "sí",
+      "answerEn": "yes; admittedly; granted",
+      "noteEn": "At the start of a statement, sí can acknowledge that a point is true before adding a contrast, often with pero. English may use “yes,” “admittedly,” or “granted” for this use.",
+      "example": { "es": "Sí, es caro, pero dura muchos años.", "en": "Granted, it is expensive, but it lasts many years." },
+      "tags": ["word", "discourse", "concession", "contrast", "B1"]
+    },
+    {
+      "id": "word-bum--impact-sound",
+      "kind": "word",
+      "promptEs": "bum",
+      "answerEn": "boom; thump",
+      "noteEn": "Bum is a written sound effect for an impact or explosion. It can represent a sudden blow, a heavy fall, or an explosive noise.",
+      "example": { "es": "¡Bum! La caja cayó al suelo.", "en": "Thump! The box fell to the floor." },
+      "tags": ["word", "sound effect", "onomatopoeia", "A1"]
+    },
+    {
+      "id": "grammar-impresionar-experiencer",
+      "kind": "grammar",
+      "promptEs": "a alguien le impresiona algo",
+      "questionEn": "How do you say that something impresses or strikes someone?",
+      "answerEn": "Use me, te, le, nos, or les for the person who feels the reaction, then a form of impresionar that matches the thing causing it.",
+      "noteEn": "The short pronoun identifies the person affected: me for me, te for informal singular you, le for one other person, nos for us, and les for more than one other person. The cause controls the verb: Me impresiona el cuadro uses singular impresiona, while Me impresionan los cuadros uses plural impresionan.",
+      "example": { "es": "Me impresiona su paciencia.", "en": "Her patience impresses me." },
+      "tags": ["grammar", "impresionar", "experiencer", "A2"]
+    },
+    {
+      "id": "phrase-es-decir",
+      "kind": "phrase",
+      "promptEs": "es decir",
+      "questionEn": "How do you restate or clarify an idea with ‘that is’ or ‘in other words’?",
+      "answerEn": "Use es decir before the clarification.",
+      "noteEn": "Es decir is a fixed connector that reformulates what came before. It commonly appears between commas and does not change for person or time.",
+      "example": { "es": "Llegará mañana, es decir, el martes.", "en": "She will arrive tomorrow, that is, Tuesday." },
+      "tags": ["phrase", "discourse", "clarification", "A2"]
+    },
+    {
+      "id": "phrase-dar-un-punetazo-a-alguien",
+      "kind": "phrase",
+      "promptEs": "dar un puñetazo a alguien",
+      "questionEn": "How do you say that someone punches another person?",
+      "answerEn": "Use a matching form of dar, then un puñetazo, then a before the person punched.",
+      "noteEn": "Dar changes for the person and time, while un puñetazo names the blow. The a introduces the recipient of the blow. A short recipient word such as le can also mark that same person.",
+      "example": { "es": "El boxeador dio un puñetazo a su rival.", "en": "The boxer punched his opponent." },
+      "tags": ["phrase", "dar", "recipient", "A2"]
+    },
+    {
+      "id": "phrase-un-monton-de",
+      "kind": "phrase",
+      "promptEs": "un montón de + nombre",
+      "questionEn": "How do you informally say ‘a lot of’ something?",
+      "answerEn": "Use un montón de before the noun.",
+      "noteEn": "Un montón literally means a pile, but un montón de is a common informal quantity expression for a large amount or number. The noun after de may be countable or uncountable.",
+      "example": { "es": "Tenemos un montón de preguntas.", "en": "We have a lot of questions." },
+      "tags": ["phrase", "quantity", "informal", "A2"]
+    },
+    {
+      "id": "phrase-capacidad-de-infinitivo",
+      "kind": "phrase",
+      "promptEs": "capacidad de + infinitivo",
+      "questionEn": "How do you name the ability or capacity to do an action?",
+      "answerEn": "Use capacidad de, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The action verb keeps its unchanged dictionary form, whose base ends in -ar, -er, or -ir. A pronoun may be attached after that ending, as in adaptar + se = adaptarse. Capacidad names the ability and de links it to the action.",
+      "example": { "es": "Tiene capacidad de adaptarse.", "en": "She has the ability to adapt." },
+      "tags": ["phrase", "capacidad", "verb complement", "A2"]
+    },
+    {
+      "id": "grammar-impedir-a-alguien-infinitivo",
+      "kind": "grammar",
+      "promptEs": "impedir a alguien + infinitivo",
+      "questionEn": "How do you say that something prevents someone from doing an action?",
+      "answerEn": "Put a short pronoun for the affected person before a matching form of impedir, then use the action verb in its unchanged dictionary form.",
+      "noteEn": "The unchanged dictionary form ends in -ar, -er, or -ir. Spanish places the person before impedir as me, te, le, nos, or les and does not add a separate word for English ‘from’: La lluvia nos impide salir.",
+      "example": { "es": "La lluvia nos impide salir.", "en": "The rain prevents us from going out." },
+      "tags": ["grammar", "impedir", "verb complement", "A2"]
+    },
+    {
+      "id": "phrase-coger-transporte",
+      "kind": "phrase",
+      "promptEs": "coger + transporte",
+      "questionEn": "How do speakers in Spain commonly say they take or catch a bus, train, or plane?",
+      "answerEn": "Use a matching form of coger followed by the means of transport.",
+      "noteEn": "Coger changes for the person and time, and the transport noun follows it. This is ordinary usage in Spain; in parts of the Americas coger can be vulgar, so tomar or agarrar is often safer there.",
+      "example": { "es": "Cogemos el autobús cada mañana.", "en": "We take the bus every morning." },
+      "tags": ["phrase", "transport", "regional usage", "A2"]
+    },
+    {
+      "id": "phrase-obedecer-a--be-due-to",
+      "kind": "phrase",
+      "promptEs": "obedecer a + causa",
+      "questionEn": "How can formal Spanish say that something is due to or arises from a cause?",
+      "answerEn": "Use a matching form of obedecer, then a, then name the cause.",
+      "noteEn": "Obedecer changes for the thing being explained, while a introduces its cause. This formal use means ‘be due to’ or ‘arise from’; it is different from a person literally obeying an order.",
+      "example": { "es": "El retraso obedece a un error técnico.", "en": "The delay is due to a technical error." },
+      "tags": ["phrase", "cause", "formal", "B1"]
+    },
+    {
+      "id": "phrase-ver-venir-algo",
+      "kind": "phrase",
+      "promptEs": "ver venir algo",
+      "questionEn": "How do you say that someone sees an event coming or anticipates it?",
+      "answerEn": "Use the form of ver required by the larger sentence, then venir, then name the event or thing anticipated.",
+      "noteEn": "Ver may appear in forms such as veo, vi, or he visto according to the person, time, and surrounding construction. Venir stays in its unchanged dictionary form and presents the following thing as approaching figuratively, so the expression means noticing it in advance.",
+      "example": { "es": "Nadie vio venir el cambio.", "en": "Nobody saw the change coming." },
+      "tags": ["phrase", "prediction", "ver", "B1"]
+    },
+    {
+      "id": "concept-freedom-unpredictable-options-joke",
+      "kind": "concept",
+      "promptEs": "libertad · opciones imprevisibles",
+      "answerEn": "The joke treats freedom as the unsettling ability to make a wildly unexpected choice at any moment.",
+      "noteEn": "One speaker argues that ordinary self-imposed rules hide a vast field of possible life-changing actions. The sudden punch demonstrates that freedom while also proving why another person's options can be frightening; the final response celebrates precisely that failure to predict it.",
+      "tags": ["concept", "freedom", "choice", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-libertad:options-opening",
+      "labelEs": "A VECES ME IMPRESIONA LA CANTIDAD DE OPCIONES QUE TENGO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-libertad:options-opening:w01", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00010" }], "cardIds": ["word-a--fixed-a-veces", "phrase-a-veces"] },
+        { "id": "es-xkcd-libertad:options-opening:w02", "text": "VECES", "normalized": "veces", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00011" }], "cardIds": ["word-veces--a-veces", "phrase-a-veces"] },
+        { "id": "es-xkcd-libertad:options-opening:w03", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00012" }], "cardIds": ["word-me--impresionar-experiencer", "grammar-impresionar-experiencer"] },
+        { "id": "es-xkcd-libertad:options-opening:w04", "text": "IMPRESIONA", "normalized": "impresiona", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00013" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00025" }], "cardIds": ["word-impresiona--strikes", "grammar-impresionar-experiencer"] },
+        { "id": "es-xkcd-libertad:options-opening:w05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00026" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-libertad:options-opening:w06", "text": "CANTIDAD", "normalized": "cantidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00027" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00040" }], "cardIds": ["word-cantidad", "grammar-impresionar-experiencer"] },
+        { "id": "es-xkcd-libertad:options-opening:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00041" }], "cardIds": ["word-de--after-quantity"] },
+        { "id": "es-xkcd-libertad:options-opening:w08", "text": "OPCIONES", "normalized": "opciones", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00042" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00054" }], "cardIds": ["word-opciones", "grammar-relative-que", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:options-opening:w09", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00055" }], "cardIds": ["word-que--relative", "grammar-relative-que"] },
+        { "id": "es-xkcd-libertad:options-opening:w10", "text": "TENGO", "normalized": "tengo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00056" }], "cardIds": ["word-tengo", "grammar-relative-que"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-libertad:options-opening:app-a-veces", "cardId": "phrase-a-veces", "participantWordIds": ["es-xkcd-libertad:options-opening:w01", "es-xkcd-libertad:options-opening:w02"], "exampleEs": "A VECES", "explanationEn": "A veces is the fixed expression meaning that something happens on some occasions." },
+        { "id": "es-xkcd-libertad:options-opening:app-impresionar", "cardId": "grammar-impresionar-experiencer", "participantWordIds": ["es-xkcd-libertad:options-opening:w03", "es-xkcd-libertad:options-opening:w04", "es-xkcd-libertad:options-opening:w06"], "exampleEs": "ME IMPRESIONA LA CANTIDAD", "explanationEn": "Me identifies the person feeling the reaction; singular impresiona agrees with the singular cause headed by cantidad." },
+        { "id": "es-xkcd-libertad:options-opening:app-relative-que", "cardId": "grammar-relative-que", "participantWordIds": ["es-xkcd-libertad:options-opening:w08", "es-xkcd-libertad:options-opening:w09", "es-xkcd-libertad:options-opening:w10"], "exampleEs": "OPCIONES QUE TENGO", "explanationEn": "Que links opciones to tengo and introduces the description that identifies which options are meant." }
+      ]
+    },
+    {
+      "id": "es-xkcd-libertad:confused-reaction",
+      "labelEs": "¿EH?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0021" }],
+      "words": [
+        { "id": "es-xkcd-libertad:confused-reaction:w01", "text": "EH", "normalized": "eh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00081" }], "cardIds": ["word-eh--confusion"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-libertad:possible-chain",
+      "labelEs": "ES DECIR, EN CUALQUIER MOMENTO, EN CUALQUIER CONVERSACIÓN, PODRÍA DARLE UN PUÑETAZO A LA PERSONA CON LA QUE HABLO, Y SE DESPLEGARÍAN UN MONTÓN DE SUCESOS CON LA CAPACIDAD POTENCIAL DE CAMBIARME LA VIDA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0025" }
+      ],
+      "words": [
+        { "id": "es-xkcd-libertad:possible-chain:w01", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00001" }], "cardIds": ["word-es--fixed-es-decir", "phrase-es-decir"] },
+        { "id": "es-xkcd-libertad:possible-chain:w02", "text": "DECIR", "normalized": "decir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00002" }], "cardIds": ["word-decir", "phrase-es-decir"] },
+        { "id": "es-xkcd-libertad:possible-chain:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00003" }], "cardIds": ["word-en--time-point"] },
+        { "id": "es-xkcd-libertad:possible-chain:w04", "text": "CUALQUIER", "normalized": "cualquier", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00004" }], "cardIds": ["word-cualquier", "grammar-cualquier-sustantivo-singular"] },
+        { "id": "es-xkcd-libertad:possible-chain:w05", "text": "MOMENTO", "normalized": "momento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00005" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00017" }], "cardIds": ["word-momento", "grammar-cualquier-sustantivo-singular"] },
+        { "id": "es-xkcd-libertad:possible-chain:w06", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00018" }], "cardIds": ["word-en"] },
+        { "id": "es-xkcd-libertad:possible-chain:w07", "text": "CUALQUIER", "normalized": "cualquier", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00019" }], "cardIds": ["word-cualquier", "grammar-cualquier-sustantivo-singular"] },
+        { "id": "es-xkcd-libertad:possible-chain:w08", "text": "CONVERSACIÓN", "normalized": "conversación", "explicitBounds": [{ "x": 38.9527, "y": 8.2645, "width": 4.5608, "height": 4.1322 }, { "x": 18.9189, "y": 13.2231, "width": 10.1689, "height": 4.55 }], "geometryRationale": "The second printed wrap fragment uses a row-tight measured height because Vision extended it into PUÑETAZO below; both boxes together isolate CON-VERSACIÓN.", "cardIds": ["word-conversación", "grammar-cualquier-sustantivo-singular"] },
+        { "id": "es-xkcd-libertad:possible-chain:w09", "text": "PODRÍA", "normalized": "podría", "explicitBounds": [{ "x": 29.3243, "y": 13.2231, "width": 6.3851, "height": 4.55 }], "geometryRationale": "The row-tight measured box covers PODRÍA and its accent while stopping above the following printed line.", "cardIds": ["word-podría--could-option", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-libertad:possible-chain:w10", "text": "DARLE", "normalized": "darle", "explicitBounds": [{ "x": 35.9459, "y": 13.2231, "width": 5.4392, "height": 4.55 }], "geometryRationale": "The row-tight measured box covers DARLE while stopping above PERSONA on the following line.", "cardIds": ["word-darle--give-recipient", "grammar-poder-infinitive", "grammar-pronoun-attached-to-infinitive", "phrase-dar-un-punetazo-a-alguien", "grammar-indirect-object-pronoun-plus-a-clarifier"] },
+        { "id": "es-xkcd-libertad:possible-chain:w11", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 41.6216, "y": 13.2231, "width": 2.7027, "height": 4.55 }], "geometryRationale": "The row-tight measured box covers UN while stopping above CON on the following line.", "cardIds": ["word-un", "phrase-dar-un-punetazo-a-alguien"] },
+        { "id": "es-xkcd-libertad:possible-chain:w12", "text": "PUÑETAZO", "normalized": "puñetazo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00043" }], "cardIds": ["word-puñetazo", "phrase-dar-un-punetazo-a-alguien", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:possible-chain:w13", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00044" }], "cardIds": ["word-a--recipient", "phrase-dar-un-punetazo-a-alguien", "grammar-indirect-object-pronoun-plus-a-clarifier"] },
+        { "id": "es-xkcd-libertad:possible-chain:w14", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00045" }], "cardIds": ["word-la--article", "phrase-dar-un-punetazo-a-alguien", "grammar-indirect-object-pronoun-plus-a-clarifier"] },
+        { "id": "es-xkcd-libertad:possible-chain:w15", "text": "PERSONA", "normalized": "persona", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00046" }], "cardIds": ["word-persona", "phrase-dar-un-punetazo-a-alguien", "grammar-indirect-object-pronoun-plus-a-clarifier"] },
+        { "id": "es-xkcd-libertad:possible-chain:w16", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00047" }], "cardIds": ["word-con", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-libertad:possible-chain:w17", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00060" }], "cardIds": ["word-la--relative-article", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-libertad:possible-chain:w18", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00061" }], "cardIds": ["word-que--relative", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-libertad:possible-chain:w19", "text": "HABLO", "normalized": "hablo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00062" }], "cardIds": ["word-hablo--speak"] },
+        { "id": "es-xkcd-libertad:possible-chain:w20", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00063" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-libertad:possible-chain:w21", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00064" }], "cardIds": ["word-se--desplegarse"] },
+        { "id": "es-xkcd-libertad:possible-chain:w22", "text": "DESPLEGARÍAN", "normalized": "desplegarían", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00065" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00072" }], "cardIds": ["word-desplegarían--unfold", "grammar-simple-conditional"] },
+        { "id": "es-xkcd-libertad:possible-chain:w23", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00073" }], "cardIds": ["word-un", "phrase-un-monton-de"] },
+        { "id": "es-xkcd-libertad:possible-chain:w24", "text": "MONTÓN", "normalized": "montón", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00074" }], "cardIds": ["word-montón--large-amount", "phrase-un-monton-de"] },
+        { "id": "es-xkcd-libertad:possible-chain:w25", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00075" }], "cardIds": ["word-de--after-quantity", "phrase-un-monton-de"] },
+        { "id": "es-xkcd-libertad:possible-chain:w26", "text": "SUCESOS", "normalized": "sucesos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00076" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00085" }], "cardIds": ["word-sucesos"] },
+        { "id": "es-xkcd-libertad:possible-chain:w27", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00086" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-libertad:possible-chain:w28", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00087" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-libertad:possible-chain:w29", "text": "CAPACIDAD", "normalized": "capacidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00088" }], "cardIds": ["word-capacidad--ability", "phrase-capacidad-de-infinitivo", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-libertad:possible-chain:w30", "text": "POTENCIAL", "normalized": "potencial", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00089" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00092" }], "cardIds": ["word-potencial--possible", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-libertad:possible-chain:w31", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00093" }], "cardIds": ["word-de--capacidad-complement", "phrase-capacidad-de-infinitivo"] },
+        { "id": "es-xkcd-libertad:possible-chain:w32", "text": "CAMBIARME", "normalized": "cambiarme", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00094" }], "cardIds": ["word-cambiarme--change-my-life", "phrase-capacidad-de-infinitivo", "grammar-pronoun-attached-to-infinitive", "grammar-affected-owner-definite-article"] },
+        { "id": "es-xkcd-libertad:possible-chain:w33", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00095" }], "cardIds": ["word-la--owned-item-after-me", "grammar-affected-owner-definite-article"] },
+        { "id": "es-xkcd-libertad:possible-chain:w34", "text": "VIDA", "normalized": "vida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00096" }], "cardIds": ["word-vida", "grammar-affected-owner-definite-article"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-libertad:possible-chain:app-es-decir", "cardId": "phrase-es-decir", "participantWordIds": ["es-xkcd-libertad:possible-chain:w01", "es-xkcd-libertad:possible-chain:w02"], "exampleEs": "ES DECIR", "explanationEn": "Es decir introduces a restatement that clarifies the preceding idea." },
+        { "id": "es-xkcd-libertad:possible-chain:app-cualquier-momento", "cardId": "grammar-cualquier-sustantivo-singular", "participantWordIds": ["es-xkcd-libertad:possible-chain:w04", "es-xkcd-libertad:possible-chain:w05"], "exampleEs": "CUALQUIER MOMENTO", "explanationEn": "Cualquier appears before the singular noun momento to mean any moment without selecting a particular one." },
+        { "id": "es-xkcd-libertad:possible-chain:app-cualquier-conversacion", "cardId": "grammar-cualquier-sustantivo-singular", "participantWordIds": ["es-xkcd-libertad:possible-chain:w07", "es-xkcd-libertad:possible-chain:w08"], "exampleEs": "CUALQUIER CONVERSACIÓN", "explanationEn": "Cualquier appears before the singular noun conversación to mean any conversation without selecting a particular one." },
+        { "id": "es-xkcd-libertad:possible-chain:app-poder", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-libertad:possible-chain:w09", "es-xkcd-libertad:possible-chain:w10"], "exampleEs": "PODRÍA DARLE", "explanationEn": "Podría gives the imagined possibility, and darle stays in its unchanged -ar form with le attached." },
+        { "id": "es-xkcd-libertad:possible-chain:app-attached-darle", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-libertad:possible-chain:w10"], "exampleEs": "DARLE", "explanationEn": "Le is attached to the unchanged action verb dar and identifies the recipient of the action." },
+        { "id": "es-xkcd-libertad:possible-chain:app-punch", "cardId": "phrase-dar-un-punetazo-a-alguien", "participantWordIds": ["es-xkcd-libertad:possible-chain:w10", "es-xkcd-libertad:possible-chain:w11", "es-xkcd-libertad:possible-chain:w12", "es-xkcd-libertad:possible-chain:w13", "es-xkcd-libertad:possible-chain:w14", "es-xkcd-libertad:possible-chain:w15"], "exampleEs": "DARLE UN PUÑETAZO A LA PERSONA", "explanationEn": "Dar names giving the blow, un puñetazo names the punch, and a introduces the specific person struck." },
+        { "id": "es-xkcd-libertad:possible-chain:app-indirect-clarifier", "cardId": "grammar-indirect-object-pronoun-plus-a-clarifier", "participantWordIds": ["es-xkcd-libertad:possible-chain:w10", "es-xkcd-libertad:possible-chain:w13", "es-xkcd-libertad:possible-chain:w14", "es-xkcd-libertad:possible-chain:w15"], "exampleEs": "DARLE UN PUÑETAZO A LA PERSONA", "explanationEn": "Attached le marks the recipient, while a la persona states explicitly who that recipient is; un puñetazo lies inside the fragment but does not participate in this duplication pattern." },
+        { "id": "es-xkcd-libertad:possible-chain:app-relative", "cardId": "grammar-preposition-article-que-relative", "participantWordIds": ["es-xkcd-libertad:possible-chain:w16", "es-xkcd-libertad:possible-chain:w17", "es-xkcd-libertad:possible-chain:w18"], "exampleEs": "CON LA QUE", "explanationEn": "Con is required by the relationship, la agrees with the feminine person already mentioned, and que links that person to the following description." },
+        { "id": "es-xkcd-libertad:possible-chain:app-conditional", "cardId": "grammar-simple-conditional", "participantWordIds": ["es-xkcd-libertad:possible-chain:w22"], "exampleEs": "DESPLEGARÍAN", "explanationEn": "The -ían ending presents what the plural events would do in this imagined possibility." },
+        { "id": "es-xkcd-libertad:possible-chain:app-lot", "cardId": "phrase-un-monton-de", "participantWordIds": ["es-xkcd-libertad:possible-chain:w23", "es-xkcd-libertad:possible-chain:w24", "es-xkcd-libertad:possible-chain:w25"], "exampleEs": "UN MONTÓN DE", "explanationEn": "The complete informal quantity expression introduces a large number of the following events." },
+        { "id": "es-xkcd-libertad:possible-chain:app-capacity", "cardId": "phrase-capacidad-de-infinitivo", "participantWordIds": ["es-xkcd-libertad:possible-chain:w29", "es-xkcd-libertad:possible-chain:w31", "es-xkcd-libertad:possible-chain:w32"], "exampleEs": "CAPACIDAD POTENCIAL DE CAMBIARME", "explanationEn": "Capacidad names the ability, de links it to the action, and cambiarme is the unchanged action verb with me attached; potencial only describes the capacity." },
+        { "id": "es-xkcd-libertad:possible-chain:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-libertad:possible-chain:w29", "es-xkcd-libertad:possible-chain:w30"], "exampleEs": "CAPACIDAD POTENCIAL", "explanationEn": "Potencial follows capacidad as a descriptive adjective that classifies the kind of capacity." },
+        { "id": "es-xkcd-libertad:possible-chain:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-libertad:possible-chain:w29", "es-xkcd-libertad:possible-chain:w30"], "exampleEs": "CAPACIDAD POTENCIAL", "explanationEn": "Potencial stays singular to match the singular noun capacidad; its form is the same with masculine and feminine nouns." },
+        { "id": "es-xkcd-libertad:possible-chain:app-attached-cambiarme", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-libertad:possible-chain:w32"], "exampleEs": "CAMBIARME", "explanationEn": "Me is attached to the unchanged action verb cambiar and marks the person affected." },
+        { "id": "es-xkcd-libertad:possible-chain:app-affected-owner", "cardId": "grammar-affected-owner-definite-article", "participantWordIds": ["es-xkcd-libertad:possible-chain:w32", "es-xkcd-libertad:possible-chain:w33", "es-xkcd-libertad:possible-chain:w34"], "exampleEs": "CAMBIARME LA VIDA", "explanationEn": "Attached me identifies the affected owner, so Spanish uses the definite article la with the closely associated possession vida." }
+      ]
+    },
+    {
+      "id": "es-xkcd-libertad:mental-rules",
+      "labelEs": "SÓLO MIS REGLAS MENTALES ME IMPIDEN GOLPEARTE, O DESNUDARME, O COGER UN AVIÓN A FIJI. SÍ, ESTAS REGLAS OBEDECEN A RAZONES, PERO ¿NO DEBERÍAMOS EXPERIMENTAR ESA LIBERTAD AL MENOS UNA VEZ EN LA VIDA?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0030" }
+      ],
+      "words": [
+        { "id": "es-xkcd-libertad:mental-rules:w01", "text": "SÓLO", "normalized": "sólo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00006" }], "cardIds": ["word-sólo--only"] },
+        { "id": "es-xkcd-libertad:mental-rules:w02", "text": "MIS", "normalized": "mis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00007" }], "cardIds": ["word-mis"] },
+        { "id": "es-xkcd-libertad:mental-rules:w03", "text": "REGLAS", "normalized": "reglas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00008" }], "cardIds": ["word-reglas", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:mental-rules:w04", "text": "MENTALES", "normalized": "mentales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00009" }, { "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00021" }], "cardIds": ["word-mentales", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:mental-rules:w05", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00022" }], "cardIds": ["word-me--impedir-person", "grammar-impedir-a-alguien-infinitivo"] },
+        { "id": "es-xkcd-libertad:mental-rules:w06", "text": "IMPIDEN", "normalized": "impiden", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00023" }], "cardIds": ["word-impiden--prevent", "grammar-impedir-a-alguien-infinitivo"] },
+        { "id": "es-xkcd-libertad:mental-rules:w07", "text": "GOLPEARTE", "normalized": "golpearte", "explicitBounds": [{ "x": 61.4189, "y": 9.0909, "width": 8.3108, "height": 4.9587 }, { "x": 47.027, "y": 14.876, "width": 2.7027, "height": 5.45 }], "geometryRationale": "The second printed wrap fragment uses a row-tight measured height because Vision extended it into GER below; together the boxes isolate GOLPEAR-TE.", "cardIds": ["word-golpearte", "grammar-impedir-a-alguien-infinitivo", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-libertad:mental-rules:w08", "text": "O", "normalized": "o", "explicitBounds": [{ "x": 50, "y": 14.876, "width": 1.6216, "height": 5.45 }], "geometryRationale": "The row-tight measured box covers O while stopping above the following printed line.", "cardIds": ["word-o"] },
+        { "id": "es-xkcd-libertad:mental-rules:w09", "text": "DESNUDARME", "normalized": "desnudarme", "explicitBounds": [{ "x": 51.8919, "y": 14.876, "width": 12.1622, "height": 5.45 }], "geometryRationale": "The row-tight measured box covers DESNUDARME while stopping above UN AVIÓN below.", "cardIds": ["word-desnudarme", "grammar-infinitive-attached-pronominal-marker", "grammar-impedir-a-alguien-infinitivo"] },
+        { "id": "es-xkcd-libertad:mental-rules:w10", "text": "O", "normalized": "o", "explicitBounds": [{ "x": 64.3243, "y": 14.876, "width": 1.6216, "height": 5.45 }], "geometryRationale": "The row-tight measured box covers O while stopping above FIJI on the following line.", "cardIds": ["word-o"] },
+        { "id": "es-xkcd-libertad:mental-rules:w11", "text": "COGER", "normalized": "coger", "explicitBounds": [{ "x": 66.2162, "y": 14.876, "width": 3.5135, "height": 5.45 }, { "x": 47.027, "y": 20.6612, "width": 3.6486, "height": 4.9587 }], "geometryRationale": "The first printed wrap fragment uses a row-tight measured height because Vision extended it into SÍ below; both boxes together isolate CO-GER.", "cardIds": ["word-coger--transport", "phrase-coger-transporte", "grammar-impedir-a-alguien-infinitivo"] },
+        { "id": "es-xkcd-libertad:mental-rules:w12", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00049" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-libertad:mental-rules:w13", "text": "AVIÓN", "normalized": "avión", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00050" }], "cardIds": ["word-avión", "phrase-coger-transporte"] },
+        { "id": "es-xkcd-libertad:mental-rules:w14", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00051" }], "cardIds": ["word-a--destination"] },
+        { "id": "es-xkcd-libertad:mental-rules:w15", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00053" }], "cardIds": ["word-sí--concessive-acknowledgment"] },
+        { "id": "es-xkcd-libertad:mental-rules:w16", "text": "ESTAS", "normalized": "estas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00066" }], "cardIds": ["word-estas--demonstrative"] },
+        { "id": "es-xkcd-libertad:mental-rules:w17", "text": "REGLAS", "normalized": "reglas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00067" }], "cardIds": ["word-reglas"] },
+        { "id": "es-xkcd-libertad:mental-rules:w18", "text": "OBEDECEN", "normalized": "obedecen", "explicitBounds": [{ "x": 59.7973, "y": 26.4463, "width": 8.9865, "height": 5.3 }], "geometryRationale": "The row-tight measured box covers OBEDECEN while stopping above the slanted DEBE fragment below.", "cardIds": ["word-obedecen--be-due-to", "phrase-obedecer-a--be-due-to"] },
+        { "id": "es-xkcd-libertad:mental-rules:w19", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 69.0203, "y": 26.4463, "width": 1.25, "height": 5.3 }], "geometryRationale": "The row-tight measured box covers A while stopping above the slanted DEBE fragment below.", "cardIds": ["word-a--obedecer-cause", "phrase-obedecer-a--be-due-to"] },
+        { "id": "es-xkcd-libertad:mental-rules:w20", "text": "RAZONES", "normalized": "razones", "explicitBounds": [{ "x": 47.0135, "y": 32.742, "width": 8.3014, "height": 4.9 }], "geometryRationale": "The row-tight measured box follows the slanted RAZONES baseline and stops above RÍAMOS and EXPERIMENTAR.", "cardIds": ["word-razones", "phrase-obedecer-a--be-due-to"] },
+        { "id": "es-xkcd-libertad:mental-rules:w21", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 55.5264, "y": 32.5432, "width": 4.9895, "height": 4.95 }], "geometryRationale": "The row-tight measured box follows the slanted PERO baseline and stops above EXPERIMENTAR.", "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-libertad:mental-rules:w22", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 60.7287, "y": 32.3805, "width": 4.0436, "height": 5.1 }], "geometryRationale": "The checked box corrects Vision's 2NO reading, includes the opening question mark and NO, and stops above EXPERIMENTAR.", "cardIds": ["word-no", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-libertad:mental-rules:w23", "text": "DEBERÍAMOS", "normalized": "deberíamos", "explicitBounds": [{ "x": 64.9851, "y": 32.1799, "width": 5.0363, "height": 5.25 }, { "x": 47.027, "y": 38.0165, "width": 6.8919, "height": 4.9587 }], "geometryRationale": "The first printed wrap fragment uses a row-tight measured box to stop above the next line; both boxes isolate DEBE-RÍAMOS and preserve the visible accent.", "cardIds": ["word-deberíamos", "grammar-deber-conditional-advice", "grammar-simple-conditional", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-libertad:mental-rules:w24", "text": "EXPERIMENTAR", "normalized": "experimentar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00091" }], "cardIds": ["word-experimentar--experience", "grammar-deber-conditional-advice", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-libertad:mental-rules:w25", "text": "ESA", "normalized": "esa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00097" }], "cardIds": ["word-esa"] },
+        { "id": "es-xkcd-libertad:mental-rules:w26", "text": "LIBERTAD", "normalized": "libertad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00098" }], "cardIds": ["word-libertad", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:mental-rules:w27", "text": "AL", "normalized": "al", "explicitBounds": [{ "x": 46.7568, "y": 49.5868, "width": 2.4324, "height": 5.0 }], "geometryRationale": "The row-tight measured box covers AL and stops above UNA on the next printed line.", "cardIds": ["word-al--fixed-al-menos", "phrase-al-menos"] },
+        { "id": "es-xkcd-libertad:mental-rules:w28", "text": "MENOS", "normalized": "menos", "explicitBounds": [{ "x": 49.4595, "y": 49.5868, "width": 6.4865, "height": 5.0 }], "geometryRationale": "The row-tight measured box covers MENOS and stops above UNA VEZ on the next printed line.", "cardIds": ["word-menos--fixed-al-menos", "phrase-al-menos"] },
+        { "id": "es-xkcd-libertad:mental-rules:w29", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00101" }], "cardIds": ["word-una--one-time"] },
+        { "id": "es-xkcd-libertad:mental-rules:w30", "text": "VEZ", "normalized": "vez", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00102" }], "cardIds": ["word-vez"] },
+        { "id": "es-xkcd-libertad:mental-rules:w31", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 46.7568, "y": 61.9835, "width": 2.8378, "height": 4.45 }], "geometryRationale": "The row-tight measured box covers EN and stops above VIDA on the final printed line.", "cardIds": ["word-en"] },
+        { "id": "es-xkcd-libertad:mental-rules:w32", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 49.8311, "y": 61.9835, "width": 2.3311, "height": 4.45 }], "geometryRationale": "The row-tight measured box covers LA and stops above VIDA on the final printed line.", "cardIds": ["word-la--generic-abstract-noun"] },
+        { "id": "es-xkcd-libertad:mental-rules:w33", "text": "VIDA", "normalized": "vida", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00106" }], "cardIds": ["word-vida"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-libertad:mental-rules:excluded-fiji", "text": "FIJI", "reason": "non-spanish-text", "rationale": "FIJI is the printed proper name of the Pacific island country rather than a Spanish lexical target.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00052" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-libertad:mental-rules:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-libertad:mental-rules:w03", "es-xkcd-libertad:mental-rules:w04"], "exampleEs": "REGLAS MENTALES", "explanationEn": "Mentales follows reglas as a descriptive adjective that classifies what kind of rules they are." },
+        { "id": "es-xkcd-libertad:mental-rules:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-libertad:mental-rules:w03", "es-xkcd-libertad:mental-rules:w04"], "exampleEs": "REGLAS MENTALES", "explanationEn": "Mentales takes the plural ending -es to match plural reglas; its form is the same with masculine and feminine nouns." },
+        { "id": "es-xkcd-libertad:mental-rules:app-impedir", "cardId": "grammar-impedir-a-alguien-infinitivo", "participantWordIds": ["es-xkcd-libertad:mental-rules:w05", "es-xkcd-libertad:mental-rules:w06", "es-xkcd-libertad:mental-rules:w07"], "exampleEs": "ME IMPIDEN GOLPEARTE", "explanationEn": "Me identifies the person prevented, impiden agrees with the plural rules, and golpearte supplies the prevented action without an extra word for English ‘from.’" },
+        { "id": "es-xkcd-libertad:mental-rules:app-impedir-desnudarme", "cardId": "grammar-impedir-a-alguien-infinitivo", "participantWordIds": ["es-xkcd-libertad:mental-rules:w09"], "exampleEs": "DESNUDARME", "explanationEn": "Desnudarme is the second coordinated action prevented by the earlier me impiden; the shared prevented-person and verb do not need to be repeated." },
+        { "id": "es-xkcd-libertad:mental-rules:app-impedir-coger", "cardId": "grammar-impedir-a-alguien-infinitivo", "participantWordIds": ["es-xkcd-libertad:mental-rules:w11"], "exampleEs": "COGER", "explanationEn": "Coger begins the third coordinated action prevented by the earlier me impiden; the shared prevented-person and verb do not need to be repeated." },
+        { "id": "es-xkcd-libertad:mental-rules:app-attached-golpearte", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-libertad:mental-rules:w07"], "exampleEs": "GOLPEARTE", "explanationEn": "Te is attached to the unchanged action verb golpear and identifies the informal singular person affected." },
+        { "id": "es-xkcd-libertad:mental-rules:app-pronominal-desnudarme", "cardId": "grammar-infinitive-attached-pronominal-marker", "participantWordIds": ["es-xkcd-libertad:mental-rules:w09"], "exampleEs": "DESNUDARME", "explanationEn": "The self-marker me is attached to desnudar while that action verb remains in its unchanged dictionary form." },
+        { "id": "es-xkcd-libertad:mental-rules:app-coger-transport", "cardId": "phrase-coger-transporte", "participantWordIds": ["es-xkcd-libertad:mental-rules:w11", "es-xkcd-libertad:mental-rules:w13"], "exampleEs": "COGER UN AVIÓN", "explanationEn": "Coger names taking transport and avión names the means of transport; un simply supplies its article." },
+        { "id": "es-xkcd-libertad:mental-rules:app-obedecer-cause", "cardId": "phrase-obedecer-a--be-due-to", "participantWordIds": ["es-xkcd-libertad:mental-rules:w18", "es-xkcd-libertad:mental-rules:w19", "es-xkcd-libertad:mental-rules:w20"], "exampleEs": "OBEDECEN A RAZONES", "explanationEn": "Obedecen agrees with the plural rules, and a introduces the reasons that explain them rather than a person being obeyed." },
+        { "id": "es-xkcd-libertad:mental-rules:app-deber", "cardId": "grammar-deber-conditional-advice", "participantWordIds": ["es-xkcd-libertad:mental-rules:w23", "es-xkcd-libertad:mental-rules:w24"], "exampleEs": "DEBERÍAMOS EXPERIMENTAR", "explanationEn": "Deberíamos makes a softened proposal about what ‘we’ should do, and experimentar stays in its unchanged dictionary form." },
+        { "id": "es-xkcd-libertad:mental-rules:app-simple-conditional", "cardId": "grammar-simple-conditional", "participantWordIds": ["es-xkcd-libertad:mental-rules:w23"], "exampleEs": "DEBERÍAMOS", "explanationEn": "The ending -íamos is added to the full dictionary form deber to express what ‘we’ would or should do." },
+        { "id": "es-xkcd-libertad:mental-rules:app-yes-no-question", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-libertad:mental-rules:w22", "es-xkcd-libertad:mental-rules:w23", "es-xkcd-libertad:mental-rules:w24"], "exampleEs": "NO DEBERÍAMOS EXPERIMENTAR", "explanationEn": "The surrounding opening and closing question marks turn the statement-shaped sequence into a yes-or-no question; no makes the proposed action negative." },
+        { "id": "es-xkcd-libertad:mental-rules:app-al-menos", "cardId": "phrase-al-menos", "participantWordIds": ["es-xkcd-libertad:mental-rules:w27", "es-xkcd-libertad:mental-rules:w28"], "exampleEs": "AL MENOS", "explanationEn": "Al menos sets a minimum rather than an exact number of occasions." }
+      ]
+    },
+    {
+      "id": "es-xkcd-libertad:impact-sound",
+      "labelEs": "BUM",
+      "explicitBounds": [{ "x": 71.6, "y": 7.0, "width": 6.8, "height": 82.0 }],
+      "geometryRationale": "The measured region encloses the three vertically stacked letters of the localized impact sound; Vision omitted this stylized text.",
+      "words": [
+        { "id": "es-xkcd-libertad:impact-sound:w01", "text": "BUM", "normalized": "bum", "explicitBounds": [{ "x": 72.4, "y": 7.0, "width": 5.8, "height": 23.3 }, { "x": 72.0, "y": 36.1, "width": 6.1, "height": 23.3 }, { "x": 71.6, "y": 65.6, "width": 6.8, "height": 23.3 }], "geometryRationale": "The three measured boxes isolate the separately stacked B, U, and M that together spell one localized sound word; each includes the complete stylized letter that Vision omitted.", "cardIds": ["word-bum--impact-sound", "concept-freedom-unpredictable-options-joke"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-libertad:should-have-known",
+      "labelEs": "VALE, DEBERÍA HABER VISTO VENIR ESO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-libertad:should-have-known:w01", "text": "VALE", "normalized": "vale", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00014" }], "cardIds": ["word-vale"] },
+        { "id": "es-xkcd-libertad:should-have-known:w02", "text": "DEBERÍA", "normalized": "debería", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00015" }], "cardIds": ["word-debería", "grammar-simple-conditional", "grammar-deberia-haber-participle"] },
+        { "id": "es-xkcd-libertad:should-have-known:w03", "text": "HABER", "normalized": "haber", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00016" }], "cardIds": ["word-haber--perfect-helper", "grammar-deberia-haber-participle"] },
+        { "id": "es-xkcd-libertad:should-have-known:w04", "text": "VISTO", "normalized": "visto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00028" }], "cardIds": ["word-visto--seen", "grammar-deberia-haber-participle", "phrase-ver-venir-algo", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:should-have-known:w05", "text": "VENIR", "normalized": "venir", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00029" }], "cardIds": ["word-venir", "phrase-ver-venir-algo", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:should-have-known:w06", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00030" }], "cardIds": ["word-eso", "phrase-ver-venir-algo"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-libertad:should-have-known:app-conditional", "cardId": "grammar-simple-conditional", "participantWordIds": ["es-xkcd-libertad:should-have-known:w02"], "exampleEs": "DEBERÍA", "explanationEn": "The -ía ending presents what the speaker says they should have done in hindsight." },
+        { "id": "es-xkcd-libertad:should-have-known:app-should-have", "cardId": "grammar-deberia-haber-participle", "participantWordIds": ["es-xkcd-libertad:should-have-known:w02", "es-xkcd-libertad:should-have-known:w03", "es-xkcd-libertad:should-have-known:w04"], "exampleEs": "DEBERÍA HABER VISTO", "explanationEn": "Debería gives the hindsight judgment, haber builds a completed action, and visto is the completed-action form of ver." },
+        { "id": "es-xkcd-libertad:should-have-known:app-see-coming", "cardId": "phrase-ver-venir-algo", "participantWordIds": ["es-xkcd-libertad:should-have-known:w04", "es-xkcd-libertad:should-have-known:w05", "es-xkcd-libertad:should-have-known:w06"], "exampleEs": "VISTO VENIR ESO", "explanationEn": "Visto is the completed form of ver, venir presents eso as figuratively approaching, and eso names what should have been anticipated." }
+      ]
+    },
+    {
+      "id": "es-xkcd-libertad:unpredictable-reply",
+      "labelEs": "¡PERO NO HAS PODIDO! ¡ESO ES LO BONITO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-libertad:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-libertad:unpredictable-reply:w01", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00057" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00058" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w03", "text": "HAS", "normalized": "has", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00059" }], "cardIds": ["word-has", "grammar-present-perfect"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w04", "text": "PODIDO", "normalized": "podido", "explicitBounds": [{ "x": 84.3243, "y": 28.0992, "width": 7.2973, "height": 5.2 }], "geometryRationale": "The row-tight measured box covers PODIDO and its exclamation mark while stopping above ES LO BONITO below.", "cardIds": ["word-podido", "grammar-present-perfect", "concept-freedom-unpredictable-options-joke"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w05", "text": "ESO", "normalized": "eso", "explicitBounds": [{ "x": 91.8919, "y": 28.0992, "width": 4.8649, "height": 5.2 }], "geometryRationale": "The row-tight measured box covers the opening exclamation mark and ESO while stopping above BONITO below.", "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00082" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w07", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00083" }], "cardIds": ["word-lo--neutral-article", "grammar-lo-adjective-as-noun"] },
+        { "id": "es-xkcd-libertad:unpredictable-reply:w08", "text": "BONITO", "normalized": "bonito", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-libertad:ocr-token-00084" }], "cardIds": ["word-bonito--lovely", "grammar-lo-adjective-as-noun", "concept-freedom-unpredictable-options-joke"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-libertad:unpredictable-reply:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-libertad:unpredictable-reply:w03", "es-xkcd-libertad:unpredictable-reply:w04"], "exampleEs": "HAS PODIDO", "explanationEn": "Has matches informal singular you, and podido supplies the completed ability connected to the present exchange." },
+        { "id": "es-xkcd-libertad:unpredictable-reply:app-lo-adjective", "cardId": "grammar-lo-adjective-as-noun", "participantWordIds": ["es-xkcd-libertad:unpredictable-reply:w07", "es-xkcd-libertad:unpredictable-reply:w08"], "exampleEs": "LO BONITO", "explanationEn": "Neutral lo turns bonito into an abstract idea: the lovely or nice part of the situation rather than a masculine object." }
+      ]
+    },
+    {
+      "id": "es-xkcd-libertad:impact-stars",
+      "labelEs": "* * *",
+      "explicitBounds": [{ "x": 80.8, "y": 58.5, "width": 4.0, "height": 21.3 }],
+      "geometryRationale": "The measured region encloses the three separate printed impact stars beside the fallen figure and no dialogue text.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-libertad:impact-stars:excluded-star-1", "text": "*", "occurrence": 1, "reason": "symbol", "rationale": "This printed star is an impact or dazed-state symbol rather than a Spanish lexical unit.", "explicitBounds": [{ "x": 82.15, "y": 58.5, "width": 1.25, "height": 4.6 }], "geometryRationale": "The source-pixel-measured box isolates the highest printed star without touching the nearby motion line." },
+        { "id": "es-xkcd-libertad:impact-stars:excluded-star-2", "text": "*", "occurrence": 2, "reason": "symbol", "rationale": "This printed star is an impact or dazed-state symbol rather than a Spanish lexical unit.", "explicitBounds": [{ "x": 83.35, "y": 67.2, "width": 1.4, "height": 4.6 }], "geometryRationale": "The source-pixel-measured box isolates the middle printed star without touching the nearby motion line." },
+        { "id": "es-xkcd-libertad:impact-stars:excluded-star-3", "text": "*", "occurrence": 3, "reason": "symbol", "rationale": "This printed star is an impact or dazed-state symbol rather than a Spanish lexical unit.", "explicitBounds": [{ "x": 80.8, "y": 75.1, "width": 1.4, "height": 4.6 }], "geometryRationale": "The source-pixel-measured box isolates the lowest printed star without touching the fallen figure." }
+      ],
+      "applications": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-hoguera",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Campfire",
+  "titleEs": "Hoguera",
+  "titleText": {
+    "es": "100 años después, esta historia sigue siendo aterradora. No porque el asesino esté en la red local, sino porque sigue usando IPv4.",
+    "en": "100 years later, this story remains terrifying--not because it's the local network block, but because the killer is still on IPv4.",
+    "noteEn": "Both title attributes are preserved exactly, including the official double hyphen. OCR omitted the accent in AVERIGUÓ, fused the complete 192.168/16 network prefix into three identical boxes, and misread the initial inverted exclamation mark before GLUPS as a dotted capital I."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-averiguó--found-out",
+      "kind": "word",
+      "promptEs": "averiguó",
+      "answerEn": "he or she found out; discovered",
+      "noteEn": "Averiguó is a completed-past form of averiguar for one person or thing. The written accent marks the stressed final syllable.",
+      "example": { "es": "Ella averiguó la verdad ayer.", "en": "She found out the truth yesterday." },
+      "tags": ["word", "discovery", "preterite", "third person", "A2"]
+    },
+    {
+      "id": "word-asesino--killer-noun",
+      "kind": "word",
+      "promptEs": "asesino",
+      "answerEn": "killer; murderer (a person)",
+      "noteEn": "As a noun, asesino names a male killer or a person whose gender is not being specified. Asesina is the feminine form.",
+      "example": { "es": "La policía busca al asesino.", "en": "The police are looking for the killer." },
+      "tags": ["word", "person", "crime", "noun", "A2"]
+    },
+    {
+      "id": "word-bloque--network-block",
+      "kind": "word",
+      "promptEs": "bloque",
+      "answerEn": "block; range (of network addresses)",
+      "noteEn": "In networking, a bloque is a group or range of addresses identified by one prefix.",
+      "example": { "es": "Ese bloque contiene muchas direcciones de red.", "en": "That block contains many network addresses." },
+      "tags": ["word", "networking", "addresses", "technical", "B1"]
+    },
+    {
+      "id": "word-glups--gulp-reaction",
+      "kind": "word",
+      "promptEs": "glups",
+      "answerEn": "gulp! (a nervous or alarmed reaction)",
+      "noteEn": "Glups imitates the sound of swallowing and is written as a reaction when someone suddenly feels afraid, worried, or embarrassed.",
+      "example": { "es": "¡Glups! Olvidé las llaves.", "en": "Gulp! I forgot the keys." },
+      "tags": ["word", "onomatopoeia", "reaction", "fear", "A1"]
+    },
+    {
+      "id": "concept-private-ipv4-local-network-horror",
+      "kind": "concept",
+      "promptEs": "asesino · bloque 192.168/16 · red local · IPv4",
+      "questionEn": "Why does the network prefix turn the campfire story into a technical horror joke?",
+      "answerEn": "192.168.0.0/16 is private IPv4 address space, so an address in that block suggests that the killer is on the same local network rather than somewhere remote.",
+      "noteEn": "The abbreviated prefix 192.168/16 denotes the private-use range from 192.168.0.0 through 192.168.255.255 reserved by RFC 1918. The listener's alarm treats local-network proximity like the classic horror reveal that danger is already inside. The title text adds a second programmer joke: a century later, continuing to use IPv4 would itself be frighteningly outdated.",
+      "tags": ["concept", "IPv4", "private network", "RFC 1918", "horror joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-hoguera:network-horror-story",
+      "labelEs": "PERO CUANDO AVERIGUÓ LA IP DEL ASESINO... ¡ESTABA EN EL BLOQUE 192.168/16!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-hoguera:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-hoguera:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-hoguera:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-hoguera:network-horror-story:w01", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 11.6788, "y": 12.3188, "width": 16.0584, "height": 5.6 }], "geometryRationale": "The first-row height is tightened above the next handwritten row.", "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w02", "text": "CUANDO", "normalized": "cuando", "explicitBounds": [{ "x": 28.4672, "y": 12.3188, "width": 21.8978, "height": 5.6 }], "geometryRationale": "The first-row height is tightened above the next handwritten row.", "cardIds": ["word-cuando--when"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w03", "text": "AVERIGUÓ", "normalized": "averiguó", "explicitBounds": [{ "x": 51.0949, "y": 12.3188, "width": 26.2774, "height": 5.6 }], "geometryRationale": "The source-checked box restores the printed final accent and remains within the first row.", "cardIds": ["word-averiguó--found-out", "grammar-past-contrast", "concept-private-ipv4-local-network-horror"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w04", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 78.1022, "y": 12.3188, "width": 7.2993, "height": 5.6 }], "geometryRationale": "The first-row height is tightened above the next handwritten row.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w05", "text": "DEL", "normalized": "del", "explicitBounds": [{ "x": 16.7883, "y": 18.1159, "width": 10.0365, "height": 5.65 }], "geometryRationale": "The second-row band isolates DEL between the excluded initialism and ASESINO.", "cardIds": ["word-del--of-the"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w06", "text": "ASESINO", "normalized": "asesino", "explicitBounds": [{ "x": 27.7372, "y": 18.1159, "width": 28.2847, "height": 5.65 }], "geometryRationale": "The second-row band isolates the noun and excludes the following ellipsis.", "cardIds": ["word-asesino--killer-noun", "concept-private-ipv4-local-network-horror"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w07", "text": "ESTABA", "normalized": "estaba", "explicitBounds": [{ "x": 56.9343, "y": 18.1159, "width": 22.8102, "height": 5.65 }], "geometryRationale": "The second-row height stops before the final row.", "cardIds": ["word-estaba--state", "grammar-past-contrast", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w08", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 80.6569, "y": 18.1159, "width": 7.6642, "height": 5.65 }], "geometryRationale": "The second-row height stops before the final row.", "cardIds": ["word-en", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w09", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 18.2482, "y": 23.913, "width": 6.5693, "height": 6.0 }], "geometryRationale": "The final-row box isolates EL.", "cardIds": ["word-el--article", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-hoguera:network-horror-story:w10", "text": "BLOQUE", "normalized": "bloque", "explicitBounds": [{ "x": 25.6387, "y": 23.913, "width": 22.1715, "height": 6.0 }], "geometryRationale": "The final-row box isolates BLOQUE before the network prefix.", "cardIds": ["word-bloque--network-block", "grammar-ser-identity-estar-location", "concept-private-ipv4-local-network-horror"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-hoguera:network-horror-story:x01", "text": "IP", "reason": "symbol", "rationale": "IP is a technical initialism rather than a full Spanish lexical word in the image.", "explicitBounds": [{ "x": 9.4891, "y": 18.1159, "width": 6.3869, "height": 5.65 }], "geometryRationale": "The second-row band isolates the printed initialism." },
+        { "id": "es-xkcd-hoguera:network-horror-story:x02", "text": "192.168/16", "reason": "symbol", "rationale": "This dotted-and-slashed IPv4 network prefix is technical notation rather than Spanish vocabulary.", "explicitBounds": [{ "x": 48.6314, "y": 23.913, "width": 30.3, "height": 6.0 }], "geometryRationale": "Vision assigned the same fused box to three fragments; this checked box accounts for the complete visible prefix once while excluding the final exclamation mark." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-hoguera:network-horror-story:app-completed-discovery", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-hoguera:network-horror-story:w03"], "exampleEs": "AVERIGUÓ", "explanationEn": "Averiguó uses the preterite because it presents finding out as one completed discovery." },
+        { "id": "es-xkcd-hoguera:network-horror-story:app-background-location", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-hoguera:network-horror-story:w07"], "exampleEs": "ESTABA", "explanationEn": "Estaba uses the imperfect because it describes the address's background location at the time of the discovery." },
+        { "id": "es-xkcd-hoguera:network-horror-story:app-estar-location", "cardId": "grammar-ser-identity-estar-location", "participantWordIds": ["es-xkcd-hoguera:network-horror-story:w07", "es-xkcd-hoguera:network-horror-story:w08", "es-xkcd-hoguera:network-horror-story:w09", "es-xkcd-hoguera:network-horror-story:w10"], "exampleEs": "ESTABA EN EL BLOQUE", "explanationEn": "Estaba is a form of estar because en el bloque states where the address was located rather than what it was." }
+      ]
+    },
+    {
+      "id": "es-xkcd-hoguera:gulp-reaction",
+      "labelEs": "¡GLUPS!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-hoguera:ocr-line-0004" }],
+      "words": [
+        { "id": "es-xkcd-hoguera:gulp-reaction:w01", "text": "GLUPS", "normalized": "glups", "explicitBounds": [{ "x": 68.6, "y": 41.3, "width": 17.5, "height": 9.5 }], "geometryRationale": "The source-measured box covers GLUPS while excluding both adjacent exclamation marks.", "cardIds": ["word-glups--gulp-reaction", "concept-private-ipv4-local-network-horror"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    }
+  ]
+}

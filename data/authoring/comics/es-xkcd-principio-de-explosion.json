@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-principio-de-explosion",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Principle of Explosion",
+  "titleEs": "Principio de explosión",
+  "titleText": {
+    "es": "¿Quiere que lleve cucuruchos de galleta? Ah, claro, para el vino. Un segundo, déjeme derivar el número de tarjeta de crédito de su hijo y me pondré en camino.",
+    "en": "You want me to pick up waffle cones? Oh, right, for the wine. One sec, let me just derive your son's credit card number and I'll be on my way.",
+    "noteEn": "The Spanish archive and official xkcd source both identify comic #704, published 2010-02-19; their title texts are preserved exactly. The Spanish archive credits Gabriel Rodríguez Alberich as translator. The authored transcript follows the visible Spanish raster: it joins the printed line wraps CON-/TRADICTORIOS, OB-/TENER, and EXPLO-/SIÓN; restores ESTE ES SU NÚMERO and DE where OCR omitted them; preserves the logical formula P∧¬P as one excluded unit; and corrects missing written accents in RAZÓN, EMPECÉ, TELÉFONO, ASÍ, CÓMO, SÍ, MAMÁ, and CARTÓN. OCR's OJ and standalone dash are drawing and speech-tail strokes, not printed textual units."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-asumes",
+      "kind": "word",
+      "promptEs": "asumes",
+      "answerEn": "you assume; you accept as a starting point",
+      "noteEn": "Asumes is the present form of asumir used with one familiar listener. In reasoning, asumir can mean accepting an idea temporarily as a premise.",
+      "example": { "es": "Asumes que el dato es correcto.", "en": "You assume that the fact is correct." },
+      "tags": ["word", "reasoning", "present", "tú", "A2"]
+    },
+    {
+      "id": "word-axiomas",
+      "kind": "word",
+      "promptEs": "axiomas",
+      "answerEn": "axioms",
+      "noteEn": "An axioma is a statement accepted as a starting point in a system of mathematics or logic. Axiomas is its plural form.",
+      "example": { "es": "La demostración parte de dos axiomas.", "en": "The proof starts from two axioms." },
+      "tags": ["word", "logic", "mathematics", "plural", "B1"]
+    },
+    {
+      "id": "word-contradictorios",
+      "kind": "word",
+      "promptEs": "contradictorios",
+      "answerEn": "contradictory (masculine plural)",
+      "noteEn": "Contradictorios describes masculine plural things whose claims cannot all be true together. Its -os ending matches a masculine plural noun.",
+      "example": { "es": "Los informes son contradictorios.", "en": "The reports are contradictory." },
+      "tags": ["word", "description", "logic", "masculine plural", "B1"]
+    },
+    {
+      "id": "word-principio--logic-principle",
+      "kind": "word",
+      "promptEs": "principio",
+      "answerEn": "principle; fundamental rule",
+      "noteEn": "In logic or another technical field, principio can name a basic rule or proposition. This differs from al principio, which refers to the beginning of something.",
+      "example": { "es": "Es un principio básico de la lógica.", "en": "It is a basic principle of logic." },
+      "tags": ["word", "logic", "technical sense", "masculine noun", "B1"]
+    },
+    {
+      "id": "word-explosión--logic",
+      "kind": "word",
+      "promptEs": "explosión",
+      "answerEn": "explosion (a technical term in logic)",
+      "noteEn": "In this named logical principle, explosión refers to the result that any claim can be derived after a contradiction is accepted. In that technical sense it does not describe a physical blast.",
+      "example": { "es": "La explosión es un resultado de la lógica clásica.", "en": "Explosion is a result in classical logic." },
+      "tags": ["word", "logic", "technical sense", "feminine noun", "B2"]
+    },
+    {
+      "id": "word-a--fixed-a-ver",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; begins a ver, “let's see”",
+      "noteEn": "In the conversational expression a ver, a combines with ver rather than expressing movement toward a place.",
+      "example": { "es": "A ver, enséñame el mapa.", "en": "Let's see, show me the map." },
+      "tags": ["word", "fixed expression", "conversation", "A2"]
+    },
+    {
+      "id": "word-ver--fixed-a-ver",
+      "kind": "word",
+      "promptEs": "ver",
+      "answerEn": "see; completes a ver, “let's see”",
+      "noteEn": "Ver normally means to see. After a in the short expression a ver, it helps signal that the speaker is pausing to inspect, consider, or find something out.",
+      "example": { "es": "A ver, ¿qué hay aquí?", "en": "Let's see, what is here?" },
+      "tags": ["word", "fixed expression", "conversation", "A2"]
+    },
+    {
+      "id": "word-conseguido--obtained",
+      "kind": "word",
+      "promptEs": "conseguido",
+      "answerEn": "obtained; got",
+      "noteEn": "Conseguido is the completed-action form of conseguir. After he, it says that the speaker has succeeded in obtaining a stated thing.",
+      "example": { "es": "He conseguido una entrada.", "en": "I have obtained a ticket." },
+      "tags": ["word", "obtain", "past participle", "A2"]
+    },
+    {
+      "id": "word-teléfono--number",
+      "kind": "word",
+      "promptEs": "teléfono",
+      "answerEn": "phone number",
+      "noteEn": "Teléfono can name the device itself or the number used to call someone. Context distinguishes the two senses.",
+      "example": { "es": "Apunté tu teléfono en mi agenda.", "en": "I wrote your phone number in my address book." },
+      "tags": ["word", "communication", "contextual sense", "A2"]
+    },
+    {
+      "id": "word-libre--available",
+      "kind": "word",
+      "promptEs": "libre",
+      "answerEn": "available; free (not busy)",
+      "noteEn": "With estar, libre can describe a person who has no commitment at a particular time. Libre has the same singular form for masculine and feminine people.",
+      "example": { "es": "Marta está libre el sábado.", "en": "Marta is available on Saturday." },
+      "tags": ["word", "availability", "description", "A2"]
+    },
+    {
+      "id": "word-vino",
+      "kind": "word",
+      "promptEs": "vino",
+      "answerEn": "wine",
+      "noteEn": "Vino is the masculine noun for wine. The same written form can also be a past form of venir, but a drink or packaging context identifies the noun.",
+      "example": { "es": "Sirvieron vino con la cena.", "en": "They served wine with dinner." },
+      "tags": ["word", "drink", "masculine noun", "A1"]
+    },
+    {
+      "id": "word-de--packaging",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "in; packaged as (linking a product to its container)",
+      "noteEn": "De can link a product to a noun that identifies its packaging. It does not say that the product itself is made from that packaging material.",
+      "example": { "es": "La tienda vende cerveza de lata.", "en": "The shop sells canned beer." },
+      "tags": ["word", "packaging", "noun link", "A2"]
+    },
+    {
+      "id": "word-cartón",
+      "kind": "word",
+      "promptEs": "cartón",
+      "answerEn": "cardboard; carton",
+      "noteEn": "Cartón names cardboard and can also refer to packaging made from it, such as a carton or box.",
+      "example": { "es": "Guardó la leche en un cartón.", "en": "She kept the milk in a carton." },
+      "tags": ["word", "material", "packaging", "masculine noun", "A2"]
+    },
+    {
+      "id": "phrase-a-ver",
+      "kind": "phrase",
+      "promptEs": "a ver",
+      "questionEn": "How can you pause to inspect or consider something with the sense of “let's see” or “let me see”?",
+      "answerEn": "Use the short expression a ver.",
+      "noteEn": "A ver often introduces a pause while the speaker checks, considers, or waits to discover something. The two words work together as a conversational expression; it is not the same as haber, the one-word verb used in forms such as hay.",
+      "example": { "es": "A ver, ¿qué tenemos aquí?", "en": "Let's see, what do we have here?" },
+      "tags": ["phrase", "conversation", "discourse", "A2"]
+    },
+    {
+      "id": "phrase-estar-libre--available",
+      "kind": "phrase",
+      "promptEs": "estar libre",
+      "questionEn": "How do you say that someone is available or not busy at a particular time?",
+      "answerEn": "Use a matching form of estar followed by libre.",
+      "noteEn": "Estar changes for the person and time: estoy libre, está libre, and so on. Libre stays the same for one man or woman and becomes libres for more than one person. Ser libre usually describes being free rather than availability in a schedule.",
+      "example": { "es": "Clara está libre el viernes.", "en": "Clara is available on Friday." },
+      "tags": ["phrase", "availability", "estar", "A2"]
+    },
+    {
+      "id": "phrase-esta-noche",
+      "kind": "phrase",
+      "promptEs": "esta noche",
+      "questionEn": "What is the usual Spanish expression for “tonight”?",
+      "answerEn": "Say esta noche.",
+      "noteEn": "Esta means “this” and uses its feminine singular form to match noche. Spanish normally uses this two-word time expression without a preposition.",
+      "example": { "es": "Cenamos juntos esta noche.", "en": "We are having dinner together tonight." },
+      "tags": ["phrase", "time", "demonstrative", "A1"]
+    },
+    {
+      "id": "phrase-vino-de-carton",
+      "kind": "phrase",
+      "promptEs": "vino de cartón",
+      "questionEn": "What common Spanish expression refers to wine sold in a carton or box?",
+      "answerEn": "Say vino de cartón for boxed or carton wine.",
+      "noteEn": "Vino names the drink, while de cartón identifies the type of packaging. The expression often suggests inexpensive wine, especially in Spain.",
+      "example": { "es": "Compraron vino de cartón para la fiesta.", "en": "They bought boxed wine for the party." },
+      "tags": ["phrase", "drink", "packaging", "Spain", "A2"]
+    },
+    {
+      "id": "concept-principle-of-explosion-logic-joke",
+      "kind": "concept",
+      "promptEs": "principio de explosión · P∧¬P",
+      "answerEn": "In classical logic, accepting both a claim and its negation makes it possible to derive any claim.",
+      "noteEn": "P∧¬P represents a proposition P together with ‘not P,’ a direct contradiction. The principle is called explosion because unrestricted conclusions then follow. The joke treats those conclusions as a way to obtain unrelated personal facts and plans rather than merely proving propositions.",
+      "tags": ["concept", "logic", "contradiction", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-principio-de-explosion:logic-explanation",
+      "labelEs": "SI ASUMES AXIOMAS CONTRADICTORIOS, PUEDES OBTENER CUALQUIER COSA. SE LLAMA PRINCIPIO DE EXPLOSIÓN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0013" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w01", "text": "SI", "normalized": "si", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00006" }], "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w02", "text": "ASUMES", "normalized": "asumes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00007" }], "cardIds": ["word-asumes", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w03", "text": "AXIOMAS", "normalized": "axiomas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00008" }], "cardIds": ["word-axiomas", "grammar-masculine-ma-nouns", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w04", "text": "CONTRADICTORIOS", "normalized": "contradictorios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00009" }, { "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00013" }], "cardIds": ["word-contradictorios", "grammar-masculine-ma-nouns", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w05", "text": "PUEDES", "normalized": "puedes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00014" }], "cardIds": ["word-puedes", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w06", "text": "OBTENER", "normalized": "obtener", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00015" }, { "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00018" }], "cardIds": ["word-obtener", "grammar-poder-infinitive", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w07", "text": "CUALQUIER", "normalized": "cualquier", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00019" }], "cardIds": ["word-cualquier", "grammar-cualquier-sustantivo-singular", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w08", "text": "COSA", "normalized": "cosa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00020" }], "cardIds": ["word-cosa", "grammar-cualquier-sustantivo-singular", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w09", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00021" }], "cardIds": ["word-se--llamarse", "grammar-llamarse-name"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w10", "text": "LLAMA", "normalized": "llama", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00027" }], "cardIds": ["word-llama--called", "grammar-llamarse-name"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w11", "text": "PRINCIPIO", "normalized": "principio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00028" }], "cardIds": ["word-principio--logic-principle", "grammar-llamarse-name", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w12", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00029" }], "cardIds": ["word-de--of", "grammar-llamarse-name"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:w13", "text": "EXPLOSIÓN", "normalized": "explosión", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00030" }, { "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00038" }], "cardIds": ["word-explosión--logic", "grammar-llamarse-name", "concept-principle-of-explosion-logic-joke"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w01", "es-xkcd-principio-de-explosion:logic-explanation:w02"], "exampleEs": "SI ASUMES", "explanationEn": "Si introduces the possible condition, and asumes uses the ordinary present form for one familiar listener." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-masculine-axioma", "cardId": "grammar-masculine-ma-nouns", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w03", "es-xkcd-principio-de-explosion:logic-explanation:w04"], "exampleEs": "AXIOMAS CONTRADICTORIOS", "explanationEn": "Axiomas is masculine despite its final -a, so contradictorios uses the matching masculine plural ending." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-adjective-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w03", "es-xkcd-principio-de-explosion:logic-explanation:w04"], "exampleEs": "AXIOMAS CONTRADICTORIOS", "explanationEn": "Contradictorios follows axiomas in the common neutral order for a descriptive adjective." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-adjective-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w03", "es-xkcd-principio-de-explosion:logic-explanation:w04"], "exampleEs": "AXIOMAS CONTRADICTORIOS", "explanationEn": "Contradictorios uses masculine plural -os to match the masculine plural noun axiomas." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-can-obtain", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w05", "es-xkcd-principio-de-explosion:logic-explanation:w06"], "exampleEs": "PUEDES OBTENER", "explanationEn": "Puedes changes for one familiar listener, while obtener remains in its unchanged -er dictionary form as the possible action." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-anything", "cardId": "grammar-cualquier-sustantivo-singular", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w07", "es-xkcd-principio-de-explosion:logic-explanation:w08"], "exampleEs": "CUALQUIER COSA", "explanationEn": "Cualquier appears before the singular noun cosa and keeps the shortened form used directly before a noun." },
+        { "id": "es-xkcd-principio-de-explosion:logic-explanation:app-called", "cardId": "grammar-llamarse-name", "participantWordIds": ["es-xkcd-principio-de-explosion:logic-explanation:w09", "es-xkcd-principio-de-explosion:logic-explanation:w10", "es-xkcd-principio-de-explosion:logic-explanation:w11", "es-xkcd-principio-de-explosion:logic-explanation:w12", "es-xkcd-principio-de-explosion:logic-explanation:w13"], "exampleEs": "SE LLAMA PRINCIPIO DE EXPLOSIÓN", "explanationEn": "Se matches the one principle being named, llama is the corresponding form of llamarse, and principio de explosión fills the name slot." }
+      ]
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:anything-reaction",
+      "labelEs": "¿CUALQUIER COSA? A VER...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0021" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:w01", "text": "CUALQUIER", "normalized": "cualquier", "explicitBounds": [{ "x": 12.973, "y": 32.5397, "width": 10.5405, "height": 4.2 }], "geometryRationale": "Vision's first question-row box crossed the lettering below; this row-tight box follows CUALQUIER and stops above COSA.", "cardIds": ["word-cualquier", "grammar-cualquier-sustantivo-singular", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:w02", "text": "COSA", "normalized": "cosa", "explicitBounds": [{ "x": 11.4878, "y": 36.9873, "width": 6.8237, "height": 8.15 }], "geometryRationale": "Vision's second question-row box extended fractionally into A VER; this checked height retains COSA and its question mark while stopping above the next row.", "cardIds": ["word-cosa", "grammar-cualquier-sustantivo-singular", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:w03", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00049" }], "cardIds": ["word-a--fixed-a-ver", "phrase-a-ver"] },
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:w04", "text": "VER", "normalized": "ver", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00050" }], "cardIds": ["word-ver--fixed-a-ver", "phrase-a-ver"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:app-anything", "cardId": "grammar-cualquier-sustantivo-singular", "participantWordIds": ["es-xkcd-principio-de-explosion:anything-reaction:w01", "es-xkcd-principio-de-explosion:anything-reaction:w02"], "exampleEs": "CUALQUIER COSA", "explanationEn": "Cualquier appears before singular cosa and keeps the shortened form used directly before a noun." },
+        { "id": "es-xkcd-principio-de-explosion:anything-reaction:app-lets-see", "cardId": "phrase-a-ver", "participantWordIds": ["es-xkcd-principio-de-explosion:anything-reaction:w03", "es-xkcd-principio-de-explosion:anything-reaction:w04"], "exampleEs": "A VER", "explanationEn": "The two-word conversational expression marks the speaker's pause to test or consider the claim." }
+      ]
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:phone-number-claim",
+      "labelEs": "¡OYE, TIENES RAZÓN! EMPECÉ CON P∧¬P Y HE CONSEGUIDO EL TELÉFONO DE TU MADRE!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0004" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w01", "text": "OYE", "normalized": "oye", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00001" }], "cardIds": ["word-oye--attention", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w02", "text": "TIENES", "normalized": "tienes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00002" }], "cardIds": ["word-tienes", "phrase-tener-razon"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w03", "text": "RAZÓN", "normalized": "razón", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00003" }], "cardIds": ["word-razón", "phrase-tener-razon"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w04", "text": "EMPECÉ", "normalized": "empecé", "explicitBounds": [{ "x": 44.3243, "y": 10.3175, "width": 8.2095, "height": 7.1427 }], "geometryRationale": "Vision's box crossed the next printed row by a ten-thousandth of the image height; this checked height ends immediately above it.", "cardIds": ["word-empecé--began", "grammar-past-contrast"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w05", "text": "CON", "normalized": "con", "explicitBounds": [{ "x": 52.8378, "y": 10.3175, "width": 4.2568, "height": 7.1427 }], "geometryRationale": "Vision's box crossed the next printed row by a ten-thousandth of the image height; this checked height ends immediately above it.", "cardIds": ["word-con"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w06", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00022" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w07", "text": "HE", "normalized": "he", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00023" }], "cardIds": ["word-he", "grammar-present-perfect"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w08", "text": "CONSEGUIDO", "normalized": "conseguido", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00024" }], "cardIds": ["word-conseguido--obtained", "grammar-present-perfect", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w09", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00025" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w10", "text": "TELÉFONO", "normalized": "teléfono", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00031" }], "cardIds": ["word-teléfono--number", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00032" }], "cardIds": ["word-de--ownership"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w12", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00033" }], "cardIds": ["word-tu"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:w13", "text": "MADRE", "normalized": "madre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00039" }], "cardIds": ["word-madre", "concept-principle-of-explosion-logic-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:x01", "text": "P∧¬P", "reason": "non-spanish-text", "rationale": "P∧¬P is symbolic propositional-logic notation for a proposition and its negation, not a Spanish lexical word.", "explicitBounds": [{ "x": 57.3986, "y": 10.3175, "width": 7.7365, "height": 7.1427 }], "geometryRationale": "Vision's formula box crossed the following row by a ten-thousandth of the image height; this checked height retains the notation and ends immediately above that row." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:app-oye-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-number-claim:w01"], "exampleEs": "OYE", "explanationEn": "Oye is the affirmative tú command of oír and works as an attention-getter for one familiar listener." },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:app-right", "cardId": "phrase-tener-razon", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-number-claim:w02", "es-xkcd-principio-de-explosion:phone-number-claim:w03"], "exampleEs": "TIENES RAZÓN", "explanationEn": "Tienes matches one familiar listener, and razón completes the conventional expression for saying that person is right." },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:app-completed-start", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-number-claim:w04"], "exampleEs": "EMPECÉ", "explanationEn": "Empecé uses the completed-past form because it presents the start as one bounded event." },
+        { "id": "es-xkcd-principio-de-explosion:phone-number-claim:app-present-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-number-claim:w07", "es-xkcd-principio-de-explosion:phone-number-claim:w08"], "exampleEs": "HE CONSEGUIDO", "explanationEn": "He is the speaker's present helper form of haber, and conseguido supplies the completed action whose result matters now." }
+      ]
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:logic-objection",
+      "labelEs": "ASÍ NO FUNCIONA...",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0022" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:logic-objection:w01", "text": "ASÍ", "normalized": "así", "explicitBounds": [{ "x": 45.4054, "y": 40.4762, "width": 3.3446, "height": 4.7619 }], "geometryRationale": "Vision used the height of two nearby rows; this checked box follows only ASÍ and stops above FUNCIONA.", "cardIds": ["word-así--like-that"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-objection:w02", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 49.0541, "y": 40.4762, "width": 2.5676, "height": 4.7619 }], "geometryRationale": "Vision used the height of two nearby rows; this checked box follows only NO and stops above FUNCIONA.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-principio-de-explosion:logic-objection:w03", "text": "FUNCIONA", "normalized": "funciona", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00051" }], "cardIds": ["word-funciona--works"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:formal-address",
+      "labelEs": "¿SEÑORA LENHART?",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:formal-address:w01", "text": "SEÑORA", "normalized": "señora", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00004" }], "cardIds": ["word-señora--title"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-principio-de-explosion:formal-address:x01", "text": "LENHART", "reason": "non-spanish-text", "rationale": "Lenhart is an unchanged personal surname, not a Spanish lexical word target.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00005" }] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:number-confirmation",
+      "labelEs": "UN MOMENTO, ¡ESTE ES SU NÚMERO! ¿CÓMO...?",
+      "explicitBounds": [{ "x": 68.6, "y": 12.4, "width": 20.0, "height": 18.0 }],
+      "geometryRationale": "Vision detected only the first and last rows of this bubble; this checked region box covers all three printed rows, including the omitted middle identity statement.",
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w01", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 68.908, "y": 12.6984, "width": 2.4546, "height": 4.7619 }], "geometryRationale": "Vision read the printed UN as AN and used a box tall enough to cross the next row; this measured box follows only the visible letters.", "cardIds": ["word-un", "phrase-un-momento-interruption"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w02", "text": "MOMENTO", "normalized": "momento", "explicitBounds": [{ "x": 71.6444, "y": 12.6984, "width": 9.7178, "height": 4.7619 }], "geometryRationale": "Vision's row-height box crossed the statement below; this measured box follows only MOMENTO and its adjacent comma.", "cardIds": ["word-momento", "phrase-un-momento-interruption"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w03", "text": "ESTE", "normalized": "este", "explicitBounds": [{ "x": 83.1081, "y": 12.6984, "width": 5.2703, "height": 4.7619 }], "geometryRationale": "Vision omitted this word; the direct box was measured from the visible first row and excludes the opening exclamation mark.", "cardIds": ["word-este", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w04", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 68.908, "y": 18.6508, "width": 2.5676, "height": 3.9683 }], "geometryRationale": "Vision omitted the middle row; this measured box isolates ES above the separate CÓMO row.", "cardIds": ["word-es", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w05", "text": "SU", "normalized": "su", "explicitBounds": [{ "x": 72.027, "y": 18.6508, "width": 2.5676, "height": 3.9683 }], "geometryRationale": "Vision omitted the middle row; this measured box isolates SU between the neighboring words.", "cardIds": ["word-su--your-formal-or-plural", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w06", "text": "NÚMERO", "normalized": "número", "explicitBounds": [{ "x": 74.8649, "y": 18.6508, "width": 7.7027, "height": 3.9683 }], "geometryRationale": "Vision omitted the middle row; this measured box follows NÚMERO and remains above CÓMO.", "cardIds": ["word-número", "grammar-ser-identity-estar-location", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:w07", "text": "CÓMO", "normalized": "cómo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00026" }], "cardIds": ["word-cómo", "question-words"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:app-interruption", "cardId": "phrase-un-momento-interruption", "participantWordIds": ["es-xkcd-principio-de-explosion:number-confirmation:w01", "es-xkcd-principio-de-explosion:number-confirmation:w02"], "exampleEs": "UN MOMENTO", "explanationEn": "The conventional two-word expression briefly interrupts the exchange while the speaker checks something." },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:app-identity", "cardId": "grammar-ser-identity-estar-location", "participantWordIds": ["es-xkcd-principio-de-explosion:number-confirmation:w03", "es-xkcd-principio-de-explosion:number-confirmation:w04", "es-xkcd-principio-de-explosion:number-confirmation:w05", "es-xkcd-principio-de-explosion:number-confirmation:w06"], "exampleEs": "ESTE ES SU NÚMERO", "explanationEn": "Es is a form of ser because su número identifies what the masculine demonstrative este refers to rather than locating it." },
+        { "id": "es-xkcd-principio-de-explosion:number-confirmation:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-principio-de-explosion:number-confirmation:w07"], "exampleEs": "¿CÓMO...?", "explanationEn": "Cómo keeps its written accent because it begins a direct question, even though the speaker trails off." }
+      ]
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:phone-conversation",
+      "labelEs": "HOLA, SOY UN AMIGO DE... SÍ, ¡ESTOY LIBRE ESTA NOCHE!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0017" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w01", "text": "HOLA", "normalized": "hola", "explicitBounds": [{ "x": 80.2703, "y": 26.9841, "width": 5.2027, "height": 4.5 }], "geometryRationale": "Vision's first-row box crossed the row below; this measured height follows only HOLA and its adjacent comma.", "cardIds": ["word-hola"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w02", "text": "SOY", "normalized": "soy", "explicitBounds": [{ "x": 85.7095, "y": 26.9841, "width": 3.5473, "height": 4.5 }], "geometryRationale": "Vision's first-row box crossed the row below; this measured height follows only SOY.", "cardIds": ["word-soy--identity", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w03", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 89.4932, "y": 26.9841, "width": 2.8378, "height": 4.5 }], "geometryRationale": "Vision's first-row box crossed the row below; this measured height follows only UN.", "cardIds": ["word-un", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w04", "text": "AMIGO", "normalized": "amigo", "explicitBounds": [{ "x": 92.5676, "y": 26.9841, "width": 5.5405, "height": 4.5 }], "geometryRationale": "Vision's first-row box crossed the row below; this measured height follows only AMIGO.", "cardIds": ["word-amigo", "grammar-ser-identity-estar-location"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w05", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 80.2703, "y": 31.746, "width": 2.5676, "height": 4.5 }], "geometryRationale": "Vision omitted this short word on the second row; the measured box isolates DE, leaves its ellipsis outside, and stops above ESTA.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w06", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 84.5946, "y": 31.746, "width": 2.3649, "height": 4.5 }], "geometryRationale": "Vision's second-row box crossed the row below; this measured height follows only SÍ and its adjacent comma.", "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w07", "text": "ESTOY", "normalized": "estoy", "explicitBounds": [{ "x": 87.1959, "y": 31.746, "width": 6.3851, "height": 4.5 }], "geometryRationale": "Vision's second-row box crossed the row below; this measured height follows only ESTOY.", "cardIds": ["word-estoy--state", "phrase-estar-libre--available"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w08", "text": "LIBRE", "normalized": "libre", "explicitBounds": [{ "x": 93.8176, "y": 31.746, "width": 4.8311, "height": 4.5 }], "geometryRationale": "Vision's second-row box crossed the row below; this measured height follows only LIBRE.", "cardIds": ["word-libre--available", "phrase-estar-libre--available"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w09", "text": "ESTA", "normalized": "esta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00044" }], "cardIds": ["word-esta--demonstrative", "phrase-esta-noche"] },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:w10", "text": "NOCHE", "normalized": "noche", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00045" }], "cardIds": ["word-noche", "phrase-esta-noche"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:app-identity", "cardId": "grammar-ser-identity-estar-location", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-conversation:w02", "es-xkcd-principio-de-explosion:phone-conversation:w03", "es-xkcd-principio-de-explosion:phone-conversation:w04"], "exampleEs": "SOY UN AMIGO", "explanationEn": "Soy is a form of ser because un amigo states the speaker's claimed identity rather than a location." },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:app-available", "cardId": "phrase-estar-libre--available", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-conversation:w07", "es-xkcd-principio-de-explosion:phone-conversation:w08"], "exampleEs": "ESTOY LIBRE", "explanationEn": "Estoy matches the speaker, and libre describes the speaker's current availability." },
+        { "id": "es-xkcd-principio-de-explosion:phone-conversation:app-tonight", "cardId": "phrase-esta-noche", "participantWordIds": ["es-xkcd-principio-de-explosion:phone-conversation:w09", "es-xkcd-principio-de-explosion:phone-conversation:w10"], "exampleEs": "ESTA NOCHE", "explanationEn": "Esta uses its feminine singular form to match noche in the standard two-word time expression." }
+      ]
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:mother-reaction",
+      "labelEs": "¡MAMÁ!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0023" }],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:mother-reaction:w01", "text": "MAMÁ", "normalized": "mamá", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00052" }], "cardIds": ["word-mamá"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-principio-de-explosion:boxed-wine-reply",
+      "labelEs": "¡NO, EL VINO DE CARTÓN SUENA GENIAL!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-principio-de-explosion:ocr-line-0027" }
+      ],
+      "words": [
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 85.1351, "y": 52.381, "width": 3.5473, "height": 3.7 }], "geometryRationale": "Vision's first-row box crossed the compact row below; this checked row-tight height isolates NO and its comma.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w02", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 88.9189, "y": 52.381, "width": 2.3649, "height": 3.7 }], "geometryRationale": "Vision's first-row box crossed the compact row below; this checked row-tight height isolates EL.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w03", "text": "VINO", "normalized": "vino", "explicitBounds": [{ "x": 91.5203, "y": 52.381, "width": 4.7297, "height": 3.7 }], "geometryRationale": "Vision's first-row box crossed the compact row below; this checked row-tight height isolates VINO.", "cardIds": ["word-vino", "phrase-vino-de-carton", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w04", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 96.4865, "y": 52.381, "width": 2.4324, "height": 3.7 }], "geometryRationale": "Vision's first-row box crossed the compact row below; this checked row-tight height isolates DE.", "cardIds": ["word-de--packaging", "phrase-vino-de-carton"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w05", "text": "CARTÓN", "normalized": "cartón", "explicitBounds": [{ "x": 84.8522, "y": 56.1228, "width": 6.5123, "height": 6.57 }], "geometryRationale": "Vision's second-row box crossed the final row by a few thousandths of the image height; this checked height retains CARTÓN and its accent while ending above GENIAL.", "cardIds": ["word-cartón", "phrase-vino-de-carton", "concept-principle-of-explosion-logic-joke"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w06", "text": "SUENA", "normalized": "suena", "explicitBounds": [{ "x": 91.6085, "y": 56.3639, "width": 5.9718, "height": 6.5609 }], "geometryRationale": "The checked OCR box follows the second-row word without intersecting the separate final-row word to its left.", "cardIds": ["word-suena--sounds-description", "grammar-sonar-description"] },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:w07", "text": "GENIAL", "normalized": "genial", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-principio-de-explosion:ocr-token-00060" }], "cardIds": ["word-genial--great", "grammar-sonar-description"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:app-boxed-wine", "cardId": "phrase-vino-de-carton", "participantWordIds": ["es-xkcd-principio-de-explosion:boxed-wine-reply:w03", "es-xkcd-principio-de-explosion:boxed-wine-reply:w04", "es-xkcd-principio-de-explosion:boxed-wine-reply:w05"], "exampleEs": "VINO DE CARTÓN", "explanationEn": "Vino names the drink, and de cartón identifies its carton or box packaging." },
+        { "id": "es-xkcd-principio-de-explosion:boxed-wine-reply:app-sounds", "cardId": "grammar-sonar-description", "participantWordIds": ["es-xkcd-principio-de-explosion:boxed-wine-reply:w06", "es-xkcd-principio-de-explosion:boxed-wine-reply:w07"], "exampleEs": "SUENA GENIAL", "explanationEn": "Suena is followed directly by genial, which supplies the speaker's description of how the idea sounds." }
+      ]
+    }
+  ]
+}
