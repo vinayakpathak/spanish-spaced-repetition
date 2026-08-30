@@ -7,6 +7,7 @@ import {
   buildGeometryRegistry,
   compileManualAuthoringCorpus,
   searchableCardIndex,
+  tokenizeAuthoredSpanish,
   validateManualAuthoringCorpus,
 } from "../scripts/lib/manual-authoring.mjs";
 
@@ -175,6 +176,18 @@ function validInputs() {
   };
 }
 
+test("letter-by-letter display text remains one clickable lexical unit", () => {
+  assert.deepEqual(
+    tokenizeAuthoredSpanish("L-O-S V-I-D-E-N-T-E-S NP-COMPLETOS"),
+    [
+      { text: "L-O-S", normalized: "l-o-s" },
+      { text: "V-I-D-E-N-T-E-S", normalized: "v-i-d-e-n-t-e-s" },
+      { text: "NP", normalized: "np" },
+      { text: "COMPLETOS", normalized: "completos" },
+    ],
+  );
+});
+
 test("manual authoring compiles corrected text and multi-line geometry into lazy bundles", () => {
   const inputs = validInputs();
   assert.deepEqual(
@@ -330,6 +343,24 @@ test("explicit exclusions preserve numbers, equations, and non-Spanish text with
       { text: "4 m/s^2", reason: "measurement" },
       { text: "MR. MUNROE", reason: "non-spanish-text" },
     ],
+  );
+
+  const nonLatinText = validInputs();
+  nonLatinText.artifacts[0].regions[0].labelEs = "SI LLUEVE ⠎⠊⠛⠓⠞⠑⠙";
+  nonLatinText.artifacts[0].regions[0].excludedUnits = [
+    {
+      id: "comic-one:bubble-1:excluded-english-braille",
+      text: "⠎⠊⠛⠓⠞⠑⠙",
+      reason: "non-spanish-text",
+      rationale: "These Braille cells encode an English word rather than Spanish curriculum text.",
+      explicitBounds: [{ x: 40, y: 10, width: 15, height: 5 }],
+      geometryRationale: "The synthetic fixture has no OCR geometry for the Braille cells.",
+    },
+  ];
+  assert.deepEqual(
+    validateManualAuthoringCorpus(nonLatinText),
+    [],
+    "non-Spanish text in an unrecognized writing system remains an explicit exclusion",
   );
 
   const unexplained = validInputs();

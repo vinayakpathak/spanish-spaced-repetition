@@ -15,7 +15,11 @@ export const SEMANTIC_QA_CHECKS = Object.freeze([
   "wholeSentenceTranslationAidsAbsent",
 ]);
 
-const WORD_TOKEN_PATTERN = /[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu;
+// Keep deliberately spelled-out words such as L-O-S as one lexical unit.
+// The boundary guards stop an ordinary hyphenated form such as NP-COMPLETOS
+// from being misread as a sequence that begins at its final single letter.
+const WORD_TOKEN_PATTERN =
+  /(?<!\p{L})(?:\p{L}-)+\p{L}(?!\p{L})|[\p{L}\p{N}]+(?:['’][\p{L}\p{N}]+)*/gu;
 const CARD_KINDS = new Set(["word", "grammar", "phrase", "concept"]);
 const LANGUAGE_CARD_KINDS = new Set(["grammar", "phrase"]);
 const APPLICATION_CARD_KINDS = new Set(["word", "grammar", "phrase"]);
@@ -431,8 +435,10 @@ function validateExcludedUnits(region, regionLabel, errors) {
 
     const fragmentTokens = tokenizeAuthoredSpanish(unit.text);
     if (fragmentTokens.length === 0) {
-      if (unit.reason !== "symbol") {
-        errors.push(`${unitLabel}.text has no lexical token and must use reason symbol`);
+      if (unit.reason !== "symbol" && unit.reason !== "non-spanish-text") {
+        errors.push(
+          `${unitLabel}.text has no Spanish lexical token and must use reason symbol or non-spanish-text`,
+        );
       }
       continue;
     }

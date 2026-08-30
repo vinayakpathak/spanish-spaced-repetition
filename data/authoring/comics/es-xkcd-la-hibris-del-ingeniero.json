@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-la-hibris-del-ingeniero",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Engineering Hubris",
+  "titleEs": "La hibris del ingeniero",
+  "titleText": {
+    "es": "Chuck Jones es un dios vengativo.",
+    "en": "Chuck Jones is a vengeful god.",
+    "noteEn": "Chuck Jones directed many Road Runner and Wile E. Coyote cartoons; the line jokingly treats their repeated disasters as deliberate punishment."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-ingeniería",
+      "kind": "word",
+      "promptEs": "ingeniería",
+      "answerEn": "engineering",
+      "noteEn": "",
+      "tags": ["word", "profession", "technology"]
+    },
+    {
+      "id": "word-búsqueda",
+      "kind": "word",
+      "promptEs": "búsqueda",
+      "answerEn": "search; pursuit",
+      "noteEn": "",
+      "tags": ["word", "search", "noun"]
+    },
+    {
+      "id": "word-de--search-object",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "for; introduces what a search or pursuit seeks",
+      "noteEn": "After búsqueda, Spanish uses de before the person, thing, or goal being sought. Natural English usually says “search for,” so the preposition changes between the two languages.",
+      "example": {
+        "es": "Continúa la búsqueda de una respuesta.",
+        "en": "The search for an answer continues."
+      },
+      "tags": ["word", "preposition", "noun complement", "contextual sense"]
+    },
+    {
+      "id": "word-perfección",
+      "kind": "word",
+      "promptEs": "perfección",
+      "answerEn": "perfection",
+      "noteEn": "",
+      "tags": ["word", "quality", "noun"]
+    },
+    {
+      "id": "word-inalcanzable",
+      "kind": "word",
+      "promptEs": "inalcanzable",
+      "answerEn": "unattainable; unreachable",
+      "noteEn": "Inalcanzable has the same singular form for masculine and feminine nouns. Its plural is inalcanzables.",
+      "example": {
+        "es": "La meta parecía inalcanzable.",
+        "en": "The goal seemed unattainable."
+      },
+      "tags": ["word", "description", "adjective"]
+    },
+    {
+      "id": "word-imposible",
+      "kind": "word",
+      "promptEs": "imposible",
+      "answerEn": "impossible",
+      "noteEn": "",
+      "tags": ["word", "possibility", "adjective"]
+    },
+    {
+      "id": "word-bugs--software-defects",
+      "kind": "word",
+      "promptEs": "bugs",
+      "answerEn": "bugs; software defects",
+      "noteEn": "Bug is an English computing loanword often used informally in Spanish. Error and fallo are common Spanish alternatives; the plural bugs keeps the English spelling.",
+      "example": {
+        "es": "El programa todavía tiene varios bugs.",
+        "en": "The program still has several bugs."
+      },
+      "tags": ["word", "computing", "loanword", "plural"]
+    },
+    {
+      "id": "word-iluso",
+      "kind": "word",
+      "promptEs": "iluso",
+      "answerEn": "fool; naive or deluded person (masculine)",
+      "noteEn": "Iluso can be a describing word or a noun for someone whose hopes or beliefs are unrealistic. The feminine form is ilusa.",
+      "example": {
+        "es": "Fui un iluso al creer esa promesa.",
+        "en": "I was a fool to believe that promise."
+      },
+      "tags": ["word", "person", "description", "masculine singular"]
+    },
+    {
+      "id": "word-tiranía",
+      "kind": "word",
+      "promptEs": "tiranía",
+      "answerEn": "tyranny",
+      "noteEn": "",
+      "tags": ["word", "power", "noun"]
+    },
+    {
+      "id": "word-murphy--murphys-law-name",
+      "kind": "word",
+      "promptEs": "murphy",
+      "answerEn": "Murphy (the name in Murphy's law)",
+      "noteEn": "",
+      "tags": ["word", "proper name", "engineering"]
+    },
+    {
+      "id": "word-precio",
+      "kind": "word",
+      "promptEs": "precio",
+      "answerEn": "price; cost",
+      "noteEn": "",
+      "tags": ["word", "cost", "noun"]
+    },
+    {
+      "id": "word-a--fixed-precio-a-pagar",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; part of precio a pagar, “price to pay”",
+      "noteEn": "In established payment expressions such as precio a pagar, total a pagar, and cantidad a pagar, a introduces what must be paid. Pagar stays in its unchanged dictionary form.",
+      "example": {
+        "es": "Esta es la cantidad a pagar.",
+        "en": "This is the amount to pay."
+      },
+      "tags": ["word", "preposition", "payment expression", "contextual sense"]
+    },
+    {
+      "id": "word-pagar",
+      "kind": "word",
+      "promptEs": "pagar",
+      "answerEn": "to pay",
+      "noteEn": "",
+      "tags": ["word", "payment", "verb"]
+    },
+    {
+      "id": "word-por--pagar-complement",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "for; introduces what is paid for or what brings a consequence",
+      "noteEn": "After pagar, por can introduce either something bought or the reason for a figurative cost or punishment.",
+      "example": {
+        "es": "Pagaron por las entradas.",
+        "en": "They paid for the tickets."
+      },
+      "tags": ["word", "preposition", "payment", "contextual sense"]
+    },
+    {
+      "id": "word-hibris",
+      "kind": "word",
+      "promptEs": "hibris",
+      "answerEn": "hubris; excessive pride that invites a downfall",
+      "noteEn": "Hibris names overconfidence or arrogance, especially the kind that leads someone to overreach and suffer the consequences.",
+      "example": {
+        "es": "Su hibris le impidió escuchar las advertencias.",
+        "en": "His hubris kept him from listening to the warnings."
+      },
+      "tags": ["word", "pride", "consequence", "noun"]
+    },
+    {
+      "id": "word-evitar",
+      "kind": "word",
+      "promptEs": "evitar",
+      "answerEn": "to avoid; prevent",
+      "noteEn": "",
+      "tags": ["word", "avoidance", "verb"]
+    },
+    {
+      "id": "word-sensación",
+      "kind": "word",
+      "promptEs": "sensación",
+      "answerEn": "feeling; sensation",
+      "noteEn": "",
+      "tags": ["word", "feeling", "noun"]
+    },
+    {
+      "id": "word-material--supplies",
+      "kind": "word",
+      "promptEs": "material",
+      "answerEn": "supplies; equipment or material available for a task",
+      "noteEn": "Material can name a substance, but it can also collectively mean the supplies or equipment used for an activity.",
+      "example": {
+        "es": "Ya tenemos todo el material para el taller.",
+        "en": "We already have all the supplies for the workshop."
+      },
+      "tags": ["word", "supplies", "collective noun", "contextual sense"]
+    },
+    {
+      "id": "word-cazado--caught",
+      "kind": "word",
+      "promptEs": "cazado",
+      "answerEn": "caught; hunted down",
+      "noteEn": "Cazado is the completed-action form of cazar, “to hunt” or “to catch.” After habría it stays unchanged and helps describe an imagined past result.",
+      "example": {
+        "es": "El zorro habría cazado al conejo.",
+        "en": "The fox would have caught the rabbit."
+      },
+      "tags": ["word", "hunting", "participle", "completed action"]
+    },
+    {
+      "id": "word-correcaminos--cartoon-character",
+      "kind": "word",
+      "promptEs": "correcaminos",
+      "answerEn": "the Road Runner (cartoon character); roadrunner",
+      "noteEn": "Correcaminos is the Spanish name for the roadrunner bird. With el and a capital letter, El Correcaminos is also the Spanish name of the fast cartoon character pursued by Wile E. Coyote.",
+      "example": {
+        "es": "Un correcaminos cruzó el sendero.",
+        "en": "A roadrunner crossed the trail."
+      },
+      "tags": ["word", "animal", "cartoon character", "contextual sense"]
+    },
+    {
+      "id": "grammar-quizas-indicative-possibility",
+      "kind": "grammar",
+      "promptEs": "quizás + forma normal de afirmación",
+      "questionEn": "How can you say “maybe” while presenting an idea as a neutral or fairly plausible possibility?",
+      "answerEn": "Put quizás before the idea and use the verb form you would use in an ordinary statement.",
+      "noteEn": "This ordinary statement form is called the indicative: es stays es, and tiene stays tiene. Spanish can instead use a special possibility form called the subjunctive after quizás when the speaker wants to emphasize uncertainty; quizás alone does not force either choice.",
+      "example": {
+        "es": "Quizás Ana tiene razón.",
+        "en": "Maybe Ana is right."
+      },
+      "tags": ["grammar", "possibility", "indicative", "B1"]
+    },
+    {
+      "id": "phrase-busqueda-de",
+      "kind": "phrase",
+      "promptEs": "búsqueda de + persona, cosa u objetivo",
+      "questionEn": "What word follows búsqueda before the person, thing, or goal being sought?",
+      "answerEn": "Use búsqueda de, then name what the search is for.",
+      "noteEn": "Búsqueda is the noun “search” or “pursuit,” related to the verb buscar. The de remains in the expression while the article and following noun change to fit what is being sought.",
+      "example": {
+        "es": "Sigue la búsqueda de una solución.",
+        "en": "The search for a solution continues."
+      },
+      "tags": ["phrase", "collocation", "search", "A2"]
+    },
+    {
+      "id": "phrase-precio-a-pagar",
+      "kind": "phrase",
+      "promptEs": "precio a pagar · total a pagar · cantidad a pagar",
+      "questionEn": "How can a bill or payment notice label the price or amount that must be paid?",
+      "answerEn": "Use precio, total, or cantidad followed by a pagar.",
+      "noteEn": "Choose the first noun for the kind of amount, then keep a pagar fixed; pagar is the verb's unchanged dictionary form. This noun-a-verb pattern has limited established use in economic and administrative expressions and should not be freely copied with every noun. Elsewhere, Spanish often prefers que hay que or por before the action.",
+      "example": {
+        "es": "El total a pagar aparece al final.",
+        "en": "The total to pay appears at the end."
+      },
+      "tags": ["phrase", "payment", "administrative language", "B1"]
+    },
+    {
+      "id": "phrase-pagar-por-algo",
+      "kind": "phrase",
+      "promptEs": "pagar por + algo",
+      "questionEn": "How do you say what someone pays for, literally or as a consequence?",
+      "answerEn": "Use a form of pagar followed by por, then name what the payment or consequence is for.",
+      "noteEn": "Pagar changes for the person and time, while por stays fixed before its complement. The cost can be literal money, as in pagar por una entrada, or a figurative consequence, as in pagar por un error.",
+      "example": {
+        "es": "Todos pagamos por nuestros errores.",
+        "en": "We all pay for our mistakes."
+      },
+      "tags": ["phrase", "collocation", "payment", "consequence", "A2"]
+    },
+    {
+      "id": "phrase-no-poder-evitar",
+      "kind": "phrase",
+      "promptEs": "no poder evitar + nombre o verbo en forma de diccionario",
+      "questionEn": "How do you say that someone cannot help doing an action or cannot avoid a feeling?",
+      "answerEn": "Use no, a form of poder, evitar, and then the action or feeling that cannot be avoided.",
+      "noteEn": "Only poder changes for the person and time; evitar remains in its unchanged dictionary form. Another action also stays in its dictionary form: no puedo evitar reír means “I cannot help laughing.” A noun can follow instead, as in no pudo evitar la duda.",
+      "example": {
+        "es": "No puedo evitar sonreír.",
+        "en": "I can't help smiling."
+      },
+      "tags": ["phrase", "involuntary reaction", "verb pattern", "A2"]
+    },
+    {
+      "id": "concept-murphys-law",
+      "kind": "concept",
+      "promptEs": "la ley de Murphy",
+      "answerEn": "the humorous rule that if something can go wrong, it will",
+      "noteEn": "Murphy's law is an engineering and everyday-life adage, not a scientific law. References to Murphy often personify bad luck, failure, or the unforeseen ways a design can break.",
+      "tags": ["concept", "engineering", "failure", "joke context"]
+    },
+    {
+      "id": "concept-road-runner-acme",
+      "kind": "concept",
+      "promptEs": "el Correcaminos, el Coyote y ACME",
+      "answerEn": "Wile E. Coyote repeatedly uses elaborate ACME products to try—and fail—to catch the Road Runner",
+      "noteEn": "The Road Runner cartoons were created by Chuck Jones and Michael Maltese. Their recurring joke is that the Coyote's traps and mail-order ACME devices backfire while the Road Runner escapes.",
+      "tags": ["concept", "cartoon", "ACME", "joke context"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper",
+      "labelEs": "QUIZÁS LA INGENIERÍA ES LA BÚSQUEDA DE UNA PERFECCIÓN INALCANZABLE.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0008" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w01", "text": "QUIZÁS", "normalized": "quizás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00001" }], "cardIds": ["word-quizás", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00002" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w03", "text": "INGENIERÍA", "normalized": "ingeniería", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00003" }], "cardIds": ["word-ingeniería"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w04", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00016" }], "cardIds": ["word-es", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00017" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w06", "text": "BÚSQUEDA", "normalized": "búsqueda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00018" }], "cardIds": ["word-búsqueda", "phrase-busqueda-de"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00022" }], "cardIds": ["word-de--search-object", "phrase-busqueda-de"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w08", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00023" }], "cardIds": ["word-una", "phrase-busqueda-de"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w09", "text": "PERFECCIÓN", "normalized": "perfección", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00024" }], "cardIds": ["word-perfección", "phrase-busqueda-de", "grammar-descriptive-adjective-after-noun"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w10", "text": "INALCANZABLE", "normalized": "inalcanzable", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00025" }], "cardIds": ["word-inalcanzable", "grammar-descriptive-adjective-after-noun"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:app-quizas-indicative",
+          "cardId": "grammar-quizas-indicative-possibility",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w01", "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w04"],
+          "exampleEs": "QUIZÁS LA INGENIERÍA ES",
+          "explanationEn": "Quizás introduces the possibility, and es keeps the ordinary statement form rather than changing to sea."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:app-busqueda-de",
+          "cardId": "phrase-busqueda-de",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w06", "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w07", "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w08", "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w09"],
+          "exampleEs": "BÚSQUEDA DE UNA PERFECCIÓN",
+          "explanationEn": "Búsqueda is followed by de, and una perfección fills the place for the goal being sought."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w09", "es-xkcd-la-hibris-del-ingeniero:panel-1-upper:w10"],
+          "exampleEs": "PERFECCIÓN INALCANZABLE",
+          "explanationEn": "Perfección names the thing first, and inalcanzable follows it with the description."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower",
+      "labelEs": "QUIZÁS ES IMPOSIBLE CREAR ALGO SIN BUGS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0014" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w01", "text": "QUIZÁS", "normalized": "quizás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00032" }], "cardIds": ["word-quizás", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w02", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00033" }], "cardIds": ["word-es", "grammar-quizas-indicative-possibility", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w03", "text": "IMPOSIBLE", "normalized": "imposible", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00034" }], "cardIds": ["word-imposible", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w04", "text": "CREAR", "normalized": "crear", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00043" }], "cardIds": ["word-crear", "grammar-es-adjective-infinitive"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w05", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00044" }], "cardIds": ["word-algo"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w06", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00045" }], "cardIds": ["word-sin"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w07", "text": "BUGS", "normalized": "bugs", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00046" }], "cardIds": ["word-bugs--software-defects"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:app-quizas-indicative",
+          "cardId": "grammar-quizas-indicative-possibility",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w01", "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w02"],
+          "exampleEs": "QUIZÁS ES",
+          "explanationEn": "Quizás frames the claim as possible, while es remains the ordinary statement form of ser."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:app-es-adjective-infinitive",
+          "cardId": "grammar-es-adjective-infinitive",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w02", "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w03", "es-xkcd-la-hibris-del-ingeniero:panel-1-lower:w04"],
+          "exampleEs": "ES IMPOSIBLE CREAR",
+          "explanationEn": "Es introduces the evaluation, imposible supplies the quality, and crear stays in its unchanged dictionary form as the activity being evaluated."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper",
+      "labelEs": "QUIZÁS SOY UN ILUSO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0003" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w01", "text": "QUIZÁS", "normalized": "quizás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00008" }], "cardIds": ["word-quizás", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w02", "text": "SOY", "normalized": "soy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00009" }], "cardIds": ["word-soy--identity", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w03", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00010" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w04", "text": "ILUSO", "normalized": "iluso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00011" }], "cardIds": ["word-iluso"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:app-quizas-indicative",
+          "cardId": "grammar-quizas-indicative-possibility",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w01", "es-xkcd-la-hibris-del-ingeniero:panel-2-upper:w02"],
+          "exampleEs": "QUIZÁS SOY",
+          "explanationEn": "Quizás introduces a possibility, and soy remains the ordinary first-person statement form of ser."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower",
+      "labelEs": "QUIZÁS LA TIRANÍA DE MURPHY ES EL PRECIO A PAGAR POR LA HIBRIS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0010" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0015" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w01", "text": "QUIZÁS", "normalized": "quizás", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00028" }], "cardIds": ["word-quizás", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w02", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00029" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w03", "text": "TIRANÍA", "normalized": "tiranía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00030" }], "cardIds": ["word-tiranía"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00031" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w05", "text": "MURPHY", "normalized": "murphy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00035" }], "cardIds": ["word-murphy--murphys-law-name", "concept-murphys-law"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00036" }], "cardIds": ["word-es", "grammar-quizas-indicative-possibility"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w07", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00037" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w08", "text": "PRECIO", "normalized": "precio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00038" }], "cardIds": ["word-precio", "phrase-precio-a-pagar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w09", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00047" }], "cardIds": ["word-a--fixed-precio-a-pagar", "phrase-precio-a-pagar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w10", "text": "PAGAR", "normalized": "pagar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00048" }], "cardIds": ["word-pagar", "phrase-precio-a-pagar", "phrase-pagar-por-algo"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w11", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00049" }], "cardIds": ["word-por--pagar-complement", "phrase-pagar-por-algo"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w12", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00050" }], "cardIds": ["word-la--article", "phrase-pagar-por-algo"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w13", "text": "HIBRIS", "normalized": "hibris", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00051" }], "cardIds": ["word-hibris", "phrase-pagar-por-algo"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:app-quizas-indicative",
+          "cardId": "grammar-quizas-indicative-possibility",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w01", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w06"],
+          "exampleEs": "QUIZÁS LA TIRANÍA DE MURPHY ES",
+          "explanationEn": "Quizás frames the idea as possible, while es remains the ordinary statement form; the intervening words form the subject."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:app-precio-a-pagar",
+          "cardId": "phrase-precio-a-pagar",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w08", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w09", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w10"],
+          "exampleEs": "PRECIO A PAGAR",
+          "explanationEn": "Precio selects the payment expression, a introduces what must be paid, and pagar remains in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:app-pagar-por",
+          "cardId": "phrase-pagar-por-algo",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w10", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w11", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w12", "es-xkcd-la-hibris-del-ingeniero:panel-2-lower:w13"],
+          "exampleEs": "PAGAR POR LA HIBRIS",
+          "explanationEn": "Pagar is followed by the fixed preposition por, and la hibris fills the complement naming the reason for the consequence."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper",
+      "labelEs": "PERO NO PUEDO EVITAR LA SENSACIÓN.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0006" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w01", "text": "PERO", "normalized": "pero", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00004" }], "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00005" }], "cardIds": ["word-no", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w03", "text": "PUEDO", "normalized": "puedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00006" }], "cardIds": ["word-puedo", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w04", "text": "EVITAR", "normalized": "evitar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00007" }, { "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00019" }], "cardIds": ["word-evitar", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00020" }], "cardIds": ["word-la--article", "phrase-no-poder-evitar"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w06", "text": "SENSACIÓN", "normalized": "sensación", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00021" }], "cardIds": ["word-sensación", "phrase-no-poder-evitar"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:app-no-poder-evitar",
+          "cardId": "phrase-no-poder-evitar",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w02", "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w03", "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w04", "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w05", "es-xkcd-la-hibris-del-ingeniero:panel-3-upper:w06"],
+          "exampleEs": "NO PUEDO EVITAR LA SENSACIÓN",
+          "explanationEn": "No negates puedo, puedo changes for the speaker, evitar stays in its dictionary form, and la sensación is the feeling that cannot be avoided."
+        }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-upper",
+      "labelEs": "CON TODO ESE MATERIAL",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0004" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-upper:w01", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00012" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-upper:w02", "text": "TODO", "normalized": "todo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00013" }], "cardIds": ["word-todo"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-upper:w03", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00014" }], "cardIds": ["word-ese--demonstrative"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-upper:w04", "text": "MATERIAL", "normalized": "material", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00015" }], "cardIds": ["word-material--supplies"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-crates",
+      "labelEs": "ACME ACME ACME",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0009" }
+      ],
+      "words": [],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-crates:excluded-acme-1",
+          "text": "ACME",
+          "reason": "non-spanish-text",
+          "rationale": "This is the English fictional brand name printed on the left crate, not Spanish vocabulary.",
+          "occurrence": 1,
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00026" }]
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-crates:excluded-acme-2",
+          "text": "ACME",
+          "reason": "non-spanish-text",
+          "rationale": "This is the English fictional brand name printed on the center crate, not Spanish vocabulary.",
+          "occurrence": 2,
+          "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00027" }]
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-crates:excluded-acme-3",
+          "text": "ACME",
+          "reason": "non-spanish-text",
+          "rationale": "This is the English fictional brand name printed on the right crate, not Spanish vocabulary.",
+          "occurrence": 3,
+          "explicitBounds": [{ "x": 92, "y": 68.4, "width": 3.9, "height": 8.5 }],
+          "geometryRationale": "The third visible ACME crate label was missed entirely by the OCR geometry pass."
+        }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower",
+      "labelEs": "YO HABRÍA CAZADO A ESE CORRECAMINOS.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-line-0016" }
+      ],
+      "words": [
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w01", "text": "YO", "normalized": "yo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00039" }], "cardIds": ["word-yo", "grammar-explicit-subject-pronoun"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w02", "text": "HABRÍA", "normalized": "habría", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00040" }], "cardIds": ["word-habría--conditional-perfect", "grammar-explicit-subject-pronoun", "grammar-conditional-perfect"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w03", "text": "CAZADO", "normalized": "cazado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00041" }], "cardIds": ["word-cazado--caught", "grammar-conditional-perfect"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w04", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00042" }], "cardIds": ["word-a--personal-a", "grammar-personal-a"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w05", "text": "ESE", "normalized": "ese", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00052" }], "cardIds": ["word-ese--demonstrative", "grammar-personal-a"] },
+        { "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w06", "text": "CORRECAMINOS", "normalized": "correcaminos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-hibris-del-ingeniero:ocr-token-00053" }], "cardIds": ["word-correcaminos--cartoon-character", "grammar-personal-a", "concept-road-runner-acme"] }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:app-explicit-subject",
+          "cardId": "grammar-explicit-subject-pronoun",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w01", "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w02"],
+          "exampleEs": "YO HABRÍA",
+          "explanationEn": "Habría already identifies a first-person possibility, while yo adds explicit contrast and emphasis to the speaker."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:app-conditional-perfect",
+          "cardId": "grammar-conditional-perfect",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w02", "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w03"],
+          "exampleEs": "HABRÍA CAZADO",
+          "explanationEn": "Habría supplies the imagined-past helping form, and cazado is cazar's completed-action form."
+        },
+        {
+          "id": "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:app-personal-a",
+          "cardId": "grammar-personal-a",
+          "participantWordIds": ["es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w04", "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w05", "es-xkcd-la-hibris-del-ingeniero:panel-4-lower:w06"],
+          "exampleEs": "A ESE CORRECAMINOS",
+          "explanationEn": "A marks the specific, personified animal receiving the action, and ese Correcaminos is the complete object phrase."
+        }
+      ]
+    }
+  ]
+}

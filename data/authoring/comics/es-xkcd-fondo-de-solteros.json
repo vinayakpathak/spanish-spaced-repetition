@@ -1,0 +1,593 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-fondo-de-solteros",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Dating Pools",
+  "titleEs": "Fondo de solteros",
+  "titleText": {
+    "es": "Por supuesto, el análisis completo es mucho más complicado, pero no puedo quedarme a hablar de eso porque tengo una cita.",
+    "en": "The full analysis is of course much more complicated, but I can't stay to talk about it because I have a date."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-mediana--statistical",
+      "kind": "word",
+      "promptEs": "mediana",
+      "answerEn": "median; the middle value",
+      "noteEn": "In statistics, the mediana is the value in the middle after the values have been put in order. It is not necessarily the same as the average.",
+      "example": { "es": "La mediana de 2, 5 y 9 es 5.", "en": "The median of 2, 5, and 9 is 5." },
+      "tags": ["word", "statistics", "B1"]
+    },
+    { "id": "word-edad", "kind": "word", "promptEs": "edad", "answerEn": "age", "noteEn": "", "tags": ["word", "people", "time"] },
+    { "id": "word-matrimonio", "kind": "word", "promptEs": "matrimonio", "answerEn": "marriage", "noteEn": "", "tags": ["word", "relationships"] },
+    {
+      "id": "word-de--age",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "aged; no separate English word before an age",
+      "noteEn": "De can introduce a person's age or the numerical value of an age measure. English often turns de plus the number into “aged ...” or simply states the number without a separate word for de.",
+      "example": { "es": "Es una persona de veinte años.", "en": "They are a twenty-year-old person." },
+      "tags": ["word", "preposition", "age"]
+    },
+    {
+      "id": "word-fondo--dating-pool",
+      "kind": "word",
+      "promptEs": "fondo",
+      "answerEn": "pool; set of available people",
+      "noteEn": "Fondo more often means “bottom,” “background,” or “fund.” As a figurative use influenced by English, it can also refer to a pool of available people.",
+      "example": { "es": "La empresa eligió entre un fondo amplio de candidatos.", "en": "The company chose from a large pool of candidates." },
+      "tags": ["word", "figurative sense", "relationships"]
+    },
+    {
+      "id": "word-solteros--single-people",
+      "kind": "word",
+      "promptEs": "solteros",
+      "answerEn": "single people; unmarried people",
+      "noteEn": "Solteros is the masculine or mixed-group plural of soltero. With no following noun, it stands for the people themselves.",
+      "example": { "es": "Hay muchos solteros en el grupo.", "en": "There are many single people in the group." },
+      "tags": ["word", "relationships", "plural"]
+    },
+    {
+      "id": "word-se--intransitive-change",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; presents the thing as changing",
+      "noteEn": "With verbs such as reducir and ampliar, se lets Spanish describe a change without naming anyone who causes it. English often uses a simple verb such as “shrinks” or “widens.”",
+      "example": { "es": "La mancha se reduce.", "en": "The stain shrinks." },
+      "tags": ["word", "pronoun", "change of state"]
+    },
+    { "id": "word-reduce--shrinks", "kind": "word", "promptEs": "reduce", "answerEn": "shrinks; decreases", "noteEn": "Reduce is a present form of reducir used with one thing. With se, it describes that thing becoming smaller.", "example": { "es": "El ruido se reduce por la noche.", "en": "The noise decreases at night." }, "tags": ["word", "reducir", "present"] },
+    {
+      "id": "word-quedo--left-without",
+      "kind": "word",
+      "promptEs": "quedo",
+      "answerEn": "I am left; I end up (with me)",
+      "noteEn": "Quedo is the present speaker form of quedar. In me quedo sin, it helps say that the speaker is left without something or runs out of it.",
+      "example": { "es": "Me quedo sin batería.", "en": "I run out of battery." },
+      "tags": ["word", "quedarse", "first person", "present"]
+    },
+    {
+      "id": "word-en--fixed-en-verdad",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "no separate English word; begins en verdad",
+      "noteEn": "En combines with verdad to form an expression meaning “actually,” “really,” or “in truth.”",
+      "example": { "es": "En verdad, no lo sabía.", "en": "Actually, I did not know." },
+      "tags": ["word", "fixed expression", "conversation"]
+    },
+    {
+      "id": "word-verdad--fixed-en-verdad",
+      "kind": "word",
+      "promptEs": "verdad",
+      "answerEn": "actually; really (as part of en verdad)",
+      "noteEn": "Verdad by itself means “truth.” With en, it forms the reusable expression en verdad.",
+      "example": { "es": "En verdad, fue fácil.", "en": "In truth, it was easy." },
+      "tags": ["word", "fixed expression", "conversation"]
+    },
+    { "id": "word-tanto--so-much", "kind": "word", "promptEs": "tanto", "answerEn": "so much; that much", "noteEn": "", "tags": ["word", "quantity"] },
+    {
+      "id": "word-más--before-mayor",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "more; an extra intensifier before mayores here",
+      "noteEn": "Mayor already means “older,” so neutral standard Spanish normally needs only mayores. Más mayor is sometimes heard when distinguishing degrees within adulthood, but it can sound redundant; this use simply emphasizes the older part of the group.",
+      "example": { "es": "Mi hermana es mayor que yo.", "en": "My sister is older than me." },
+      "tags": ["word", "comparison", "usage note", "age"]
+    },
+    {
+      "id": "word-mayores--older",
+      "kind": "word",
+      "promptEs": "mayores",
+      "answerEn": "older (plural)",
+      "noteEn": "Mayor means “older” when comparing age; mayores is its plural form. The same form is used for a masculine, feminine, or mixed plural group.",
+      "example": { "es": "Mis hermanas son mayores.", "en": "My sisters are older." },
+      "tags": ["word", "age", "adjective", "plural"]
+    },
+    { "id": "word-escasos", "kind": "word", "promptEs": "escasos", "answerEn": "scarce; rare (plural)", "noteEn": "", "tags": ["word", "adjective", "plural"] },
+    {
+      "id": "word-hacerte--become",
+      "kind": "word",
+      "promptEs": "hacerte",
+      "answerEn": "to become; to get (speaking to one familiar person)",
+      "noteEn": "Hacerte joins hacer, the unchanged dictionary form, to te, the short word for the familiar person addressed. With an adjective after it, hacerse can mean “to become.”",
+      "example": { "es": "Puedes hacerte famoso.", "en": "You can become famous." },
+      "tags": ["word", "hacerse", "attached pronoun", "infinitive"]
+    },
+    { "id": "word-mayor--older", "kind": "word", "promptEs": "mayor", "answerEn": "older", "noteEn": "When it describes age, mayor means “older.” It has the same singular form for a man, woman, or thing.", "example": { "es": "Ahora soy mayor.", "en": "I am older now." }, "tags": ["word", "age", "adjective"] },
+    { "id": "word-rango", "kind": "word", "promptEs": "rango", "answerEn": "range", "noteEn": "", "tags": ["word", "measurement"] },
+    { "id": "word-casadera", "kind": "word", "promptEs": "casadera", "answerEn": "marriageable; considered old enough to marry (feminine)", "noteEn": "Casadera is the feminine singular form of casadero. The word can sound traditional or old-fashioned because it describes someone in terms of suitability for marriage.", "example": { "es": "La expresión «edad casadera» suena tradicional.", "en": "The expression “marriageable age” sounds traditional." }, "tags": ["word", "relationships", "adjective", "feminine"] },
+    { "id": "word-amplía--widens", "kind": "word", "promptEs": "amplía", "answerEn": "widens; expands", "noteEn": "Amplía is a present form of ampliar used with one thing. With se, it says that the thing becomes wider.", "example": { "es": "La zona se amplía cada año.", "en": "The area expands every year." }, "tags": ["word", "ampliar", "present"] },
+    {
+      "id": "word-el--omitted-masculine-noun",
+      "kind": "word",
+      "promptEs": "el",
+      "answerEn": "the one (masculine singular)",
+      "noteEn": "Spanish can leave out a masculine noun that is already understood and keep el before the words that distinguish it. English often supplies “the one.”",
+      "example": { "es": "Prefiero el de color azul.", "en": "I prefer the blue one." },
+      "tags": ["word", "article", "noun omission"]
+    },
+    { "id": "word-regla", "kind": "word", "promptEs": "regla", "answerEn": "rule", "noteEn": "", "tags": ["word"] },
+    { "id": "word-estándar", "kind": "word", "promptEs": "estándar", "answerEn": "standard", "noteEn": "", "tags": ["word", "adjective"] },
+    { "id": "word-repulsión--creepiness", "kind": "word", "promptEs": "repulsión", "answerEn": "creepiness; repulsiveness", "noteEn": "Repulsión literally means “repulsion” or strong disgust. A humorous label can extend it to socially creepy or repulsive behavior.", "example": { "es": "Sintió repulsión por el olor.", "en": "She felt disgust at the smell." }, "tags": ["word", "joke context", "relationships"] },
+    { "id": "word-novios--dating-partners", "kind": "word", "promptEs": "novios", "answerEn": "dating partners; boyfriends", "noteEn": "Novios can mean boyfriends, a dating couple, or romantic partners depending on context.", "example": { "es": "Invitaron a sus novios a la fiesta.", "en": "They invited their partners to the party." }, "tags": ["word", "relationships", "plural"] },
+    { "id": "word-por--fixed-por-encima-de", "kind": "word", "promptEs": "por", "answerEn": "no separate English word; begins por encima de", "noteEn": "Por, encima, and de work together to mean “above,” “over,” or “more than.”", "example": { "es": "Está por encima de la puerta.", "en": "It is above the door." }, "tags": ["word", "fixed expression", "position"] },
+    { "id": "word-encima--fixed-por-encima-de", "kind": "word", "promptEs": "encima", "answerEn": "above; over (as part of por encima de)", "noteEn": "Encima refers to an upper position, but por encima de is the complete expression used before the reference point.", "example": { "es": "La lámpara está por encima de la mesa.", "en": "The lamp is above the table." }, "tags": ["word", "fixed expression", "position"] },
+    { "id": "word-de--fixed-por-encima-de", "kind": "word", "promptEs": "de", "answerEn": "no separate English word; completes por encima de", "noteEn": "De is required before the point, object, or limit that something is above.", "example": { "es": "La cifra está por encima de cien.", "en": "The figure is above one hundred." }, "tags": ["word", "fixed expression", "position"] },
+    {
+      "id": "word-fin--weekend",
+      "kind": "word",
+      "promptEs": "fin",
+      "answerEn": "end; part of fin de semana, “weekend”",
+      "noteEn": "Fin literally means “end.” In the fixed expression fin de semana, the three words together name the weekend.",
+      "example": { "es": "El fin de semana fue tranquilo.", "en": "The weekend was quiet." },
+      "tags": ["word", "fixed expression", "time"]
+    },
+    { "id": "word-de--fixed-fin-de-semana", "kind": "word", "promptEs": "de", "answerEn": "no separate English word; links fin and semana in “weekend”", "noteEn": "De remains between fin or fines and semana in the fixed expression for “weekend” or “weekends.”", "example": { "es": "Trabajo el fin de semana.", "en": "I work on the weekend." }, "tags": ["word", "fixed expression", "time"] },
+    { "id": "word-pasado--last-time-period", "kind": "word", "promptEs": "pasado", "answerEn": "last; previous (after a time period)", "noteEn": "After a time expression, pasado or pasada identifies the immediately previous one. It matches the expression: el mes pasado, la semana pasada.", "example": { "es": "Viajé el mes pasado.", "en": "I traveled last month." }, "tags": ["word", "time", "adjective"] },
+    { "id": "word-hice", "kind": "word", "promptEs": "hice", "answerEn": "I did; I made", "noteEn": "Hice is the completed-past form of hacer for the speaker.", "example": { "es": "Hice la cena ayer.", "en": "I made dinner yesterday." }, "tags": ["word", "hacer", "past", "first person"] },
+    { "id": "word-análisis", "kind": "word", "promptEs": "análisis", "answerEn": "analysis", "noteEn": "Análisis has the same written form in the singular and plural; the surrounding article or verb shows the number.", "example": { "es": "El análisis fue breve.", "en": "The analysis was brief." }, "tags": ["word", "analysis"] },
+    { "id": "word-censo", "kind": "word", "promptEs": "censo", "answerEn": "census", "noteEn": "", "tags": ["word", "government", "statistics"] },
+    { "id": "word-crece", "kind": "word", "promptEs": "crece", "answerEn": "grows; increases", "noteEn": "Crece is a present form of crecer used with one person or thing.", "example": { "es": "La ciudad crece rápido.", "en": "The city grows quickly." }, "tags": ["word", "crecer", "present"] },
+    {
+      "id": "word-mediana--middle-age",
+      "kind": "word",
+      "promptEs": "mediana",
+      "answerEn": "middle (as part of mediana edad)",
+      "noteEn": "With edad, mediana names the middle stage of adult life. This is different from the statistical mediana, the middle value in ordered data.",
+      "example": { "es": "Llegó a la mediana edad con energía.", "en": "He reached middle age full of energy." },
+      "tags": ["word", "life stage", "fixed expression"]
+    },
+    { "id": "word-te--preocuparse", "kind": "word", "promptEs": "te", "answerEn": "no separate English word; marks that “you” are the person who worries", "noteEn": "Preocuparse is used with me, te, se, nos, or os. Te is the form for one familiar person addressed as tú.", "example": { "es": "No te preocupes por mí.", "en": "Do not worry about me." }, "tags": ["word", "pronoun", "preocuparse"] },
+    { "id": "word-preocupes--negative-command", "kind": "word", "promptEs": "preocupes", "answerEn": "worry (special form after no in a command)", "noteEn": "Preocupes is the form used when telling one familiar person not to worry. The positive command is preocúpate, but the negative pattern is no te preocupes.", "example": { "es": "No te preocupes todavía.", "en": "Do not worry yet." }, "tags": ["word", "preocuparse", "negative command"] },
+    { "id": "word-dice--report-says", "kind": "word", "promptEs": "dice", "answerEn": "it says; it indicates", "noteEn": "Dice is a present form of decir used with one person or thing. A report, text, or analysis can be the thing that “says” or indicates information.", "example": { "es": "El informe dice que todo está bien.", "en": "The report says that everything is fine." }, "tags": ["word", "decir", "present", "information"] },
+    { "id": "word-perspectivas", "kind": "word", "promptEs": "perspectivas", "answerEn": "prospects; outlook", "noteEn": "", "tags": ["word", "plural"] },
+    { "id": "word-noviazgo", "kind": "word", "promptEs": "noviazgo", "answerEn": "dating; romantic relationship", "noteEn": "Noviazgo is the period or relationship in which people are a romantic couple before marriage.", "example": { "es": "Su noviazgo duró dos años.", "en": "Their relationship lasted two years." }, "tags": ["word", "relationships"] },
+    { "id": "word-se--pasarse-time", "kind": "word", "promptEs": "se", "answerEn": "no separate English word; helps pasarse mean “to spend time”", "noteEn": "Pasarse in the sense of spending a stretch of time uses a matching short word: me, te, se, nos, or os. Se is the form used with one third person.", "example": { "es": "Se pasa la tarde leyendo.", "en": "She spends the afternoon reading." }, "tags": ["word", "pasarse", "pronoun", "time"] },
+    { "id": "word-pasa--spends-time", "kind": "word", "promptEs": "pasa", "answerEn": "spends (a period of time, with se)", "noteEn": "Pasa is a present form of pasar. In se pasa plus a time period, it describes how someone spends that time.", "example": { "es": "Él se pasa horas dibujando.", "en": "He spends hours drawing." }, "tags": ["word", "pasarse", "present", "time"] },
+    { "id": "word-fines--weekends", "kind": "word", "promptEs": "fines", "answerEn": "ends; part of fines de semana, “weekends”", "noteEn": "Fines is the plural of fin. In fines de semana, only fin becomes plural; semana stays singular inside the established expression.", "example": { "es": "Descansamos los fines de semana.", "en": "We rest on weekends." }, "tags": ["word", "fixed expression", "time", "plural"] },
+    { "id": "word-haciendo--making", "kind": "word", "promptEs": "haciendo", "answerEn": "making; doing", "noteEn": "Haciendo is the -iendo action form of hacer. It can name an activity happening during the time described.", "example": { "es": "Pasó la tarde haciendo una mesa.", "en": "He spent the afternoon making a table." }, "tags": ["word", "hacer", "action form"] },
+    { "id": "word-gráficas", "kind": "word", "promptEs": "gráficas", "answerEn": "graphs; charts", "noteEn": "", "tags": ["word", "data", "plural"] },
+    { "id": "word-punto--curve-location", "kind": "word", "promptEs": "punto", "answerEn": "point; position on a curve", "noteEn": "", "tags": ["word", "geometry", "graphs"] },
+    { "id": "word-extremo--edge", "kind": "word", "promptEs": "extremo", "answerEn": "edge; far end", "noteEn": "", "tags": ["word", "position"] },
+    { "id": "word-campana--bell-curve", "kind": "word", "promptEs": "campana", "answerEn": "bell; bell shape", "noteEn": "Campana normally means a bell. A roughly bell-shaped statistical curve is also called a campana in Spanish.", "example": { "es": "La curva tiene forma de campana.", "en": "The curve has a bell shape." }, "tags": ["word", "statistics", "shape"] },
+    { "id": "word-de--named-after", "kind": "word", "promptEs": "de", "answerEn": "of; named after", "noteEn": "De can join an invention, theorem, or named object to the person whose name it bears. English may instead use an adjective based on that name.", "example": { "es": "Estudiamos las leyes de Newton.", "en": "We study Newton's laws." }, "tags": ["word", "preposition", "names"] },
+    { "id": "word-gauss", "kind": "word", "promptEs": "gauss", "answerEn": "Gauss (the mathematician's surname)", "noteEn": "Carl Friedrich Gauss was a German mathematician. His name appears in terms connected with the normal distribution and its bell-shaped curve.", "example": { "es": "La campana de Gauss tiene dos colas.", "en": "The Gaussian bell curve has two tails." }, "tags": ["word", "proper name", "mathematics"] },
+    { "id": "word-chica--potential-partner", "kind": "word", "promptEs": "chica", "answerEn": "girl; young woman; potential partner", "noteEn": "Chica can mean a girl or young woman. Mi chica often means “my girlfriend,” but context can also use it loosely for the woman who would be right for someone.", "example": { "es": "Conoció a una chica simpática.", "en": "He met a friendly young woman." }, "tags": ["word", "people", "relationships"] },
+
+    {
+      "id": "phrase-quedarse-sin",
+      "kind": "phrase",
+      "promptEs": "quedarse sin + sustantivo",
+      "questionEn": "How do you say that someone runs out of something or is left without it?",
+      "answerEn": "Use the matching form of quedarse, then sin, then the missing thing.",
+      "noteEn": "Quedarse is the unchanged dictionary form. The short word and the quedar part both match the person: me quedo, te quedas, se queda, nos quedamos. Sin stays unchanged and introduces what is no longer available.",
+      "example": { "es": "Nos quedamos sin café.", "en": "We ran out of coffee." },
+      "tags": ["phrase", "quedarse", "lack", "A2"]
+    },
+    {
+      "id": "phrase-en-verdad",
+      "kind": "phrase",
+      "promptEs": "en verdad",
+      "questionEn": "What expression can mean “actually,” “really,” or “in truth”?",
+      "answerEn": "Use en verdad.",
+      "noteEn": "The two words work together to confirm something, correct an impression, or emphasize that it is true. The natural English choice depends on that conversational purpose.",
+      "example": { "es": "En verdad, prefiero caminar.", "en": "Actually, I prefer to walk." },
+      "tags": ["phrase", "conversation", "emphasis", "B1"]
+    },
+    {
+      "id": "phrase-hacerse-mayor",
+      "kind": "phrase",
+      "promptEs": "hacerse mayor",
+      "questionEn": "How do you say that someone gets older or grows up?",
+      "answerEn": "Use the matching form of hacerse followed by mayor.",
+      "noteEn": "Hacerse is the unchanged dictionary form. The short word and hacer change with the person: me hago mayor, te haces mayor, se hace mayor. Mayor stays singular for one person and becomes mayores for more than one.",
+      "example": { "es": "Ana se hace mayor.", "en": "Ana is getting older." },
+      "tags": ["phrase", "hacerse", "age", "A2"]
+    },
+    {
+      "id": "phrase-algo-como-approximation",
+      "kind": "phrase",
+      "promptEs": "algo como + cantidad o ejemplo",
+      "questionEn": "How do you introduce a rough amount or an approximate example with “something like”?",
+      "answerEn": "Use algo como before the estimate or example.",
+      "noteEn": "Algo normally means “something,” and como means “like.” Together they signal that the following amount, description, or example is approximate rather than exact.",
+      "example": { "es": "Costará algo como veinte euros.", "en": "It will cost something like twenty euros." },
+      "tags": ["phrase", "approximation", "quantity", "A2"]
+    },
+    {
+      "id": "phrase-por-encima-de",
+      "kind": "phrase",
+      "promptEs": "por encima de + referencia",
+      "questionEn": "How do you say that something is above a place or over a limit?",
+      "answerEn": "Use por encima de before the place, amount, or limit used as the reference point.",
+      "noteEn": "Por, encima, and de form one expression. De is required before the reference point even though English “above” or “over” needs no matching word there.",
+      "example": { "es": "La temperatura está por encima de treinta grados.", "en": "The temperature is above thirty degrees." },
+      "tags": ["phrase", "position", "limits", "A2"]
+    },
+    {
+      "id": "phrase-fin-de-semana",
+      "kind": "phrase",
+      "promptEs": "fin de semana / fines de semana",
+      "questionEn": "How do you say “weekend” or “weekends”?",
+      "answerEn": "Use fin de semana for one weekend and fines de semana for more than one.",
+      "noteEn": "The expression literally contains “end of week,” but it functions as the ordinary unit “weekend.” In the plural, fin changes to fines while semana remains singular: los fines de semana.",
+      "example": { "es": "Visitamos a Ana los fines de semana.", "en": "We visit Ana on weekends." },
+      "tags": ["phrase", "time", "calendar", "A1"]
+    },
+    {
+      "id": "phrase-mediana-edad",
+      "kind": "phrase",
+      "promptEs": "la mediana edad",
+      "questionEn": "What expression names the middle stage of adult life?",
+      "answerEn": "Use la mediana edad for “middle age.”",
+      "noteEn": "This is an established life-stage expression. It differs from la mediana de las edades, which would refer to the statistical middle value of a set of ages.",
+      "example": { "es": "Cambió de profesión en la mediana edad.", "en": "She changed careers in middle age." },
+      "tags": ["phrase", "life stage", "age", "B1"]
+    },
+    {
+      "id": "grammar-negative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden negativa de tú: no + verbo",
+      "questionEn": "How do you tell one friend or familiar person not to do something?",
+      "answerEn": "Put no before the verb's special negative-command form. If the verb uses te, put te between no and the verb.",
+      "noteEn": "For a regular -ar verb, the negative form usually ends in -es: hablar becomes no hables. Regular -er and -ir verbs usually end in -as: comer becomes no comas. A short word such as te goes before this negative form, as in no te levantes.",
+      "example": { "es": "No te levantes todavía.", "en": "Do not get up yet." },
+      "tags": ["grammar", "commands", "tú", "A2"]
+    },
+    {
+      "id": "grammar-pasarse-time-gerund",
+      "kind": "grammar",
+      "promptEs": "pasarse + tiempo + verbo en -ando/-iendo",
+      "questionEn": "How do you say that someone spends a stretch of time doing an activity?",
+      "answerEn": "Use the matching short word and a form of pasar, name the time period, then add the activity in its -ando or -iendo form.",
+      "noteEn": "The short word and pasar change with the person: me paso, te pasas, se pasa, nos pasamos. The final activity form describes what fills the time; it commonly ends in -ando or -iendo, as in leyendo, “reading.”",
+      "example": { "es": "Lucía se pasa la tarde leyendo.", "en": "Lucía spends the afternoon reading." },
+      "tags": ["grammar", "pasarse", "time", "simultaneous activity", "B1"]
+    },
+    {
+      "id": "concept-half-age-plus-seven-rule",
+      "kind": "concept",
+      "promptEs": "regla de la mitad de la edad más siete",
+      "questionEn": "What is the informal “half your age plus seven” dating rule?",
+      "answerEn": "It claims that half a person's age plus seven is the youngest partner age that would not seem socially inappropriate.",
+      "noteEn": "This is a folk rule and a common joke device, not an ethical or scientific standard. It can be treated as a numerical boundary when discussing possible partners.",
+      "tags": ["concept", "dating", "formula", "joke context"]
+    },
+    {
+      "id": "concept-gaussian-bell-curve",
+      "kind": "concept",
+      "promptEs": "campana de Gauss",
+      "questionEn": "What is a campana de Gauss?",
+      "answerEn": "It is a bell-shaped curve representing a normal distribution: values near the center are common and values in the tails are rare.",
+      "noteEn": "Gauss is the mathematician whose name is attached to this model. Referring to a point at the extreme of the bell invokes one of the curve's rare tails.",
+      "tags": ["concept", "statistics", "normal distribution", "graphs"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-1-woman",
+      "labelEs": "ESTO ES UNA MIERDA. LA MEDIANA DE LA EDAD PARA EL PRIMER MATRIMONIO ES DE 26. EL FONDO DE SOLTEROS SE REDUCE. ME QUEDO SIN TIEMPO.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0003" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0007" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0012" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0016" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0020" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0024" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0029" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0035" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w01", "text": "ESTO", "normalized": "esto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00009" }], "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w02", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00010" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w03", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00011" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w04", "text": "MIERDA", "normalized": "mierda", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00025" }], "cardIds": ["word-mierda"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00026" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w06", "text": "MEDIANA", "normalized": "mediana", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00027" }], "cardIds": ["word-mediana--statistical"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00028" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w08", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00040" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w09", "text": "EDAD", "normalized": "edad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00041" }], "cardIds": ["word-edad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w10", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00042" }], "cardIds": ["word-para--for-purpose-noun"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w11", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00043" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w12", "text": "PRIMER", "normalized": "primer", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00044" }], "cardIds": ["word-primer--before-masculine-noun"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w13", "text": "MATRIMONIO", "normalized": "matrimonio", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00055" }], "cardIds": ["word-matrimonio"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w14", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00056" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w15", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00057" }], "cardIds": ["word-de--age"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w16", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00068" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w17", "text": "FONDO", "normalized": "fondo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00069" }], "cardIds": ["word-fondo--dating-pool"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w18", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00070" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w19", "text": "SOLTEROS", "normalized": "solteros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00071" }], "cardIds": ["word-solteros--single-people"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w20", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00080" }], "cardIds": ["word-se--intransitive-change"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w21", "text": "REDUCE", "normalized": "reduce", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00081" }], "cardIds": ["word-reduce--shrinks"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w22", "text": "ME", "normalized": "me", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00093" }], "cardIds": ["word-me--pronominal-marker", "phrase-quedarse-sin"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w23", "text": "QUEDO", "normalized": "quedo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00094" }], "cardIds": ["word-quedo--left-without", "phrase-quedarse-sin"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w24", "text": "SIN", "normalized": "sin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00104" }], "cardIds": ["word-sin", "phrase-quedarse-sin"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:w25", "text": "TIEMPO", "normalized": "tiempo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00105" }], "cardIds": ["word-tiempo", "phrase-quedarse-sin"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:excluded-age-26", "text": "26", "reason": "number", "rationale": "This is the numerical median age printed in the statement, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00058" }] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-woman:app-quedarse-sin", "cardId": "phrase-quedarse-sin", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-1-woman:w22", "es-xkcd-fondo-de-solteros:panel-1-woman:w23", "es-xkcd-fondo-de-solteros:panel-1-woman:w24", "es-xkcd-fondo-de-solteros:panel-1-woman:w25"], "exampleEs": "ME QUEDO SIN TIEMPO", "explanationEn": "Me and quedo match the speaker, while sin introduces the thing that is no longer available." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-1-reply",
+      "labelEs": "(EN VERDAD, NO TANTO.)",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0025" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0034" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-reply:w01", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00082" }], "cardIds": ["word-en--fixed-en-verdad", "phrase-en-verdad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-reply:w02", "text": "VERDAD", "normalized": "verdad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00083" }], "cardIds": ["word-verdad--fixed-en-verdad", "phrase-en-verdad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-reply:w03", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00102" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-reply:w04", "text": "TANTO", "normalized": "tanto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00103" }], "cardIds": ["word-tanto--so-much"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-1-reply:app-en-verdad", "cardId": "phrase-en-verdad", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-1-reply:w01", "es-xkcd-fondo-de-solteros:panel-1-reply:w02"], "exampleEs": "EN VERDAD", "explanationEn": "The two words form a conversational expression that qualifies the preceding claim." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-2-explanation",
+      "labelEs": "SÍ, LOS SOLTEROS MÁS MAYORES SON MÁS ESCASOS. PERO, AL HACERTE MAYOR, EL RANGO DE EDAD CASADERA SE AMPLÍA. EL RANGO PARA UNA DE 18 ES 16-22, MIENTRAS QUE EL DE UNA DE 30 SERÍA ALGO COMO 23-46.",
+      "explicitBounds": [{ "x": 23.1, "y": 1.5, "width": 27.2, "height": 63.8 }],
+      "geometryRationale": "The checked OCR omitted most alternating handwritten lines in this bubble, so this measured bound covers the complete visible speech region.",
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w01", "text": "SÍ", "normalized": "sí", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00012" }], "cardIds": ["word-sí"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w02", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00013" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w03", "text": "SOLTEROS", "normalized": "solteros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00014" }], "cardIds": ["word-solteros--single-people"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w04", "text": "MÁS", "normalized": "más", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00015" }], "cardIds": ["word-más--before-mayor"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w05", "text": "MAYORES", "normalized": "mayores", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00016" }], "cardIds": ["word-mayores--older"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w06", "text": "SON", "normalized": "son", "explicitBounds": [{ "x": 23.7665, "y": 10.0304, "width": 3.2977, "height": 7.4772 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word SON.", "cardIds": ["word-son"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w07", "text": "MÁS", "normalized": "más", "explicitBounds": [{ "x": 27.2838, "y": 10.0572, "width": 3.7331, "height": 7.4285 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word MÁS.", "cardIds": ["word-más--more"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w08", "text": "ESCASOS", "normalized": "escasos", "explicitBounds": [{ "x": 31.2365, "y": 10.0572, "width": 7.4662, "height": 7.4285 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word ESCASOS.", "cardIds": ["word-escasos"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w09", "text": "PERO", "normalized": "pero", "explicitBounds": [{ "x": 38.9223, "y": 10.0572, "width": 5.0507, "height": 7.4285 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word PERO.", "cardIds": ["word-pero"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w10", "text": "AL", "normalized": "al", "explicitBounds": [{ "x": 44.1926, "y": 10.0304, "width": 2.1305, "height": 7.4772 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word AL.", "cardIds": ["word-al--time-clause", "grammar-al-infinitive"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w11", "text": "HACERTE", "normalized": "hacerte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00033" }], "cardIds": ["word-hacerte--become", "grammar-al-infinitive", "phrase-hacerse-mayor"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w12", "text": "MAYOR", "normalized": "mayor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00034" }], "cardIds": ["word-mayor--older", "phrase-hacerse-mayor"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w13", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 36.8108, "y": 16.2286, "width": 2.2027, "height": 9.3143 }], "geometryRationale": "Vision omitted this portion of the handwritten line; this measured box covers the visible word EL.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w14", "text": "RANGO", "normalized": "rango", "explicitBounds": [{ "x": 39.2888, "y": 16.2286, "width": 5.5067, "height": 9.3143 }], "geometryRationale": "Vision omitted this portion of the handwritten line; this measured box covers the visible word RANGO.", "cardIds": ["word-rango"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w15", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 45.071, "y": 16.2286, "width": 2.3324, "height": 9.3143 }], "geometryRationale": "Vision omitted this portion of the handwritten line; this measured box covers the visible word DE.", "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w16", "text": "EDAD", "normalized": "edad", "explicitBounds": [{ "x": 23.6729, "y": 23.4538, "width": 4.0551, "height": 7.7451 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word EDAD.", "cardIds": ["word-edad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w17", "text": "CASADERA", "normalized": "casadera", "explicitBounds": [{ "x": 27.9414, "y": 23.2355, "width": 8.0989, "height": 7.8123 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word CASADERA.", "cardIds": ["word-casadera"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w18", "text": "SE", "normalized": "se", "explicitBounds": [{ "x": 36.2537, "y": 23.1706, "width": 2.2577, "height": 7.6589 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word SE.", "cardIds": ["word-se--intransitive-change"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w19", "text": "AMPLÍA", "normalized": "amplía", "explicitBounds": [{ "x": 38.7249, "y": 22.9936, "width": 6.5262, "height": 7.771 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word AMPLÍA.", "cardIds": ["word-amplía--widens"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w20", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 45.4647, "y": 22.93, "width": 2.2054, "height": 7.6965 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word EL.", "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w21", "text": "RANGO", "normalized": "rango", "explicitBounds": [{ "x": 23.5937, "y": 29.3617, "width": 5.3219, "height": 10.0304 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word RANGO.", "cardIds": ["word-rango"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w22", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 29.2112, "y": 29.3714, "width": 4.1385, "height": 10 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word PARA.", "cardIds": ["word-para--for-person"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w23", "text": "UNA", "normalized": "una", "explicitBounds": [{ "x": 33.6453, "y": 29.3714, "width": 3.2517, "height": 10 }], "geometryRationale": "Vision misread this handwritten word as LINA; this measured box covers the visibly printed UNA.", "cardIds": ["word-una--feminine-pronoun"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w24", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 37.1926, "y": 29.3714, "width": 2.3649, "height": 10 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word DE.", "cardIds": ["word-de--age"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w25", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 42.2179, "y": 29.3714, "width": 2.0692, "height": 10 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word ES.", "cardIds": ["word-es"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w26", "text": "MIENTRAS", "normalized": "mientras", "explicitBounds": [{ "x": 23.5412, "y": 35.4771, "width": 8.1142, "height": 8.1311 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word MIENTRAS.", "cardIds": ["word-mientras", "phrase-mientras-que"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w27", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 31.8721, "y": 35.7577, "width": 3.2545, "height": 7.9374 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word QUE.", "cardIds": ["word-que--mientras-que", "phrase-mientras-que"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w28", "text": "EL", "normalized": "el", "explicitBounds": [{ "x": 35.3433, "y": 35.8745, "width": 2.3288, "height": 7.9062 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word EL.", "cardIds": ["word-el--omitted-masculine-noun"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w29", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 37.8888, "y": 35.9603, "width": 2.0974, "height": 7.8985 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word DE.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w30", "text": "UNA", "normalized": "una", "explicitBounds": [{ "x": 40.2029, "y": 36.0382, "width": 3.4859, "height": 7.9452 }], "geometryRationale": "Vision misread this handwritten word as LINA; this measured box covers the visibly printed UNA.", "cardIds": ["word-una--feminine-pronoun"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w31", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 43.9055, "y": 36.1629, "width": 2.5603, "height": 7.914 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word DE.", "cardIds": ["word-de--age"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w32", "text": "SERÍA", "normalized": "sería", "explicitBounds": [{ "x": 23.6801, "y": 43.2, "width": 4.6578, "height": 7.8857 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word SERÍA.", "cardIds": ["word-seria--would-be"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w33", "text": "ALGO", "normalized": "algo", "explicitBounds": [{ "x": 28.571, "y": 43.2, "width": 4.1959, "height": 7.8857 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word ALGO.", "cardIds": ["word-algo", "phrase-algo-como-approximation"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:w34", "text": "COMO", "normalized": "como", "explicitBounds": [{ "x": 33, "y": 43.2, "width": 4.8953, "height": 7.8857 }], "geometryRationale": "Vision omitted this handwritten line; this measured box covers the visible word COMO.", "cardIds": ["word-como--approximation", "phrase-algo-como-approximation"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:excluded-age-18", "text": "18", "reason": "number", "rationale": "This is a printed age value in the example range, not a Spanish lexical word.", "explicitBounds": [{ "x": 39.853, "y": 29.3714, "width": 2.0692, "height": 10 }], "geometryRationale": "Vision omitted this line; this measured box covers the visible age value 18." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:excluded-range-16-22", "text": "16-22", "reason": "number", "rationale": "This is a printed numerical age range, not Spanish vocabulary.", "explicitBounds": [{ "x": 44.5828, "y": 29.3617, "width": 5.8022, "height": 10.0304 }], "geometryRationale": "Vision omitted this line; this measured box covers the visible range 16-22." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:excluded-age-30", "text": "30", "reason": "number", "rationale": "This is a printed age value in the comparison, not a Spanish lexical word.", "explicitBounds": [{ "x": 46.6824, "y": 36.2564, "width": 2.244, "height": 7.9335 }], "geometryRationale": "Vision omitted this line; this measured box covers the visible age value 30." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:excluded-range-23-46", "text": "23-46", "reason": "number", "rationale": "This is a printed approximate numerical age range, not Spanish vocabulary.", "explicitBounds": [{ "x": 38.1284, "y": 43.2, "width": 5.5588, "height": 7.8857 }], "geometryRationale": "Vision omitted this line; this measured box covers the visible range 23-46." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:app-al-infinitive", "cardId": "grammar-al-infinitive", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-2-explanation:w10", "es-xkcd-fondo-de-solteros:panel-2-explanation:w11"], "exampleEs": "AL HACERTE", "explanationEn": "Al introduces the time relationship, and hacerte keeps hacer in its unchanged dictionary form with te attached." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:app-hacerse-mayor", "cardId": "phrase-hacerse-mayor", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-2-explanation:w11", "es-xkcd-fondo-de-solteros:panel-2-explanation:w12"], "exampleEs": "HACERTE MAYOR", "explanationEn": "Hacerte is the form directed at one familiar person, and mayor supplies the age description after hacerse." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:app-mientras-que", "cardId": "phrase-mientras-que", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-2-explanation:w26", "es-xkcd-fondo-de-solteros:panel-2-explanation:w27"], "exampleEs": "MIENTRAS QUE", "explanationEn": "The two-word connector introduces the contrasting comparison that follows." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-explanation:app-algo-como", "cardId": "phrase-algo-como-approximation", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-2-explanation:w33", "es-xkcd-fondo-de-solteros:panel-2-explanation:w34"], "exampleEs": "ALGO COMO", "explanationEn": "Algo como marks the following figure as an approximation rather than an exact value." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-2-sign",
+      "labelEs": "REGLA ESTÁNDAR DE REPULSIÓN: NOVIOS POR ENCIMA DE (EDAD/2 + 7)",
+      "explicitBounds": [{ "x": 34.2, "y": 51.8, "width": 16.1, "height": 40.2 }],
+      "geometryRationale": "The formula and final DE were fused by OCR, so this measured rectangle covers the complete visible sign as one coherent region.",
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w01", "text": "REGLA", "normalized": "regla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00096" }], "cardIds": ["word-regla", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w02", "text": "ESTÁNDAR", "normalized": "estándar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00097" }], "cardIds": ["word-estándar", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00098" }], "cardIds": ["word-de--of", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w04", "text": "REPULSIÓN", "normalized": "repulsión", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00109" }], "cardIds": ["word-repulsión--creepiness", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w05", "text": "NOVIOS", "normalized": "novios", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00110" }], "cardIds": ["word-novios--dating-partners", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w06", "text": "POR", "normalized": "por", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00115" }], "cardIds": ["word-por--fixed-por-encima-de", "phrase-por-encima-de", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w07", "text": "ENCIMA", "normalized": "encima", "explicitBounds": [{ "x": 34.9, "y": 76.5, "width": 5.04, "height": 5.5 }], "geometryRationale": "Vision fused ENCIMA with the separate DE below it; this measured box covers only the visible word ENCIMA.", "cardIds": ["word-encima--fixed-por-encima-de", "phrase-por-encima-de", "concept-half-age-plus-seven-rule"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:w08", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 34.9, "y": 83.4, "width": 1.8, "height": 5.5 }], "geometryRationale": "Vision fused this separate final DE with ENCIMA above it; this measured box covers only the visibly printed DE.", "cardIds": ["word-de--fixed-por-encima-de", "phrase-por-encima-de", "concept-half-age-plus-seven-rule"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:excluded-formula", "text": "(EDAD/2 + 7)", "reason": "equation", "rationale": "This is the printed mathematical age-bound formula, treated as an equation rather than Spanish vocabulary.", "explicitBounds": [{ "x": 40.5, "y": 70.5, "width": 9.3, "height": 17.2 }], "geometryRationale": "Vision split and misread the stacked fraction; this measured rectangle covers the entire visible equation." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-2-sign:app-por-encima-de", "cardId": "phrase-por-encima-de", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-2-sign:w06", "es-xkcd-fondo-de-solteros:panel-2-sign:w07", "es-xkcd-fondo-de-solteros:panel-2-sign:w08"], "exampleEs": "POR ENCIMA DE", "explanationEn": "The three words form the expression that places the permitted partners above the formula's limit." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-3-explanation",
+      "labelEs": "EL FIN DE SEMANA PASADO HICE ALGO DE ANÁLISIS CON LOS DATOS DE LA OFICINA DEL CENSO. EN REALIDAD, TU FONDO DE SOLTEROS CRECE HASTA LA MEDIANA EDAD. ¡ASÍ QUE NO TE PREOCUPES TANTO!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0006" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0011" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0014" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0019" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0022" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0027" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0032" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0037" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w01", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00001" }], "cardIds": ["word-el--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w02", "text": "FIN", "normalized": "fin", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00002" }], "cardIds": ["word-fin--weekend", "phrase-fin-de-semana"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00003" }], "cardIds": ["word-de--fixed-fin-de-semana", "phrase-fin-de-semana"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w04", "text": "SEMANA", "normalized": "semana", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00004" }], "cardIds": ["word-semana", "phrase-fin-de-semana"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w05", "text": "PASADO", "normalized": "pasado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00005" }], "cardIds": ["word-pasado--last-time-period"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w06", "text": "HICE", "normalized": "hice", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00020" }], "cardIds": ["word-hice"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w07", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00021" }], "cardIds": ["word-algo--some-amount", "grammar-algo-de-quantity"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00022" }], "cardIds": ["word-de--after-quantity", "grammar-algo-de-quantity"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w09", "text": "ANÁLISIS", "normalized": "análisis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00023" }], "cardIds": ["word-análisis", "grammar-algo-de-quantity"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w10", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00024" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w11", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00035" }], "cardIds": ["word-los"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w12", "text": "DATOS", "normalized": "datos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00036" }], "cardIds": ["word-datos"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w13", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00037" }], "cardIds": ["word-de--from"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w14", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00038" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w15", "text": "OFICINA", "normalized": "oficina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00039" }], "cardIds": ["word-oficina"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w16", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00047" }], "cardIds": ["word-del--of-the"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w17", "text": "CENSO", "normalized": "censo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00048" }], "cardIds": ["word-censo"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w18", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00049" }], "cardIds": ["word-en--fixed-en-realidad", "phrase-en-realidad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w19", "text": "REALIDAD", "normalized": "realidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00050" }], "cardIds": ["word-realidad", "phrase-en-realidad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w20", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00051" }], "cardIds": ["word-tu"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w21", "text": "FONDO", "normalized": "fondo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00064" }], "cardIds": ["word-fondo--dating-pool"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w22", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00065" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w23", "text": "SOLTEROS", "normalized": "solteros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00066" }], "cardIds": ["word-solteros--single-people"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w24", "text": "CRECE", "normalized": "crece", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00067" }], "cardIds": ["word-crece"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w25", "text": "HASTA", "normalized": "hasta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00073" }], "cardIds": ["word-hasta"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w26", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00074" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w27", "text": "MEDIANA", "normalized": "mediana", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00075" }], "cardIds": ["word-mediana--middle-age", "phrase-mediana-edad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w28", "text": "EDAD", "normalized": "edad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00076" }], "cardIds": ["word-edad", "phrase-mediana-edad"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w29", "text": "ASÍ", "normalized": "así", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00086" }], "cardIds": ["word-así--result-link", "phrase-asi-que"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w30", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00087" }], "cardIds": ["word-que--result-link", "phrase-asi-que"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w31", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00088" }], "cardIds": ["word-no", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w32", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00089" }], "cardIds": ["word-te--preocuparse", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w33", "text": "PREOCUPES", "normalized": "preocupes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00099" }], "cardIds": ["word-preocupes--negative-command", "grammar-negative-tu-command"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:w34", "text": "TANTO", "normalized": "tanto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00108" }], "cardIds": ["word-tanto--so-much"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-fin-de-semana", "cardId": "phrase-fin-de-semana", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w02", "es-xkcd-fondo-de-solteros:panel-3-explanation:w03", "es-xkcd-fondo-de-solteros:panel-3-explanation:w04"], "exampleEs": "FIN DE SEMANA", "explanationEn": "Fin, de, and semana form the established singular time unit; pasado separately identifies which one." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-algo-de", "cardId": "grammar-algo-de-quantity", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w07", "es-xkcd-fondo-de-solteros:panel-3-explanation:w08", "es-xkcd-fondo-de-solteros:panel-3-explanation:w09"], "exampleEs": "ALGO DE ANÁLISIS", "explanationEn": "Algo de supplies an unspecified amount, and análisis names the broad activity being quantified." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-en-realidad", "cardId": "phrase-en-realidad", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w18", "es-xkcd-fondo-de-solteros:panel-3-explanation:w19"], "exampleEs": "EN REALIDAD", "explanationEn": "The fixed expression introduces a correction to the preceding assumption." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-mediana-edad", "cardId": "phrase-mediana-edad", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w27", "es-xkcd-fondo-de-solteros:panel-3-explanation:w28"], "exampleEs": "MEDIANA EDAD", "explanationEn": "Mediana and edad form the established name for this stage of adult life, distinct from the earlier statistical use." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-asi-que", "cardId": "phrase-asi-que", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w29", "es-xkcd-fondo-de-solteros:panel-3-explanation:w30"], "exampleEs": "ASÍ QUE", "explanationEn": "The two words work together as the connector introducing a result." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-explanation:app-negative-command", "cardId": "grammar-negative-tu-command", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-3-explanation:w31", "es-xkcd-fondo-de-solteros:panel-3-explanation:w32", "es-xkcd-fondo-de-solteros:panel-3-explanation:w33"], "exampleEs": "NO TE PREOCUPES", "explanationEn": "No begins the negative instruction, te comes before the verb, and preocupes is the special familiar negative-command form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-3-graph-singles",
+      "labelEs": "SOLTEROS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0039" }],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-graph-singles:w01", "text": "SOLTEROS", "normalized": "solteros", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00111" }, { "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00112" }], "cardIds": ["word-solteros--single-people"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-3-graph-pool",
+      "labelEs": "FONDO DE SOLTEROS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0044" }],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-graph-pool:w01", "text": "FONDO", "normalized": "fondo", "explicitBounds": [{ "x": 63.2432, "y": 77.2727, "width": 3.2432, "height": 6.8182 }], "geometryRationale": "Vision made this graph-label box twice as tall as its letters; this measured box covers only FONDO.", "cardIds": ["word-fondo--dating-pool"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-graph-pool:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 66.8919, "y": 77.2727, "width": 1.2162, "height": 6.8182 }], "geometryRationale": "Vision made this graph-label box twice as tall as its letters; this measured box covers only DE.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-3-graph-pool:w03", "text": "SOLTEROS", "normalized": "solteros", "explicitBounds": [{ "x": 68.5135, "y": 77.2727, "width": 5, "height": 6.8182 }], "geometryRationale": "Vision made this graph-label box twice as tall as its letters; this measured box covers only SOLTEROS.", "cardIds": ["word-solteros--single-people"] }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-4-question",
+      "labelEs": "¿DICE ALGO TU ANÁLISIS SOBRE LAS PERSPECTIVAS DE NOVIAZGO DE LA GENTE QUE SE PASA LOS FINES DE SEMANA HACIENDO GRÁFICAS?",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0002" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0005" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0009" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0015" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0018" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0023" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0028" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0033" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w01", "text": "DICE", "normalized": "dice", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00006" }], "cardIds": ["word-dice--report-says"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w02", "text": "ALGO", "normalized": "algo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00007" }], "cardIds": ["word-algo"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w03", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00008" }], "cardIds": ["word-tu"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w04", "text": "ANÁLISIS", "normalized": "análisis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00017" }], "cardIds": ["word-análisis"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w05", "text": "SOBRE", "normalized": "sobre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00018" }], "cardIds": ["word-sobre--about"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w06", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00019" }], "cardIds": ["word-las"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w07", "text": "PERSPECTIVAS", "normalized": "perspectivas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00031" }], "cardIds": ["word-perspectivas"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00032" }], "cardIds": ["word-de--type-classifier"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w09", "text": "NOVIAZGO", "normalized": "noviazgo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00052" }], "cardIds": ["word-noviazgo"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00053" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w11", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00054" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w12", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00061" }], "cardIds": ["word-gente"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w13", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00062" }], "cardIds": ["word-que--relative"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w14", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00063" }], "cardIds": ["word-se--pasarse-time", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w15", "text": "PASA", "normalized": "pasa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00077" }], "cardIds": ["word-pasa--spends-time", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w16", "text": "LOS", "normalized": "los", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00078" }], "cardIds": ["word-los", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w17", "text": "FINES", "normalized": "fines", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00079" }], "cardIds": ["word-fines--weekends", "phrase-fin-de-semana", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w18", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00090" }], "cardIds": ["word-de--fixed-fin-de-semana", "phrase-fin-de-semana", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w19", "text": "SEMANA", "normalized": "semana", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00091" }], "cardIds": ["word-semana", "phrase-fin-de-semana", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w20", "text": "HACIENDO", "normalized": "haciendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00092" }, { "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00100" }], "cardIds": ["word-haciendo--making", "grammar-pasarse-time-gerund"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:w21", "text": "GRÁFICAS", "normalized": "gráficas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00101" }], "cardIds": ["word-gráficas"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:app-fin-de-semana", "cardId": "phrase-fin-de-semana", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-4-question:w17", "es-xkcd-fondo-de-solteros:panel-4-question:w18", "es-xkcd-fondo-de-solteros:panel-4-question:w19"], "exampleEs": "FINES DE SEMANA", "explanationEn": "Fines is plural while semana remains singular inside the established expression for multiple weekends." },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-question:app-pasarse-time", "cardId": "grammar-pasarse-time-gerund", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-4-question:w14", "es-xkcd-fondo-de-solteros:panel-4-question:w15", "es-xkcd-fondo-de-solteros:panel-4-question:w16", "es-xkcd-fondo-de-solteros:panel-4-question:w17", "es-xkcd-fondo-de-solteros:panel-4-question:w18", "es-xkcd-fondo-de-solteros:panel-4-question:w19", "es-xkcd-fondo-de-solteros:panel-4-question:w20"], "exampleEs": "SE PASA LOS FINES DE SEMANA HACIENDO", "explanationEn": "Se pasa matches the person, los fines de semana supplies the recurring time period, and haciendo begins the activity that fills it." }
+      ]
+    },
+    {
+      "id": "es-xkcd-fondo-de-solteros:panel-4-reply",
+      "labelEs": "VENGA YA. EN ALGÚN PUNTO DEL EXTREMO DE LA CAMPANA DE GAUSS ESTÁ MI CHICA.",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0008" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0013" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0017" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0021" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0026" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0030" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0036" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0040" },
+        { "source": "ocr-line", "id": "es-xkcd-fondo-de-solteros:ocr-line-0043" }
+      ],
+      "words": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w01", "text": "VENGA", "normalized": "venga", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00029" }], "cardIds": ["word-venga", "phrase-venga-ya"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w02", "text": "YA", "normalized": "ya", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00030" }], "cardIds": ["word-ya--come-on-emphasis", "phrase-venga-ya"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00045" }], "cardIds": ["word-en--at-location"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w04", "text": "ALGÚN", "normalized": "algún", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00046" }], "cardIds": ["word-algún"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w05", "text": "PUNTO", "normalized": "punto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00059" }], "cardIds": ["word-punto--curve-location"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w06", "text": "DEL", "normalized": "del", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00060" }], "cardIds": ["word-del--of-the"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w07", "text": "EXTREMO", "normalized": "extremo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00072" }], "cardIds": ["word-extremo--edge"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00084" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w09", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00085" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w10", "text": "CAMPANA", "normalized": "campana", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00095" }], "cardIds": ["word-campana--bell-curve", "concept-gaussian-bell-curve"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w11", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00106" }], "cardIds": ["word-de--named-after", "concept-gaussian-bell-curve"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w12", "text": "GAUSS", "normalized": "gauss", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00107" }], "cardIds": ["word-gauss", "concept-gaussian-bell-curve"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w13", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00113" }], "cardIds": ["word-está"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w14", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00114" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:w15", "text": "CHICA", "normalized": "chica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-fondo-de-solteros:ocr-token-00119" }], "cardIds": ["word-chica--potential-partner"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-fondo-de-solteros:panel-4-reply:app-venga-ya", "cardId": "phrase-venga-ya", "participantWordIds": ["es-xkcd-fondo-de-solteros:panel-4-reply:w01", "es-xkcd-fondo-de-solteros:panel-4-reply:w02"], "exampleEs": "VENGA YA", "explanationEn": "The two words form the fixed reaction of disbelief used in Spain." }
+      ]
+    }
+  ]
+}
