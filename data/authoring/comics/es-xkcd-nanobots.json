@@ -1,0 +1,2118 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-nanobots",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Nanobots",
+  "titleEs": "Nanobots",
+  "titleText": {
+    "es": "Creo que el IETF alzancó un equilibrio perfecto con lo de los 128 bits. Podemos meter las direcciones MAC en una subred /64, y los nanobots solo podrán devorar medio planeta.",
+    "en": "I think the IETF hit the right balance with the 128 bits thing. We can fit MAC addresses in a /64 subnet, and the nanobots will only be able to devour half the planet.",
+    "noteEn": "The Spanish title attribute is preserved exactly, including its printed typo alzancó. Spanish OCR corrections restore QUÉ twice, DIRECCIONES, DEBERÍAMOS, MICRAS, CÚBICAS, the punctuation around ¿POR?, and the opening exclamation mark before SE. The percentage, year, and IPv6 label are audited non-lexical exclusions."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-comandante",
+      "kind": "word",
+      "promptEs": "comandante",
+      "answerEn": "commander",
+      "noteEn": "A comandante is the person in charge of a military unit or operation.",
+      "example": {
+        "es": "La comandante dio la orden.",
+        "en": "The commander gave the order."
+      },
+      "tags": [
+        "word",
+        "military",
+        "person",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-se--detenerse",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; marks detenerse, “to stop”",
+      "noteEn": "With a form of detener, se shows that the people or things themselves come to a stop.",
+      "example": {
+        "es": "El tren se detuvo.",
+        "en": "The train stopped."
+      },
+      "tags": [
+        "word",
+        "detenerse",
+        "pronoun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-detenido--stopped",
+      "kind": "word",
+      "promptEs": "detenido",
+      "answerEn": "stopped; come to a stop",
+      "noteEn": "After a form of haber, detenido is detenerse’s completed-action form here.",
+      "example": {
+        "es": "Las máquinas se han detenido.",
+        "en": "The machines have stopped."
+      },
+      "tags": [
+        "word",
+        "detenerse",
+        "participle",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-parado--stopped",
+      "kind": "word",
+      "promptEs": "parado",
+      "answerEn": "stopped",
+      "noteEn": "After a form of haber, parado presents the stopping as completed.",
+      "example": {
+        "es": "El reloj ha parado.",
+        "en": "The clock has stopped."
+      },
+      "tags": [
+        "word",
+        "parar",
+        "participle",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-quietos",
+      "kind": "word",
+      "promptEs": "quietos",
+      "answerEn": "still; motionless",
+      "noteEn": "Quietos is masculine plural because it describes more than one nanobot.",
+      "example": {
+        "es": "Los niños están quietos.",
+        "en": "The children are still."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "plural",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-misterio",
+      "kind": "word",
+      "promptEs": "misterio",
+      "answerEn": "mystery",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "noun",
+        "A1"
+      ]
+    },
+    {
+      "id": "word-a--fixed-a-menos-que",
+      "kind": "word",
+      "promptEs": "a",
+      "answerEn": "no separate English word; begins a menos que, “unless”",
+      "noteEn": "A is fixed as the first part of the connector a menos que.",
+      "example": {
+        "es": "Iré, a menos que llueva.",
+        "en": "I will go unless it rains."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-menos--fixed-a-menos-que",
+      "kind": "word",
+      "promptEs": "menos",
+      "answerEn": "no separate English word; middle of a menos que, “unless”",
+      "noteEn": "Menos is fixed between a and que in this connector.",
+      "example": {
+        "es": "Salimos, a menos que nieve.",
+        "en": "We are leaving unless it snows."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-que--fixed-a-menos-que",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "no separate English word; completes a menos que, “unless”",
+      "noteEn": "Que completes the connector and introduces the possible exception.",
+      "example": {
+        "es": "Ven, a menos que estés ocupado.",
+        "en": "Come unless you are busy."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-volumen--physical-space",
+      "kind": "word",
+      "promptEs": "volumen",
+      "answerEn": "volume; amount of three-dimensional space",
+      "noteEn": "Here volumen means how much physical space an object occupies, not sound level.",
+      "example": {
+        "es": "Calculamos el volumen de la caja.",
+        "en": "We calculated the volume of the box."
+      },
+      "tags": [
+        "word",
+        "measurement",
+        "science",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-nanobot",
+      "kind": "word",
+      "promptEs": "nanobot",
+      "answerEn": "nanobot; microscopic robot",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "technology",
+        "noun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-micras",
+      "kind": "word",
+      "promptEs": "micras",
+      "answerEn": "micrometres; millionths of a metre",
+      "noteEn": "A micra is the everyday Spanish name for a micrometre, one millionth of a metre.",
+      "example": {
+        "es": "La capa mide dos micras.",
+        "en": "The layer measures two micrometres."
+      },
+      "tags": [
+        "word",
+        "measurement",
+        "science",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-cúbicas",
+      "kind": "word",
+      "promptEs": "cúbicas",
+      "answerEn": "cubic; measured in three dimensions",
+      "noteEn": "Cúbicas is feminine plural to match micras.",
+      "example": {
+        "es": "La muestra ocupa cinco micras cúbicas.",
+        "en": "The sample occupies five cubic micrometres."
+      },
+      "tags": [
+        "word",
+        "measurement",
+        "adjective",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-por--elliptical-why",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "why?; for what reason? (with qué left understood)",
+      "noteEn": "In the short echo ¿por?, the usual qué is omitted because the question being repeated is already clear.",
+      "example": {
+        "es": "—Tenemos que irnos. —¿Por?",
+        "en": "“We have to leave.” “Why?”"
+      },
+      "tags": [
+        "word",
+        "question",
+        "ellipsis",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-hecho--causative-made",
+      "kind": "word",
+      "promptEs": "hecho",
+      "answerEn": "made; caused",
+      "noteEn": "Here hecho is the completed-action form of hacer in the pattern that makes someone do something.",
+      "example": {
+        "es": "La broma nos ha hecho reír.",
+        "en": "The joke has made us laugh."
+      },
+      "tags": [
+        "word",
+        "hacer",
+        "causative",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-ganar--gain-time",
+      "kind": "word",
+      "promptEs": "ganar",
+      "answerEn": "to gain; to buy (time)",
+      "noteEn": "With tiempo, ganar means to obtain extra time before something happens.",
+      "example": {
+        "es": "La pausa nos permite ganar tiempo.",
+        "en": "The pause lets us buy time."
+      },
+      "tags": [
+        "word",
+        "time",
+        "verb",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-enjambre",
+      "kind": "word",
+      "promptEs": "enjambre",
+      "answerEn": "swarm",
+      "noteEn": "An enjambre is a large moving group, especially of insects or, by extension, tiny robots.",
+      "example": {
+        "es": "Un enjambre rodeó la colmena.",
+        "en": "A swarm surrounded the hive."
+      },
+      "tags": [
+        "word",
+        "collective",
+        "noun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-con--meaning-reference",
+      "kind": "word",
+      "promptEs": "con",
+      "answerEn": "by; when you say (introducing the wording being explained)",
+      "noteEn": "After querer decir, con can introduce the exact word or expression whose meaning is being asked about.",
+      "example": {
+        "es": "¿Qué quieres decir con “urgente”?",
+        "en": "What do you mean by “urgent”?"
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "meaning",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-agotadas--used-up",
+      "kind": "word",
+      "promptEs": "agotadas",
+      "answerEn": "exhausted; used up",
+      "noteEn": "Here agotadas describes a supply of addresses that has all been used, not tired people.",
+      "example": {
+        "es": "Las entradas están agotadas.",
+        "en": "The tickets are sold out."
+      },
+      "tags": [
+        "word",
+        "technology",
+        "adjective",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-migrado",
+      "kind": "word",
+      "promptEs": "migrado",
+      "answerEn": "migrated; moved to another system",
+      "noteEn": "After haber, migrado is migrar’s completed-action form.",
+      "example": {
+        "es": "La empresa ha migrado al sistema nuevo.",
+        "en": "The company has migrated to the new system."
+      },
+      "tags": [
+        "word",
+        "technology",
+        "participle",
+        "B1"
+      ]
+    },
+    {
+      "id": "phrase-a-menos-que",
+      "kind": "phrase",
+      "promptEs": "a menos que",
+      "questionEn": "How do you introduce a possible exception that would change what you just said?",
+      "answerEn": "unless",
+      "noteEn": "A menos que introduces a possible exception. The verb after it normally uses a special form because the exception is not presented as a fact; for example, llueve changes to llueva.",
+      "example": {
+        "es": "Iremos, a menos que llueva.",
+        "en": "We will go unless it rains."
+      },
+      "tags": [
+        "phrase",
+        "exception",
+        "subjunctive",
+        "A2"
+      ]
+    },
+    {
+      "id": "grammar-hacer-person-infinitive-causative",
+      "kind": "grammar",
+      "promptEs": "hacer + persona + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone or something makes a person do an action?",
+      "answerEn": "Use a matching form of hacer, then the affected person, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The unchanged dictionary form ends in -ar, -er, or -ir. Only hacer changes for the person and time. A short word such as me, te, or nos usually marks who is made to act; in a compound form such as ha hecho, that short word comes before the helper ha.",
+      "example": {
+        "es": "La noticia nos hizo sonreír.",
+        "en": "The news made us smile."
+      },
+      "tags": [
+        "grammar",
+        "hacer",
+        "causative",
+        "B1"
+      ]
+    },
+    {
+      "id": "phrase-ganar-tiempo",
+      "kind": "phrase",
+      "promptEs": "ganar tiempo",
+      "questionEn": "How do you say “to gain time” or “to buy time”?",
+      "answerEn": "to gain time; to buy time",
+      "noteEn": "Ganar literally means to win or gain. With tiempo it conventionally means creating or obtaining extra time before a deadline or event.",
+      "example": {
+        "es": "Haz una pregunta para ganar tiempo.",
+        "en": "Ask a question to buy time."
+      },
+      "tags": [
+        "phrase",
+        "time",
+        "idiom",
+        "A2"
+      ]
+    },
+    {
+      "id": "concept-ipv6-address-exhaustion-nanobots",
+      "kind": "concept",
+      "promptEs": "1998 · IPv6 · direcciones agotadas · nanobots",
+      "answerEn": "IPv6’s original specification appeared in 1998; the joke treats an IPv6 address block as the finite supply of identities available to a nanobot swarm.",
+      "noteEn": "The core IPv6 specification, RFC 2460, was published in 1998. IPv4’s limited address space motivated IPv6, whose 128-bit addresses are unimaginably numerous. The comic imagines self-replicating nanobots stopping after consuming only part of Earth because their swarm was still assigned too small an IPv6 subnet and ran out of addresses.",
+      "tags": [
+        "concept",
+        "IPv6",
+        "networking",
+        "joke"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-nanobots:alert",
+      "labelEs": "COMANDANTE VENGA RÁPIDO SON LOS NANOBOTS SE HAN DETENIDO",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:alert:w01",
+          "text": "COMANDANTE",
+          "normalized": "comandante",
+          "cardIds": [
+            "word-comandante"
+          ],
+          "explicitBounds": [
+            {
+              "x": 0.7992,
+              "y": 6.9475,
+              "width": 13.5368,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w02",
+          "text": "VENGA",
+          "normalized": "venga",
+          "cardIds": [
+            "word-venga",
+            "grammar-formal-command"
+          ],
+          "explicitBounds": [
+            {
+              "x": 0.8108,
+              "y": 12.6984,
+              "width": 6.6892,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w03",
+          "text": "RÁPIDO",
+          "normalized": "rápido",
+          "cardIds": [
+            "word-rapido"
+          ],
+          "explicitBounds": [
+            {
+              "x": 7.8041,
+              "y": 12.6984,
+              "width": 7.3311,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w04",
+          "text": "SON",
+          "normalized": "son",
+          "cardIds": [
+            "word-son",
+            "grammar-ser-identity-estar-location"
+          ],
+          "explicitBounds": [
+            {
+              "x": 1.0603,
+              "y": 22.1616,
+              "width": 4.0492,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w05",
+          "text": "LOS",
+          "normalized": "los",
+          "cardIds": [
+            "word-los",
+            "grammar-ser-identity-estar-location"
+          ],
+          "explicitBounds": [
+            {
+              "x": 5.3169,
+              "y": 22.3538,
+              "width": 3.8124,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w06",
+          "text": "NANOBOTS",
+          "normalized": "nanobots",
+          "cardIds": [
+            "word-nanobots",
+            "grammar-ser-identity-estar-location",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 9.3363,
+              "y": 22.5354,
+              "width": 11.5034,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w07",
+          "text": "SE",
+          "normalized": "se",
+          "cardIds": [
+            "word-se--detenerse"
+          ],
+          "explicitBounds": [
+            {
+              "x": 0.8108,
+              "y": 28.5714,
+              "width": 3.2432,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w08",
+          "text": "HAN",
+          "normalized": "han",
+          "cardIds": [
+            "word-han",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 4.3243,
+              "y": 28.5714,
+              "width": 3.7838,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:w09",
+          "text": "DETENIDO",
+          "normalized": "detenido",
+          "cardIds": [
+            "word-detenido--stopped",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 8.3784,
+              "y": 28.5714,
+              "width": 9.1892,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:alert:app-formal-command",
+          "cardId": "grammar-formal-command",
+          "participantWordIds": [
+            "es-xkcd-nanobots:alert:w02"
+          ],
+          "exampleEs": "VENGA",
+          "explanationEn": "Venga is the formal one-person command of venir, asking the commander to come."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:app-identity",
+          "cardId": "grammar-ser-identity-estar-location",
+          "participantWordIds": [
+            "es-xkcd-nanobots:alert:w04",
+            "es-xkcd-nanobots:alert:w05",
+            "es-xkcd-nanobots:alert:w06"
+          ],
+          "exampleEs": "SON LOS NANOBOTS",
+          "explanationEn": "Son is a form of ser because los nanobots identifies what the reported objects are rather than where they are."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:app-se-detenerse",
+          "cardId": "word-se--detenerse",
+          "participantWordIds": [
+            "es-xkcd-nanobots:alert:w07"
+          ],
+          "exampleEs": "SE HAN DETENIDO",
+          "explanationEn": "Se marks detenerse: the nanobots themselves came to a stop."
+        },
+        {
+          "id": "es-xkcd-nanobots:alert:app-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-nanobots:alert:w08",
+            "es-xkcd-nanobots:alert:w09"
+          ],
+          "exampleEs": "HAN DETENIDO",
+          "explanationEn": "Han is the present helper for a plural subject, and detenido is the completed-action form."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 0.4992,
+          "y": 6.6475,
+          "width": 20.6405,
+          "height": 27.4739
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:destruction-report",
+      "labelEs": "HAN DEVORADO EL 40% DE LA TIERRA Y ENTONCES HAN PARADO SE HAN QUEDADO AHÍ QUIETOS",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w01",
+          "text": "HAN",
+          "normalized": "han",
+          "cardIds": [
+            "word-han",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 23.2432,
+              "y": 5.5556,
+              "width": 4.0541,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w02",
+          "text": "DEVORADO",
+          "normalized": "devorado",
+          "cardIds": [
+            "word-devorado",
+            "grammar-present-perfect",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 27.5676,
+              "y": 5.5556,
+              "width": 8.9189,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w03",
+          "text": "EL",
+          "normalized": "el",
+          "cardIds": [
+            "word-el--article"
+          ],
+          "explicitBounds": [
+            {
+              "x": 36.7568,
+              "y": 5.5556,
+              "width": 2.4324,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w04",
+          "text": "DE",
+          "normalized": "de",
+          "cardIds": [
+            "word-de--of"
+          ],
+          "explicitBounds": [
+            {
+              "x": 43.7838,
+              "y": 5.5556,
+              "width": 2.1622,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w05",
+          "text": "LA",
+          "normalized": "la",
+          "cardIds": [
+            "word-la--article"
+          ],
+          "explicitBounds": [
+            {
+              "x": 23.2432,
+              "y": 11.9048,
+              "width": 2.6014,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w06",
+          "text": "TIERRA",
+          "normalized": "tierra",
+          "cardIds": [
+            "word-tierra--planet-earth",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 26.0811,
+              "y": 11.9048,
+              "width": 6.1486,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w07",
+          "text": "Y",
+          "normalized": "y",
+          "cardIds": [
+            "word-y"
+          ],
+          "explicitBounds": [
+            {
+              "x": 32.4662,
+              "y": 11.9048,
+              "width": 1.1824,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w08",
+          "text": "ENTONCES",
+          "normalized": "entonces",
+          "cardIds": [
+            "word-entonces"
+          ],
+          "explicitBounds": [
+            {
+              "x": 33.8851,
+              "y": 11.9048,
+              "width": 10.9797,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w09",
+          "text": "HAN",
+          "normalized": "han",
+          "cardIds": [
+            "word-han",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 23.2432,
+              "y": 16.6667,
+              "width": 4.3243,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w10",
+          "text": "PARADO",
+          "normalized": "parado",
+          "cardIds": [
+            "word-parado--stopped",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 27.8378,
+              "y": 16.6667,
+              "width": 7.5676,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w11",
+          "text": "SE",
+          "normalized": "se",
+          "cardIds": [
+            "word-se--quedarse-remain",
+            "grammar-quedarse-state"
+          ],
+          "explicitBounds": [
+            {
+              "x": 35.6757,
+              "y": 16.6667,
+              "width": 3.2432,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w12",
+          "text": "HAN",
+          "normalized": "han",
+          "cardIds": [
+            "word-han",
+            "grammar-present-perfect"
+          ],
+          "explicitBounds": [
+            {
+              "x": 39.1892,
+              "y": 16.6667,
+              "width": 4.0541,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w13",
+          "text": "QUEDADO",
+          "normalized": "quedado",
+          "cardIds": [
+            "word-quedado--result-state",
+            "grammar-present-perfect",
+            "grammar-quedarse-state"
+          ],
+          "explicitBounds": [
+            {
+              "x": 23.2432,
+              "y": 21.4286,
+              "width": 7.9054,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w14",
+          "text": "AHÍ",
+          "normalized": "ahí",
+          "cardIds": [
+            "word-ahí--there"
+          ],
+          "explicitBounds": [
+            {
+              "x": 31.4527,
+              "y": 21.4286,
+              "width": 3.0405,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:w15",
+          "text": "QUIETOS",
+          "normalized": "quietos",
+          "cardIds": [
+            "word-quietos",
+            "grammar-quedarse-state"
+          ],
+          "explicitBounds": [
+            {
+              "x": 34.7973,
+              "y": 21.4286,
+              "width": 8.4459,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-nanobots:destruction-report:x01",
+          "text": "40%",
+          "reason": "number",
+          "rationale": "40% is a numeric percentage, not a Spanish lexical word occurrence.",
+          "explicitBounds": [
+            {
+              "x": 39.4595,
+              "y": 5.5556,
+              "width": 4.0541,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:destruction-report:app-perfect-devoured",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-nanobots:destruction-report:w01",
+            "es-xkcd-nanobots:destruction-report:w02"
+          ],
+          "exampleEs": "HAN DEVORADO",
+          "explanationEn": "Han is the plural present helper and devorado is the completed-action form."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:app-perfect-stopped",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-nanobots:destruction-report:w09",
+            "es-xkcd-nanobots:destruction-report:w10"
+          ],
+          "exampleEs": "HAN PARADO",
+          "explanationEn": "Han is the plural present helper and parado supplies the completed action."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:app-perfect-remained",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-nanobots:destruction-report:w12",
+            "es-xkcd-nanobots:destruction-report:w13"
+          ],
+          "exampleEs": "HAN QUEDADO",
+          "explanationEn": "Han is the plural present helper and quedado supplies the completed result."
+        },
+        {
+          "id": "es-xkcd-nanobots:destruction-report:app-quedarse-state",
+          "cardId": "grammar-quedarse-state",
+          "participantWordIds": [
+            "es-xkcd-nanobots:destruction-report:w11",
+            "es-xkcd-nanobots:destruction-report:w13",
+            "es-xkcd-nanobots:destruction-report:w15"
+          ],
+          "exampleEs": "SE HAN QUEDADO AHÍ QUIETOS",
+          "explanationEn": "Se and quedado form quedarse, and quietos names the resulting still state."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 22.9432,
+          "y": 5.2556,
+          "width": 23.3028,
+          "height": 21.723
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:why",
+      "labelEs": "POR QUÉ",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:why:w01",
+          "text": "POR",
+          "normalized": "por",
+          "cardIds": [
+            "word-por--question",
+            "grammar-por-que-vs-porque"
+          ],
+          "explicitBounds": [
+            {
+              "x": 29.1779,
+              "y": 34.7596,
+              "width": 5.158,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:why:w02",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "cardIds": [
+            "word-qué--why-complement",
+            "grammar-por-que-vs-porque"
+          ],
+          "explicitBounds": [
+            {
+              "x": 34.583,
+              "y": 34.9293,
+              "width": 4.8877,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:why:app-por-que",
+          "cardId": "grammar-por-que-vs-porque",
+          "participantWordIds": [
+            "es-xkcd-nanobots:why:w01",
+            "es-xkcd-nanobots:why:w02"
+          ],
+          "exampleEs": "POR QUÉ",
+          "explanationEn": "Por qué is written as two words with an accent when it asks for a reason."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 28.8779,
+          "y": 34.4596,
+          "width": 10.8928,
+          "height": 6.0197
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:mystery",
+      "labelEs": "ES UN MISTERIO A MENOS QUE QUÉ VOLUMEN TIENE CADA NANOBOT",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:mystery:w01",
+          "text": "ES",
+          "normalized": "es",
+          "cardIds": [
+            "word-es",
+            "grammar-ser-identity-estar-location"
+          ],
+          "explicitBounds": [
+            {
+              "x": 48.9189,
+              "y": 7.1429,
+              "width": 2.7027,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w02",
+          "text": "UN",
+          "normalized": "un",
+          "cardIds": [
+            "word-un",
+            "grammar-ser-identity-estar-location"
+          ],
+          "explicitBounds": [
+            {
+              "x": 51.8919,
+              "y": 7.1429,
+              "width": 2.7027,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w03",
+          "text": "MISTERIO",
+          "normalized": "misterio",
+          "cardIds": [
+            "word-misterio",
+            "grammar-ser-identity-estar-location"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.8649,
+              "y": 7.1429,
+              "width": 9.1892,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w04",
+          "text": "A",
+          "normalized": "a",
+          "cardIds": [
+            "word-a--fixed-a-menos-que",
+            "phrase-a-menos-que"
+          ],
+          "explicitBounds": [
+            {
+              "x": 64.3243,
+              "y": 7.1429,
+              "width": 1.8919,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w05",
+          "text": "MENOS",
+          "normalized": "menos",
+          "cardIds": [
+            "word-menos--fixed-a-menos-que",
+            "phrase-a-menos-que"
+          ],
+          "explicitBounds": [
+            {
+              "x": 66.4865,
+              "y": 7.1429,
+              "width": 6.4865,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w06",
+          "text": "QUE",
+          "normalized": "que",
+          "cardIds": [
+            "word-que--fixed-a-menos-que",
+            "phrase-a-menos-que"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.1892,
+              "y": 12.6984,
+              "width": 5.2027,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w07",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "cardIds": [
+            "word-qué--which-before-noun",
+            "question-words"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.6284,
+              "y": 12.6984,
+              "width": 4.9662,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w08",
+          "text": "VOLUMEN",
+          "normalized": "volumen",
+          "cardIds": [
+            "word-volumen--physical-space"
+          ],
+          "explicitBounds": [
+            {
+              "x": 59.8311,
+              "y": 12.6984,
+              "width": 8.8176,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w09",
+          "text": "TIENE",
+          "normalized": "tiene",
+          "cardIds": [
+            "word-tiene"
+          ],
+          "explicitBounds": [
+            {
+              "x": 48.9189,
+              "y": 17.4603,
+              "width": 5.1689,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w10",
+          "text": "CADA",
+          "normalized": "cada",
+          "cardIds": [
+            "word-cada"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.3919,
+              "y": 17.4603,
+              "width": 4.2568,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:w11",
+          "text": "NANOBOT",
+          "normalized": "nanobot",
+          "cardIds": [
+            "word-nanobot",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 58.9527,
+              "y": 17.4603,
+              "width": 9.6959,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:mystery:app-classification",
+          "cardId": "grammar-ser-identity-estar-location",
+          "participantWordIds": [
+            "es-xkcd-nanobots:mystery:w01",
+            "es-xkcd-nanobots:mystery:w02",
+            "es-xkcd-nanobots:mystery:w03"
+          ],
+          "exampleEs": "ES UN MISTERIO",
+          "explanationEn": "Es is a form of ser because un misterio classifies what the situation is rather than locating it."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:app-unless",
+          "cardId": "phrase-a-menos-que",
+          "participantWordIds": [
+            "es-xkcd-nanobots:mystery:w04",
+            "es-xkcd-nanobots:mystery:w05",
+            "es-xkcd-nanobots:mystery:w06"
+          ],
+          "exampleEs": "A MENOS QUE",
+          "explanationEn": "A menos que opens a possible exception to the mystery."
+        },
+        {
+          "id": "es-xkcd-nanobots:mystery:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-nanobots:mystery:w07"
+          ],
+          "exampleEs": "QUÉ",
+          "explanationEn": "Qué carries an accent because it asks which volume or amount."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 48.6189,
+          "y": 6.8429,
+          "width": 24.6541,
+          "height": 16.1674
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:volume-answer",
+      "labelEs": "UNAS POCAS MICRAS CÚBICAS POR",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:volume-answer:w01",
+          "text": "UNAS",
+          "normalized": "unas",
+          "cardIds": [
+            "word-unas"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.7186,
+              "y": 32.5604,
+              "width": 4.9889,
+              "height": 5.038
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:w02",
+          "text": "POCAS",
+          "normalized": "pocas",
+          "cardIds": [
+            "word-pocas"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.9209,
+              "y": 32.3419,
+              "width": 5.901,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:w03",
+          "text": "MICRAS",
+          "normalized": "micras",
+          "cardIds": [
+            "word-micras",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.442,
+              "y": 37.8984,
+              "width": 7.0619,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:w04",
+          "text": "CÚBICAS",
+          "normalized": "cúbicas",
+          "cardIds": [
+            "word-cúbicas",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.7297,
+              "y": 43.6508,
+              "width": 7.2973,
+              "height": 3.6682
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:w05",
+          "text": "POR",
+          "normalized": "por",
+          "cardIds": [
+            "word-por--elliptical-why"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.4595,
+              "y": 47.619,
+              "width": 6.7568,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:volume-answer:app-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-nanobots:volume-answer:w03",
+            "es-xkcd-nanobots:volume-answer:w04"
+          ],
+          "exampleEs": "MICRAS CÚBICAS",
+          "explanationEn": "Cúbicas follows micras as its neutral technical description."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:app-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-nanobots:volume-answer:w03",
+            "es-xkcd-nanobots:volume-answer:w04"
+          ],
+          "exampleEs": "MICRAS CÚBICAS",
+          "explanationEn": "Cúbicas uses feminine plural -as to match micras."
+        },
+        {
+          "id": "es-xkcd-nanobots:volume-answer:app-elliptical-why",
+          "cardId": "word-por--elliptical-why",
+          "participantWordIds": [
+            "es-xkcd-nanobots:volume-answer:w05"
+          ],
+          "exampleEs": "¿POR?",
+          "explanationEn": "The speaker repeats the reason question with qué left understood."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 49.142,
+          "y": 32.0419,
+          "width": 11.9799,
+          "height": 21.1271
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:time-claim",
+      "labelEs": "CREO QUE EL AÑO 1998 NOS HA HECHO GANAR ALGO DE TIEMPO",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:time-claim:w01",
+          "text": "CREO",
+          "normalized": "creo",
+          "cardIds": [
+            "word-creo"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.4595,
+              "y": 69.0476,
+              "width": 4.5946,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w02",
+          "text": "QUE",
+          "normalized": "que",
+          "cardIds": [
+            "word-que--clause-link"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.3243,
+              "y": 69.0476,
+              "width": 3.7838,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w03",
+          "text": "EL",
+          "normalized": "el",
+          "cardIds": [
+            "word-el--article"
+          ],
+          "explicitBounds": [
+            {
+              "x": 58.3784,
+              "y": 69.0476,
+              "width": 2.4324,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w04",
+          "text": "AÑO",
+          "normalized": "año",
+          "cardIds": [
+            "word-año",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.1892,
+              "y": 74.6032,
+              "width": 3.7838,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w05",
+          "text": "NOS",
+          "normalized": "nos",
+          "cardIds": [
+            "word-nos--direct",
+            "grammar-hacer-person-infinitive-causative"
+          ],
+          "explicitBounds": [
+            {
+              "x": 57.9392,
+              "y": 74.6032,
+              "width": 3.9527,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w06",
+          "text": "HA",
+          "normalized": "ha",
+          "cardIds": [
+            "word-ha",
+            "grammar-present-perfect",
+            "grammar-hacer-person-infinitive-causative"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.1892,
+              "y": 80.9524,
+              "width": 2.6351,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w07",
+          "text": "HECHO",
+          "normalized": "hecho",
+          "cardIds": [
+            "word-hecho--causative-made",
+            "grammar-present-perfect",
+            "grammar-hacer-person-infinitive-causative"
+          ],
+          "explicitBounds": [
+            {
+              "x": 52.027,
+              "y": 80.9524,
+              "width": 5.8784,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w08",
+          "text": "GANAR",
+          "normalized": "ganar",
+          "cardIds": [
+            "word-ganar--gain-time",
+            "grammar-hacer-person-infinitive-causative",
+            "phrase-ganar-tiempo"
+          ],
+          "explicitBounds": [
+            {
+              "x": 58.1081,
+              "y": 80.9524,
+              "width": 6.4865,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w09",
+          "text": "ALGO",
+          "normalized": "algo",
+          "cardIds": [
+            "word-algo"
+          ],
+          "explicitBounds": [
+            {
+              "x": 49.1892,
+              "y": 86.5079,
+              "width": 4.8649,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w10",
+          "text": "DE",
+          "normalized": "de",
+          "cardIds": [
+            "word-de--of"
+          ],
+          "explicitBounds": [
+            {
+              "x": 54.2568,
+              "y": 86.5079,
+              "width": 2.4324,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:w11",
+          "text": "TIEMPO",
+          "normalized": "tiempo",
+          "cardIds": [
+            "word-tiempo",
+            "phrase-ganar-tiempo",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 56.8919,
+              "y": 86.5079,
+              "width": 7.4324,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-nanobots:time-claim:x01",
+          "text": "1998",
+          "reason": "number",
+          "rationale": "1998 is a printed year, not a Spanish lexical word occurrence.",
+          "explicitBounds": [
+            {
+              "x": 53.2095,
+              "y": 74.6032,
+              "width": 4.4932,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:time-claim:app-perfect",
+          "cardId": "grammar-present-perfect",
+          "participantWordIds": [
+            "es-xkcd-nanobots:time-claim:w06",
+            "es-xkcd-nanobots:time-claim:w07"
+          ],
+          "exampleEs": "HA HECHO",
+          "explanationEn": "Ha is the singular present helper and hecho is hacer’s completed-action form."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:app-causative",
+          "cardId": "grammar-hacer-person-infinitive-causative",
+          "participantWordIds": [
+            "es-xkcd-nanobots:time-claim:w05",
+            "es-xkcd-nanobots:time-claim:w06",
+            "es-xkcd-nanobots:time-claim:w07",
+            "es-xkcd-nanobots:time-claim:w08"
+          ],
+          "exampleEs": "NOS HA HECHO GANAR",
+          "explanationEn": "Nos marks the affected group, ha hecho supplies the matching form of hacer, and ganar is the unchanged action verb."
+        },
+        {
+          "id": "es-xkcd-nanobots:time-claim:app-gain-time",
+          "cardId": "phrase-ganar-tiempo",
+          "participantWordIds": [
+            "es-xkcd-nanobots:time-claim:w08",
+            "es-xkcd-nanobots:time-claim:w11"
+          ],
+          "exampleEs": "GANAR ALGO DE TIEMPO",
+          "explanationEn": "Ganar and tiempo form the conventional expression for obtaining extra time."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 48.8892,
+          "y": 68.7476,
+          "width": 16.0054,
+          "height": 22.8222
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:swarm-heading",
+      "labelEs": "EN EL ENJAMBRE",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:swarm-heading:w01",
+          "text": "EN",
+          "normalized": "en",
+          "cardIds": [
+            "word-en"
+          ],
+          "explicitBounds": [
+            {
+              "x": 76.2162,
+              "y": 2.381,
+              "width": 2.973,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:swarm-heading:w02",
+          "text": "EL",
+          "normalized": "el",
+          "cardIds": [
+            "word-el--article"
+          ],
+          "explicitBounds": [
+            {
+              "x": 79.4595,
+              "y": 2.381,
+              "width": 2.4324,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:swarm-heading:w03",
+          "text": "ENJAMBRE",
+          "normalized": "enjambre",
+          "cardIds": [
+            "word-enjambre",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 82.1622,
+              "y": 2.381,
+              "width": 10.5405,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [],
+      "explicitBounds": [
+        {
+          "x": 75.9162,
+          "y": 2.081,
+          "width": 17.0865,
+          "height": 5.85
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:address-question",
+      "labelEs": "QUÉ QUIERES DECIR CON DIRECCIONES AGOTADAS",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:address-question:w01",
+          "text": "QUÉ",
+          "normalized": "qué",
+          "cardIds": [
+            "word-qué--interrogative",
+            "question-words"
+          ],
+          "explicitBounds": [
+            {
+              "x": 75.6757,
+              "y": 14.2857,
+              "width": 4.7297,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:w02",
+          "text": "QUIERES",
+          "normalized": "quieres",
+          "cardIds": [
+            "word-quieres",
+            "phrase-querer-decir"
+          ],
+          "explicitBounds": [
+            {
+              "x": 80.6419,
+              "y": 14.2857,
+              "width": 7.5676,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:w03",
+          "text": "DECIR",
+          "normalized": "decir",
+          "cardIds": [
+            "word-decir",
+            "phrase-querer-decir"
+          ],
+          "explicitBounds": [
+            {
+              "x": 88.4459,
+              "y": 14.2857,
+              "width": 5.2027,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:w04",
+          "text": "CON",
+          "normalized": "con",
+          "cardIds": [
+            "word-con--meaning-reference"
+          ],
+          "explicitBounds": [
+            {
+              "x": 93.8851,
+              "y": 14.2857,
+              "width": 3.4122,
+              "height": 4.4619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:w05",
+          "text": "DIRECCIONES",
+          "normalized": "direcciones",
+          "cardIds": [
+            "word-direcciones--addresses",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 76.2162,
+              "y": 19.0476,
+              "width": 9.9324,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:w06",
+          "text": "AGOTADAS",
+          "normalized": "agotadas",
+          "cardIds": [
+            "word-agotadas--used-up",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 86.3514,
+              "y": 19.0476,
+              "width": 10.6757,
+              "height": 4.7619
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:address-question:app-question-word",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-nanobots:address-question:w01"
+          ],
+          "exampleEs": "QUÉ",
+          "explanationEn": "Qué keeps its accent because it asks what meaning is intended."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:app-mean",
+          "cardId": "phrase-querer-decir",
+          "participantWordIds": [
+            "es-xkcd-nanobots:address-question:w02",
+            "es-xkcd-nanobots:address-question:w03"
+          ],
+          "exampleEs": "QUIERES DECIR",
+          "explanationEn": "Quieres changes for the listener, while decir stays in its dictionary form; together they ask about meaning."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:app-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-nanobots:address-question:w05",
+            "es-xkcd-nanobots:address-question:w06"
+          ],
+          "exampleEs": "DIRECCIONES AGOTADAS",
+          "explanationEn": "Agotadas follows direcciones as its neutral description."
+        },
+        {
+          "id": "es-xkcd-nanobots:address-question:app-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-nanobots:address-question:w05",
+            "es-xkcd-nanobots:address-question:w06"
+          ],
+          "exampleEs": "DIRECCIONES AGOTADAS",
+          "explanationEn": "Agotadas uses feminine plural -as to match direcciones."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 75.3757,
+          "y": 13.9857,
+          "width": 22.2216,
+          "height": 10.1238
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    },
+    {
+      "id": "es-xkcd-nanobots:migration-reply",
+      "labelEs": "MIRA DEBERÍAMOS HABER MIGRADO DE IPv6 HACE EONES",
+      "words": [
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w01",
+          "text": "MIRA",
+          "normalized": "mira",
+          "cardIds": [
+            "word-mira--attention-getter",
+            "grammar-affirmative-tu-command"
+          ],
+          "explicitBounds": [
+            {
+              "x": 81.6216,
+              "y": 34.127,
+              "width": 5.473,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w02",
+          "text": "DEBERÍAMOS",
+          "normalized": "deberíamos",
+          "cardIds": [
+            "word-deberíamos",
+            "grammar-deber-infinitive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 87.3986,
+              "y": 34.127,
+              "width": 10.9797,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w03",
+          "text": "HABER",
+          "normalized": "haber",
+          "cardIds": [
+            "word-haber--perfect-helper",
+            "grammar-deber-infinitive",
+            "grammar-perfect-infinitive"
+          ],
+          "explicitBounds": [
+            {
+              "x": 81.6216,
+              "y": 39.6825,
+              "width": 5.6757,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w04",
+          "text": "MIGRADO",
+          "normalized": "migrado",
+          "cardIds": [
+            "word-migrado",
+            "grammar-perfect-infinitive",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 87.5676,
+              "y": 39.6825,
+              "width": 8.1081,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w05",
+          "text": "DE",
+          "normalized": "de",
+          "cardIds": [
+            "word-de--from"
+          ],
+          "explicitBounds": [
+            {
+              "x": 95.9459,
+              "y": 39.6825,
+              "width": 2.4324,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w06",
+          "text": "HACE",
+          "normalized": "hace",
+          "cardIds": [
+            "word-hace--time-ago",
+            "grammar-hace-duration-ago"
+          ],
+          "explicitBounds": [
+            {
+              "x": 86.4865,
+              "y": 45.2381,
+              "width": 4.2568,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:w07",
+          "text": "EONES",
+          "normalized": "eones",
+          "cardIds": [
+            "word-eones",
+            "grammar-hace-duration-ago",
+            "concept-ipv6-address-exhaustion-nanobots"
+          ],
+          "explicitBounds": [
+            {
+              "x": 91.0473,
+              "y": 45.2381,
+              "width": 7.8716,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-nanobots:migration-reply:x01",
+          "text": "IPv6",
+          "reason": "non-spanish-text",
+          "rationale": "IPv6 is a protocol name containing letters and a digit, not a Spanish lexical word occurrence.",
+          "explicitBounds": [
+            {
+              "x": 81.6216,
+              "y": 45.2381,
+              "width": 4.5608,
+              "height": 5.25
+            }
+          ],
+          "geometryRationale": "Vision's row-height box overlaps or reaches adjacent handwritten rows; this source-tightened rectangle isolates only the printed unit."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-nanobots:migration-reply:app-command",
+          "cardId": "grammar-affirmative-tu-command",
+          "participantWordIds": [
+            "es-xkcd-nanobots:migration-reply:w01"
+          ],
+          "exampleEs": "MIRA",
+          "explanationEn": "Mira is the affirmative command for one familiar listener and works here as an attention getter."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:app-should",
+          "cardId": "grammar-deber-infinitive",
+          "participantWordIds": [
+            "es-xkcd-nanobots:migration-reply:w02",
+            "es-xkcd-nanobots:migration-reply:w03"
+          ],
+          "exampleEs": "DEBERÍAMOS HABER",
+          "explanationEn": "Deberíamos changes for “we” and haber stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:app-perfect-infinitive",
+          "cardId": "grammar-perfect-infinitive",
+          "participantWordIds": [
+            "es-xkcd-nanobots:migration-reply:w03",
+            "es-xkcd-nanobots:migration-reply:w04"
+          ],
+          "exampleEs": "HABER MIGRADO",
+          "explanationEn": "Haber is unchanged and migrado supplies the completed action."
+        },
+        {
+          "id": "es-xkcd-nanobots:migration-reply:app-ago",
+          "cardId": "grammar-hace-duration-ago",
+          "participantWordIds": [
+            "es-xkcd-nanobots:migration-reply:w06",
+            "es-xkcd-nanobots:migration-reply:w07"
+          ],
+          "exampleEs": "HACE EONES",
+          "explanationEn": "Hace comes before the length of time to say how long ago."
+        }
+      ],
+      "explicitBounds": [
+        {
+          "x": 81.3216,
+          "y": 33.827,
+          "width": 17.8973,
+          "height": 16.9611
+        }
+      ],
+      "geometryRationale": "The OCR line union clipped edge tokens; this source-checked union contains every direct word and exclusion hotspot in the grouped speech fragment."
+    }
+  ]
+}

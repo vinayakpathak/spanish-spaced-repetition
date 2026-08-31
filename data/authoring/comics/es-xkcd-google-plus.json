@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-google-plus",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Google+",
+  "titleEs": "Google+",
+  "titleText": {
+    "es": "Por un lado, nunca podrás convencer a tus padres de que se cambien. Por otro lado, ¡nunca podrás convencer a tus padres de que se cambien!",
+    "en": "On one hand, you'll never be able to convince your parents to switch. On the other hand, you'll never be able to convince your parents to switch!",
+    "noteEn": "The Spanish archive and official English title attributes are preserved exactly. The raster treats GOOGLE+ and both FACEBOOK labels as product names, while the localized CLIC remains a Spanish sound word. Vision omitted GOOGLE+, A, CLIC, and several punctuation-sensitive letters in the opening exchange."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-unirte--join",
+      "kind": "word",
+      "promptEs": "unirte",
+      "answerEn": "to join (addressing one familiar person)",
+      "noteEn": "Unirte combines the dictionary form unir with te because the action is directed back to one familiar listener. A normally follows when the group, service, or activity being joined is named.",
+      "example": { "es": "Puedes unirte al club mañana.", "en": "You can join the club tomorrow." },
+      "tags": ["word", "pronominal verb", "joining", "A2"]
+    },
+    {
+      "id": "phrase-supongo-que",
+      "kind": "phrase",
+      "promptEs": "supongo que + idea",
+      "questionEn": "How do you introduce something you suppose or guess?",
+      "answerEn": "Use supongo que, then state the idea.",
+      "noteEn": "Supongo is the form used by the speaker, and que introduces the belief that follows. The expression often sounds less certain than creo que.",
+      "example": { "es": "Supongo que llegará pronto.", "en": "I suppose she will arrive soon." },
+      "tags": ["phrase", "opinion", "uncertainty", "A2"]
+    },
+    {
+      "id": "concept-google-plus-facebook-comparison",
+      "kind": "concept",
+      "promptEs": "unirte · como · qué demonios · en realidad",
+      "questionEn": "Why does the final change of mind make the social-network exchange a joke?",
+      "answerEn": "The listener first resists a new service because it is described as Facebook, then suddenly realizes that a Facebook-like service was what he wanted.",
+      "noteEn": "Google+ launched as a social network in 2011 and was commonly compared with Facebook. The blank middle panel gives the listener time to reconsider. The official title text adds a two-sided joke: parents being hard to persuade to switch is both a disadvantage and an advantage of a new network.",
+      "tags": ["concept", "social networks", "Google+", "Facebook", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-google-plus:join-demand",
+      "labelEs": "¡TIENES QUE UNIRTE A GOOGLE+!",
+      "explicitBounds": [{ "x": 0.5, "y": 2.0, "width": 30.0, "height": 14.0 }],
+      "geometryRationale": "The opening demand occupies two staggered rows; this checked region contains both rows without reaching the next speaker's question.",
+      "words": [
+        { "id": "es-xkcd-google-plus:join-demand:w01", "text": "TIENES", "normalized": "tienes", "explicitBounds": [{ "x": 1.9, "y": 3.0, "width": 9.2, "height": 6.2 }], "geometryRationale": "Vision fused the two rows; this measured box isolates TIENES and leaves the opening exclamation mark outside.", "cardIds": ["word-tienes", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-google-plus:join-demand:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 12.7, "y": 3.0, "width": 5.7, "height": 6.2 }], "geometryRationale": "Vision fused the two rows; this measured box isolates QUE.", "cardIds": ["word-que--tener-que", "grammar-tener-que-infinitive"] },
+        { "id": "es-xkcd-google-plus:join-demand:w03", "text": "UNIRTE", "normalized": "unirte", "explicitBounds": [{ "x": 19.2, "y": 3.0, "width": 9.2, "height": 6.2 }], "geometryRationale": "Vision misread this word inside a fused row; the measured box covers all six printed letters.", "cardIds": ["word-unirte--join", "grammar-tener-que-infinitive", "grammar-infinitive-attached-pronominal-marker", "phrase-unirse-a", "concept-google-plus-facebook-comparison"] },
+        { "id": "es-xkcd-google-plus:join-demand:w04", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 13.8, "y": 10.1, "width": 2.3, "height": 4.9 }], "geometryRationale": "Vision omitted the second-row A; this source-measured box isolates the letter before the product name.", "cardIds": ["word-a--join-complement", "phrase-unirse-a"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-plus:join-demand:x01", "text": "GOOGLE+", "reason": "non-spanish-text", "rationale": "This product name and plus-sign branding are not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 16.7, "y": 9.8, "width": 11.8, "height": 6.1 }], "geometryRationale": "Vision omitted the product name; this measured box covers GOOGLE and the attached plus sign while excluding the final exclamation mark." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-google-plus:join-demand:app-obligation", "cardId": "grammar-tener-que-infinitive", "participantWordIds": ["es-xkcd-google-plus:join-demand:w01", "es-xkcd-google-plus:join-demand:w02", "es-xkcd-google-plus:join-demand:w03"], "exampleEs": "TIENES QUE UNIRTE", "explanationEn": "Tienes identifies one familiar listener, que completes the obligation pattern, and unirte names the required action." },
+        { "id": "es-xkcd-google-plus:join-demand:app-pronominal", "cardId": "grammar-infinitive-attached-pronominal-marker", "participantWordIds": ["es-xkcd-google-plus:join-demand:w03"], "exampleEs": "UNIRTE", "explanationEn": "Te is attached to the end of unir because one familiar listener is the person joining." },
+        { "id": "es-xkcd-google-plus:join-demand:app-join", "cardId": "phrase-unirse-a", "participantWordIds": ["es-xkcd-google-plus:join-demand:w03", "es-xkcd-google-plus:join-demand:w04"], "exampleEs": "UNIRTE A GOOGLE+", "explanationEn": "Unirte names the joining action, and a introduces the service being joined." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-plus:what-is-it",
+      "labelEs": "¿QUÉ ES ESO?",
+      "explicitBounds": [{ "x": 19.7, "y": 17.0, "width": 20.0, "height": 7.4 }],
+      "geometryRationale": "This checked region contains the short question and excludes the speech tail below.",
+      "words": [
+        { "id": "es-xkcd-google-plus:what-is-it:w01", "text": "QUÉ", "normalized": "qué", "explicitBounds": [{ "x": 21.7, "y": 17.7, "width": 5.9, "height": 6.0 }], "geometryRationale": "The box leaves the inverted question mark outside and preserves the accent.", "cardIds": ["word-qué--interrogative", "question-words"] },
+        { "id": "es-xkcd-google-plus:what-is-it:w02", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 28.2, "y": 17.7, "width": 3.7, "height": 6.0 }], "geometryRationale": "This source-tight box isolates ES.", "cardIds": ["word-es--classification"] },
+        { "id": "es-xkcd-google-plus:what-is-it:w03", "text": "ESO", "normalized": "eso", "explicitBounds": [{ "x": 32.3, "y": 17.7, "width": 4.9, "height": 6.0 }], "geometryRationale": "The shortened box isolates ESO and leaves the final question mark outside.", "cardIds": ["word-eso"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-google-plus:what-is-it:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-google-plus:what-is-it:w01"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its written accent because it directly asks for an identification." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-plus:not-facebook",
+      "labelEs": "¡NO ES FACEBOOK!",
+      "explicitBounds": [{ "x": 1.0, "y": 23.5, "width": 30.0, "height": 8.2 }],
+      "geometryRationale": "This checked region follows the left speaker's single-row objection.",
+      "words": [
+        { "id": "es-xkcd-google-plus:not-facebook:w01", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 2.8, "y": 24.1, "width": 5.5, "height": 6.5 }], "geometryRationale": "The box leaves the opening exclamation mark outside.", "cardIds": ["word-no", "concept-google-plus-facebook-comparison"] },
+        { "id": "es-xkcd-google-plus:not-facebook:w02", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 8.3, "y": 24.1, "width": 3.7, "height": 6.5 }], "geometryRationale": "This source-tight box isolates ES.", "cardIds": ["word-es--classification"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-plus:not-facebook:x01", "text": "FACEBOOK", "reason": "non-spanish-text", "rationale": "This social-network product name is not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 12.6, "y": 24.1, "width": 15.2, "height": 6.5 }], "geometryRationale": "The checked box isolates the product name and leaves the final exclamation mark outside." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-google-plus:how-is-it",
+      "labelEs": "¿Y CÓMO ES?",
+      "explicitBounds": [{ "x": 20.0, "y": 32.6, "width": 20.0, "height": 7.5 }],
+      "geometryRationale": "This checked region contains the follow-up question without reaching either speech tail.",
+      "words": [
+        { "id": "es-xkcd-google-plus:how-is-it:w01", "text": "Y", "normalized": "y", "explicitBounds": [{ "x": 22.2, "y": 33.3, "width": 1.8, "height": 6.0 }], "geometryRationale": "The box leaves the inverted question mark outside and isolates Y.", "cardIds": ["word-y"] },
+        { "id": "es-xkcd-google-plus:how-is-it:w02", "text": "CÓMO", "normalized": "cómo", "explicitBounds": [{ "x": 25.5, "y": 33.3, "width": 8.0, "height": 6.0 }], "geometryRationale": "This box preserves the accent and isolates the question word.", "cardIds": ["word-cómo", "question-words"] },
+        { "id": "es-xkcd-google-plus:how-is-it:w03", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 34.0, "y": 33.3, "width": 4.5, "height": 6.0 }], "geometryRationale": "The shortened box leaves the final question mark outside.", "cardIds": ["word-es"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-google-plus:how-is-it:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-google-plus:how-is-it:w02"], "exampleEs": "CÓMO", "explanationEn": "Cómo keeps its written accent because it asks what the service is like." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-plus:facebook-comparison",
+      "labelEs": "¡COMO FACEBOOK!",
+      "explicitBounds": [{ "x": 1.0, "y": 40.4, "width": 28.5, "height": 7.0 }],
+      "geometryRationale": "This checked region follows the left speaker's comparison and excludes the speech tail below.",
+      "words": [
+        { "id": "es-xkcd-google-plus:facebook-comparison:w01", "text": "COMO", "normalized": "como", "explicitBounds": [{ "x": 2.9, "y": 41.1, "width": 8.7, "height": 5.7 }], "geometryRationale": "The box leaves the opening exclamation mark outside and isolates COMO.", "cardIds": ["word-como--comparison", "concept-google-plus-facebook-comparison"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-google-plus:facebook-comparison:x01", "text": "FACEBOOK", "reason": "non-spanish-text", "rationale": "This social-network product name is not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 12.0, "y": 41.1, "width": 15.8, "height": 5.7 }], "geometryRationale": "The checked box isolates the product name and leaves the final exclamation mark outside." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-google-plus:realization",
+      "labelEs": "¡QUÉ DEMONIOS!",
+      "explicitBounds": [{ "x": 72.0, "y": 3.5, "width": 24.5, "height": 8.0 }],
+      "geometryRationale": "This checked region contains the right-panel exclamation without reaching its speech tail.",
+      "words": [
+        { "id": "es-xkcd-google-plus:realization:w01", "text": "QUÉ", "normalized": "qué", "explicitBounds": [{ "x": 74.1, "y": 4.3, "width": 5.8, "height": 6.0 }], "geometryRationale": "The box leaves the opening exclamation mark outside and preserves the accent.", "cardIds": ["word-qué--interrogative", "question-words", "phrase-question-word-demonios"] },
+        { "id": "es-xkcd-google-plus:realization:w02", "text": "DEMONIOS", "normalized": "demonios", "explicitBounds": [{ "x": 80.3, "y": 4.3, "width": 15.5, "height": 6.0 }], "geometryRationale": "The shortened box isolates DEMONIOS and leaves the final exclamation mark outside.", "cardIds": ["word-demonios--question-emphasis", "phrase-question-word-demonios", "concept-google-plus-facebook-comparison"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-google-plus:realization:app-question-word", "cardId": "question-words", "participantWordIds": ["es-xkcd-google-plus:realization:w01"], "exampleEs": "QUÉ", "explanationEn": "Qué keeps its accent in this emphatic exclamation." },
+        { "id": "es-xkcd-google-plus:realization:app-demonios", "cardId": "phrase-question-word-demonios", "participantWordIds": ["es-xkcd-google-plus:realization:w01", "es-xkcd-google-plus:realization:w02"], "exampleEs": "QUÉ DEMONIOS", "explanationEn": "Demonios follows qué to intensify the speaker's surprised reaction." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-plus:actual-wish",
+      "labelEs": "SUPONGO QUE ESO ES TODO LO QUE QUERÍA EN REALIDAD.",
+      "explicitBounds": [{ "x": 70.0, "y": 18.9, "width": 29.2, "height": 18.5 }],
+      "geometryRationale": "This checked region contains all three rows of the reconsideration without including the speech tail below.",
+      "words": [
+        { "id": "es-xkcd-google-plus:actual-wish:w01", "text": "SUPONGO", "normalized": "supongo", "explicitBounds": [{ "x": 71.3, "y": 19.9, "width": 12.3, "height": 5.2 }], "geometryRationale": "This source-tight box isolates SUPONGO on the first row.", "cardIds": ["word-supongo", "phrase-supongo-que", "concept-google-plus-facebook-comparison"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 84.0, "y": 19.9, "width": 5.6, "height": 5.2 }], "geometryRationale": "This source-tight box isolates the clause-linking QUE.", "cardIds": ["word-que--clause-link", "phrase-supongo-que"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w03", "text": "ESO", "normalized": "eso", "explicitBounds": [{ "x": 89.9, "y": 19.9, "width": 5.7, "height": 5.2 }], "geometryRationale": "This source-tight box isolates ESO at the end of the first row.", "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w04", "text": "ES", "normalized": "es", "explicitBounds": [{ "x": 70.9, "y": 25.5, "width": 4.1, "height": 3.9 }], "geometryRationale": "The shortened second-row height prevents contact with the third row.", "cardIds": ["word-es--classification"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w05", "text": "TODO", "normalized": "todo", "explicitBounds": [{ "x": 75.4, "y": 25.5, "width": 7.1, "height": 3.9 }], "geometryRationale": "The shortened second-row height prevents contact with the third row.", "cardIds": ["word-todo", "phrase-todo-lo-que", "concept-google-plus-facebook-comparison"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w06", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 82.8, "y": 25.5, "width": 4.1, "height": 3.9 }], "geometryRationale": "The shortened second-row height prevents contact with the third row.", "cardIds": ["word-lo--neutral-relative", "phrase-todo-lo-que"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w07", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 87.3, "y": 25.5, "width": 6.0, "height": 3.9 }], "geometryRationale": "The shortened second-row height prevents contact with the third row.", "cardIds": ["word-que--neutral-relative", "phrase-todo-lo-que"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w08", "text": "QUERÍA", "normalized": "quería", "explicitBounds": [{ "x": 71.3, "y": 29.8, "width": 9.3, "height": 6.7 }], "geometryRationale": "The box preserves the accent and isolates QUERÍA on the third row.", "cardIds": ["word-quería--wanted-desire", "phrase-todo-lo-que", "grammar-past-contrast", "concept-google-plus-facebook-comparison"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w09", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 81.1, "y": 29.8, "width": 3.7, "height": 6.7 }], "geometryRationale": "This source-tight box isolates EN.", "cardIds": ["word-en--fixed-en-realidad", "phrase-en-realidad"] },
+        { "id": "es-xkcd-google-plus:actual-wish:w10", "text": "REALIDAD", "normalized": "realidad", "explicitBounds": [{ "x": 85.3, "y": 29.8, "width": 13.1, "height": 6.7 }], "geometryRationale": "The shortened box isolates REALIDAD and leaves the final period outside.", "cardIds": ["word-realidad", "phrase-en-realidad", "concept-google-plus-facebook-comparison"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-google-plus:actual-wish:app-suppose", "cardId": "phrase-supongo-que", "participantWordIds": ["es-xkcd-google-plus:actual-wish:w01", "es-xkcd-google-plus:actual-wish:w02"], "exampleEs": "SUPONGO QUE", "explanationEn": "Supongo presents the speaker's tentative conclusion, and que introduces the idea that follows." },
+        { "id": "es-xkcd-google-plus:actual-wish:app-everything", "cardId": "phrase-todo-lo-que", "participantWordIds": ["es-xkcd-google-plus:actual-wish:w05", "es-xkcd-google-plus:actual-wish:w06", "es-xkcd-google-plus:actual-wish:w07", "es-xkcd-google-plus:actual-wish:w08"], "exampleEs": "TODO LO QUE QUERÍA", "explanationEn": "Todo lo que introduces the complete set of what the speaker wanted, and quería supplies the past desire." },
+        { "id": "es-xkcd-google-plus:actual-wish:app-past", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-google-plus:actual-wish:w08"], "exampleEs": "QUERÍA", "explanationEn": "Quería presents the desire as an ongoing past state rather than a single completed event." },
+        { "id": "es-xkcd-google-plus:actual-wish:app-actually", "cardId": "phrase-en-realidad", "participantWordIds": ["es-xkcd-google-plus:actual-wish:w09", "es-xkcd-google-plus:actual-wish:w10"], "exampleEs": "EN REALIDAD", "explanationEn": "En realidad marks the contrast between the speaker's first reaction and what he actually wanted." }
+      ]
+    },
+    {
+      "id": "es-xkcd-google-plus:click",
+      "labelEs": "CLIC",
+      "explicitBounds": [{ "x": 87.5, "y": 53.8, "width": 8.0, "height": 13.8 }],
+      "geometryRationale": "Vision omitted the slanted click sound; this checked region follows the four letters beside the laptop.",
+      "words": [
+        { "id": "es-xkcd-google-plus:click:w01", "text": "CLIC", "normalized": "clic", "explicitBounds": [{ "x": 88.04, "y": 58.72, "width": 2.43, "height": 6.05 }, { "x": 89.91, "y": 58.01, "width": 1.68, "height": 5.34 }, { "x": 91.59, "y": 55.87, "width": 0.94, "height": 6.76 }, { "x": 92.15, "y": 54.80, "width": 2.62, "height": 6.41 }], "geometryRationale": "Four source-measured pieces follow the rotated C, L, I, and C while leaving the surrounding motion marks outside the lexical hotspot.", "cardIds": ["word-clic", "concept-google-plus-facebook-comparison"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    }
+  ]
+}

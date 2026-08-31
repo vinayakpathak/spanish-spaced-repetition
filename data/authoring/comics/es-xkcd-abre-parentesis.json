@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-abre-parentesis",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "(",
+  "titleEs": "(",
+  "titleText": {
+    "es": "Dejando a un lado los cerebros, me pregunto cuántos scripts que parsean xkcd.com se romperán con este título (o con \\\\;;",
+    "en": "Brains aside, I wonder how many poorly-written xkcd.com-parsing scripts will break on this title (or ;;\"''{<<[' this mouseover text.\"",
+    "noteEn": "The Spanish title text is preserved exactly as the manifest stores it, including its two literal backslashes and abrupt ending after semicolons. The translation page's raw title attribute is malformed and truncates the continuation; this artifact documents the defect without repairing the source manifest. The English field preserves the complete official title text, including its deliberately troublesome punctuation and markup-like characters. The raster's giant opening parenthesis is a separate printed symbol exclusion, while OCR's LIN is corrected and split into that symbol plus the Spanish word UN."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-tensión",
+      "kind": "word",
+      "promptEs": "tensión",
+      "answerEn": "tension; strain",
+      "noteEn": "Tensión can be physical tightness, emotional suspense, or mental strain that has not been settled. Its final syllable is stressed, so it carries a written accent.",
+      "example": {
+        "es": "La espera creó mucha tensión.",
+        "en": "The wait created a lot of tension."
+      },
+      "tags": [
+        "word",
+        "emotion",
+        "noun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-resuelta",
+      "kind": "word",
+      "promptEs": "resuelta",
+      "answerEn": "resolved; settled (feminine singular)",
+      "noteEn": "Resuelta is the irregular completed-action form of resolver used here as a description. It changes to match the noun: resuelto, resuelta, resueltos, or resueltas.",
+      "example": {
+        "es": "La duda quedó resuelta.",
+        "en": "The doubt was resolved."
+      },
+      "tags": [
+        "word",
+        "resolver",
+        "participle",
+        "adjective",
+        "agreement",
+        "A2"
+      ]
+    },
+    {
+      "id": "concept-unmatched-opening-parenthesis-tension",
+      "kind": "concept",
+      "promptEs": "( · paréntesis sin cerrar · tensión no resuelta",
+      "questionEn": "How do the title, the first symbol, and the sentence create the same unresolved feeling?",
+      "answerEn": "The comic opens a parenthesis but never prints its matching closing mark, so the reader visually experiences the tension that the text leaves open.",
+      "noteEn": "An opening parenthesis conventionally promises a later closing parenthesis. Here the title is itself “(”, the raster begins with another large opening mark, and neither is balanced. The form of the comic therefore performs its claim rather than merely mentioning it.",
+      "example": {
+        "es": "En «Ana (mi vecina llegó», falta cerrar el paréntesis.",
+        "en": "In “Ana (my neighbor arrived,” the parenthesis still needs to be closed."
+      },
+      "tags": [
+        "concept",
+        "punctuation",
+        "parenthesis",
+        "typography",
+        "joke"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-abre-parentesis:statement",
+      "labelEs": "(UN PARÉNTESIS SIN CERRAR CREA UNA TENSIÓN NO RESUELTA QUE SE QUEDA CONTIGO TODO EL DÍA",
+      "geometryRefs": [
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-abre-parentesis:ocr-line-0001"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-abre-parentesis:ocr-line-0002"
+        },
+        {
+          "source": "ocr-line",
+          "id": "es-xkcd-abre-parentesis:ocr-line-0003"
+        }
+      ],
+      "words": [
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w01",
+          "text": "UN",
+          "normalized": "un",
+          "cardIds": [
+            "word-un"
+          ],
+          "explicitBounds": [
+            {
+              "x": 6.2,
+              "y": 20,
+              "width": 8.45,
+              "height": 20
+            }
+          ],
+          "geometryRationale": "OCR fused the opening symbol with UN; this measured box isolates only the two printed Spanish letters after the parenthesis."
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w02",
+          "text": "PARÉNTESIS",
+          "normalized": "paréntesis",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00002"
+            }
+          ],
+          "cardIds": [
+            "word-parentesis",
+            "concept-unmatched-opening-parenthesis-tension"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w03",
+          "text": "SIN",
+          "normalized": "sin",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00003"
+            }
+          ],
+          "cardIds": [
+            "word-sin",
+            "grammar-sin-infinitive",
+            "concept-unmatched-opening-parenthesis-tension"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w04",
+          "text": "CERRAR",
+          "normalized": "cerrar",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00004"
+            }
+          ],
+          "cardIds": [
+            "word-cerrar",
+            "grammar-sin-infinitive",
+            "concept-unmatched-opening-parenthesis-tension"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w05",
+          "text": "CREA",
+          "normalized": "crea",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00005"
+            }
+          ],
+          "cardIds": [
+            "word-crea"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w06",
+          "text": "UNA",
+          "normalized": "una",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00006"
+            }
+          ],
+          "cardIds": [
+            "word-una"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w07",
+          "text": "TENSIÓN",
+          "normalized": "tensión",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00007"
+            }
+          ],
+          "cardIds": [
+            "word-tensión",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement",
+            "grammar-relative-que",
+            "concept-unmatched-opening-parenthesis-tension"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w08",
+          "text": "NO",
+          "normalized": "no",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00008"
+            }
+          ],
+          "cardIds": [
+            "word-no"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w09",
+          "text": "RESUELTA",
+          "normalized": "resuelta",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00009"
+            }
+          ],
+          "cardIds": [
+            "word-resuelta",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement",
+            "concept-unmatched-opening-parenthesis-tension"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w10",
+          "text": "QUE",
+          "normalized": "que",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00010"
+            }
+          ],
+          "cardIds": [
+            "word-que--relative",
+            "grammar-relative-que"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w11",
+          "text": "SE",
+          "normalized": "se",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00011"
+            }
+          ],
+          "cardIds": [
+            "word-se--quedarse-remain",
+            "grammar-relative-que"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w12",
+          "text": "QUEDA",
+          "normalized": "queda",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00012"
+            }
+          ],
+          "cardIds": [
+            "word-queda--remains",
+            "grammar-relative-que"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w13",
+          "text": "CONTIGO",
+          "normalized": "contigo",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00013"
+            }
+          ],
+          "cardIds": [
+            "word-contigo"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w14",
+          "text": "TODO",
+          "normalized": "todo",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00014"
+            }
+          ],
+          "cardIds": [
+            "word-todo--whole",
+            "phrase-todo-el-dia"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w15",
+          "text": "EL",
+          "normalized": "el",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00015"
+            }
+          ],
+          "cardIds": [
+            "word-el--article",
+            "phrase-todo-el-dia"
+          ]
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:w16",
+          "text": "DÍA",
+          "normalized": "día",
+          "geometryRefs": [
+            {
+              "source": "ocr-token",
+              "id": "es-xkcd-abre-parentesis:ocr-token-00016"
+            }
+          ],
+          "cardIds": [
+            "word-día",
+            "phrase-todo-el-dia"
+          ]
+        }
+      ],
+      "excludedUnits": [
+        {
+          "id": "es-xkcd-abre-parentesis:statement:x01",
+          "text": "(",
+          "reason": "symbol",
+          "rationale": "This standalone opening parenthesis is a printed punctuation symbol rather than Spanish lexical vocabulary.",
+          "explicitBounds": [
+            {
+              "x": 3.55,
+              "y": 20,
+              "width": 2.45,
+              "height": 20
+            }
+          ],
+          "geometryRationale": "OCR fused this large opening symbol with UN; this measured box isolates only the visible parenthesis stroke."
+        }
+      ],
+      "applications": [
+        {
+          "id": "es-xkcd-abre-parentesis:statement:app-without-closing",
+          "cardId": "grammar-sin-infinitive",
+          "participantWordIds": [
+            "es-xkcd-abre-parentesis:statement:w03",
+            "es-xkcd-abre-parentesis:statement:w04"
+          ],
+          "exampleEs": "SIN CERRAR",
+          "explanationEn": "Sin introduces the absent action, and cerrar remains in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:app-adjective-order",
+          "cardId": "grammar-descriptive-adjective-after-noun",
+          "participantWordIds": [
+            "es-xkcd-abre-parentesis:statement:w07",
+            "es-xkcd-abre-parentesis:statement:w09"
+          ],
+          "exampleEs": "TENSIÓN NO RESUELTA",
+          "explanationEn": "Resuelta follows the noun tensión; no remains between them to negate the description."
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:app-agreement",
+          "cardId": "grammar-adjective-gender-agreement",
+          "participantWordIds": [
+            "es-xkcd-abre-parentesis:statement:w07",
+            "es-xkcd-abre-parentesis:statement:w09"
+          ],
+          "exampleEs": "TENSIÓN NO RESUELTA",
+          "explanationEn": "Resuelta uses its feminine singular ending to match tensión."
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:app-relative",
+          "cardId": "grammar-relative-que",
+          "participantWordIds": [
+            "es-xkcd-abre-parentesis:statement:w07",
+            "es-xkcd-abre-parentesis:statement:w10",
+            "es-xkcd-abre-parentesis:statement:w11",
+            "es-xkcd-abre-parentesis:statement:w12"
+          ],
+          "exampleEs": "TENSIÓN NO RESUELTA QUE SE QUEDA",
+          "explanationEn": "Que links the earlier noun tensión to the added se queda information; no resuelta remains an intervening description."
+        },
+        {
+          "id": "es-xkcd-abre-parentesis:statement:app-all-day",
+          "cardId": "phrase-todo-el-dia",
+          "participantWordIds": [
+            "es-xkcd-abre-parentesis:statement:w14",
+            "es-xkcd-abre-parentesis:statement:w15",
+            "es-xkcd-abre-parentesis:statement:w16"
+          ],
+          "exampleEs": "TODO EL DÍA",
+          "explanationEn": "Todo, el, and día form the fixed duration expression."
+        }
+      ]
+    }
+  ]
+}
