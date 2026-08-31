@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-idea-para-un-negocio",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "My Business Idea",
+  "titleEs": "Idea para un negocio",
+  "titleText": {
+    "es": "Al principio no te creíamos, pero le preguntamos a unas tres personas que estuvieron en esa fiesta. No solo corroboraron tu historia, sino que además dijeron que mencionaste que querías montar una empresa algún día. ¡Lo sentimos! Si esto no es suficiente dinero, dínoslo.",
+    "en": "We didn't believe you at first, but we asked like three people who were at that party. They not only corroborated your story, but even said you totally mentioned wanting to start a company someday. Sorry! If this isn't enough money, let us know.",
+    "noteEn": "The Spanish and English texts are the exact title attributes from the Spanish archive and official xkcd. OCR omitted most small form text and the right-hand button and delivery panel, split SOLICITAN-/DO, lost several accents and initial letters, and fused several form labels. The monetary amount, percentages, address, English button label, personal name, and delivery-company logo are audited exclusions. Cursor art, form borders, browser controls, hand pointer, dollar markings, figures, furniture, and speech tails are structural artwork."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-empresa",
+      "kind": "word",
+      "promptEs": "empresa",
+      "answerEn": "company; business",
+      "noteEn": "Empresa is a feminine noun for a company or business organization.",
+      "example": { "es": "La empresa abrió una oficina pequeña.", "en": "The company opened a small office." },
+      "tags": ["word", "business", "company", "A1"]
+    },
+    {
+      "id": "word-hecho--become-participle",
+      "kind": "word",
+      "promptEs": "hecho",
+      "answerEn": "become (completed-action form used in hacerse)",
+      "noteEn": "Hecho is the irregular completed-action form of hacer. With se and a form of haber, it helps form hacerse + description, meaning to become or grow into a new state. After haber, hecho does not change to match a feminine or plural subject.",
+      "example": { "es": "El barrio se ha hecho famoso.", "en": "The neighborhood has become famous." },
+      "tags": ["word", "hacer", "hacerse", "participle", "change", "A2"]
+    },
+    {
+      "id": "word-parte--share",
+      "kind": "word",
+      "promptEs": "parte",
+      "answerEn": "share; portion belonging to someone",
+      "noteEn": "Parte can mean one portion of a whole. In money or ownership contexts, it can be the share that belongs to a person.",
+      "example": { "es": "Cada socio recibió su parte de las ganancias.", "en": "Each partner received their share of the profits." },
+      "tags": ["word", "share", "portion", "business", "A2"]
+    },
+    {
+      "id": "word-que--fixed-claro-que-si",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "that (fixed linker in claro que sí)",
+      "noteEn": "In claro que sí, que links claro to the emphatic sí. Learn the three words together as a common expression of confident agreement.",
+      "example": { "es": "—¿Vendrás mañana? —Claro que sí.", "en": "'Will you come tomorrow?' 'Of course.'" },
+      "tags": ["word", "fixed expression", "agreement", "A1"]
+    },
+    {
+      "id": "word-solicitando--applying-for",
+      "kind": "word",
+      "promptEs": "solicitando",
+      "answerEn": "applying for; formally requesting",
+      "noteEn": "Solicitando is the -ando form of solicitar. It presents a formal request or application as an ongoing action.",
+      "example": { "es": "Estoy solicitando una beca.", "en": "I am applying for a scholarship." },
+      "tags": ["word", "solicitar", "gerund", "request", "A2"]
+    },
+    {
+      "id": "word-departamento",
+      "kind": "word",
+      "promptEs": "departamento",
+      "answerEn": "department",
+      "noteEn": "A departamento can be a division within an organization. In some countries it can also mean an apartment or an administrative region.",
+      "example": { "es": "Envía el formulario al departamento correcto.", "en": "Send the form to the correct department." },
+      "tags": ["word", "organization", "department", "A2"]
+    },
+    {
+      "id": "word-fecha",
+      "kind": "word",
+      "promptEs": "fecha",
+      "answerEn": "date",
+      "noteEn": "Fecha is the calendar date associated with an event or document.",
+      "example": { "es": "Escribe la fecha en la primera línea.", "en": "Write the date on the first line." },
+      "tags": ["word", "date", "time", "A1"]
+    },
+    {
+      "id": "word-tuviste",
+      "kind": "word",
+      "promptEs": "tuviste",
+      "answerEn": "you had (completed past)",
+      "noteEn": "Tuviste is the informal singular completed-past form of tener. It refers to something one person had at a finished time.",
+      "example": { "es": "¿Tuviste tiempo ayer?", "en": "Did you have time yesterday?" },
+      "tags": ["word", "tener", "preterite", "informal singular", "A2"]
+    },
+    {
+      "id": "word-prueba--evidence",
+      "kind": "word",
+      "promptEs": "prueba",
+      "answerEn": "proof; evidence",
+      "noteEn": "Prueba can mean a test, but it also means information or material that supports a claim.",
+      "example": { "es": "Necesitamos una prueba de que ocurrió.", "en": "We need proof that it happened." },
+      "tags": ["word", "evidence", "proof", "A2"]
+    },
+    {
+      "id": "word-de--evidence-content",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of; introducing what the evidence proves",
+      "noteEn": "After prueba, de can introduce the content supported by the evidence. When a whole statement follows, Spanish uses de que.",
+      "example": { "es": "Hay pruebas de que el plan funciona.", "en": "There is evidence that the plan works." },
+      "tags": ["word", "preposition", "evidence", "A2"]
+    },
+    {
+      "id": "word-preguntarle--ask-him",
+      "kind": "word",
+      "promptEs": "preguntarle",
+      "answerEn": "to ask him",
+      "noteEn": "Preguntarle combines preguntar with attached le. The unchanged dictionary form names the action, while le identifies one person being asked.",
+      "example": { "es": "Puedes preguntarle al vecino.", "en": "You can ask the neighbor." },
+      "tags": ["word", "preguntar", "attached pronoun", "infinitive", "A2"]
+    },
+    {
+      "id": "word-en--fixed-estar-en-plan",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "in (fixed part of estar en plan)",
+      "noteEn": "En belongs to the colloquial expression estar en plan. The expression presents someone's attitude, mode, or approximate words.",
+      "example": { "es": "Ella estaba en plan optimista.", "en": "She was in an optimistic sort of mood." },
+      "tags": ["word", "fixed expression", "colloquial", "A2"]
+    },
+    {
+      "id": "word-plan--fixed-estar-en-plan",
+      "kind": "word",
+      "promptEs": "plan",
+      "answerEn": "mode; like (fixed part of estar en plan)",
+      "noteEn": "In colloquial estar en plan, plan does not mean a literal plan. It helps frame an attitude, manner, or loose quotation.",
+      "example": { "es": "Estaba en plan «no pasa nada».", "en": "He was like, 'It's no big deal.'" },
+      "tags": ["word", "fixed expression", "colloquial", "quotation", "A2"]
+    },
+    {
+      "id": "word-respondió",
+      "kind": "word",
+      "promptEs": "respondió",
+      "answerEn": "he or she replied; responded",
+      "noteEn": "Respondió is the third-person singular completed-past form of responder.",
+      "example": { "es": "La directora respondió enseguida.", "en": "The director replied immediately." },
+      "tags": ["word", "responder", "preterite", "A2"]
+    },
+    {
+      "id": "word-te--merecerse",
+      "kind": "word",
+      "promptEs": "te",
+      "answerEn": "you; for yourself (small pronoun used with merecerse)",
+      "noteEn": "With informal singular tú, te is the matching small pronoun in merecerse algo. It appears before a form that matches the person and time, such as mereces.",
+      "example": { "es": "Te mereces un descanso.", "en": "You deserve a break." },
+      "tags": ["word", "pronoun", "merecerse", "informal singular", "A2"]
+    },
+    {
+      "id": "word-mereces--deserve",
+      "kind": "word",
+      "promptEs": "mereces",
+      "answerEn": "you deserve",
+      "noteEn": "Mereces is the informal singular present form of merecer. In the common pronominal pattern, it appears as te mereces.",
+      "example": { "es": "Mereces una respuesta clara.", "en": "You deserve a clear answer." },
+      "tags": ["word", "merecer", "present", "informal singular", "A2"]
+    },
+    {
+      "id": "word-sé--be-command",
+      "kind": "word",
+      "promptEs": "sé",
+      "answerEn": "be (affirmative tú command)",
+      "noteEn": "Sé is the irregular affirmative command of ser for one familiar listener. Its written accent distinguishes it from se.",
+      "example": { "es": "Sé paciente con los demás.", "en": "Be patient with others." },
+      "tags": ["word", "ser", "command", "informal singular", "A1"]
+    },
+    {
+      "id": "word-justo--fair",
+      "kind": "word",
+      "promptEs": "justo",
+      "answerEn": "fair; just",
+      "noteEn": "Justo describes a masculine singular person, choice, or result that is fair or morally right.",
+      "example": { "es": "Buscamos un acuerdo justo.", "en": "We are seeking a fair agreement." },
+      "tags": ["word", "adjective", "fairness", "A2"]
+    },
+    {
+      "id": "word-dirección--mailing-address",
+      "kind": "word",
+      "promptEs": "dirección",
+      "answerEn": "address (mailing or contact address)",
+      "noteEn": "Dirección can mean direction, management, or an address. With postal, it is the address used for mail.",
+      "example": { "es": "Confirma tu dirección antes del envío.", "en": "Confirm your address before shipment." },
+      "tags": ["word", "address", "mail", "A2"]
+    },
+    {
+      "id": "phrase-claro-que-si",
+      "kind": "phrase",
+      "promptEs": "claro que sí",
+      "questionEn": "How can you give a confident 'of course' answer to a yes-or-no question?",
+      "answerEn": "Use claro que sí.",
+      "noteEn": "Claro que sí strongly confirms a positive answer. Claro que no gives the corresponding confident negative answer.",
+      "example": { "es": "—¿Me ayudas? —Claro que sí.", "en": "'Will you help me?' 'Of course.'" },
+      "tags": ["phrase", "agreement", "confirmation", "A1"]
+    },
+    {
+      "id": "phrase-prueba-de-que",
+      "kind": "phrase",
+      "promptEs": "prueba de que + idea",
+      "questionEn": "How do you introduce the statement that some evidence supports?",
+      "answerEn": "Use prueba de que, followed by the statement.",
+      "noteEn": "Prueba names the evidence, de links it to its content, and que introduces a complete idea with its own verb.",
+      "example": { "es": "Esta foto es prueba de que llegaron temprano.", "en": "This photo is proof that they arrived early." },
+      "tags": ["phrase", "evidence", "de que", "A2"]
+    },
+    {
+      "id": "phrase-estar-en-plan-colloquial",
+      "kind": "phrase",
+      "promptEs": "estar en plan + actitud o palabras aproximadas",
+      "questionEn": "How can colloquial Spanish frame someone's attitude, manner, or loose quotation?",
+      "answerEn": "Use a matching form of estar followed by en plan, then give the attitude or approximate words.",
+      "noteEn": "This informal expression is especially common in Spain. It can describe a mood or work much like conversational English 'be like' before an approximate quotation.",
+      "example": { "es": "Estábamos en plan tranquilo.", "en": "We were in a relaxed sort of mood." },
+      "tags": ["phrase", "colloquial", "Spain", "attitude", "A2"]
+    },
+    {
+      "id": "phrase-merecerse-algo",
+      "kind": "phrase",
+      "promptEs": "merecerse algo",
+      "questionEn": "How do you say that someone deserves something, using the common pattern with me, te, se, nos, or os?",
+      "answerEn": "Put the matching small pronoun before a form of merecer that matches the person and time, then name the deserved thing.",
+      "noteEn": "For example, te mereces is used with tú and se merece with él, ella, or usted. The thing deserved can follow the verb or be understood from context.",
+      "example": { "es": "Os merecéis unas vacaciones.", "en": "You all deserve a vacation." },
+      "tags": ["phrase", "merecerse", "pronoun", "A2"]
+    },
+    {
+      "id": "phrase-direccion-postal",
+      "kind": "phrase",
+      "promptEs": "dirección postal",
+      "questionEn": "How do you say mailing address or postal address?",
+      "answerEn": "Use dirección postal.",
+      "noteEn": "Postal follows the feminine noun dirección but has the same singular form with masculine and feminine nouns.",
+      "example": { "es": "La solicitud pide una dirección postal.", "en": "The application asks for a mailing address." },
+      "tags": ["phrase", "address", "mail", "A2"]
+    },
+    {
+      "id": "concept-business-idea-retroactive-profit-form",
+      "kind": "concept",
+      "promptEs": "idea antigua · empresa rica · solicitar una parte · formulario retroactivo",
+      "questionEn": "Why does the business-idea department turn the speaker's complaint into a joke?",
+      "answerEn": "It treats a vague old remark as if it were formal evidence that entitles someone to a retroactive share of a company's profits.",
+      "noteEn": "The speaker first makes the familiar claim that a company got rich from an idea he had years earlier. The next panels imagine an official form accepting hearsay, an approximate date, a self-selected percentage, and a mailing address, followed by an implausibly immediate cash delivery.",
+      "tags": ["concept", "business idea", "form", "profits", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-idea-para-un-negocio:idea-claim",
+      "labelEs": "¡TÍO! ¡TUVE ESTA IDEA HACE COMO CINCO AÑOS, Y UNA EMPRESA SE HA HECHO RICA CON ELLA!",
+      "explicitBounds": [{ "x": 0.2, "y": 0.5, "width": 19.5, "height": 21.5 }],
+      "geometryRationale": "This checked region contains the five-line opening claim in the first panel.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w01", "text": "TÍO", "normalized": "tío", "explicitBounds": [{ "x": 1.55, "y": 1.8987, "width": 3.25, "height": 3.7975 }], "geometryRationale": "The source-checked box leaves both exclamation marks outside and preserves the accent.", "cardIds": ["word-tío--informal-address"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w02", "text": "TUVE", "normalized": "tuve", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00002" }], "cardIds": ["word-tuve"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w03", "text": "ESTA", "normalized": "esta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00003" }], "cardIds": ["word-esta--demonstrative"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w04", "text": "IDEA", "normalized": "idea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00004" }], "cardIds": ["word-idea", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w05", "text": "HACE", "normalized": "hace", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00013" }], "cardIds": ["word-hace--time-ago", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w06", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00014" }], "cardIds": ["word-como--approximation", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w07", "text": "CINCO", "normalized": "cinco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00015" }], "cardIds": ["word-cinco", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w08", "text": "AÑOS", "normalized": "años", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00019" }], "cardIds": ["word-años", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w09", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00020" }], "cardIds": ["word-y"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w10", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00021" }], "cardIds": ["word-una"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w11", "text": "EMPRESA", "normalized": "empresa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00022" }], "cardIds": ["word-empresa", "grammar-adjective-gender-agreement", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w12", "text": "SE", "normalized": "se", "explicitBounds": [{ "x": 0.82, "y": 13.9241, "width": 2.15, "height": 3.1646 }], "geometryRationale": "OCR dropped the initial S; this checked box restores the complete printed word.", "cardIds": ["word-se--hacerse-change", "grammar-hacerse-adjective-change"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w13", "text": "HA", "normalized": "ha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00033" }], "cardIds": ["word-ha", "grammar-present-perfect", "grammar-hacerse-adjective-change"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w14", "text": "HECHO", "normalized": "hecho", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00034" }], "cardIds": ["word-hecho--become-participle", "grammar-present-perfect", "grammar-hacerse-adjective-change"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w15", "text": "RICA", "normalized": "rica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00035" }], "cardIds": ["word-rica--wealthy", "grammar-hacerse-adjective-change", "grammar-adjective-gender-agreement", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w16", "text": "CON", "normalized": "con", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00043" }], "cardIds": ["word-con"] },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:w17", "text": "ELLA", "normalized": "ella", "explicitBounds": [{ "x": 4.3243, "y": 17.7215, "width": 3.75, "height": 3.7975 }], "geometryRationale": "The checked width stops before the final exclamation mark.", "cardIds": ["word-ella--prepositional-inanimate"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:app-ago", "cardId": "grammar-hace-duration-ago", "participantWordIds": ["es-xkcd-idea-para-un-negocio:idea-claim:w05", "es-xkcd-idea-para-un-negocio:idea-claim:w06", "es-xkcd-idea-para-un-negocio:idea-claim:w07", "es-xkcd-idea-para-un-negocio:idea-claim:w08"], "exampleEs": "HACE COMO CINCO AÑOS", "explanationEn": "Hace places the idea in the past, como makes the quantity approximate, and cinco años gives the duration." },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:app-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-idea-para-un-negocio:idea-claim:w13", "es-xkcd-idea-para-un-negocio:idea-claim:w14"], "exampleEs": "HA HECHO", "explanationEn": "Ha is the present helper for a singular company, and hecho is the irregular participle of hacer." },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:app-become", "cardId": "grammar-hacerse-adjective-change", "participantWordIds": ["es-xkcd-idea-para-un-negocio:idea-claim:w12", "es-xkcd-idea-para-un-negocio:idea-claim:w13", "es-xkcd-idea-para-un-negocio:idea-claim:w14", "es-xkcd-idea-para-un-negocio:idea-claim:w15"], "exampleEs": "SE HA HECHO RICA", "explanationEn": "Se and hecho form hacerse, ha places the change in the present perfect, and rica names the resulting state." },
+        { "id": "es-xkcd-idea-para-un-negocio:idea-claim:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-idea-para-un-negocio:idea-claim:w11", "es-xkcd-idea-para-un-negocio:idea-claim:w15"], "exampleEs": "EMPRESA SE HA HECHO RICA", "explanationEn": "Rica uses feminine singular -a because it describes the feminine singular noun empresa." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:share-demand",
+      "labelEs": "QUIERO MI PARTE.",
+      "explicitBounds": [{ "x": 0.4, "y": 22.0, "width": 18.8, "height": 13.5 }],
+      "geometryRationale": "This checked region contains the two-line demand in the lower part of the first panel.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:share-demand:w01", "text": "QUIERO", "normalized": "quiero", "explicitBounds": [{ "x": 0.68, "y": 26.3, "width": 5.68, "height": 3.7 }], "geometryRationale": "OCR omitted this word; the measured source box covers its printed letters.", "cardIds": ["word-quiero"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-demand:w02", "text": "MI", "normalized": "mi", "explicitBounds": [{ "x": 7.3, "y": 26.3, "width": 1.75, "height": 3.7 }], "geometryRationale": "OCR omitted this word; the measured source box covers its printed letters.", "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-demand:w03", "text": "PARTE", "normalized": "parte", "explicitBounds": [{ "x": 0.68, "y": 30.4, "width": 4.95, "height": 3.8 }], "geometryRationale": "OCR dropped the initial P; this checked box restores the complete word and stops before the period.", "cardIds": ["word-parte--share", "concept-business-idea-retroactive-profit-form"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:objection",
+      "labelEs": "ESO NO FUNCIONA ASÍ.",
+      "explicitBounds": [{ "x": 20.0, "y": 0.6, "width": 19.3, "height": 7.0 }],
+      "geometryRationale": "This checked region contains the opening objection in the second panel.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:objection:w01", "text": "ESO", "normalized": "eso", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00005" }], "cardIds": ["word-eso"] },
+        { "id": "es-xkcd-idea-para-un-negocio:objection:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00006" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-idea-para-un-negocio:objection:w03", "text": "FUNCIONA", "normalized": "funciona", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00007" }], "cardIds": ["word-funciona--works"] },
+        { "id": "es-xkcd-idea-para-un-negocio:objection:w04", "text": "ASÍ", "normalized": "así", "explicitBounds": [{ "x": 35.4392, "y": 1.8987, "width": 3.0, "height": 4.4304 }], "geometryRationale": "The checked width stops before the final period.", "cardIds": ["word-así--like-that"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:application-reply",
+      "labelEs": "CLARO QUE SÍ. ESTOY SOLICITANDO MI PARTE AHORA.",
+      "explicitBounds": [{ "x": 20.0, "y": 8.5, "width": 19.5, "height": 16.5 }],
+      "geometryRationale": "This checked region contains the four-line reply in the second panel.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w01", "text": "CLARO", "normalized": "claro", "explicitBounds": [{ "x": 21.0811, "y": 9.4937, "width": 5.0676, "height": 3.7973 }], "geometryRationale": "The source-derived height ends a fraction above the following text row.", "cardIds": ["word-claro", "phrase-claro-que-si"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 26.3514, "y": 9.4937, "width": 3.6486, "height": 3.7973 }], "geometryRationale": "The source-derived height ends a fraction above the following text row.", "cardIds": ["word-que--fixed-claro-que-si", "phrase-claro-que-si"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w03", "text": "SÍ", "normalized": "sí", "explicitBounds": [{ "x": 30.2027, "y": 9.4937, "width": 2.2297, "height": 3.7973 }], "geometryRationale": "The source-derived height ends a fraction above the following text row and retains the accent omitted by OCR.", "cardIds": ["word-sí", "phrase-claro-que-si"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w04", "text": "ESTOY", "normalized": "estoy", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00030" }], "cardIds": ["word-estoy--progressive-auxiliary", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w05", "text": "SOLICITANDO", "normalized": "solicitando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00031" }, { "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00040" }], "cardIds": ["word-solicitando--applying-for", "grammar-estar-gerundio", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w06", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00041" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w07", "text": "PARTE", "normalized": "parte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00042" }], "cardIds": ["word-parte--share", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:w08", "text": "AHORA", "normalized": "ahora", "explicitBounds": [{ "x": 20.5405, "y": 20.8861, "width": 5.2, "height": 3.7975 }], "geometryRationale": "The checked width stops before the final period.", "cardIds": ["word-ahora"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:app-of-course", "cardId": "phrase-claro-que-si", "participantWordIds": ["es-xkcd-idea-para-un-negocio:application-reply:w01", "es-xkcd-idea-para-un-negocio:application-reply:w02", "es-xkcd-idea-para-un-negocio:application-reply:w03"], "exampleEs": "CLARO QUE SÍ", "explanationEn": "The fixed three-word expression gives a confident positive answer." },
+        { "id": "es-xkcd-idea-para-un-negocio:application-reply:app-progressive", "cardId": "grammar-estar-gerundio", "participantWordIds": ["es-xkcd-idea-para-un-negocio:application-reply:w04", "es-xkcd-idea-para-un-negocio:application-reply:w05"], "exampleEs": "ESTOY SOLICITANDO", "explanationEn": "Estoy is the first-person present helper, and solicitando presents the formal request as ongoing." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:confusion",
+      "labelEs": "ESPERA, ¿QUÉ?",
+      "explicitBounds": [{ "x": 30.5, "y": 24.8, "width": 8.8, "height": 11.2 }],
+      "geometryRationale": "This checked region contains the two-line reaction at the right of the second panel.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:confusion:w01", "text": "ESPERA", "normalized": "espera", "explicitBounds": [{ "x": 31.3514, "y": 25.9494, "width": 7.0, "height": 3.9 }], "geometryRationale": "OCR fused both rows into one tall box; this source-checked box isolates ESPERA and stops before the comma.", "cardIds": ["word-espera--wait-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-idea-para-un-negocio:confusion:w02", "text": "QUÉ", "normalized": "qué", "explicitBounds": [{ "x": 32.15, "y": 30.0, "width": 4.2, "height": 4.3 }], "geometryRationale": "OCR omitted the second line; this checked box leaves the question marks outside and preserves the accent.", "cardIds": ["word-qué--interrogative", "question-words"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:confusion:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-idea-para-un-negocio:confusion:w01"], "exampleEs": "ESPERA", "explanationEn": "Espera is the affirmative tú command used to tell one familiar listener to wait." },
+        { "id": "es-xkcd-idea-para-un-negocio:confusion:app-question", "cardId": "question-words", "participantWordIds": ["es-xkcd-idea-para-un-negocio:confusion:w02"], "exampleEs": "QUÉ", "explanationEn": "Qué is a direct question word and therefore keeps its written accent." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:form-heading",
+      "labelEs": "DEPARTAMENTO DE IDEAS",
+      "explicitBounds": [{ "x": 47.5, "y": 2.0, "width": 14.0, "height": 6.5 }],
+      "geometryRationale": "This checked region isolates the title inside the browser-like form header; the preceding icon is interface artwork.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:form-heading:w01", "text": "DEPARTAMENTO", "normalized": "departamento", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00010" }], "cardIds": ["word-departamento", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:form-heading:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00011" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-idea-para-un-negocio:form-heading:w03", "text": "IDEAS", "normalized": "ideas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00012" }], "cardIds": ["word-ideas"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:date-field",
+      "labelEs": "FECHA EN LA QUE TUVISTE LA IDEA: HACE COMO CINCO AÑOS.",
+      "explicitBounds": [{ "x": 40.5, "y": 11.2, "width": 20.0, "height": 9.2 }],
+      "geometryRationale": "This checked region contains the date prompt and the filled response immediately below it.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w01", "text": "FECHA", "normalized": "fecha", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00023" }], "cardIds": ["word-fecha"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w02", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00024" }], "cardIds": ["word-en--time-point", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w03", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00025" }], "cardIds": ["word-la--relative-article", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00026" }], "cardIds": ["word-que--relative", "grammar-preposition-article-que-relative"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w05", "text": "TUVISTE", "normalized": "tuviste", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00027" }], "cardIds": ["word-tuviste", "grammar-past-contrast"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w06", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00028" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w07", "text": "IDEA", "normalized": "idea", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00029" }], "cardIds": ["word-idea"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w08", "text": "HACE", "normalized": "hace", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00036" }], "cardIds": ["word-hace--time-ago", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w09", "text": "COMO", "normalized": "como", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00037" }], "cardIds": ["word-como--approximation", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w10", "text": "CINCO", "normalized": "cinco", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00038" }], "cardIds": ["word-cinco", "grammar-hace-duration-ago"] },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:w11", "text": "AÑOS", "normalized": "años", "explicitBounds": [{ "x": 50.7432, "y": 15.8228, "width": 2.4, "height": 3.7975 }], "geometryRationale": "The checked width stops before the final period.", "cardIds": ["word-años", "grammar-hace-duration-ago"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:app-relative", "cardId": "grammar-preposition-article-que-relative", "participantWordIds": ["es-xkcd-idea-para-un-negocio:date-field:w02", "es-xkcd-idea-para-un-negocio:date-field:w03", "es-xkcd-idea-para-un-negocio:date-field:w04"], "exampleEs": "EN LA QUE", "explanationEn": "En supplies the time relation, la agrees with the feminine antecedent fecha, and que introduces its description." },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:app-past", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-idea-para-un-negocio:date-field:w05"], "exampleEs": "TUVISTE", "explanationEn": "Tuviste presents having the idea as a completed event at the requested past date." },
+        { "id": "es-xkcd-idea-para-un-negocio:date-field:app-ago", "cardId": "grammar-hace-duration-ago", "participantWordIds": ["es-xkcd-idea-para-un-negocio:date-field:w08", "es-xkcd-idea-para-un-negocio:date-field:w09", "es-xkcd-idea-para-un-negocio:date-field:w10", "es-xkcd-idea-para-un-negocio:date-field:w11"], "exampleEs": "HACE COMO CINCO AÑOS", "explanationEn": "Hace places the event in the past, como makes the quantity approximate, and cinco años gives the duration." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:proof-field",
+      "labelEs": "PRUEBA DE QUE LA TUVISTE: SE LO DIJE A MI AMIGO MIKE. ¡PUEDES PREGUNTARLE! YO ESTABA EN PLAN «¿SABES LO QUE SERÍA UNA BUENA IDEA PARA UN NEGOCIO?» Y ÉL RESPONDIÓ",
+      "explicitBounds": [{ "x": 40.4, "y": 21.2, "width": 20.5, "height": 18.5 }],
+      "geometryRationale": "This checked region contains the proof prompt and all five filled text rows; the personal name is isolated as an exclusion.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w01", "text": "PRUEBA", "normalized": "prueba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00046" }], "cardIds": ["word-prueba--evidence", "phrase-prueba-de-que", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w02", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00047" }], "cardIds": ["word-de--evidence-content", "phrase-prueba-de-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00048" }], "cardIds": ["word-que--clause-link", "phrase-prueba-de-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w04", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00049" }], "cardIds": ["word-la--direct-object-feminine", "phrase-prueba-de-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w05", "text": "TUVISTE", "normalized": "tuviste", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-idea-para-un-negocio:ocr-token-00050" }], "cardIds": ["word-tuviste", "phrase-prueba-de-que", "grammar-past-contrast"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w06", "text": "SE", "normalized": "se", "explicitBounds": [{ "x": 41.89, "y": 26.72, "width": 1.11, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers SE on the first filled row.", "cardIds": ["word-se--indirect-before-lo", "grammar-se-lo-pronouns"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w07", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 43.20, "y": 26.72, "width": 0.86, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers LO on the first filled row.", "cardIds": ["word-lo--object-pronoun", "grammar-se-lo-pronouns"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w08", "text": "DIJE", "normalized": "dije", "explicitBounds": [{ "x": 44.35, "y": 26.72, "width": 2.99, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers DIJE on the first filled row.", "cardIds": ["word-dije", "grammar-past-contrast"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w09", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 47.72, "y": 26.72, "width": 0.80, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers the recipient marker A.", "cardIds": ["word-a--recipient"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w10", "text": "MI", "normalized": "mi", "explicitBounds": [{ "x": 48.82, "y": 26.72, "width": 1.14, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers MI.", "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w11", "text": "AMIGO", "normalized": "amigo", "explicitBounds": [{ "x": 50.23, "y": 26.72, "width": 2.97, "height": 2.19 }], "geometryRationale": "OCR omitted the form entry; this measured box covers AMIGO.", "cardIds": ["word-amigo"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w12", "text": "PUEDES", "normalized": "puedes", "explicitBounds": [{ "x": 41.89, "y": 29.27, "width": 3.64, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box leaves the inverted exclamation mark outside.", "cardIds": ["word-puedes", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w13", "text": "PREGUNTARLE", "normalized": "preguntarle", "explicitBounds": [{ "x": 45.85, "y": 29.27, "width": 7.14, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box stops before the exclamation mark.", "cardIds": ["word-preguntarle--ask-him", "grammar-poder-infinitive", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w14", "text": "YO", "normalized": "yo", "explicitBounds": [{ "x": 53.49, "y": 29.27, "width": 1.03, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers YO.", "cardIds": ["word-yo", "grammar-explicit-subject-pronoun"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w15", "text": "ESTABA", "normalized": "estaba", "explicitBounds": [{ "x": 41.91, "y": 31.68, "width": 3.74, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers ESTABA.", "cardIds": ["word-estaba--i-was-state", "grammar-explicit-subject-pronoun", "phrase-estar-en-plan-colloquial", "grammar-past-contrast"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w16", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 45.91, "y": 31.68, "width": 1.15, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers EN.", "cardIds": ["word-en--fixed-estar-en-plan", "phrase-estar-en-plan-colloquial"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w17", "text": "PLAN", "normalized": "plan", "explicitBounds": [{ "x": 47.41, "y": 31.68, "width": 2.46, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers PLAN.", "cardIds": ["word-plan--fixed-estar-en-plan", "phrase-estar-en-plan-colloquial"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w18", "text": "SABES", "normalized": "sabes", "explicitBounds": [{ "x": 50.84, "y": 31.68, "width": 2.65, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box leaves the opening quote and inverted question mark outside.", "cardIds": ["word-sabes", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w19", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 53.82, "y": 31.68, "width": 1.14, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers LO.", "cardIds": ["word-lo--neutral-relative", "grammar-lo-que", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w20", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 41.91, "y": 34.22, "width": 1.99, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers QUE at the start of the fourth row.", "cardIds": ["word-que--neutral-relative", "grammar-lo-que", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w21", "text": "SERÍA", "normalized": "sería", "explicitBounds": [{ "x": 44.16, "y": 34.22, "width": 2.76, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box preserves the accent.", "cardIds": ["word-seria--would-be", "grammar-simple-conditional", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w22", "text": "UNA", "normalized": "una", "explicitBounds": [{ "x": 47.22, "y": 34.22, "width": 2.01, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers UNA.", "cardIds": ["word-una"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w23", "text": "BUENA", "normalized": "buena", "explicitBounds": [{ "x": 49.55, "y": 34.22, "width": 2.62, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers BUENA.", "cardIds": ["word-buena--good-idea", "grammar-evaluative-adjective-before-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w24", "text": "IDEA", "normalized": "idea", "explicitBounds": [{ "x": 52.46, "y": 34.22, "width": 1.91, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers IDEA.", "cardIds": ["word-idea", "grammar-evaluative-adjective-before-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w25", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 54.70, "y": 34.22, "width": 2.68, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers PARA.", "cardIds": ["word-para--for-purpose-noun"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w26", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 41.89, "y": 36.86, "width": 1.12, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers UN.", "cardIds": ["word-un"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w27", "text": "NEGOCIO", "normalized": "negocio", "explicitBounds": [{ "x": 43.24, "y": 36.86, "width": 5.27, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box stops before the question mark and closing quote.", "cardIds": ["word-negocio--business"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w28", "text": "Y", "normalized": "y", "explicitBounds": [{ "x": 49.22, "y": 36.86, "width": 0.66, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box covers Y.", "cardIds": ["word-y"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w29", "text": "ÉL", "normalized": "él", "explicitBounds": [{ "x": 50.39, "y": 36.86, "width": 1.08, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box preserves the accent.", "cardIds": ["word-él--pronoun"] },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:w30", "text": "RESPONDIÓ", "normalized": "respondió", "explicitBounds": [{ "x": 51.86, "y": 36.86, "width": 5.54, "height": 2.22 }], "geometryRationale": "OCR omitted the form entry; this measured box preserves the accent.", "cardIds": ["word-respondió", "grammar-past-contrast"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:x01", "text": "MIKE", "reason": "non-spanish-text", "explicitBounds": [{ "x": 53.74, "y": 26.72, "width": 2.45, "height": 2.19 }], "rationale": "This personal name is excluded while all surrounding Spanish form text is taught.", "geometryRationale": "OCR omitted the form entry; this measured box isolates the printed name and stops before the period." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-proof", "cardId": "phrase-prueba-de-que", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w01", "es-xkcd-idea-para-un-negocio:proof-field:w02", "es-xkcd-idea-para-un-negocio:proof-field:w03", "es-xkcd-idea-para-un-negocio:proof-field:w04", "es-xkcd-idea-para-un-negocio:proof-field:w05"], "exampleEs": "PRUEBA DE QUE LA TUVISTE", "explanationEn": "Prueba names the evidence, de que introduces its content, and la tuviste supplies the complete claim being supported." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-se-lo", "cardId": "grammar-se-lo-pronouns", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w06", "es-xkcd-idea-para-un-negocio:proof-field:w07"], "exampleEs": "SE LO DIJE", "explanationEn": "Se comes before lo: se refers to the person told, while lo stands for the thing that was said." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-se-recipient", "cardId": "word-se--indirect-before-lo", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w06"], "exampleEs": "SE LO DIJE A MI AMIGO", "explanationEn": "The later phrase a mi amigo makes the person represented by se explicit; se is required instead of le before lo." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-poder", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w12", "es-xkcd-idea-para-un-negocio:proof-field:w13"], "exampleEs": "PUEDES PREGUNTARLE", "explanationEn": "Puedes is the form of poder for one familiar listener, and preguntar stays in its unchanged dictionary form inside preguntarle, with le attached." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-attached", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w13"], "exampleEs": "PREGUNTARLE", "explanationEn": "Le attaches to the end of the unchanged infinitive preguntar to identify one person being asked." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-explicit-subject", "cardId": "grammar-explicit-subject-pronoun", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w14", "es-xkcd-idea-para-un-negocio:proof-field:w15"], "exampleEs": "YO ESTABA", "explanationEn": "Estaba already identifies a first-person subject, so printed yo adds explicit focus before the quoted recollection." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-en-plan", "cardId": "phrase-estar-en-plan-colloquial", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w15", "es-xkcd-idea-para-un-negocio:proof-field:w16", "es-xkcd-idea-para-un-negocio:proof-field:w17"], "exampleEs": "ESTABA EN PLAN", "explanationEn": "Estaba sets a past state, and en plan colloquially frames the loose quotation that follows." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-lo-que", "cardId": "grammar-lo-que", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w19", "es-xkcd-idea-para-un-negocio:proof-field:w20"], "exampleEs": "LO QUE", "explanationEn": "Neutral lo and relative que combine to refer to an unspecified idea or thing." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-yes-no", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w18", "es-xkcd-idea-para-un-negocio:proof-field:w19", "es-xkcd-idea-para-un-negocio:proof-field:w20", "es-xkcd-idea-para-un-negocio:proof-field:w21"], "exampleEs": "SABES LO QUE SERÍA", "explanationEn": "The ordinary statement-shaped frame sabes lo que sería remains in place; the surrounding question marks and intonation make it a yes-or-no question without an extra helper word." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-conditional", "cardId": "grammar-simple-conditional", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w21"], "exampleEs": "SERÍA", "explanationEn": "Sería supplies the ‘would be’ form of ser for the imagined good idea." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-evaluative", "cardId": "grammar-evaluative-adjective-before-noun", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w23", "es-xkcd-idea-para-un-negocio:proof-field:w24"], "exampleEs": "BUENA IDEA", "explanationEn": "Buena appears before idea because it gives an evaluation of the idea as a whole." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-good-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w23", "es-xkcd-idea-para-un-negocio:proof-field:w24"], "exampleEs": "BUENA IDEA", "explanationEn": "Buena uses feminine singular -a to agree with feminine singular idea." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-past-had", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w05"], "exampleEs": "TUVISTE", "explanationEn": "Tuviste presents having the idea as a completed past event." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-past-said", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w08"], "exampleEs": "DIJE", "explanationEn": "Dije presents telling the friend as a completed past event." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-past-state", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w15"], "exampleEs": "ESTABA", "explanationEn": "Estaba supplies an ongoing background state before the remembered quotation." },
+        { "id": "es-xkcd-idea-para-un-negocio:proof-field:app-past-replied", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-idea-para-un-negocio:proof-field:w30"], "exampleEs": "RESPONDIÓ", "explanationEn": "Respondió presents the reply as a completed past event." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:profit-field",
+      "labelEs": "BENEFICIOS DE LA IDEA: $20 000 000",
+      "explicitBounds": [{ "x": 40.4, "y": 40.3, "width": 20.3, "height": 10.1 }],
+      "geometryRationale": "This checked region contains the profit label and its filled monetary value.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:profit-field:w01", "text": "BENEFICIOS", "normalized": "beneficios", "explicitBounds": [{ "x": 41.3514, "y": 41.1392, "width": 5.473, "height": 2.6 }], "geometryRationale": "The shortened source-derived height isolates the label row.", "cardIds": ["word-beneficios--profits", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:profit-field:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 47.03, "y": 41.1392, "width": 1.08, "height": 2.6 }], "geometryRationale": "OCR fused DE LA; this measured sub-box isolates DE.", "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-idea-para-un-negocio:profit-field:w03", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 48.38, "y": 41.1392, "width": 0.95, "height": 2.6 }], "geometryRationale": "OCR fused DE LA; this measured sub-box isolates LA.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-idea-para-un-negocio:profit-field:w04", "text": "IDEA", "normalized": "idea", "explicitBounds": [{ "x": 50.0676, "y": 41.1392, "width": 2.05, "height": 2.6 }], "geometryRationale": "OCR dropped the initial I; this checked box restores the complete word and stops before the colon.", "cardIds": ["word-idea"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:profit-field:x01", "text": "$20 000 000", "reason": "measurement", "explicitBounds": [{ "x": 41.1, "y": 45.7, "width": 9.9, "height": 3.6 }], "rationale": "This currency amount is numeric data rather than a Spanish lexical learning target.", "geometryRationale": "The checked source box includes the printed currency symbol and all three digit groups as one amount." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:share-field",
+      "labelEs": "PARTE QUE TE MERECES (¡SÉ JUSTO!): 25% 30% 35%",
+      "explicitBounds": [{ "x": 40.4, "y": 49.2, "width": 19.7, "height": 13.1 }],
+      "geometryRationale": "This checked region contains the three-line share label and the three dropdown percentage choices.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w01", "text": "PARTE", "normalized": "parte", "explicitBounds": [{ "x": 41.89, "y": 51.75, "width": 3.38, "height": 2.22 }], "geometryRationale": "OCR omitted the first label row; this measured box covers PARTE.", "cardIds": ["word-parte--share", "phrase-merecerse-algo", "grammar-relative-que", "concept-business-idea-retroactive-profit-form"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 45.68, "y": 51.75, "width": 1.76, "height": 2.22 }], "geometryRationale": "OCR omitted the first label row; this measured box covers QUE.", "cardIds": ["word-que--relative", "grammar-relative-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w03", "text": "TE", "normalized": "te", "explicitBounds": [{ "x": 48.04, "y": 51.75, "width": 1.15, "height": 2.22 }], "geometryRationale": "OCR omitted the first label row; this measured box covers TE.", "cardIds": ["word-te--merecerse", "phrase-merecerse-algo", "grammar-relative-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w04", "text": "MERECES", "normalized": "mereces", "explicitBounds": [{ "x": 41.89, "y": 54.29, "width": 4.66, "height": 2.22 }], "geometryRationale": "The source-derived OCR box fused multiple rows; this measured box isolates MERECES.", "cardIds": ["word-mereces--deserve", "phrase-merecerse-algo", "grammar-relative-que"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w05", "text": "SÉ", "normalized": "sé", "explicitBounds": [{ "x": 47.67, "y": 54.29, "width": 1.46, "height": 2.22 }], "geometryRationale": "OCR omitted this parenthetical word; the measured box leaves punctuation outside and preserves the accent.", "cardIds": ["word-sé--be-command", "grammar-affirmative-tu-command"] },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:w06", "text": "JUSTO", "normalized": "justo", "explicitBounds": [{ "x": 41.89, "y": 56.89, "width": 3.38, "height": 2.22 }], "geometryRationale": "OCR omitted the final parenthetical row; the measured box leaves punctuation outside.", "cardIds": ["word-justo--fair"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:x01", "text": "25%", "reason": "measurement", "explicitBounds": [{ "x": 53.78, "y": 53.4, "width": 2.1, "height": 2.35 }], "rationale": "This percentage choice is numeric form data rather than a Spanish lexical target.", "geometryRationale": "OCR omitted the dropdown choices; this measured box isolates the first printed percentage from its control border and arrow." },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:x02", "text": "30%", "reason": "measurement", "explicitBounds": [{ "x": 53.85, "y": 56.13, "width": 2.05, "height": 2.35 }], "rationale": "This percentage choice is numeric form data rather than a Spanish lexical target.", "geometryRationale": "OCR omitted the dropdown choices; this measured box isolates the second printed percentage from its dark selected background." },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:x03", "text": "35%", "reason": "measurement", "explicitBounds": [{ "x": 53.78, "y": 59.37, "width": 1.96, "height": 2.22 }], "rationale": "This percentage choice is numeric form data rather than a Spanish lexical target.", "geometryRationale": "OCR omitted the dropdown choices; this measured box isolates the third printed percentage from the dropdown arrow." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:app-deserve", "cardId": "phrase-merecerse-algo", "participantWordIds": ["es-xkcd-idea-para-un-negocio:share-field:w01", "es-xkcd-idea-para-un-negocio:share-field:w03", "es-xkcd-idea-para-un-negocio:share-field:w04"], "exampleEs": "PARTE QUE TE MERECES", "explanationEn": "Parte is the thing deserved, while te comes before mereces, the form used for one familiar person in the present." },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:app-relative", "cardId": "grammar-relative-que", "participantWordIds": ["es-xkcd-idea-para-un-negocio:share-field:w01", "es-xkcd-idea-para-un-negocio:share-field:w02", "es-xkcd-idea-para-un-negocio:share-field:w03", "es-xkcd-idea-para-un-negocio:share-field:w04"], "exampleEs": "PARTE QUE TE MERECES", "explanationEn": "Que links parte to the description te mereces, which identifies the particular share." },
+        { "id": "es-xkcd-idea-para-un-negocio:share-field:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-idea-para-un-negocio:share-field:w05"], "exampleEs": "SÉ", "explanationEn": "Sé is the irregular affirmative tú command of ser and keeps its written accent." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:address-field",
+      "labelEs": "DIRECCIÓN POSTAL: 137 ASHTREE LN",
+      "explicitBounds": [{ "x": 40.2, "y": 61.0, "width": 20.5, "height": 8.5 }],
+      "geometryRationale": "This checked region contains the mailing-address label and its filled address value.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:w01", "text": "DIRECCIÓN", "normalized": "dirección", "explicitBounds": [{ "x": 41.3514, "y": 61.9, "width": 5.6757, "height": 2.6 }], "geometryRationale": "The shortened source-derived height isolates the label row and preserves the accent omitted by OCR.", "cardIds": ["word-dirección--mailing-address", "phrase-direccion-postal", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:w02", "text": "POSTAL", "normalized": "postal", "explicitBounds": [{ "x": 47.2297, "y": 61.9, "width": 4.0, "height": 2.6 }], "geometryRationale": "OCR split POSTAL into two tokens; this measured box reunites the printed word and stops before the colon.", "cardIds": ["word-postal--mail-adjective", "phrase-direccion-postal", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:x01", "text": "137 ASHTREE LN", "reason": "non-spanish-text", "explicitBounds": [{ "x": 41.8, "y": 65.7, "width": 9.55, "height": 2.7 }], "rationale": "This filled street address is proper-name and alphanumeric form data rather than Spanish lexical material.", "geometryRationale": "OCR split the single address into three tokens and included the input border; this checked union box keeps it as one printed exclusion unit while isolating the characters." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:app-address", "cardId": "phrase-direccion-postal", "participantWordIds": ["es-xkcd-idea-para-un-negocio:address-field:w01", "es-xkcd-idea-para-un-negocio:address-field:w02"], "exampleEs": "DIRECCIÓN POSTAL", "explanationEn": "Dirección names the address, and postal specifies that it is used for mail." },
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-idea-para-un-negocio:address-field:w01", "es-xkcd-idea-para-un-negocio:address-field:w02"], "exampleEs": "DIRECCIÓN POSTAL", "explanationEn": "Postal follows dirección because it classifies the kind of address." },
+        { "id": "es-xkcd-idea-para-un-negocio:address-field:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-idea-para-un-negocio:address-field:w01", "es-xkcd-idea-para-un-negocio:address-field:w02"], "exampleEs": "DIRECCIÓN POSTAL", "explanationEn": "Postal is singular to agree with singular dirección; its ending does not change for feminine gender." }
+      ]
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:submit",
+      "labelEs": "SUBMIT · CLIC",
+      "explicitBounds": [{ "x": 64.4, "y": 6.2, "width": 10.5, "height": 17.2 }],
+      "geometryRationale": "This checked region contains the English button label and the Spanish-localized click sound beneath the hand pointer.",
+      "words": [
+        { "id": "es-xkcd-idea-para-un-negocio:submit:w01", "text": "CLIC", "normalized": "clic", "explicitBounds": [{ "x": 68.9, "y": 17.8, "width": 3.2, "height": 5.1 }], "geometryRationale": "OCR omitted the slanted sound effect; this checked box follows the four printed letters without covering the hand pointer.", "cardIds": ["word-clic", "concept-business-idea-retroactive-profit-form"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:submit:x01", "text": "SUBMIT", "reason": "non-spanish-text", "explicitBounds": [{ "x": 66.3, "y": 8.6, "width": 5.7, "height": 4.2 }], "rationale": "This unchanged English interface label is excluded while the localized Spanish click sound is taught.", "geometryRationale": "OCR omitted the button label; this measured source box isolates its six printed letters from the surrounding button border." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-idea-para-un-negocio:delivery-logo",
+      "labelEs": "FEDEX",
+      "explicitBounds": [{ "x": 91.5, "y": 57.5, "width": 6.8, "height": 8.0 }],
+      "geometryRationale": "This checked region isolates the company logo printed on the delivery worker's cap; the cash and crate markings are decorative strokes rather than readable units.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-idea-para-un-negocio:delivery-logo:x01", "text": "FEDEX", "reason": "non-spanish-text", "explicitBounds": [{ "x": 94.1, "y": 60.2, "width": 2.8, "height": 3.0 }], "rationale": "This stylized delivery-company name is a proper logo rather than Spanish lexical material.", "geometryRationale": "OCR omitted the small cap logo; this source-measured box isolates the stylized letters from the cap outline." }
+      ],
+      "applications": []
+    }
+  ]
+}

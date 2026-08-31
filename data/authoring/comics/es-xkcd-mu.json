@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-mu",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Mu",
+  "titleEs": "mu",
+  "titleText": {
+    "es": "Cuando µ se aproxima a 0, la productividad se hace negativa al atraer a OTRAS personas a concursos de girar en la silla.",
+    "en": "As the CoKF approaches 0, productivity goes negative as you pull OTHER people into chair-spinning contests.",
+    "noteEn": "The Spanish and English texts are the exact title attributes from the Spanish archive and official xkcd. CoKF abbreviates coefficient of kinetic friction; the Spanish title uses the conventional Greek symbol µ. Vision omitted the localized chair-spinning sound, both graph arrows, and the origin label."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-productividad",
+      "kind": "word",
+      "promptEs": "productividad",
+      "answerEn": "productivity",
+      "noteEn": "Productividad measures how much useful work or output is produced with the available time and resources.",
+      "example": { "es": "La nueva herramienta aumentó la productividad.", "en": "The new tool increased productivity." },
+      "tags": ["word", "work", "measurement", "B1"]
+    },
+    {
+      "id": "word-coeficiente",
+      "kind": "word",
+      "promptEs": "coeficiente",
+      "answerEn": "coefficient",
+      "noteEn": "In mathematics and science, a coeficiente is a number that multiplies a quantity or describes a measurable relationship.",
+      "example": { "es": "Calculamos el coeficiente de expansión.", "en": "We calculated the coefficient of expansion." },
+      "tags": ["word", "mathematics", "physics", "B2"]
+    },
+    {
+      "id": "word-ueeeeeeeee--chair-spin-sound",
+      "kind": "word",
+      "promptEs": "ueeeeeeeee",
+      "answerEn": "wheeeee!; a delighted spinning sound",
+      "noteEn": "The initial u approximates the start of the cry, and the nine written e letters show that the vowel is held for a long time. This expressive spelling is playful rather than a standard dictionary form.",
+      "example": { "es": "¡Ueeee, qué rápido!", "en": "Wheeee, how fast!" },
+      "tags": ["word", "onomatopoeia", "expressive spelling", "sound"]
+    },
+    {
+      "id": "phrase-coeficiente-de-rozamiento",
+      "kind": "phrase",
+      "promptEs": "coeficiente de rozamiento",
+      "questionEn": "What is the Spanish physics term for coefficient of friction?",
+      "answerEn": "Use coeficiente de rozamiento.",
+      "noteEn": "Rozamiento is friction between surfaces. The coefficient is a dimensionless number used in a model of that friction; it is often written with the Greek letter µ.",
+      "example": { "es": "El caucho tiene un coeficiente de rozamiento alto.", "en": "Rubber has a high coefficient of friction." },
+      "tags": ["phrase", "physics", "friction", "B2"]
+    },
+    {
+      "id": "concept-friction-coefficient-chair-spin-productivity-graph",
+      "kind": "concept",
+      "promptEs": "productividad · coeficiente de rozamiento · silla de oficina",
+      "questionEn": "What scientific convention turns the office-chair graph into a joke?",
+      "answerEn": "Physics commonly uses µ for a friction coefficient, while the graph treats chair friction as though it controlled workplace productivity.",
+      "noteEn": "Lower friction lets a swivel chair spin more freely. The curve gives that amusement a mock productivity optimum, while the title text extends the joke: as µ approaches zero, other people join chair-spinning contests and the group's productivity becomes negative.",
+      "tags": ["concept", "physics", "friction", "graph", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-mu:productivity-axis",
+      "labelEs": "PRODUCTIVIDAD ↑",
+      "explicitBounds": [{ "x": 2.5, "y": 27.2, "width": 12.3, "height": 37.8 }],
+      "geometryRationale": "The vertical word and the separate graph arrow do not share one OCR line, so this checked region box groups the complete y-axis label without including the axis itself.",
+      "words": [
+        { "id": "es-xkcd-mu:productivity-axis:w01", "text": "PRODUCTIVIDAD", "normalized": "productividad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00001" }], "cardIds": ["word-productividad", "concept-friction-coefficient-chair-spin-productivity-graph"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-mu:productivity-axis:x01", "text": "↑", "reason": "symbol", "rationale": "The vertical graph-direction arrow is a symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 10.44, "y": 32.08, "width": 3.92, "height": 27.11 }], "geometryRationale": "This source-pixel-measured box follows the standalone vertical arrow without touching the axis line or label." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-mu:chair-spin-sound",
+      "labelEs": "UEEEEEEEEE",
+      "explicitBounds": [{ "x": 33.8, "y": 29.8, "width": 26.0, "height": 5.8 }],
+      "geometryRationale": "Vision omitted the printed sound entirely, so this region uses a source-measured box.",
+      "words": [
+        { "id": "es-xkcd-mu:chair-spin-sound:w01", "text": "UEEEEEEEEE", "normalized": "ueeeeeeeee", "explicitBounds": [{ "x": 34.4648, "y": 30.5296, "width": 24.8042, "height": 4.3614 }], "geometryRationale": "Vision omitted this localized sound. The measured source box covers the printed U and all nine E letters.", "cardIds": ["word-ueeeeeeeee--chair-spin-sound", "grammar-expressive-letter-lengthening", "concept-friction-coefficient-chair-spin-productivity-graph"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-mu:chair-spin-sound:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-mu:chair-spin-sound:w01"], "exampleEs": "UEEEEEEEEE", "explanationEn": "The nine repeated E letters stretch the excited vowel in the spinning sound." }
+      ]
+    },
+    {
+      "id": "es-xkcd-mu:friction-axis",
+      "labelEs": "0 → COEFICIENTE DE ROZAMIENTO DE LA SILLA DE OFICINA",
+      "explicitBounds": [{ "x": 12.5, "y": 69.5, "width": 73.0, "height": 21.0 }],
+      "geometryRationale": "The origin, standalone arrow, and two-row caption are separate source units, so this checked region box groups the complete x-axis label without including the plotted curve.",
+      "words": [
+        { "id": "es-xkcd-mu:friction-axis:w01", "text": "COEFICIENTE", "normalized": "coeficiente", "explicitBounds": [{ "x": 24.4792, "y": 78.882, "width": 26.9531, "height": 5.45 }], "geometryRationale": "The OCR box touches the lower caption row; this slightly shorter box preserves the letters and leaves a visible gap.", "cardIds": ["word-coeficiente", "phrase-coeficiente-de-rozamiento", "concept-friction-coefficient-chair-spin-productivity-graph"] },
+        { "id": "es-xkcd-mu:friction-axis:w02", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 52.0182, "y": 78.882, "width": 5.8594, "height": 5.45 }], "geometryRationale": "The OCR box touches the lower caption row; this slightly shorter box preserves DE and leaves a visible gap.", "cardIds": ["word-de--of", "phrase-coeficiente-de-rozamiento"] },
+        { "id": "es-xkcd-mu:friction-axis:w03", "text": "ROZAMIENTO", "normalized": "rozamiento", "explicitBounds": [{ "x": 58.4635, "y": 78.882, "width": 26.4323, "height": 5.45 }], "geometryRationale": "The OCR box touches the lower caption row; this slightly shorter box preserves the letters and leaves a visible gap.", "cardIds": ["word-rozamiento", "phrase-coeficiente-de-rozamiento", "concept-friction-coefficient-chair-spin-productivity-graph"] },
+        { "id": "es-xkcd-mu:friction-axis:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00005" }], "cardIds": ["word-de--of"] },
+        { "id": "es-xkcd-mu:friction-axis:w05", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00006" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-mu:friction-axis:w06", "text": "SILLA", "normalized": "silla", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00007" }], "cardIds": ["word-silla", "concept-friction-coefficient-chair-spin-productivity-graph"] },
+        { "id": "es-xkcd-mu:friction-axis:w07", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00008" }], "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-mu:friction-axis:w08", "text": "OFICINA", "normalized": "oficina", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-mu:ocr-token-00009" }], "cardIds": ["word-oficina", "concept-friction-coefficient-chair-spin-productivity-graph"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-mu:friction-axis:x01", "text": "0", "reason": "number", "rationale": "The origin label is a numeral rather than a Spanish lexical word.", "explicitBounds": [{ "x": 13.3159, "y": 72.8972, "width": 2.0888, "height": 2.4922 }], "geometryRationale": "This source-pixel-measured box isolates the printed zero below the graph origin without including either axis line." },
+        { "id": "es-xkcd-mu:friction-axis:x02", "text": "→", "reason": "symbol", "rationale": "The horizontal graph-direction arrow is a symbol rather than a Spanish lexical word.", "explicitBounds": [{ "x": 41.7755, "y": 73.5202, "width": 22.4543, "height": 2.1807 }], "geometryRationale": "This source-pixel-measured box follows the standalone horizontal arrow below the axis without touching the axis or caption." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-mu:friction-axis:app-coefficient", "cardId": "phrase-coeficiente-de-rozamiento", "participantWordIds": ["es-xkcd-mu:friction-axis:w01", "es-xkcd-mu:friction-axis:w02", "es-xkcd-mu:friction-axis:w03"], "exampleEs": "COEFICIENTE DE ROZAMIENTO", "explanationEn": "Coeficiente names the measured factor, and de rozamiento identifies it specifically as a friction coefficient." }
+      ]
+    }
+  ]
+}
