@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-klout",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Klout",
+  "titleEs": "Klout",
+  "titleText": {
+    "es": "Pero, por favor, confirma que soy realmente *yo* el que está en Klout, y no ninguno de mis amigos intentando que me den un puñetazo. Lo bueno de este pedal de hombre muerto es que nunca me atreveré a activarlo.",
+    "en": "Though please do confirm that it's actually *me* on Klout first, and not one of my friends trying to get me punched. The great thing about this douchebag deadman switch is that I will never dare trigger it.",
+    "noteEn": "The Spanish archive and official xkcd #1057 title attributes are preserved exactly. KLOUT is the unchanged service name and is audited as non-Spanish text. The raster wraps PEDIR- / TE as one lexical word PEDIRTE; its line-wrap hyphen is punctuation. OCR dropped many initial letters, including those in QUIERO, MOMENTO, FUTURO, ENCONTRAMOS, IGNORA, RETRACTACIÓN, and the request rows, so the authored transcript and direct bounds follow the raster rather than the recognized strings."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-pedirte--ask-you",
+      "kind": "word",
+      "promptEs": "pedirte",
+      "answerEn": "to ask you for; to request from you",
+      "noteEn": "Pedirte combines pedir, 'to ask for,' with te, which marks one familiar person as the person being asked. Te is attached because pedir is in its unchanged dictionary form.",
+      "example": { "es": "Quiero pedirte un consejo.", "en": "I want to ask you for some advice." },
+      "tags": ["word", "pedir", "attached pronoun", "A2"]
+    },
+    {
+      "id": "word-encontramos--meet",
+      "kind": "word",
+      "promptEs": "encontramos",
+      "answerEn": "we meet; we encounter",
+      "noteEn": "Encontramos is the present form of encontrar for nosotros. With nos before it, nos encontramos can mean 'we meet each other.'",
+      "example": { "es": "Nos encontramos en la estación.", "en": "We meet at the station." },
+      "tags": ["word", "verb", "present", "A2"]
+    },
+    {
+      "id": "word-interactuado",
+      "kind": "word",
+      "promptEs": "interactuado",
+      "answerEn": "interacted",
+      "noteEn": "Interactuado is the completed-action form of interactuar. It follows a form of haber, such as he, to say that an interaction has happened.",
+      "example": { "es": "He interactuado con el sistema.", "en": "I have interacted with the system." },
+      "tags": ["word", "verb", "participle", "B1"]
+    },
+    { "id": "word-con--interactuar-complement", "kind": "word", "promptEs": "con", "answerEn": "with; required before what someone interacts with", "noteEn": "Interactuar normally uses con before the person, system, or thing involved in the interaction.", "example": { "es": "Interactuamos con otros equipos.", "en": "We interact with other teams." }, "tags": ["word", "preposition", "interactuar", "B1"] },
+    {
+      "id": "word-borrarme--remove-myself-from-service",
+      "kind": "word",
+      "promptEs": "borrarme",
+      "answerEn": "to remove myself; to delete my account or entry",
+      "noteEn": "Borrarme combines borrar with me. In a service or list context, it can mean removing one's own account, registration, or entry rather than literally erasing one's body.",
+      "example": { "es": "Decidí borrarme de la lista.", "en": "I decided to remove myself from the list." },
+      "tags": ["word", "pronominal verb", "technology", "B1"]
+    },
+    {
+      "id": "word-des--give-subjunctive",
+      "kind": "word",
+      "promptEs": "des",
+      "answerEn": "you give (special requested-action form)",
+      "noteEn": "Des is a special form of dar for one familiar listener. It appears after expressions of wanting, requesting, doubt, or possibility when the giving is not stated as a fact.",
+      "example": { "es": "Quiero que me des una respuesta.", "en": "I want you to give me an answer." },
+      "tags": ["word", "dar", "subjunctive", "tú", "B1"]
+    },
+    { "id": "word-avisar", "kind": "word", "promptEs": "avisar", "answerEn": "to warn; to give notice", "noteEn": "Avisar means making someone aware beforehand or notifying them.", "example": { "es": "Debes avisar antes de entrar.", "en": "You should warn us before entering." }, "tags": ["word", "verb", "communication", "A2"] },
+    { "id": "word-aclaro--clarify", "kind": "word", "promptEs": "aclaro", "answerEn": "I clarify; let me make clear", "noteEn": "Aclaro is the present form of aclarar for the speaker. It often introduces a point meant to remove a possible misunderstanding.", "example": { "es": "Aclaro que no fue una crítica.", "en": "I clarify that it was not a criticism." }, "tags": ["word", "verb", "discourse", "B1"] },
+    {
+      "id": "word-ignora--command",
+      "kind": "word",
+      "promptEs": "ignora",
+      "answerEn": "ignore! (informal singular command)",
+      "noteEn": "Ignora is the affirmative command of ignorar for one familiar listener. The same spelling can also mean 'he, she, or it ignores,' so the surrounding instruction identifies the command.",
+      "example": { "es": "Ignora ese mensaje.", "en": "Ignore that message." },
+      "tags": ["word", "command", "tú", "A2"]
+    },
+    { "id": "word-retractación", "kind": "word", "promptEs": "retractación", "answerEn": "retraction; withdrawal of a statement", "noteEn": "Una retractación is a later statement taking back or disowning an earlier claim, instruction, or accusation.", "example": { "es": "El periódico publicó una retractación.", "en": "The newspaper published a retraction." }, "tags": ["word", "statement", "B2"] },
+    {
+      "id": "phrase-pedir-un-favor-a-alguien",
+      "kind": "phrase",
+      "promptEs": "pedirle un favor a alguien",
+      "questionEn": "How do you say that someone asks another person for a favor?",
+      "answerEn": "Use a matching form of pedir, mark the person being asked with me, te, le, nos, os, or les, and add un favor.",
+      "noteEn": "Pedir changes for the person and time. The short word marks who receives the request: te pido or pedirte for one familiar person, for example. Favor names the requested act of help.",
+      "example": { "es": "Voy a pedirle un favor a Marta.", "en": "I am going to ask Marta for a favor." },
+      "tags": ["phrase", "request", "recipient", "A2"]
+    },
+    {
+      "id": "phrase-interactuar-con",
+      "kind": "phrase",
+      "promptEs": "interactuar con alguien o algo",
+      "questionEn": "How do you name the person, system, or thing that someone interacts with?",
+      "answerEn": "Use a matching form of interactuar, then con, then name the other participant.",
+      "noteEn": "Interactuar changes for the person and time. Con is the required link to the other person or thing involved; English also normally uses 'with.'",
+      "example": { "es": "Los clientes interactúan con la aplicación.", "en": "The customers interact with the application." },
+      "tags": ["phrase", "interactuar", "preposition", "B1"]
+    },
+    {
+      "id": "grammar-querer-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "querer que + otra persona + subjuntivo",
+      "questionEn": "How do you say that one person wants another person to do something?",
+      "answerEn": "Use a matching form of querer, then que, then put the other person's action in its special wanted-action form.",
+      "noteEn": "The special form is called the subjunctive. It appears because the second action is wanted, not stated as a fact. For example, ordinary tú das becomes quiero que tú des. If the same person wants to act, Spanish instead uses querer plus the unchanged dictionary form: quiero salir.",
+      "example": { "es": "Quiero que Ana venga mañana.", "en": "I want Ana to come tomorrow." },
+      "tags": ["grammar", "querer", "subjunctive", "B1"]
+    },
+    {
+      "id": "grammar-relative-subjunctive-nonspecific",
+      "kind": "grammar",
+      "promptEs": "persona o cosa no identificada + que + subjuntivo",
+      "questionEn": "How do you describe a person or thing whose existence or identity is not being treated as known?",
+      "answerEn": "Name the nonspecific person or thing, add que, and put the describing action in its special non-factual form.",
+      "noteEn": "That special form is called the subjunctive. It is useful after expressions such as cualquier or otra cosa when the speaker is not pointing to one established example. Compare busco un libro que explica esto, which describes a known book, with busco un libro que explique esto, where any suitable book would do.",
+      "example": { "es": "Necesito a alguien que sepa francés.", "en": "I need someone who knows French." },
+      "tags": ["grammar", "relative clause", "subjunctive", "B1"]
+    },
+    {
+      "id": "concept-klout-deadman-switch-punch",
+      "kind": "concept",
+      "promptEs": "Klout · interactuado · borrarme · puñetazo · retractación",
+      "questionEn": "Why does the future punch request work like a deliberately self-hostile dead man's switch?",
+      "answerEn": "The speaker asks to be punched if he ever uses Klout for anything except removing himself, and he orders his friend to ignore any later attempt to cancel the instruction.",
+      "noteEn": "Klout was a service that assigned public social-influence scores. The speaker treats using it as shameful enough to justify a future punishment. A dead man's switch normally triggers when its operator stops actively preventing it; the title text jokingly applies that idea to a standing anti-Klout instruction that the speaker's future self cannot safely revoke, because every retraction must be ignored.",
+      "tags": ["concept", "Klout", "social media", "dead man's switch", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-klout:favor-request",
+      "labelEs": "QUIERO PEDIRTE UN FAVOR.",
+      "explicitBounds": [{ "x": 1.4, "y": 2.7, "width": 20.5, "height": 8.3 }],
+      "geometryRationale": "This checked region covers the separate two-line favor request and its own speech tail in the first panel.",
+      "words": [
+        { "id": "es-xkcd-klout:favor-request:w01", "text": "QUIERO", "normalized": "quiero", "explicitBounds": [{ "x": 1.7, "y": 3.55, "width": 9.25, "height": 3.4 }], "geometryRationale": "Vision omitted the first two letters; this measured box covers the complete printed word on the first row.", "cardIds": ["word-quiero"] },
+        { "id": "es-xkcd-klout:favor-request:w02", "text": "PEDIRTE", "normalized": "pedirte", "explicitBounds": [{ "x": 11.15, "y": 3.55, "width": 10.2, "height": 3.4 }, { "x": 1.75, "y": 7.1, "width": 3.35, "height": 3.35 }], "geometryRationale": "Two row-tight boxes join the printed wrap PEDIR-/TE as one lexical word while leaving the line-wrap hyphen outside the hotspot.", "cardIds": ["word-pedirte--ask-you", "grammar-pronoun-attached-to-infinitive", "phrase-pedir-un-favor-a-alguien"] },
+        { "id": "es-xkcd-klout:favor-request:w03", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 5.75, "y": 7.1, "width": 3.65, "height": 3.35 }], "geometryRationale": "Vision omitted this word; the measured box isolates it between TE and FAVOR.", "cardIds": ["word-un", "phrase-pedir-un-favor-a-alguien"] },
+        { "id": "es-xkcd-klout:favor-request:w04", "text": "FAVOR", "normalized": "favor", "explicitBounds": [{ "x": 10.15, "y": 7.1, "width": 9.85, "height": 3.35 }], "geometryRationale": "The measured row-tight box covers FAVOR and stops before its period.", "cardIds": ["word-favor", "phrase-pedir-un-favor-a-alguien"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:favor-request:app-attached-te", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-klout:favor-request:w02"], "exampleEs": "PEDIRTE", "explanationEn": "Te is attached to the dictionary form pedir and identifies one familiar person as the person being asked." },
+        { "id": "es-xkcd-klout:favor-request:app-favor", "cardId": "phrase-pedir-un-favor-a-alguien", "participantWordIds": ["es-xkcd-klout:favor-request:w02", "es-xkcd-klout:favor-request:w03", "es-xkcd-klout:favor-request:w04"], "exampleEs": "PEDIRTE UN FAVOR", "explanationEn": "Pedirte combines the request action with the familiar recipient marker te, and un favor names the requested help." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:future-meeting",
+      "labelEs": "SI EN ALGÚN MOMENTO DEL FUTURO NOS ENCONTRAMOS",
+      "explicitBounds": [{ "x": 1.2, "y": 17.7, "width": 20.4, "height": 17.1 }],
+      "geometryRationale": "This checked region covers the separate four-line future condition and its speech tail in the first panel.",
+      "words": [
+        { "id": "es-xkcd-klout:future-meeting:w01", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 1.7, "y": 18.44, "width": 3.15, "height": 3.35 }], "geometryRationale": "The measured row-tight box isolates the first condition word.", "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:future-meeting:w02", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 5.3, "y": 18.44, "width": 3.45, "height": 3.35 }], "geometryRationale": "The row-tight measured box isolates EN.", "cardIds": ["word-en--fixed-en-algun-momento", "grammar-si-present-real-condition", "phrase-en-algun-momento"] },
+        { "id": "es-xkcd-klout:future-meeting:w03", "text": "ALGÚN", "normalized": "algún", "explicitBounds": [{ "x": 9.65, "y": 18.44, "width": 10.35, "height": 3.35 }], "geometryRationale": "The measured box covers the complete accented word that OCR rendered without its accent.", "cardIds": ["word-algún", "grammar-si-present-real-condition", "phrase-en-algun-momento"] },
+        { "id": "es-xkcd-klout:future-meeting:w04", "text": "MOMENTO", "normalized": "momento", "explicitBounds": [{ "x": 1.65, "y": 21.99, "width": 10.95, "height": 3.3 }], "geometryRationale": "Vision dropped the initial M; this measured box covers the complete printed word.", "cardIds": ["word-momento", "grammar-si-present-real-condition", "phrase-en-algun-momento"] },
+        { "id": "es-xkcd-klout:future-meeting:w05", "text": "DEL", "normalized": "del", "explicitBounds": [{ "x": 12.95, "y": 21.99, "width": 6.3, "height": 3.3 }], "geometryRationale": "The row-tight measured box isolates DEL.", "cardIds": ["word-del--of-the", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:future-meeting:w06", "text": "FUTURO", "normalized": "futuro", "explicitBounds": [{ "x": 1.55, "y": 26.19, "width": 10.6, "height": 3.35 }], "geometryRationale": "Vision dropped the initial F; this measured box covers the complete printed word.", "cardIds": ["word-futuro", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:future-meeting:w07", "text": "NOS", "normalized": "nos", "explicitBounds": [{ "x": 12.4, "y": 26.19, "width": 6.7, "height": 3.35 }], "geometryRationale": "The row-tight measured box isolates NOS.", "cardIds": ["word-nos--reciprocal", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:future-meeting:w08", "text": "ENCONTRAMOS", "normalized": "encontramos", "explicitBounds": [{ "x": 1.55, "y": 30.5, "width": 19.9, "height": 3.45 }], "geometryRationale": "Vision split and dropped letters from ENCONTRAMOS; one measured box covers the complete printed word.", "cardIds": ["word-encontramos--meet", "grammar-si-present-real-condition"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:future-meeting:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-klout:future-meeting:w01", "es-xkcd-klout:future-meeting:w02", "es-xkcd-klout:future-meeting:w03", "es-xkcd-klout:future-meeting:w04", "es-xkcd-klout:future-meeting:w05", "es-xkcd-klout:future-meeting:w06", "es-xkcd-klout:future-meeting:w07", "es-xkcd-klout:future-meeting:w08"], "exampleEs": "SI EN ALGÚN MOMENTO DEL FUTURO NOS ENCONTRAMOS", "explanationEn": "Si introduces this genuinely possible future condition, the middle words locate the possible meeting in time, and nos encontramos remains in the ordinary present form." },
+        { "id": "es-xkcd-klout:future-meeting:app-sometime", "cardId": "phrase-en-algun-momento", "participantWordIds": ["es-xkcd-klout:future-meeting:w02", "es-xkcd-klout:future-meeting:w03", "es-xkcd-klout:future-meeting:w04"], "exampleEs": "EN ALGÚN MOMENTO", "explanationEn": "En, algún, and momento form the fixed time expression for an unspecified point." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:klout-condition",
+      "labelEs": "Y SI, EN ESE MOMENTO, HE INTERACTUADO CON KLOUT PARA OTRA COSA QUE NO SEA BORRARME,",
+      "explicitBounds": [{ "x": 24.6, "y": 2.2, "width": 37.7, "height": 20.5 }],
+      "geometryRationale": "This checked region covers the upper four-line condition in the second panel and its separate speech tail.",
+      "words": [
+        { "id": "es-xkcd-klout:klout-condition:w01", "text": "Y", "normalized": "y", "explicitBounds": [{ "x": 25.3, "y": 2.84, "width": 2.35, "height": 3.95 }], "geometryRationale": "Vision grouped this initial conjunction outside the detected line; the measured box isolates it.", "cardIds": ["word-y"] },
+        { "id": "es-xkcd-klout:klout-condition:w02", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 28.18, "y": 2.84, "width": 3.98, "height": 3.95 }], "geometryRationale": "The row-tight box isolates SI.", "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:klout-condition:w03", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 32.56, "y": 2.84, "width": 3.98, "height": 3.95 }], "geometryRationale": "The row-tight box isolates EN.", "cardIds": ["word-en--time-point"] },
+        { "id": "es-xkcd-klout:klout-condition:w04", "text": "ESE", "normalized": "ese", "explicitBounds": [{ "x": 36.93, "y": 2.84, "width": 5.57, "height": 3.95 }], "geometryRationale": "The row-tight box isolates ESE.", "cardIds": ["word-ese--demonstrative"] },
+        { "id": "es-xkcd-klout:klout-condition:w05", "text": "MOMENTO", "normalized": "momento", "explicitBounds": [{ "x": 42.9, "y": 2.84, "width": 15.11, "height": 3.95 }], "geometryRationale": "The row-tight box isolates MOMENTO.", "cardIds": ["word-momento"] },
+        { "id": "es-xkcd-klout:klout-condition:w06", "text": "HE", "normalized": "he", "explicitBounds": [{ "x": 58.41, "y": 2.84, "width": 3.41, "height": 3.95 }], "geometryRationale": "The row-tight box isolates HE.", "cardIds": ["word-he", "grammar-si-present-real-condition", "grammar-present-perfect"] },
+        { "id": "es-xkcd-klout:klout-condition:w07", "text": "INTERACTUADO", "normalized": "interactuado", "explicitBounds": [{ "x": 27.73, "y": 7.09, "width": 17.73, "height": 3.95 }], "geometryRationale": "The checked OCR box covers the complete word that Vision misread as ITERACTUADO and stops above the next row.", "cardIds": ["word-interactuado", "grammar-si-present-real-condition", "grammar-present-perfect", "phrase-interactuar-con", "concept-klout-deadman-switch-punch"] },
+        { "id": "es-xkcd-klout:klout-condition:w08", "text": "CON", "normalized": "con", "explicitBounds": [{ "x": 45.91, "y": 7.09, "width": 5.91, "height": 3.95 }], "geometryRationale": "The row-tight box isolates CON.", "cardIds": ["word-con--interactuar-complement", "phrase-interactuar-con"] },
+        { "id": "es-xkcd-klout:klout-condition:w09", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 25.0, "y": 11.35, "width": 7.56, "height": 3.95 }], "geometryRationale": "The row-tight box isolates PARA.", "cardIds": ["word-para--for-purpose-noun"] },
+        { "id": "es-xkcd-klout:klout-condition:w10", "text": "OTRA", "normalized": "otra", "explicitBounds": [{ "x": 32.95, "y": 11.35, "width": 7.96, "height": 3.95 }], "geometryRationale": "The row-tight box isolates OTRA.", "cardIds": ["word-otra", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:klout-condition:w11", "text": "COSA", "normalized": "cosa", "explicitBounds": [{ "x": 41.31, "y": 11.35, "width": 7.56, "height": 3.95 }], "geometryRationale": "The row-tight box isolates COSA.", "cardIds": ["word-cosa", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:klout-condition:w12", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 49.26, "y": 11.35, "width": 5.57, "height": 3.95 }], "geometryRationale": "The row-tight box isolates QUE.", "cardIds": ["word-que--relative", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:klout-condition:w13", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 55.23, "y": 11.35, "width": 4.32, "height": 3.95 }], "geometryRationale": "The row-tight box isolates NO.", "cardIds": ["word-no", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:klout-condition:w14", "text": "SEA", "normalized": "sea", "explicitBounds": [{ "x": 24.97, "y": 16.02, "width": 5.52, "height": 4.7 }], "geometryRationale": "The final-row checked box isolates SEA.", "cardIds": ["word-sea--subjunctive-ser", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:klout-condition:w15", "text": "BORRARME", "normalized": "borrarme", "explicitBounds": [{ "x": 30.88, "y": 16.18, "width": 15.97, "height": 4.7 }], "geometryRationale": "The final-row checked box stops before the comma.", "cardIds": ["word-borrarme--remove-myself-from-service", "grammar-infinitive-attached-pronominal-marker", "concept-klout-deadman-switch-punch"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-klout:klout-condition:x01", "text": "KLOUT", "reason": "non-spanish-text", "rationale": "Klout is the unchanged proper name of the online influence-scoring service, not Spanish lexical vocabulary.", "explicitBounds": [{ "x": 52.27, "y": 7.09, "width": 9.55, "height": 3.95 }], "geometryRationale": "The row-tight checked box isolates the printed service name between CON and PARA." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-klout:klout-condition:app-real-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-klout:klout-condition:w02", "es-xkcd-klout:klout-condition:w06", "es-xkcd-klout:klout-condition:w07"], "exampleEs": "SI, EN ESE MOMENTO, HE INTERACTUADO", "explanationEn": "Si introduces a possible future condition; he is the present helper and interactuado completes the present-perfect verb inside that condition." },
+        { "id": "es-xkcd-klout:klout-condition:app-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-klout:klout-condition:w06", "es-xkcd-klout:klout-condition:w07"], "exampleEs": "HE INTERACTUADO", "explanationEn": "He is the first-person present helper and interactuado is the unchanged completed-action form." },
+        { "id": "es-xkcd-klout:klout-condition:app-interact", "cardId": "phrase-interactuar-con", "participantWordIds": ["es-xkcd-klout:klout-condition:w07", "es-xkcd-klout:klout-condition:w08"], "exampleEs": "INTERACTUADO CON KLOUT", "explanationEn": "Interactuado supplies the completed interaction action, and con introduces the service involved." },
+        { "id": "es-xkcd-klout:klout-condition:app-nonspecific", "cardId": "grammar-relative-subjunctive-nonspecific", "participantWordIds": ["es-xkcd-klout:klout-condition:w10", "es-xkcd-klout:klout-condition:w11", "es-xkcd-klout:klout-condition:w12", "es-xkcd-klout:klout-condition:w13", "es-xkcd-klout:klout-condition:w14"], "exampleEs": "OTRA COSA QUE NO SEA", "explanationEn": "Otra cosa leaves the alternative unspecified, que begins its description, and no sea uses the special non-factual form because no established alternative is being identified." },
+        { "id": "es-xkcd-klout:klout-condition:app-borrarme-marker", "cardId": "grammar-infinitive-attached-pronominal-marker", "participantWordIds": ["es-xkcd-klout:klout-condition:w15"], "exampleEs": "BORRARME", "explanationEn": "Me is attached to borrar to mark the speaker as the person removing his own entry or account." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:punch-request",
+      "labelEs": "QUIERO QUE ME DES UN PUÑETAZO EN LA CARA, SIN AVISAR.",
+      "explicitBounds": [{ "x": 24.4, "y": 30.3, "width": 30.3, "height": 20.1 }],
+      "geometryRationale": "This checked region covers the separate four-line punch request and its speech tail in the second panel.",
+      "words": [
+        { "id": "es-xkcd-klout:punch-request:w01", "text": "QUIERO", "normalized": "quiero", "explicitBounds": [{ "x": 25.25, "y": 31.21, "width": 9.75, "height": 3.95 }], "geometryRationale": "Vision omitted the first letters; the measured row-tight box covers the complete printed word.", "cardIds": ["word-quiero", "grammar-querer-que-subjunctive"] },
+        { "id": "es-xkcd-klout:punch-request:w02", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 35.3, "y": 31.21, "width": 6.4, "height": 3.95 }], "geometryRationale": "The row-tight measured box isolates QUE.", "cardIds": ["word-que--clause-link", "grammar-querer-que-subjunctive"] },
+        { "id": "es-xkcd-klout:punch-request:w03", "text": "ME", "normalized": "me", "explicitBounds": [{ "x": 42.05, "y": 31.21, "width": 5.0, "height": 3.95 }], "geometryRationale": "The row-tight measured box isolates ME.", "cardIds": ["word-me--indirect", "phrase-dar-un-punetazo-a-alguien"] },
+        { "id": "es-xkcd-klout:punch-request:w04", "text": "DES", "normalized": "des", "explicitBounds": [{ "x": 25.0, "y": 35.46, "width": 7.27, "height": 4.5 }], "geometryRationale": "The measured row-tight box aligns DES with the other words on the same printed row.", "cardIds": ["word-des--give-subjunctive", "grammar-querer-que-subjunctive", "phrase-dar-un-punetazo-a-alguien"] },
+        { "id": "es-xkcd-klout:punch-request:w05", "text": "UN", "normalized": "un", "explicitBounds": [{ "x": 32.65, "y": 35.46, "width": 4.15, "height": 4.5 }], "geometryRationale": "Vision reduced this word to a single V-like token; the measured box covers both printed letters.", "cardIds": ["word-un", "phrase-dar-un-punetazo-a-alguien"] },
+        { "id": "es-xkcd-klout:punch-request:w06", "text": "PUÑETAZO", "normalized": "puñetazo", "explicitBounds": [{ "x": 37.27, "y": 35.46, "width": 16.82, "height": 4.5 }], "geometryRationale": "The row-tight checked box preserves Ñ and isolates the word.", "cardIds": ["word-puñetazo", "phrase-dar-un-punetazo-a-alguien", "concept-klout-deadman-switch-punch"] },
+        { "id": "es-xkcd-klout:punch-request:w07", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 28.18, "y": 41.1, "width": 1.72, "height": 3.8 }], "geometryRationale": "The narrow source-checked box covers the two compact printed letters without touching LA.", "cardIds": ["word-en"] },
+        { "id": "es-xkcd-klout:punch-request:w08", "text": "LA", "normalized": "la", "explicitBounds": [{ "x": 30.31, "y": 41.1, "width": 4.7, "height": 3.8 }], "geometryRationale": "The row-tight box isolates LA.", "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-klout:punch-request:w09", "text": "CARA", "normalized": "cara", "explicitBounds": [{ "x": 35.42, "y": 41.1, "width": 10.04, "height": 3.8 }], "geometryRationale": "The row-tight box stops before the comma.", "cardIds": ["word-cara"] },
+        { "id": "es-xkcd-klout:punch-request:w10", "text": "SIN", "normalized": "sin", "explicitBounds": [{ "x": 28.18, "y": 45.36, "width": 2.57, "height": 4.0 }], "geometryRationale": "The compact measured box covers the complete three-letter word that Vision reduced to N.", "cardIds": ["word-sin", "grammar-sin-infinitive"] },
+        { "id": "es-xkcd-klout:punch-request:w11", "text": "AVISAR", "normalized": "avisar", "explicitBounds": [{ "x": 31.16, "y": 45.36, "width": 12.03, "height": 4.0 }], "geometryRationale": "The final-row box stops before the period.", "cardIds": ["word-avisar", "grammar-sin-infinitive"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:punch-request:app-want", "cardId": "grammar-querer-que-subjunctive", "participantWordIds": ["es-xkcd-klout:punch-request:w01", "es-xkcd-klout:punch-request:w02", "es-xkcd-klout:punch-request:w04"], "exampleEs": "QUIERO QUE ME DES", "explanationEn": "Quiero que introduces an action wanted from another person, and des is the special wanted-action form of dar for one familiar listener." },
+        { "id": "es-xkcd-klout:punch-request:app-punch", "cardId": "phrase-dar-un-punetazo-a-alguien", "participantWordIds": ["es-xkcd-klout:punch-request:w03", "es-xkcd-klout:punch-request:w04", "es-xkcd-klout:punch-request:w05", "es-xkcd-klout:punch-request:w06"], "exampleEs": "ME DES UN PUÑETAZO", "explanationEn": "Me marks the recipient, des supplies the requested form of dar, and un puñetazo names the blow." },
+        { "id": "es-xkcd-klout:punch-request:app-without-warning", "cardId": "grammar-sin-infinitive", "participantWordIds": ["es-xkcd-klout:punch-request:w10", "es-xkcd-klout:punch-request:w11"], "exampleEs": "SIN AVISAR", "explanationEn": "Sin is followed directly by the unchanged dictionary form avisar to describe the action that is not done." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:clarification",
+      "labelEs": "SI ESTO TE SUENA A BROMA, ACLARO:",
+      "explicitBounds": [{ "x": 66.4, "y": 2.5, "width": 24.3, "height": 9.5 }],
+      "geometryRationale": "OCR omitted this separate two-line statement; the checked region follows its printed rows in the third panel.",
+      "words": [
+        { "id": "es-xkcd-klout:clarification:w01", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 67.0, "y": 3.0, "width": 3.1, "height": 3.7 }], "geometryRationale": "Measured directly from the omitted first row.", "cardIds": ["word-si", "grammar-si-present-real-condition"] },
+        { "id": "es-xkcd-klout:clarification:w02", "text": "ESTO", "normalized": "esto", "explicitBounds": [{ "x": 70.45, "y": 3.0, "width": 5.7, "height": 3.7 }], "geometryRationale": "Measured directly from the omitted first row.", "cardIds": ["word-esto"] },
+        { "id": "es-xkcd-klout:clarification:w03", "text": "TE", "normalized": "te", "explicitBounds": [{ "x": 76.55, "y": 3.0, "width": 2.75, "height": 3.7 }], "geometryRationale": "Measured directly from the omitted first row.", "cardIds": ["word-te--indirect"] },
+        { "id": "es-xkcd-klout:clarification:w04", "text": "SUENA", "normalized": "suena", "explicitBounds": [{ "x": 79.55, "y": 3.0, "width": 6.85, "height": 3.7 }], "geometryRationale": "Measured directly from the omitted first row.", "cardIds": ["word-suena--sounds-like", "grammar-si-present-real-condition", "phrase-sonar-a"] },
+        { "id": "es-xkcd-klout:clarification:w05", "text": "A", "normalized": "a", "explicitBounds": [{ "x": 87.0, "y": 3.0, "width": 2.1, "height": 3.7 }], "geometryRationale": "Measured directly from the omitted first row.", "cardIds": ["word-a--sonar-complement", "phrase-sonar-a"] },
+        { "id": "es-xkcd-klout:clarification:w06", "text": "BROMA", "normalized": "broma", "explicitBounds": [{ "x": 67.0, "y": 7.15, "width": 7.5, "height": 3.65 }], "geometryRationale": "Measured directly from the omitted second row and stopped before the comma.", "cardIds": ["word-broma--joke-noun", "phrase-sonar-a"] },
+        { "id": "es-xkcd-klout:clarification:w07", "text": "ACLARO", "normalized": "aclaro", "explicitBounds": [{ "x": 75.05, "y": 7.15, "width": 9.2, "height": 3.65 }], "geometryRationale": "Measured directly from the omitted second row and stopped before the colon.", "cardIds": ["word-aclaro--clarify"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:clarification:app-condition", "cardId": "grammar-si-present-real-condition", "participantWordIds": ["es-xkcd-klout:clarification:w01", "es-xkcd-klout:clarification:w04"], "exampleEs": "SI ESTO TE SUENA", "explanationEn": "Si introduces the possible interpretation, and suena stays in the ordinary present form; esto and te name what creates the impression and for whom." },
+        { "id": "es-xkcd-klout:clarification:app-sounds-like", "cardId": "phrase-sonar-a", "participantWordIds": ["es-xkcd-klout:clarification:w04", "es-xkcd-klout:clarification:w05", "es-xkcd-klout:clarification:w06"], "exampleEs": "SUENA A BROMA", "explanationEn": "Suena supplies the impression, a is the required link, and broma names what it resembles." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:serious",
+      "labelEs": "VA EN SERIO.",
+      "explicitBounds": [{ "x": 66.0, "y": 17.3, "width": 19.8, "height": 7.2 }],
+      "geometryRationale": "This checked region covers the separate emphatic statement and its own speech tail.",
+      "words": [
+        { "id": "es-xkcd-klout:serious:w01", "text": "VA", "normalized": "va", "explicitBounds": [{ "x": 66.36, "y": 17.75, "width": 4.62, "height": 4.9 }], "geometryRationale": "The checked source box isolates VA.", "cardIds": ["word-va--serious-intent"] },
+        { "id": "es-xkcd-klout:serious:w02", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 71.47, "y": 17.73, "width": 4.11, "height": 4.9 }], "geometryRationale": "The checked source box isolates EN.", "cardIds": ["word-en--fixed-en-serio", "phrase-en-serio"] },
+        { "id": "es-xkcd-klout:serious:w03", "text": "SERIO", "normalized": "serio", "explicitBounds": [{ "x": 76.07, "y": 17.67, "width": 9.39, "height": 4.9 }], "geometryRationale": "The checked source box stops before the period.", "cardIds": ["word-serio", "phrase-en-serio"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:serious:app-en-serio", "cardId": "phrase-en-serio", "participantWordIds": ["es-xkcd-klout:serious:w02", "es-xkcd-klout:serious:w03"], "exampleEs": "EN SERIO", "explanationEn": "En and serio form the fixed expression that marks the preceding statement as genuine rather than a joke." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:ignore-retraction",
+      "labelEs": "IGNORA CUALQUIER RETRACTACIÓN QUE PUEDA HACER.",
+      "explicitBounds": [{ "x": 66.2, "y": 27.8, "width": 29.3, "height": 14.8 }],
+      "geometryRationale": "This checked region covers the separate three-line instruction and its speech tail in the third panel.",
+      "words": [
+        { "id": "es-xkcd-klout:ignore-retraction:w01", "text": "IGNORA", "normalized": "ignora", "explicitBounds": [{ "x": 68.1, "y": 28.37, "width": 9.3, "height": 3.9 }], "geometryRationale": "Vision dropped the initial letters; the measured row-tight box covers the complete printed command.", "cardIds": ["word-ignora--command", "grammar-affirmative-tu-command", "concept-klout-deadman-switch-punch"] },
+        { "id": "es-xkcd-klout:ignore-retraction:w02", "text": "CUALQUIER", "normalized": "cualquier", "explicitBounds": [{ "x": 77.78, "y": 28.37, "width": 15.85, "height": 3.9 }], "geometryRationale": "The row-tight box isolates CUALQUIER.", "cardIds": ["word-cualquier", "grammar-cualquier-sustantivo-singular", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:ignore-retraction:w03", "text": "RETRACTACIÓN", "normalized": "retractación", "explicitBounds": [{ "x": 68.1, "y": 32.62, "width": 20.42, "height": 3.9 }], "geometryRationale": "Vision dropped the initial R; the measured row-tight box covers the complete accented word.", "cardIds": ["word-retractación", "grammar-cualquier-sustantivo-singular", "grammar-relative-subjunctive-nonspecific", "concept-klout-deadman-switch-punch"] },
+        { "id": "es-xkcd-klout:ignore-retraction:w04", "text": "QUE", "normalized": "que", "explicitBounds": [{ "x": 88.92, "y": 32.62, "width": 6.08, "height": 3.9 }], "geometryRationale": "The row-tight box isolates QUE.", "cardIds": ["word-que--relative", "grammar-relative-subjunctive-nonspecific"] },
+        { "id": "es-xkcd-klout:ignore-retraction:w05", "text": "PUEDA", "normalized": "pueda", "explicitBounds": [{ "x": 66.82, "y": 37.59, "width": 8.86, "height": 3.85 }], "geometryRationale": "The final-row box isolates PUEDA.", "cardIds": ["word-pueda--passive-possibility", "grammar-relative-subjunctive-nonspecific", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-klout:ignore-retraction:w06", "text": "HACER", "normalized": "hacer", "explicitBounds": [{ "x": 76.02, "y": 37.59, "width": 10.34, "height": 3.85 }], "geometryRationale": "The final-row box stops before the period.", "cardIds": ["word-hacer--do", "grammar-poder-infinitive"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-klout:ignore-retraction:app-command", "cardId": "grammar-affirmative-tu-command", "participantWordIds": ["es-xkcd-klout:ignore-retraction:w01"], "exampleEs": "IGNORA", "explanationEn": "Ignora is the affirmative tú command for one familiar listener." },
+        { "id": "es-xkcd-klout:ignore-retraction:app-any", "cardId": "grammar-cualquier-sustantivo-singular", "participantWordIds": ["es-xkcd-klout:ignore-retraction:w02", "es-xkcd-klout:ignore-retraction:w03"], "exampleEs": "CUALQUIER RETRACTACIÓN", "explanationEn": "Cualquier comes before the singular noun retractación to leave the possible retraction unspecified." },
+        { "id": "es-xkcd-klout:ignore-retraction:app-nonspecific", "cardId": "grammar-relative-subjunctive-nonspecific", "participantWordIds": ["es-xkcd-klout:ignore-retraction:w02", "es-xkcd-klout:ignore-retraction:w03", "es-xkcd-klout:ignore-retraction:w04", "es-xkcd-klout:ignore-retraction:w05"], "exampleEs": "CUALQUIER RETRACTACIÓN QUE PUEDA", "explanationEn": "Cualquier retractación does not identify one known retraction, que begins its description, and pueda uses the special non-factual form for a merely possible one." },
+        { "id": "es-xkcd-klout:ignore-retraction:app-can-do", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-klout:ignore-retraction:w05", "es-xkcd-klout:ignore-retraction:w06"], "exampleEs": "PUEDA HACER", "explanationEn": "Pueda carries the person and possibility form, while hacer remains in its unchanged dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-klout:thanks",
+      "labelEs": "GRACIAS.",
+      "explicitBounds": [{ "x": 65.9, "y": 51.2, "width": 12.8, "height": 5.5 }],
+      "geometryRationale": "This checked region covers the final standalone thanks and stops before its speech tail.",
+      "words": [
+        { "id": "es-xkcd-klout:thanks:w01", "text": "GRACIAS", "normalized": "gracias", "explicitBounds": [{ "x": 66.36, "y": 51.74, "width": 11.83, "height": 4.31 }], "geometryRationale": "The checked source box stops before the final period.", "cardIds": ["word-gracias"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    }
+  ]
+}

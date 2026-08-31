@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "The Mother of All Suspicious Files",
+  "titleEs": "La madre de todos los ficheros sospechosos",
+  "titleText": {
+    "es": "Será mejor poner 'https' en la URL antes de descargarlo.",
+    "en": "Better change the URL to 'https' before downloading.",
+    "noteEn": "The Spanish and official English title attributes are preserved exactly. OCR fused the warning icon into ATENCIÓN, extensively corrupted the deliberately suspicious payload, and added a comma to GUARDAR. The payload is transcribed directly from the Spanish raster and audited as one non-Spanish technical exclusion across four printed lines."
+  },
+  "cardDefinitions": [
+    { "id": "word-fichero--computer-file", "kind": "word", "promptEs": "fichero", "answerEn": "computer file", "noteEn": "In Spain, fichero is a common word for a computer file. It can also mean a physical file or collection of records in other contexts.", "example": { "es": "Guarda el fichero en esta carpeta.", "en": "Save the file in this folder." }, "tags": ["word", "computing", "noun", "A2"] },
+    { "id": "word-dañar", "kind": "word", "promptEs": "dañar", "answerEn": "to damage; to harm", "noteEn": "The letter ñ is part of the word: dañar. It is the unchanged dictionary form after puede.", "example": { "es": "El agua puede dañar el teléfono.", "en": "Water can damage the phone." }, "tags": ["word", "damage", "infinitive", "A2"] },
+    { "id": "word-querer", "kind": "word", "promptEs": "querer", "answerEn": "to want", "noteEn": "Querer is the unchanged dictionary form. Before another unchanged action verb, it expresses wanting to do that action.", "example": { "es": "Quiero abrir la ventana.", "en": "I want to open the window." }, "tags": ["word", "desire", "infinitive", "A1"] },
+    { "id": "word-descargar", "kind": "word", "promptEs": "descargar", "answerEn": "to download", "noteEn": "In computing, descargar means transferring a file or data onto your device. In other contexts it can mean unloading or discharging.", "example": { "es": "Voy a descargar el informe.", "en": "I am going to download the report." }, "tags": ["word", "computing", "infinitive", "A2"] },
+    { "id": "word-cancelar", "kind": "word", "promptEs": "cancelar", "answerEn": "cancel", "noteEn": "Software buttons often use the unchanged dictionary form cancelar as a neutral interface instruction.", "example": { "es": "Pulsa Cancelar para cerrar la ventana.", "en": "Press Cancel to close the window." }, "tags": ["word", "interface", "command", "A1"] },
+    { "id": "word-guardar--save-file", "kind": "word", "promptEs": "guardar", "answerEn": "save (a file)", "noteEn": "In software, guardar means storing the current file or changes. Outside computing it can also mean keeping or putting something away.", "example": { "es": "No olvides guardar el documento.", "en": "Do not forget to save the document." }, "tags": ["word", "computing", "interface", "A1"] },
+    { "id": "concept-suspicious-file-extension-salad-warning", "kind": "concept", "promptEs": "fichero sospechoso · aviso · extensiones encadenadas", "questionEn": "Why is the download warning absurdly alarming?", "answerEn": "The address and filename stack an impossible-looking collection of private paths, executable formats, scripts, archives, and bait-like labels, making virtually every classic warning sign appear at once.", "noteEn": "The payload starts with plain HTTP and a raw IP address, then resembles a personal directory and system path. Its filename chains many mutually inconsistent operating-system, executable, document, archive, package, shortcut, source-code, and web extensions, plus hacker-release vocabulary. The joke calls it the ultimate suspicious file while the interface still offers a Save button, and the title text mockingly suggests that changing only HTTP to HTTPS would make it safe.", "tags": ["concept", "computer security", "file extensions", "joke"] }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:alert-heading",
+      "labelEs": "! ATENCIÓN",
+      "explicitBounds": [{ "x": 4, "y": 5.4, "width": 33, "height": 13 }],
+      "geometryRationale": "OCR fused the triangular icon with the heading; this measured region contains both visible units.",
+      "words": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:alert-heading:w01", "text": "ATENCIÓN", "normalized": "atención", "explicitBounds": [{ "x": 12.8253, "y": 5.9829, "width": 21.3755, "height": 11.9658 }], "geometryRationale": "OCR fused the icon and both exclamation marks into the heading; this source-measured box isolates only the ATENCIÓN letters.", "cardIds": ["word-atención"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:alert-heading:x01", "text": "!", "reason": "symbol", "rationale": "The exclamation mark inside the warning triangle is a meaningful standalone icon symbol, not a Spanish lexical word.", "explicitBounds": [{ "x": 6.2, "y": 7.5, "width": 1.4, "height": 7.4 }], "geometryRationale": "This measured micro-box follows the exclamation mark inside the triangular warning icon." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning",
+      "labelEs": "ESTE TIPO DE FICHERO PUEDE DAÑAR SU ORDENADOR",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-line-0002" }],
+      "words": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w01", "text": "ESTE", "normalized": "este", "explicitBounds": [{ "x": 5.0186, "y": 20.5128, "width": 8.9219, "height": 8.547 }], "geometryRationale": "OCR included the opening exclamation mark; this source-measured box isolates ESTE.", "cardIds": ["word-este"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w02", "text": "TIPO", "normalized": "tipo", "explicitBounds": [{ "x": 15.4275, "y": 20.5128, "width": 7.2491, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the TIPO letters.", "cardIds": ["word-tipo--kind"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 24.3494, "y": 20.5128, "width": 3.5316, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the DE letters.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w04", "text": "FICHERO", "normalized": "fichero", "explicitBounds": [{ "x": 29.368, "y": 20.5128, "width": 12.6394, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the FICHERO letters.", "cardIds": ["word-fichero--computer-file", "concept-suspicious-file-extension-salad-warning"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w05", "text": "PUEDE", "normalized": "puede", "explicitBounds": [{ "x": 43.6803, "y": 20.5128, "width": 9.6654, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the PUEDE letters.", "cardIds": ["word-puede--may", "grammar-poder-infinitive"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w06", "text": "DAÑAR", "normalized": "dañar", "explicitBounds": [{ "x": 55.0186, "y": 20.5128, "width": 9.4796, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the DAÑAR letters.", "cardIds": ["word-dañar", "grammar-poder-infinitive", "concept-suspicious-file-extension-salad-warning"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w07", "text": "SU", "normalized": "su", "explicitBounds": [{ "x": 66.171, "y": 20.5128, "width": 3.9033, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the SU letters.", "cardIds": ["word-su"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w08", "text": "ORDENADOR", "normalized": "ordenador", "explicitBounds": [{ "x": 71.3755, "y": 20.5128, "width": 17.8439, "height": 8.547 }], "geometryRationale": "OCR included the final exclamation mark; this source-measured box isolates ORDENADOR.", "cardIds": ["word-ordenador", "concept-suspicious-file-extension-salad-warning"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:app-poder", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w05", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w06"], "exampleEs": "PUEDE DAÑAR", "explanationEn": "Puede changes for the singular file type, and dañar stays in its unchanged dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation",
+      "labelEs": "ESTÁ SEGURO DE QUERER DESCARGAR",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "text": "ESTÁ", "normalized": "está", "explicitBounds": [{ "x": 6.1338, "y": 30.7692, "width": 8.5502, "height": 8.547 }], "geometryRationale": "OCR included the opening question mark; this source-measured box isolates ESTÁ.", "cardIds": ["word-está--formal-state", "grammar-yes-no-question", "grammar-formal-address", "grammar-estar-adjective-state", "phrase-estar-seguro-de"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02", "text": "SEGURO", "normalized": "seguro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00011" }], "cardIds": ["word-seguro--certain", "grammar-estar-adjective-state", "phrase-estar-seguro-de"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00012" }], "cardIds": ["word-de--seguro-complement", "phrase-estar-seguro-de"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04", "text": "QUERER", "normalized": "querer", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00013" }], "cardIds": ["word-querer", "phrase-estar-seguro-de", "grammar-querer-infinitive"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w05", "text": "DESCARGAR", "normalized": "descargar", "explicitBounds": [{ "x": 48.513, "y": 30.7692, "width": 16.5428, "height": 8.547 }], "geometryRationale": "OCR included the trailing colon; this source-measured box isolates DESCARGAR.", "cardIds": ["word-descargar", "grammar-querer-infinitive", "concept-suspicious-file-extension-salad-warning"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-question", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"], "exampleEs": "ESTÁ", "explanationEn": "The opening question punctuation and intonation turn the finite form está into a yes-or-no question frame." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-formal", "cardId": "grammar-formal-address", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"], "exampleEs": "ESTÁ", "explanationEn": "The interface uses the same singular verb form as él or ella to address one user formally; usted is understood." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-state", "cardId": "grammar-estar-adjective-state", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02"], "exampleEs": "ESTÁ SEGURO", "explanationEn": "Está presents the user's current state, and seguro names that state as being certain." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-sure", "cardId": "phrase-estar-seguro-de", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w03", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04"], "exampleEs": "ESTÁ SEGURO DE QUERER", "explanationEn": "Está and seguro express certainty, de introduces what the user is sure about, and querer begins that complement." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-want", "cardId": "grammar-querer-infinitive", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w05"], "exampleEs": "QUERER DESCARGAR", "explanationEn": "Querer expresses wanting, and descargar remains in its unchanged dictionary form as the desired action." }
+      ]
+    },
+    {
+      "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:payload",
+      "labelEs": "HTTP://65.222.202.53/~TILDE/PUB/CIA-BIN/ETC/INIT.DLL?FILE=__AUTOEXEC.BAT.MY%20OSX%20DOCUMENTS-INSTALL.EXE.RAR.INI.TAR.DOÇX.PHPHPHP.XHTML.TML.XTL.TXXT.0DAY.HACK.ERS_(1995)_BLURAY_CAM-XVID.EXE.TAR.[SCR].LISP.MSI.LNK.ZDA.GNN.WRBT.OBJ.O.H.SWF.DPKG.APP.ZIP.TAR.TAR.CO.GZ.A.OUT.EXE",
+      "explicitBounds": [{ "x": 2.2, "y": 42.3, "width": 95.5, "height": 30.8 }],
+      "geometryRationale": "The deliberately malformed technical payload spans four dense lines and OCR cannot provide reliable token geometry; this source-measured region contains all four.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:payload:x01", "text": "HTTP://65.222.202.53/~TILDE/PUB/CIA-BIN/ETC/INIT.DLL?FILE=__AUTOEXEC.BAT.MY%20OSX%20DOCUMENTS-INSTALL.EXE.RAR.INI.TAR.DOÇX.PHPHPHP.XHTML.TML.XTL.TXXT.0DAY.HACK.ERS_(1995)_BLURAY_CAM-XVID.EXE.TAR.[SCR].LISP.MSI.LNK.ZDA.GNN.WRBT.OBJ.O.H.SWF.DPKG.APP.ZIP.TAR.TAR.CO.GZ.A.OUT.EXE", "reason": "non-spanish-text", "rationale": "This deliberately suspicious URL and extension chain is technical/non-Spanish payload text rather than Spanish lexical vocabulary.", "explicitBounds": [{ "x": 2.6022, "y": 42.735, "width": 93.6803, "height": 5.7 }, { "x": 2.5, "y": 48.5714, "width": 93.75, "height": 7.6 }, { "x": 2.974, "y": 56.4103, "width": 94.4238, "height": 8.2 }, { "x": 2.974, "y": 64.9573, "width": 92.5651, "height": 7.6923 }], "geometryRationale": "Four source-tight row boxes replace OCR's extensively corrupted reading while preserving one semantic excluded payload unit." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons",
+      "labelEs": "CANCELAR GUARDAR",
+      "explicitBounds": [{ "x": 50.5, "y": 79.5, "width": 47.2, "height": 14 }],
+      "geometryRationale": "This source-measured region contains both interface buttons and their labels.",
+      "words": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01", "text": "CANCELAR", "normalized": "cancelar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00074" }], "cardIds": ["word-cancelar", "grammar-infinitive-interface-command", "concept-suspicious-file-extension-salad-warning"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02", "text": "GUARDAR", "normalized": "guardar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00075" }], "cardIds": ["word-guardar--save-file", "grammar-infinitive-interface-command", "concept-suspicious-file-extension-salad-warning"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-cancel", "cardId": "grammar-infinitive-interface-command", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01"], "exampleEs": "CANCELAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-save", "cardId": "grammar-infinitive-interface-command", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02"], "exampleEs": "GUARDAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." }
+      ]
+    }
+  ]
+}
