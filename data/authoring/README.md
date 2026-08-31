@@ -345,5 +345,5 @@ accepted:
    tests, and a production build before replacing `public/corpus`.
 
 The provisional glossary and OCR-card generator can remain as historical
-ingestion tools, but neither is on the semantic path once all 252 authored
-files exist.
+ingestion tools, but neither is on the semantic path once authored replacements
+exist for all 252 provisional OCR lessons.
