@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-entradas-y-salidas-de-la-casa",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "House Inputs and Outputs",
+  "titleEs": "Entradas y salidas de la casa",
+  "titleText": {
+    "es": "Todo el mundo cree que el power over ethernet está genial, pero cuando yo intento hacer water over ethernet, todo el mundo se pone a gritarme.",
+    "en": "People think power over ethernet is so great, and yet when I try to do water over ethernet everyone yells at me.",
+    "noteEn": "The Spanish title and title text are preserved exactly from the Spanish archive, whose local publication date is 2024-07-25. The English title and title text reproduce official xkcd #2963, dated 2024-07-24. The Spanish raster corrects OCR's ELECTRICDAD to the visibly printed ELECTRICIDAD, splits the fused OHNO into OH and NO, restores the omitted fourth CHAO, and treats the diagram arrows, warning sign, and lightning marks as symbols rather than Spanish words."
+  },
+  "cardDefinitions": [
+    { "id": "word-pozo", "kind": "word", "promptEs": "pozo", "answerEn": "well", "noteEn": "", "tags": ["word", "house", "water", "A1"] },
+    { "id": "word-línea--power-line", "kind": "word", "promptEs": "línea", "answerEn": "line (an electricity supply line)", "noteEn": "Here línea names the physical route that carries electrical power, not a drawn line or a line of text.", "example": { "es": "La línea lleva electricidad al pueblo.", "en": "The line carries electricity to the town." }, "tags": ["word", "infrastructure", "electricity", "A2"] },
+    { "id": "word-fosa", "kind": "word", "promptEs": "fosa", "answerEn": "pit; tank (in fosa séptica)", "noteEn": "Fosa literally names a pit or cavity. In fosa séptica, the whole expression names a septic tank.", "example": { "es": "La casa usa una fosa séptica.", "en": "The house uses a septic tank." }, "tags": ["word", "house", "wastewater", "A2"] },
+    { "id": "word-séptica", "kind": "word", "promptEs": "séptica", "answerEn": "septic", "noteEn": "Séptica is the feminine singular form because it describes the feminine noun fosa.", "example": { "es": "Revisaron la fosa séptica.", "en": "They inspected the septic tank." }, "tags": ["word", "adjective", "wastewater", "A2"] },
+    { "id": "word-mmm--appreciation", "kind": "word", "promptEs": "mmm", "answerEn": "mmm; a sound of enjoyment or approval", "noteEn": "Mmm represents a nonverbal reaction, often to something pleasant to taste, smell, or feel.", "example": { "es": "Mmm, esta sopa está rica.", "en": "Mmm, this soup is tasty." }, "tags": ["word", "interjection", "reaction", "A1"] },
+    { "id": "word-fresquita--pleasantly-cool-diminutive", "kind": "word", "promptEs": "fresquita", "answerEn": "nice and cool; pleasantly fresh", "noteEn": "Fresquita comes from fresca plus the affectionate or softening ending -ita. It is feminine singular because it describes agua, a feminine noun.", "example": { "es": "Bebimos agua fresquita.", "en": "We drank nice cool water." }, "tags": ["word", "diminutive", "temperature", "A2"] },
+    { "id": "word-floosh--water-rush-sound", "kind": "word", "promptEs": "floosh", "answerEn": "whoosh or rush of water", "noteEn": "Floosh is a written sound effect for water moving suddenly through a pipe or drain.", "example": { "es": "El agua hizo «floosh» al bajar.", "en": "The water went “floosh” as it went down." }, "tags": ["word", "sound effect", "water"] },
+    { "id": "word-parad--vosotros-command", "kind": "word", "promptEs": "parad", "answerEn": "stop! (command to you all)", "noteEn": "Parad is the affirmative command for vosotros, the informal plural “you” used mainly in Spain. For an -ar verb such as parar, this command replaces final -r with -d.", "example": { "es": "Parad un momento.", "en": "Stop for a moment, everyone." }, "tags": ["word", "command", "vosotros", "A2"] },
+    { "id": "word-puaj--disgust-reaction", "kind": "word", "promptEs": "puaj", "answerEn": "ugh; yuck", "noteEn": "Puaj is a written reaction to something disgusting, unpleasant, or foul-smelling.", "example": { "es": "¡Puaj! La leche está mala.", "en": "Yuck! The milk has gone bad." }, "tags": ["word", "interjection", "disgust", "A1"] },
+    { "id": "word-potable", "kind": "word", "promptEs": "potable", "answerEn": "safe to drink; potable", "noteEn": "", "tags": ["word", "water", "adjective", "A2"] },
+    { "id": "word-arañado", "kind": "word", "promptEs": "arañado", "answerEn": "scratched", "noteEn": "Arañado is the completed-action form of arañar. With hemos, it says that “we” have scratched something.", "example": { "es": "Hemos arañado la mesa.", "en": "We have scratched the table." }, "tags": ["word", "verb", "participle", "A2"] },
+    { "id": "word-baja--low-charge", "kind": "word", "promptEs": "baja", "answerEn": "low (on charge)", "noteEn": "In batería baja, baja describes the battery's remaining charge as low. It uses feminine singular -a to match batería.", "example": { "es": "El teléfono avisa de batería baja.", "en": "The phone warns of low battery." }, "tags": ["word", "battery", "adjective", "A2"] },
+    { "id": "word-consola--game-console", "kind": "word", "promptEs": "consola", "answerEn": "game console", "noteEn": "Here consola is an electronic device for playing video games.", "example": { "es": "La consola está conectada al televisor.", "en": "The game console is connected to the television." }, "tags": ["word", "technology", "games", "A2"] },
+    { "id": "word-chao--goodbye", "kind": "word", "promptEs": "chao", "answerEn": "bye; goodbye", "noteEn": "Chao is an informal farewell used across many Spanish-speaking regions.", "example": { "es": "Chao, nos vemos mañana.", "en": "Bye, see you tomorrow." }, "tags": ["word", "farewell", "informal", "A1"] },
+    { "id": "word-dejo--stop-action", "kind": "word", "promptEs": "dejo", "answerEn": "I stop; I quit (with de + action)", "noteEn": "In dejar de followed by a verb's unchanged dictionary form, dejo means that the speaker stops doing that action.", "example": { "es": "Dejo de trabajar a las seis.", "en": "I stop working at six." }, "tags": ["word", "verb", "stopping", "A2"] },
+    { "id": "word-enfermar", "kind": "word", "promptEs": "enfermar", "answerEn": "to become ill; to get sick", "noteEn": "", "tags": ["word", "health", "verb", "A2"] },
+    { "id": "word-aguas--wastewater", "kind": "word", "promptEs": "aguas", "answerEn": "water (plural in a named category)", "noteEn": "Spanish often uses plural aguas when naming a body, supply, or category of water. Aguas residuales is the standard plural expression for wastewater.", "example": { "es": "La planta trata aguas residuales.", "en": "The plant treats wastewater." }, "tags": ["word", "water", "plural", "A2"] },
+    { "id": "word-residuales", "kind": "word", "promptEs": "residuales", "answerEn": "waste; residual", "noteEn": "Residuales is plural to match aguas. Together, aguas residuales means wastewater.", "example": { "es": "Analizan las aguas residuales.", "en": "They analyze the wastewater." }, "tags": ["word", "wastewater", "adjective", "A2"] },
+    { "id": "word-ffshhh--wastewater-rush-sound", "kind": "word", "promptEs": "ffshhh", "answerEn": "a rushing or spraying sound", "noteEn": "Ffshhh is an extended written sound effect for liquid rushing through an outlet.", "example": { "es": "El tubo hizo «ffshhh» al abrirse.", "en": "The pipe went “ffshhh” when it opened." }, "tags": ["word", "sound effect", "water"] },
+    {
+      "id": "phrase-linea-electrica",
+      "kind": "phrase",
+      "promptEs": "línea eléctrica",
+      "questionEn": "What is the ordinary Spanish expression for an electric power line?",
+      "answerEn": "Use línea eléctrica for a line that carries or supplies electricity.",
+      "noteEn": "Línea names the physical route or cable system, and eléctrica follows it to say what kind of line it is. Eléctrica changes to match the feminine singular noun línea.",
+      "example": { "es": "La tormenta dañó la línea eléctrica.", "en": "The storm damaged the power line." },
+      "tags": ["phrase", "collocation", "electricity", "A2"]
+    },
+    {
+      "id": "phrase-fosa-septica",
+      "kind": "phrase",
+      "promptEs": "fosa séptica",
+      "questionEn": "How do you say “septic tank” in Spanish?",
+      "answerEn": "Say fosa séptica.",
+      "noteEn": "Fosa names the underground pit or tank, and séptica identifies its wastewater function. Séptica follows the noun and uses feminine singular -a to match fosa.",
+      "example": { "es": "La fosa séptica está detrás de la casa.", "en": "The septic tank is behind the house." },
+      "tags": ["phrase", "collocation", "house", "wastewater", "A2"]
+    },
+    {
+      "id": "phrase-agua-potable",
+      "kind": "phrase",
+      "promptEs": "agua potable",
+      "questionEn": "How do you say that water is safe to drink?",
+      "answerEn": "Call it agua potable.",
+      "noteEn": "Potable follows agua and means that the water is suitable for drinking. Agua is feminine even though singular Spanish uses el agua before it to avoid two stressed a sounds together.",
+      "example": { "es": "El refugio tiene agua potable.", "en": "The shelter has safe drinking water." },
+      "tags": ["phrase", "collocation", "water", "A2"]
+    },
+    {
+      "id": "phrase-aguas-residuales",
+      "kind": "phrase",
+      "promptEs": "aguas residuales",
+      "questionEn": "What is the standard Spanish term for wastewater?",
+      "answerEn": "Use aguas residuales.",
+      "noteEn": "The expression conventionally uses the plural aguas. Residuales follows the noun and stays plural to match it.",
+      "example": { "es": "Una tubería lleva las aguas residuales.", "en": "A pipe carries the wastewater." },
+      "tags": ["phrase", "collocation", "water", "wastewater", "A2"]
+    },
+    {
+      "id": "grammar-ito-ita-diminutive",
+      "kind": "grammar",
+      "promptEs": "-ito/-ita/-itos/-itas",
+      "questionEn": "How can a Spanish word make something sound smaller, gentler, or more affectionately described?",
+      "answerEn": "Add a matching diminutive ending such as -ito or -ita; use -itos or -itas for a plural noun.",
+      "noteEn": "A diminutive is an ending that can express small size, affection, or a softened quality. The ending changes to match masculine or feminine and singular or plural. The base may change slightly before the ending, as in fresca → fresquita.",
+      "example": { "es": "Quiero una taza pequeñita.", "en": "I want a nice little cup." },
+      "tags": ["grammar", "diminutive", "word formation", "A2"]
+    },
+    {
+      "id": "concept-house-input-output-grid-joke",
+      "kind": "concept",
+      "promptEs": "entradas y salidas de la casa",
+      "questionEn": "How does the grid turn a house into an input-and-output joke?",
+      "answerEn": "Each row treats a real house input as though it could be routed to every output: sensible matches work, while mismatches scratch cars, explode houses, sicken people, or send wastewater through the wrong place.",
+      "noteEn": "The columns are a well, garage, power line, door, and septic tank. The rows are drinking water, cars, electricity, people, and wastewater. Green diagonal cells are the intended connections. The red cells imagine the physical result of sending each input to the wrong destination, borrowing the logic of a computing input/output matrix for household infrastructure.",
+      "tags": ["concept", "diagram", "house", "input-output", "joke"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings",
+      "labelEs": "POZO · GARAJE · LÍNEA ELÉCTRICA · PUERTA · FOSA SÉPTICA",
+      "explicitBounds": [{ "x": 17.8, "y": 0.35, "width": 78.0, "height": 6.2 }],
+      "geometryRationale": "This checked band encloses the five diagram headings in left-to-right source order.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w01", "text": "POZO", "normalized": "pozo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00007" }], "cardIds": ["word-pozo", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w02", "text": "GARAJE", "normalized": "garaje", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00006" }], "cardIds": ["word-garaje", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w03", "text": "LÍNEA", "normalized": "línea", "explicitBounds": [{ "x": 51.2766, "y": 0.6945, "width": 6.8945, "height": 2.6 }], "geometryRationale": "OCR let the upper heading touch ELÉCTRICA below; this checked height ends in their visible gap.", "cardIds": ["word-línea--power-line", "phrase-linea-electrica", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w04", "text": "ELÉCTRICA", "normalized": "eléctrica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00005" }], "cardIds": ["word-eléctrica", "phrase-linea-electrica", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w05", "text": "PUERTA", "normalized": "puerta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00002" }], "cardIds": ["word-puerta", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w06", "text": "FOSA", "normalized": "fosa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00003" }], "cardIds": ["word-fosa", "phrase-fosa-septica", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w07", "text": "SÉPTICA", "normalized": "séptica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00004" }], "cardIds": ["word-séptica", "phrase-fosa-septica", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-power-line", "cardId": "phrase-linea-electrica", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w03", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w04"], "exampleEs": "LÍNEA ELÉCTRICA", "explanationEn": "Línea names the supply line and eléctrica identifies it as carrying electricity." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-line-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w03", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w04"], "exampleEs": "LÍNEA ELÉCTRICA", "explanationEn": "Eléctrica follows línea and identifies the type of line." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-line-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w03", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w04"], "exampleEs": "LÍNEA ELÉCTRICA", "explanationEn": "Eléctrica uses feminine singular -a to match línea." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-septic-tank", "cardId": "phrase-fosa-septica", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w06", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w07"], "exampleEs": "FOSA SÉPTICA", "explanationEn": "Fosa and séptica form the conventional term for the wastewater tank." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-septic-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w06", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w07"], "exampleEs": "FOSA SÉPTICA", "explanationEn": "Séptica follows fosa and describes its type." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:app-septic-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w06", "es-xkcd-entradas-y-salidas-de-la-casa:column-headings:w07"], "exampleEs": "FOSA SÉPTICA", "explanationEn": "Séptica uses feminine singular -a to match fosa." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label",
+      "labelEs": "AGUA POTABLE →",
+      "explicitBounds": [{ "x": 1.2, "y": 9.9, "width": 12.0, "height": 11.2 }],
+      "geometryRationale": "This checked label region contains the two-line row name and its separate right arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w01", "text": "AGUA", "normalized": "agua", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00013" }], "cardIds": ["word-agua", "phrase-agua-potable", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w02", "text": "POTABLE", "normalized": "potable", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00016" }], "cardIds": ["word-potable", "phrase-agua-potable", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:x01", "text": "→", "reason": "symbol", "rationale": "The diagram arrow indicates the row's direction and is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 3.3, "y": 17.7, "width": 4.7, "height": 3.2 }], "geometryRationale": "This measured box encloses only the right-pointing row arrow." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:app-drinking-water", "cardId": "phrase-agua-potable", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w02"], "exampleEs": "AGUA POTABLE", "explanationEn": "Agua and potable form the standard term for water that is safe to drink." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w02"], "exampleEs": "AGUA POTABLE", "explanationEn": "Potable follows agua and states the water's usable quality." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:drinking-water-label:w02"], "exampleEs": "AGUA POTABLE", "explanationEn": "Potable is singular to match agua; this form does not change between masculine and feminine." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction",
+      "labelEs": "¡MMM FRESQUITA!",
+      "explicitBounds": [{ "x": 14.0, "y": 7.9, "width": 15.8, "height": 3.3 }],
+      "geometryRationale": "This checked box encloses the full reaction in the well/drinking-water cell.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:w01", "text": "MMM", "normalized": "mmm", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00009" }], "cardIds": ["word-mmm--appreciation", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:w02", "text": "FRESQUITA", "normalized": "fresquita", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00010" }], "cardIds": ["word-fresquita--pleasantly-cool-diminutive", "grammar-ito-ita-diminutive", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:w01"], "exampleEs": "MMM", "explanationEn": "The repeated m stretches the appreciative humming sound." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:app-diminutive", "cardId": "grammar-ito-ita-diminutive", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:well-water-reaction:w02"], "exampleEs": "FRESQUITA", "explanationEn": "Fresca becomes fresquita: -ita adds a pleasant, softened feel and matches the feminine singular agua." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-water-sound",
+      "labelEs": "FLOOSH",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0008" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-water-sound:w01", "text": "FLOOSH", "normalized": "floosh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00011" }], "cardIds": ["word-floosh--water-rush-sound", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-water-sound:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:garage-water-sound:w01"], "exampleEs": "FLOOSH", "explanationEn": "The doubled o stretches the rushing-water sound." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-command",
+      "labelEs": "¡PARAD!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0009" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-command:w01", "text": "PARAD", "normalized": "parad", "explicitBounds": [{ "x": 64.3895, "y": 9.1195, "width": 7.2674, "height": 2.05 }], "geometryRationale": "OCR extended the command into the FLOOSH row below; this checked height ends in the visible gap.", "cardIds": ["word-parad--vosotros-command", "grammar-vosotros-affirmative-command", "grammar-vosotros-informal-plural", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-command:app-command", "cardId": "grammar-vosotros-affirmative-command", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:door-water-command:w01"], "exampleEs": "PARAD", "explanationEn": "Parad is the affirmative vosotros command formed from parar for an informal group in Spain." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-command:app-vosotros", "cardId": "grammar-vosotros-informal-plural", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:door-water-command:w01"], "exampleEs": "PARAD", "explanationEn": "The final -d marks a positive command addressed to a familiar group with the vosotros system used mainly in Spain." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-sound",
+      "labelEs": "FLOOSH",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0011" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-sound:w01", "text": "FLOOSH", "normalized": "floosh", "explicitBounds": [{ "x": 69.5186, "y": 11.3208, "width": 6.9348, "height": 3.1529 }], "geometryRationale": "This source-faithful OCR box is narrowed by 0.0001 percentage point so its right edge remains strictly inside the resolved line region.", "cardIds": ["word-floosh--water-rush-sound", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-water-sound:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:door-water-sound:w01"], "exampleEs": "FLOOSH", "explanationEn": "The doubled o stretches the rushing-water sound." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-water-reaction",
+      "labelEs": "¡PUAJ! ←",
+      "explicitBounds": [{ "x": 82.9, "y": 7.8, "width": 7.7, "height": 15.4 }],
+      "geometryRationale": "This checked cell region contains the disgust reaction and the separate left-pointing tank-flow arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-water-reaction:w01", "text": "PUAJ", "normalized": "puaj", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00008" }], "cardIds": ["word-puaj--disgust-reaction", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-water-reaction:x01", "text": "←", "reason": "symbol", "rationale": "This small arrow shows tank flow and is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 87.0, "y": 21.65, "width": 3.3, "height": 1.35 }], "geometryRationale": "This source-measured box isolates the left-pointing flow arrow inside the tank." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:cars-label",
+      "labelEs": "COCHES ↔",
+      "explicitBounds": [{ "x": 2.0, "y": 30.0, "width": 11.2, "height": 8.1 }],
+      "geometryRationale": "This checked label region contains COCHES and its separate two-headed arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:cars-label:w01", "text": "COCHES", "normalized": "coches", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00020" }], "cardIds": ["word-coches", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:cars-label:x01", "text": "↔", "reason": "symbol", "rationale": "The two-headed diagram arrow is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 2.45, "y": 34.5, "width": 6.2, "height": 3.3 }], "geometryRationale": "This measured box encloses only the row arrow." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question",
+      "labelEs": "¿LO HEMOS ARAÑADO?",
+      "explicitBounds": [{ "x": 66.1, "y": 26.0, "width": 10.2, "height": 5.2 }],
+      "geometryRationale": "This checked bubble encloses both lines of the question without adjacent artwork.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w01", "text": "LO", "normalized": "lo", "explicitBounds": [{ "x": 66.419, "y": 26.4235, "width": 3.1698, "height": 1.75 }], "geometryRationale": "OCR extended the upper question row into ARAÑADO below; this checked height ends in the interline gap.", "cardIds": ["word-lo--object-pronoun", "grammar-yes-no-question", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w02", "text": "HEMOS", "normalized": "hemos", "explicitBounds": [{ "x": 69.8649, "y": 26.3905, "width": 6.158, "height": 1.8 }], "geometryRationale": "OCR extended the upper question row into ARAÑADO below; this checked height ends in the interline gap.", "cardIds": ["word-hemos", "grammar-present-perfect", "grammar-yes-no-question"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w03", "text": "ARAÑADO", "normalized": "arañado", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00019" }], "cardIds": ["word-arañado", "grammar-present-perfect", "grammar-yes-no-question", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:app-perfect", "cardId": "grammar-present-perfect", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w02", "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w03"], "exampleEs": "HEMOS ARAÑADO", "explanationEn": "Hemos is the present helper for “we,” and arañado is the completed-action form of arañar." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:app-yes-no", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w01", "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w02", "es-xkcd-entradas-y-salidas-de-la-casa:car-scratch-question:w03"], "exampleEs": "LO HEMOS ARAÑADO", "explanationEn": "The object pronoun lo and finite verb phrase keep ordinary statement order; question marks and intonation make the whole frame a yes-or-no question." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:electricity-label",
+      "labelEs": "ELECTRICIDAD →",
+      "explicitBounds": [{ "x": 0.8, "y": 48.6, "width": 12.7, "height": 7.8 }],
+      "geometryRationale": "This checked label region contains the visibly printed ELECTRICIDAD and its separate right arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:electricity-label:w01", "text": "ELECTRICIDAD", "normalized": "electricidad", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00033" }], "cardIds": ["word-electricidad", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:electricity-label:x01", "text": "→", "reason": "symbol", "rationale": "The diagram arrow is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 3.3, "y": 53.0, "width": 4.6, "height": 3.1 }], "geometryRationale": "This measured box encloses only the right-pointing row arrow." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning",
+      "labelEs": "⚠ BATERÍA BAJA",
+      "explicitBounds": [{ "x": 16.2, "y": 43.15, "width": 12.25, "height": 2.65 }],
+      "geometryRationale": "This checked box covers the warning symbol and both printed words while excluding the nearby stick figure.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w01", "text": "BATERÍA", "normalized": "batería", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00023" }], "cardIds": ["word-batería--battery", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w02", "text": "BAJA", "normalized": "baja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00024" }], "cardIds": ["word-baja--low-charge", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:x01", "text": "⚠", "reason": "symbol", "rationale": "The warning icon is a pictographic symbol, not the Spanish word OCR guessed from it.", "explicitBounds": [{ "x": 16.35, "y": 43.25, "width": 1.65, "height": 2.25 }], "geometryRationale": "This measured box isolates the triangular warning icon and stops before BATERÍA." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w01", "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w02"], "exampleEs": "BATERÍA BAJA", "explanationEn": "Baja follows batería and describes its remaining charge." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w01", "es-xkcd-entradas-y-salidas-de-la-casa:low-battery-warning:w02"], "exampleEs": "BATERÍA BAJA", "explanationEn": "Baja uses feminine singular -a to match batería." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-explosion",
+      "labelEs": "BUUM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0018" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-explosion:w01", "text": "BUUM", "normalized": "buum", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00025" }], "cardIds": ["word-buum--explosion-sound", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-explosion:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:garage-explosion:w01"], "exampleEs": "BUUM", "explanationEn": "The doubled u stretches the explosion sound." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-lightning",
+      "labelEs": "⚡ ⚡ ⚡",
+      "explicitBounds": [{ "x": 52.4, "y": 42.6, "width": 9.7, "height": 9.2 }],
+      "geometryRationale": "This checked cell region encloses the three distinct lightning marks and no lexical text.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-lightning:x01", "text": "⚡", "occurrence": 1, "reason": "symbol", "rationale": "This lightning mark depicts electricity rather than a Spanish word.", "explicitBounds": [{ "x": 59.95, "y": 43.55, "width": 1.65, "height": 2.45 }], "geometryRationale": "This box encloses the upper lightning mark." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-lightning:x02", "text": "⚡", "occurrence": 2, "reason": "symbol", "rationale": "This lightning mark depicts electricity rather than a Spanish word.", "explicitBounds": [{ "x": 52.85, "y": 47.2, "width": 1.75, "height": 2.45 }], "geometryRationale": "This box encloses the lower-left lightning mark." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-lightning:x03", "text": "⚡", "occurrence": 3, "reason": "symbol", "rationale": "This lightning mark depicts electricity rather than a Spanish word.", "explicitBounds": [{ "x": 57.65, "y": 47.8, "width": 1.75, "height": 2.45 }], "geometryRationale": "This box encloses the lower-right lightning mark." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-explosion",
+      "labelEs": "BUUM",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0016" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-explosion:w01", "text": "BUUM", "normalized": "buum", "explicitBounds": [{ "x": 71.4816, "y": 42.3931, "width": 7.65, "height": 5.9154 }], "geometryRationale": "This checked right edge stops after the diagonal sound effect and before the separate console question.", "cardIds": ["word-buum--explosion-sound", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-explosion:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:door-explosion:w01"], "exampleEs": "BUUM", "explanationEn": "The doubled u stretches the explosion sound." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question",
+      "labelEs": "¿POR QUÉ NO SE ENCIENDE MI CONSOLA? ⚡",
+      "explicitBounds": [{ "x": 79.1, "y": 43.25, "width": 16.8, "height": 11.3 }],
+      "geometryRationale": "This checked region encloses both question lines and the separate lightning mark by the console.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w01", "text": "POR", "normalized": "por", "explicitBounds": [{ "x": 79.4834, "y": 43.7318, "width": 3.6547, "height": 1.9 }], "geometryRationale": "OCR extended POR just into ENCIENDE below; this checked height ends in the interline gap.", "cardIds": ["word-por--question", "grammar-por-que-vs-porque"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w02", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00027" }], "cardIds": ["word-qué--why-complement", "grammar-por-que-vs-porque"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w03", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00028" }], "cardIds": ["word-no"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w04", "text": "SE", "normalized": "se", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00029" }], "cardIds": ["word-se--intransitive-change"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w05", "text": "ENCIENDE", "normalized": "enciende", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00030" }], "cardIds": ["word-enciende--switches-on", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w06", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00031" }], "cardIds": ["word-mi"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w07", "text": "CONSOLA", "normalized": "consola", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00032" }], "cardIds": ["word-consola--game-console", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:x01", "text": "⚡", "reason": "symbol", "rationale": "The lightning mark shows electricity and is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 90.45, "y": 52.0, "width": 1.65, "height": 2.35 }], "geometryRationale": "This measured box encloses the lightning mark above the unplugged console." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:console-question:app-why", "cardId": "grammar-por-que-vs-porque", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:console-question:w01", "es-xkcd-entradas-y-salidas-de-la-casa:console-question:w02"], "exampleEs": "POR QUÉ", "explanationEn": "The direct question writes por qué as two words and gives qué a written accent." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:people-label",
+      "labelEs": "GENTE ↔",
+      "explicitBounds": [{ "x": 2.0, "y": 65.4, "width": 11.1, "height": 8.8 }],
+      "geometryRationale": "This checked label region contains GENTE and its separate two-headed arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:people-label:w01", "text": "GENTE", "normalized": "gente", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00035" }], "cardIds": ["word-gente", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:people-label:x01", "text": "↔", "reason": "symbol", "rationale": "The two-headed diagram arrow is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 2.25, "y": 70.1, "width": 6.5, "height": 3.35 }], "geometryRationale": "This measured box encloses only the row arrow." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-farewell",
+      "labelEs": "¡CHAO!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0022" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-farewell:w01", "text": "CHAO", "normalized": "chao", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00034" }], "cardIds": ["word-chao--goodbye", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-farewell",
+      "labelEs": "¡CHAO!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0024" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-farewell:w01", "text": "CHAO", "normalized": "chao", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00036" }], "cardIds": ["word-chao--goodbye", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-farewell",
+      "labelEs": "¡CHAO!",
+      "explicitBounds": [{ "x": 67.6, "y": 64.3, "width": 4.8, "height": 2.8 }],
+      "geometryRationale": "OCR omitted the small farewell in the door cell; this source-checked box encloses the complete printed unit.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-farewell:w01", "text": "CHAO", "normalized": "chao", "explicitBounds": [{ "x": 67.85, "y": 64.55, "width": 4.3, "height": 2.1 }], "geometryRationale": "This measured box covers the omitted CHAO lettering without the speech tail.", "cardIds": ["word-chao--goodbye", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-farewell",
+      "labelEs": "¡CHAO!",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-line-0025" }],
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-farewell:w01", "text": "CHAO", "normalized": "chao", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00037" }], "cardIds": ["word-chao--goodbye", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label",
+      "labelEs": "AGUAS RESIDUALES ↓",
+      "explicitBounds": [{ "x": 1.0, "y": 79.7, "width": 12.2, "height": 16.1 }],
+      "geometryRationale": "This checked label region contains both words and the separate downward arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w01", "text": "AGUAS", "normalized": "aguas", "explicitBounds": [{ "x": 4.2089, "y": 80.1672, "width": 5.9718, "height": 1.9 }], "geometryRationale": "OCR let the upper label row touch RESIDUALES; this checked height ends in their visible gap.", "cardIds": ["word-aguas--wastewater", "phrase-aguas-residuales", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w02", "text": "RESIDUALES", "normalized": "residuales", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00049" }], "cardIds": ["word-residuales", "phrase-aguas-residuales", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:x01", "text": "↓", "reason": "symbol", "rationale": "The downward diagram arrow is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 8.15, "y": 89.2, "width": 2.7, "height": 6.2 }], "geometryRationale": "This measured box encloses only the downward row arrow." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:app-wastewater", "cardId": "phrase-aguas-residuales", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w02"], "exampleEs": "AGUAS RESIDUALES", "explanationEn": "The plural pair forms the standard technical term for wastewater." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:app-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w02"], "exampleEs": "AGUAS RESIDUALES", "explanationEn": "Residuales follows aguas and identifies the category of water." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:app-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w01", "es-xkcd-entradas-y-salidas-de-la-casa:wastewater-label:w02"], "exampleEs": "AGUAS RESIDUALES", "explanationEn": "Residuales is plural to match aguas; this adjective has the same plural form with masculine or feminine nouns." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question",
+      "labelEs": "¿POR QUÉ NO DEJO DE ENFERMAR?",
+      "explicitBounds": [{ "x": 14.1, "y": 78.8, "width": 14.8, "height": 4.5 }],
+      "geometryRationale": "This checked region encloses both lines of the question while excluding the house below.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w01", "text": "POR", "normalized": "por", "explicitBounds": [{ "x": 14.5349, "y": 79.2398, "width": 3.7759, "height": 1.55 }], "geometryRationale": "OCR used overlapping row heights; this checked first-row band ends above DE ENFERMAR.", "cardIds": ["word-por--question", "grammar-por-que-vs-porque"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w02", "text": "QUÉ", "normalized": "qué", "explicitBounds": [{ "x": 18.5473, "y": 79.2398, "width": 3.0743, "height": 1.55 }], "geometryRationale": "OCR used overlapping row heights; this checked first-row band ends above DE ENFERMAR.", "cardIds": ["word-qué--why-complement", "grammar-por-que-vs-porque"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w03", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 21.8581, "y": 79.2398, "width": 2.1284, "height": 1.55 }], "geometryRationale": "OCR used overlapping row heights; this checked first-row band ends above DE ENFERMAR.", "cardIds": ["word-no"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w04", "text": "DEJO", "normalized": "dejo", "explicitBounds": [{ "x": 24.223, "y": 79.2398, "width": 4.2654, "height": 1.55 }], "geometryRationale": "OCR used overlapping row heights; this checked first-row band ends above DE ENFERMAR.", "cardIds": ["word-dejo--stop-action", "phrase-dejar-de-infinitive"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w05", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00044" }], "cardIds": ["word-de--fixed-dejar-de", "phrase-dejar-de-infinitive"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w06", "text": "ENFERMAR", "normalized": "enfermar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00045" }], "cardIds": ["word-enfermar", "phrase-dejar-de-infinitive", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:app-why", "cardId": "grammar-por-que-vs-porque", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w01", "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w02"], "exampleEs": "POR QUÉ", "explanationEn": "The direct question writes por qué as two words and gives qué a written accent." },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:app-stop", "cardId": "phrase-dejar-de-infinitive", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w04", "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w05", "es-xkcd-entradas-y-salidas-de-la-casa:illness-question:w06"], "exampleEs": "DEJO DE ENFERMAR", "explanationEn": "Dejo changes for the speaker, de is required, and enfermar stays in its unchanged dictionary form." }
+      ]
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-oh-no",
+      "labelEs": "OH NO",
+      "explicitBounds": [{ "x": 39.0, "y": 81.45, "width": 4.45, "height": 2.05 }],
+      "geometryRationale": "This source-checked region adds a small rounding margin around both word boxes.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-oh-no:w01", "text": "OH", "normalized": "oh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00046" }], "cardIds": ["word-oh", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:garage-oh-no:w02", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00047" }], "cardIds": ["word-no"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-disgust",
+      "labelEs": "PUAJ",
+      "explicitBounds": [{ "x": 53.2, "y": 86.75, "width": 7.2, "height": 3.15 }],
+      "geometryRationale": "This checked box encloses the reaction in the power-line cell and excludes the nearby drawing OCR misread as 5.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:power-line-disgust:w01", "text": "PUAJ", "normalized": "puaj", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00052" }], "cardIds": ["word-puaj--disgust-reaction", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-oh-no",
+      "labelEs": "OH NO",
+      "explicitBounds": [{ "x": 66.75, "y": 82.2, "width": 5.0, "height": 3.35 }],
+      "geometryRationale": "OCR fused the two printed words; this checked region contains both while excluding the speech tail.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-oh-no:w01", "text": "OH", "normalized": "oh", "explicitBounds": [{ "x": 66.98, "y": 82.53, "width": 1.95, "height": 2.7 }], "geometryRationale": "This measured split covers only OH within OCR's fused OHNO box.", "cardIds": ["word-oh", "concept-house-input-output-grid-joke"] },
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:door-oh-no:w02", "text": "NO", "normalized": "no", "explicitBounds": [{ "x": 69.25, "y": 82.53, "width": 2.27, "height": 2.7 }], "geometryRationale": "This measured split covers only NO within OCR's fused OHNO box.", "cardIds": ["word-no"] }
+      ],
+      "excludedUnits": [],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-wastewater-sound",
+      "labelEs": "¡FFSHHH! →",
+      "explicitBounds": [{ "x": 83.0, "y": 81.6, "width": 8.5, "height": 14.2 }],
+      "geometryRationale": "This checked cell region contains the sound effect and the separate right-pointing tank-flow arrow.",
+      "words": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-wastewater-sound:w01", "text": "FFSHHH", "normalized": "ffshhh", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-entradas-y-salidas-de-la-casa:ocr-token-00048" }], "cardIds": ["word-ffshhh--wastewater-rush-sound", "grammar-expressive-letter-lengthening", "concept-house-input-output-grid-joke"] }
+      ],
+      "excludedUnits": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-wastewater-sound:x01", "text": "→", "reason": "symbol", "rationale": "This small arrow shows tank flow and is not a Spanish lexical occurrence.", "explicitBounds": [{ "x": 86.55, "y": 94.15, "width": 3.25, "height": 1.15 }], "geometryRationale": "This measured box isolates the right-pointing flow arrow inside the tank." }
+      ],
+      "applications": [
+        { "id": "es-xkcd-entradas-y-salidas-de-la-casa:septic-wastewater-sound:app-lengthening", "cardId": "grammar-expressive-letter-lengthening", "participantWordIds": ["es-xkcd-entradas-y-salidas-de-la-casa:septic-wastewater-sound:w01"], "exampleEs": "FFSHHH", "explanationEn": "The repeated final h stretches the imagined rushing-liquid sound on the page." }
+      ]
+    }
+  ]
+}

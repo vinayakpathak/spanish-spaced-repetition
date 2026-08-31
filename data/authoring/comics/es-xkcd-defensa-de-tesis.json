@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "es-xkcd-defensa-de-tesis",
+  "editorialStatus": "ai-authored",
+  "humanVerified": false,
+  "semanticQa": {
+    "imageTextTranscribed": true,
+    "contextualMeaningsChecked": true,
+    "cardReuseAndSenseSplitsChecked": true,
+    "higherLevelTargetsChecked": true,
+    "applicationLinksChecked": true,
+    "beginnerExplanationsChecked": true,
+    "wholeSentenceTranslationAidsAbsent": true
+  },
+  "titleEn": "Thesis Defense",
+  "titleEs": "Defensa de tesis",
+  "titleText": {
+    "es": "MIS RESULTADOS SON UNA MEJORA SIGNIFICATIVA DEL ESTADO DEL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARTE",
+    "en": "MY RESULTS ARE A SIGNIFICANT IMPROVEMENT ON THE STATE OF THE AAAAAAAAAAAART",
+    "noteEn": "The Spanish and English texts are the exact title attributes from the Spanish archive and official xkcd. The Spanish raster has a twelve-A scream; OCR mistook the three opening exclamation marks for letters. The readable English heading on the tiny presentation slide is inventoried as non-Spanish text; the remaining miniature slide strokes are not determinately readable lexical units."
+  },
+  "cardDefinitions": [
+    {
+      "id": "word-conclusión",
+      "kind": "word",
+      "promptEs": "conclusión",
+      "answerEn": "conclusion",
+      "noteEn": "Conclusión has a written accent on the final ó.",
+      "example": { "es": "La conclusión es breve.", "en": "The conclusion is brief." },
+      "tags": ["word", "noun", "A2"]
+    },
+    {
+      "id": "word-aaaaaaaaaaaa--scream",
+      "kind": "word",
+      "promptEs": "aaaaaaaaaaaa",
+      "answerEn": "aaaaah!; a prolonged scream",
+      "noteEn": "A repeated vowel can spell out a sustained cry. The number of letters shows its length or intensity rather than changing its basic meaning.",
+      "example": { "es": "¡Aaaaa, una araña!", "en": "Aaaaah, a spider!" },
+      "tags": ["word", "interjection", "sound", "conversation"]
+    },
+    {
+      "id": "word-defensa--academic-defense",
+      "kind": "word",
+      "promptEs": "defensa",
+      "answerEn": "defense; academic defense",
+      "noteEn": "In an academic setting, defensa can name the formal presentation and questioning in which a student defends a thesis.",
+      "example": { "es": "Su defensa será el viernes.", "en": "Her defense will be on Friday." },
+      "tags": ["word", "noun", "academic", "B1"]
+    },
+    {
+      "id": "phrase-en-conclusion",
+      "kind": "phrase",
+      "promptEs": "en conclusión",
+      "questionEn": "What expression introduces a final summary or conclusion?",
+      "answerEn": "Use en conclusión, meaning “in conclusion.”",
+      "noteEn": "This transition signals that the speaker or writer is finishing an argument and stating its main result. It is common in formal speech and writing.",
+      "example": { "es": "En conclusión, necesitamos otro plan.", "en": "In conclusion, we need another plan." },
+      "tags": ["phrase", "discourse", "formal", "A2"]
+    },
+    {
+      "id": "phrase-defensa-de-tesis",
+      "kind": "phrase",
+      "promptEs": "defensa de tesis",
+      "questionEn": "How do you name the formal academic presentation in which a student defends a thesis?",
+      "answerEn": "Use defensa de tesis.",
+      "noteEn": "Defensa names the act of defending the research, and de tesis identifies the academic work being defended. The expression can refer to the event or the process.",
+      "example": { "es": "Preparó las diapositivas para la defensa de tesis.", "en": "She prepared the slides for the thesis defense." },
+      "tags": ["phrase", "academic", "university", "B1"]
+    },
+    {
+      "id": "concept-thesis-defense-offense-sword-pun",
+      "kind": "concept",
+      "promptEs": "defensa de tesis · ataque de tesis",
+      "questionEn": "Why does the thesis presentation turn into a sword attack?",
+      "answerEn": "The comic takes the defensive metaphor in “thesis defense” literally and answers it with a thesis offense.",
+      "noteEn": "A thesis defense is normally an oral examination, not combat. Calling the sword charge an ataque de tesis creates the opposite of defensa de tesis and literalizes the English caption's defense/offense wordplay.",
+      "tags": ["concept", "joke", "academic", "wordplay"]
+    }
+  ],
+  "regions": [
+    {
+      "id": "es-xkcd-defensa-de-tesis:conclusion",
+      "labelEs": "EN CONCLUSIÓN, ¡¡¡AAAAAAAAAAAA!!!",
+      "geometryRefs": [
+        { "source": "ocr-line", "id": "es-xkcd-defensa-de-tesis:ocr-line-0001" },
+        { "source": "ocr-line", "id": "es-xkcd-defensa-de-tesis:ocr-line-0002" }
+      ],
+      "words": [
+        { "id": "es-xkcd-defensa-de-tesis:conclusion:w01", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 39.5841, "y": 4.6123, "width": 5.5257, "height": 5.95 }], "geometryRationale": "The OCR height crossed into the scream below; this checked band tightly isolates EN.", "cardIds": ["word-en", "phrase-en-conclusion"] },
+        { "id": "es-xkcd-defensa-de-tesis:conclusion:w02", "text": "CONCLUSIÓN", "normalized": "conclusión", "explicitBounds": [{ "x": 45.7065, "y": 4.506, "width": 23.2808, "height": 6.05 }], "geometryRationale": "The OCR height crossed into the scream below; this checked band tightly isolates CONCLUSIÓN.", "cardIds": ["word-conclusión", "phrase-en-conclusion", "concept-thesis-defense-offense-sword-pun"] },
+        { "id": "es-xkcd-defensa-de-tesis:conclusion:w03", "text": "AAAAAAAAAAAA", "normalized": "aaaaaaaaaaaa", "explicitBounds": [{ "x": 39.15, "y": 10.75, "width": 51.2, "height": 9.9 }], "geometryRationale": "OCR fused the three opening exclamation marks into the scream; this source-checked box contains only the twelve printed A letters.", "cardIds": ["word-aaaaaaaaaaaa--scream", "concept-thesis-defense-offense-sword-pun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-defensa-de-tesis:conclusion:app-en-conclusion", "cardId": "phrase-en-conclusion", "participantWordIds": ["es-xkcd-defensa-de-tesis:conclusion:w01", "es-xkcd-defensa-de-tesis:conclusion:w02"], "exampleEs": "EN CONCLUSIÓN", "explanationEn": "En and conclusión form the conventional transition that announces a final summary." }
+      ]
+    },
+    {
+      "id": "es-xkcd-defensa-de-tesis:slide-heading",
+      "labelEs": "The Evolution of Threat Defence in Mammals",
+      "explicitBounds": [{ "x": 5.0, "y": 28.3, "width": 9.1, "height": 7.2 }],
+      "geometryRationale": "OCR omitted the miniature slide heading; this source-checked box tightly covers its two readable English lines.",
+      "words": [],
+      "excludedUnits": [
+        { "id": "es-xkcd-defensa-de-tesis:slide-heading:x01", "text": "The Evolution of Threat Defence in Mammals", "reason": "non-spanish-text", "rationale": "This miniature presentation heading is printed in English and is not Spanish vocabulary.", "explicitBounds": [{ "x": 5.0, "y": 28.3, "width": 9.1, "height": 7.2 }], "geometryRationale": "OCR omitted the miniature slide heading; this source-checked box tightly covers its two readable English lines." }
+      ],
+      "applications": []
+    },
+    {
+      "id": "es-xkcd-defensa-de-tesis:caption",
+      "labelEs": "LA MEJOR DEFENSA DE TESIS ES UN BUEN ATAQUE DE TESIS",
+      "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-defensa-de-tesis:ocr-line-0003" }],
+      "words": [
+        { "id": "es-xkcd-defensa-de-tesis:caption:w01", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00004" }], "cardIds": ["word-la--article"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w02", "text": "MEJOR", "normalized": "mejor", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00005" }], "cardIds": ["word-mejor--best", "grammar-evaluative-adjective-before-noun"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w03", "text": "DEFENSA", "normalized": "defensa", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00006" }], "cardIds": ["word-defensa--academic-defense", "grammar-evaluative-adjective-before-noun", "phrase-defensa-de-tesis", "concept-thesis-defense-offense-sword-pun"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w04", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00007" }], "cardIds": ["word-de--noun-classifier", "phrase-defensa-de-tesis"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w05", "text": "TESIS", "normalized": "tesis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00008" }], "cardIds": ["word-tesis", "phrase-defensa-de-tesis", "concept-thesis-defense-offense-sword-pun"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w06", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00009" }], "cardIds": ["word-es"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w07", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00010" }], "cardIds": ["word-un"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w08", "text": "BUEN", "normalized": "buen", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00011" }], "cardIds": ["word-buen", "grammar-evaluative-adjective-before-noun", "grammar-bueno-to-buen-before-masculine-noun"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w09", "text": "ATAQUE", "normalized": "ataque", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00012" }], "cardIds": ["word-ataque", "grammar-evaluative-adjective-before-noun", "grammar-bueno-to-buen-before-masculine-noun", "concept-thesis-defense-offense-sword-pun"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w10", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00013" }], "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-defensa-de-tesis:caption:w11", "text": "TESIS", "normalized": "tesis", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-defensa-de-tesis:ocr-token-00014" }], "cardIds": ["word-tesis", "concept-thesis-defense-offense-sword-pun"] }
+      ],
+      "applications": [
+        { "id": "es-xkcd-defensa-de-tesis:caption:app-best-defense", "cardId": "grammar-evaluative-adjective-before-noun", "participantWordIds": ["es-xkcd-defensa-de-tesis:caption:w02", "es-xkcd-defensa-de-tesis:caption:w03"], "exampleEs": "MEJOR DEFENSA", "explanationEn": "Mejor comes before defensa to evaluate and rank it rather than merely classify it." },
+        { "id": "es-xkcd-defensa-de-tesis:caption:app-thesis-defense", "cardId": "phrase-defensa-de-tesis", "participantWordIds": ["es-xkcd-defensa-de-tesis:caption:w03", "es-xkcd-defensa-de-tesis:caption:w04", "es-xkcd-defensa-de-tesis:caption:w05"], "exampleEs": "DEFENSA DE TESIS", "explanationEn": "Defensa names the academic event, while de tesis identifies the work being defended." },
+        { "id": "es-xkcd-defensa-de-tesis:caption:app-good-order", "cardId": "grammar-evaluative-adjective-before-noun", "participantWordIds": ["es-xkcd-defensa-de-tesis:caption:w08", "es-xkcd-defensa-de-tesis:caption:w09"], "exampleEs": "BUEN ATAQUE", "explanationEn": "Buen comes before ataque to evaluate it positively." },
+        { "id": "es-xkcd-defensa-de-tesis:caption:app-buen", "cardId": "grammar-bueno-to-buen-before-masculine-noun", "participantWordIds": ["es-xkcd-defensa-de-tesis:caption:w08", "es-xkcd-defensa-de-tesis:caption:w09"], "exampleEs": "BUEN ATAQUE", "explanationEn": "Bueno shortens to buen directly before the masculine singular noun ataque." }
+      ]
+    }
+  ]
+}
