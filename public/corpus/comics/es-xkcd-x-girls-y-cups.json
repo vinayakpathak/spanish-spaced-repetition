@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-c52ed88b684db9a7",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.6167,
-    "lowConfidenceTokenCount": 46,
-    "rawOcrTokenCount": 60,
-    "filteredNonLatinTokenCount": 50,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-x-girls-y-cups",
@@ -42,12 +36,13 @@
     },
     "titleText": {
       "es": "Tampoco hay resultados para: 1girl10000cups, 2girls(5+3i)cups, 65536girls65536cups o 3urogallos2tórtolas1cup.",
-      "en": "English title text pending review."
+      "en": "Also no results: 1girl10000cups, 2girls(5+3i)cups, 65536girls35563cups, or 3frenchhens2turtledoves1cup.",
+      "noteEn": "The Spanish archive preserves the compact search strings, changes the third number string from 35563 to 65536, and adapts the final Twelve Days of Christmas bird names as urogallos and tórtolas."
     },
     "regions": [
       {
-        "id": "es-xkcd-x-girls-y-cups:region-0001",
-        "labelEs": "RESULTADOS DE GOOGLE PARA \"‹X› GIRLS ‹ Y> CUPS\"",
+        "id": "es-xkcd-x-girls-y-cups:search-heading",
+        "labelEs": "RESULTADOS DE GOOGLE PARA \"<X> GIRLS <Y> CUPS\"",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -58,7 +53,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00001",
+            "id": "es-xkcd-x-girls-y-cups:search-heading:w01",
             "text": "RESULTADOS",
             "normalized": "resultados",
             "bounds": [
@@ -70,11 +65,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00001-6d34e0e7"
+              "word-resultados",
+              "concept-search-result-count-matrix-parody"
             ]
           },
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00002",
+            "id": "es-xkcd-x-girls-y-cups:search-heading:w02",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -86,27 +82,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00002-1078013f"
+              "word-de--search-source",
+              "concept-search-result-count-matrix-parody"
             ]
           },
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00003",
-            "text": "GOOGLE",
-            "normalized": "google",
-            "bounds": [
-              {
-                "x": 34.569,
-                "y": 5.0847,
-                "width": 13.8793,
-                "height": 7.9096
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00003-c126d3bf"
-            ]
-          },
-          {
-            "id": "es-xkcd-x-girls-y-cups:word-00004",
+            "id": "es-xkcd-x-girls-y-cups:search-heading:w03",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -118,108 +99,67 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00004-3f31a37a"
+              "word-para--search-query",
+              "concept-search-result-count-matrix-parody"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-x-girls-y-cups:search-heading:excluded-google",
+            "text": "GOOGLE",
+            "reason": "non-spanish-text",
+            "rationale": "Google is the unchanged commercial search-service name, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 34.569,
+                "y": 5.0847,
+                "width": 13.8793,
+                "height": 7.9096
+              }
             ]
           },
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00005",
-            "text": "X",
-            "normalized": "x",
+            "id": "es-xkcd-x-girls-y-cups:search-heading:excluded-query",
+            "text": "\"<X> GIRLS <Y> CUPS\"",
+            "reason": "non-spanish-text",
+            "rationale": "This quoted search query combines the variable symbols X and Y with the unchanged English words GIRLS and CUPS; it is not Spanish lexical material, while the linked concept explains its role.",
             "bounds": [
               {
-                "x": 58.1034,
-                "y": 5.0847,
-                "width": 7.8448,
-                "height": 7.9096
+                "x": 58,
+                "y": 5,
+                "width": 35.6,
+                "height": 8.1
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00005-a1b504a8"
-            ]
-          },
-          {
-            "id": "es-xkcd-x-girls-y-cups:word-00006",
-            "text": "GIRLS",
-            "normalized": "girls",
-            "bounds": [
-              {
-                "x": 66.5517,
-                "y": 5.0847,
-                "width": 9.6552,
-                "height": 7.9096
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00006-5c163d8e"
-            ]
-          },
-          {
-            "id": "es-xkcd-x-girls-y-cups:word-00007",
-            "text": "Y",
-            "normalized": "y",
-            "bounds": [
-              {
-                "x": 78.6207,
-                "y": 5.0847,
-                "width": 3.6207,
-                "height": 7.9096
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00007-05bb03b0"
-            ]
-          },
-          {
-            "id": "es-xkcd-x-girls-y-cups:word-00008",
-            "text": "CUPS",
-            "normalized": "cups",
-            "bounds": [
-              {
-                "x": 82.8448,
-                "y": 5.0847,
-                "width": 10.6035,
-                "height": 7.9096
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00008-f1be6e51"
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-x-girls-y-cups-00001-6d34e0e7",
-          "word-auto-es-xkcd-x-girls-y-cups-00002-1078013f",
-          "word-auto-es-xkcd-x-girls-y-cups-00003-c126d3bf",
-          "word-auto-es-xkcd-x-girls-y-cups-00004-3f31a37a",
-          "word-auto-es-xkcd-x-girls-y-cups-00005-a1b504a8",
-          "word-auto-es-xkcd-x-girls-y-cups-00006-5c163d8e",
-          "word-auto-es-xkcd-x-girls-y-cups-00007-05bb03b0",
-          "word-auto-es-xkcd-x-girls-y-cups-00008-f1be6e51"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
+          "word-resultados",
+          "concept-search-result-count-matrix-parody",
+          "word-de--search-source",
+          "word-para--search-query"
+        ]
       },
       {
-        "id": "es-xkcd-x-girls-y-cups:region-0002",
-        "labelEs": "CUPS",
+        "id": "es-xkcd-x-girls-y-cups:chart",
+        "labelEs": "CUPS 0 1 2 3 4 5 6 7 GIRLS 0 3 375 9 0 0 0 0 0 1 7 7503 2007 10 5 3 6 2 2 9 1,929,000 247 7 14 13 2 1 3 7 6335 394 34 3 2 6 0 4 3 3513 34 0 63 0 0 0 5 1 9 5 3 0 0 3 0 6 3 1461 1 1 1 0 0 0 7 2 19 4 2 0 0 0 0",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 52.7307,
-          "y": 16.8299,
-          "width": 7.9868,
-          "height": 5.3232
+          "x": 4,
+          "y": 15.5,
+          "width": 90.2,
+          "height": 78.6
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00009",
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-cups-axis",
             "text": "CUPS",
-            "normalized": "cups",
+            "reason": "non-spanish-text",
+            "rationale": "CUPS is the unchanged English horizontal-axis label, not Spanish vocabulary.",
             "bounds": [
               {
                 "x": 52.7307,
@@ -227,39 +167,13 @@
                 "width": 7.9868,
                 "height": 5.3232
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00009-92c396e1"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-x-girls-y-cups-00009-92c396e1"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0002",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-x-girls-y-cups:region-0003",
-        "labelEs": "GIRLS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 4.8276,
-          "y": 58.7571,
-          "width": 8.6207,
-          "height": 5.0847
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-x-girls-y-cups:word-00010",
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-girls-axis",
             "text": "GIRLS",
-            "normalized": "girls",
+            "reason": "non-spanish-text",
+            "rationale": "GIRLS is the unchanged English vertical-axis label, not Spanish vocabulary.",
             "bounds": [
               {
                 "x": 4.8276,
@@ -267,288 +181,248 @@
                 "width": 8.6207,
                 "height": 5.0847
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-x-girls-y-cups-00010-0f2af047"
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-column-headings",
+            "text": "0 1 2 3 4 5 6 7",
+            "reason": "number",
+            "rationale": "These are the eight numeric cup-count column headings rather than Spanish lexical words.",
+            "bounds": [
+              {
+                "x": 21.5,
+                "y": 22.6,
+                "width": 70,
+                "height": 7
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-0",
+            "text": "0 3 375 9 0 0 0 0 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 30,
+                "width": 78.9,
+                "height": 8.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-1",
+            "text": "1 7 7503 2007 10 5 3 6 2",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 38,
+                "width": 78.9,
+                "height": 8.4
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-2",
+            "text": "2 9 1,929,000 247 7 14 13 2 1",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, including the highlighted outlier, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 46,
+                "width": 78.9,
+                "height": 8.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-3",
+            "text": "3 7 6335 394 34 3 2 6 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 53.8,
+                "width": 78.9,
+                "height": 8.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-4",
+            "text": "4 3 3513 34 0 63 0 0 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 61.7,
+                "width": 78.9,
+                "height": 8.2
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-5",
+            "text": "5 1 9 5 3 0 0 3 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 69.6,
+                "width": 78.9,
+                "height": 8.2
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-6",
+            "text": "6 3 1461 1 1 1 0 0 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 77.4,
+                "width": 78.9,
+                "height": 8.4
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-x-girls-y-cups:chart:excluded-row-7",
+            "text": "7 2 19 4 2 0 0 0 0",
+            "reason": "number",
+            "rationale": "The row heading and its eight cells are numerical search-result counts, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 14.8,
+                "y": 85.3,
+                "width": 78.9,
+                "height": 8.4
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-x-girls-y-cups-00010-0f2af047"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0036",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-x-girls-y-cups-00001-6d34e0e7",
-      "word-auto-es-xkcd-x-girls-y-cups-00002-1078013f",
-      "word-auto-es-xkcd-x-girls-y-cups-00003-c126d3bf",
-      "word-auto-es-xkcd-x-girls-y-cups-00004-3f31a37a",
-      "word-auto-es-xkcd-x-girls-y-cups-00005-a1b504a8",
-      "word-auto-es-xkcd-x-girls-y-cups-00006-5c163d8e",
-      "word-auto-es-xkcd-x-girls-y-cups-00007-05bb03b0",
-      "word-auto-es-xkcd-x-girls-y-cups-00008-f1be6e51",
-      "word-auto-es-xkcd-x-girls-y-cups-00009-92c396e1",
-      "word-auto-es-xkcd-x-girls-y-cups-00010-0f2af047"
+      "word-resultados",
+      "concept-search-result-count-matrix-parody",
+      "word-de--search-source",
+      "word-para--search-query"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.6167,
-      "lowConfidenceTokenCount": 46,
-      "rawOcrTokenCount": 60,
-      "filteredNonLatinTokenCount": 50,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00001-6d34e0e7",
+      "id": "word-resultados",
       "kind": "word",
       "promptEs": "resultados",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "results",
+      "noteEn": "Resultados are the outcomes or answers produced by a process, test, calculation, or search.",
+      "example": {
+        "es": "La búsqueda produjo muchos resultados.",
+        "en": "The search produced many results."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00001",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-18a54cbd476eb64ac405",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-x-girls-y-cups",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00002-1078013f",
+      "id": "concept-search-result-count-matrix-parody",
+      "kind": "concept",
+      "promptEs": "resultados de búsqueda · X chicas · Y vasos",
+      "questionEn": "What does the colored number grid represent?",
+      "answerEn": "Each cell gives a mock Google result count for a query containing the row's number of girls and the column's number of cups.",
+      "noteEn": "The unusually large red cell at two girls and one cup alludes to a notorious viral shock-video title. The comic turns the two numbers into variables and compares many nearby searches without describing the video itself.",
+      "example": {
+        "es": "Cada casilla combina una fila con una columna.",
+        "en": "Each cell combines one row with one column."
+      },
+      "tags": [
+        "concept",
+        "search",
+        "matrix",
+        "internet culture",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-x-girls-y-cups",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--search-source",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links results to their search source",
+      "noteEn": "Spanish can put de between resultados and the service or source that produced them. English often places the service name directly before “results.”",
+      "example": {
+        "es": "Los resultados del buscador cambiaron.",
+        "en": "The search-engine results changed."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "source",
+        "search"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00002",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-x-girls-y-cups",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00003-c126d3bf",
-      "kind": "word",
-      "promptEs": "google",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00003",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-bbdefa2950f49882f295",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00004-3f31a37a",
+      "id": "word-para--search-query",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "in order to (expressing purpose)",
-      "noteEn": "",
+      "answerEn": "for (introducing a search query)",
+      "noteEn": "After resultados, para can introduce the words or expression whose results are being shown.",
+      "example": {
+        "es": "Hay diez resultados para esa frase.",
+        "en": "There are ten results for that phrase."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "search",
+        "query"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00004",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00005-a1b504a8",
-      "kind": "word",
-      "promptEs": "x",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00005",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2d711642b726b0440162",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00006-5c163d8e",
-      "kind": "word",
-      "promptEs": "girls",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00006",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-ab0f4de8e463ff02f4ae",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00007-05bb03b0",
-      "kind": "word",
-      "promptEs": "y",
-      "answerEn": "and",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00007",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00008-f1be6e51",
-      "kind": "word",
-      "promptEs": "cups",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00008",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-43b69e82bee632b30b91",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00009-92c396e1",
-      "kind": "word",
-      "promptEs": "cups",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00009",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0002",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-43b69e82bee632b30b91",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-x-girls-y-cups-00010-0f2af047",
-      "kind": "word",
-      "promptEs": "girls",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-x-girls-y-cups:ocr-token-00045",
-        "sourceLineId": "es-xkcd-x-girls-y-cups:ocr-line-0036",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-ab0f4de8e463ff02f4ae",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-x-girls-y-cups",
+        "contextualSenseReviewed": true
       }
     }
   ]

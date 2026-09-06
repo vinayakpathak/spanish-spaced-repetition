@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   type Comic,
   type LearningCard,
+  type LearningContentReviewStatus,
   type RevealRegion,
 } from "../lib/content";
 import {
@@ -133,6 +134,29 @@ function formatImportanceScore(score: number): string {
     minimumFractionDigits: 3,
     maximumFractionDigits: 4,
   }).format(score);
+}
+
+function reviewStatusCopy(status: LearningContentReviewStatus | undefined): {
+  label: string;
+  title: string;
+} {
+  if (status === "human-verified") {
+    return {
+      label: "Human verified",
+      title: "This lesson has been verified by a human reviewer.",
+    };
+  }
+  if (status === "needs-review") {
+    return {
+      label: "Draft · Needs review",
+      title: "This fallback draft may contain extraction or meaning errors.",
+    };
+  }
+  return {
+    label: "AI-authored · Internal QA",
+    title:
+      "This lesson was AI-authored and passed internal source, semantic, and geometry checks; it is not presented as human-verified.",
+  };
 }
 
 export default function Home() {
@@ -267,8 +291,8 @@ export default function Home() {
     setCardsById((current) => {
       const next = new Map(current);
       for (const card of cards) {
-        // The reviewed seed is initialized first and remains authoritative for
-        // any shared target also emitted by generated corpus data.
+        // The offline seed is initialized first. Published duplicate stable
+        // IDs are required to have byte-equivalent definitions.
         if (!next.has(card.id)) next.set(card.id, card);
       }
       return next;
@@ -324,9 +348,9 @@ export default function Home() {
         try {
           bundle = await loadComicBundle(selected.comic);
         } catch {
-          // A stale or partially deployed generated corpus must never strand the
+          // A stale or partially deployed runtime corpus must never strand the
           // learner or overwrite their complete saved state. Resume against the
-          // checked-in reviewed curriculum without persisting this reduced view.
+          // checked-in seed curriculum without persisting this reduced view.
           persistenceEnabled = canPersistCorpusProgress(manifestLoad, true);
           manifest = REVIEWED_CORPUS_MANIFEST;
           restored = reconcileSrsState(
@@ -373,7 +397,7 @@ export default function Home() {
         setOpenedByComic(restoredOpened);
         setStorageWarning(persistenceWarning);
         if (discardedEarlierProgress && !persistenceWarning) {
-          setToast("The continuous scheduler started with a fresh history");
+          setToast("The authored curriculum started with a fresh history");
         }
         setHydrated(true);
       });
@@ -792,15 +816,15 @@ export default function Home() {
           </div>
 
           <div className="target-summary">
-            <div className="target-label">CURRENT CARD-PRIORITY FIT</div>
+            <div className="target-label">CURRENT PRIORITY DENSITY</div>
             {currentHighPriorityCount > 0 ? (
               <div className="target-row"><span className="target-dot priority" /> <strong>{currentHighPriorityCount}</strong> high-priority cards</div>
             ) : null}
             {currentNewCount > 0 ? (
               <div className="target-row"><span className="target-dot new" /> <strong>{currentNewCount}</strong> not yet observed</div>
             ) : null}
-            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking?.score ?? 0)}</strong> relative priority fit</div>
-            <div className="target-row"><span className="target-dot" /> {currentRanking?.cardPrioritySum.toFixed(2) ?? "0.00"} total card priority across {currentRanking?.cardPriorities.length ?? 0} exact cards</div>
+            <div className="target-row"><span className="target-dot revisit" /> <strong>{formatPriority(currentRanking?.score ?? 0)}</strong> relative priority density</div>
+            <div className="target-row"><span className="target-dot" /> <strong>{currentRanking?.cardPriorityDensity.toFixed(2) ?? "0.00"}</strong> average card priority across {currentRanking?.cardPriorities.length ?? 0} exact cards</div>
           </div>
 
           <div className="target-peek">
@@ -824,12 +848,12 @@ export default function Home() {
               {currentComic.title !== currentComic.titleEs ? (
                 <span className="original-title">{currentComic.title}</span>
               ) : null}
-              {currentManifestEntry?.reviewStatus === "needs-review" ? (
+              {currentManifestEntry ? (
                 <span
                   className="review-status"
-                  title="Words and meanings on this comic were extracted automatically and may contain mistakes."
+                  title={reviewStatusCopy(currentManifestEntry.reviewStatus).title}
                 >
-                  Machine-extracted · Review needed
+                  {reviewStatusCopy(currentManifestEntry.reviewStatus).label}
                 </span>
               ) : null}
               {hydrated && currentManifestEntry?.importance ? (
@@ -837,8 +861,8 @@ export default function Home() {
                   className="importance-badge"
                   type="button"
                   onClick={() => setShowRankings(true)}
-                  aria-label={`Informational comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive analysis does not affect scheduling and is provisional because generated contextual senses remain unreviewed. Review-needed cards are included. Open comic rankings.`}
-                  title="Informational PageRank-style recursive importance; it does not affect scheduling. Review-needed cards are included, generated contextual senses remain unreviewed, and analytics grouping never merges SRS progress."
+                  aria-label={`Informational comic importance ${formatImportanceScore(currentManifestEntry.importance.score)}, rank ${currentManifestEntry.importance.rank} of ${corpusManifest.comics.length}. This PageRank-style recursive analysis uses exact stable card IDs and does not affect scheduling. Open comic rankings.`}
+                  title="Informational PageRank-style recursive importance over exact stable card IDs; it does not affect scheduling or merge SRS progress."
                 >
                   <span>IMPORTANCE</span>
                   <strong>{formatImportanceScore(currentManifestEntry.importance.score)}</strong>
@@ -880,7 +904,7 @@ export default function Home() {
               {currentComic.titleText.en ? (
                 <small>English: {currentComic.titleText.en}</small>
               ) : (
-                <small>English title-text translation has not been reviewed yet.</small>
+                <small>No English title text is available for this archive entry.</small>
               )}
               {currentComic.titleText.noteEn ? <small>{currentComic.titleText.noteEn}</small> : null}
             </div>
@@ -1015,7 +1039,7 @@ export default function Home() {
                     {KIND_GROUPS.map((group) => {
                       const groupCards = candidateCards.filter((card) => card.kind === group.kind);
                       if (groupCards.length === 0) return null;
-                      const hasProvisionalCards = groupCards.some(
+                      const hasDraftCards = groupCards.some(
                         (card) => card.reviewStatus === "needs-review",
                       );
                       return (
@@ -1023,8 +1047,8 @@ export default function Home() {
                           <div className="card-kind-heading">
                             <span className={`kind-badge kind-${group.kind}`}>{group.label}</span>
                             <small>
-                              {group.kind === "word" && hasProvisionalCards
-                                ? "Machine-extracted drafts that participate in scheduling; verify before trusting"
+                              {group.kind === "word" && hasDraftCards
+                                ? "Fallback drafts that participate in scheduling and still need review"
                                 : group.description}
                             </small>
                           </div>
@@ -1032,7 +1056,7 @@ export default function Home() {
                             {groupCards.map((card) => {
                               const isSelected = selectedCardId === card.id;
                               const isLearned = recentlyOpenedIds.includes(card.id);
-                              const isProvisional = card.reviewStatus === "needs-review";
+                              const isDraft = card.reviewStatus === "needs-review";
                               const cardPriority = cardProgressById.get(card.id) ??
                                 scoreCardPriority(srs, card.id, schedulerNow);
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
@@ -1059,7 +1083,7 @@ export default function Home() {
                                 <article
                                   key={card.id}
                                   id={`flashcard-${encodeURIComponent(card.id)}`}
-                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isProvisional ? "is-provisional" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
+                                  className={`candidate-card ${isSelected ? "active" : ""} ${isLearned ? "is-learned" : ""} ${isDraft ? "is-provisional" : ""} ${isCompactWordCard ? "compact-word-card" : ""}`}
                                 >
                                   <button
                                     type="button"
@@ -1081,15 +1105,15 @@ export default function Home() {
                                           {card.promptEs}
                                         </strong>
                                       )}
-                                      {isProvisional ? (
+                                      {isDraft ? (
                                         <span className="candidate-review-flag">
-                                          Review needed
+                                          Draft
                                         </span>
                                       ) : null}
                                       <small id={`${candidateId}-status`}>
                                         {isSelected
                                           ? card.kind === "word"
-                                            ? isProvisional
+                                            ? isDraft
                                               ? "Draft shown and opening recorded · tap to close"
                                               : "Meaning shown · tap to close"
                                             : "Answer shown · tap to close"
@@ -1098,7 +1122,7 @@ export default function Home() {
                                               ? "Opened recently · show meaning"
                                               : "Opened recently · show answer"
                                             : card.kind === "word"
-                                              ? isProvisional
+                                              ? isDraft
                                                 ? "Reveal draft + record opening"
                                                 : "Reveal meaning + record opening"
                                               : "Reveal answer + record opening"}
@@ -1115,16 +1139,16 @@ export default function Home() {
                                     >
                                       <div className="candidate-answer-label">
                                         {card.kind === "word"
-                                          ? isProvisional
-                                            ? "REVIEW NEEDED"
+                                          ? isDraft
+                                            ? "DRAFT MEANING"
                                             : "MEANING HERE"
                                           : "SHORT ANSWER"}
                                       </div>
                                       <div className="candidate-answer">{card.answerEn}</div>
 
-                                      {isProvisional ? (
+                                      {isDraft ? (
                                         <p className="candidate-provisional-note">
-                                          This is machine-extracted draft content. The Spanish token or English meaning may be wrong; its opening is still recorded so it participates in scheduling.
+                                          This fallback draft still needs review. Its opening is recorded so it can participate in scheduling.
                                         </p>
                                       ) : null}
 
@@ -1261,7 +1285,7 @@ export default function Home() {
                   <span>UP NEXT</span>
                   <strong lang="es">{summary.nextComic.titleEs}</strong>
                   <p>
-                    {formatPriority(summary.ranking.score)} relative priority fit · {summary.ranking.cardPrioritySum.toFixed(2)} total card priority across {summary.ranking.cardPriorities.length} exact cards
+                    {formatPriority(summary.ranking.score)} relative priority density · {summary.ranking.cardPriorityDensity.toFixed(2)} average card priority across {summary.ranking.cardPriorities.length} exact cards
                   </p>
                 </div>
               </div>
@@ -1333,7 +1357,7 @@ export default function Home() {
                         <div>
                           <strong lang="es">{card.promptEs}</strong>
                           {card.reviewStatus === "needs-review" ? (
-                            <span className="memory-review-flag">Review needed</span>
+                            <span className="memory-review-flag">Draft</span>
                           ) : null}
                           <p>{card.answerEn}</p>
                         </div>
@@ -1390,7 +1414,7 @@ export default function Home() {
                 This informational PageRank-style recursive importance does not affect scheduling. It uses damped two-way comic–target centrality: comics raise their linked targets, and targets raise every linked comic. An 85% linked influence plus a 15% baseline/reset keeps disconnected and zero-target comics from vanishing. The calculation repeats until stable; comic scores below sum to 100%.
               </p>
               <p className="rankings-caveat">
-                <strong>Current limitation:</strong> word targets are grouped for analytics when their normalized Spanish prompt and English answer match across reviewed and generated cards. Higher-level targets use exact card IDs. Review-needed cards are included, so the scores remain provisional until their contextual senses are checked. Analytics grouping never merges SRS card IDs or progress.
+                Every analytics target uses the same exact stable card ID as the curriculum. Shared IDs connect reusable cards across comics, while occurrence- or sense-specific IDs stay separate. Importance remains informational and never merges or changes SRS progress.
               </p>
               <div className="rankings-model" aria-label="Importance model details">
                 <span>{Math.round(corpusManifest.importanceModel.damping * 100)}% linked influence</span>
@@ -1447,7 +1471,7 @@ export default function Home() {
               </ol>
             </div>
             <div className="rankings-footnote">
-              “Cross-comic” means one analytics target connects to more than one comic. Word targets use normalized Spanish-prompt + English-answer matching; higher-level targets use exact IDs. This grouping never merges occurrence-specific SRS cards.
+              “Cross-comic” means one exact stable card ID connects to more than one comic. The importance graph reads those IDs but never changes scheduling or card history.
             </div>
           </aside>
         </div>
@@ -1465,15 +1489,15 @@ export default function Home() {
               <li><span>1</span><div><strong>Read before translating</strong><p>The Spanish artwork and the joke give you a real chance to infer meaning.</p></div></li>
               <li><span>2</span><div><strong>Choose word, then card</strong><p>Click a word directly in the picture. That records nothing; reveal only the exact word meaning, expression, grammar lesson, or context card you needed.</p></div></li>
               <li><span>3</span><div><strong>Finish honestly</strong><p>The app records which exact cards you opened and which displayed cards you understood without help.</p></div></li>
-              <li><span>4</span><div><strong>Recalculate every time</strong><p>Every Next action chooses the unread comic with the largest sum of live exact-card priorities.</p></div></li>
+              <li><span>4</span><div><strong>Recalculate every time</strong><p>Every Next action chooses the unread comic with the highest average live priority per distinct exact card.</p></div></li>
             </ol>
             <div className="license-note">
               <strong>About continuous scheduling</strong>
-              <p>Each card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. For every unread comic, Tira sums the priorities of its distinct exact cards; the comic with the largest sum comes next. Corpus importance is not part of this decision. Any comic already finished is permanently excluded, so the collection ends after every comic has been read once. Progress from the earlier simulated-day prototype is not imported; this continuous history starts fresh.</p>
+              <p>Each card keeps every comic-display and answer-opening timestamp. Recent openings raise its help-need signal; repeated displays without an opening lower it. Successful, well-spaced exposures build memory stability, while elapsed time raises forgetting risk. The resulting priority index is recalculated continuously. For every unread comic, Tira averages the priorities of its distinct exact cards; the comic with the highest priority density comes next. Dividing by card count prevents longer comics from winning merely because they contain more cards. Corpus importance is not part of this decision. Any comic already finished is permanently excluded, so the collection ends after every comic has been read once. Progress from the earlier generated-card curriculum is not aliased to stable authored IDs; this authored curriculum starts with fresh history.</p>
               <strong>About comic importance</strong>
-              <p>Importance is an informational PageRank-style analysis and does not influence which comic is scheduled. It uses a damped two-way comic–target centrality calculation: comics raise linked targets, and targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. For analytics only, reviewed and generated word cards share a canonical target when their normalized Spanish prompt and English answer match; higher-level cards use exact IDs. SRS IDs and progress remain separate. Review-needed cards are included, so these scores remain provisional until the draft meanings are checked.</p>
+              <p>Importance is an informational PageRank-style analysis and does not influence which comic is scheduled. It uses a damped two-way comic–target centrality calculation: comics raise linked targets, and targets raise every linked comic. Eighty-five percent of influence follows links, while a 15% baseline/reset prevents disconnected and zero-target nodes from vanishing; the process repeats until stable, then comic scores are normalized to sum to 100%. Every target is an exact stable card ID. The graph can observe sharing, but it never merges SRS card IDs or progress.</p>
               <strong>About the 258-comic corpus</strong>
-              <p>Six lessons are fully reviewed. The remaining archive entries are an authoring draft built from image OCR and conservative dictionary matches. Every draft card participates in scheduling and is visibly labeled “Review needed,” including words whose English meaning has not been resolved. Treat that content as provisional and report anything that should be corrected. Generated grammar or expression lessons still require human authoring.</p>
+              <p>All 258 lessons now use stable, contextual cards. The corpus was authored with AI and passed internal source, inventory, semantic, application, and geometry checks. “Internal QA” is not a claim of human verification; please report anything that should be corrected. A future human-verified tier is reserved for expert review.</p>
               <strong>About the comics</strong>
               <p>Original work by Randall Munroe, published by xkcd under <a href="https://creativecommons.org/licenses/by-nc/2.5/" target="_blank" rel="noreferrer">CC BY-NC 2.5</a>. Spanish translations by <a href="https://es.xkcd.com/" target="_blank" rel="noreferrer">Gabriel Rodríguez Alberich / xkcd en español</a>. Interactive word markers and learning notes are unofficial adaptations. Tira is free, noncommercial, and not affiliated with xkcd.</p>
             </div>

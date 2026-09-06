@@ -32,7 +32,12 @@ export interface ActiveSession {
 }
 
 export interface SrsState {
-  schemaVersion: 4;
+  /**
+   * Schema five starts the stable authored curriculum with fresh evidence.
+   * Schema-four snapshots may contain provisional `word-auto-*` identities,
+   * so they are intentionally not hydrated or aliased to authored card IDs.
+   */
+  schemaVersion: 5;
   nextSessionId: number;
   cards: Record<string, CardHistory>;
   comics: Record<string, ComicProgress>;
@@ -80,9 +85,12 @@ export interface CardPriorityDiagnostics {
 
 export interface RankedComic<T extends ComicLike> {
   comic: T;
-  /** Max-normalized cardPrioritySum. Corpus importance never affects this. */
+  /** Max-normalized cardPriorityDensity. Corpus importance never affects this. */
   score: number;
+  /** Sum retained for diagnostics; selection uses the density below. */
   cardPrioritySum: number;
+  /** Mean priority across the comic's distinct exact card IDs. */
+  cardPriorityDensity: number;
   normalizedCardPriority: number;
   cardPriorities: CardPriorityDiagnostics[];
 }
@@ -137,7 +145,7 @@ interface PriorityObservation {
 
 export function createSrsState(): SrsState {
   return {
-    schemaVersion: 4,
+    schemaVersion: 5,
     nextSessionId: 1,
     cards: {},
     comics: {},
@@ -156,6 +164,56 @@ function finiteTimestamp(value: number, label: string): number {
 
 function uniqueStrings(values: readonly string[]): string[] {
   return [...new Set(values.filter((value) => value.length > 0))];
+}
+
+/**
+ * Reviewed corrections within the authored, complete-history curriculum.
+ * These three retired cards occurred in disjoint comics, so a native session
+ * contains at most one of them. Joining their histories preserves every
+ * display/open timestamp and still leaves one exposure per comic session.
+ * This is not a surface-form alias or a migration of legacy scheduler data.
+ */
+const AUTHORED_CARD_ID_MERGES = new Map([
+  ["word-bien--so-far-so-good", "word-bien--well"],
+  ["word-bien--working-properly", "word-bien--well"],
+  ["word-bien--well-played", "word-bien--well"],
+]);
+
+function mergeAuthoredCardHistories(state: SrsState): SrsState {
+  const canonicalId = (id: string) => AUTHORED_CARD_ID_MERGES.get(id) ?? id;
+  const session = state.activeSession;
+  if (
+    !Object.keys(state.cards).some((id) => AUTHORED_CARD_ID_MERGES.has(id)) &&
+    !session?.cardIds.some((id) => AUTHORED_CARD_ID_MERGES.has(id)) &&
+    !session?.openedCardIds.some((id) => AUTHORED_CARD_ID_MERGES.has(id))
+  ) {
+    return state;
+  }
+
+  const cards: Record<string, CardHistory> = {};
+  for (const [oldId, history] of Object.entries(state.cards)) {
+    const id = canonicalId(oldId);
+    cards[id] = {
+      exposures: [...(cards[id]?.exposures ?? []), ...history.exposures],
+    };
+  }
+  // Sort after joining, so dictionary insertion order cannot affect replay.
+  for (const id of new Set(AUTHORED_CARD_ID_MERGES.values())) {
+    cards[id]?.exposures.sort(
+      (a, b) => a.displayedAtMs - b.displayedAtMs || a.sessionId - b.sessionId,
+    );
+  }
+  return {
+    ...state,
+    cards,
+    activeSession: session
+      ? {
+          ...session,
+          cardIds: uniqueStrings(session.cardIds.map(canonicalId)),
+          openedCardIds: uniqueStrings(session.openedCardIds.map(canonicalId)),
+        }
+      : null,
+  };
 }
 
 function configWithDefaults(
@@ -382,8 +440,9 @@ export function getRecentlyOpenedCardIds(
 }
 
 /**
- * Remove histories for exact card IDs that left the active curriculum. A
- * retained shared card keeps its evidence even if one source comic vanished.
+ * Apply reviewed authored-ID corrections before removing histories for exact
+ * card IDs that left the curriculum. A retained shared card keeps its evidence
+ * even if one source comic vanished.
  */
 export function reconcileSrsState<T extends ComicLike>(
   state: SrsState,
@@ -391,6 +450,7 @@ export function reconcileSrsState<T extends ComicLike>(
   nowMs: number,
 ): SrsState {
   const now = finiteTimestamp(nowMs, "nowMs");
+  state = mergeAuthoredCardHistories(state);
   const comicById = new Map(comics.map((comic) => [comic.id, comic]));
   const allowedComicIds = new Set(comicById.keys());
   const allowedCardIds = new Set(
@@ -634,23 +694,34 @@ export function rankComics<T extends ComicLike>(
           right.priorityIndex - left.priorityIndex ||
           left.cardId.localeCompare(right.cardId),
       );
+    const cardPrioritySum = cardPriorities.reduce(
+      (sum, card) => sum + card.priorityIndex,
+      0,
+    );
+    // An online mean avoids tiny card-count-dependent drift when every card
+    // has the same priority (for example, a fresh curriculum at 0.35 each).
+    const cardPriorityDensity = cardPriorities.reduce(
+      (mean, card, index) =>
+        mean + (card.priorityIndex - mean) / (index + 1),
+      0,
+    );
     return {
       comic,
       cardPriorities,
-      cardPrioritySum: cardPriorities.reduce(
-        (sum, card) => sum + card.priorityIndex,
-        0,
-      ),
+      cardPrioritySum,
+      cardPriorityDensity,
     };
   });
-  const maxCardPriority = Math.max(
+  const maxCardPriorityDensity = Math.max(
     0,
-    ...unnormalized.map((comic) => comic.cardPrioritySum),
+    ...unnormalized.map((comic) => comic.cardPriorityDensity),
   );
   return unnormalized
     .map((comic) => {
       const normalizedCardPriority =
-        maxCardPriority > 0 ? comic.cardPrioritySum / maxCardPriority : 0;
+        maxCardPriorityDensity > 0
+          ? comic.cardPriorityDensity / maxCardPriorityDensity
+          : 0;
       return {
         ...comic,
         score: normalizedCardPriority,
@@ -659,7 +730,7 @@ export function rankComics<T extends ComicLike>(
     })
     .sort(
       (left, right) =>
-        right.cardPrioritySum - left.cardPrioritySum ||
+        right.cardPriorityDensity - left.cardPriorityDensity ||
         left.comic.id.localeCompare(right.comic.id),
     );
 }
@@ -795,7 +866,7 @@ function parseExposure(value: unknown): CardExposure | null {
   };
 }
 
-function hydrateSchemaFour(parsed: Record<string, unknown>): SrsState {
+function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
   let activeSession: ActiveSession | null = null;
   if (
     isRecord(parsed.activeSession) &&
@@ -878,7 +949,7 @@ function hydrateSchemaFour(parsed: Record<string, unknown>): SrsState {
   }
 
   return {
-    schemaVersion: 4,
+    schemaVersion: 5,
     nextSessionId: Math.max(
       greatestSessionId + 1,
       nonNegativeInteger(parsed.nextSessionId, 1),
@@ -901,7 +972,7 @@ export function hydrateSrsState(value: unknown, nowMs: number): SrsState {
     if (!isCurrentSrsSnapshot(parsed) || !isRecord(parsed)) {
       return createSrsState();
     }
-    return hydrateSchemaFour(parsed);
+    return mergeAuthoredCardHistories(hydrateSchemaFive(parsed));
   } catch {
     return createSrsState();
   }
@@ -913,7 +984,7 @@ export function isCurrentSrsSnapshot(value: unknown): boolean {
     const parsed = typeof value === "string" ? JSON.parse(value) : value;
     return (
       isRecord(parsed) &&
-      parsed.schemaVersion === 4 &&
+      parsed.schemaVersion === 5 &&
       parsed.historyCompleteness === "complete"
     );
   } catch {

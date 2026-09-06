@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-8fd249ae82a708d8",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9364,
-    "lowConfidenceTokenCount": 1,
-    "rawOcrTokenCount": 11,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-scrabble",
@@ -42,25 +36,26 @@
     },
     "titleText": {
       "es": "",
-      "en": "English title text pending review."
+      "en": "A veteran Scrabble player will spot the 'OSTRICH' option.",
+      "noteEn": "The Spanish archive genuinely leaves its title text empty. The official English hint refers to the original rack letters CLTORIS and the board letters HI; the Spanish image instead changes them to CLITORIS and SI, so the OSTRICH option does not carry over unchanged."
     },
     "regions": [
       {
-        "id": "es-xkcd-scrabble:region-0001",
-        "labelEs": "SIL.",
+        "id": "es-xkcd-scrabble:board-word",
+        "labelEs": "SI",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 49.1289,
-          "y": 53.0534,
-          "width": 5.2265,
-          "height": 2.6718
+          "x": 48.7805,
+          "y": 52.6718,
+          "width": 5.9233,
+          "height": 3.4351
         },
         "words": [
           {
-            "id": "es-xkcd-scrabble:word-00001",
-            "text": "SIL",
-            "normalized": "sil",
+            "id": "es-xkcd-scrabble:board-word:w01",
+            "text": "SI",
+            "normalized": "si",
             "bounds": [
               {
                 "x": 49.1289,
@@ -70,23 +65,53 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00001-e4294595"
+              "word-si--scrabble-tile-ambiguity"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-scrabble-00001-e4294595"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-scrabble:ocr-line-0001",
-          "ocrConfidence": 0.3
-        }
+          "word-si--scrabble-tile-ambiguity"
+        ]
       },
       {
-        "id": "es-xkcd-scrabble:region-0002",
+        "id": "es-xkcd-scrabble:rack-word",
+        "labelEs": "CLITORIS",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 35.8885,
+          "y": 79.0076,
+          "width": 29.2683,
+          "height": 7.2519
+        },
+        "words": [
+          {
+            "id": "es-xkcd-scrabble:rack-word:w01",
+            "text": "CLITORIS",
+            "normalized": "clitoris",
+            "bounds": [
+              {
+                "x": 37.4564,
+                "y": 80.1527,
+                "width": 26.1324,
+                "height": 4.9618
+              }
+            ],
+            "cardIds": [
+              "word-clitoris--printed-without-accent"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-clitoris--printed-without-accent"
+        ]
+      },
+      {
+        "id": "es-xkcd-scrabble:caption",
         "labelEs": "SIEMPRE ME PASA ESTO EN LAS PARTIDAS FAMILIARES DE SCRABBLE.",
         "translationEn": "",
         "noteEn": "",
@@ -98,7 +123,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-scrabble:word-00002",
+            "id": "es-xkcd-scrabble:caption:w01",
             "text": "SIEMPRE",
             "normalized": "siempre",
             "bounds": [
@@ -110,11 +135,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00002-7c7749e4"
+              "word-siempre"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00003",
+            "id": "es-xkcd-scrabble:caption:w02",
             "text": "ME",
             "normalized": "me",
             "bounds": [
@@ -126,11 +151,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00003-d2611aeb"
+              "word-me--indirect",
+              "grammar-pasarle-algo-a-alguien"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00004",
+            "id": "es-xkcd-scrabble:caption:w03",
             "text": "PASA",
             "normalized": "pasa",
             "bounds": [
@@ -142,11 +168,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00004-da2e7e29"
+              "word-pasa--happens",
+              "grammar-pasarle-algo-a-alguien"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00005",
+            "id": "es-xkcd-scrabble:caption:w04",
             "text": "ESTO",
             "normalized": "esto",
             "bounds": [
@@ -158,11 +185,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00005-085bd6d8"
+              "word-esto",
+              "grammar-pasarle-algo-a-alguien"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00006",
+            "id": "es-xkcd-scrabble:caption:w05",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -174,11 +202,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00006-da800296"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00007",
+            "id": "es-xkcd-scrabble:caption:w06",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -190,11 +218,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00007-a9d5ba9a"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00008",
+            "id": "es-xkcd-scrabble:caption:w07",
             "text": "PARTIDAS",
             "normalized": "partidas",
             "bounds": [
@@ -206,11 +234,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00008-528de583"
+              "word-partidas",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00009",
+            "id": "es-xkcd-scrabble:caption:w08",
             "text": "FAMILIARES",
             "normalized": "familiares",
             "bounds": [
@@ -222,11 +252,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00009-1e3b470a"
+              "word-familiares--family-related",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-scrabble:word-00010",
+            "id": "es-xkcd-scrabble:caption:w09",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -238,13 +270,16 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-scrabble-00010-df0472dd"
+              "word-de--type-classifier"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-scrabble:word-00011",
+            "id": "es-xkcd-scrabble:caption:excluded-scrabble",
             "text": "SCRABBLE",
-            "normalized": "scrabble",
+            "reason": "non-spanish-text",
+            "rationale": "SCRABBLE is the unchanged English-language board-game brand name, not a Spanish lexical word.",
             "bounds": [
               {
                 "x": 82.4042,
@@ -252,322 +287,388 @@
                 "width": 15.8537,
                 "height": 3.8168
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-scrabble-00011-ee37c607"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-scrabble-00002-7c7749e4",
-          "word-auto-es-xkcd-scrabble-00003-d2611aeb",
-          "word-auto-es-xkcd-scrabble-00004-da2e7e29",
-          "word-auto-es-xkcd-scrabble-00005-085bd6d8",
-          "word-auto-es-xkcd-scrabble-00006-da800296",
-          "word-auto-es-xkcd-scrabble-00007-a9d5ba9a",
-          "word-auto-es-xkcd-scrabble-00008-528de583",
-          "word-auto-es-xkcd-scrabble-00009-1e3b470a",
-          "word-auto-es-xkcd-scrabble-00010-df0472dd",
-          "word-auto-es-xkcd-scrabble-00011-ee37c607"
+        "applications": [
+          {
+            "id": "es-xkcd-scrabble:caption:app-happen-to",
+            "cardId": "grammar-pasarle-algo-a-alguien",
+            "participantWordIds": [
+              "es-xkcd-scrabble:caption:w02",
+              "es-xkcd-scrabble:caption:w03",
+              "es-xkcd-scrabble:caption:w04"
+            ],
+            "exampleEs": "ME PASA ESTO",
+            "explanationEn": "Me identifies the affected person, pasa gives the happening form, and esto names what happens."
+          },
+          {
+            "id": "es-xkcd-scrabble:caption:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-scrabble:caption:w07",
+              "es-xkcd-scrabble:caption:w08"
+            ],
+            "exampleEs": "PARTIDAS FAMILIARES",
+            "explanationEn": "Partidas names the games first, and familiares follows as the neutral description."
+          },
+          {
+            "id": "es-xkcd-scrabble:caption:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-scrabble:caption:w07",
+              "es-xkcd-scrabble:caption:w08"
+            ],
+            "exampleEs": "PARTIDAS FAMILIARES",
+            "explanationEn": "Familiares takes plural -es to match partidas; this adjective has the same form with masculine and feminine nouns."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-siempre",
+          "word-me--indirect",
+          "grammar-pasarle-algo-a-alguien",
+          "word-pasa--happens",
+          "word-esto",
+          "word-en",
+          "word-las",
+          "word-partidas",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-familiares--family-related",
+          "word-de--type-classifier"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-scrabble-00001-e4294595",
-      "word-auto-es-xkcd-scrabble-00002-7c7749e4",
-      "word-auto-es-xkcd-scrabble-00003-d2611aeb",
-      "word-auto-es-xkcd-scrabble-00004-da2e7e29",
-      "word-auto-es-xkcd-scrabble-00005-085bd6d8",
-      "word-auto-es-xkcd-scrabble-00006-da800296",
-      "word-auto-es-xkcd-scrabble-00007-a9d5ba9a",
-      "word-auto-es-xkcd-scrabble-00008-528de583",
-      "word-auto-es-xkcd-scrabble-00009-1e3b470a",
-      "word-auto-es-xkcd-scrabble-00010-df0472dd",
-      "word-auto-es-xkcd-scrabble-00011-ee37c607"
+      "word-si--scrabble-tile-ambiguity",
+      "word-clitoris--printed-without-accent",
+      "word-siempre",
+      "word-me--indirect",
+      "grammar-pasarle-algo-a-alguien",
+      "word-pasa--happens",
+      "word-esto",
+      "word-en",
+      "word-las",
+      "word-partidas",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "word-familiares--family-related",
+      "word-de--type-classifier"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9364,
-      "lowConfidenceTokenCount": 1,
-      "rawOcrTokenCount": 11,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-scrabble-00001-e4294595",
+      "id": "word-si--scrabble-tile-ambiguity",
       "kind": "word",
-      "promptEs": "sil",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "si",
+      "answerEn": "sí (‘yes’) or si (‘if’); Spanish Scrabble tiles omit the accent mark",
+      "noteEn": "Standard Spanish distinguishes sí, ‘yes,’ from si, ‘if.’ Spanish Scrabble uses unaccented vowel tiles even for words that carry a written accent in ordinary text, so the played SI can represent either spelling. Without a sentence, the board alone does not choose between them.",
+      "example": {
+        "es": "Sí, iré si puedo.",
+        "en": "Yes, I will go if I can."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "accent",
+        "spelling",
+        "board game",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00001",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0001",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-867a6ad21bd588df03f0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-scrabble",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00002-7c7749e4",
+      "id": "word-clitoris--printed-without-accent",
+      "kind": "word",
+      "promptEs": "clitoris",
+      "answerEn": "clitoris; standard Spanish spells clítoris",
+      "noteEn": "Spanish Scrabble uses unaccented vowel tiles even for words that carry a written accent in ordinary text, so the rack shows CLITORIS. Standard Spanish writes clítoris with an accent on the first í.",
+      "example": {
+        "es": "El clítoris forma parte de la anatomía genital.",
+        "en": "The clitoris is part of genital anatomy."
+      },
+      "tags": [
+        "word",
+        "anatomy",
+        "printed without accent",
+        "spelling",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-scrabble",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-siempre",
       "kind": "word",
       "promptEs": "siempre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "always",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "frequency"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00002",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8d6b69638b96ccd3d80b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-puzzle-del-laberinto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00003-d2611aeb",
+      "id": "word-me--indirect",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to me; for me",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00003",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2744ccd10c7533bd736a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00004-da2e7e29",
+      "id": "grammar-pasarle-algo-a-alguien",
+      "kind": "grammar",
+      "promptEs": "pasarle algo a alguien",
+      "questionEn": "How do you say that something happens to a particular person?",
+      "answerEn": "Name what happens, and put me, te, le, nos, os, or les before a changed form of pasar to identify the affected person. You may also name that person after the Spanish word a.",
+      "noteEn": "Pasar changes to match the thing or event that happens, not the affected person: esto me pasa but estas cosas me pasan. With the verb's unchanged dictionary form, attach the short pronoun to the end: pasarle. In the prompt, algo stands for what happens and alguien for the affected person; those words do not have to appear literally. Spanish may repeat the affected person after a, a word often translated as ‘to,’ for clarity or emphasis, while English normally states the person once.",
+      "example": {
+        "es": "Eso me pasó a mí ayer.",
+        "en": "That happened to me yesterday."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "object pronouns"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pasa--happens",
       "kind": "word",
       "promptEs": "pasa",
-      "answerEn": "Meaning needs review",
+      "answerEn": "it happens",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00004",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6efa459a35b81d5c7aa4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00005-085bd6d8",
+      "id": "word-esto",
       "kind": "word",
       "promptEs": "esto",
       "answerEn": "this (thing or situation)",
-      "noteEn": "",
+      "noteEn": "Esto is a neutral demonstrative for an unidentified thing, fact, or whole situation. It is not used directly before a noun.",
+      "example": {
+        "es": "Esto es difícil.",
+        "en": "This is difficult."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00005",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-be39af610558299c60eb",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00006-da800296",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00006",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00007-a9d5ba9a",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00007",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00008-528de583",
+      "id": "word-partidas",
       "kind": "word",
       "promptEs": "partidas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "games; matches",
+      "noteEn": "A partida is one complete session of a board game, card game, or match. Partidas is the plural.",
+      "example": {
+        "es": "Jugamos dos partidas de ajedrez.",
+        "en": "We played two games of chess."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "games",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00008",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-573af18114acff40363c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-scrabble",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00009-1e3b470a",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-familiares--family-related",
       "kind": "word",
       "promptEs": "familiares",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "family; involving the family (plural)",
+      "noteEn": "Familiar can describe something connected with a family. It can also mean ‘familiar’ or name a relative in other settings, so context matters.",
+      "example": {
+        "es": "Organizan cenas familiares los domingos.",
+        "en": "They organize family dinners on Sundays."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "family",
+        "adjective",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00009",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c679da3280832f919a1b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-scrabble",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-scrabble-00010-df0472dd",
+      "id": "word-de--type-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links an item to its type",
+      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "example": {
+        "es": "Compré un libro de historia.",
+        "en": "I bought a history book."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun phrases",
+        "classification",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00010",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-scrabble-00011-ee37c607",
-      "kind": "word",
-      "promptEs": "scrabble",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-scrabble:ocr-token-00011",
-        "sourceLineId": "es-xkcd-scrabble:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-376805920e55765119c1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "contextualSenseReviewed": true
       }
     }
   ]

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-160e92cc2240cb1f",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9444,
-    "lowConfidenceTokenCount": 2,
-    "rawOcrTokenCount": 18,
-    "filteredNonLatinTokenCount": 2,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-seleccion-de-asiento",
     "xkcdNumber": 726,
     "publishedAt": "2010-04-12",
-    "title": "Selección de asiento",
+    "title": "Seat Selection",
     "titleEs": "Selección de asiento",
     "image": {
       "src": "https://es.xkcd.com/images/seat_selection.png",
       "width": 740,
       "height": 175,
       "aspectRatio": 4.2286,
-      "altEn": "Spanish-language xkcd comic #726: Selección de asiento"
+      "altEn": "Spanish-language xkcd comic #726: Seat Selection"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,103 +36,24 @@
     },
     "titleText": {
       "es": "No pulses en el ala.",
-      "en": "English title text pending review."
+      "en": "Don't click on the wing.",
+      "noteEn": "Both title attributes are preserved exactly. The Spanish raster localizes GATES as PUERTAS, CLICK as CLIC, and the final WOOOOOOO as YUUUUUUU. Vision omitted the seat numbers and letters, exit triangles, arrow, bracketing asterisks, and final shout, and misread PUERTAS as HERTAS."
     },
     "regions": [
       {
-        "id": "es-xkcd-seleccion-de-asiento:region-0001",
-        "labelEs": "HERTAS→",
+        "id": "es-xkcd-seleccion-de-asiento:first-seat-map",
+        "labelEs": "▲ 9 12 15 18 21 24 27 A B C D E F ▼ SELECCIONE EL ASIENTO DESEADO EN EL DIAGRAMA",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 29.994,
-          "y": 4.4602,
-          "width": 11.9038,
-          "height": 14.9433
+          "x": 0.2,
+          "y": 14,
+          "width": 28.4,
+          "height": 78.5
         },
         "words": [
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00001",
-            "text": "HERTAS",
-            "normalized": "hertas",
-            "bounds": [
-              {
-                "x": 29.994,
-                "y": 4.4602,
-                "width": 11.9038,
-                "height": 14.9433
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00001-46fc19d8"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00001-46fc19d8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-seleccion-de-asiento:region-0002",
-        "labelEs": "\"CLIC\"",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 48.6486,
-          "y": 50,
-          "width": 5.6757,
-          "height": 9.0909
-        },
-        "words": [
-          {
-            "id": "es-xkcd-seleccion-de-asiento:word-00002",
-            "text": "CLIC",
-            "normalized": "clic",
-            "bounds": [
-              {
-                "x": 48.6486,
-                "y": 50,
-                "width": 5.6757,
-                "height": 9.0909
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00002-ee263b0b"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00002-ee263b0b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0003",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-seleccion-de-asiento:region-0003",
-        "labelEs": "SELECCIONE EL ASIENTO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.973,
-          "y": 72.7273,
-          "width": 22.973,
-          "height": 9.0909
-        },
-        "words": [
-          {
-            "id": "es-xkcd-seleccion-de-asiento:word-00003",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w01",
             "text": "SELECCIONE",
             "normalized": "seleccione",
             "bounds": [
@@ -146,15 +61,17 @@
                 "x": 2.973,
                 "y": 72.7273,
                 "width": 11.6216,
-                "height": 9.0909
+                "height": 7.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00003-8962bb7d"
+              "word-seleccione--formal-command",
+              "grammar-formal-command",
+              "concept-airline-seat-map-cockpit-selection"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00004",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w02",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -162,15 +79,15 @@
                 "x": 14.8649,
                 "y": 72.7273,
                 "width": 2.4324,
-                "height": 9.0909
+                "height": 7.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00004-9efe56d9"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00005",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w03",
             "text": "ASIENTO",
             "normalized": "asiento",
             "bounds": [
@@ -178,115 +95,18 @@
                 "x": 17.5676,
                 "y": 72.7273,
                 "width": 8.3784,
-                "height": 9.0909
+                "height": 7.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00005-02f98527"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00003-8962bb7d",
-          "word-auto-es-xkcd-seleccion-de-asiento-00004-9efe56d9",
-          "word-auto-es-xkcd-seleccion-de-asiento-00005-02f98527"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-seleccion-de-asiento:region-0004",
-        "labelEs": "SELECCIONE EL ASIENTO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 51.3514,
-          "y": 72.7273,
-          "width": 22.973,
-          "height": 10.2273
-        },
-        "words": [
-          {
-            "id": "es-xkcd-seleccion-de-asiento:word-00006",
-            "text": "SELECCIONE",
-            "normalized": "seleccione",
-            "bounds": [
-              {
-                "x": 51.3514,
-                "y": 72.7273,
-                "width": 11.5541,
-                "height": 10.2273
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00006-574321ef"
+              "word-asiento",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-airline-seat-map-cockpit-selection"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00007",
-            "text": "EL",
-            "normalized": "el",
-            "bounds": [
-              {
-                "x": 63.2095,
-                "y": 72.7273,
-                "width": 2.4324,
-                "height": 10.2273
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00007-fd4b2711"
-            ]
-          },
-          {
-            "id": "es-xkcd-seleccion-de-asiento:word-00008",
-            "text": "ASIENTO",
-            "normalized": "asiento",
-            "bounds": [
-              {
-                "x": 65.9459,
-                "y": 72.7273,
-                "width": 8.3784,
-                "height": 10.2273
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00008-92f122cb"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00006-574321ef",
-          "word-auto-es-xkcd-seleccion-de-asiento-00007-fd4b2711",
-          "word-auto-es-xkcd-seleccion-de-asiento-00008-92f122cb"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-seleccion-de-asiento:region-0005",
-        "labelEs": "DESEADO EN EL DIAGRAMA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.1622,
-          "y": 81.8182,
-          "width": 24.3243,
-          "height": 9.0909
-        },
-        "words": [
-          {
-            "id": "es-xkcd-seleccion-de-asiento:word-00009",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w04",
             "text": "DESEADO",
             "normalized": "deseado",
             "bounds": [
@@ -294,15 +114,17 @@
                 "x": 2.1622,
                 "y": 81.8182,
                 "width": 8.6486,
-                "height": 9.0909
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00009-e2d34383"
+              "word-deseado",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00010",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w05",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -310,15 +132,15 @@
                 "x": 11.0811,
                 "y": 81.8182,
                 "width": 2.7027,
-                "height": 9.0909
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00010-c58142f8"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00011",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w06",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -326,15 +148,15 @@
                 "x": 14.0541,
                 "y": 81.8182,
                 "width": 2.7027,
-                "height": 9.0909
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00011-5a165a6c"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00012",
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:w07",
             "text": "DIAGRAMA",
             "normalized": "diagrama",
             "bounds": [
@@ -342,42 +164,664 @@
                 "x": 17.027,
                 "y": 81.8182,
                 "width": 9.4595,
-                "height": 9.0909
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00012-e8021bcb"
+              "word-diagrama",
+              "concept-airline-seat-map-cockpit-selection"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x01",
+            "text": "▲",
+            "reason": "symbol",
+            "rationale": "This triangular exit marker is diagram notation rather than Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 5.9,
+                "y": 19.1,
+                "width": 1.25,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x02",
+            "text": "9",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 13.1,
+                "y": 19.4,
+                "width": 0.95,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x03",
+            "text": "12",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 16,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x04",
+            "text": "15",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 18.45,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x05",
+            "text": "18",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 20.75,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x06",
+            "text": "21",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 22.95,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x07",
+            "text": "24",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 25.05,
+                "y": 19.7,
+                "width": 1.45,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x08",
+            "text": "27",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 27.25,
+                "y": 19.7,
+                "width": 1.25,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x09",
+            "text": "A",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 25,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x10",
+            "text": "B",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 28.4,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x11",
+            "text": "C",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 31.8,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x12",
+            "text": "D",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 36.2,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x13",
+            "text": "E",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 39.6,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x14",
+            "text": "F",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 12.25,
+                "y": 43,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:x15",
+            "text": "▼",
+            "reason": "symbol",
+            "rationale": "This triangular exit marker is diagram notation rather than Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 6.45,
+                "y": 46,
+                "width": 1.35,
+                "height": 4.2
+              }
+            ]
+          }
+        ],
+        "applications": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:app-formal-command",
+            "cardId": "grammar-formal-command",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:first-seat-map:w01"
+            ],
+            "exampleEs": "SELECCIONE",
+            "explanationEn": "Seleccione is seleccionar's polite command form for one person addressed as usted."
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:first-seat-map:w03",
+              "es-xkcd-seleccion-de-asiento:first-seat-map:w04"
+            ],
+            "exampleEs": "ASIENTO DESEADO",
+            "explanationEn": "The descriptive word deseado follows the noun asiento in the common neutral order."
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:first-seat-map:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:first-seat-map:w03",
+              "es-xkcd-seleccion-de-asiento:first-seat-map:w04"
+            ],
+            "exampleEs": "ASIENTO DESEADO",
+            "explanationEn": "Deseado uses masculine singular -o to match the masculine singular noun asiento."
+          }
+        ],
+        "cardIds": [
+          "word-seleccione--formal-command",
+          "grammar-formal-command",
+          "concept-airline-seat-map-cockpit-selection",
+          "word-el--article",
+          "word-asiento",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-deseado",
+          "word-en",
+          "word-diagrama"
+        ]
+      },
+      {
+        "id": "es-xkcd-seleccion-de-asiento:airport-gates",
+        "labelEs": "PUERTAS →",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 29.85,
+          "y": 0,
+          "width": 12.5,
+          "height": 20.5
+        },
+        "words": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:airport-gates:w01",
+            "text": "PUERTAS",
+            "normalized": "puertas",
+            "bounds": [
+              {
+                "x": 30.1351,
+                "y": 8,
+                "width": 8.65,
+                "height": 9.5
+              }
+            ],
+            "cardIds": [
+              "word-puertas--airport-gates"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:airport-gates:x01",
+            "text": "→",
+            "reason": "symbol",
+            "rationale": "This directional sign arrow is not Spanish lexical vocabulary.",
+            "bounds": [
+              {
+                "x": 39.1,
+                "y": 8.5,
+                "width": 2.7,
+                "height": 8.2
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00009-e2d34383",
-          "word-auto-es-xkcd-seleccion-de-asiento-00010-c58142f8",
-          "word-auto-es-xkcd-seleccion-de-asiento-00011-5a165a6c",
-          "word-auto-es-xkcd-seleccion-de-asiento-00012-e8021bcb"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0006",
-          "ocrConfidence": 1
-        }
+          "word-puertas--airport-gates"
+        ]
       },
       {
-        "id": "es-xkcd-seleccion-de-asiento:region-0006",
-        "labelEs": "DESEADO EN EL DIAGRAMA",
+        "id": "es-xkcd-seleccion-de-asiento:cockpit-click",
+        "labelEs": "▲ 9 12 15 18 21 24 27 A B C D E F ▼ * CLIC *",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 48.25,
+          "y": 14,
+          "width": 28.45,
+          "height": 56
+        },
+        "words": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:w01",
+            "text": "CLIC",
+            "normalized": "clic",
+            "bounds": [
+              {
+                "x": 50.27,
+                "y": 50.3,
+                "width": 4.45,
+                "height": 7.5
+              }
+            ],
+            "cardIds": [
+              "word-clic",
+              "concept-airline-seat-map-cockpit-selection"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x01",
+            "text": "▲",
+            "reason": "symbol",
+            "rationale": "This triangular exit marker is diagram notation rather than Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 54.1432,
+                "y": 19.1,
+                "width": 1.25,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x02",
+            "text": "9",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 61.3432,
+                "y": 19.4,
+                "width": 0.95,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x03",
+            "text": "12",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 64.2432,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x04",
+            "text": "15",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 66.6932,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x05",
+            "text": "18",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 68.9932,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x06",
+            "text": "21",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 71.1932,
+                "y": 19.4,
+                "width": 1.45,
+                "height": 4.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x07",
+            "text": "24",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 73.2932,
+                "y": 19.7,
+                "width": 1.45,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x08",
+            "text": "27",
+            "reason": "number",
+            "rationale": "This numeral is an airplane row label, not a Spanish word.",
+            "bounds": [
+              {
+                "x": 75.4932,
+                "y": 19.7,
+                "width": 1.2,
+                "height": 4.5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x09",
+            "text": "A",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 25,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x10",
+            "text": "B",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 28.4,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x11",
+            "text": "C",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 31.8,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x12",
+            "text": "D",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 36.2,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x13",
+            "text": "E",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 39.6,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x14",
+            "text": "F",
+            "reason": "symbol",
+            "rationale": "This single letter identifies a seat position in each numbered row rather than forming Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.4932,
+                "y": 43,
+                "width": 0.95,
+                "height": 3.3
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x15",
+            "text": "▼",
+            "reason": "symbol",
+            "rationale": "This triangular exit marker is diagram notation rather than Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 54.6932,
+                "y": 46,
+                "width": 1.35,
+                "height": 4.2
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x16",
+            "text": "*",
+            "reason": "symbol",
+            "rationale": "This asterisk brackets the click sound and is not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 48.92,
+                "y": 50.3,
+                "width": 1.1,
+                "height": 5
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:cockpit-click:x17",
+            "text": "*",
+            "reason": "symbol",
+            "rationale": "This asterisk brackets the click sound and is not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 54.86,
+                "y": 50.3,
+                "width": 1,
+                "height": 5
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": [
+          "word-clic",
+          "concept-airline-seat-map-cockpit-selection"
+        ]
+      },
+      {
+        "id": "es-xkcd-seleccion-de-asiento:second-instruction",
+        "labelEs": "SELECCIONE EL ASIENTO DESEADO EN EL DIAGRAMA",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 50.5405,
-          "y": 81.8182,
+          "y": 72.7273,
           "width": 24.3243,
-          "height": 10.2273
+          "height": 19.3182
         },
         "words": [
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00013",
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w01",
+            "text": "SELECCIONE",
+            "normalized": "seleccione",
+            "bounds": [
+              {
+                "x": 51.3514,
+                "y": 72.7273,
+                "width": 11.5541,
+                "height": 7.7
+              }
+            ],
+            "cardIds": [
+              "word-seleccione--formal-command",
+              "grammar-formal-command",
+              "concept-airline-seat-map-cockpit-selection"
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w02",
+            "text": "EL",
+            "normalized": "el",
+            "bounds": [
+              {
+                "x": 63.2095,
+                "y": 72.7273,
+                "width": 2.4324,
+                "height": 7.7
+              }
+            ],
+            "cardIds": [
+              "word-el--article"
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w03",
+            "text": "ASIENTO",
+            "normalized": "asiento",
+            "bounds": [
+              {
+                "x": 65.9459,
+                "y": 72.7273,
+                "width": 8.3784,
+                "height": 7.7
+              }
+            ],
+            "cardIds": [
+              "word-asiento",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-airline-seat-map-cockpit-selection"
+            ]
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w04",
             "text": "DESEADO",
             "normalized": "deseado",
             "bounds": [
@@ -385,15 +829,17 @@
                 "x": 50.5405,
                 "y": 81.8182,
                 "width": 8.5135,
-                "height": 10.2273
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00013-9f8afe30"
+              "word-deseado",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00014",
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w05",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -401,15 +847,15 @@
                 "x": 59.3581,
                 "y": 81.8182,
                 "width": 2.7365,
-                "height": 10.2273
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00014-36c3bd72"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00015",
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w06",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -417,15 +863,15 @@
                 "x": 62.3986,
                 "y": 81.8182,
                 "width": 2.7365,
-                "height": 10.2273
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00015-d941ecb5"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-seleccion-de-asiento:word-00016",
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:w07",
             "text": "DIAGRAMA",
             "normalized": "diagrama",
             "bounds": [
@@ -433,443 +879,447 @@
                 "x": 65.4392,
                 "y": 81.8182,
                 "width": 9.4257,
-                "height": 10.2273
+                "height": 8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-seleccion-de-asiento-00016-17727187"
+              "word-diagrama",
+              "concept-airline-seat-map-cockpit-selection"
             ]
           }
         ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:app-formal-command",
+            "cardId": "grammar-formal-command",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:second-instruction:w01"
+            ],
+            "exampleEs": "SELECCIONE",
+            "explanationEn": "Seleccione is seleccionar's polite command form for one person addressed as usted."
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:second-instruction:w03",
+              "es-xkcd-seleccion-de-asiento:second-instruction:w04"
+            ],
+            "exampleEs": "ASIENTO DESEADO",
+            "explanationEn": "The descriptive word deseado follows the noun asiento in the common neutral order."
+          },
+          {
+            "id": "es-xkcd-seleccion-de-asiento:second-instruction:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-seleccion-de-asiento:second-instruction:w03",
+              "es-xkcd-seleccion-de-asiento:second-instruction:w04"
+            ],
+            "exampleEs": "ASIENTO DESEADO",
+            "explanationEn": "Deseado uses masculine singular -o to match the masculine singular noun asiento."
+          }
+        ],
+        "cardIds": [
+          "word-seleccione--formal-command",
+          "grammar-formal-command",
+          "concept-airline-seat-map-cockpit-selection",
+          "word-el--article",
+          "word-asiento",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-deseado",
+          "word-en",
+          "word-diagrama"
+        ]
+      },
+      {
+        "id": "es-xkcd-seleccion-de-asiento:flight-shout",
+        "labelEs": "YUUUUUUU",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 78.4,
+          "y": 4.5,
+          "width": 21.6,
+          "height": 49
+        },
+        "words": [
+          {
+            "id": "es-xkcd-seleccion-de-asiento:flight-shout:w01",
+            "text": "YUUUUUUU",
+            "normalized": "yuuuuuuu",
+            "bounds": [
+              {
+                "x": 78.65,
+                "y": 5.7,
+                "width": 3.45,
+                "height": 14
+              },
+              {
+                "x": 80.9,
+                "y": 8.6,
+                "width": 3.25,
+                "height": 16
+              },
+              {
+                "x": 83.3,
+                "y": 12,
+                "width": 3.1,
+                "height": 15.5
+              },
+              {
+                "x": 85.7,
+                "y": 15.5,
+                "width": 3.25,
+                "height": 16
+              },
+              {
+                "x": 88.1,
+                "y": 19,
+                "width": 3.4,
+                "height": 16.5
+              },
+              {
+                "x": 90.6,
+                "y": 22.5,
+                "width": 3.4,
+                "height": 17.5
+              },
+              {
+                "x": 93.1,
+                "y": 26.5,
+                "width": 3.5,
+                "height": 18
+              },
+              {
+                "x": 95.6,
+                "y": 30.5,
+                "width": 4.4,
+                "height": 20
+              }
+            ],
+            "cardIds": [
+              "word-yuuuuuuu--excited-shout",
+              "concept-airline-seat-map-cockpit-selection"
+            ]
+          }
+        ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-seleccion-de-asiento-00013-9f8afe30",
-          "word-auto-es-xkcd-seleccion-de-asiento-00014-36c3bd72",
-          "word-auto-es-xkcd-seleccion-de-asiento-00015-d941ecb5",
-          "word-auto-es-xkcd-seleccion-de-asiento-00016-17727187"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0007",
-          "ocrConfidence": 1
-        }
+          "word-yuuuuuuu--excited-shout",
+          "concept-airline-seat-map-cockpit-selection"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-seleccion-de-asiento-00001-46fc19d8",
-      "word-auto-es-xkcd-seleccion-de-asiento-00002-ee263b0b",
-      "word-auto-es-xkcd-seleccion-de-asiento-00003-8962bb7d",
-      "word-auto-es-xkcd-seleccion-de-asiento-00004-9efe56d9",
-      "word-auto-es-xkcd-seleccion-de-asiento-00005-02f98527",
-      "word-auto-es-xkcd-seleccion-de-asiento-00006-574321ef",
-      "word-auto-es-xkcd-seleccion-de-asiento-00007-fd4b2711",
-      "word-auto-es-xkcd-seleccion-de-asiento-00008-92f122cb",
-      "word-auto-es-xkcd-seleccion-de-asiento-00009-e2d34383",
-      "word-auto-es-xkcd-seleccion-de-asiento-00010-c58142f8",
-      "word-auto-es-xkcd-seleccion-de-asiento-00011-5a165a6c",
-      "word-auto-es-xkcd-seleccion-de-asiento-00012-e8021bcb",
-      "word-auto-es-xkcd-seleccion-de-asiento-00013-9f8afe30",
-      "word-auto-es-xkcd-seleccion-de-asiento-00014-36c3bd72",
-      "word-auto-es-xkcd-seleccion-de-asiento-00015-d941ecb5",
-      "word-auto-es-xkcd-seleccion-de-asiento-00016-17727187"
+      "word-seleccione--formal-command",
+      "grammar-formal-command",
+      "concept-airline-seat-map-cockpit-selection",
+      "word-el--article",
+      "word-asiento",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "word-deseado",
+      "word-en",
+      "word-diagrama",
+      "word-puertas--airport-gates",
+      "word-clic",
+      "word-yuuuuuuu--excited-shout"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9444,
-      "lowConfidenceTokenCount": 2,
-      "rawOcrTokenCount": 18,
-      "filteredNonLatinTokenCount": 2,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00001-46fc19d8",
+      "id": "word-seleccione--formal-command",
       "kind": "word",
-      "promptEs": "hertas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "seleccione",
+      "answerEn": "select; choose (formal singular command)",
+      "noteEn": "Seleccione politely tells one person addressed as usted to choose something. It is the formal command of seleccionar.",
+      "example": {
+        "es": "Seleccione una opción.",
+        "en": "Select an option."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command",
+        "formal you",
+        "choice",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00001",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-1077f11e71da3a75f68d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-seleccion-de-asiento",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00002-ee263b0b",
+      "id": "grammar-formal-command",
+      "kind": "grammar",
+      "promptEs": "usted: hable / coma / escriba",
+      "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "tags": [
+        "A2",
+        "grammar",
+        "commands",
+        "formal"
+      ],
+      "questionEn": "How do you politely tell one person to do something in Spanish?",
+      "example": {
+        "es": "Pase, por favor.",
+        "en": "Come in, please."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-airline-seat-map-cockpit-selection",
+      "kind": "concept",
+      "promptEs": "selección de asiento · diagrama del avión · clic en la cabina",
+      "questionEn": "What visual mistake creates the joke?",
+      "answerEn": "The passenger treats the cockpit drawn on an airline seat map as a selectable seat, so clicking it puts her in the pilot's position.",
+      "noteEn": "Real airline diagrams show the aircraft around the passenger seats but do not make the cockpit selectable. The final panel turns the interface click into a literal assignment to fly the plane. The title text extends the same absurd interface rule to the wing.",
+      "tags": [
+        "concept",
+        "air travel",
+        "interface",
+        "seat map",
+        "visual joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-seleccion-de-asiento",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-el--article",
+      "kind": "word",
+      "promptEs": "el",
+      "answerEn": "the (masculine singular article)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-asiento",
+      "kind": "word",
+      "promptEs": "asiento",
+      "answerEn": "seat",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "vehicle",
+        "noun",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conduccion-agresiva",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-deseado",
+      "kind": "word",
+      "promptEs": "deseado",
+      "answerEn": "desired; wanted (masculine singular)",
+      "noteEn": "",
+      "tags": [
+        "word"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "in; on",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-diagrama",
+      "kind": "word",
+      "promptEs": "diagrama",
+      "answerEn": "diagram; chart",
+      "noteEn": "Diagrama is masculine despite its -a ending: el diagrama. Many Spanish nouns ending in -ma and derived from Greek follow this pattern.",
+      "example": {
+        "es": "El diagrama muestra tres pasos.",
+        "en": "The diagram shows three steps."
+      },
+      "tags": [
+        "word",
+        "diagram",
+        "masculine -ma noun",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diagramas-de-flujo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-puertas--airport-gates",
+      "kind": "word",
+      "promptEs": "puertas",
+      "answerEn": "gates (at an airport)",
+      "noteEn": "Puerta usually means a door. At an airport, puerta also means the numbered gate through which passengers board a flight; puertas is the plural.",
+      "example": {
+        "es": "Las puertas de embarque están a la derecha.",
+        "en": "The boarding gates are on the right."
+      },
+      "tags": [
+        "word",
+        "airport",
+        "travel",
+        "plural",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-seleccion-de-asiento",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-clic",
       "kind": "word",
       "promptEs": "clic",
       "answerEn": "click",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00004",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-5ab7da6d3cbdac6c8cb1",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00003-8962bb7d",
+      "id": "word-yuuuuuuu--excited-shout",
       "kind": "word",
-      "promptEs": "seleccione",
-      "answerEn": "to select",
-      "noteEn": "",
+      "promptEs": "yuuuuuuu",
+      "answerEn": "woo-hoo; wheee (an excited drawn-out shout)",
+      "noteEn": "The repeated u letters show that the vowel is held for a long time. Written sound effects can vary in spelling and length.",
+      "example": {
+        "es": "¡Yuuuuuuu, qué rápido!",
+        "en": "Wheee, how fast!"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "sound effect",
+        "excitement",
+        "interjection",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00005",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6f51da86e39951d1bac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00004-9efe56d9",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00006",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00005-02f98527",
-      "kind": "word",
-      "promptEs": "asiento",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00007",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5ba395147197f6cab0ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00006-574321ef",
-      "kind": "word",
-      "promptEs": "seleccione",
-      "answerEn": "to select",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00008",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6f51da86e39951d1bac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00007-fd4b2711",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00009",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00008-92f122cb",
-      "kind": "word",
-      "promptEs": "asiento",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00010",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5ba395147197f6cab0ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00009-e2d34383",
-      "kind": "word",
-      "promptEs": "deseado",
-      "answerEn": "wanted, wished, desired",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00011",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a7a64af932de2697d7a3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00010-c58142f8",
-      "kind": "word",
-      "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00012",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00011-5a165a6c",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00013",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00012-e8021bcb",
-      "kind": "word",
-      "promptEs": "diagrama",
-      "answerEn": "diagram",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00014",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-28e210a998d66a70a990",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00013-9f8afe30",
-      "kind": "word",
-      "promptEs": "deseado",
-      "answerEn": "wanted, wished, desired",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00015",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a7a64af932de2697d7a3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00014-36c3bd72",
-      "kind": "word",
-      "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00016",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00015-d941ecb5",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00017",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-seleccion-de-asiento-00016-17727187",
-      "kind": "word",
-      "promptEs": "diagrama",
-      "answerEn": "diagram",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-seleccion-de-asiento:ocr-token-00018",
-        "sourceLineId": "es-xkcd-seleccion-de-asiento:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-28e210a998d66a70a990",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-seleccion-de-asiento",
+        "contextualSenseReviewed": true
       }
     }
   ]

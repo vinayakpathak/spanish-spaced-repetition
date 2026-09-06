@@ -164,9 +164,9 @@ test("a revealed answer expands inside its clicked flashcard", async () => {
   assert.doesNotMatch(page, /card\.kind === "grammar" && card\.questionEn/);
   assert.match(page, /SPANISH EXPRESSION/);
   assert.match(page, /aria-controls=\{isSelected \? answerId : undefined\}/);
-  assert.match(page, /REVIEW NEEDED/);
-  assert.match(page, /Review needed/);
-  assert.match(page, /opening is still recorded so it participates in scheduling/);
+  assert.match(page, /DRAFT MEANING/);
+  assert.match(page, /fallback draft still needs review/i);
+  assert.match(page, /opening is recorded so it can participate in scheduling/);
   assert.doesNotMatch(page, /Preview only|Not scheduled · translation needs review/);
   assert.match(
     page.slice(revealStart, cardEnd),

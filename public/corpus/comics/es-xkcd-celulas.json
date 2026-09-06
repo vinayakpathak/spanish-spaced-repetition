@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-fc00d7b650562a00",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 26,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-celulas",
     "xkcdNumber": 1217,
     "publishedAt": "2013-05-27",
-    "title": "Células",
+    "title": "Cells",
     "titleEs": "Células",
     "image": {
       "src": "https://es.xkcd.com/images/cells.png",
       "width": 218,
       "height": 339,
       "aspectRatio": 0.6431,
-      "altEn": "Spanish-language xkcd comic #1217: Células"
+      "altEn": "Spanish-language xkcd comic #1217: Cells"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Ahora, si mata células cancerosas de forma selectiva en una placa de petri, puedes asegurar que es un gran avance para los que sufren de cáncer de placa de petri.",
-      "en": "English title text pending review."
+      "en": "Now, if it selectively kills cancer cells in a petri dish, you can be sure it's at least a great breakthrough for everyone suffering from petri dish cancer.",
+      "noteEn": "The Spanish and official English title attributes are preserved exactly. Spanish OCR misread the footer's UNA as LINA; the source raster clearly prints UNA. PETRI is audited as an excluded proper eponym rather than Spanish lexical vocabulary."
     },
     "regions": [
       {
-        "id": "es-xkcd-celulas:region-0001",
-        "labelEs": "CUANDO ALGUIEN AFIRME QUE",
+        "id": "es-xkcd-celulas:warning",
+        "labelEs": "CUANDO ALGUIEN AFIRME QUE UN MEDICAMENTO O VITAMINA TÍPICOS MATAN A LAS CÉLULAS CANCEROSAS EN UNA PLACA DE PETRI TEN EN CUENTA QUE",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 6.422,
-          "y": 1.1765,
-          "width": 85.3211,
-          "height": 5.2941
+          "x": 1,
+          "y": 0.5,
+          "width": 94,
+          "height": 24
         },
         "words": [
           {
-            "id": "es-xkcd-celulas:word-00001",
+            "id": "es-xkcd-celulas:warning:w01",
             "text": "CUANDO",
             "normalized": "cuando",
             "bounds": [
@@ -66,15 +61,16 @@
                 "x": 6.422,
                 "y": 1.1765,
                 "width": 22.7064,
-                "height": 5.2941
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00001-87da9485"
+              "word-cuando--when",
+              "grammar-cuando-future-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00002",
+            "id": "es-xkcd-celulas:warning:w02",
             "text": "ALGUIEN",
             "normalized": "alguien",
             "bounds": [
@@ -82,15 +78,15 @@
                 "x": 30.1606,
                 "y": 1.1765,
                 "width": 23.7385,
-                "height": 5.2941
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00002-8f0896c6"
+              "word-alguien"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00003",
+            "id": "es-xkcd-celulas:warning:w03",
             "text": "AFIRME",
             "normalized": "afirme",
             "bounds": [
@@ -98,15 +94,16 @@
                 "x": 54.9312,
                 "y": 1.1765,
                 "width": 22.7064,
-                "height": 5.2941
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00003-6afaa1cd"
+              "word-afirme--future-subjunctive",
+              "grammar-cuando-future-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00004",
+            "id": "es-xkcd-celulas:warning:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -114,42 +111,15 @@
                 "x": 78.6697,
                 "y": 1.1765,
                 "width": 13.0734,
-                "height": 5.2941
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00004-e2daceb8"
+              "word-que--clause-link"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-celulas-00001-87da9485",
-          "word-auto-es-xkcd-celulas-00002-8f0896c6",
-          "word-auto-es-xkcd-celulas-00003-6afaa1cd",
-          "word-auto-es-xkcd-celulas-00004-e2daceb8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-celulas:region-0002",
-        "labelEs": "UN MEDICAMENTO O VITAMINA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 4.5872,
-          "y": 5.8824,
-          "width": 88.0734,
-          "height": 4.7059
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-celulas:word-00005",
+            "id": "es-xkcd-celulas:warning:w05",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -157,15 +127,15 @@
                 "x": 4.5872,
                 "y": 5.8824,
                 "width": 9.1743,
-                "height": 4.7059
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00005-b0de0aac"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00006",
+            "id": "es-xkcd-celulas:warning:w06",
             "text": "MEDICAMENTO",
             "normalized": "medicamento",
             "bounds": [
@@ -173,15 +143,17 @@
                 "x": 14.6789,
                 "y": 5.8824,
                 "width": 42.2018,
-                "height": 4.7059
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00006-128fd209"
+              "word-medicamento",
+              "grammar-adjective-agreement-coordinated-nouns",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00007",
+            "id": "es-xkcd-celulas:warning:w07",
             "text": "O",
             "normalized": "o",
             "bounds": [
@@ -189,15 +161,16 @@
                 "x": 57.7982,
                 "y": 5.8824,
                 "width": 4.5872,
-                "height": 4.7059
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00007-b5007408"
+              "word-o",
+              "grammar-adjective-agreement-coordinated-nouns"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00008",
+            "id": "es-xkcd-celulas:warning:w08",
             "text": "VITAMINA",
             "normalized": "vitamina",
             "bounds": [
@@ -205,42 +178,17 @@
                 "x": 63.3028,
                 "y": 5.8824,
                 "width": 29.3578,
-                "height": 4.7059
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00008-39d217e7"
+              "word-vitamina",
+              "grammar-adjective-agreement-coordinated-nouns",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-celulas-00005-b0de0aac",
-          "word-auto-es-xkcd-celulas-00006-128fd209",
-          "word-auto-es-xkcd-celulas-00007-b5007408",
-          "word-auto-es-xkcd-celulas-00008-39d217e7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-celulas:region-0003",
-        "labelEs": "TÍPICOS \"MATAN A LAS CÉLULAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.7523,
-          "y": 9.4118,
-          "width": 91.7431,
-          "height": 5.8824
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-celulas:word-00009",
+            "id": "es-xkcd-celulas:warning:w09",
             "text": "TÍPICOS",
             "normalized": "típicos",
             "bounds": [
@@ -248,15 +196,16 @@
                 "x": 2.7523,
                 "y": 9.4118,
                 "width": 21.789,
-                "height": 5.8824
+                "height": 5.08
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00009-77c2ea30"
+              "word-típicos--mixed-nouns",
+              "grammar-adjective-agreement-coordinated-nouns"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00010",
+            "id": "es-xkcd-celulas:warning:w10",
             "text": "MATAN",
             "normalized": "matan",
             "bounds": [
@@ -264,15 +213,16 @@
                 "x": 25.6881,
                 "y": 9.4118,
                 "width": 24.0826,
-                "height": 5.8824
+                "height": 5.08
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00010-557b6c98"
+              "word-matan--kill",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00011",
+            "id": "es-xkcd-celulas:warning:w11",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -280,15 +230,15 @@
                 "x": 50.9174,
                 "y": 9.4118,
                 "width": 3.4404,
-                "height": 5.8824
+                "height": 5.08
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00011-1b369a5e"
+              "word-a--animate-direct-object"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00012",
+            "id": "es-xkcd-celulas:warning:w12",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -296,15 +246,15 @@
                 "x": 55.5046,
                 "y": 9.4118,
                 "width": 12.6147,
-                "height": 5.8824
+                "height": 5.08
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00012-c96017ad"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00013",
+            "id": "es-xkcd-celulas:warning:w13",
             "text": "CÉLULAS",
             "normalized": "células",
             "bounds": [
@@ -312,43 +262,18 @@
                 "x": 69.2661,
                 "y": 9.4118,
                 "width": 25.2294,
-                "height": 5.8824
+                "height": 5.08
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00013-804b0206"
+              "word-células",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-celulas-00009-77c2ea30",
-          "word-auto-es-xkcd-celulas-00010-557b6c98",
-          "word-auto-es-xkcd-celulas-00011-1b369a5e",
-          "word-auto-es-xkcd-celulas-00012-c96017ad",
-          "word-auto-es-xkcd-celulas-00013-804b0206"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-celulas:region-0004",
-        "labelEs": "CANCEROSAS EN UNA PLACA DE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.5046,
-          "y": 14.7059,
-          "width": 86.2385,
-          "height": 4.1176
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-celulas:word-00014",
+            "id": "es-xkcd-celulas:warning:w14",
             "text": "CANCEROSAS",
             "normalized": "cancerosas",
             "bounds": [
@@ -356,15 +281,18 @@
                 "x": 5.5046,
                 "y": 14.7059,
                 "width": 36.1238,
-                "height": 4.1176
+                "height": 3.9
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00014-93dcfad5"
+              "word-cancerosas",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00015",
+            "id": "es-xkcd-celulas:warning:w15",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -372,15 +300,15 @@
                 "x": 42.4312,
                 "y": 14.7059,
                 "width": 8.8303,
-                "height": 4.1176
+                "height": 3.9
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00015-6d64cff4"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00016",
+            "id": "es-xkcd-celulas:warning:w16",
             "text": "UNA",
             "normalized": "una",
             "bounds": [
@@ -388,15 +316,15 @@
                 "x": 52.0642,
                 "y": 14.7059,
                 "width": 12.0413,
-                "height": 4.1176
+                "height": 3.9
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00016-8ae2d4d4"
+              "word-una"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00017",
+            "id": "es-xkcd-celulas:warning:w17",
             "text": "PLACA",
             "normalized": "placa",
             "bounds": [
@@ -404,15 +332,17 @@
                 "x": 64.9083,
                 "y": 14.7059,
                 "width": 18.4633,
-                "height": 4.1176
+                "height": 3.9
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00017-8f9b46e1"
+              "word-placa--laboratory-dish",
+              "phrase-placa-de-petri",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00018",
+            "id": "es-xkcd-celulas:warning:w18",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -420,59 +350,16 @@
                 "x": 84.1743,
                 "y": 14.7059,
                 "width": 7.5688,
-                "height": 4.1176
+                "height": 3.9
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00018-7ff9d4ea"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-celulas-00014-93dcfad5",
-          "word-auto-es-xkcd-celulas-00015-6d64cff4",
-          "word-auto-es-xkcd-celulas-00016-8ae2d4d4",
-          "word-auto-es-xkcd-celulas-00017-8f9b46e1",
-          "word-auto-es-xkcd-celulas-00018-7ff9d4ea"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-celulas:region-0005",
-        "labelEs": "PETRI\", TEN EN CUENTA QUE:",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6.422,
-          "y": 18.8235,
-          "width": 84.4037,
-          "height": 5.2941
-        },
-        "words": [
-          {
-            "id": "es-xkcd-celulas:word-00019",
-            "text": "PETRI",
-            "normalized": "petri",
-            "bounds": [
-              {
-                "x": 6.422,
-                "y": 18.8235,
-                "width": 22.7064,
-                "height": 5.2941
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-celulas-00019-a7a922e3"
+              "word-de--named-after",
+              "phrase-placa-de-petri"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00020",
+            "id": "es-xkcd-celulas:warning:w19",
             "text": "TEN",
             "normalized": "ten",
             "bounds": [
@@ -480,15 +367,17 @@
                 "x": 30.1606,
                 "y": 18.8235,
                 "width": 12.3853,
-                "height": 5.2941
+                "height": 5.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00020-84becffe"
+              "word-ten--tener-en-cuenta-command",
+              "grammar-affirmative-tu-command",
+              "phrase-tener-en-cuenta"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00021",
+            "id": "es-xkcd-celulas:warning:w20",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -496,15 +385,16 @@
                 "x": 43.578,
                 "y": 18.8235,
                 "width": 8.2569,
-                "height": 5.2941
+                "height": 5.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00021-2065b766"
+              "word-en--fixed-tener-en-cuenta",
+              "phrase-tener-en-cuenta"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00022",
+            "id": "es-xkcd-celulas:warning:w21",
             "text": "CUENTA",
             "normalized": "cuenta",
             "bounds": [
@@ -512,15 +402,16 @@
                 "x": 52.867,
                 "y": 18.8235,
                 "width": 22.7064,
-                "height": 5.2941
+                "height": 5.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00022-de6a7562"
+              "word-cuenta--fixed-tener-en-cuenta",
+              "phrase-tener-en-cuenta"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00023",
+            "id": "es-xkcd-celulas:warning:w22",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -528,45 +419,152 @@
                 "x": 76.6055,
                 "y": 18.8235,
                 "width": 14.2202,
-                "height": 5.2941
+                "height": 5.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00023-6fdd31b1"
+              "word-que--clause-link"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-celulas-00019-a7a922e3",
-          "word-auto-es-xkcd-celulas-00020-84becffe",
-          "word-auto-es-xkcd-celulas-00021-2065b766",
-          "word-auto-es-xkcd-celulas-00022-de6a7562",
-          "word-auto-es-xkcd-celulas-00023-6fdd31b1"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-celulas:warning:x01",
+            "text": "PETRI",
+            "reason": "non-spanish-text",
+            "rationale": "Petri is the surname preserved in the eponymic laboratory term, not Spanish lexical vocabulary.",
+            "bounds": [
+              {
+                "x": 7.3394,
+                "y": 18.8235,
+                "width": 18.3486,
+                "height": 5.2
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-celulas:warning:app-cuando-future",
+            "cardId": "grammar-cuando-future-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w01",
+              "es-xkcd-celulas:warning:w03"
+            ],
+            "exampleEs": "CUANDO ALGUIEN AFIRME",
+            "explanationEn": "Cuando introduces a future occasion, and afirme is the special form used because the intervening subject's claim has not happened yet."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-mixed-agreement",
+            "cardId": "grammar-adjective-agreement-coordinated-nouns",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w06",
+              "es-xkcd-celulas:warning:w07",
+              "es-xkcd-celulas:warning:w08",
+              "es-xkcd-celulas:warning:w09"
+            ],
+            "exampleEs": "MEDICAMENTO O VITAMINA TÍPICOS",
+            "explanationEn": "Típicos is plural because it describes both nouns and masculine because the pair mixes grammatical genders."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-descriptive",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w13",
+              "es-xkcd-celulas:warning:w14"
+            ],
+            "exampleEs": "CÉLULAS CANCEROSAS",
+            "explanationEn": "Cancerosas follows the noun células and describes what kind of cells they are."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w13",
+              "es-xkcd-celulas:warning:w14"
+            ],
+            "exampleEs": "CÉLULAS CANCEROSAS",
+            "explanationEn": "Both words carry feminine plural endings because cancerosas describes células."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-petri",
+            "cardId": "phrase-placa-de-petri",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w17",
+              "es-xkcd-celulas:warning:w18"
+            ],
+            "exampleEs": "PLACA DE PETRI",
+            "explanationEn": "Placa names the dish and de introduces the excluded surname that completes the conventional laboratory term."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w19"
+            ],
+            "exampleEs": "TEN",
+            "explanationEn": "Ten is the irregular positive command addressed to one familiar person."
+          },
+          {
+            "id": "es-xkcd-celulas:warning:app-tener-en-cuenta",
+            "cardId": "phrase-tener-en-cuenta",
+            "participantWordIds": [
+              "es-xkcd-celulas:warning:w19",
+              "es-xkcd-celulas:warning:w20",
+              "es-xkcd-celulas:warning:w21"
+            ],
+            "exampleEs": "TEN EN CUENTA",
+            "explanationEn": "Ten is the command form of tener, while en cuenta stays fixed to express keeping something in mind."
+          }
+        ],
+        "cardIds": [
+          "word-cuando--when",
+          "grammar-cuando-future-subjunctive",
+          "word-alguien",
+          "word-afirme--future-subjunctive",
+          "word-que--clause-link",
+          "word-un",
+          "word-medicamento",
+          "grammar-adjective-agreement-coordinated-nouns",
+          "concept-petri-dish-cancer-cells-gun-joke",
+          "word-o",
+          "word-vitamina",
+          "word-típicos--mixed-nouns",
+          "word-matan--kill",
+          "word-a--animate-direct-object",
+          "word-las",
+          "word-células",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-cancerosas",
+          "word-en",
+          "word-una",
+          "word-placa--laboratory-dish",
+          "phrase-placa-de-petri",
+          "word-de--named-after",
+          "word-ten--tener-en-cuenta-command",
+          "grammar-affirmative-tu-command",
+          "phrase-tener-en-cuenta",
+          "word-en--fixed-tener-en-cuenta",
+          "word-cuenta--fixed-tener-en-cuenta"
+        ]
       },
       {
-        "id": "es-xkcd-celulas:region-0006",
-        "labelEs": "LINA PISTOLA TAMBIÉN.",
+        "id": "es-xkcd-celulas:footer",
+        "labelEs": "UNA PISTOLA TAMBIÉN",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 14.6789,
-          "y": 94.7059,
-          "width": 68.8073,
-          "height": 4.7059
+          "x": 12,
+          "y": 94,
+          "width": 74,
+          "height": 6
         },
         "words": [
           {
-            "id": "es-xkcd-celulas:word-00024",
-            "text": "LINA",
-            "normalized": "lina",
+            "id": "es-xkcd-celulas:footer:w01",
+            "text": "UNA",
+            "normalized": "una",
             "bounds": [
               {
                 "x": 14.6789,
@@ -576,11 +574,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00024-31dcab46"
+              "word-una"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00025",
+            "id": "es-xkcd-celulas:footer:w02",
             "text": "PISTOLA",
             "normalized": "pistola",
             "bounds": [
@@ -592,11 +590,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00025-91e2b02f"
+              "word-pistola",
+              "concept-petri-dish-cancer-cells-gun-joke"
             ]
           },
           {
-            "id": "es-xkcd-celulas:word-00026",
+            "id": "es-xkcd-celulas:footer:w03",
             "text": "TAMBIÉN",
             "normalized": "también",
             "bounds": [
@@ -608,688 +607,737 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-celulas-00026-6cc7bf1e"
+              "word-también"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-celulas-00024-31dcab46",
-          "word-auto-es-xkcd-celulas-00025-91e2b02f",
-          "word-auto-es-xkcd-celulas-00026-6cc7bf1e"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-celulas:ocr-line-0006",
-          "ocrConfidence": 1
-        }
+          "word-una",
+          "word-pistola",
+          "concept-petri-dish-cancer-cells-gun-joke",
+          "word-también"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-celulas-00001-87da9485",
-      "word-auto-es-xkcd-celulas-00002-8f0896c6",
-      "word-auto-es-xkcd-celulas-00003-6afaa1cd",
-      "word-auto-es-xkcd-celulas-00004-e2daceb8",
-      "word-auto-es-xkcd-celulas-00005-b0de0aac",
-      "word-auto-es-xkcd-celulas-00006-128fd209",
-      "word-auto-es-xkcd-celulas-00007-b5007408",
-      "word-auto-es-xkcd-celulas-00008-39d217e7",
-      "word-auto-es-xkcd-celulas-00009-77c2ea30",
-      "word-auto-es-xkcd-celulas-00010-557b6c98",
-      "word-auto-es-xkcd-celulas-00011-1b369a5e",
-      "word-auto-es-xkcd-celulas-00012-c96017ad",
-      "word-auto-es-xkcd-celulas-00013-804b0206",
-      "word-auto-es-xkcd-celulas-00014-93dcfad5",
-      "word-auto-es-xkcd-celulas-00015-6d64cff4",
-      "word-auto-es-xkcd-celulas-00016-8ae2d4d4",
-      "word-auto-es-xkcd-celulas-00017-8f9b46e1",
-      "word-auto-es-xkcd-celulas-00018-7ff9d4ea",
-      "word-auto-es-xkcd-celulas-00019-a7a922e3",
-      "word-auto-es-xkcd-celulas-00020-84becffe",
-      "word-auto-es-xkcd-celulas-00021-2065b766",
-      "word-auto-es-xkcd-celulas-00022-de6a7562",
-      "word-auto-es-xkcd-celulas-00023-6fdd31b1",
-      "word-auto-es-xkcd-celulas-00024-31dcab46",
-      "word-auto-es-xkcd-celulas-00025-91e2b02f",
-      "word-auto-es-xkcd-celulas-00026-6cc7bf1e"
+      "word-cuando--when",
+      "grammar-cuando-future-subjunctive",
+      "word-alguien",
+      "word-afirme--future-subjunctive",
+      "word-que--clause-link",
+      "word-un",
+      "word-medicamento",
+      "grammar-adjective-agreement-coordinated-nouns",
+      "concept-petri-dish-cancer-cells-gun-joke",
+      "word-o",
+      "word-vitamina",
+      "word-típicos--mixed-nouns",
+      "word-matan--kill",
+      "word-a--animate-direct-object",
+      "word-las",
+      "word-células",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "word-cancerosas",
+      "word-en",
+      "word-una",
+      "word-placa--laboratory-dish",
+      "phrase-placa-de-petri",
+      "word-de--named-after",
+      "word-ten--tener-en-cuenta-command",
+      "grammar-affirmative-tu-command",
+      "phrase-tener-en-cuenta",
+      "word-en--fixed-tener-en-cuenta",
+      "word-cuenta--fixed-tener-en-cuenta",
+      "word-pistola",
+      "word-también"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 26,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-celulas-00001-87da9485",
+      "id": "word-cuando--when",
       "kind": "word",
       "promptEs": "cuando",
       "answerEn": "when",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "connector"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00001",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1a0729f2a6ed16257ff5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00002-8f0896c6",
+      "id": "grammar-cuando-future-subjunctive",
+      "kind": "grammar",
+      "promptEs": "cuando + presente de subjuntivo para un hecho futuro",
+      "questionEn": "After cuando, how do you describe an event that has not happened yet?",
+      "answerEn": "Use cuando followed by a present subjunctive form for the future event; put the main result in an ordinary future or command form.",
+      "noteEn": "The subjunctive is a special verb form used here because the time of the future event is not yet a fact. For example, mover changes to mueva. Spanish does not normally put a future-tense form immediately after cuando in this pattern.",
+      "example": {
+        "es": "Te llamaré cuando llegue.",
+        "en": "I will call you when I arrive."
+      },
+      "tags": [
+        "grammar",
+        "time clauses",
+        "subjunctive",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-alguien",
       "kind": "word",
       "promptEs": "alguien",
       "answerEn": "someone; anyone",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00002",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ceeda0e109e9a7d62372",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00003-6afaa1cd",
+      "id": "word-afirme--future-subjunctive",
       "kind": "word",
       "promptEs": "afirme",
-      "answerEn": "to state, assert",
-      "noteEn": "",
+      "answerEn": "claims; asserts (a future-triggered special form)",
+      "noteEn": "Afirme is the present subjunctive form of afirmar for one person. After cuando, it presents a future claim whose occurrence is not yet a fact.",
+      "example": {
+        "es": "Escucha cuando ella afirme algo distinto.",
+        "en": "Listen when she claims something different."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "subjunctive",
+        "future time",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00003",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0dc94fece5fa00ec45c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00004-e2daceb8",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00004",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00005-b0de0aac",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00005",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00006-128fd209",
+      "id": "word-medicamento",
       "kind": "word",
       "promptEs": "medicamento",
-      "answerEn": "medicine, medicament",
+      "answerEn": "medicine; medication",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "health",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00006",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-647bfaaf05a1278b4f4b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00007-b5007408",
+      "id": "grammar-adjective-agreement-coordinated-nouns",
+      "kind": "grammar",
+      "promptEs": "sustantivos coordinados + adjetivo plural",
+      "questionEn": "How does one adjective agree when it describes two nouns joined by ‘and’ or ‘or’ in Spanish?",
+      "answerEn": "Use a plural adjective. If the nouns do not all share feminine gender, the adjective normally takes the masculine plural form.",
+      "noteEn": "A noun is a naming word. Coordinated nouns are joined by y (‘and’) or o (‘or’). The describing word changes to match the group, so an adjective such as típico normally becomes típicos for a mixed-gender group.",
+      "example": {
+        "es": "El libro y la película son divertidos.",
+        "en": "The book and the film are entertaining."
+      },
+      "tags": [
+        "grammar",
+        "adjective agreement",
+        "coordination",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-petri-dish-cancer-cells-gun-joke",
+      "kind": "concept",
+      "promptEs": "células cancerosas · placa de Petri · pistola",
+      "questionEn": "Why does the gun undermine the claim about killing cancer cells in a dish?",
+      "answerEn": "Many things can kill isolated cells in a laboratory dish; that alone does not show that they are safe or useful cancer treatments in a person.",
+      "noteEn": "The setup warns about impressive-sounding claims that a medicine or vitamin kills cancer cells in vitro—that is, outside a living body in laboratory conditions. A gun can also destroy those cells, exposing how little the claim proves without evidence about selectivity, dosage, safety, and effects in a living organism.",
+      "tags": [
+        "concept",
+        "cancer research",
+        "in vitro",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-o",
       "kind": "word",
       "promptEs": "o",
-      "answerEn": "Meaning needs review",
+      "answerEn": "or",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00007",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65c74c15a686187bb6bb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00008-39d217e7",
+      "id": "word-vitamina",
       "kind": "word",
       "promptEs": "vitamina",
       "answerEn": "vitamin",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "health",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00008",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-69d2840643afc9c4fc37",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00009-77c2ea30",
+      "id": "word-típicos--mixed-nouns",
       "kind": "word",
       "promptEs": "típicos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "typical; ordinary",
+      "noteEn": "Típicos is masculine plural. When one adjective describes a mixed-gender group of nouns, Spanish convention normally uses the masculine plural form.",
+      "example": {
+        "es": "Compramos pan y fruta frescos.",
+        "en": "We buy fresh bread and fruit."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "agreement",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00009",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c5d3f9f2f1465f337f94",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00010-557b6c98",
+      "id": "word-matan--kill",
       "kind": "word",
       "promptEs": "matan",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "they kill",
+      "noteEn": "Matan is a present form of matar for a plural subject.",
+      "example": {
+        "es": "Estas sustancias matan las bacterias.",
+        "en": "These substances kill the bacteria."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "present",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00010",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-112d8a4ffd6d69fcb424",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00011-1b369a5e",
+      "id": "word-a--animate-direct-object",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; marks an animate direct object",
+      "noteEn": "Spanish sometimes puts a before a direct object treated as animate or person-like. This can extend beyond people when animals, living things, or personified entities receive that treatment.",
+      "example": {
+        "es": "El cuento presenta a los árboles como personajes.",
+        "en": "The story presents the trees as characters."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "animate object",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00011",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00012-c96017ad",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00012",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00013-804b0206",
+      "id": "word-células",
       "kind": "word",
       "promptEs": "células",
-      "answerEn": "cell",
+      "answerEn": "cells",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "biology",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00013",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f7d324ca35610c9d4ec7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00014-93dcfad5",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cancerosas",
       "kind": "word",
       "promptEs": "cancerosas",
       "answerEn": "cancerous",
-      "noteEn": "",
+      "noteEn": "Cancerosas is the feminine plural form, used with a feminine plural noun.",
+      "example": {
+        "es": "El laboratorio estudia células cancerosas.",
+        "en": "The laboratory studies cancerous cells."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "health",
+        "adjective",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00014",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-66d6e1ec7d7ddd1cba09",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00015-6d64cff4",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00015",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00016-8ae2d4d4",
+      "id": "word-una",
       "kind": "word",
       "promptEs": "una",
       "answerEn": "a; an (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00016",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-161f0e5ed45f6d514dc2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00017-8f9b46e1",
+      "id": "word-placa--laboratory-dish",
       "kind": "word",
       "promptEs": "placa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "dish; laboratory culture plate",
+      "noteEn": "In laboratory language, placa can mean a shallow dish used to grow or observe cells. This is distinct from its everyday meanings such as plate, plaque, or sign.",
+      "example": {
+        "es": "La técnica coloca la muestra en una placa.",
+        "en": "The technician places the sample in a dish."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "laboratory",
+        "noun",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00017",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-623b300e658c33703e36",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00018-7ff9d4ea",
+      "id": "phrase-placa-de-petri",
+      "kind": "phrase",
+      "promptEs": "placa de Petri",
+      "questionEn": "What is the usual Spanish name for the shallow laboratory dish used to grow cells?",
+      "answerEn": "Use placa de Petri.",
+      "noteEn": "Placa names the laboratory dish, and de Petri preserves the surname of Julius Richard Petri, after whom it is named. Petri stays capitalized and unchanged.",
+      "example": {
+        "es": "Cultivaron bacterias en una placa de Petri.",
+        "en": "They grew bacteria in a Petri dish."
+      },
+      "tags": [
+        "phrase",
+        "laboratory",
+        "biology",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--named-after",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "of; named after",
+      "noteEn": "De can join an invention, theorem, or named object to the person whose name it bears. English may instead use an adjective based on that name.",
+      "example": {
+        "es": "Estudiamos las leyes de Newton.",
+        "en": "We study Newton's laws."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "names"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00018",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00019-a7a922e3",
-      "kind": "word",
-      "promptEs": "petri",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00019",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6c733452910a839d5e61",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-celulas-00020-84becffe",
+      "id": "word-ten--tener-en-cuenta-command",
       "kind": "word",
       "promptEs": "ten",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "keep; bear (in mind)",
+      "noteEn": "Ten is the positive familiar command form of tener. In tener en cuenta it tells one familiar person to consider something.",
+      "example": {
+        "es": "Ten esto en cuenta mañana.",
+        "en": "Keep this in mind tomorrow."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command",
+        "tener",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00020",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e4432baa90819aaef51d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00021-2065b766",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
+      "tags": [
+        "grammar",
+        "commands",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-tener-en-cuenta",
+      "kind": "phrase",
+      "promptEs": "tener en cuenta",
+      "questionEn": "How do you say that someone keeps a fact in mind or takes it into account?",
+      "answerEn": "Use a form of tener followed by en cuenta.",
+      "noteEn": "Only tener changes for the person or time; en cuenta stays fixed. The expression is used when a fact should affect a decision or remain in someone's thoughts.",
+      "example": {
+        "es": "Tendremos en cuenta tu opinión.",
+        "en": "We will take your opinion into account."
+      },
+      "tags": [
+        "phrase",
+        "consideration",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en--fixed-tener-en-cuenta",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
+      "answerEn": "no separate English word; fixed part of tener en cuenta",
+      "noteEn": "En links tener to cuenta in the fixed expression tener en cuenta, ‘to keep in mind’ or ‘to take into account.’",
+      "example": {
+        "es": "Tenemos en cuenta el precio.",
+        "en": "We take the price into account."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "preposition",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00021",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00022-de6a7562",
+      "id": "word-cuenta--fixed-tener-en-cuenta",
       "kind": "word",
       "promptEs": "cuenta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "account; consideration (in tener en cuenta)",
+      "noteEn": "In the fixed expression tener en cuenta, cuenta helps express considering or remembering a relevant fact.",
+      "example": {
+        "es": "Ten en cuenta el horario.",
+        "en": "Keep the schedule in mind."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00022",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e69ecb0f9b3fb9dd37c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-celulas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00023-6fdd31b1",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00023",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-celulas-00024-31dcab46",
-      "kind": "word",
-      "promptEs": "lina",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00024",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9d8d7dcb8f6d4d71ffc8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-celulas-00025-91e2b02f",
+      "id": "word-pistola",
       "kind": "word",
       "promptEs": "pistola",
-      "answerEn": "Meaning needs review",
+      "answerEn": "pistol; handgun",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "object",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00025",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5ea6f2fb3c31a7660933",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-macgyver-se-pone-vago",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-celulas-00026-6cc7bf1e",
+      "id": "word-también",
       "kind": "word",
       "promptEs": "también",
       "answerEn": "also; too",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-celulas:ocr-token-00026",
-        "sourceLineId": "es-xkcd-celulas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-20af4511c75c6d7b22b4",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     }
   ]

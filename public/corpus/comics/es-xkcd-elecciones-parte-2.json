@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-5d0e7522210807f2",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9089,
-    "lowConfidenceTokenCount": 14,
-    "rawOcrTokenCount": 79,
-    "filteredNonLatinTokenCount": 18,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-elecciones-parte-2",
     "xkcdNumber": 265,
     "publishedAt": "2007-05-21",
-    "title": "Elecciones: Parte 2",
+    "title": "Choices: Part 2",
     "titleEs": "Elecciones: Parte 2",
     "image": {
       "src": "https://es.xkcd.com/images/choices_part_2.png",
       "width": 600,
       "height": 699,
       "aspectRatio": 0.8584,
-      "altEn": "Spanish-language xkcd comic #265: Elecciones: Parte 2"
+      "altEn": "Spanish-language xkcd comic #265: Choices: Part 2"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,52 +36,13 @@
     },
     "titleText": {
       "es": "¡Quizás escriba algún día un artículo en la Wikipedia sobre este lugar! Espera, maldita sea, investigación original.",
-      "en": "English title text pending review."
+      "en": "Maybe someday I will write a Wikipedia article about this place! Wait, damn it—original research.",
+      "noteEn": "Wikipedia articles are expected to summarize published sources rather than introduce an editor's own original research."
     },
     "regions": [
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0001",
-        "labelEs": "•J0°",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 69,
-          "y": 4.2857,
-          "width": 5.3333,
-          "height": 3.1429
-        },
-        "words": [
-          {
-            "id": "es-xkcd-elecciones-parte-2:word-00001",
-            "text": "J0",
-            "normalized": "j0",
-            "bounds": [
-              {
-                "x": 69,
-                "y": 4.2857,
-                "width": 5.3333,
-                "height": 3.1429
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00001-12a55b95"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00001-12a55b95"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0001",
-          "ocrConfidence": 0.3
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0002",
-        "labelEs": "CAPÍTULO I5: RELATIVIDAD ESPECIAL",
+        "id": "es-xkcd-elecciones-parte-2:textbook-chapter",
+        "labelEs": "CAPÍTULO 15: RELATIVIDAD ESPECIAL",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -98,7 +53,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00002",
+            "id": "es-xkcd-elecciones-parte-2:textbook-chapter:w01",
             "text": "CAPÍTULO",
             "normalized": "capítulo",
             "bounds": [
@@ -110,27 +65,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00002-4174a7d1"
+              "word-capítulo"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00003",
-            "text": "I5",
-            "normalized": "i5",
-            "bounds": [
-              {
-                "x": 27.6667,
-                "y": 5.1429,
-                "width": 3.6667,
-                "height": 2.2857
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00003-a7b0c546"
-            ]
-          },
-          {
-            "id": "es-xkcd-elecciones-parte-2:word-00004",
+            "id": "es-xkcd-elecciones-parte-2:textbook-chapter:w02",
             "text": "RELATIVIDAD",
             "normalized": "relatividad",
             "bounds": [
@@ -142,11 +81,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00004-410e5900"
+              "word-relatividad",
+              "concept-special-relativity-time-dilation"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00005",
+            "id": "es-xkcd-elecciones-parte-2:textbook-chapter:w03",
             "text": "ESPECIAL",
             "normalized": "especial",
             "bounds": [
@@ -158,26 +98,37 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00005-6dbdf65d"
+              "word-especial",
+              "concept-special-relativity-time-dilation"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:textbook-chapter:excluded-number",
+            "text": "15",
+            "reason": "number",
+            "rationale": "This is the textbook chapter number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 27.6667,
+                "y": 5.1429,
+                "width": 3.6667,
+                "height": 2.2857
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00002-4174a7d1",
-          "word-auto-es-xkcd-elecciones-parte-2-00003-a7b0c546",
-          "word-auto-es-xkcd-elecciones-parte-2-00004-410e5900",
-          "word-auto-es-xkcd-elecciones-parte-2-00005-6dbdf65d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+          "word-capítulo",
+          "word-relatividad",
+          "concept-special-relativity-time-dilation",
+          "word-especial"
+        ]
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0003",
+        "id": "es-xkcd-elecciones-parte-2:textbook-problem-heading",
         "labelEs": "PROBLEMA 1:",
         "translationEn": "",
         "noteEn": "",
@@ -189,7 +140,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00006",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem-heading:w01",
             "text": "PROBLEMA",
             "normalized": "problema",
             "bounds": [
@@ -201,35 +152,45 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00006-3796588c"
+              "word-problema"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem-heading:excluded-number",
+            "text": "1",
+            "reason": "number",
+            "rationale": "This is the textbook problem number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 28.9167,
+                "y": 9.1429,
+                "width": 2.0833,
+                "height": 2
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00006-3796588c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+          "word-problema"
+        ]
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0004",
-        "labelEs": "DOS NAVES ESPACIALES SE",
+        "id": "es-xkcd-elecciones-parte-2:textbook-problem",
+        "labelEs": "DOS NAVES ESPACIALES SE TRANSMITEN SENDOS MENSAJES MIENTRAS PASAN A UNAS VELOCIDADES CONSTANTES...",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 16.6667,
           "y": 12,
-          "width": 27.6667,
-          "height": 1.7143
+          "width": 33.3333,
+          "height": 7.7143
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00007",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w01",
             "text": "DOS",
             "normalized": "dos",
             "bounds": [
@@ -241,11 +202,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00007-f7c2b2d4"
+              "word-dos"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00008",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w02",
             "text": "NAVES",
             "normalized": "naves",
             "bounds": [
@@ -257,11 +218,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00008-a95dc9dc"
+              "word-naves--spacecraft"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00009",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w03",
             "text": "ESPACIALES",
             "normalized": "espaciales",
             "bounds": [
@@ -273,11 +234,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00009-e7e89946"
+              "word-espaciales--outer-space"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00010",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w04",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -289,38 +250,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00010-f19af99d"
+              "word-se--reciprocal",
+              "grammar-reciprocal-se"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00007-f7c2b2d4",
-          "word-auto-es-xkcd-elecciones-parte-2-00008-a95dc9dc",
-          "word-auto-es-xkcd-elecciones-parte-2-00009-e7e89946",
-          "word-auto-es-xkcd-elecciones-parte-2-00010-f19af99d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0005",
-        "labelEs": "TRANSMITEN SENDOS MENSAJES",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 16.6667,
-          "y": 14,
-          "width": 33.3333,
-          "height": 1.7143
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00011",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w05",
             "text": "TRANSMITEN",
             "normalized": "transmiten",
             "bounds": [
@@ -332,11 +267,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00011-6378cbfb"
+              "word-transmiten",
+              "grammar-reciprocal-se"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00012",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w06",
             "text": "SENDOS",
             "normalized": "sendos",
             "bounds": [
@@ -348,11 +284,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00012-bf26d0c5"
+              "word-sendos"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00013",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w07",
             "text": "MENSAJES",
             "normalized": "mensajes",
             "bounds": [
@@ -364,37 +300,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00013-e2c78ce8"
+              "word-mensajes"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00011-6378cbfb",
-          "word-auto-es-xkcd-elecciones-parte-2-00012-bf26d0c5",
-          "word-auto-es-xkcd-elecciones-parte-2-00013-e2c78ce8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0006",
-        "labelEs": "MIENTRAS PASAN A UNAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 16.6667,
-          "y": 16,
-          "width": 26,
-          "height": 1.4286
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00014",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w08",
             "text": "MIENTRAS",
             "normalized": "mientras",
             "bounds": [
@@ -406,11 +316,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00014-da6dd587"
+              "word-mientras"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00015",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w09",
             "text": "PASAN",
             "normalized": "pasan",
             "bounds": [
@@ -422,11 +332,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00015-af2f46e1"
+              "word-pasan--move-past"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00016",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w10",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -438,11 +348,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00016-0fbdfacd"
+              "word-a--measurement"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00017",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w11",
             "text": "UNAS",
             "normalized": "unas",
             "bounds": [
@@ -454,38 +364,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00017-402f7b1c"
+              "word-unas"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00014-da6dd587",
-          "word-auto-es-xkcd-elecciones-parte-2-00015-af2f46e1",
-          "word-auto-es-xkcd-elecciones-parte-2-00016-0fbdfacd",
-          "word-auto-es-xkcd-elecciones-parte-2-00017-402f7b1c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0007",
-        "labelEs": "VELOCIDADES CONSTANTES...",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 16.6667,
-          "y": 17.4286,
-          "width": 29.3333,
-          "height": 2.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00018",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w12",
             "text": "VELOCIDADES",
             "normalized": "velocidades",
             "bounds": [
@@ -497,11 +380,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00018-ada5c3de"
+              "word-velocidades",
+              "concept-speed-of-light-c"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00019",
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:w13",
             "text": "CONSTANTES",
             "normalized": "constantes",
             "bounds": [
@@ -513,24 +397,78 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00019-4e0fb4bc"
+              "word-constantes"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00018-ada5c3de",
-          "word-auto-es-xkcd-elecciones-parte-2-00019-4e0fb4bc"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:textbook-problem:app-reciprocal",
+            "cardId": "grammar-reciprocal-se",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:textbook-problem:w04",
+              "es-xkcd-elecciones-parte-2:textbook-problem:w05"
+            ],
+            "exampleEs": "SE TRANSMITEN",
+            "explanationEn": "Se marks the exchange between the two spacecraft, and transmiten is the plural verb form for that pair."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0007",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-dos",
+          "word-naves--spacecraft",
+          "word-espaciales--outer-space",
+          "word-se--reciprocal",
+          "grammar-reciprocal-se",
+          "word-transmiten",
+          "word-sendos",
+          "word-mensajes",
+          "word-mientras",
+          "word-pasan--move-past",
+          "word-a--measurement",
+          "word-unas",
+          "word-velocidades",
+          "concept-speed-of-light-c",
+          "word-constantes"
+        ]
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0008",
+        "id": "es-xkcd-elecciones-parte-2:reaction",
+        "labelEs": "*JO*",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 69,
+          "y": 4.2857,
+          "width": 5.3333,
+          "height": 3.1429
+        },
+        "words": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:reaction:w01",
+            "text": "JO",
+            "normalized": "jo",
+            "bounds": [
+              {
+                "x": 69,
+                "y": 4.2857,
+                "width": 5.3333,
+                "height": 3.1429
+              }
+            ],
+            "cardIds": [
+              "word-jo--frustration"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-jo--frustration"
+        ]
+      },
+      {
+        "id": "es-xkcd-elecciones-parte-2:meanwhile-caption",
         "labelEs": "MIENTRAS:",
         "translationEn": "",
         "noteEn": "",
@@ -542,7 +480,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00020",
+            "id": "es-xkcd-elecciones-parte-2:meanwhile-caption:w01",
             "text": "MIENTRAS",
             "normalized": "mientras",
             "bounds": [
@@ -554,63 +492,18 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00020-9c383514"
+              "word-mientras--meanwhile"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00020-9c383514"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0008",
-          "ocrConfidence": 1
-        }
+          "word-mientras--meanwhile"
+        ]
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0009",
-        "labelEs": "0,2 C",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 60.3333,
-          "y": 31.7143,
-          "width": 6,
-          "height": 2.5714
-        },
-        "words": [
-          {
-            "id": "es-xkcd-elecciones-parte-2:word-00021",
-            "text": "C",
-            "normalized": "c",
-            "bounds": [
-              {
-                "x": 64.4583,
-                "y": 31.7143,
-                "width": 1.875,
-                "height": 2.5714
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00021-461138d4"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00021-461138d4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0010",
+        "id": "es-xkcd-elecciones-parte-2:first-space-panel-left-speed",
         "labelEs": "0,2 c",
         "translationEn": "",
         "noteEn": "",
@@ -620,49 +513,95 @@
           "width": 7.6667,
           "height": 2.8571
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00022",
-            "text": "c",
-            "normalized": "c",
+            "id": "es-xkcd-elecciones-parte-2:first-space-panel-left-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary.",
             "bounds": [
+              {
+                "x": 23,
+                "y": 40.8571,
+                "width": 4.5833,
+                "height": 2.8571
+              },
+              {
+                "x": 23,
+                "y": 40.8571,
+                "width": 4.5833,
+                "height": 2.8571
+              },
               {
                 "x": 28,
                 "y": 40.8571,
                 "width": 2.6667,
                 "height": 2.8571
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00022-26c4c4ba"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00022-26c4c4ba"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0010",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0011",
-        "labelEs": "OBSERVAMOS QUE SU VELOCIDAD",
+        "id": "es-xkcd-elecciones-parte-2:first-space-panel-right-speed",
+        "labelEs": "0,2 c",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 58,
-          "y": 51.1429,
-          "width": 37,
+          "x": 60.3333,
+          "y": 31.7143,
+          "width": 6,
           "height": 2.5714
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:first-space-panel-right-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 60.3333,
+                "y": 31.7143,
+                "width": 3.75,
+                "height": 2.5714
+              },
+              {
+                "x": 60.3333,
+                "y": 31.7143,
+                "width": 3.75,
+                "height": 2.5714
+              },
+              {
+                "x": 64.4583,
+                "y": 31.7143,
+                "width": 1.875,
+                "height": 2.5714
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": []
+      },
+      {
+        "id": "es-xkcd-elecciones-parte-2:spacecraft-message",
+        "labelEs": "OBSERVAMOS QUE SU VELOCIDAD ES UN 38,5% DE LA NUESTRA Y SU TIEMPO CORRE A UN RITMO QUE ES UN 92,3% DEL NUESTRO. ¿SE CORRESPONDE ESTO CON SUS OBSERVACIONES?",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 57.6667,
+          "y": 51.1429,
+          "width": 38.6666,
+          "height": 14.2857
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00023",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w01",
             "text": "OBSERVAMOS",
             "normalized": "observamos",
             "bounds": [
@@ -674,11 +613,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00023-ea157f26"
+              "word-observamos"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00024",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w02",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -690,11 +629,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00024-04ee7ec5"
+              "word-que--clause-link"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00025",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w03",
             "text": "SU",
             "normalized": "su",
             "bounds": [
@@ -706,11 +645,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00025-c510e3ab"
+              "word-su"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00026",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w04",
             "text": "VELOCIDAD",
             "normalized": "velocidad",
             "bounds": [
@@ -722,38 +661,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00026-626998f4"
+              "word-velocidad",
+              "concept-speed-of-light-c"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00023-ea157f26",
-          "word-auto-es-xkcd-elecciones-parte-2-00024-04ee7ec5",
-          "word-auto-es-xkcd-elecciones-parte-2-00025-c510e3ab",
-          "word-auto-es-xkcd-elecciones-parte-2-00026-626998f4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0012",
-        "labelEs": "ES UN 38,5% DE LA NUESTRA Y SU",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 58,
-          "y": 54,
-          "width": 38.3333,
-          "height": 2.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00027",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w05",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -765,11 +678,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00027-d7692e44"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00028",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w06",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -781,11 +694,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00028-92fbc722"
+              "word-un--before-percentage"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00029",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w07",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -797,11 +710,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00029-01a9c90e"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00030",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w08",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -813,11 +726,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00030-d5d89548"
+              "word-la--before-possessive-pronoun",
+              "grammar-article-plus-possessive-pronoun"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00031",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w09",
             "text": "NUESTRA",
             "normalized": "nuestra",
             "bounds": [
@@ -829,11 +743,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00031-88718767"
+              "word-nuestra--possessive-pronoun",
+              "grammar-article-plus-possessive-pronoun"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00032",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w10",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -845,11 +760,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00032-02605aba"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00033",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w11",
             "text": "SU",
             "normalized": "su",
             "bounds": [
@@ -861,41 +776,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00033-56e3d911"
+              "word-su"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00027-d7692e44",
-          "word-auto-es-xkcd-elecciones-parte-2-00028-92fbc722",
-          "word-auto-es-xkcd-elecciones-parte-2-00029-01a9c90e",
-          "word-auto-es-xkcd-elecciones-parte-2-00030-d5d89548",
-          "word-auto-es-xkcd-elecciones-parte-2-00031-88718767",
-          "word-auto-es-xkcd-elecciones-parte-2-00032-02605aba",
-          "word-auto-es-xkcd-elecciones-parte-2-00033-56e3d911"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0013",
-        "labelEs": "TIEMPO CORRE A UN RITMO QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 58,
-          "y": 56.2857,
-          "width": 36,
-          "height": 2.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00034",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w12",
             "text": "TIEMPO",
             "normalized": "tiempo",
             "bounds": [
@@ -907,11 +792,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00034-a69eecdd"
+              "word-tiempo",
+              "concept-special-relativity-time-dilation"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00035",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w13",
             "text": "CORRE",
             "normalized": "corre",
             "bounds": [
@@ -923,11 +809,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00035-252f6858"
+              "word-corre--time-passes"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00036",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w14",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -939,11 +825,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00036-ec70dfcb"
+              "word-a--measurement"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00037",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w15",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -955,11 +841,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00037-aa5de9e8"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00038",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w16",
             "text": "RITMO",
             "normalized": "ritmo",
             "bounds": [
@@ -971,11 +857,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00038-c3f7f75a"
+              "word-ritmo--rate",
+              "concept-special-relativity-time-dilation"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00039",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w17",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -987,40 +874,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00039-6e6af6a7"
+              "word-que--relative"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00034-a69eecdd",
-          "word-auto-es-xkcd-elecciones-parte-2-00035-252f6858",
-          "word-auto-es-xkcd-elecciones-parte-2-00036-ec70dfcb",
-          "word-auto-es-xkcd-elecciones-parte-2-00037-aa5de9e8",
-          "word-auto-es-xkcd-elecciones-parte-2-00038-c3f7f75a",
-          "word-auto-es-xkcd-elecciones-parte-2-00039-6e6af6a7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0014",
-        "labelEs": "ES UN 92,3% DEL NUESTRO. ESE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.6667,
-          "y": 58.8571,
-          "width": 37.3333,
-          "height": 2.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00040",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w18",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -1032,11 +890,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00040-c7986761"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00041",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w19",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -1048,11 +906,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00041-25c96ca8"
+              "word-un--before-percentage"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00042",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w20",
             "text": "DEL",
             "normalized": "del",
             "bounds": [
@@ -1064,11 +922,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00042-d574e8ba"
+              "word-del--before-possessive-pronoun",
+              "grammar-article-plus-possessive-pronoun"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00043",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w21",
             "text": "NUESTRO",
             "normalized": "nuestro",
             "bounds": [
@@ -1080,13 +939,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00043-da480af8"
+              "word-nuestro--possessive-pronoun",
+              "grammar-article-plus-possessive-pronoun"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00044",
-            "text": "ESE",
-            "normalized": "ese",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w22",
+            "text": "SE",
+            "normalized": "se",
             "bounds": [
               {
                 "x": 90,
@@ -1096,79 +956,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00044-92ad9566"
+              "word-se--corresponderse-con",
+              "phrase-corresponderse-con"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00040-c7986761",
-          "word-auto-es-xkcd-elecciones-parte-2-00041-25c96ca8",
-          "word-auto-es-xkcd-elecciones-parte-2-00042-d574e8ba",
-          "word-auto-es-xkcd-elecciones-parte-2-00043-da480af8",
-          "word-auto-es-xkcd-elecciones-parte-2-00044-92ad9566"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0015",
-        "labelEs": "0,2 C",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 28.6667,
-          "y": 59.4286,
-          "width": 6.6667,
-          "height": 3.1429
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00045",
-            "text": "C",
-            "normalized": "c",
-            "bounds": [
-              {
-                "x": 32.7917,
-                "y": 59.4286,
-                "width": 2.5417,
-                "height": 3.1429
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00045-2f09edc8"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00045-2f09edc8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0015",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0016",
-        "labelEs": "CORRESPONDE ESTO CON SUS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 58,
-          "y": 61.1429,
-          "width": 33,
-          "height": 2.2857
-        },
-        "words": [
-          {
-            "id": "es-xkcd-elecciones-parte-2:word-00046",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w23",
             "text": "CORRESPONDE",
             "normalized": "corresponde",
             "bounds": [
@@ -1180,11 +973,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00046-15600963"
+              "word-corresponde--matches",
+              "phrase-corresponderse-con"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00047",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w24",
             "text": "ESTO",
             "normalized": "esto",
             "bounds": [
@@ -1196,11 +990,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00047-e4f6bd38"
+              "word-esto"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00048",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w25",
             "text": "CON",
             "normalized": "con",
             "bounds": [
@@ -1212,11 +1006,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00048-6701668d"
+              "word-con",
+              "phrase-corresponderse-con"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00049",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w26",
             "text": "SUS",
             "normalized": "sus",
             "bounds": [
@@ -1228,38 +1023,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00049-eaabc3d8"
+              "word-sus"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00046-15600963",
-          "word-auto-es-xkcd-elecciones-parte-2-00047-e4f6bd38",
-          "word-auto-es-xkcd-elecciones-parte-2-00048-6701668d",
-          "word-auto-es-xkcd-elecciones-parte-2-00049-eaabc3d8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0016",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0017",
-        "labelEs": "OBSERVACIONES?",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 58,
-          "y": 63.1429,
-          "width": 19.6667,
-          "height": 2.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00050",
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:w27",
             "text": "OBSERVACIONES",
             "normalized": "observaciones",
             "bounds": [
@@ -1271,24 +1039,162 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00050-28bd60d6"
+              "word-observaciones"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:excluded-percentage-1",
+            "text": "38,5%",
+            "reason": "measurement",
+            "rationale": "This is a numerical percentage measurement, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 65.6667,
+                "y": 54,
+                "width": 7.3333,
+                "height": 2.2857
+              },
+              {
+                "x": 65.6667,
+                "y": 54,
+                "width": 7.3333,
+                "height": 2.2857
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:excluded-percentage-2",
+            "text": "92,3%",
+            "reason": "measurement",
+            "rationale": "This is a numerical percentage measurement, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 65.6667,
+                "y": 58.8571,
+                "width": 7.3333,
+                "height": 2.2857
+              },
+              {
+                "x": 65.6667,
+                "y": 58.8571,
+                "width": 7.3333,
+                "height": 2.2857
+              }
+            ]
+          }
+        ],
+        "applications": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:app-possessive-1",
+            "cardId": "grammar-article-plus-possessive-pronoun",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w08",
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w09"
+            ],
+            "exampleEs": "LA NUESTRA",
+            "explanationEn": "La and the feminine ending on nuestra agree with the feminine thing that the phrase leaves unstated."
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:app-possessive-2",
+            "cardId": "grammar-article-plus-possessive-pronoun",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w20",
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w21"
+            ],
+            "exampleEs": "DEL NUESTRO",
+            "explanationEn": "Del contains de plus the masculine article el, and nuestro has the matching masculine ending for the omitted thing."
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:spacecraft-message:app-corresponderse",
+            "cardId": "phrase-corresponderse-con",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w22",
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w23",
+              "es-xkcd-elecciones-parte-2:spacecraft-message:w25"
+            ],
+            "exampleEs": "SE CORRESPONDE ESTO CON",
+            "explanationEn": "Se stays with corresponde, while con introduces the information used for the match; esto is the thing being compared."
+          }
+        ],
+        "cardIds": [
+          "word-observamos",
+          "word-que--clause-link",
+          "word-su",
+          "word-velocidad",
+          "concept-speed-of-light-c",
+          "word-es",
+          "word-un--before-percentage",
+          "word-de--of",
+          "word-la--before-possessive-pronoun",
+          "grammar-article-plus-possessive-pronoun",
+          "word-nuestra--possessive-pronoun",
+          "word-y",
+          "word-tiempo",
+          "concept-special-relativity-time-dilation",
+          "word-corre--time-passes",
+          "word-a--measurement",
+          "word-un",
+          "word-ritmo--rate",
+          "word-que--relative",
+          "word-del--before-possessive-pronoun",
+          "word-nuestro--possessive-pronoun",
+          "word-se--corresponderse-con",
+          "phrase-corresponderse-con",
+          "word-corresponde--matches",
+          "word-esto",
+          "word-con",
+          "word-sus",
+          "word-observaciones"
+        ]
+      },
+      {
+        "id": "es-xkcd-elecciones-parte-2:middle-panel-spaceship-speed",
+        "labelEs": "0,2 c",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 28.6667,
+          "y": 59.4286,
+          "width": 6.6667,
+          "height": 3.1429
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:middle-panel-spaceship-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 28.6667,
+                "y": 59.4286,
+                "width": 3.6667,
+                "height": 3.1429
+              },
+              {
+                "x": 28.6667,
+                "y": 59.4286,
+                "width": 3.6667,
+                "height": 3.1429
+              },
+              {
+                "x": 32.7917,
+                "y": 59.4286,
+                "width": 2.5417,
+                "height": 3.1429
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00050-28bd60d6"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0017",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0018",
-        "labelEs": "0,2 C",
+        "id": "es-xkcd-elecciones-parte-2:middle-panel-capsule-speed",
+        "labelEs": "0,2 c",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -1297,49 +1203,52 @@
           "width": 6.3333,
           "height": 2.2857
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00051",
-            "text": "C",
-            "normalized": "c",
+            "id": "es-xkcd-elecciones-parte-2:middle-panel-capsule-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary.",
             "bounds": [
+              {
+                "x": 59,
+                "y": 66.2857,
+                "width": 4.3333,
+                "height": 2.2857
+              },
+              {
+                "x": 59,
+                "y": 66.2857,
+                "width": 4.3333,
+                "height": 2.2857
+              },
               {
                 "x": 63.6667,
                 "y": 66.2857,
                 "width": 1.6667,
                 "height": 2.2857
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00051-1f184dd9"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00051-1f184dd9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0018",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0019",
-        "labelEs": "AYUDA, POR FAVOR.",
+        "id": "es-xkcd-elecciones-parte-2:girl-reply",
+        "labelEs": "AYUDA, POR FAVOR. CREO QUE ME HE PERDIDO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 58,
           "y": 70.8571,
-          "width": 22.3333,
-          "height": 2.5714
+          "width": 30,
+          "height": 4.5714
         },
         "words": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00052",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w01",
             "text": "AYUDA",
             "normalized": "ayuda",
             "bounds": [
@@ -1351,11 +1260,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00052-3a6cf6f9"
+              "word-ayuda--plea",
+              "grammar-affirmative-tu-command"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00053",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w02",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -1367,11 +1277,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00053-774fe466"
+              "word-por--por-favor",
+              "phrase-por-favor"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00054",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w03",
             "text": "FAVOR",
             "normalized": "favor",
             "bounds": [
@@ -1383,37 +1294,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00054-dd64f529"
+              "word-favor",
+              "phrase-por-favor"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00052-3a6cf6f9",
-          "word-auto-es-xkcd-elecciones-parte-2-00053-774fe466",
-          "word-auto-es-xkcd-elecciones-parte-2-00054-dd64f529"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0019",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-elecciones-parte-2:region-0020",
-        "labelEs": "CREO QUE ME HE PERDIDO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 58.3333,
-          "y": 72.8571,
-          "width": 29.6667,
-          "height": 2.5714
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00055",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w04",
             "text": "CREO",
             "normalized": "creo",
             "bounds": [
@@ -1425,11 +1311,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00055-71873996"
+              "word-creo"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00056",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w05",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -1441,11 +1327,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00056-ab8d2106"
+              "word-que--clause-link"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00057",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w06",
             "text": "ME",
             "normalized": "me",
             "bounds": [
@@ -1457,11 +1343,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00057-67c4e16a"
+              "word-me--pronominal-marker",
+              "phrase-perderse--get-lost"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00058",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w07",
             "text": "HE",
             "normalized": "he",
             "bounds": [
@@ -1473,11 +1360,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00058-3684c711"
+              "word-he",
+              "grammar-present-perfect"
             ]
           },
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00059",
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:w08",
             "text": "PERDIDO",
             "normalized": "perdido",
             "bounds": [
@@ -1489,28 +1377,72 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00059-288bf4f5"
+              "word-perdido",
+              "grammar-present-perfect",
+              "phrase-perderse--get-lost"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00055-71873996",
-          "word-auto-es-xkcd-elecciones-parte-2-00056-ab8d2106",
-          "word-auto-es-xkcd-elecciones-parte-2-00057-67c4e16a",
-          "word-auto-es-xkcd-elecciones-parte-2-00058-3684c711",
-          "word-auto-es-xkcd-elecciones-parte-2-00059-288bf4f5"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:app-tu-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:girl-reply:w01"
+            ],
+            "exampleEs": "AYUDA",
+            "explanationEn": "Ayuda is the informal singular command form used to ask one person for help."
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:app-por-favor",
+            "cardId": "phrase-por-favor",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:girl-reply:w02",
+              "es-xkcd-elecciones-parte-2:girl-reply:w03"
+            ],
+            "exampleEs": "POR FAVOR",
+            "explanationEn": "Por and favor form the fixed politeness expression used with the request."
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:app-present-perfect",
+            "cardId": "grammar-present-perfect",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:girl-reply:w07",
+              "es-xkcd-elecciones-parte-2:girl-reply:w08"
+            ],
+            "exampleEs": "HE PERDIDO",
+            "explanationEn": "He is the present helper form for the speaker, and perdido is perder's unchanged completed-action form."
+          },
+          {
+            "id": "es-xkcd-elecciones-parte-2:girl-reply:app-perderse",
+            "cardId": "phrase-perderse--get-lost",
+            "participantWordIds": [
+              "es-xkcd-elecciones-parte-2:girl-reply:w06",
+              "es-xkcd-elecciones-parte-2:girl-reply:w08"
+            ],
+            "exampleEs": "ME HE PERDIDO",
+            "explanationEn": "Me identifies the speaker as the person who became lost, and perdido supplies the completed action; he between them marks the present perfect."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-ayuda--plea",
+          "grammar-affirmative-tu-command",
+          "word-por--por-favor",
+          "phrase-por-favor",
+          "word-favor",
+          "word-creo",
+          "word-que--clause-link",
+          "word-me--pronominal-marker",
+          "phrase-perderse--get-lost",
+          "word-he",
+          "grammar-present-perfect",
+          "word-perdido"
+        ]
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0021",
-        "labelEs": "0,2 c 0",
+        "id": "es-xkcd-elecciones-parte-2:bottom-panel-left-speed",
+        "labelEs": "0,2 c",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -1519,37 +1451,40 @@
           "width": 15.3333,
           "height": 4
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00060",
-            "text": "c",
-            "normalized": "c",
+            "id": "es-xkcd-elecciones-parte-2:bottom-panel-left-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary; OCR also mistook nearby spacecraft artwork for a second zero.",
             "bounds": [
+              {
+                "x": 5.3333,
+                "y": 82.8571,
+                "width": 5.25,
+                "height": 4
+              },
+              {
+                "x": 5.3333,
+                "y": 82.8571,
+                "width": 5.25,
+                "height": 4
+              },
               {
                 "x": 11.1667,
                 "y": 82.8571,
                 "width": 5.25,
                 "height": 4
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00060-534e62b0"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00060-534e62b0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0021",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-elecciones-parte-2:region-0022",
+        "id": "es-xkcd-elecciones-parte-2:bottom-panel-right-speed",
         "labelEs": "0,2 c",
         "translationEn": "",
         "noteEn": "",
@@ -1559,1575 +1494,1237 @@
           "width": 9.3333,
           "height": 3.7143
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-elecciones-parte-2:word-00061",
-            "text": "c",
-            "normalized": "c",
+            "id": "es-xkcd-elecciones-parte-2:bottom-panel-right-speed:excluded-measurement",
+            "text": "0,2 c",
+            "reason": "measurement",
+            "rationale": "This is a numerical speed expressed as a fraction of the speed of light, not Spanish vocabulary.",
             "bounds": [
+              {
+                "x": 82.3333,
+                "y": 91.4286,
+                "width": 4.875,
+                "height": 3.7143
+              },
+              {
+                "x": 82.3333,
+                "y": 91.4286,
+                "width": 4.875,
+                "height": 3.7143
+              },
               {
                 "x": 87.75,
                 "y": 91.4286,
                 "width": 3.9167,
                 "height": 3.7143
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-elecciones-parte-2-00061-4ee36b4d"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-elecciones-parte-2-00061-4ee36b4d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0022",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-elecciones-parte-2-00001-12a55b95",
-      "word-auto-es-xkcd-elecciones-parte-2-00002-4174a7d1",
-      "word-auto-es-xkcd-elecciones-parte-2-00003-a7b0c546",
-      "word-auto-es-xkcd-elecciones-parte-2-00004-410e5900",
-      "word-auto-es-xkcd-elecciones-parte-2-00005-6dbdf65d",
-      "word-auto-es-xkcd-elecciones-parte-2-00006-3796588c",
-      "word-auto-es-xkcd-elecciones-parte-2-00007-f7c2b2d4",
-      "word-auto-es-xkcd-elecciones-parte-2-00008-a95dc9dc",
-      "word-auto-es-xkcd-elecciones-parte-2-00009-e7e89946",
-      "word-auto-es-xkcd-elecciones-parte-2-00010-f19af99d",
-      "word-auto-es-xkcd-elecciones-parte-2-00011-6378cbfb",
-      "word-auto-es-xkcd-elecciones-parte-2-00012-bf26d0c5",
-      "word-auto-es-xkcd-elecciones-parte-2-00013-e2c78ce8",
-      "word-auto-es-xkcd-elecciones-parte-2-00014-da6dd587",
-      "word-auto-es-xkcd-elecciones-parte-2-00015-af2f46e1",
-      "word-auto-es-xkcd-elecciones-parte-2-00016-0fbdfacd",
-      "word-auto-es-xkcd-elecciones-parte-2-00017-402f7b1c",
-      "word-auto-es-xkcd-elecciones-parte-2-00018-ada5c3de",
-      "word-auto-es-xkcd-elecciones-parte-2-00019-4e0fb4bc",
-      "word-auto-es-xkcd-elecciones-parte-2-00020-9c383514",
-      "word-auto-es-xkcd-elecciones-parte-2-00021-461138d4",
-      "word-auto-es-xkcd-elecciones-parte-2-00022-26c4c4ba",
-      "word-auto-es-xkcd-elecciones-parte-2-00023-ea157f26",
-      "word-auto-es-xkcd-elecciones-parte-2-00024-04ee7ec5",
-      "word-auto-es-xkcd-elecciones-parte-2-00025-c510e3ab",
-      "word-auto-es-xkcd-elecciones-parte-2-00026-626998f4",
-      "word-auto-es-xkcd-elecciones-parte-2-00027-d7692e44",
-      "word-auto-es-xkcd-elecciones-parte-2-00028-92fbc722",
-      "word-auto-es-xkcd-elecciones-parte-2-00029-01a9c90e",
-      "word-auto-es-xkcd-elecciones-parte-2-00030-d5d89548",
-      "word-auto-es-xkcd-elecciones-parte-2-00031-88718767",
-      "word-auto-es-xkcd-elecciones-parte-2-00032-02605aba",
-      "word-auto-es-xkcd-elecciones-parte-2-00033-56e3d911",
-      "word-auto-es-xkcd-elecciones-parte-2-00034-a69eecdd",
-      "word-auto-es-xkcd-elecciones-parte-2-00035-252f6858",
-      "word-auto-es-xkcd-elecciones-parte-2-00036-ec70dfcb",
-      "word-auto-es-xkcd-elecciones-parte-2-00037-aa5de9e8",
-      "word-auto-es-xkcd-elecciones-parte-2-00038-c3f7f75a",
-      "word-auto-es-xkcd-elecciones-parte-2-00039-6e6af6a7",
-      "word-auto-es-xkcd-elecciones-parte-2-00040-c7986761",
-      "word-auto-es-xkcd-elecciones-parte-2-00041-25c96ca8",
-      "word-auto-es-xkcd-elecciones-parte-2-00042-d574e8ba",
-      "word-auto-es-xkcd-elecciones-parte-2-00043-da480af8",
-      "word-auto-es-xkcd-elecciones-parte-2-00044-92ad9566",
-      "word-auto-es-xkcd-elecciones-parte-2-00045-2f09edc8",
-      "word-auto-es-xkcd-elecciones-parte-2-00046-15600963",
-      "word-auto-es-xkcd-elecciones-parte-2-00047-e4f6bd38",
-      "word-auto-es-xkcd-elecciones-parte-2-00048-6701668d",
-      "word-auto-es-xkcd-elecciones-parte-2-00049-eaabc3d8",
-      "word-auto-es-xkcd-elecciones-parte-2-00050-28bd60d6",
-      "word-auto-es-xkcd-elecciones-parte-2-00051-1f184dd9",
-      "word-auto-es-xkcd-elecciones-parte-2-00052-3a6cf6f9",
-      "word-auto-es-xkcd-elecciones-parte-2-00053-774fe466",
-      "word-auto-es-xkcd-elecciones-parte-2-00054-dd64f529",
-      "word-auto-es-xkcd-elecciones-parte-2-00055-71873996",
-      "word-auto-es-xkcd-elecciones-parte-2-00056-ab8d2106",
-      "word-auto-es-xkcd-elecciones-parte-2-00057-67c4e16a",
-      "word-auto-es-xkcd-elecciones-parte-2-00058-3684c711",
-      "word-auto-es-xkcd-elecciones-parte-2-00059-288bf4f5",
-      "word-auto-es-xkcd-elecciones-parte-2-00060-534e62b0",
-      "word-auto-es-xkcd-elecciones-parte-2-00061-4ee36b4d"
+      "word-capítulo",
+      "word-relatividad",
+      "concept-special-relativity-time-dilation",
+      "word-especial",
+      "word-problema",
+      "word-dos",
+      "word-naves--spacecraft",
+      "word-espaciales--outer-space",
+      "word-se--reciprocal",
+      "grammar-reciprocal-se",
+      "word-transmiten",
+      "word-sendos",
+      "word-mensajes",
+      "word-mientras",
+      "word-pasan--move-past",
+      "word-a--measurement",
+      "word-unas",
+      "word-velocidades",
+      "concept-speed-of-light-c",
+      "word-constantes",
+      "word-jo--frustration",
+      "word-mientras--meanwhile",
+      "word-observamos",
+      "word-que--clause-link",
+      "word-su",
+      "word-velocidad",
+      "word-es",
+      "word-un--before-percentage",
+      "word-de--of",
+      "word-la--before-possessive-pronoun",
+      "grammar-article-plus-possessive-pronoun",
+      "word-nuestra--possessive-pronoun",
+      "word-y",
+      "word-tiempo",
+      "word-corre--time-passes",
+      "word-un",
+      "word-ritmo--rate",
+      "word-que--relative",
+      "word-del--before-possessive-pronoun",
+      "word-nuestro--possessive-pronoun",
+      "word-se--corresponderse-con",
+      "phrase-corresponderse-con",
+      "word-corresponde--matches",
+      "word-esto",
+      "word-con",
+      "word-sus",
+      "word-observaciones",
+      "word-ayuda--plea",
+      "grammar-affirmative-tu-command",
+      "word-por--por-favor",
+      "phrase-por-favor",
+      "word-favor",
+      "word-creo",
+      "word-me--pronominal-marker",
+      "phrase-perderse--get-lost",
+      "word-he",
+      "grammar-present-perfect",
+      "word-perdido"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9089,
-      "lowConfidenceTokenCount": 14,
-      "rawOcrTokenCount": 79,
-      "filteredNonLatinTokenCount": 18,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00001-12a55b95",
-      "kind": "word",
-      "promptEs": "j0",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00001",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0001",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-e1c304c89beebdf86c10",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00002-4174a7d1",
+      "id": "word-capítulo",
       "kind": "word",
       "promptEs": "capítulo",
       "answerEn": "chapter",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00002",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-71cc091aed83e0ef9fc7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00003-a7b0c546",
-      "kind": "word",
-      "promptEs": "i5",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00003",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0016cf5ed68e5a534972",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00004-410e5900",
+      "id": "word-relatividad",
       "kind": "word",
       "promptEs": "relatividad",
       "answerEn": "relativity",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "physics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00004",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-78d13207705a2c578772",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00005-6dbdf65d",
+      "id": "concept-special-relativity-time-dilation",
+      "kind": "concept",
+      "promptEs": "relatividad especial · dilatación del tiempo",
+      "answerEn": "In special relativity, observers moving relative to one another can measure different elapsed times; a moving clock is measured as running more slowly.",
+      "noteEn": "The effect becomes substantial only at speeds that are a significant fraction of the speed of light.",
+      "tags": [
+        "concept",
+        "physics",
+        "relativity"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-especial",
       "kind": "word",
       "promptEs": "especial",
       "answerEn": "special",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00005",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1b87b10867ed13da5b79",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00006-3796588c",
+      "id": "word-problema",
       "kind": "word",
       "promptEs": "problema",
       "answerEn": "problem",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00006",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-835b578bd545a1bb8a33",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00007-f7c2b2d4",
+      "id": "word-dos",
       "kind": "word",
       "promptEs": "dos",
       "answerEn": "two",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00008",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c1299854f2b209632ab2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00008-a95dc9dc",
+      "id": "word-naves--spacecraft",
       "kind": "word",
       "promptEs": "naves",
-      "answerEn": "Meaning needs review",
+      "answerEn": "spacecraft; ships",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "space"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00009",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bdafeb194d9abc1fc66e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00009-e7e89946",
+      "id": "word-espaciales--outer-space",
       "kind": "word",
       "promptEs": "espaciales",
-      "answerEn": "spatial",
+      "answerEn": "space; relating to outer space (plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "space"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00010",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0177f4b7a110b49c2e3e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00010-f19af99d",
+      "id": "word-se--reciprocal",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "Meaning needs review",
+      "answerEn": "each other; marks an action exchanged by two or more subjects",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00011",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00011-6378cbfb",
+      "id": "grammar-reciprocal-se",
+      "kind": "grammar",
+      "promptEs": "se + verbo plural: el uno al otro",
+      "questionEn": "How can you say that two or more people do the same action to each other?",
+      "answerEn": "Put se before a verb whose form matches the plural group doing the action.",
+      "noteEn": "With a plural subject, se can show that the members exchange an action: se escriben can mean “they write to each other.” Se can have other uses too, so the surrounding meaning tells you whether the action is reciprocal.",
+      "example": {
+        "es": "Ana y Luis se escriben cada semana.",
+        "en": "Ana and Luis write to each other every week."
+      },
+      "tags": [
+        "grammar",
+        "reciprocal",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-transmiten",
       "kind": "word",
       "promptEs": "transmiten",
-      "answerEn": "Meaning needs review",
+      "answerEn": "they transmit; they send",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00012",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8cacb973202a07881426",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00012-bf26d0c5",
+      "id": "word-sendos",
       "kind": "word",
       "promptEs": "sendos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "one each; one apiece",
+      "noteEn": "Sendos comes before a plural masculine noun and says that each previously named person or thing has one of that noun. The feminine form is sendas. It does not simply mean “two” or “both.”",
+      "example": {
+        "es": "Ana y Luis llevan sendas mochilas.",
+        "en": "Ana and Luis each carry a backpack."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "distributive",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00013",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-39ee94a218a7d8a128ba",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00013-e2c78ce8",
+      "id": "word-mensajes",
       "kind": "word",
       "promptEs": "mensajes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "messages",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00014",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-39dbee8f688fa8e27744",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00014-da6dd587",
+      "id": "word-mientras",
       "kind": "word",
       "promptEs": "mientras",
-      "answerEn": "Meaning needs review",
+      "answerEn": "while",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00015",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bd831b063610ef10a32c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00015-af2f46e1",
+      "id": "word-pasan--move-past",
       "kind": "word",
       "promptEs": "pasan",
-      "answerEn": "Meaning needs review",
+      "answerEn": "they pass; they move past",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00016",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b23bf3afd09d43e05343",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00016-0fbdfacd",
+      "id": "word-a--measurement",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "at (introducing a measured distance, speed, or rate)",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00017",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00017-402f7b1c",
+      "id": "word-unas",
       "kind": "word",
       "promptEs": "unas",
       "answerEn": "some; a few",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00018",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b2944925eb5e1e7a3389",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00018-ada5c3de",
+      "id": "word-velocidades",
       "kind": "word",
       "promptEs": "velocidades",
-      "answerEn": "Meaning needs review",
+      "answerEn": "speeds; velocities",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "physics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00019",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7d6811081bbac6567d64",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00019-4e0fb4bc",
+      "id": "concept-speed-of-light-c",
+      "kind": "concept",
+      "promptEs": "c · velocidad de la luz",
+      "answerEn": "In physics, c is the speed of light in a vacuum; 0,2 c means twenty percent of that speed.",
+      "noteEn": "The decimal comma in 0,2 is the Spanish notation for 0.2.",
+      "tags": [
+        "concept",
+        "physics",
+        "relativity"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-constantes",
       "kind": "word",
       "promptEs": "constantes",
-      "answerEn": "constant",
+      "answerEn": "constant; unchanging (plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00020",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-346e452871563273f8e8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00020-9c383514",
+      "id": "word-jo--frustration",
+      "kind": "word",
+      "promptEs": "jo",
+      "answerEn": "ugh; darn (a mild frustrated reaction, especially in Spain)",
+      "noteEn": "Jo is a mild exclamation of annoyance, disappointment, or surprise. It does not literally name a sigh, even when it replaces a written sigh in a translation.",
+      "example": {
+        "es": "¡Jo, otra vez!",
+        "en": "Ugh, not again!"
+      },
+      "tags": [
+        "word",
+        "interjection",
+        "Spain"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-mientras--meanwhile",
       "kind": "word",
       "promptEs": "mientras",
-      "answerEn": "Meaning needs review",
+      "answerEn": "meanwhile",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "discourse"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00021",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bd831b063610ef10a32c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00021-461138d4",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00024",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00022-26c4c4ba",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00027",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0010",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00023-ea157f26",
+      "id": "word-observamos",
       "kind": "word",
       "promptEs": "observamos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "we observe; we see",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00028",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6e11a94d0878329c2107",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00024-04ee7ec5",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00029",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00025-c510e3ab",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
       "answerEn": "your (formal singular)",
-      "noteEn": "",
+      "noteEn": "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+      "example": {
+        "es": "Señora, aquí está su café.",
+        "en": "Ma’am, here is your coffee."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00030",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0a64ce10853f25cb3dc3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00026-626998f4",
+      "id": "word-velocidad",
       "kind": "word",
       "promptEs": "velocidad",
-      "answerEn": "Meaning needs review",
+      "answerEn": "speed; velocity",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00031",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0a716dc2d1a1c43a574a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00027-d7692e44",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
       "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00032",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00028-92fbc722",
+      "id": "word-un--before-percentage",
       "kind": "word",
       "promptEs": "un",
-      "answerEn": "a; an (masculine)",
-      "noteEn": "",
+      "answerEn": "no separate English word; Spanish commonly uses un before a percentage",
+      "noteEn": "A percentage can behave like a masculine quantity in Spanish, so it often follows un: un 20%. Natural English normally says only “20%,” without “a” or “one.”",
+      "example": {
+        "es": "Un 20% de los asientos está libre.",
+        "en": "Twenty percent of the seats are free."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "percentage",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00033",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00029-01a9c90e",
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00036",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00030-d5d89548",
+      "id": "word-la--before-possessive-pronoun",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; the article used before nuestra (“ours”)",
+      "noteEn": "When a feminine noun has already been named, la can introduce a possessive form that means “the one belonging to us.” La matches the omitted feminine noun; natural English usually says only “ours.”",
+      "example": {
+        "es": "Su bicicleta es azul; la nuestra es roja.",
+        "en": "Her bicycle is blue; ours is red."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "article",
+        "possessive"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00037",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00031-88718767",
+      "id": "grammar-article-plus-possessive-pronoun",
+      "kind": "grammar",
+      "promptEs": "el/la/los/las + mío, tuyo, suyo, nuestro…",
+      "questionEn": "How do you say “the one that is mine, yours, or ours” without repeating a noun?",
+      "answerEn": "Use el, la, los, or las before a possessive form such as mío, tuya, suyo, or nuestro.",
+      "noteEn": "This pattern points back to a previously named thing: la nuestra means “the feminine one that is ours,” while el nuestro means “the masculine one that is ours.” The article and the ending match that omitted thing, not its owner. After de + el, Spanish contracts the two words to del, as in del nuestro. For a simple statement of ownership after ser, the article is normally absent: Es nuestro means “It is ours.”",
+      "example": {
+        "es": "Tu mesa es grande, pero la nuestra es pequeña.",
+        "en": "Your table is large, but ours is small."
+      },
+      "tags": [
+        "grammar",
+        "possessives",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-nuestra--possessive-pronoun",
       "kind": "word",
       "promptEs": "nuestra",
-      "answerEn": "Meaning needs review",
+      "answerEn": "ours (feminine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00038",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9bb696f56f542651835d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00032-02605aba",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00039",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00033-56e3d911",
-      "kind": "word",
-      "promptEs": "su",
-      "answerEn": "your (formal singular)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00040",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0a64ce10853f25cb3dc3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00034-a69eecdd",
+      "id": "word-tiempo",
       "kind": "word",
       "promptEs": "tiempo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "time",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00041",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-666a9f67617f9f9ac26e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00035-252f6858",
+      "id": "word-corre--time-passes",
       "kind": "word",
       "promptEs": "corre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "passes; runs (said of time)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "time"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00042",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ebb70cc72e54a5e33275",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00036-ec70dfcb",
-      "kind": "word",
-      "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00043",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00037-aa5de9e8",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00044",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00038-c3f7f75a",
+      "id": "word-ritmo--rate",
       "kind": "word",
       "promptEs": "ritmo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "rate; pace",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00045",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-eb47a6774fd0123a9323",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00039-6e6af6a7",
+      "id": "word-que--relative",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00046",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00040-c7986761",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00047",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00041-25c96ca8",
-      "kind": "word",
-      "promptEs": "un",
-      "answerEn": "a; an (masculine)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00048",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00042-d574e8ba",
+      "id": "word-del--before-possessive-pronoun",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "of the; from the",
-      "noteEn": "",
+      "answerEn": "of the; combines de + el before nuestro (“ours”)",
+      "noteEn": "Spanish always contracts de + el to del. Here el introduces a masculine possessive form that replaces an already named noun, so del nuestro can contribute the meaning “of ours.”",
+      "example": {
+        "es": "El motor de tu coche es más potente que el del nuestro.",
+        "en": "Your car's engine is more powerful than ours."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00051",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-75e3090289e2955dfaec",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00043-da480af8",
+      "id": "word-nuestro--possessive-pronoun",
       "kind": "word",
       "promptEs": "nuestro",
-      "answerEn": "Meaning needs review",
+      "answerEn": "ours (masculine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00052",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ac8ebb9420a1baa286ce",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00044-92ad9566",
+      "id": "word-se--corresponderse-con",
       "kind": "word",
-      "promptEs": "ese",
-      "answerEn": "Meaning needs review",
+      "promptEs": "se",
+      "answerEn": "no separate English word; part of corresponderse con (“to match”)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb pattern"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00053",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b7505a8df3abe9310433",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00045-2f09edc8",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "phrase-corresponderse-con",
+      "kind": "phrase",
+      "promptEs": "corresponderse con",
+      "questionEn": "How do you say that one result, description, or set of facts matches another?",
+      "answerEn": "Use a form of corresponderse followed by con and the thing it matches.",
+      "noteEn": "Keep the short se with the changed form of corresponder: se corresponde for one thing and se corresponden for several. Con introduces the other information used for the comparison.",
+      "example": {
+        "es": "El dibujo se corresponde con la descripción.",
+        "en": "The drawing matches the description."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "phrase",
+        "comparison",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00056",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0015",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00046-15600963",
+      "id": "word-corresponde--matches",
       "kind": "word",
       "promptEs": "corresponde",
-      "answerEn": "Meaning needs review",
+      "answerEn": "corresponds; matches",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00057",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9ba626fe3a24d4fe6a26",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00047-e4f6bd38",
+      "id": "word-esto",
       "kind": "word",
       "promptEs": "esto",
       "answerEn": "this (thing or situation)",
-      "noteEn": "",
+      "noteEn": "Esto is a neutral demonstrative for an unidentified thing, fact, or whole situation. It is not used directly before a noun.",
+      "example": {
+        "es": "Esto es difícil.",
+        "en": "This is difficult."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00058",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-be39af610558299c60eb",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00048-6701668d",
+      "id": "word-con",
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00059",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1143da2bc54c495c4be3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00049-eaabc3d8",
+      "id": "word-sus",
       "kind": "word",
       "promptEs": "sus",
       "answerEn": "your (formal, before a plural noun)",
-      "noteEn": "",
+      "noteEn": "Sus is used before plural things that are owned. It agrees with what is owned, not with the owner; with usted, it can mean formal “your.”",
+      "example": {
+        "es": "Señor, estos son sus documentos.",
+        "en": "Sir, these are your documents."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00060",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a76b338874117acd5c41",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00050-28bd60d6",
+      "id": "word-observaciones",
       "kind": "word",
       "promptEs": "observaciones",
-      "answerEn": "observation",
+      "answerEn": "observations",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00061",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c1c3553b400a3b886729",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00051-1f184dd9",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00064",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00052-3a6cf6f9",
+      "id": "word-ayuda--plea",
       "kind": "word",
       "promptEs": "ayuda",
-      "answerEn": "Meaning needs review",
+      "answerEn": "help; help me! (informal command)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00065",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4c733765f4514d54876e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00053-774fe466",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
+      "tags": [
+        "grammar",
+        "commands",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-por--por-favor",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
+      "answerEn": "no separate English word; part of por favor (“please”)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00066",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00054-dd64f529",
+      "id": "phrase-por-favor",
+      "kind": "phrase",
+      "promptEs": "por favor",
+      "questionEn": "How do you say “please”?",
+      "answerEn": "Use por favor.",
+      "noteEn": "Por favor makes a request more polite. It can appear before or after the request.",
+      "example": {
+        "es": "Cierra la puerta, por favor.",
+        "en": "Close the door, please."
+      },
+      "tags": [
+        "A1",
+        "phrase",
+        "politeness"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-favor",
       "kind": "word",
       "promptEs": "favor",
-      "answerEn": "favor/favour",
+      "answerEn": "favor; part of por favor (“please”)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00067",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-df2fc6e9c627881ad80d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00055-71873996",
+      "id": "word-creo",
       "kind": "word",
       "promptEs": "creo",
       "answerEn": "I think; I believe",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00068",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e342f3f3eeb5cb47c675",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00056-ab8d2106",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00069",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00057-67c4e16a",
+      "id": "word-me--pronominal-marker",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word here; marks an “I” verb that is used with me",
+      "noteEn": "Some Spanish verbs conventionally come with me, te, se, nos, or os even when no one literally acts on themselves. Me marks the speaker's form. English usually absorbs it into the verb's meaning.",
+      "example": {
+        "es": "Me quejo del ruido.",
+        "en": "I complain about the noise."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronouns",
+        "pronominal verbs",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00070",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2744ccd10c7533bd736a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-alucinaciones",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00058-3684c711",
+      "id": "phrase-perderse--get-lost",
+      "kind": "phrase",
+      "promptEs": "perderse",
+      "questionEn": "How do you say that someone gets lost?",
+      "answerEn": "Use perder with a matching short word such as me, te, or se: me pierdo, te pierdes, se pierde.",
+      "noteEn": "Perder by itself usually means “to lose something.” Perderse describes the person becoming lost, so the short word changes with that person. In a completed-action form such as me he perdido, me still identifies the person who became lost.",
+      "example": {
+        "es": "Nos perdimos en el parque.",
+        "en": "We got lost in the park."
+      },
+      "tags": [
+        "phrase",
+        "pronominal verb",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-2",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-he",
       "kind": "word",
       "promptEs": "he",
       "answerEn": "I have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00071",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-372f7e2fd2d01ce2a1d7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00059-288bf4f5",
+      "id": "grammar-present-perfect",
+      "kind": "grammar",
+      "promptEs": "he/has/ha/hemos/habéis/han + participio",
+      "answerEn": "Use he, has, ha, hemos, habéis, or han followed by the verb’s completed-action form.",
+      "noteEn": "These are forms of haber, the helper verb used here like English “have.” For most verbs, the completed-action form ends in -ado after an -ar verb and -ido after an -er or -ir verb. This form is called the past participle, and it does not change after haber. How often this tense is used instead of the simple past varies by region.",
+      "tags": [
+        "B1",
+        "grammar",
+        "perfect tense"
+      ],
+      "questionEn": "How do you say “have done,” as in “I have finished”?",
+      "example": {
+        "es": "He terminado.",
+        "en": "I have finished."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-perdido",
       "kind": "word",
       "promptEs": "perdido",
       "answerEn": "lost",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00072",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a17bd36b4c692895d808",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00060-534e62b0",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00075",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0021",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-elecciones-parte-2-00061-4ee36b4d",
-      "kind": "word",
-      "promptEs": "c",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-elecciones-parte-2:ocr-token-00079",
-        "sourceLineId": "es-xkcd-elecciones-parte-2:ocr-line-0022",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2e7d2c03a9507ae265ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     }
   ]

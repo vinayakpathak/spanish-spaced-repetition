@@ -1,63 +1,80 @@
-# Lazy corpus contract
+# Lazy runtime corpus contract
 
-The browser first requests `/corpus/manifest.json`. If that file is absent or
-invalid, Tira continues with the six reviewed comics from `lib/content.ts`.
-Reviewed entries always override generated entries with the same comic ID,
-while retaining the generated manifest's full-corpus importance score. The
-merge requires exact reviewed `cardIds` and analytics-target parity; a stale or
-mismatched manifest is rejected and the app uses its degraded fallback.
+The browser first requests `/corpus/manifest.json`. The schema-v3 manifest is
+compact: it contains the complete 258-comic scheduler index, one deduplicated
+copy of every stable schedulable card, and informational graph scores. Regions,
+applications, and word geometry remain in one lazy file per comic.
 
-Each comic's `cardIds` is its complete **schedulable** index for the SRS overlap
-algorithm. Every clickable generated word has one exact ID in that index,
-including cards whose English meaning still needs human review. `cardCatalog`
-contains compact copy for all generated cards so the My cards drawer can
-restore history without fetching every old comic bundle. Regions, word bounds,
-and explanations stay in per-comic files.
+`scripts/build-runtime-corpus.mjs` selects content in this order:
 
-`importanceTargetIds` is a separate, analytics-only graph index. Every
-schedulable word card maps provisionally to a normalized Spanish-prompt and
-English-answer signature; grammar, phrase, and concept cards map to their
-encoded stable card ID. Targets are deduplicated within each comic. This makes
-cross-comic centrality useful before contextual review is complete, but the
-signatures must never be used as SRS IDs or as evidence that two contextual
-word cards have been reviewed and merged.
+1. an individually authored artifact in `data/authoring/comics`;
+2. a checked-in seed lesson from `lib/content.ts`;
+3. provisional OCR only when neither stable source exists.
+
+The migrated 258-comic build uses 254 authored artifacts and four seed-only
+fallbacks, so no provisional OCR card is published. The two seed IDs that also
+have authored artifacts (`correlation` and `tech-support`) use their authored
+versions. All 258 comics are written as self-contained lazy bundles.
+
+## Status and provenance
+
+Published comics, bundles, entries, and cards currently use
+`reviewStatus: "ai-authored-internal-qa"`. This records the completed internal
+source, semantic, application, and geometry checks without claiming human
+expert verification. `human-verified` is reserved for future expert review;
+`needs-review` remains available only for an OCR fallback build.
+
+Cards carry `provenance.contextualSenseReviewed`; comics and bundles carry the
+plural `contextualSensesReviewed`. These are `true` for internal-QA content and
+`false` for provisional OCR. Runtime JSON must not leak authoring-only workflow
+fields such as `editorialStatus`, `qualityStatus`, `humanVerified`, `semanticQa`,
+or authoring geometry rationales.
+
+## Manifest
+
+Each comic's `cardIds` is its complete de-duplicated schedulable SRS index.
+`cardCatalog` is the de-duplicated union of those stable IDs, so scheduling and
+the card library can initialize without fetching every comic. Repeated card IDs
+must have byte-equivalent definitions.
+
+The current catalog has 6,466 cards. The three former ordinary `bien` IDs are
+consolidated into seed-owned `word-bien--well`, used in four comics; the other
+six `bien` senses remain separate. Native complete schema-v5 histories migrate
+those reviewed IDs before curriculum reconciliation, including active-session
+card/open summaries. This is separate from the analytics namespace below.
+
+`importanceTargetIds` is a separate analytics namespace. Every schedulable
+card maps reversibly to `card:${encodeURIComponent(card.id)}`. One comic has at
+most one edge to a target. This lets shared stable cards connect comics without
+inventing aliases or changing SRS history.
 
 ```json
 {
-  "schemaVersion": 2,
-  "revision": "2026-08-29.1",
+  "schemaVersion": 3,
+  "revision": "runtime-…",
   "importanceModel": {
     "algorithm": "damped-bipartite-centrality-v1",
     "normalization": "comic-sum-1",
-    "identityPolicy": "provisional-word-signature-v1",
+    "identityPolicy": "stable-card-id-v1",
     "edgePolicy": "one-per-comic-per-target",
     "cardScope": "schedulable-only",
     "includesSchedulableOnly": true,
-    "reviewStatus": "provisional-context-unreviewed",
-    "provisional": true,
-    "contextualSensesReviewed": false,
-    "damping": 0.85,
-    "tolerance": 1e-12,
-    "maxIterations": 1000,
-    "iterations": 13,
-    "converged": true,
-    "nodeCount": 5211,
-    "comicNodeCount": 258,
-    "cardNodeCount": 4953,
-    "edgeCount": 11758
+    "reviewStatus": "ai-authored-internal-qa",
+    "provisional": false,
+    "contextualSensesReviewed": true
   },
   "comics": [
     {
       "id": "es-xkcd-pong",
-      "loadKey": "es-xkcd-pong.2026-08-29.1",
-      "revision": "2026-08-29.1",
+      "loadKey": "es-xkcd-pong",
+      "revision": "runtime-…",
       "xkcdNumber": 117,
       "publishedAt": "2006-06-19",
       "title": "Pong",
       "titleEs": "Pong",
       "imageSrc": "/corpus/images/es-xkcd-pong.png",
       "cardIds": ["word-pong"],
-      "importanceTargetIds": ["word:pong|pong"],
+      "importanceTargetIds": ["card:word-pong"],
       "importance": {
         "score": 0.0004,
         "rank": 200,
@@ -65,7 +82,7 @@ word cards have been reviewed and merged.
         "cardCount": 1,
         "sharedCardCount": 0
       },
-      "reviewStatus": "needs-review"
+      "reviewStatus": "ai-authored-internal-qa"
     }
   ],
   "cardCatalog": [
@@ -74,75 +91,55 @@ word cards have been reviewed and merged.
       "kind": "word",
       "promptEs": "pong",
       "answerEn": "Pong",
-      "noteEn": "",
-      "tags": ["word", "machine extracted", "needs review"],
-      "reviewStatus": "needs-review",
-      "schedulable": true
+      "noteEn": "…",
+      "tags": ["word"],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": { "contextualSenseReviewed": true }
     }
   ]
 }
 ```
 
+The manifest parser checks normalized scores/ranks, graph counts, target syntax,
+the full stable-card catalog, and explicit status/provenance. Analytics IDs are
+never accepted as scheduler IDs.
+
+## Lazy bundles and seed fallback
+
 Selecting an unloaded entry requests
-`/corpus/comics/{loadKey}.json?v={revision}`. The file must be self-contained:
-`comic.cardIds` must equal the manifest entry's schedulable `cardIds`, and
-`cards` must define every referenced ID. Generated bundles do not have a
-preview-only tier: even a card whose `answerEn` is `Meaning needs review` has
-`reviewStatus: needs-review`, `schedulable: true`, and participates in exact
-display/open history. This does not claim that its contextual sense was
-reviewed or invent an English translation.
+`/corpus/comics/{loadKey}.json?v={revision}`. A bundle repeats schema, revision,
+and status, then provides one complete `Comic` and every referenced
+`LearningCard`. `comic.cardIds` must equal the manifest entry's `cardIds`; every
+word's first card must be a contextual word card, and every linked ID must be
+defined by the bundle.
 
 ```json
 {
-  "schemaVersion": 2,
-  "revision": "2026-08-29.1",
+  "schemaVersion": 3,
+  "revision": "runtime-…",
+  "reviewStatus": "ai-authored-internal-qa",
+  "provenance": {
+    "method": "ai-authored-internal-qa",
+    "contextualSensesReviewed": true
+  },
   "comic": {
     "id": "es-xkcd-pong",
-    "xkcdNumber": 117,
-    "publishedAt": "2006-06-19",
-    "title": "Pong",
-    "titleEs": "Pong",
-    "image": {
-      "src": "/corpus/images/es-xkcd-pong.png",
-      "width": 640,
-      "height": 534,
-      "aspectRatio": 1.1985,
-      "altEn": "Spanish translation of xkcd 117, Pong"
-    },
-    "source": {
-      "creator": "Randall Munroe",
-      "publisher": "xkcd",
-      "originalPageUrl": "https://xkcd.com/117/",
-      "originalImageUrl": "https://imgs.xkcd.com/comics/pong.png",
-      "translationPageUrl": "https://es.xkcd.com/strips/pong/",
-      "translationImageUrl": "https://es.xkcd.com/images/117_pong.png",
-      "translationCredit": "Gabriel Rodríguez Alberich",
-      "licenseName": "Creative Commons Attribution-NonCommercial 2.5 Generic",
-      "licenseLabel": "CC BY-NC 2.5",
-      "licenseUrl": "https://creativecommons.org/licenses/by-nc/2.5/",
-      "attributionRequired": true,
-      "commercialUseAllowed": false
-    },
-    "titleText": { "es": "…", "en": "…" },
+    "reviewStatus": "ai-authored-internal-qa",
+    "provenance": { "contextualSensesReviewed": true },
     "regions": [],
     "cardIds": ["word-pong"]
   },
-  "cards": [
-    {
-      "id": "word-pong",
-      "kind": "word",
-      "promptEs": "pong",
-      "answerEn": "Pong",
-      "noteEn": "",
-      "tags": ["word", "machine extracted", "needs review"],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": { "contextualSenseReviewed": false }
-    }
-  ]
+  "cards": []
 }
 ```
 
-Nested objects must use the complete `Comic` and `LearningCard` shapes exported
-by `lib/content.ts`. Generated files are fetched
-at runtime and must not be imported into the JavaScript bundle.
+If the remote manifest is unavailable or invalid, the app uses the six
+checked-in seed lessons in memory and disables persistence for that reduced
+session. In a valid full manifest, a local seed adapter is used only when its
+`loadKey`, `revision`, `cardIds`, and `importanceTargetIds` exactly match the
+remote entry. That leaves authored versions free to supersede seed IDs while
+preserving an offline fallback for the four seed-only lessons.
+
+Runtime files are fetched dynamically and must not be imported into the
+JavaScript application bundle.

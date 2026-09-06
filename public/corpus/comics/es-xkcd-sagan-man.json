@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-2027e8bbd6b3c86d",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 39,
-    "filteredNonLatinTokenCount": 1,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-sagan-man",
     "xkcdNumber": 663,
     "publishedAt": "2009-11-16",
-    "title": "Sagan-man",
+    "title": "Sagan-Man",
     "titleEs": "Sagan-man",
     "image": {
       "src": "https://es.xkcd.com/images/sagan-man.png",
       "width": 665,
       "height": 212,
       "aspectRatio": 3.1368,
-      "altEn": "Spanish-language xkcd comic #663: Sagan-man"
+      "altEn": "Spanish-language xkcd comic #663: Sagan-Man"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Ahora se ríen, pero en 10 años toda la población criminal de la ciudad lo habrá dejado para dedicarse a la investigación espacial",
-      "en": "English title text pending review."
+      "en": "They laugh now, but within 10 years the city's entire criminal class will have quit to work on space research.",
+      "noteEn": "The Spanish archive and official xkcd source both identify comic #663. The Spanish title text translates the official prediction about criminals moving into space research. The raster keeps CARL SAGAN and SAGAN-MAN as proper names and prints 1995 as a year, so those four source units are excluded rather than lexicalized."
     },
     "regions": [
       {
-        "id": "es-xkcd-sagan-man:region-0001",
-        "labelEs": "TRAS SER MORDIDO POR UN CARL SAGAN",
+        "id": "es-xkcd-sagan-man:origin-caption",
+        "labelEs": "TRAS SER MORDIDO POR UN CARL SAGAN RADIOACTIVO EN 1995, SAGAN-MAN POSEE LOS PODERES Y TALENTOS DE CARL SAGAN.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 2.4024,
-          "y": 4.717,
-          "width": 42.042,
-          "height": 8.4906
+          "x": 1.5,
+          "y": 3,
+          "width": 46,
+          "height": 26
         },
         "words": [
           {
-            "id": "es-xkcd-sagan-man:word-00001",
+            "id": "es-xkcd-sagan-man:origin-caption:w01",
             "text": "TRAS",
             "normalized": "tras",
             "bounds": [
@@ -66,15 +61,16 @@
                 "x": 2.4024,
                 "y": 4.717,
                 "width": 5.7432,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00001-120c8a73"
+              "word-tras--after",
+              "grammar-tras-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00002",
+            "id": "es-xkcd-sagan-man:origin-caption:w02",
             "text": "SER",
             "normalized": "ser",
             "bounds": [
@@ -82,15 +78,17 @@
                 "x": 8.4835,
                 "y": 4.717,
                 "width": 4.3919,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00002-8e10dd68"
+              "word-ser",
+              "grammar-tras-infinitive",
+              "grammar-ser-participle-passive"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00003",
+            "id": "es-xkcd-sagan-man:origin-caption:w03",
             "text": "MORDIDO",
             "normalized": "mordido",
             "bounds": [
@@ -98,15 +96,17 @@
                 "x": 13.2132,
                 "y": 4.717,
                 "width": 9.4595,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00003-2e83c260"
+              "word-mordido",
+              "grammar-ser-participle-passive",
+              "concept-sagan-man-science-distraction"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00004",
+            "id": "es-xkcd-sagan-man:origin-caption:w04",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -114,15 +114,16 @@
                 "x": 23.0105,
                 "y": 4.717,
                 "width": 4.3919,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00004-59bb9aa8"
+              "word-por--passive-agent",
+              "grammar-ser-participle-passive"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00005",
+            "id": "es-xkcd-sagan-man:origin-caption:w05",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -130,77 +131,15 @@
                 "x": 27.7402,
                 "y": 4.717,
                 "width": 3.3784,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00005-542c5b7b"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00006",
-            "text": "CARL",
-            "normalized": "carl",
-            "bounds": [
-              {
-                "x": 31.4565,
-                "y": 4.717,
-                "width": 5.4054,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00006-5b10610b"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00007",
-            "text": "SAGAN",
-            "normalized": "sagan",
-            "bounds": [
-              {
-                "x": 37.1997,
-                "y": 4.717,
-                "width": 7.2447,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00007-4579ac08"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00001-120c8a73",
-          "word-auto-es-xkcd-sagan-man-00002-8e10dd68",
-          "word-auto-es-xkcd-sagan-man-00003-2e83c260",
-          "word-auto-es-xkcd-sagan-man-00004-59bb9aa8",
-          "word-auto-es-xkcd-sagan-man-00005-542c5b7b",
-          "word-auto-es-xkcd-sagan-man-00006-5b10610b",
-          "word-auto-es-xkcd-sagan-man-00007-4579ac08"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0002",
-        "labelEs": "RADIOACTIVO EN 1995, SAGAN-MAN POSEE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.4024,
-          "y": 12.2642,
-          "width": 42.9429,
-          "height": 8.4906
-        },
-        "words": [
-          {
-            "id": "es-xkcd-sagan-man:word-00008",
+            "id": "es-xkcd-sagan-man:origin-caption:w06",
             "text": "RADIOACTIVO",
             "normalized": "radioactivo",
             "bounds": [
@@ -208,15 +147,16 @@
                 "x": 2.4024,
                 "y": 12.2642,
                 "width": 13.1757,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00008-493728bc"
+              "word-radioactivo",
+              "concept-sagan-man-science-distraction"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00009",
+            "id": "es-xkcd-sagan-man:origin-caption:w07",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -224,31 +164,15 @@
                 "x": 15.9159,
                 "y": 12.2642,
                 "width": 3.3784,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00009-9c90aa5e"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00010",
-            "text": "SAGAN-MAN",
-            "normalized": "sagan-man",
-            "bounds": [
-              {
-                "x": 25.7132,
-                "y": 12.2642,
-                "width": 12.5,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00010-08eb05ae"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00011",
+            "id": "es-xkcd-sagan-man:origin-caption:w08",
             "text": "POSEE",
             "normalized": "posee",
             "bounds": [
@@ -256,42 +180,15 @@
                 "x": 38.5511,
                 "y": 12.2642,
                 "width": 6.7943,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00011-ec395089"
+              "word-posee"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00008-493728bc",
-          "word-auto-es-xkcd-sagan-man-00009-9c90aa5e",
-          "word-auto-es-xkcd-sagan-man-00010-08eb05ae",
-          "word-auto-es-xkcd-sagan-man-00011-ec395089"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0003",
-        "labelEs": "LOS PODERES Y TALENTOS DE CARL SAGAN.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.4024,
-          "y": 19.8113,
-          "width": 44.1441,
-          "height": 8.4906
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-sagan-man:word-00012",
+            "id": "es-xkcd-sagan-man:origin-caption:w09",
             "text": "LOS",
             "normalized": "los",
             "bounds": [
@@ -299,15 +196,15 @@
                 "x": 2.4024,
                 "y": 19.8113,
                 "width": 4.3919,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00012-c701a838"
+              "word-los"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00013",
+            "id": "es-xkcd-sagan-man:origin-caption:w10",
             "text": "PODERES",
             "normalized": "poderes",
             "bounds": [
@@ -315,15 +212,16 @@
                 "x": 7.1321,
                 "y": 19.8113,
                 "width": 9.4595,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00013-e539a151"
+              "word-poderes",
+              "concept-sagan-man-science-distraction"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00014",
+            "id": "es-xkcd-sagan-man:origin-caption:w11",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -331,15 +229,15 @@
                 "x": 16.9294,
                 "y": 19.8113,
                 "width": 1.3514,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00014-94481133"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00015",
+            "id": "es-xkcd-sagan-man:origin-caption:w12",
             "text": "TALENTOS",
             "normalized": "talentos",
             "bounds": [
@@ -347,15 +245,16 @@
                 "x": 18.6186,
                 "y": 19.8113,
                 "width": 10.8108,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00015-1c35390c"
+              "word-talentos",
+              "concept-sagan-man-science-distraction"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00016",
+            "id": "es-xkcd-sagan-man:origin-caption:w13",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -363,299 +262,140 @@
                 "x": 29.7673,
                 "y": 19.8113,
                 "width": 3.0405,
-                "height": 8.4906
+                "height": 5.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00016-a7c28e54"
+              "word-de--ownership"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-sagan-man:origin-caption:excluded-carl-sagan-1",
+            "text": "CARL SAGAN",
+            "reason": "non-spanish-text",
+            "rationale": "Carl Sagan is an unchanged personal name, not a Spanish lexical learning target.",
+            "bounds": [
+              {
+                "x": 31.4565,
+                "y": 4.717,
+                "width": 5.4054,
+                "height": 5.8
+              },
+              {
+                "x": 37.1997,
+                "y": 4.717,
+                "width": 7.2447,
+                "height": 5.8
+              }
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00017",
-            "text": "CARL",
-            "normalized": "carl",
+            "id": "es-xkcd-sagan-man:origin-caption:excluded-1995",
+            "text": "1995",
+            "reason": "number",
+            "rationale": "1995 is a year numeral rather than a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 19.6321,
+                "y": 12.2642,
+                "width": 5.7432,
+                "height": 5.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:origin-caption:excluded-sagan-man",
+            "text": "SAGAN-MAN",
+            "reason": "non-spanish-text",
+            "rationale": "Sagan-Man is the unchanged coined superhero name, not a Spanish lexical learning target.",
+            "bounds": [
+              {
+                "x": 25.7132,
+                "y": 12.2642,
+                "width": 12.5,
+                "height": 5.8
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:origin-caption:excluded-carl-sagan-2",
+            "text": "CARL SAGAN",
+            "reason": "non-spanish-text",
+            "rationale": "Carl Sagan is an unchanged personal name, not a Spanish lexical learning target.",
             "bounds": [
               {
                 "x": 33.1456,
                 "y": 19.8113,
                 "width": 5.4054,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00017-fe0f6730"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00018",
-            "text": "SAGAN",
-            "normalized": "sagan",
-            "bounds": [
+                "height": 5.8
+              },
               {
                 "x": 38.8889,
                 "y": 19.8113,
                 "width": 7.6577,
-                "height": 8.4906
+                "height": 5.8
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00018-3863357f"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00012-c701a838",
-          "word-auto-es-xkcd-sagan-man-00013-e539a151",
-          "word-auto-es-xkcd-sagan-man-00014-94481133",
-          "word-auto-es-xkcd-sagan-man-00015-1c35390c",
-          "word-auto-es-xkcd-sagan-man-00016-a7c28e54",
-          "word-auto-es-xkcd-sagan-man-00017-fe0f6730",
-          "word-auto-es-xkcd-sagan-man-00018-3863357f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0004",
-        "labelEs": "¿TE DAS CUENTA DE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 78.979,
-          "y": 27.3585,
-          "width": 18.9189,
-          "height": 6.6038
-        },
-        "words": [
+        "applications": [
           {
-            "id": "es-xkcd-sagan-man:word-00019",
-            "text": "TE",
-            "normalized": "te",
-            "bounds": [
-              {
-                "x": 78.979,
-                "y": 27.3585,
-                "width": 3.9414,
-                "height": 6.6038
-              }
+            "id": "es-xkcd-sagan-man:origin-caption:app-after-action",
+            "cardId": "grammar-tras-infinitive",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:origin-caption:w01",
+              "es-xkcd-sagan-man:origin-caption:w02"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00019-e2e017bb"
-            ]
+            "exampleEs": "TRAS SER",
+            "explanationEn": "Tras introduces the earlier event, and ser remains in its unchanged -er dictionary form."
           },
           {
-            "id": "es-xkcd-sagan-man:word-00020",
-            "text": "DAS",
-            "normalized": "das",
-            "bounds": [
-              {
-                "x": 83.1832,
-                "y": 27.3585,
-                "width": 3.9414,
-                "height": 6.6038
-              }
+            "id": "es-xkcd-sagan-man:origin-caption:app-passive",
+            "cardId": "grammar-ser-participle-passive",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:origin-caption:w02",
+              "es-xkcd-sagan-man:origin-caption:w03",
+              "es-xkcd-sagan-man:origin-caption:w04"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00020-3f630486"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00021",
-            "text": "CUENTA",
-            "normalized": "cuenta",
-            "bounds": [
-              {
-                "x": 87.3874,
-                "y": 27.3585,
-                "width": 7.6201,
-                "height": 6.6038
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00021-5f48cd4a"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00022",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 95.2703,
-                "y": 27.3585,
-                "width": 2.6276,
-                "height": 6.6038
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00022-235bfa87"
-            ]
+            "exampleEs": "SER MORDIDO POR",
+            "explanationEn": "Ser supplies the passive helper, mordido names the completed action affecting the hero, and por introduces the doer."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00019-e2e017bb",
-          "word-auto-es-xkcd-sagan-man-00020-3f630486",
-          "word-auto-es-xkcd-sagan-man-00021-5f48cd4a",
-          "word-auto-es-xkcd-sagan-man-00022-235bfa87"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+          "word-tras--after",
+          "grammar-tras-infinitive",
+          "word-ser",
+          "grammar-ser-participle-passive",
+          "word-mordido",
+          "concept-sagan-man-science-distraction",
+          "word-por--passive-agent",
+          "word-un",
+          "word-radioactivo",
+          "word-en",
+          "word-posee",
+          "word-los",
+          "word-poderes",
+          "word-y",
+          "word-talentos",
+          "word-de--ownership"
+        ]
       },
       {
-        "id": "es-xkcd-sagan-man:region-0005",
-        "labelEs": "LO INCREÍBLE QUE",
+        "id": "es-xkcd-sagan-man:alarm",
+        "labelEs": "¡SOCORRO! ¡AL LADRÓN!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 78.979,
-          "y": 33.0189,
-          "width": 17.7177,
-          "height": 6.6038
+          "x": 0.1,
+          "y": 37.8,
+          "width": 15,
+          "height": 16
         },
         "words": [
           {
-            "id": "es-xkcd-sagan-man:word-00023",
-            "text": "LO",
-            "normalized": "lo",
-            "bounds": [
-              {
-                "x": 78.979,
-                "y": 33.0189,
-                "width": 2.8904,
-                "height": 6.6038
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00023-4da43a5d"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00024",
-            "text": "INCREÍBLE",
-            "normalized": "increíble",
-            "bounds": [
-              {
-                "x": 82.1321,
-                "y": 33.0189,
-                "width": 9.985,
-                "height": 6.6038
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00024-181a31e9"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00025",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 92.3799,
-                "y": 33.0189,
-                "width": 4.3168,
-                "height": 6.6038
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00025-19917ddc"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00023-4da43a5d",
-          "word-auto-es-xkcd-sagan-man-00024-181a31e9",
-          "word-auto-es-xkcd-sagan-man-00025-19917ddc"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0006",
-        "labelEs": "¡OYE, TÚ!",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 52.8529,
-          "y": 33.9623,
-          "width": 10.2102,
-          "height": 8.4906
-        },
-        "words": [
-          {
-            "id": "es-xkcd-sagan-man:word-00026",
-            "text": "OYE",
-            "normalized": "oye",
-            "bounds": [
-              {
-                "x": 52.8529,
-                "y": 33.9623,
-                "width": 6.0811,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00026-558ce35c"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00027",
-            "text": "TÚ",
-            "normalized": "tú",
-            "bounds": [
-              {
-                "x": 59.2718,
-                "y": 33.9623,
-                "width": 3.7913,
-                "height": 8.4906
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00027-d12964b4"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00026-558ce35c",
-          "word-auto-es-xkcd-sagan-man-00027-d12964b4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0007",
-        "labelEs": "¡SOCORRO!",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 0.3003,
-          "y": 38.6792,
-          "width": 11.4114,
-          "height": 6.6038
-        },
-        "words": [
-          {
-            "id": "es-xkcd-sagan-man:word-00028",
+            "id": "es-xkcd-sagan-man:alarm:w01",
             "text": "SOCORRO",
             "normalized": "socorro",
             "bounds": [
@@ -663,113 +403,15 @@
                 "x": 0.3003,
                 "y": 38.6792,
                 "width": 11.4114,
-                "height": 6.6038
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00028-67a05012"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00028-67a05012"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0008",
-        "labelEs": "ES QUE HAYAMOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 78.979,
-          "y": 40.566,
-          "width": 16.5165,
-          "height": 5.6604
-        },
-        "words": [
-          {
-            "id": "es-xkcd-sagan-man:word-00029",
-            "text": "ES",
-            "normalized": "es",
-            "bounds": [
-              {
-                "x": 78.979,
-                "y": 40.566,
-                "width": 2.7027,
-                "height": 5.6604
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00029-36379089"
+              "word-socorro"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00030",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 81.9069,
-                "y": 40.566,
-                "width": 4.0541,
-                "height": 5.6604
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00030-693a487c"
-            ]
-          },
-          {
-            "id": "es-xkcd-sagan-man:word-00031",
-            "text": "HAYAMOS",
-            "normalized": "hayamos",
-            "bounds": [
-              {
-                "x": 86.1862,
-                "y": 40.566,
-                "width": 9.3093,
-                "height": 5.6604
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00031-83845389"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00029-36379089",
-          "word-auto-es-xkcd-sagan-man-00030-693a487c",
-          "word-auto-es-xkcd-sagan-man-00031-83845389"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0009",
-        "labelEs": "¡AL LADRÓN!",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 1.5015,
-          "y": 45.283,
-          "width": 13.2132,
-          "height": 7.5472
-        },
-        "words": [
-          {
-            "id": "es-xkcd-sagan-man:word-00032",
+            "id": "es-xkcd-sagan-man:alarm:w02",
             "text": "AL",
             "normalized": "al",
             "bounds": [
@@ -777,15 +419,16 @@
                 "x": 1.5015,
                 "y": 45.283,
                 "width": 4.2042,
-                "height": 7.5472
+                "height": 5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00032-b9bb0dbf"
+              "word-al--alarm-cry",
+              "phrase-al-ladron"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00033",
+            "id": "es-xkcd-sagan-man:alarm:w03",
             "text": "LADRÓN",
             "normalized": "ladrón",
             "bounds": [
@@ -793,40 +436,334 @@
                 "x": 6.006,
                 "y": 45.283,
                 "width": 8.7087,
-                "height": 7.5472
+                "height": 5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00033-d04031e0"
+              "word-ladron",
+              "phrase-al-ladron"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00032-b9bb0dbf",
-          "word-auto-es-xkcd-sagan-man-00033-d04031e0"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-sagan-man:alarm:app-alarm-cry",
+            "cardId": "phrase-al-ladron",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:alarm:w02",
+              "es-xkcd-sagan-man:alarm:w03"
+            ],
+            "exampleEs": "¡AL LADRÓN!",
+            "explanationEn": "Al introduces the danger and ladrón names it, forming the conventional alarm cry."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0009",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-socorro",
+          "word-al--alarm-cry",
+          "phrase-al-ladron",
+          "word-ladron"
+        ]
       },
       {
-        "id": "es-xkcd-sagan-man:region-0010",
-        "labelEs": "ESTADO EN LA LUNA?",
+        "id": "es-xkcd-sagan-man:hero-call",
+        "labelEs": "¡OYE, TÚ!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 78.6787,
-          "y": 47.1698,
-          "width": 21.021,
-          "height": 7.5472
+          "x": 52.2,
+          "y": 33,
+          "width": 11.5,
+          "height": 10
         },
         "words": [
           {
-            "id": "es-xkcd-sagan-man:word-00034",
+            "id": "es-xkcd-sagan-man:hero-call:w01",
+            "text": "OYE",
+            "normalized": "oye",
+            "bounds": [
+              {
+                "x": 52.8529,
+                "y": 33.9623,
+                "width": 6.0811,
+                "height": 5
+              }
+            ],
+            "cardIds": [
+              "word-oye--attention",
+              "grammar-affirmative-tu-command"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:hero-call:w02",
+            "text": "TÚ",
+            "normalized": "tú",
+            "bounds": [
+              {
+                "x": 59.2718,
+                "y": 33.9623,
+                "width": 3.7913,
+                "height": 5
+              }
+            ],
+            "cardIds": [
+              "word-tú"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-sagan-man:hero-call:app-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:hero-call:w01"
+            ],
+            "exampleEs": "OYE",
+            "explanationEn": "Oye is the irregular positive command used to get one familiar listener's attention."
+          }
+        ],
+        "cardIds": [
+          "word-oye--attention",
+          "grammar-affirmative-tu-command",
+          "word-tú"
+        ]
+      },
+      {
+        "id": "es-xkcd-sagan-man:thief-reply",
+        "labelEs": "¿QUÉ?",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 62.8,
+          "y": 48.7,
+          "width": 8,
+          "height": 10
+        },
+        "words": [
+          {
+            "id": "es-xkcd-sagan-man:thief-reply:w01",
+            "text": "QUÉ",
+            "normalized": "qué",
+            "bounds": [
+              {
+                "x": 63.3634,
+                "y": 50,
+                "width": 6.9069,
+                "height": 5
+              }
+            ],
+            "cardIds": [
+              "word-qué--echo-question",
+              "question-words"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-sagan-man:thief-reply:app-question-word",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:thief-reply:w01"
+            ],
+            "exampleEs": "QUÉ",
+            "explanationEn": "Qué carries a written accent because it directly asks for the missing or surprising information."
+          }
+        ],
+        "cardIds": [
+          "word-qué--echo-question",
+          "question-words"
+        ]
+      },
+      {
+        "id": "es-xkcd-sagan-man:moon-question",
+        "labelEs": "¿TE DAS CUENTA DE LO INCREÍBLE QUE ES QUE HAYAMOS ESTADO EN LA LUNA?",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 78.2,
+          "y": 26.5,
+          "width": 21.7,
+          "height": 29
+        },
+        "words": [
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w01",
+            "text": "TE",
+            "normalized": "te",
+            "bounds": [
+              {
+                "x": 78.979,
+                "y": 27.3585,
+                "width": 3.9414,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-te--darse-cuenta",
+              "phrase-darse-cuenta-de"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w02",
+            "text": "DAS",
+            "normalized": "das",
+            "bounds": [
+              {
+                "x": 83.1832,
+                "y": 27.3585,
+                "width": 3.9414,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-das--darse-cuenta",
+              "phrase-darse-cuenta-de"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w03",
+            "text": "CUENTA",
+            "normalized": "cuenta",
+            "bounds": [
+              {
+                "x": 87.3874,
+                "y": 27.3585,
+                "width": 7.6201,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-cuenta--darse-cuenta",
+              "phrase-darse-cuenta-de"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w04",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 95.2703,
+                "y": 27.3585,
+                "width": 2.6276,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-de--darse-cuenta",
+              "phrase-darse-cuenta-de"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w05",
+            "text": "LO",
+            "normalized": "lo",
+            "bounds": [
+              {
+                "x": 78.979,
+                "y": 33.0189,
+                "width": 2.8904,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-lo--degree",
+              "grammar-lo-adjective-que-degree"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w06",
+            "text": "INCREÍBLE",
+            "normalized": "increíble",
+            "bounds": [
+              {
+                "x": 82.1321,
+                "y": 33.0189,
+                "width": 9.985,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-increíble",
+              "grammar-lo-adjective-que-degree",
+              "grammar-evaluative-subjunctive",
+              "concept-sagan-man-science-distraction"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w07",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 92.3799,
+                "y": 33.0189,
+                "width": 4.3168,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-que--degree",
+              "grammar-lo-adjective-que-degree"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w08",
+            "text": "ES",
+            "normalized": "es",
+            "bounds": [
+              {
+                "x": 78.979,
+                "y": 40.566,
+                "width": 2.7027,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-es--impersonal-evaluation",
+              "grammar-lo-adjective-que-degree",
+              "grammar-evaluative-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w09",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 81.9069,
+                "y": 40.566,
+                "width": 4.0541,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-que--clause-link",
+              "grammar-evaluative-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w10",
+            "text": "HAYAMOS",
+            "normalized": "hayamos",
+            "bounds": [
+              {
+                "x": 86.1862,
+                "y": 40.566,
+                "width": 9.3093,
+                "height": 4.8
+              }
+            ],
+            "cardIds": [
+              "word-hayamos--present-perfect-subjunctive",
+              "grammar-evaluative-subjunctive",
+              "grammar-present-perfect-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:w11",
             "text": "ESTADO",
             "normalized": "estado",
             "bounds": [
@@ -834,15 +771,17 @@
                 "x": 78.6787,
                 "y": 47.1698,
                 "width": 7.5075,
-                "height": 7.5472
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00034-c13f28c3"
+              "word-estado--been",
+              "grammar-evaluative-subjunctive",
+              "grammar-present-perfect-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00035",
+            "id": "es-xkcd-sagan-man:moon-question:w12",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -850,15 +789,15 @@
                 "x": 86.4865,
                 "y": 47.1698,
                 "width": 3.003,
-                "height": 7.5472
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00035-301ba330"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00036",
+            "id": "es-xkcd-sagan-man:moon-question:w13",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -866,15 +805,15 @@
                 "x": 89.7898,
                 "y": 47.1698,
                 "width": 2.7027,
-                "height": 7.5472
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00036-7ca8a222"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-sagan-man:word-00037",
+            "id": "es-xkcd-sagan-man:moon-question:w14",
             "text": "LUNA",
             "normalized": "luna",
             "bounds": [
@@ -882,1033 +821,1054 @@
                 "x": 92.7928,
                 "y": 47.1698,
                 "width": 6.9069,
-                "height": 7.5472
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00037-71886111"
+              "word-luna",
+              "concept-sagan-man-science-distraction"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00034-c13f28c3",
-          "word-auto-es-xkcd-sagan-man-00035-301ba330",
-          "word-auto-es-xkcd-sagan-man-00036-7ca8a222",
-          "word-auto-es-xkcd-sagan-man-00037-71886111"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0010",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-sagan-man:region-0011",
-        "labelEs": "¿QUE?",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 63.3634,
-          "y": 50,
-          "width": 6.9069,
-          "height": 7.5472
-        },
-        "words": [
+        "excludedUnits": [],
+        "applications": [
           {
-            "id": "es-xkcd-sagan-man:word-00038",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 63.3634,
-                "y": 50,
-                "width": 6.9069,
-                "height": 7.5472
-              }
+            "id": "es-xkcd-sagan-man:moon-question:app-realize",
+            "cardId": "phrase-darse-cuenta-de",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:moon-question:w01",
+              "es-xkcd-sagan-man:moon-question:w02",
+              "es-xkcd-sagan-man:moon-question:w03",
+              "es-xkcd-sagan-man:moon-question:w04"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-sagan-man-00038-b09e4dc2"
-            ]
+            "exampleEs": "TE DAS CUENTA DE",
+            "explanationEn": "Te matches the familiar listener, das supplies the changed verb, cuenta completes the expression, and de introduces what is realized."
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:app-degree",
+            "cardId": "grammar-lo-adjective-que-degree",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:moon-question:w05",
+              "es-xkcd-sagan-man:moon-question:w06",
+              "es-xkcd-sagan-man:moon-question:w07",
+              "es-xkcd-sagan-man:moon-question:w08"
+            ],
+            "exampleEs": "LO INCREÍBLE QUE ES",
+            "explanationEn": "Lo and que frame increíble as a degree, while es supplies the verb for what is being measured."
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:app-evaluated-event",
+            "cardId": "grammar-evaluative-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:moon-question:w06",
+              "es-xkcd-sagan-man:moon-question:w08",
+              "es-xkcd-sagan-man:moon-question:w09",
+              "es-xkcd-sagan-man:moon-question:w10",
+              "es-xkcd-sagan-man:moon-question:w11"
+            ],
+            "exampleEs": "INCREÍBLE QUE ES QUE HAYAMOS ESTADO",
+            "explanationEn": "Increíble supplies the evaluation, que introduces the evaluated event, and hayamos estado uses the special form because that event is being judged rather than newly asserted."
+          },
+          {
+            "id": "es-xkcd-sagan-man:moon-question:app-completed-evaluated-event",
+            "cardId": "grammar-present-perfect-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-sagan-man:moon-question:w10",
+              "es-xkcd-sagan-man:moon-question:w11"
+            ],
+            "exampleEs": "HAYAMOS ESTADO",
+            "explanationEn": "Hayamos is the we-form of the special helper haber, and estado is the unchanged completed-action form of estar."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-sagan-man-00038-b09e4dc2"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-sagan-man:ocr-line-0011",
-          "ocrConfidence": 1
-        }
+          "word-te--darse-cuenta",
+          "phrase-darse-cuenta-de",
+          "word-das--darse-cuenta",
+          "word-cuenta--darse-cuenta",
+          "word-de--darse-cuenta",
+          "word-lo--degree",
+          "grammar-lo-adjective-que-degree",
+          "word-increíble",
+          "grammar-evaluative-subjunctive",
+          "concept-sagan-man-science-distraction",
+          "word-que--degree",
+          "word-es--impersonal-evaluation",
+          "word-que--clause-link",
+          "word-hayamos--present-perfect-subjunctive",
+          "grammar-present-perfect-subjunctive",
+          "word-estado--been",
+          "word-en",
+          "word-la--article",
+          "word-luna"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-sagan-man-00001-120c8a73",
-      "word-auto-es-xkcd-sagan-man-00002-8e10dd68",
-      "word-auto-es-xkcd-sagan-man-00003-2e83c260",
-      "word-auto-es-xkcd-sagan-man-00004-59bb9aa8",
-      "word-auto-es-xkcd-sagan-man-00005-542c5b7b",
-      "word-auto-es-xkcd-sagan-man-00006-5b10610b",
-      "word-auto-es-xkcd-sagan-man-00007-4579ac08",
-      "word-auto-es-xkcd-sagan-man-00008-493728bc",
-      "word-auto-es-xkcd-sagan-man-00009-9c90aa5e",
-      "word-auto-es-xkcd-sagan-man-00010-08eb05ae",
-      "word-auto-es-xkcd-sagan-man-00011-ec395089",
-      "word-auto-es-xkcd-sagan-man-00012-c701a838",
-      "word-auto-es-xkcd-sagan-man-00013-e539a151",
-      "word-auto-es-xkcd-sagan-man-00014-94481133",
-      "word-auto-es-xkcd-sagan-man-00015-1c35390c",
-      "word-auto-es-xkcd-sagan-man-00016-a7c28e54",
-      "word-auto-es-xkcd-sagan-man-00017-fe0f6730",
-      "word-auto-es-xkcd-sagan-man-00018-3863357f",
-      "word-auto-es-xkcd-sagan-man-00019-e2e017bb",
-      "word-auto-es-xkcd-sagan-man-00020-3f630486",
-      "word-auto-es-xkcd-sagan-man-00021-5f48cd4a",
-      "word-auto-es-xkcd-sagan-man-00022-235bfa87",
-      "word-auto-es-xkcd-sagan-man-00023-4da43a5d",
-      "word-auto-es-xkcd-sagan-man-00024-181a31e9",
-      "word-auto-es-xkcd-sagan-man-00025-19917ddc",
-      "word-auto-es-xkcd-sagan-man-00026-558ce35c",
-      "word-auto-es-xkcd-sagan-man-00027-d12964b4",
-      "word-auto-es-xkcd-sagan-man-00028-67a05012",
-      "word-auto-es-xkcd-sagan-man-00029-36379089",
-      "word-auto-es-xkcd-sagan-man-00030-693a487c",
-      "word-auto-es-xkcd-sagan-man-00031-83845389",
-      "word-auto-es-xkcd-sagan-man-00032-b9bb0dbf",
-      "word-auto-es-xkcd-sagan-man-00033-d04031e0",
-      "word-auto-es-xkcd-sagan-man-00034-c13f28c3",
-      "word-auto-es-xkcd-sagan-man-00035-301ba330",
-      "word-auto-es-xkcd-sagan-man-00036-7ca8a222",
-      "word-auto-es-xkcd-sagan-man-00037-71886111",
-      "word-auto-es-xkcd-sagan-man-00038-b09e4dc2"
+      "word-tras--after",
+      "grammar-tras-infinitive",
+      "word-ser",
+      "grammar-ser-participle-passive",
+      "word-mordido",
+      "concept-sagan-man-science-distraction",
+      "word-por--passive-agent",
+      "word-un",
+      "word-radioactivo",
+      "word-en",
+      "word-posee",
+      "word-los",
+      "word-poderes",
+      "word-y",
+      "word-talentos",
+      "word-de--ownership",
+      "word-socorro",
+      "word-al--alarm-cry",
+      "phrase-al-ladron",
+      "word-ladron",
+      "word-oye--attention",
+      "grammar-affirmative-tu-command",
+      "word-tú",
+      "word-qué--echo-question",
+      "question-words",
+      "word-te--darse-cuenta",
+      "phrase-darse-cuenta-de",
+      "word-das--darse-cuenta",
+      "word-cuenta--darse-cuenta",
+      "word-de--darse-cuenta",
+      "word-lo--degree",
+      "grammar-lo-adjective-que-degree",
+      "word-increíble",
+      "grammar-evaluative-subjunctive",
+      "word-que--degree",
+      "word-es--impersonal-evaluation",
+      "word-que--clause-link",
+      "word-hayamos--present-perfect-subjunctive",
+      "grammar-present-perfect-subjunctive",
+      "word-estado--been",
+      "word-la--article",
+      "word-luna"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 39,
-      "filteredNonLatinTokenCount": 1,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-sagan-man-00001-120c8a73",
+      "id": "word-tras--after",
       "kind": "word",
       "promptEs": "tras",
-      "answerEn": "Meaning needs review",
+      "answerEn": "after",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time connector"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00001",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bdd6b1b225fd2cb37095",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-locutores-de-codigos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00002-8e10dd68",
+      "id": "grammar-tras-infinitive",
+      "kind": "grammar",
+      "promptEs": "tras + verbo en forma de diccionario",
+      "questionEn": "How do you say that one action happens after another action?",
+      "answerEn": "Use tras, then put the earlier action in its unchanged dictionary form.",
+      "noteEn": "The action after tras keeps its -ar, -er, or -ir ending. Tras is a compact alternative to después de; both can mean “after doing something.”",
+      "example": {
+        "es": "Tras terminar, llamé a Ana.",
+        "en": "After finishing, I called Ana."
+      },
+      "tags": [
+        "B1",
+        "grammar",
+        "time",
+        "infinitive"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-locutores-de-codigos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ser",
       "kind": "word",
       "promptEs": "ser",
       "answerEn": "to be",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00002",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f0e948db590cf453844d",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00003-2e83c260",
+      "id": "grammar-ser-participle-passive",
+      "kind": "grammar",
+      "promptEs": "ser + participio",
+      "questionEn": "How do you say that an action is done to someone or something?",
+      "answerEn": "Use a form of ser, then the verb's completed-action form.",
+      "noteEn": "Spanish calls that completed-action form a past participle, often ending in -ado or -ido. In this passive pattern it changes to match the person or thing: atrapado for one masculine person, atrapada for one feminine person, and plural forms ending in -ados or -adas.",
+      "example": {
+        "es": "La carta fue enviada ayer.",
+        "en": "The letter was sent yesterday."
+      },
+      "tags": [
+        "grammar",
+        "passive",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-mordido",
       "kind": "word",
       "promptEs": "mordido",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "bitten (masculine singular)",
+      "noteEn": "Mordido is the completed-action form of morder. With ser it forms a passive description, and its ending changes to match the affected person or thing.",
+      "example": {
+        "es": "El pan fue mordido por el perro.",
+        "en": "The bread was bitten by the dog."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "morder",
+        "participle",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00003",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9415f1cefb1b781ce310",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00004-59bb9aa8",
+      "id": "concept-sagan-man-science-distraction",
+      "kind": "concept",
+      "promptEs": "Sagan-Man · asombro científico",
+      "questionEn": "What makes the superhero's response to the theft absurd?",
+      "answerEn": "The Carl Sagan parody abandons the urgent chase to make the thief marvel at humanity's journey to the Moon.",
+      "noteEn": "Carl Sagan was an astronomer and science communicator known for conveying wonder about space and humanity's place in the cosmos. The superhero origin parodies radioactive-bite stories: instead of gaining useful crime-fighting powers, the hero gains Sagan's talent for redirecting attention toward cosmic awe. The official title text extends the joke by imagining criminals leaving crime for space research.",
+      "tags": [
+        "concept",
+        "xkcd joke",
+        "Carl Sagan",
+        "space"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-por--passive-agent",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
+      "answerEn": "by (identifying who did something)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "prepositions"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00004",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00005-542c5b7b",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00005",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00006-5b10610b",
-      "kind": "word",
-      "promptEs": "carl",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00006",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-69bfe1e6e44821df7f8a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00007-4579ac08",
-      "kind": "word",
-      "promptEs": "sagan",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00007",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7b39cb7ea11491b9a213",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00008-493728bc",
+      "id": "word-radioactivo",
       "kind": "word",
       "promptEs": "radioactivo",
-      "answerEn": "radioactive",
+      "answerEn": "radioactive (masculine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "science",
+        "description",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00008",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0c732d2de2371ec9468f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00009-9c90aa5e",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00009",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00010-08eb05ae",
-      "kind": "word",
-      "promptEs": "sagan-man",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00011",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b67efa43e19b5db5d457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00011-ec395089",
+      "id": "word-posee",
       "kind": "word",
       "promptEs": "posee",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "has; possesses",
+      "noteEn": "Posee is the present form of poseer for he, she, it, or formal you.",
+      "example": {
+        "es": "La empresa posee dos edificios.",
+        "en": "The company owns two buildings."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possession",
+        "present",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00012",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb19e562406a475728f2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00012-c701a838",
+      "id": "word-los",
       "kind": "word",
       "promptEs": "los",
       "answerEn": "the (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00013",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb6e53541e37a1d6076e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00013-e539a151",
+      "id": "word-poderes",
       "kind": "word",
       "promptEs": "poderes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "powers; abilities",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "abilities",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00014",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-13bbb1fd4ce70de23401",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00014-94481133",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00015",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00015-1c35390c",
+      "id": "word-talentos",
       "kind": "word",
       "promptEs": "talentos",
-      "answerEn": "talent",
+      "answerEn": "talents",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "abilities",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00016",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70869d1a6c86d122092d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00016-a7c28e54",
+      "id": "word-de--ownership",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "belonging to; often expressed with ’s in English",
+      "noteEn": "De can connect a thing to its owner. Spanish says el libro de Ana where English can say ‘Ana’s book.’",
+      "example": {
+        "es": "Es el ordenador de Luis.",
+        "en": "It is Luis's computer."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "ownership",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00017",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00017-fe0f6730",
-      "kind": "word",
-      "promptEs": "carl",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00018",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-69bfe1e6e44821df7f8a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00018-3863357f",
-      "kind": "word",
-      "promptEs": "sagan",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00019",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7b39cb7ea11491b9a213",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00019-e2e017bb",
-      "kind": "word",
-      "promptEs": "te",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00020",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d6c9a90dd38f6852515",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00020-3f630486",
-      "kind": "word",
-      "promptEs": "das",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00021",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0a7cb27e52927eacabbb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00021-5f48cd4a",
-      "kind": "word",
-      "promptEs": "cuenta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00022",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e69ecb0f9b3fb9dd37c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00022-235bfa87",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00023",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00023-4da43a5d",
-      "kind": "word",
-      "promptEs": "lo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00024",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9294ab38039f60d2ec53",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00024-181a31e9",
-      "kind": "word",
-      "promptEs": "increíble",
-      "answerEn": "incredible, unbelievable",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00025",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b94f10593671aa13176e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00025-19917ddc",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00026",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00026-558ce35c",
-      "kind": "word",
-      "promptEs": "oye",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00027",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-91cb4c9b077b408da62c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00027-d12964b4",
-      "kind": "word",
-      "promptEs": "tú",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00028",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-022f7e9f9b475da94ae9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00028-67a05012",
+      "id": "word-socorro",
       "kind": "word",
       "promptEs": "socorro",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "help!",
+      "noteEn": "Socorro is a conventional emergency cry asking for immediate help.",
+      "example": {
+        "es": "¡Socorro! ¡Hay un incendio!",
+        "en": "Help! There is a fire!"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "emergency",
+        "exclamation",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00029",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5e88a9b9a686dc7900e1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00029-36379089",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00030",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00030-693a487c",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00031",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00031-83845389",
-      "kind": "word",
-      "promptEs": "hayamos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00032",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8d620ce1ec50664bcafe",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-sagan-man-00032-b9bb0dbf",
+      "id": "word-al--alarm-cry",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; begins an alarm cry naming the danger",
+      "noteEn": "In cries such as ¡al ladrón! or ¡al fuego!, al introduces the danger people should respond to.",
+      "example": {
+        "es": "¡Al fuego!",
+        "en": "Fire!"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "exclamation",
+        "contraction",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00033",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00033-d04031e0",
+      "id": "phrase-al-ladron",
+      "kind": "phrase",
+      "promptEs": "¡Al ladrón!",
+      "questionEn": "What conventional Spanish alarm cry calls attention to a thief?",
+      "answerEn": "Shout ¡Al ladrón!",
+      "noteEn": "Al combines a with el and introduces the danger being raised as an alarm. The expression is a fixed public cry rather than a normal destination phrase; similar traditional cries include ¡al fuego!.",
+      "example": {
+        "es": "Vio al hombre correr y gritó: «¡Al ladrón!».",
+        "en": "She saw the man run and shouted, “Stop, thief!”"
+      },
+      "tags": [
+        "phrase",
+        "alarm",
+        "exclamation",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ladron",
       "kind": "word",
       "promptEs": "ladrón",
-      "answerEn": "Meaning needs review",
+      "answerEn": "thief; robber",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "person"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00034",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-77ed8dee918118e1722a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00034-c13f28c3",
+      "id": "word-oye--attention",
       "kind": "word",
-      "promptEs": "estado",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "oye",
+      "answerEn": "hey; listen",
+      "noteEn": "Oye is the informal singular command form of oír, “to hear.” In conversation it commonly gets one person's attention, like “hey” or “listen.”",
+      "example": {
+        "es": "Oye, necesito hablar contigo.",
+        "en": "Hey, I need to talk to you."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "conversation",
+        "command"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00035",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e7f8e8c72e5a9178f47",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-locutores-de-codigos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00035-301ba330",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
+      "tags": [
+        "grammar",
+        "commands",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-tú",
       "kind": "word",
-      "promptEs": "en",
-      "answerEn": "in; on",
+      "promptEs": "tú",
+      "answerEn": "you (informal singular subject)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00036",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00036-7ca8a222",
+      "id": "word-qué--echo-question",
       "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "qué",
+      "answerEn": "what? (echoing something surprising)",
+      "noteEn": "Qué keeps its written accent in a short echo question. The speaker repeats only the missing or unbelievable information instead of forming a longer question.",
+      "example": {
+        "es": "—Me voy mañana. —¿Qué?",
+        "en": "‘I'm leaving tomorrow.’ ‘What?’"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "question",
+        "reaction",
+        "accent",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00037",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-scantron",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00037-71886111",
+      "id": "question-words",
+      "kind": "grammar",
+      "promptEs": "qué · cómo · cuándo…",
+      "answerEn": "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+      "noteEn": "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "accents"
+      ],
+      "questionEn": "Why do words such as que, como, and cuando sometimes have a written accent?",
+      "example": {
+        "es": "¿Cómo te llamas?",
+        "en": "What is your name?"
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-te--darse-cuenta",
       "kind": "word",
-      "promptEs": "luna",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "te",
+      "answerEn": "no separate English word; marks you in te das cuenta",
+      "noteEn": "Darse cuenta uses a matching small pronoun: me for I, te for familiar you, and se for he, she, or they.",
+      "example": {
+        "es": "¿Te das cuenta del cambio?",
+        "en": "Do you notice the change?"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "darse cuenta",
+        "pronoun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00038",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-970ec274ca867815174e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-sagan-man-00038-b09e4dc2",
+      "id": "phrase-darse-cuenta-de",
+      "kind": "phrase",
+      "promptEs": "darse cuenta de (que) + hecho o situación",
+      "questionEn": "How do you say that someone realizes or becomes aware of something?",
+      "answerEn": "Use the matching small pronoun, a form of dar, cuenta, and then de before what is realized.",
+      "noteEn": "The small pronoun and dar must match the person: me doy cuenta, te das cuenta, se da cuenta, nos damos cuenta, and so on. Use de before a noun and de que before a full statement. Cuenta is not translated separately in this expression.",
+      "example": {
+        "es": "Nos dimos cuenta de que faltaba una llave.",
+        "en": "We realized that a key was missing."
+      },
+      "tags": [
+        "phrase",
+        "realization",
+        "verb pattern",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-das--darse-cuenta",
+      "kind": "word",
+      "promptEs": "das",
+      "answerEn": "no separate English word; the verb part of te das cuenta, ‘you realize’",
+      "noteEn": "Das normally means ‘you give.’ Inside darse cuenta, it combines with the matching small pronoun and cuenta to express realizing or noticing.",
+      "example": {
+        "es": "¿Te das cuenta del cambio?",
+        "en": "Do you notice the change?"
+      },
+      "tags": [
+        "word",
+        "darse cuenta",
+        "fixed expression",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-monopatin-electrico-1",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cuenta--darse-cuenta",
+      "kind": "word",
+      "promptEs": "cuenta",
+      "answerEn": "no separate English word; completes darse cuenta, “to realize”",
+      "noteEn": "Cuenta can mean an account, bill, or calculation. In darse cuenta, it is part of a fixed expression and is not translated separately.",
+      "example": {
+        "es": "Ella se dio cuenta muy tarde.",
+        "en": "She realized very late."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "realization"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--darse-cuenta",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word here; introduces what is realized after darse cuenta",
+      "noteEn": "After darse cuenta, de introduces the fact or thing that becomes clear. Before a full statement, Spanish normally uses de que.",
+      "example": {
+        "es": "Se dio cuenta de que era tarde.",
+        "en": "She realized that it was late."
+      },
+      "tags": [
+        "word",
+        "verb complement",
+        "fixed expression"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-lo--degree",
+      "kind": "word",
+      "promptEs": "lo",
+      "answerEn": "how; marks the degree of a description in lo ... que",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "degree construction"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-lo-adjective-que-degree",
+      "kind": "grammar",
+      "promptEs": "lo + adjetivo + que + verbo",
+      "questionEn": "How do you express how strikingly good, difficult, large, or similar something is?",
+      "answerEn": "Use lo, then the describing word, then que and a verb.",
+      "noteEn": "Each plus sign means “followed by.” Lo stays unchanged, while the adjective—the word that describes a person or thing—matches what it describes: lo bueno for masculine and lo buena for feminine. Que introduces the clause that identifies the person or thing.",
+      "example": {
+        "es": "No imaginas lo difícil que es.",
+        "en": "You can't imagine how difficult it is."
+      },
+      "tags": [
+        "grammar",
+        "degree",
+        "description",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-increíble",
+      "kind": "word",
+      "promptEs": "increíble",
+      "answerEn": "incredible; amazing",
+      "noteEn": "Increíble has the same form for a masculine or feminine singular subject. Its plural is increíbles.",
+      "example": {
+        "es": "La vista es increíble.",
+        "en": "The view is amazing."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "evaluation",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-evaluative-subjunctive",
+      "kind": "grammar",
+      "promptEs": "es + adjetivo de valoración + que + subjuntivo",
+      "answerEn": "Use the subjunctive for the situation being judged.",
+      "noteEn": "Phrases such as es importante, es bueno, and es raro express a judgment about what follows. Spanish marks the verb after que with the subjunctive. In the example, descansas—the ordinary statement form—changes to descanses.",
+      "tags": [
+        "B1",
+        "grammar",
+        "subjunctive",
+        "evaluation"
+      ],
+      "questionEn": "After “It is important/good/strange that…,” which form does the next Spanish verb take?",
+      "example": {
+        "es": "Es importante que descanses.",
+        "en": "It is important that you rest."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--degree",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
+      "answerEn": "no separate English word; completes the lo ... que degree pattern",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "degree construction"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-sagan-man:ocr-token-00039",
-        "sourceLineId": "es-xkcd-sagan-man:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-es--impersonal-evaluation",
+      "kind": "word",
+      "promptEs": "es",
+      "answerEn": "it is (introducing an evaluation)",
+      "noteEn": "Spanish can begin an impersonal evaluation with es plus a describing word. English normally supplies an impersonal ‘it,’ but Spanish does not add a separate subject word.",
+      "example": {
+        "es": "Es extraño que llueva.",
+        "en": "It is strange that it is raining."
+      },
+      "tags": [
+        "word",
+        "ser",
+        "impersonal expression",
+        "evaluation",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--clause-link",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-hayamos--present-perfect-subjunctive",
+      "kind": "word",
+      "promptEs": "hayamos",
+      "answerEn": "we have (special form before a completed action)",
+      "noteEn": "Hayamos is the we-form of haber used when the completed event is evaluated, desired, doubted, or otherwise not simply asserted as a fact. It combines with a completed-action form such as estado or llegado.",
+      "example": {
+        "es": "Me alegra que hayamos terminado.",
+        "en": "I'm glad we have finished."
+      },
+      "tags": [
+        "word",
+        "haber",
+        "subjunctive",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-present-perfect-subjunctive",
+      "kind": "grammar",
+      "promptEs": "haya/hayas/haya/hayamos/hayáis/hayan + participio",
+      "questionEn": "How do you refer to an earlier completed event inside a clause that is evaluated, desired, doubted, or uncertain?",
+      "answerEn": "Use haya, hayas, haya, hayamos, hayáis, or hayan, then the verb's completed-action form.",
+      "noteEn": "This is called the present perfect subjunctive. “Subjunctive” means the special form used when the event is not simply stated as a fact; “completed-action form” means a participle such as llegado, comido, or estado. Haber changes for the person, while that completed-action form stays unchanged.",
+      "example": {
+        "es": "Dudo que hayan salido.",
+        "en": "I doubt that they have left."
+      },
+      "tags": [
+        "grammar",
+        "completed event",
+        "subjunctive",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sagan-man",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-estado--been",
+      "kind": "word",
+      "promptEs": "estado",
+      "answerEn": "been (the completed-action form of estar)",
+      "noteEn": "Estado is the completed-action form of estar, the verb for being or being in a state. After a helper such as he, has, or ha, it supplies the idea “been” and does not change for the person.",
+      "example": {
+        "es": "He estado enfermo.",
+        "en": "I have been sick."
+      },
+      "tags": [
+        "word",
+        "verb form",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tcmp",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-la--article",
+      "kind": "word",
+      "promptEs": "la",
+      "answerEn": "the (feminine singular article)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-luna",
+      "kind": "word",
+      "promptEs": "luna",
+      "answerEn": "Moon; moon",
+      "noteEn": "",
+      "tags": [
+        "word"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
       }
     }
   ]

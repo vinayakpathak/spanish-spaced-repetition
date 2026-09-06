@@ -743,6 +743,24 @@
       ]
     },
     {
+      "id": "word-tac--ct-scan",
+      "kind": "word",
+      "promptEs": "tac",
+      "answerEn": "CT scan",
+      "noteEn": "TAC abbreviates tomografía axial computarizada, a CT scan. The full name is feminine, so una TAC is often preferred; un TAC is especially common in Spain and among medical professionals.",
+      "example": {
+        "es": "Necesito un TAC del abdomen.",
+        "en": "I need a CT scan of my abdomen."
+      },
+      "tags": [
+        "word",
+        "abbreviation",
+        "health",
+        "noun",
+        "B1"
+      ]
+    },
+    {
       "id": "word-tam--occluded-tambien",
       "kind": "word",
       "promptEs": "tam",
@@ -1580,7 +1598,7 @@
     {
       "id": "es-xkcd-quince-años:scan-wait",
       "labelEs": "PERO CUÁNTO SE TARDA EN LEER UN TAC",
-      "geometryRationale": "The region boundary is resolved from the union of its source-tight direct word and exclusion boxes.",
+      "geometryRationale": "The region boundary is resolved from the union of its source-tight direct word boxes.",
       "words": [
         {
           "id": "es-xkcd-quince-años:scan-wait:w01",
@@ -1706,15 +1724,14 @@
             }
           ],
           "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed letters without neighboring text."
-        }
-      ],
-      "excludedUnits": [
+        },
         {
-          "id": "es-xkcd-quince-años:scan-wait:excluded-tac-1",
+          "id": "es-xkcd-quince-años:scan-wait:w08",
           "text": "TAC",
-          "reason": "non-spanish-text",
-          "rationale": "TAC is a Spanish medical acronym for a CT scan, treated consistently here as a technical label rather than ordinary lexical vocabulary.",
-          "occurrence": 1,
+          "normalized": "tac",
+          "cardIds": [
+            "word-tac--ct-scan"
+          ],
           "explicitBounds": [
             {
               "x": 86.819,
@@ -1723,9 +1740,10 @@
               "height": 0.5952
             }
           ],
-          "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed letters without neighboring text."
+          "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed acronym without neighboring punctuation."
         }
       ],
+      "excludedUnits": [],
       "applications": [
         {
           "id": "es-xkcd-quince-años:scan-wait:app-question",
@@ -3761,7 +3779,7 @@
     {
       "id": "es-xkcd-quince-años:doctor-followup",
       "labelEs": "SEGURAMENTE NO SEA NADA PERO DADOS TUS ANTECEDENTES VAMOS A PEDIR UN TAC COMPLETO YA TE LLAMAREMOS CON LOS RESULTADOS INTENTA NO PREOCUPARTE MIENTRAS",
-      "geometryRationale": "The region boundary is resolved from the union of its source-tight direct word and exclusion boxes.",
+      "geometryRationale": "The region boundary is resolved from the union of its source-tight direct word boxes.",
       "words": [
         {
           "id": "es-xkcd-quince-años:doctor-followup:w01",
@@ -3977,6 +3995,25 @@
           "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed letters without neighboring text."
         },
         {
+          "id": "es-xkcd-quince-años:doctor-followup:w12a",
+          "text": "TAC",
+          "normalized": "tac",
+          "cardIds": [
+            "word-tac--ct-scan",
+            "grammar-descriptive-adjective-after-noun",
+            "grammar-adjective-gender-agreement"
+          ],
+          "explicitBounds": [
+            {
+              "x": 14.6859,
+              "y": 30.6796,
+              "width": 2.5264,
+              "height": 0.5704
+            }
+          ],
+          "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed acronym without neighboring text."
+        },
+        {
           "id": "es-xkcd-quince-años:doctor-followup:w13",
           "text": "COMPLETO",
           "normalized": "completo",
@@ -4173,23 +4210,7 @@
           "geometryRationale": "These source-measured bounds tightly cover the visible printed letters while excluding neighboring units and punctuation."
         }
       ],
-      "excludedUnits": [
-        {
-          "id": "es-xkcd-quince-años:doctor-followup:excluded-tac-2",
-          "text": "TAC",
-          "reason": "non-spanish-text",
-          "rationale": "TAC is a Spanish medical acronym for a CT scan, treated consistently here as a technical label rather than ordinary lexical vocabulary.",
-          "explicitBounds": [
-            {
-              "x": 14.6859,
-              "y": 30.6796,
-              "width": 2.5264,
-              "height": 0.5704
-            }
-          ],
-          "geometryRationale": "The OCR candidate was source-checked and tightened into direct bounds that cover the printed letters without neighboring text."
-        }
-      ],
+      "excludedUnits": [],
       "applications": [
         {
           "id": "es-xkcd-quince-años:doctor-followup:app-mente",
@@ -4236,15 +4257,17 @@
           "id": "es-xkcd-quince-años:doctor-followup:app-complete-order",
           "cardId": "grammar-descriptive-adjective-after-noun",
           "participantWordIds": [
+            "es-xkcd-quince-años:doctor-followup:w12a",
             "es-xkcd-quince-años:doctor-followup:w13"
           ],
           "exampleEs": "TAC COMPLETO",
-          "explanationEn": "Completo follows the excluded medical abbreviation TAC in the neutral noun-then-description order."
+          "explanationEn": "TAC is the medical scan noun, and completo follows it in the neutral noun-then-description order."
         },
         {
           "id": "es-xkcd-quince-años:doctor-followup:app-complete-agreement",
           "cardId": "grammar-adjective-gender-agreement",
           "participantWordIds": [
+            "es-xkcd-quince-años:doctor-followup:w12a",
             "es-xkcd-quince-años:doctor-followup:w13"
           ],
           "exampleEs": "TAC COMPLETO",
@@ -6905,7 +6928,7 @@
           "text": "BIEN",
           "normalized": "bien",
           "cardIds": [
-            "word-bien--well-played"
+            "word-bien--well"
           ],
           "explicitBounds": [
             {

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-100992b229537aab",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9796,
-    "lowConfidenceTokenCount": 2,
-    "rawOcrTokenCount": 49,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-opinion",
     "xkcdNumber": 1215,
     "publishedAt": "2013-05-22",
-    "title": "Opinión",
+    "title": "Insight",
     "titleEs": "Opinión",
     "image": {
       "src": "https://es.xkcd.com/images/insight.png",
       "width": 259,
       "height": 430,
       "aspectRatio": 0.6023,
-      "altEn": "Spanish-language xkcd comic #1215: Opinión"
+      "altEn": "Spanish-language xkcd comic #1215: Insight"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Lo mejor de todo es que esta frase es en realidad un recordatorio para el interlocutor de que se preocupe por cualquier aspecto de la tecnología que ya le resulta alarmante, lo que en su cabeza mereces reconocimiento por abordar sus mayores preocupaciones.",
-      "en": "English title text pending review."
+      "en": "The great thing is, the sentence is really just a reminder to the listener to worry about whatever aspects of the technology they're already feeling alarmist about, which in their mind gives you credit for addressing their biggest anxieties.",
+      "noteEn": "The Spanish archive title attribute is preserved exactly, including its genuine switch from singular lo que to second-person mereces. The English text is the official xkcd #1215 title attribute. The angle-bracketed product name GOOGLE GLASS is unchanged non-Spanish branding and is audited as one exclusion. OCR misread the printed command USA as LISA and missed the initial letters and accent in CUALQUIER SITUACIÓN; the authored transcript follows the raster."
     },
     "regions": [
       {
-        "id": "es-xkcd-opinion:region-0001",
-        "labelEs": "PUEDE QUE ANTES DE",
+        "id": "es-xkcd-opinion:statement",
+        "labelEs": "PUEDE QUE ANTES DE LANZARNOS A ADOPTAR <GOOGLE GLASS> NECESITEMOS PARARNOS UN MOMENTO A CONSIDERAR LAS CONSECUENCIAS DE DARLE A ESTA TECNOLOGÍA TANTO PROTAGONISMO EN NUESTRAS VIDAS.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 20,
+          "x": 2.3077,
           "y": 1.3953,
-          "width": 57.6923,
-          "height": 4.186
+          "width": 93.8462,
+          "height": 29.7675
         },
         "words": [
           {
-            "id": "es-xkcd-opinion:word-00001",
+            "id": "es-xkcd-opinion:statement:w01",
             "text": "PUEDE",
             "normalized": "puede",
             "bounds": [
@@ -70,11 +65,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00001-b4290122"
+              "word-puede--possibility",
+              "grammar-puede-que-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00002",
+            "id": "es-xkcd-opinion:statement:w02",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -86,11 +82,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00002-db17f9f7"
+              "word-que--puede-que",
+              "grammar-puede-que-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00003",
+            "id": "es-xkcd-opinion:statement:w03",
             "text": "ANTES",
             "normalized": "antes",
             "bounds": [
@@ -102,11 +99,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00003-d47e07e2"
+              "word-antes--before-event",
+              "grammar-antes-de-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00004",
+            "id": "es-xkcd-opinion:statement:w04",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -118,38 +116,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00004-7e5b74a9"
+              "word-de--fixed-antes-de-infinitive",
+              "grammar-antes-de-infinitive"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00001-b4290122",
-          "word-auto-es-xkcd-opinion-00002-db17f9f7",
-          "word-auto-es-xkcd-opinion-00003-d47e07e2",
-          "word-auto-es-xkcd-opinion-00004-7e5b74a9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0002",
-        "labelEs": "LANZARNOS A ADOPTAR",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 19.2308,
-          "y": 5.5814,
-          "width": 60,
-          "height": 3.7209
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00005",
+            "id": "es-xkcd-opinion:statement:w05",
             "text": "LANZARNOS",
             "normalized": "lanzarnos",
             "bounds": [
@@ -157,15 +129,18 @@
                 "x": 19.2308,
                 "y": 5.5814,
                 "width": 29.2308,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00005-13d94168"
+              "word-lanzarnos--rush-into",
+              "grammar-antes-de-infinitive",
+              "grammar-infinitive-attached-pronominal-marker",
+              "phrase-lanzarse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00006",
+            "id": "es-xkcd-opinion:statement:w06",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -173,15 +148,16 @@
                 "x": 49.2308,
                 "y": 5.5814,
                 "width": 4.6154,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00006-13978b6a"
+              "word-a--lanzarse-complement",
+              "phrase-lanzarse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00007",
+            "id": "es-xkcd-opinion:statement:w07",
             "text": "ADOPTAR",
             "normalized": "adoptar",
             "bounds": [
@@ -189,98 +165,16 @@
                 "x": 54.6154,
                 "y": 5.5814,
                 "width": 24.6154,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00007-07bd2ba7"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00005-13d94168",
-          "word-auto-es-xkcd-opinion-00006-13978b6a",
-          "word-auto-es-xkcd-opinion-00007-07bd2ba7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0003",
-        "labelEs": "< GOOGLE GLASS>",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.1538,
-          "y": 8.8372,
-          "width": 45.3846,
-          "height": 3.7209
-        },
-        "words": [
-          {
-            "id": "es-xkcd-opinion:word-00008",
-            "text": "GOOGLE",
-            "normalized": "google",
-            "bounds": [
-              {
-                "x": 30,
-                "y": 8.8372,
-                "width": 20.7692,
-                "height": 3.7209
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-opinion-00008-1e7e6afa"
+              "word-adoptar",
+              "phrase-lanzarse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00009",
-            "text": "GLASS",
-            "normalized": "glass",
-            "bounds": [
-              {
-                "x": 51.5385,
-                "y": 8.8372,
-                "width": 20,
-                "height": 3.7209
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-opinion-00009-491eb5f0"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00008-1e7e6afa",
-          "word-auto-es-xkcd-opinion-00009-491eb5f0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0003",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0004",
-        "labelEs": "NECESITEMOS PARARNOS UN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 11.5385,
-          "y": 12.5581,
-          "width": 74.6154,
-          "height": 3.7209
-        },
-        "words": [
-          {
-            "id": "es-xkcd-opinion:word-00010",
+            "id": "es-xkcd-opinion:statement:w08",
             "text": "NECESITEMOS",
             "normalized": "necesitemos",
             "bounds": [
@@ -292,11 +186,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00010-87160774"
+              "word-necesitemos",
+              "grammar-puede-que-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00011",
+            "id": "es-xkcd-opinion:statement:w09",
             "text": "PARARNOS",
             "normalized": "pararnos",
             "bounds": [
@@ -308,11 +203,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00011-25f51ff0"
+              "word-pararnos--pause",
+              "grammar-infinitive-attached-pronominal-marker",
+              "phrase-pararse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00012",
+            "id": "es-xkcd-opinion:statement:w10",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -324,37 +221,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00012-f0d0f1c2"
+              "word-un"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00010-87160774",
-          "word-auto-es-xkcd-opinion-00011-25f51ff0",
-          "word-auto-es-xkcd-opinion-00012-f0d0f1c2"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0005",
-        "labelEs": "MOMENTO A CONSIDERAR LAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 10.7692,
-          "y": 16.2791,
-          "width": 76.9231,
-          "height": 3.7209
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00013",
+            "id": "es-xkcd-opinion:statement:w11",
             "text": "MOMENTO",
             "normalized": "momento",
             "bounds": [
@@ -366,11 +237,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00013-d81dba97"
+              "word-momento"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00014",
+            "id": "es-xkcd-opinion:statement:w12",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -382,11 +253,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00014-1c773dd0"
+              "word-a--pararse-complement",
+              "phrase-pararse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00015",
+            "id": "es-xkcd-opinion:statement:w13",
             "text": "CONSIDERAR",
             "normalized": "considerar",
             "bounds": [
@@ -398,11 +270,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00015-ab64868b"
+              "word-considerar",
+              "phrase-pararse-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00016",
+            "id": "es-xkcd-opinion:statement:w14",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -414,38 +287,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00016-d3662b32"
+              "word-las"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00013-d81dba97",
-          "word-auto-es-xkcd-opinion-00014-1c773dd0",
-          "word-auto-es-xkcd-opinion-00015-ab64868b",
-          "word-auto-es-xkcd-opinion-00016-d3662b32"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0006",
-        "labelEs": "CONSECUENCIAS DE DARLE A ESTA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.3846,
-          "y": 20,
-          "width": 87.6923,
-          "height": 3.7209
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00017",
+            "id": "es-xkcd-opinion:statement:w15",
             "text": "CONSECUENCIAS",
             "normalized": "consecuencias",
             "bounds": [
@@ -453,15 +299,16 @@
                 "x": 5.3846,
                 "y": 20,
                 "width": 41.5385,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00017-e482ff2c"
+              "word-consecuencias",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00018",
+            "id": "es-xkcd-opinion:statement:w16",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -469,15 +316,15 @@
                 "x": 47.6923,
                 "y": 20,
                 "width": 6.9231,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00018-1710141d"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00019",
+            "id": "es-xkcd-opinion:statement:w17",
             "text": "DARLE",
             "normalized": "darle",
             "bounds": [
@@ -485,15 +332,18 @@
                 "x": 55.3846,
                 "y": 20,
                 "width": 16.9231,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00019-f395eb05"
+              "word-darle--give-recipient",
+              "grammar-pronoun-attached-to-infinitive",
+              "grammar-indirect-object-pronoun-plus-a-clarifier",
+              "phrase-dar-protagonismo-a"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00020",
+            "id": "es-xkcd-opinion:statement:w18",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -501,15 +351,17 @@
                 "x": 73.0769,
                 "y": 20,
                 "width": 4.6154,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00020-74f6ea3a"
+              "word-a--recipient",
+              "grammar-indirect-object-pronoun-plus-a-clarifier",
+              "phrase-dar-protagonismo-a"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00021",
+            "id": "es-xkcd-opinion:statement:w19",
             "text": "ESTA",
             "normalized": "esta",
             "bounds": [
@@ -517,43 +369,15 @@
                 "x": 78.4615,
                 "y": 20,
                 "width": 14.6154,
-                "height": 3.7209
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00021-b2adeeec"
+              "word-esta--demonstrative"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00017-e482ff2c",
-          "word-auto-es-xkcd-opinion-00018-1710141d",
-          "word-auto-es-xkcd-opinion-00019-f395eb05",
-          "word-auto-es-xkcd-opinion-00020-74f6ea3a",
-          "word-auto-es-xkcd-opinion-00021-b2adeeec"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0007",
-        "labelEs": "TECNOLOGÍA TANTO PROTAGONISMO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.3077,
-          "y": 23.2558,
-          "width": 93.8462,
-          "height": 3.7209
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00022",
+            "id": "es-xkcd-opinion:statement:w20",
             "text": "TECNOLOGÍA",
             "normalized": "tecnología",
             "bounds": [
@@ -565,11 +389,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00022-d8c6dbe1"
+              "word-tecnología",
+              "grammar-indirect-object-pronoun-plus-a-clarifier",
+              "phrase-dar-protagonismo-a",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00023",
+            "id": "es-xkcd-opinion:statement:w21",
             "text": "TANTO",
             "normalized": "tanto",
             "bounds": [
@@ -581,11 +408,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00023-6bae394c"
+              "word-tanto--so-much"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00024",
+            "id": "es-xkcd-opinion:statement:w22",
             "text": "PROTAGONISMO",
             "normalized": "protagonismo",
             "bounds": [
@@ -597,37 +424,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00024-8d509979"
+              "word-protagonismo",
+              "phrase-dar-protagonismo-a",
+              "concept-canned-tech-concern-insight"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00022-d8c6dbe1",
-          "word-auto-es-xkcd-opinion-00023-6bae394c",
-          "word-auto-es-xkcd-opinion-00024-8d509979"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0008",
-        "labelEs": "EN NUESTRAS VIDAS.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 22.3077,
-          "y": 27.4419,
-          "width": 53.8462,
-          "height": 3.7209
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00025",
+            "id": "es-xkcd-opinion:statement:w23",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -639,11 +442,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00025-14a5518c"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00026",
+            "id": "es-xkcd-opinion:statement:w24",
             "text": "NUESTRAS",
             "normalized": "nuestras",
             "bounds": [
@@ -655,11 +458,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00026-400c43f8"
+              "word-nuestras",
+              "grammar-nuestro-possessive-agreement"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00027",
+            "id": "es-xkcd-opinion:statement:w25",
             "text": "VIDAS",
             "normalized": "vidas",
             "bounds": [
@@ -671,53 +475,203 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00027-125da52a"
+              "word-vidas",
+              "grammar-nuestro-possessive-agreement",
+              "concept-canned-tech-concern-insight"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00025-14a5518c",
-          "word-auto-es-xkcd-opinion-00026-400c43f8",
-          "word-auto-es-xkcd-opinion-00027-125da52a"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-opinion:statement:x01",
+            "text": "GOOGLE GLASS",
+            "reason": "non-spanish-text",
+            "rationale": "Google Glass is the unchanged English product name rather than Spanish lexical material; the printed angle brackets are punctuation around that name.",
+            "bounds": [
+              {
+                "x": 26.15,
+                "y": 8.8372,
+                "width": 45.39,
+                "height": 3.7209
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0008",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-opinion:statement:app-possibility",
+            "cardId": "grammar-puede-que-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w01",
+              "es-xkcd-opinion:statement:w02",
+              "es-xkcd-opinion:statement:w08"
+            ],
+            "exampleEs": "PUEDE QUE ANTES DE LANZARNOS A ADOPTAR <GOOGLE GLASS> NECESITEMOS",
+            "explanationEn": "Puede que marks the idea as possible, and necesitemos is the matching special possibility form for we; the intervening words name when that possible need applies."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-before",
+            "cardId": "grammar-antes-de-infinitive",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w03",
+              "es-xkcd-opinion:statement:w04",
+              "es-xkcd-opinion:statement:w05"
+            ],
+            "exampleEs": "ANTES DE LANZARNOS",
+            "explanationEn": "Antes de introduces the earlier point, and lanzarnos keeps the action verb in its dictionary form with nos attached."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-lanzarnos-marker",
+            "cardId": "grammar-infinitive-attached-pronominal-marker",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w05"
+            ],
+            "exampleEs": "LANZARNOS",
+            "explanationEn": "Nos is attached to the dictionary form lanzar to mark us as the people plunging into the action."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-rush-into",
+            "cardId": "phrase-lanzarse-a-infinitive",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w05",
+              "es-xkcd-opinion:statement:w06",
+              "es-xkcd-opinion:statement:w07"
+            ],
+            "exampleEs": "LANZARNOS A ADOPTAR",
+            "explanationEn": "Lanzarnos marks us as rushing in, a provides the required link, and adoptar stays in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-pararnos-marker",
+            "cardId": "grammar-infinitive-attached-pronominal-marker",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w09"
+            ],
+            "exampleEs": "PARARNOS",
+            "explanationEn": "Nos is attached to parar to mark us as the people who pause."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-stop-to",
+            "cardId": "phrase-pararse-a-infinitive",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w09",
+              "es-xkcd-opinion:statement:w12",
+              "es-xkcd-opinion:statement:w13"
+            ],
+            "exampleEs": "PARARNOS UN MOMENTO A CONSIDERAR",
+            "explanationEn": "Pararnos names our pause, a links it to the next action, and considerar remains unchanged; un momento states the length of that pause."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-attached-le",
+            "cardId": "grammar-pronoun-attached-to-infinitive",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w17"
+            ],
+            "exampleEs": "DARLE",
+            "explanationEn": "Le is attached to the dictionary form dar and marks the thing receiving prominence."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-recipient-clarifier",
+            "cardId": "grammar-indirect-object-pronoun-plus-a-clarifier",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w17",
+              "es-xkcd-opinion:statement:w18",
+              "es-xkcd-opinion:statement:w20"
+            ],
+            "exampleEs": "DARLE A ESTA TECNOLOGÍA",
+            "explanationEn": "The le inside darle marks a receiver, and a esta tecnología identifies that receiver explicitly."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-prominence",
+            "cardId": "phrase-dar-protagonismo-a",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w17",
+              "es-xkcd-opinion:statement:w18",
+              "es-xkcd-opinion:statement:w20",
+              "es-xkcd-opinion:statement:w22"
+            ],
+            "exampleEs": "DARLE A ESTA TECNOLOGÍA TANTO PROTAGONISMO",
+            "explanationEn": "Darle supplies the giving action and its receiver marker, a esta tecnología identifies what receives the prominence, and protagonismo names the central role being given."
+          },
+          {
+            "id": "es-xkcd-opinion:statement:app-our-lives",
+            "cardId": "grammar-nuestro-possessive-agreement",
+            "participantWordIds": [
+              "es-xkcd-opinion:statement:w24",
+              "es-xkcd-opinion:statement:w25"
+            ],
+            "exampleEs": "NUESTRAS VIDAS",
+            "explanationEn": "Nuestras uses the feminine plural ending because it matches the owned noun vidas, not the people who own the lives."
+          }
+        ],
+        "cardIds": [
+          "word-puede--possibility",
+          "grammar-puede-que-subjunctive",
+          "word-que--puede-que",
+          "word-antes--before-event",
+          "grammar-antes-de-infinitive",
+          "word-de--fixed-antes-de-infinitive",
+          "word-lanzarnos--rush-into",
+          "grammar-infinitive-attached-pronominal-marker",
+          "phrase-lanzarse-a-infinitive",
+          "word-a--lanzarse-complement",
+          "word-adoptar",
+          "word-necesitemos",
+          "word-pararnos--pause",
+          "phrase-pararse-a-infinitive",
+          "word-un",
+          "word-momento",
+          "word-a--pararse-complement",
+          "word-considerar",
+          "word-las",
+          "word-consecuencias",
+          "concept-canned-tech-concern-insight",
+          "word-de--of",
+          "word-darle--give-recipient",
+          "grammar-pronoun-attached-to-infinitive",
+          "grammar-indirect-object-pronoun-plus-a-clarifier",
+          "phrase-dar-protagonismo-a",
+          "word-a--recipient",
+          "word-esta--demonstrative",
+          "word-tecnología",
+          "word-tanto--so-much",
+          "word-protagonismo",
+          "word-en",
+          "word-nuestras",
+          "grammar-nuestro-possessive-agreement",
+          "word-vidas"
+        ]
       },
       {
-        "id": "es-xkcd-opinion:region-0009",
-        "labelEs": "¿NO TIENES UNA OPINIÓN FORMADA",
+        "id": "es-xkcd-opinion:caption",
+        "labelEs": "¿NO TIENES UNA OPINIÓN FORMADA SOBRE ALGUNA NUEVA TECNOLOGÍA? ¡USA ESTA FRASE! SUENA INTERESANTE Y LA PUEDES USAR PRÁCTICAMENTE EN CUALQUIER SITUACIÓN.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 8.4615,
-          "y": 82.7907,
-          "width": 83.0769,
-          "height": 3.7209
+          "x": 1,
+          "y": 82.45,
+          "width": 97,
+          "height": 17.35
         },
         "words": [
           {
-            "id": "es-xkcd-opinion:word-00028",
+            "id": "es-xkcd-opinion:caption:w01",
             "text": "NO",
             "normalized": "no",
             "bounds": [
               {
-                "x": 8.4615,
+                "x": 11.7,
                 "y": 82.7907,
-                "width": 11.5385,
-                "height": 3.7209
+                "width": 8.3,
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00028-a0bcf9e1"
+              "word-no",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00029",
+            "id": "es-xkcd-opinion:caption:w02",
             "text": "TIENES",
             "normalized": "tienes",
             "bounds": [
@@ -725,15 +679,16 @@
                 "x": 20.7692,
                 "y": 82.7907,
                 "width": 16.9231,
-                "height": 3.7209
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00029-28b4b599"
+              "word-tienes",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00030",
+            "id": "es-xkcd-opinion:caption:w03",
             "text": "UNA",
             "normalized": "una",
             "bounds": [
@@ -741,15 +696,16 @@
                 "x": 38.4615,
                 "y": 82.7907,
                 "width": 10,
-                "height": 3.7209
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00030-76171e6b"
+              "word-una",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00031",
+            "id": "es-xkcd-opinion:caption:w04",
             "text": "OPINIÓN",
             "normalized": "opinión",
             "bounds": [
@@ -757,15 +713,19 @@
                 "x": 49.2308,
                 "y": 82.7907,
                 "width": 18.4615,
-                "height": 3.7209
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00031-957f81fc"
+              "word-opinión",
+              "grammar-yes-no-question",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00032",
+            "id": "es-xkcd-opinion:caption:w05",
             "text": "FORMADA",
             "normalized": "formada",
             "bounds": [
@@ -773,43 +733,18 @@
                 "x": 68.4615,
                 "y": 82.7907,
                 "width": 23.0769,
-                "height": 3.7209
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00032-6bd5658f"
+              "word-formada--settled",
+              "grammar-yes-no-question",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00028-a0bcf9e1",
-          "word-auto-es-xkcd-opinion-00029-28b4b599",
-          "word-auto-es-xkcd-opinion-00030-76171e6b",
-          "word-auto-es-xkcd-opinion-00031-957f81fc",
-          "word-auto-es-xkcd-opinion-00032-6bd5658f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0010",
-        "labelEs": "SOBRE ALGUNA NUEVA TECNOLOGÍA?",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 8.4615,
-          "y": 86.0465,
-          "width": 83.0769,
-          "height": 4.186
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00033",
+            "id": "es-xkcd-opinion:caption:w06",
             "text": "SOBRE",
             "normalized": "sobre",
             "bounds": [
@@ -817,15 +752,16 @@
                 "x": 8.4615,
                 "y": 86.0465,
                 "width": 15.5769,
-                "height": 4.186
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00033-e72e1a82"
+              "word-sobre--about",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00034",
+            "id": "es-xkcd-opinion:caption:w07",
             "text": "ALGUNA",
             "normalized": "alguna",
             "bounds": [
@@ -833,15 +769,16 @@
                 "x": 24.9038,
                 "y": 86.0465,
                 "width": 17.3077,
-                "height": 4.186
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00034-fbe98e76"
+              "word-alguna--any-hypothetical",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00035",
+            "id": "es-xkcd-opinion:caption:w08",
             "text": "NUEVA",
             "normalized": "nueva",
             "bounds": [
@@ -849,15 +786,18 @@
                 "x": 43.0769,
                 "y": 86.0465,
                 "width": 16.4423,
-                "height": 4.186
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00035-e5397a2a"
+              "word-nueva",
+              "grammar-yes-no-question",
+              "grammar-nuevo-position-meaning",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00036",
+            "id": "es-xkcd-opinion:caption:w09",
             "text": "TECNOLOGÍA",
             "normalized": "tecnología",
             "bounds": [
@@ -865,58 +805,37 @@
                 "x": 60.3846,
                 "y": 86.0465,
                 "width": 31.1538,
-                "height": 4.186
+                "height": 3.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00036-7b3436d2"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00033-e72e1a82",
-          "word-auto-es-xkcd-opinion-00034-fbe98e76",
-          "word-auto-es-xkcd-opinion-00035-e5397a2a",
-          "word-auto-es-xkcd-opinion-00036-7b3436d2"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0010",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0011",
-        "labelEs": "¡LISA ESTA FRASE! SUENA INTERESANTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 1.5385,
-          "y": 89.7674,
-          "width": 93.8462,
-          "height": 4.186
-        },
-        "words": [
-          {
-            "id": "es-xkcd-opinion:word-00037",
-            "text": "LISA",
-            "normalized": "lisa",
-            "bounds": [
-              {
-                "x": 1.5385,
-                "y": 89.7674,
-                "width": 12.1154,
-                "height": 4.186
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-opinion-00037-3bdcfd47"
+              "word-tecnología",
+              "grammar-yes-no-question",
+              "grammar-nuevo-position-meaning",
+              "grammar-adjective-gender-agreement",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00038",
+            "id": "es-xkcd-opinion:caption:w10",
+            "text": "USA",
+            "normalized": "usa",
+            "bounds": [
+              {
+                "x": 4.4,
+                "y": 89.7674,
+                "width": 9.25,
+                "height": 3.05
+              }
+            ],
+            "cardIds": [
+              "word-usa--command",
+              "grammar-affirmative-tu-command",
+              "concept-canned-tech-concern-insight"
+            ]
+          },
+          {
+            "id": "es-xkcd-opinion:caption:w11",
             "text": "ESTA",
             "normalized": "esta",
             "bounds": [
@@ -924,15 +843,15 @@
                 "x": 14.5192,
                 "y": 89.7674,
                 "width": 12.9808,
-                "height": 4.186
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00038-9f1df3ea"
+              "word-esta--demonstrative"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00039",
+            "id": "es-xkcd-opinion:caption:w12",
             "text": "FRASE",
             "normalized": "frase",
             "bounds": [
@@ -940,15 +859,16 @@
                 "x": 28.3654,
                 "y": 89.7674,
                 "width": 17.3077,
-                "height": 4.186
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00039-9140dca9"
+              "word-frase",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00040",
+            "id": "es-xkcd-opinion:caption:w13",
             "text": "SUENA",
             "normalized": "suena",
             "bounds": [
@@ -956,15 +876,16 @@
                 "x": 46.5385,
                 "y": 89.7674,
                 "width": 15.5769,
-                "height": 4.186
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00040-0a542ffd"
+              "word-suena--sounds-description",
+              "grammar-sonar-description"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00041",
+            "id": "es-xkcd-opinion:caption:w14",
             "text": "INTERESANTE",
             "normalized": "interesante",
             "bounds": [
@@ -972,43 +893,17 @@
                 "x": 62.9808,
                 "y": 89.7674,
                 "width": 32.4038,
-                "height": 4.186
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00041-9f6924ff"
+              "word-interesante",
+              "grammar-sonar-description",
+              "concept-canned-tech-concern-insight"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00037-3bdcfd47",
-          "word-auto-es-xkcd-opinion-00038-9f1df3ea",
-          "word-auto-es-xkcd-opinion-00039-9140dca9",
-          "word-auto-es-xkcd-opinion-00040-0a542ffd",
-          "word-auto-es-xkcd-opinion-00041-9f6924ff"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0012",
-        "labelEs": "Y LA PUEDES USAR PRÁCTICAMENTE EN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 3.0769,
-          "y": 93.0233,
-          "width": 90.7692,
-          "height": 3.2558
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00042",
+            "id": "es-xkcd-opinion:caption:w15",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -1016,15 +911,15 @@
                 "x": 3.0769,
                 "y": 93.0233,
                 "width": 3.3654,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00042-4489a13a"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00043",
+            "id": "es-xkcd-opinion:caption:w16",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -1032,15 +927,16 @@
                 "x": 7.1154,
                 "y": 93.0233,
                 "width": 6.7308,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00043-a1c631eb"
+              "word-la--direct-object-feminine",
+              "grammar-direct-object-pronoun-before-finite-verb"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00044",
+            "id": "es-xkcd-opinion:caption:w17",
             "text": "PUEDES",
             "normalized": "puedes",
             "bounds": [
@@ -1048,15 +944,17 @@
                 "x": 14.5192,
                 "y": 93.0233,
                 "width": 17.5,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00044-9e3f5a24"
+              "word-puedes",
+              "grammar-direct-object-pronoun-before-finite-verb",
+              "grammar-poder-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00045",
+            "id": "es-xkcd-opinion:caption:w18",
             "text": "USAR",
             "normalized": "usar",
             "bounds": [
@@ -1064,15 +962,16 @@
                 "x": 32.6923,
                 "y": 93.0233,
                 "width": 13.4615,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00045-299bcf68"
+              "word-usar",
+              "grammar-poder-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00046",
+            "id": "es-xkcd-opinion:caption:w19",
             "text": "PRÁCTICAMENTE",
             "normalized": "prácticamente",
             "bounds": [
@@ -1080,15 +979,16 @@
                 "x": 46.8269,
                 "y": 93.0233,
                 "width": 39.7115,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00046-af53ab15"
+              "word-prácticamente",
+              "grammar-adverbs-mente"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00047",
+            "id": "es-xkcd-opinion:caption:w20",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -1096,1327 +996,1694 @@
                 "x": 87.2115,
                 "y": 93.0233,
                 "width": 6.6346,
-                "height": 3.2558
+                "height": 3.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00047-817cb57f"
+              "word-en"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00042-4489a13a",
-          "word-auto-es-xkcd-opinion-00043-a1c631eb",
-          "word-auto-es-xkcd-opinion-00044-9e3f5a24",
-          "word-auto-es-xkcd-opinion-00045-299bcf68",
-          "word-auto-es-xkcd-opinion-00046-af53ab15",
-          "word-auto-es-xkcd-opinion-00047-817cb57f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-opinion:region-0013",
-        "labelEs": "CHALQUIER SITUACION.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 22.3077,
-          "y": 96.2791,
-          "width": 52.3077,
-          "height": 3.2558
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-opinion:word-00048",
-            "text": "CHALQUIER",
-            "normalized": "chalquier",
+            "id": "es-xkcd-opinion:caption:w21",
+            "text": "CUALQUIER",
+            "normalized": "cualquier",
             "bounds": [
               {
                 "x": 22.3077,
                 "y": 96.2791,
                 "width": 25.5769,
-                "height": 3.2558
+                "height": 3.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00048-08b40965"
+              "word-cualquier",
+              "grammar-cualquier-sustantivo-singular",
+              "concept-canned-tech-concern-insight"
             ]
           },
           {
-            "id": "es-xkcd-opinion:word-00049",
-            "text": "SITUACION",
-            "normalized": "situacion",
+            "id": "es-xkcd-opinion:caption:w22",
+            "text": "SITUACIÓN",
+            "normalized": "situación",
             "bounds": [
               {
                 "x": 48.5577,
                 "y": 96.2791,
                 "width": 26.0577,
-                "height": 3.2558
+                "height": 3.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-opinion-00049-b1b6c3cb"
+              "word-situación",
+              "grammar-cualquier-sustantivo-singular",
+              "concept-canned-tech-concern-insight"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-opinion-00048-08b40965",
-          "word-auto-es-xkcd-opinion-00049-b1b6c3cb"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-opinion:caption:app-yes-no",
+            "cardId": "grammar-yes-no-question",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w01",
+              "es-xkcd-opinion:caption:w02",
+              "es-xkcd-opinion:caption:w03",
+              "es-xkcd-opinion:caption:w04",
+              "es-xkcd-opinion:caption:w05",
+              "es-xkcd-opinion:caption:w06",
+              "es-xkcd-opinion:caption:w07",
+              "es-xkcd-opinion:caption:w08",
+              "es-xkcd-opinion:caption:w09"
+            ],
+            "exampleEs": "NO TIENES UNA OPINIÓN FORMADA SOBRE ALGUNA NUEVA TECNOLOGÍA",
+            "explanationEn": "The negative statement order remains unchanged; question marks and intonation turn the complete clause into a yes-or-no question without adding a separate helper word."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-opinion-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w04",
+              "es-xkcd-opinion:caption:w05"
+            ],
+            "exampleEs": "OPINIÓN FORMADA",
+            "explanationEn": "Formada follows opinión in the neutral order for describing the view as already developed."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-opinion-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w04",
+              "es-xkcd-opinion:caption:w05"
+            ],
+            "exampleEs": "OPINIÓN FORMADA",
+            "explanationEn": "Formada uses the feminine singular ending because it describes the feminine singular noun opinión."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-new-position",
+            "cardId": "grammar-nuevo-position-meaning",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w08",
+              "es-xkcd-opinion:caption:w09"
+            ],
+            "exampleEs": "NUEVA TECNOLOGÍA",
+            "explanationEn": "Nueva comes before tecnología to describe technology that is new or recently introduced."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-new-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w08",
+              "es-xkcd-opinion:caption:w09"
+            ],
+            "exampleEs": "NUEVA TECNOLOGÍA",
+            "explanationEn": "Nueva uses the feminine singular ending because it describes tecnología."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w10"
+            ],
+            "exampleEs": "USA",
+            "explanationEn": "Usa is the affirmative tú command addressed to one familiar reader."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-sounds",
+            "cardId": "grammar-sonar-description",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w13",
+              "es-xkcd-opinion:caption:w14"
+            ],
+            "exampleEs": "SUENA INTERESANTE",
+            "explanationEn": "Suena gives the impression and interesante directly supplies the description."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-object",
+            "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w16",
+              "es-xkcd-opinion:caption:w17"
+            ],
+            "exampleEs": "LA PUEDES",
+            "explanationEn": "La replaces the feminine noun frase and appears immediately before the changed verb puedes."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-can-use",
+            "cardId": "grammar-poder-infinitive",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w17",
+              "es-xkcd-opinion:caption:w18"
+            ],
+            "exampleEs": "PUEDES USAR",
+            "explanationEn": "Puedes changes for one familiar reader, while usar stays in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-mente",
+            "cardId": "grammar-adverbs-mente",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w19"
+            ],
+            "exampleEs": "PRÁCTICAMENTE",
+            "explanationEn": "Práctica takes the ending -mente, with the original written accent retained, to describe the broad degree of applicability."
+          },
+          {
+            "id": "es-xkcd-opinion:caption:app-any",
+            "cardId": "grammar-cualquier-sustantivo-singular",
+            "participantWordIds": [
+              "es-xkcd-opinion:caption:w21",
+              "es-xkcd-opinion:caption:w22"
+            ],
+            "exampleEs": "CUALQUIER SITUACIÓN",
+            "explanationEn": "Cualquier appears before the singular noun situación to mean any situation without selecting one."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-opinion:ocr-line-0013",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-no",
+          "grammar-yes-no-question",
+          "word-tienes",
+          "word-una",
+          "word-opinión",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-canned-tech-concern-insight",
+          "word-formada--settled",
+          "word-sobre--about",
+          "word-alguna--any-hypothetical",
+          "word-nueva",
+          "grammar-nuevo-position-meaning",
+          "word-tecnología",
+          "word-usa--command",
+          "grammar-affirmative-tu-command",
+          "word-esta--demonstrative",
+          "word-frase",
+          "word-suena--sounds-description",
+          "grammar-sonar-description",
+          "word-interesante",
+          "word-y",
+          "word-la--direct-object-feminine",
+          "grammar-direct-object-pronoun-before-finite-verb",
+          "word-puedes",
+          "grammar-poder-infinitive",
+          "word-usar",
+          "word-prácticamente",
+          "grammar-adverbs-mente",
+          "word-en",
+          "word-cualquier",
+          "grammar-cualquier-sustantivo-singular",
+          "word-situación"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-opinion-00001-b4290122",
-      "word-auto-es-xkcd-opinion-00002-db17f9f7",
-      "word-auto-es-xkcd-opinion-00003-d47e07e2",
-      "word-auto-es-xkcd-opinion-00004-7e5b74a9",
-      "word-auto-es-xkcd-opinion-00005-13d94168",
-      "word-auto-es-xkcd-opinion-00006-13978b6a",
-      "word-auto-es-xkcd-opinion-00007-07bd2ba7",
-      "word-auto-es-xkcd-opinion-00008-1e7e6afa",
-      "word-auto-es-xkcd-opinion-00009-491eb5f0",
-      "word-auto-es-xkcd-opinion-00010-87160774",
-      "word-auto-es-xkcd-opinion-00011-25f51ff0",
-      "word-auto-es-xkcd-opinion-00012-f0d0f1c2",
-      "word-auto-es-xkcd-opinion-00013-d81dba97",
-      "word-auto-es-xkcd-opinion-00014-1c773dd0",
-      "word-auto-es-xkcd-opinion-00015-ab64868b",
-      "word-auto-es-xkcd-opinion-00016-d3662b32",
-      "word-auto-es-xkcd-opinion-00017-e482ff2c",
-      "word-auto-es-xkcd-opinion-00018-1710141d",
-      "word-auto-es-xkcd-opinion-00019-f395eb05",
-      "word-auto-es-xkcd-opinion-00020-74f6ea3a",
-      "word-auto-es-xkcd-opinion-00021-b2adeeec",
-      "word-auto-es-xkcd-opinion-00022-d8c6dbe1",
-      "word-auto-es-xkcd-opinion-00023-6bae394c",
-      "word-auto-es-xkcd-opinion-00024-8d509979",
-      "word-auto-es-xkcd-opinion-00025-14a5518c",
-      "word-auto-es-xkcd-opinion-00026-400c43f8",
-      "word-auto-es-xkcd-opinion-00027-125da52a",
-      "word-auto-es-xkcd-opinion-00028-a0bcf9e1",
-      "word-auto-es-xkcd-opinion-00029-28b4b599",
-      "word-auto-es-xkcd-opinion-00030-76171e6b",
-      "word-auto-es-xkcd-opinion-00031-957f81fc",
-      "word-auto-es-xkcd-opinion-00032-6bd5658f",
-      "word-auto-es-xkcd-opinion-00033-e72e1a82",
-      "word-auto-es-xkcd-opinion-00034-fbe98e76",
-      "word-auto-es-xkcd-opinion-00035-e5397a2a",
-      "word-auto-es-xkcd-opinion-00036-7b3436d2",
-      "word-auto-es-xkcd-opinion-00037-3bdcfd47",
-      "word-auto-es-xkcd-opinion-00038-9f1df3ea",
-      "word-auto-es-xkcd-opinion-00039-9140dca9",
-      "word-auto-es-xkcd-opinion-00040-0a542ffd",
-      "word-auto-es-xkcd-opinion-00041-9f6924ff",
-      "word-auto-es-xkcd-opinion-00042-4489a13a",
-      "word-auto-es-xkcd-opinion-00043-a1c631eb",
-      "word-auto-es-xkcd-opinion-00044-9e3f5a24",
-      "word-auto-es-xkcd-opinion-00045-299bcf68",
-      "word-auto-es-xkcd-opinion-00046-af53ab15",
-      "word-auto-es-xkcd-opinion-00047-817cb57f",
-      "word-auto-es-xkcd-opinion-00048-08b40965",
-      "word-auto-es-xkcd-opinion-00049-b1b6c3cb"
+      "word-puede--possibility",
+      "grammar-puede-que-subjunctive",
+      "word-que--puede-que",
+      "word-antes--before-event",
+      "grammar-antes-de-infinitive",
+      "word-de--fixed-antes-de-infinitive",
+      "word-lanzarnos--rush-into",
+      "grammar-infinitive-attached-pronominal-marker",
+      "phrase-lanzarse-a-infinitive",
+      "word-a--lanzarse-complement",
+      "word-adoptar",
+      "word-necesitemos",
+      "word-pararnos--pause",
+      "phrase-pararse-a-infinitive",
+      "word-un",
+      "word-momento",
+      "word-a--pararse-complement",
+      "word-considerar",
+      "word-las",
+      "word-consecuencias",
+      "concept-canned-tech-concern-insight",
+      "word-de--of",
+      "word-darle--give-recipient",
+      "grammar-pronoun-attached-to-infinitive",
+      "grammar-indirect-object-pronoun-plus-a-clarifier",
+      "phrase-dar-protagonismo-a",
+      "word-a--recipient",
+      "word-esta--demonstrative",
+      "word-tecnología",
+      "word-tanto--so-much",
+      "word-protagonismo",
+      "word-en",
+      "word-nuestras",
+      "grammar-nuestro-possessive-agreement",
+      "word-vidas",
+      "word-no",
+      "grammar-yes-no-question",
+      "word-tienes",
+      "word-una",
+      "word-opinión",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "word-formada--settled",
+      "word-sobre--about",
+      "word-alguna--any-hypothetical",
+      "word-nueva",
+      "grammar-nuevo-position-meaning",
+      "word-usa--command",
+      "grammar-affirmative-tu-command",
+      "word-frase",
+      "word-suena--sounds-description",
+      "grammar-sonar-description",
+      "word-interesante",
+      "word-y",
+      "word-la--direct-object-feminine",
+      "grammar-direct-object-pronoun-before-finite-verb",
+      "word-puedes",
+      "grammar-poder-infinitive",
+      "word-usar",
+      "word-prácticamente",
+      "grammar-adverbs-mente",
+      "word-cualquier",
+      "grammar-cualquier-sustantivo-singular",
+      "word-situación"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9796,
-      "lowConfidenceTokenCount": 2,
-      "rawOcrTokenCount": 49,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-opinion-00001-b4290122",
+      "id": "word-puede--possibility",
       "kind": "word",
       "promptEs": "puede",
-      "answerEn": "can; you can",
+      "answerEn": "may; might (as part of puede que)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verbs",
+        "possibility",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00001",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c621fb0dd86820556996",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-3",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00002-db17f9f7",
+      "id": "grammar-puede-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "puede que seguido de subjuntivo",
+      "questionEn": "How do you say that something may or might be true or happen?",
+      "answerEn": "Use puede que, then put the following verb in a special possibility form.",
+      "noteEn": "The special form is called the subjunctive: it presents the following idea as possible rather than as a plain fact. Puede que stays fixed, while the next verb changes to match its own subject; for example, llega becomes llegue and es becomes sea.",
+      "example": {
+        "es": "Puede que Ana llegue tarde.",
+        "en": "Ana may arrive late."
+      },
+      "tags": [
+        "grammar",
+        "possibility",
+        "subjunctive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-3",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--puede-que",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
+      "answerEn": "no separate English word; completes puede que (“may; might”)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "connectors",
+        "possibility",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00002",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-3",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00003-d47e07e2",
+      "id": "word-antes--before-event",
       "kind": "word",
       "promptEs": "antes",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "before (an event happens)",
+      "noteEn": "Before a full event with its own verb, antes normally begins the connector antes de que.",
+      "example": {
+        "es": "Llámame antes de que salgas.",
+        "en": "Call me before you leave."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time connector",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00003",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-60a6c2661df4be46d85f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-semaforo-largo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00004-7e5b74a9",
+      "id": "grammar-antes-de-infinitive",
+      "kind": "grammar",
+      "promptEs": "antes de + verbo en forma de diccionario",
+      "questionEn": "How do you say that one action happens before another action by the same person?",
+      "answerEn": "Use antes de, then keep the second action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir, such as salir, comer, or escribir. Use antes de directly before that form when no new subject is named. If the later action has its own stated subject, Spanish normally uses antes de que and a different verb form.",
+      "example": {
+        "es": "Apaga la luz antes de salir.",
+        "en": "Turn off the light before leaving."
+      },
+      "tags": [
+        "grammar",
+        "time",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--fixed-antes-de-infinitive",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links antes to the following action",
+      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "example": {
+        "es": "Lávate las manos antes de comer.",
+        "en": "Wash your hands before eating."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "verb pattern",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00004",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00005-13d94168",
+      "id": "word-lanzarnos--rush-into",
       "kind": "word",
       "promptEs": "lanzarnos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to rush into; to launch ourselves into",
+      "noteEn": "Lanzarnos combines the dictionary form lanzar with nos. In lanzarnos a hacer algo, it presents 'us' as plunging into an action, often too quickly or eagerly.",
+      "example": {
+        "es": "No debemos lanzarnos a decidir.",
+        "en": "We should not rush into deciding."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronominal verb",
+        "infinitive",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00005",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca4aac812933a6b8fd0e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00006-13978b6a",
+      "id": "grammar-infinitive-attached-pronominal-marker",
+      "kind": "grammar",
+      "promptEs": "verbo pronominal en -ar/-er/-ir + me/te/se/nos/os/se",
+      "questionEn": "Where does me, te, se, nos, or os go when a verb used with one of those words stays in its dictionary form?",
+      "answerEn": "Attach the matching small word to the end: unir + me becomes unirme.",
+      "noteEn": "A pronominal verb is learned with se, such as unirse or acostarse. When its action verb remains in the unchanged dictionary form ending in -ar, -er, or -ir, replace se with the form that matches the person and write it as part of the same word: acostarme, unirte, or irnos.",
+      "example": {
+        "es": "Quiero acostarme temprano.",
+        "en": "I want to go to bed early."
+      },
+      "tags": [
+        "grammar",
+        "pronominal verbs",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sociedades-de-honor",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-lanzarse-a-infinitive",
+      "kind": "phrase",
+      "promptEs": "lanzarse a + infinitivo",
+      "questionEn": "How do you say that someone plunges or rushes into doing an action?",
+      "answerEn": "Use a matching form of lanzarse, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The small marker changes with the person: me lanzo, te lanzas, se lanza, nos lanzamos. The action after a stays in the dictionary form ending in -ar, -er, or -ir. The construction can suggest energetic action or action begun too quickly.",
+      "example": {
+        "es": "Se lanzaron a construir una solución.",
+        "en": "They rushed into building a solution."
+      },
+      "tags": [
+        "phrase",
+        "pronominal verb",
+        "action",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--lanzarse-complement",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "into; required after lanzarse before an action",
+      "noteEn": "When lanzarse means to plunge or rush into doing something, a links it to the following action verb.",
+      "example": {
+        "es": "Se lanzó a explicar su idea.",
+        "en": "She launched into explaining her idea."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "lanzarse",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00006",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00007-07bd2ba7",
+      "id": "word-adoptar",
       "kind": "word",
       "promptEs": "adoptar",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to adopt; to take up",
+      "noteEn": "Adoptar can mean taking up a technology, practice, method, or policy, as well as legally adopting a person.",
+      "example": {
+        "es": "La oficina decidió adoptar el nuevo sistema.",
+        "en": "The office decided to adopt the new system."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "change",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00007",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8564d95ac2760667d46b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00008-1e7e6afa",
-      "kind": "word",
-      "promptEs": "google",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00008",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-bbdefa2950f49882f295",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-opinion-00009-491eb5f0",
-      "kind": "word",
-      "promptEs": "glass",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00009",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-132a1a391cce181c490a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-opinion-00010-87160774",
+      "id": "word-necesitemos",
       "kind": "word",
       "promptEs": "necesitemos",
-      "answerEn": "to need",
-      "noteEn": "",
+      "answerEn": "we may need; we might need",
+      "noteEn": "Necesitemos is the special possibility form of necesitar for nosotros, 'we.' It appears after expressions such as puede que because the need is presented as possible rather than certain.",
+      "example": {
+        "es": "Puede que necesitemos más tiempo.",
+        "en": "We may need more time."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "subjunctive",
+        "possibility",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00010",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c485e55a5052a67c2ce3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00011-25f51ff0",
+      "id": "word-pararnos--pause",
       "kind": "word",
       "promptEs": "pararnos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to stop; to pause (ourselves)",
+      "noteEn": "Pararnos combines parar with nos. It can describe us stopping our movement or pausing what we are doing.",
+      "example": {
+        "es": "Vamos a pararnos un momento.",
+        "en": "We are going to stop for a moment."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronominal verb",
+        "infinitive",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00011",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2a43c14ee349208508a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00012-f0d0f1c2",
+      "id": "phrase-pararse-a-infinitive",
+      "kind": "phrase",
+      "promptEs": "pararse a + infinitivo",
+      "questionEn": "How do you say that someone pauses in order to do an action?",
+      "answerEn": "Use the needed form of pararse, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The small pronoun changes with the person: me paro, te paras, se para, nos paramos, or se paran. A remains before the following action.",
+      "example": {
+        "es": "Nos paramos a leer el aviso.",
+        "en": "We stopped to read the notice."
+      },
+      "tags": [
+        "phrase",
+        "stopping",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ganado",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00012",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00013-d81dba97",
+      "id": "word-momento",
       "kind": "word",
       "promptEs": "momento",
       "answerEn": "moment",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00013",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70f4f3d5e856bf6b663c",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00014-1c773dd0",
+      "id": "word-a--pararse-complement",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to; links pararse to the action someone stops to do",
+      "noteEn": "Use a between a form of pararse and the following action verb in its unchanged dictionary form.",
+      "example": {
+        "es": "Nos paramos a descansar.",
+        "en": "We stopped to rest."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb complement",
+        "infinitive",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00014",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ganado",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00015-ab64868b",
+      "id": "word-considerar",
       "kind": "word",
       "promptEs": "considerar",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to consider; to think about",
+      "noteEn": "Considerar means examining an idea, choice, or consequence before deciding.",
+      "example": {
+        "es": "Debemos considerar las alternativas.",
+        "en": "We should consider the alternatives."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "thinking",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00015",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a572694c81937c2547ee",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00016-d3662b32",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00016",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00017-e482ff2c",
+      "id": "word-consecuencias",
       "kind": "word",
       "promptEs": "consecuencias",
-      "answerEn": "consequence",
-      "noteEn": "",
+      "answerEn": "consequences",
+      "noteEn": "Consecuencias are the results or effects that follow an action or decision.",
+      "example": {
+        "es": "Pensaron en las consecuencias de la decisión.",
+        "en": "They thought about the consequences of the decision."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00017",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-aeb2ba693c97c0dd18e4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00018-1710141d",
+      "id": "concept-canned-tech-concern-insight",
+      "kind": "concept",
+      "promptEs": "tecnología · consecuencias · opinión formada · usa esta frase",
+      "questionEn": "Why can the displayed warning about a new technology sound insightful in almost any situation?",
+      "answerEn": "It is deliberately vague, so listeners can supply whichever technological danger already worries them and credit the speaker with addressing it.",
+      "noteEn": "The upper statement recommends pausing to consider the consequences of giving a technology too much prominence, but it names no concrete consequence. The lower caption presents that broad warning as a reusable line. The Spanish title text explains that the listener mentally fills in their own alarm, making the speaker seem perceptive without having offered a specific analysis.",
+      "tags": [
+        "concept",
+        "technology",
+        "rhetoric",
+        "vagueness",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00018",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00019-f395eb05",
+      "id": "word-darle--give-recipient",
       "kind": "word",
       "promptEs": "darle",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to give him, her, it, or them; to give something to a recipient",
+      "noteEn": "Darle joins dar, the dictionary form meaning “to give,” to le, a small recipient word. Depending on context, le can point to a man, woman, thing, or singular collective. The recipient may also be named later with a, as in darle el libro a Marta.",
+      "example": {
+        "es": "Voy a darle la llave a Marta.",
+        "en": "I am going to give Marta the key."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "recipient pronoun",
+        "dar",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00019",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5acb4bfbb4b5da9a4d04",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00020-74f6ea3a",
+      "id": "grammar-pronoun-attached-to-infinitive",
+      "kind": "grammar",
+      "promptEs": "verbo en forma de diccionario + pronombre unido",
+      "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
+      "answerEn": "Attach it to the end of the verb and write the result as one word.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "example": {
+        "es": "Quiero ayudarte.",
+        "en": "I want to help you."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "object pronouns",
+        "infinitive"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-indirect-object-pronoun-plus-a-clarifier",
+      "kind": "grammar",
+      "promptEs": "le/les + verbo … a + receptor explícito",
+      "questionEn": "Why can Spanish use le or les with a verb and then still name the receiver with a phrase beginning with a?",
+      "answerEn": "Use le or les with the verb, then use a phrase beginning with the word a to identify the receiver explicitly.",
+      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a conjugated verb, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once. In the prompt, the slash means that le and les are alternatives, each plus sign means “followed by,” and the dots mean that other words may appear between the verb and the named receiver.",
+      "example": {
+        "es": "Le di agua al perro.",
+        "en": "I gave the dog water."
+      },
+      "tags": [
+        "grammar",
+        "indirect object",
+        "clarification",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fotos-porfa",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-dar-protagonismo-a",
+      "kind": "phrase",
+      "promptEs": "dar protagonismo a alguien o algo",
+      "questionEn": "How do you say that someone gives a person or thing a prominent or leading role?",
+      "answerEn": "Use a matching form of dar, add protagonismo, and introduce the person or thing receiving that prominence with a.",
+      "noteEn": "Dar changes for the person and time. Protagonismo names the attention or central role, while a introduces who or what receives it. A short receiver word such as le may also appear with dar.",
+      "example": {
+        "es": "La campaña dio protagonismo a los vecinos.",
+        "en": "The campaign gave the residents a prominent role."
+      },
+      "tags": [
+        "phrase",
+        "collocation",
+        "importance",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--recipient",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to (introducing the recipient)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00020",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00021-b2adeeec",
+      "id": "word-esta--demonstrative",
       "kind": "word",
       "promptEs": "esta",
-      "answerEn": "Meaning needs review",
+      "answerEn": "this (feminine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "demonstratives"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00021",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d98c0c5592a747cd6db",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00022-d8c6dbe1",
+      "id": "word-tecnología",
       "kind": "word",
       "promptEs": "tecnología",
       "answerEn": "technology",
-      "noteEn": "",
+      "noteEn": "Tecnología can mean technology in general or one technological system or field.",
+      "example": {
+        "es": "Esta tecnología todavía es experimental.",
+        "en": "This technology is still experimental."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "technology",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00022",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a2a8e09ed1e9ce95d6ba",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00023-6bae394c",
+      "id": "word-tanto--so-much",
       "kind": "word",
       "promptEs": "tanto",
-      "answerEn": "Meaning needs review",
+      "answerEn": "so much; that much",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "quantity"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00023",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-96dffc0734f25bd054f0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00024-8d509979",
+      "id": "word-protagonismo",
       "kind": "word",
       "promptEs": "protagonismo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "prominence; a leading role",
+      "noteEn": "Protagonismo is the importance or attention given to someone or something as a central figure. Dar protagonismo means to give prominence or a leading role.",
+      "example": {
+        "es": "El informe da protagonismo a la seguridad.",
+        "en": "The report gives prominence to safety."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "importance",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00024",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-592e8f6b1d0133f5dfd6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00025-14a5518c",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00025",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00026-400c43f8",
+      "id": "word-nuestras",
       "kind": "word",
       "promptEs": "nuestras",
-      "answerEn": "Meaning needs review",
+      "answerEn": "our (before feminine plural nouns)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive",
+        "feminine plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00026",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ae860bd5abfe9e73a507",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ancho-fijo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00027-125da52a",
+      "id": "grammar-nuestro-possessive-agreement",
+      "kind": "grammar",
+      "promptEs": "nuestro/nuestra/nuestros/nuestras + sustantivo",
+      "questionEn": "How do you choose the Spanish form of ‘our’ before a noun?",
+      "answerEn": "Choose nuestro, nuestra, nuestros, or nuestras to match the gender and number of what is owned.",
+      "noteEn": "The form matches the owned noun, not the owners. Use nuestro before one masculine thing, nuestra before one feminine thing, nuestros before masculine or mixed plural things, and nuestras before feminine plural things.",
+      "example": {
+        "es": "Nuestras maletas están aquí.",
+        "en": "Our suitcases are here."
+      },
+      "tags": [
+        "grammar",
+        "possessives",
+        "agreement",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-nostalgia",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-vidas",
       "kind": "word",
       "promptEs": "vidas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "lives",
+      "noteEn": "Vidas is the plural of vida, a life.",
+      "example": {
+        "es": "La tecnología forma parte de nuestras vidas.",
+        "en": "Technology is part of our lives."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00027",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e85a078bbc8871b3b14b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00028-a0bcf9e1",
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00028",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00029-28b4b599",
+      "id": "grammar-yes-no-question",
+      "kind": "grammar",
+      "promptEs": "¿verbo + resto de la idea?",
+      "questionEn": "How can Spanish turn an ordinary statement into a yes-or-no question?",
+      "answerEn": "Use question marks and questioning intonation; Spanish does not need a separate helper like English do or does.",
+      "noteEn": "The word order can remain the same as in a statement, especially in conversation. The opening and closing question marks show the question in writing.",
+      "example": {
+        "es": "¿Tienen café?",
+        "en": "Do they have coffee?"
+      },
+      "tags": [
+        "grammar",
+        "questions",
+        "word order",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conmovedor",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-tienes",
       "kind": "word",
       "promptEs": "tienes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "tener",
+        "present tense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00029",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-07ecd75fc2ab536c0be1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-compromiso",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00030-76171e6b",
+      "id": "word-una",
       "kind": "word",
       "promptEs": "una",
       "answerEn": "a; an (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00030",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-161f0e5ed45f6d514dc2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00031-957f81fc",
+      "id": "word-opinión",
       "kind": "word",
       "promptEs": "opinión",
-      "answerEn": "opinion",
-      "noteEn": "",
+      "answerEn": "opinion; view",
+      "noteEn": "Una opinión is a belief or judgment rather than an established fact.",
+      "example": {
+        "es": "Ana explicó su opinión sobre el proyecto.",
+        "en": "Ana explained her opinion about the project."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "viewpoint",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00031",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9ea4c003f1e8a50a80fb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00032-6bd5658f",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-formada--settled",
       "kind": "word",
       "promptEs": "formada",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "formed; settled (feminine singular)",
+      "noteEn": "An opinión formada is a view that someone has already developed and settled on. Formada is feminine singular because it describes opinión.",
+      "example": {
+        "es": "Todavía no tengo una opinión formada.",
+        "en": "I do not yet have a settled opinion."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "participle",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00032",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c97b002f188e4dcc5340",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00033-e72e1a82",
+      "id": "word-sobre--about",
       "kind": "word",
       "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "about; concerning",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "topic",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00033",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00034-fbe98e76",
+      "id": "word-alguna--any-hypothetical",
       "kind": "word",
       "promptEs": "alguna",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "any; some possible",
+      "noteEn": "With an imagined or uncertain possibility, alguna can have the natural English sense “any.” It is feminine because it describes a feminine noun, such as idea or manera.",
+      "example": {
+        "es": "¿Hay alguna salida?",
+        "en": "Is there any way out?"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "indefinite",
+        "hypothetical",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00034",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8336fa177726d05084af",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fantasia",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00035-e5397a2a",
+      "id": "word-nueva",
       "kind": "word",
       "promptEs": "nueva",
-      "answerEn": "Meaning needs review",
+      "answerEn": "new (feminine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "agreement",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00035",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dda7c108693f29df36c5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-un-monton-de-rocas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00036-7b3436d2",
+      "id": "grammar-nuevo-position-meaning",
+      "kind": "grammar",
+      "promptEs": "una nueva persona o cosa · una persona o cosa nueva",
+      "questionEn": "What difference can the position of nuevo make?",
+      "answerEn": "Before the person or thing, nuevo often means newly added or newly in that role; after it, nuevo more often stresses that the thing itself is brand-new.",
+      "noteEn": "Nuevo changes to nueva, nuevos, or nuevas to match what it describes. Una nueva compañera usually means someone who has recently become a coworker or classmate. Una mesa nueva more often means a newly made or unused table. Context can blur the contrast, so this is a common tendency rather than an absolute rule.",
+      "example": {
+        "es": "Laura tiene una nueva compañera.",
+        "en": "Laura has a new coworker."
+      },
+      "tags": [
+        "grammar",
+        "adjective position",
+        "nuevo",
+        "meaning",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-novia-androide",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-usa--command",
       "kind": "word",
-      "promptEs": "tecnología",
-      "answerEn": "technology",
-      "noteEn": "",
+      "promptEs": "usa",
+      "answerEn": "use! (informal singular command)",
+      "noteEn": "Usa is the affirmative command of usar for one familiar listener. The same spelling can also mean 'he, she, or it uses,' so context distinguishes the command.",
+      "example": {
+        "es": "Usa esta llave.",
+        "en": "Use this key."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command",
+        "tú",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00036",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a2a8e09ed1e9ce95d6ba",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00037-3bdcfd47",
-      "kind": "word",
-      "promptEs": "lisa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "commands",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00037",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d84fe7e07bedb227cfff",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00038-9f1df3ea",
-      "kind": "word",
-      "promptEs": "esta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00038",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d98c0c5592a747cd6db",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-opinion-00039-9140dca9",
+      "id": "word-frase",
       "kind": "word",
       "promptEs": "frase",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "phrase; line",
+      "noteEn": "For dialogue in a film or play, frase can refer to a spoken line.",
+      "example": {
+        "es": "Recuerdo una frase de la película.",
+        "en": "I remember a line from the movie."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "language",
+        "film",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00039",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-045dd549f003a58180e8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-improvisado",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00040-0a542ffd",
+      "id": "word-suena--sounds-description",
       "kind": "word",
       "promptEs": "suena",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "sounds; seems (followed by a description)",
+      "noteEn": "Suena is the form of sonar used for one thing that gives an impression. A describing word can follow it directly; sonar a is a different pattern used before a noun or comparison.",
+      "example": {
+        "es": "La idea suena interesante.",
+        "en": "The idea sounds interesting."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "impression",
+        "description",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00040",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8bf7492894dcc1318eb9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-newton-y-leibniz",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00041-9f6924ff",
+      "id": "grammar-sonar-description",
+      "kind": "grammar",
+      "promptEs": "sonar + palabra descriptiva",
+      "questionEn": "How do you say that something sounds or seems a certain way?",
+      "answerEn": "Use a form of sonar followed directly by a describing word.",
+      "noteEn": "Sonar changes to match the thing giving the impression: la idea suena, las ideas suenan. The describing word also changes when needed to match that thing: razonable becomes razonables. Do not add a before a describing word; sonar a is the separate pattern used before a noun or comparison, as in suena a excusa.",
+      "example": {
+        "es": "Las propuestas suenan razonables.",
+        "en": "The proposals sound reasonable."
+      },
+      "tags": [
+        "grammar",
+        "sonar",
+        "descriptions",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-newton-y-leibniz",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-interesante",
       "kind": "word",
       "promptEs": "interesante",
       "answerEn": "interesting",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00041",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-33e6521013af26ae53d5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-caza-de-nerds",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00042-4489a13a",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00042",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00043-a1c631eb",
+      "id": "word-la--direct-object-feminine",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "her; it (a feminine thing)",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00043",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00044-9e3f5a24",
+      "id": "grammar-direct-object-pronoun-before-finite-verb",
+      "kind": "grammar",
+      "promptEs": "lo, la, los, las delante de un verbo conjugado",
+      "questionEn": "Where do you put the Spanish word for “it” or “them” when the main verb already shows who acts and when?",
+      "answerEn": "Put lo, la, los, or las directly before that verb.",
+      "noteEn": "These short words replace the person or thing directly affected by the action; that role is called the direct object. Choose lo or los for a masculine thing, la or las for a feminine thing, and match singular or plural. Before a verb form such as conté or vimos, write the short word separately in front: lo conté, las vimos. With an unchanged dictionary form, it can instead attach to the end, as in verlo.",
+      "example": {
+        "es": "La película, la vimos ayer.",
+        "en": "The movie—we watched it yesterday."
+      },
+      "tags": [
+        "grammar",
+        "direct object",
+        "pronoun",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-puedes",
       "kind": "word",
       "promptEs": "puedes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you can; you are able to",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00044",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a8f581759d9df081d8a8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00045-299bcf68",
+      "id": "grammar-poder-infinitive",
+      "kind": "grammar",
+      "promptEs": "poder + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone can, could, or may do something?",
+      "answerEn": "Use a form of poder for the person and situation, then keep the action verb in its unchanged dictionary form.",
+      "noteEn": "Poder changes to forms such as puedo, puedes, puede, podemos, and pueden for present ability or possibility. Podría can present a possible or imagined option. The following action keeps its -ar, -er, or -ir ending.",
+      "example": {
+        "es": "Podemos entrar ahora.",
+        "en": "We can enter now."
+      },
+      "tags": [
+        "A1",
+        "grammar",
+        "ability",
+        "possibility",
+        "verb pattern"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-usar",
       "kind": "word",
       "promptEs": "usar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to use",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "action"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00045",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-11b62529c77d4b283b74",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-goto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00046-af53ab15",
+      "id": "word-prácticamente",
       "kind": "word",
       "promptEs": "prácticamente",
-      "answerEn": "practically",
+      "answerEn": "practically; almost",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adverb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00046",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5c5c8d612d2618cd9991",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-red",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00047-817cb57f",
-      "kind": "word",
-      "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
+      "id": "grammar-adverbs-mente",
+      "kind": "grammar",
+      "promptEs": "adjetivo femenino singular + -mente",
+      "questionEn": "How do you turn many describing words into words such as “quickly,” “clearly,” or “probably”?",
+      "answerEn": "Use the feminine singular form of the describing word and add -mente. If its masculine and feminine forms are identical, simply add -mente.",
+      "noteEn": "For an adjective that changes, use its -a form: claro becomes clara and then claramente. For one form shared by both genders, probable becomes probablemente. The new word usually describes how an action happens or how the speaker judges a claim.",
+      "example": {
+        "es": "Lucía responde claramente.",
+        "en": "Lucía answers clearly."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "adverbs",
+        "mente",
+        "word formation",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00047",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conduccion-agresiva",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00048-08b40965",
+      "id": "word-cualquier",
       "kind": "word",
-      "promptEs": "chalquier",
-      "answerEn": "Meaning needs review",
+      "promptEs": "cualquier",
+      "answerEn": "any; whichever",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00048",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9a55d3bb022ac1136907",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-opinion-00049-b1b6c3cb",
+      "id": "grammar-cualquier-sustantivo-singular",
+      "kind": "grammar",
+      "promptEs": "cualquier + sustantivo singular",
+      "questionEn": "How do you say “any” before one singular thing?",
+      "answerEn": "Put cualquier before a singular noun: cualquier libro, cualquier opción.",
+      "noteEn": "A noun is a naming word such as libro or opción. Before a noun, cualquiera shortens to cualquier. The noun stays singular even when the meaning is any one out of many. The plus sign in the Spanish prompt means “followed by.”",
+      "example": {
+        "es": "Puedes elegir cualquier asiento.",
+        "en": "You can choose any seat."
+      },
+      "tags": [
+        "grammar",
+        "indefinite choice",
+        "singular",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tenedores-y-cucharas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-situación",
       "kind": "word",
-      "promptEs": "situacion",
-      "answerEn": "Meaning needs review",
+      "promptEs": "situación",
+      "answerEn": "situation",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "circumstance"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-opinion:ocr-token-00049",
-        "sourceLineId": "es-xkcd-opinion:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4c1fe275170860cedbf2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-1337-parte-2",
+        "contextualSenseReviewed": true
       }
     }
   ]

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-dc0ad4de665c3c52",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9767,
-    "lowConfidenceTokenCount": 1,
-    "rawOcrTokenCount": 30,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-estudio",
     "xkcdNumber": 749,
     "publishedAt": "2010-06-04",
-    "title": "Estudio",
+    "title": "Study",
     "titleEs": "Estudio",
     "image": {
       "src": "https://es.xkcd.com/images/study.png",
       "width": 314,
       "height": 431,
       "aspectRatio": 0.7285,
-      "altEn": "Spanish-language xkcd comic #749: Estudio"
+      "altEn": "Spanish-language xkcd comic #749: Study"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Se necesitan voluntarios para estudio sobre la transmisión del urushiol mediante el contacto dactilar con tiras delgadas de pulpa de fibras de celulosa.",
-      "en": "English title text pending review."
+      "en": "Volunteers needed for a study on transmission of urushiol from digital contact with thin strips of fibrous cellulose pulp.",
+      "noteEn": "The Spanish and English texts are the exact title attributes from the Spanish archive and official xkcd. Both turn contact with the flyer strips into the subject of another suspicious study; Vision also misread torn-paper artwork as the word ‘Mary,’ which is not printed text."
     },
     "regions": [
       {
-        "id": "es-xkcd-estudio:region-0001",
-        "labelEs": "SE NECESITAN",
+        "id": "es-xkcd-estudio:volunteer-heading",
+        "labelEs": "SE NECESITAN VOLUNTARIOS",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 24.2038,
           "y": 15.2778,
           "width": 48.4076,
-          "height": 5.5556
+          "height": 11.1111
         },
         "words": [
           {
-            "id": "es-xkcd-estudio:word-00001",
+            "id": "es-xkcd-estudio:volunteer-heading:w01",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -66,15 +61,16 @@
                 "x": 24.2038,
                 "y": 15.2778,
                 "width": 10.5096,
-                "height": 5.5556
+                "height": 5.45
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00001-97ddc46c"
+              "word-se--passive-unnamed-doer",
+              "grammar-se-passive-unnamed-doer"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00002",
+            "id": "es-xkcd-estudio:volunteer-heading:w02",
             "text": "NECESITAN",
             "normalized": "necesitan",
             "bounds": [
@@ -82,40 +78,17 @@
                 "x": 35.6688,
                 "y": 15.2778,
                 "width": 36.9427,
-                "height": 5.5556
+                "height": 5.45
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00002-10e284ab"
+              "word-necesitan--are-needed",
+              "grammar-se-passive-unnamed-doer",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00001-97ddc46c",
-          "word-auto-es-xkcd-estudio-00002-10e284ab"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0002",
-        "labelEs": "VOLUNTARIOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 25.4777,
-          "y": 20.8333,
-          "width": 45.8599,
-          "height": 5.5556
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00003",
+            "id": "es-xkcd-estudio:volunteer-heading:w03",
             "text": "VOLUNTARIOS",
             "normalized": "voluntarios",
             "bounds": [
@@ -127,35 +100,48 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00003-7bc5f1cb"
+              "word-voluntarios",
+              "grammar-se-passive-unnamed-doer",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00003-7bc5f1cb"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-estudio:volunteer-heading:app-passive",
+            "cardId": "grammar-se-passive-unnamed-doer",
+            "participantWordIds": [
+              "es-xkcd-estudio:volunteer-heading:w01",
+              "es-xkcd-estudio:volunteer-heading:w02",
+              "es-xkcd-estudio:volunteer-heading:w03"
+            ],
+            "exampleEs": "SE NECESITAN VOLUNTARIOS",
+            "explanationEn": "Se leaves the recruiter unnamed, necesitan agrees with the plural item sought, and voluntarios names that item."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-se--passive-unnamed-doer",
+          "grammar-se-passive-unnamed-doer",
+          "word-necesitan--are-needed",
+          "concept-study-flyer-kidney-harvest-urushiol",
+          "word-voluntarios"
+        ]
       },
       {
-        "id": "es-xkcd-estudio:region-0003",
-        "labelEs": "PARA ESTUDIO CIENTÍFICO",
+        "id": "es-xkcd-estudio:study-description",
+        "labelEs": "PARA ESTUDIO CIENTÍFICO QUE INVESTIGA SI LA GENTE SABE DISTINGUIR ENTRE LOS ESTUDIOS CIENTÍFICOS Y LAS ESTAFAS PARA COSECHAR RIÑONES",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 17.1975,
           "y": 31.0185,
           "width": 64.9682,
-          "height": 4.6296
+          "height": 31.0185
         },
         "words": [
           {
-            "id": "es-xkcd-estudio:word-00004",
+            "id": "es-xkcd-estudio:study-description:w01",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -167,11 +153,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00004-d7c7a677"
+              "word-para--for-purpose-noun"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00005",
+            "id": "es-xkcd-estudio:study-description:w02",
             "text": "ESTUDIO",
             "normalized": "estudio",
             "bounds": [
@@ -183,11 +169,15 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00005-02717d99"
+              "word-estudio--research-study",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "grammar-relative-que",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00006",
+            "id": "es-xkcd-estudio:study-description:w03",
             "text": "CIENTÍFICO",
             "normalized": "científico",
             "bounds": [
@@ -199,37 +189,15 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00006-5e076a1b"
+              "word-científico--scientific",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "grammar-relative-que",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00004-d7c7a677",
-          "word-auto-es-xkcd-estudio-00005-02717d99",
-          "word-auto-es-xkcd-estudio-00006-5e076a1b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0004",
-        "labelEs": "QUE INVESTIGA SI LA GENTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 19.1083,
-          "y": 44.4444,
-          "width": 59.2357,
-          "height": 3.7037
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00007",
+            "id": "es-xkcd-estudio:study-description:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -237,15 +205,16 @@
                 "x": 19.1083,
                 "y": 44.4444,
                 "width": 9.5541,
-                "height": 3.7037
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00007-5bd43671"
+              "word-que--relative",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00008",
+            "id": "es-xkcd-estudio:study-description:w05",
             "text": "INVESTIGA",
             "normalized": "investiga",
             "bounds": [
@@ -253,15 +222,18 @@
                 "x": 29.2994,
                 "y": 44.4444,
                 "width": 21.6561,
-                "height": 3.7037
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00008-584f567f"
+              "word-investiga--researches",
+              "grammar-relative-que",
+              "grammar-indirect-question-si",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00009",
+            "id": "es-xkcd-estudio:study-description:w06",
             "text": "SI",
             "normalized": "si",
             "bounds": [
@@ -269,15 +241,16 @@
                 "x": 51.5924,
                 "y": 44.4444,
                 "width": 5.0955,
-                "height": 3.7037
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00009-4f808d99"
+              "word-si--whether",
+              "grammar-indirect-question-si"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00010",
+            "id": "es-xkcd-estudio:study-description:w07",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -285,15 +258,15 @@
                 "x": 57.3248,
                 "y": 44.4444,
                 "width": 6.3694,
-                "height": 3.7037
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00010-add91997"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00011",
+            "id": "es-xkcd-estudio:study-description:w08",
             "text": "GENTE",
             "normalized": "gente",
             "bounds": [
@@ -301,43 +274,15 @@
                 "x": 64.3312,
                 "y": 44.4444,
                 "width": 14.0127,
-                "height": 3.7037
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00011-b1920520"
+              "word-gente"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00007-5bd43671",
-          "word-auto-es-xkcd-estudio-00008-584f567f",
-          "word-auto-es-xkcd-estudio-00009-4f808d99",
-          "word-auto-es-xkcd-estudio-00010-add91997",
-          "word-auto-es-xkcd-estudio-00011-b1920520"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0005",
-        "labelEs": "SABE DISTINGUIR ENTRE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 22.9299,
-          "y": 48.1481,
-          "width": 51.5924,
-          "height": 3.7037
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00012",
+            "id": "es-xkcd-estudio:study-description:w09",
             "text": "SABE",
             "normalized": "sabe",
             "bounds": [
@@ -345,15 +290,16 @@
                 "x": 22.9299,
                 "y": 48.1481,
                 "width": 12.1019,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00012-c8740502"
+              "word-sabe--knows-how",
+              "grammar-saber-infinitive-skill"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00013",
+            "id": "es-xkcd-estudio:study-description:w10",
             "text": "DISTINGUIR",
             "normalized": "distinguir",
             "bounds": [
@@ -361,15 +307,17 @@
                 "x": 35.6688,
                 "y": 48.1481,
                 "width": 23.5669,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00013-12a04ded"
+              "word-distinguir",
+              "grammar-saber-infinitive-skill",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00014",
+            "id": "es-xkcd-estudio:study-description:w11",
             "text": "ENTRE",
             "normalized": "entre",
             "bounds": [
@@ -377,41 +325,16 @@
                 "x": 59.8726,
                 "y": 48.1481,
                 "width": 14.6497,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00014-2935941a"
+              "word-entre",
+              "grammar-entre-x-y"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00012-c8740502",
-          "word-auto-es-xkcd-estudio-00013-12a04ded",
-          "word-auto-es-xkcd-estudio-00014-2935941a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0006",
-        "labelEs": "LOS ESTUDIOS CIENTÍFICOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 19.7452,
-          "y": 51.3889,
-          "width": 57.3248,
-          "height": 4.1667
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00015",
+            "id": "es-xkcd-estudio:study-description:w12",
             "text": "LOS",
             "normalized": "los",
             "bounds": [
@@ -419,15 +342,16 @@
                 "x": 19.7452,
                 "y": 51.3889,
                 "width": 9.3153,
-                "height": 4.1667
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00015-354f20e4"
+              "word-los",
+              "grammar-entre-x-y"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00016",
+            "id": "es-xkcd-estudio:study-description:w13",
             "text": "ESTUDIOS",
             "normalized": "estudios",
             "bounds": [
@@ -435,15 +359,18 @@
                 "x": 29.7771,
                 "y": 51.3889,
                 "width": 20.7803,
-                "height": 4.1667
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00016-f3430deb"
+              "word-estudios--research-studies",
+              "grammar-entre-x-y",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00017",
+            "id": "es-xkcd-estudio:study-description:w14",
             "text": "CIENTÍFICOS",
             "normalized": "científicos",
             "bounds": [
@@ -451,41 +378,19 @@
                 "x": 51.2739,
                 "y": 51.3889,
                 "width": 25.7962,
-                "height": 4.1667
+                "height": 3.55
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00017-6ba1b75f"
+              "word-científicos",
+              "grammar-entre-x-y",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00015-354f20e4",
-          "word-auto-es-xkcd-estudio-00016-f3430deb",
-          "word-auto-es-xkcd-estudio-00017-6ba1b75f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0007",
-        "labelEs": "Y LAS ESTAFAS PARA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.1147,
-          "y": 55.0926,
-          "width": 44.586,
-          "height": 3.7037
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00018",
+            "id": "es-xkcd-estudio:study-description:w15",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -493,15 +398,16 @@
                 "x": 26.1147,
                 "y": 55.0926,
                 "width": 3.8217,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00018-7c37f7c7"
+              "word-y",
+              "grammar-entre-x-y"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00019",
+            "id": "es-xkcd-estudio:study-description:w16",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -509,15 +415,16 @@
                 "x": 30.5732,
                 "y": 55.0926,
                 "width": 8.2803,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00019-76d6ed35"
+              "word-las",
+              "grammar-entre-x-y"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00020",
+            "id": "es-xkcd-estudio:study-description:w17",
             "text": "ESTAFAS",
             "normalized": "estafas",
             "bounds": [
@@ -525,15 +432,17 @@
                 "x": 39.4904,
                 "y": 55.0926,
                 "width": 19.1083,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00020-b58221c2"
+              "word-estafas",
+              "grammar-entre-x-y",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00021",
+            "id": "es-xkcd-estudio:study-description:w18",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -541,42 +450,16 @@
                 "x": 59.2357,
                 "y": 55.0926,
                 "width": 11.465,
-                "height": 3.7037
+                "height": 3.1
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00021-2afb4bd0"
+              "word-para",
+              "grammar-para-infinitive-purpose"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00018-7c37f7c7",
-          "word-auto-es-xkcd-estudio-00019-76d6ed35",
-          "word-auto-es-xkcd-estudio-00020-b58221c2",
-          "word-auto-es-xkcd-estudio-00021-2afb4bd0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0008",
-        "labelEs": "COSECHAR RIÑONES",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 28.0255,
-          "y": 58.3333,
-          "width": 41.4013,
-          "height": 3.7037
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-estudio:word-00022",
+            "id": "es-xkcd-estudio:study-description:w19",
             "text": "COSECHAR",
             "normalized": "cosechar",
             "bounds": [
@@ -588,11 +471,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00022-b6c415f4"
+              "word-cosechar--harvest",
+              "grammar-para-infinitive-purpose",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00023",
+            "id": "es-xkcd-estudio:study-description:w20",
             "text": "RIÑONES",
             "normalized": "riñones",
             "bounds": [
@@ -604,52 +489,172 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00023-a49ef4ea"
+              "word-riñones",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00022-b6c415f4",
-          "word-auto-es-xkcd-estudio-00023-a49ef4ea"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-estudio:study-description:app-study-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w02",
+              "es-xkcd-estudio:study-description:w03"
+            ],
+            "exampleEs": "ESTUDIO CIENTÍFICO",
+            "explanationEn": "Científico follows estudio and classifies what kind of study is meant."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-study-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w02",
+              "es-xkcd-estudio:study-description:w03"
+            ],
+            "exampleEs": "ESTUDIO CIENTÍFICO",
+            "explanationEn": "Científico uses masculine singular -o to agree with estudio."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-relative",
+            "cardId": "grammar-relative-que",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w02",
+              "es-xkcd-estudio:study-description:w03",
+              "es-xkcd-estudio:study-description:w04",
+              "es-xkcd-estudio:study-description:w05"
+            ],
+            "exampleEs": "ESTUDIO CIENTÍFICO QUE INVESTIGA",
+            "explanationEn": "Estudio científico names the thing being described, que links it to the added information, and investiga supplies that information."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-indirect-question",
+            "cardId": "grammar-indirect-question-si",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w05",
+              "es-xkcd-estudio:study-description:w06"
+            ],
+            "exampleEs": "INVESTIGA SI",
+            "explanationEn": "Investiga introduces the inquiry, and unaccented si opens the question whose answer could be yes or no."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-knows-how",
+            "cardId": "grammar-saber-infinitive-skill",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w09",
+              "es-xkcd-estudio:study-description:w10"
+            ],
+            "exampleEs": "SABE DISTINGUIR",
+            "explanationEn": "Sabe changes for the group treated as singular gente, while distinguir stays in its unchanged -ir form."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-between",
+            "cardId": "grammar-entre-x-y",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w11",
+              "es-xkcd-estudio:study-description:w12",
+              "es-xkcd-estudio:study-description:w13",
+              "es-xkcd-estudio:study-description:w14",
+              "es-xkcd-estudio:study-description:w15",
+              "es-xkcd-estudio:study-description:w16",
+              "es-xkcd-estudio:study-description:w17"
+            ],
+            "exampleEs": "ENTRE LOS ESTUDIOS CIENTÍFICOS Y LAS ESTAFAS",
+            "explanationEn": "Entre starts the first group, and y introduces the second group being distinguished from it."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-studies-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w13",
+              "es-xkcd-estudio:study-description:w14"
+            ],
+            "exampleEs": "ESTUDIOS CIENTÍFICOS",
+            "explanationEn": "Científicos follows estudios and classifies what kind of studies are meant."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-studies-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w13",
+              "es-xkcd-estudio:study-description:w14"
+            ],
+            "exampleEs": "ESTUDIOS CIENTÍFICOS",
+            "explanationEn": "Científicos uses masculine plural -os to agree with estudios."
+          },
+          {
+            "id": "es-xkcd-estudio:study-description:app-purpose",
+            "cardId": "grammar-para-infinitive-purpose",
+            "participantWordIds": [
+              "es-xkcd-estudio:study-description:w18",
+              "es-xkcd-estudio:study-description:w19"
+            ],
+            "exampleEs": "PARA COSECHAR",
+            "explanationEn": "Para introduces the purpose, and cosechar stays in its unchanged -ar form."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0008",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-para--for-purpose-noun",
+          "word-estudio--research-study",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "grammar-relative-que",
+          "concept-study-flyer-kidney-harvest-urushiol",
+          "word-científico--scientific",
+          "word-que--relative",
+          "word-investiga--researches",
+          "grammar-indirect-question-si",
+          "word-si--whether",
+          "word-la--article",
+          "word-gente",
+          "word-sabe--knows-how",
+          "grammar-saber-infinitive-skill",
+          "word-distinguir",
+          "word-entre",
+          "grammar-entre-x-y",
+          "word-los",
+          "word-estudios--research-studies",
+          "word-científicos",
+          "word-y",
+          "word-las",
+          "word-estafas",
+          "word-para",
+          "grammar-para-infinitive-purpose",
+          "word-cosechar--harvest",
+          "word-riñones"
+        ]
       },
       {
-        "id": "es-xkcd-estudio:region-0009",
-        "labelEs": "(SOLO ADULTOS SANOS DE TIPO O)",
+        "id": "es-xkcd-estudio:eligibility",
+        "labelEs": "SÓLO ADULTOS SANOS DE TIPO O",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 13.3758,
-          "y": 68.9815,
+          "y": 68.75,
           "width": 73.2484,
-          "height": 3.7037
+          "height": 3.95
         },
         "words": [
           {
-            "id": "es-xkcd-estudio:word-00024",
-            "text": "SOLO",
-            "normalized": "solo",
+            "id": "es-xkcd-estudio:eligibility:w01",
+            "text": "SÓLO",
+            "normalized": "sólo",
             "bounds": [
               {
-                "x": 13.3758,
-                "y": 68.9815,
-                "width": 13.3758,
-                "height": 3.7037
+                "x": 15.6,
+                "y": 68.75,
+                "width": 10.9,
+                "height": 3.95
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00024-d6b4dc7d"
+              "word-sólo--only"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00025",
+            "id": "es-xkcd-estudio:eligibility:w02",
             "text": "ADULTOS",
             "normalized": "adultos",
             "bounds": [
@@ -661,11 +666,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00025-e7777232"
+              "word-adultos",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00026",
+            "id": "es-xkcd-estudio:eligibility:w03",
             "text": "SANOS",
             "normalized": "sanos",
             "bounds": [
@@ -677,11 +685,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00026-593a652b"
+              "word-sanos",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00027",
+            "id": "es-xkcd-estudio:eligibility:w04",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -693,11 +704,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00027-07380413"
+              "word-de--characteristic"
             ]
           },
           {
-            "id": "es-xkcd-estudio:word-00028",
+            "id": "es-xkcd-estudio:eligibility:w05",
             "text": "TIPO",
             "normalized": "tipo",
             "bounds": [
@@ -709,847 +720,946 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-estudio-00028-f75466d8"
+              "word-tipo--kind",
+              "concept-study-flyer-kidney-harvest-urushiol"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-estudio:word-00029",
+            "id": "es-xkcd-estudio:eligibility:x01",
             "text": "O",
-            "normalized": "o",
+            "reason": "non-spanish-text",
+            "rationale": "The uppercase letter is the international blood-type designation O, not a Spanish lexical word.",
             "bounds": [
               {
-                "x": 80.8917,
+                "x": 81.05,
                 "y": 68.9815,
-                "width": 5.7325,
+                "width": 3.8,
                 "height": 3.7037
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-estudio-00029-7a298843"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-estudio-00024-d6b4dc7d",
-          "word-auto-es-xkcd-estudio-00025-e7777232",
-          "word-auto-es-xkcd-estudio-00026-593a652b",
-          "word-auto-es-xkcd-estudio-00027-07380413",
-          "word-auto-es-xkcd-estudio-00028-f75466d8",
-          "word-auto-es-xkcd-estudio-00029-7a298843"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-estudio:region-0010",
-        "labelEs": "= Mary",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.9618,
-          "y": 77.7778,
-          "width": 24.2038,
-          "height": 6.9444
-        },
-        "words": [
+        "applications": [
           {
-            "id": "es-xkcd-estudio:word-00030",
-            "text": "Mary",
-            "normalized": "mary",
-            "bounds": [
-              {
-                "x": 63.9331,
-                "y": 77.7778,
-                "width": 18.2325,
-                "height": 6.9444
-              }
+            "id": "es-xkcd-estudio:eligibility:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-estudio:eligibility:w02",
+              "es-xkcd-estudio:eligibility:w03"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-estudio-00030-a743a7a0"
-            ]
+            "exampleEs": "ADULTOS SANOS",
+            "explanationEn": "Sanos follows adultos and describes their health."
+          },
+          {
+            "id": "es-xkcd-estudio:eligibility:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-estudio:eligibility:w02",
+              "es-xkcd-estudio:eligibility:w03"
+            ],
+            "exampleEs": "ADULTOS SANOS",
+            "explanationEn": "Sanos uses masculine plural -os to agree with adultos."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-estudio-00030-a743a7a0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-estudio:ocr-line-0010",
-          "ocrConfidence": 0.3
-        }
+          "word-sólo--only",
+          "word-adultos",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-study-flyer-kidney-harvest-urushiol",
+          "word-sanos",
+          "word-de--characteristic",
+          "word-tipo--kind"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-estudio-00001-97ddc46c",
-      "word-auto-es-xkcd-estudio-00002-10e284ab",
-      "word-auto-es-xkcd-estudio-00003-7bc5f1cb",
-      "word-auto-es-xkcd-estudio-00004-d7c7a677",
-      "word-auto-es-xkcd-estudio-00005-02717d99",
-      "word-auto-es-xkcd-estudio-00006-5e076a1b",
-      "word-auto-es-xkcd-estudio-00007-5bd43671",
-      "word-auto-es-xkcd-estudio-00008-584f567f",
-      "word-auto-es-xkcd-estudio-00009-4f808d99",
-      "word-auto-es-xkcd-estudio-00010-add91997",
-      "word-auto-es-xkcd-estudio-00011-b1920520",
-      "word-auto-es-xkcd-estudio-00012-c8740502",
-      "word-auto-es-xkcd-estudio-00013-12a04ded",
-      "word-auto-es-xkcd-estudio-00014-2935941a",
-      "word-auto-es-xkcd-estudio-00015-354f20e4",
-      "word-auto-es-xkcd-estudio-00016-f3430deb",
-      "word-auto-es-xkcd-estudio-00017-6ba1b75f",
-      "word-auto-es-xkcd-estudio-00018-7c37f7c7",
-      "word-auto-es-xkcd-estudio-00019-76d6ed35",
-      "word-auto-es-xkcd-estudio-00020-b58221c2",
-      "word-auto-es-xkcd-estudio-00021-2afb4bd0",
-      "word-auto-es-xkcd-estudio-00022-b6c415f4",
-      "word-auto-es-xkcd-estudio-00023-a49ef4ea",
-      "word-auto-es-xkcd-estudio-00024-d6b4dc7d",
-      "word-auto-es-xkcd-estudio-00025-e7777232",
-      "word-auto-es-xkcd-estudio-00026-593a652b",
-      "word-auto-es-xkcd-estudio-00027-07380413",
-      "word-auto-es-xkcd-estudio-00028-f75466d8",
-      "word-auto-es-xkcd-estudio-00029-7a298843",
-      "word-auto-es-xkcd-estudio-00030-a743a7a0"
+      "word-se--passive-unnamed-doer",
+      "grammar-se-passive-unnamed-doer",
+      "word-necesitan--are-needed",
+      "concept-study-flyer-kidney-harvest-urushiol",
+      "word-voluntarios",
+      "word-para--for-purpose-noun",
+      "word-estudio--research-study",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "grammar-relative-que",
+      "word-científico--scientific",
+      "word-que--relative",
+      "word-investiga--researches",
+      "grammar-indirect-question-si",
+      "word-si--whether",
+      "word-la--article",
+      "word-gente",
+      "word-sabe--knows-how",
+      "grammar-saber-infinitive-skill",
+      "word-distinguir",
+      "word-entre",
+      "grammar-entre-x-y",
+      "word-los",
+      "word-estudios--research-studies",
+      "word-científicos",
+      "word-y",
+      "word-las",
+      "word-estafas",
+      "word-para",
+      "grammar-para-infinitive-purpose",
+      "word-cosechar--harvest",
+      "word-riñones",
+      "word-sólo--only",
+      "word-adultos",
+      "word-sanos",
+      "word-de--characteristic",
+      "word-tipo--kind"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9767,
-      "lowConfidenceTokenCount": 1,
-      "rawOcrTokenCount": 30,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-estudio-00001-97ddc46c",
+      "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "marks an action whose doer is not named",
+      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "example": {
+        "es": "Se encontraron varios errores.",
+        "en": "Several errors were found."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "passive se",
+        "unnamed agent",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00001",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00002-10e284ab",
+      "id": "grammar-se-passive-unnamed-doer",
+      "kind": "grammar",
+      "promptEs": "se + verbo en tercera persona (sin nombrar quién actúa)",
+      "questionEn": "How can Spanish focus on an action or result without naming who does it?",
+      "answerEn": "Put se before a third-person verb and state what happens; the person doing it can remain unnamed.",
+      "noteEn": "English often uses a passive form. Spanish may use se with a simple verb or with a completed construction such as se han encontrado. Other uses of se follow different patterns.",
+      "example": {
+        "es": "Se publicaron los resultados.",
+        "en": "The results were published."
+      },
+      "tags": [
+        "grammar",
+        "passive se",
+        "unnamed agent",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-necesitan--are-needed",
       "kind": "word",
       "promptEs": "necesitan",
-      "answerEn": "to need",
-      "noteEn": "",
+      "answerEn": "are needed; are required (with passive se)",
+      "noteEn": "Necesitan is a present plural form of necesitar. In se necesitan, the plural ending agrees with the people or things that are needed, while the person doing the needing is left unnamed.",
+      "example": {
+        "es": "Se necesitan dos firmas.",
+        "en": "Two signatures are needed."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "need",
+        "passive se",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00002",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8ce0d072c4cdad828b84",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00003-7bc5f1cb",
+      "id": "concept-study-flyer-kidney-harvest-urushiol",
+      "kind": "concept",
+      "promptEs": "estudio científico · estafas · riñones · urushiol",
+      "questionEn": "Why is the volunteer flyer itself part of the joke?",
+      "answerEn": "It claims to test whether people can recognize a study or a kidney-harvesting scam, while recruiting exactly the healthy type-O adults such a scam would target.",
+      "noteEn": "The tear-off recruitment format makes taking a strip part of the implied test. The title text adds a second mock hazard study about urushiol transmission through finger contact with thin cellulose strips. Urushiol is the oily substance associated with poison ivy and related plants, and contaminated objects can carry it after contact.",
+      "tags": [
+        "concept",
+        "research ethics",
+        "scam",
+        "urushiol",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-voluntarios",
       "kind": "word",
       "promptEs": "voluntarios",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "volunteers (masculine or mixed plural)",
+      "noteEn": "A voluntario offers to take part without being forced. The feminine plural is voluntarias.",
+      "example": {
+        "es": "Buscan voluntarios para el proyecto.",
+        "en": "They are looking for volunteers for the project."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "people",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00003",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fb6e7b4124c050961186",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00004-d7c7a677",
+      "id": "word-para--for-purpose-noun",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "in order to (expressing purpose)",
+      "answerEn": "for; for the purpose of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "purpose"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00004",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-locutores-de-codigos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00005-02717d99",
+      "id": "word-estudio--research-study",
       "kind": "word",
       "promptEs": "estudio",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "research study; investigation",
+      "noteEn": "Estudio can mean the act of studying, a research investigation, or a studio. A scientific or participant context points to the research meaning.",
+      "example": {
+        "es": "El hospital publicó un estudio nuevo.",
+        "en": "The hospital published a new study."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "research",
+        "science",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00005",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4274e500a4832d205132",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00006-5e076a1b",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-relative-que",
+      "kind": "grammar",
+      "promptEs": "persona o cosa + que + información",
+      "questionEn": "How do you add information about a named person or thing using “who,” “that,” or “which”?",
+      "answerEn": "Put que after the person or thing, then add a verb and the information about it.",
+      "noteEn": "Que links the added description to the person or thing before it. It does not change for masculine, feminine, singular, or plural nouns. The added part needs a verb: la casa que vimos means “the house that we saw.”",
+      "example": {
+        "es": "La casa que vimos es azul.",
+        "en": "The house that we saw is blue."
+      },
+      "tags": [
+        "grammar",
+        "relative clause",
+        "description",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-científico--scientific",
       "kind": "word",
       "promptEs": "científico",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "scientific (masculine singular)",
+      "noteEn": "Científico describes something related to science. Its ending changes to match the noun: científica, científicos, or científicas.",
+      "example": {
+        "es": "Es un artículo científico.",
+        "en": "It is a scientific article."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "science",
+        "adjective",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00006",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-512a2a827a36c39e5a47",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00007-5bd43671",
+      "id": "word-que--relative",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00007",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00008-584f567f",
+      "id": "word-investiga--researches",
       "kind": "word",
       "promptEs": "investiga",
-      "answerEn": "to investigate, to research",
-      "noteEn": "",
+      "answerEn": "researches; investigates",
+      "noteEn": "Investiga is the present form of investigar used with one other person or thing, or as the informal singular command.",
+      "example": {
+        "es": "El equipo investiga la causa.",
+        "en": "The team investigates the cause."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "research",
+        "present tense",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00008",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4748d23d59b86ae1a59f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00009-4f808d99",
+      "id": "grammar-indirect-question-si",
+      "kind": "grammar",
+      "promptEs": "preguntarse/saber + si + pregunta de sí o no",
+      "questionEn": "How do you introduce an indirect question whose answer could be yes or no?",
+      "answerEn": "Use unaccented si before the question stated as a normal clause.",
+      "noteEn": "After expressions such as me pregunto, no sé, or quiero saber, si usually means “whether.” Do not write an accent: sí with an accent means “yes.” The following words keep statement order rather than direct-question order.",
+      "example": {
+        "es": "Quiero saber si Marta viene.",
+        "en": "I want to know whether Marta is coming."
+      },
+      "tags": [
+        "grammar",
+        "indirect question",
+        "si",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-metro",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-si--whether",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "if",
-      "noteEn": "",
+      "answerEn": "whether; if (introducing an indirect yes-or-no question)",
+      "noteEn": "Unaccented si can introduce a condition or an indirect yes-or-no question. In me pregunto si, English usually uses “whether.” Accented sí means “yes.”",
+      "example": {
+        "es": "No sé si está abierto.",
+        "en": "I do not know whether it is open."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "connector",
+        "indirect question"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00009",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-metro",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00010-add91997",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00010",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00011-b1920520",
+      "id": "word-gente",
       "kind": "word",
       "promptEs": "gente",
       "answerEn": "people",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00011",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e5be6b2fc69cf45db8d2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00012-c8740502",
+      "id": "word-sabe--knows-how",
       "kind": "word",
       "promptEs": "sabe",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "knows how to",
+      "noteEn": "Before a dictionary-form verb, sabe says that one person or group has the knowledge or skill to do that action. Spanish does not add cómo in this pattern.",
+      "example": {
+        "es": "Marta sabe nadar.",
+        "en": "Marta knows how to swim."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "knowledge",
+        "skill",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00012",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d6a9cf9ebf71bb70ccd3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00013-12a04ded",
+      "id": "grammar-saber-infinitive-skill",
+      "kind": "grammar",
+      "promptEs": "saber + verbo en -ar/-er/-ir",
+      "questionEn": "How do you say that someone knows how to perform an action?",
+      "answerEn": "Use the matching form of saber followed directly by the action verb in its unchanged dictionary form.",
+      "noteEn": "Spanish does not insert cómo in this pattern: sé cocinar, sabe conducir, and sabemos distinguir. Saber changes for the person and time; the following -ar, -er, or -ir verb stays unchanged.",
+      "example": {
+        "es": "Ellos saben reparar bicicletas.",
+        "en": "They know how to repair bicycles."
+      },
+      "tags": [
+        "grammar",
+        "saber",
+        "infinitive",
+        "skill",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-distinguir",
       "kind": "word",
       "promptEs": "distinguir",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to distinguish; to tell apart",
+      "noteEn": "Distinguir means recognizing the difference between people, things, or ideas.",
+      "example": {
+        "es": "No puedo distinguir las dos voces.",
+        "en": "I cannot tell the two voices apart."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "comparison",
+        "infinitive",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00013",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-eb43d7a70ab62a4a9a26",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00014-2935941a",
+      "id": "word-entre",
       "kind": "word",
       "promptEs": "entre",
       "answerEn": "between; among",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00014",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5239d9e7ada97912253f",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00015-354f20e4",
+      "id": "grammar-entre-x-y",
+      "kind": "grammar",
+      "promptEs": "entre + elemento A + y + elemento B",
+      "questionEn": "How do you frame two endpoints or sides as a range, pair, or contrast?",
+      "answerEn": "Place entre before the first endpoint or side and y before the second one.",
+      "noteEn": "Entre marks the range or pair involved, and y joins its two sides. Each side may be a single word or a longer noun group.",
+      "example": {
+        "es": "No veo la diferencia entre el azul oscuro y el negro.",
+        "en": "I do not see the difference between dark blue and black."
+      },
+      "tags": [
+        "grammar",
+        "preposition",
+        "comparison",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-los",
       "kind": "word",
       "promptEs": "los",
       "answerEn": "the (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00015",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb6e53541e37a1d6076e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00016-f3430deb",
+      "id": "word-estudios--research-studies",
       "kind": "word",
       "promptEs": "estudios",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "research studies; investigations",
+      "noteEn": "Estudios is the plural of estudio. In a scientific context it names research investigations rather than schoolwork or studios.",
+      "example": {
+        "es": "Compararon varios estudios médicos.",
+        "en": "They compared several medical studies."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "research",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00016",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-905e88f6586987f89284",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00017-6ba1b75f",
+      "id": "word-científicos",
       "kind": "word",
       "promptEs": "científicos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "scientific (masculine plural)",
+      "noteEn": "Científicos ends in -os to agree with a masculine plural noun.",
+      "example": {
+        "es": "Leí dos informes científicos.",
+        "en": "I read two scientific reports."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "science",
+        "adjective",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00017",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-11f74859e084c3692bc5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00018-7c37f7c7",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00018",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00019-76d6ed35",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00019",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00020-b58221c2",
+      "id": "word-estafas",
       "kind": "word",
       "promptEs": "estafas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "scams; frauds",
+      "noteEn": "Una estafa is a dishonest scheme intended to take money, property, or some other benefit from someone.",
+      "example": {
+        "es": "El mensaje advierte sobre estafas por internet.",
+        "en": "The message warns about online scams."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "crime",
+        "deception",
+        "plural",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00020",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2c60e28040fc4a5ae907",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00021-2afb4bd0",
+      "id": "word-para",
       "kind": "word",
       "promptEs": "para",
       "answerEn": "in order to (expressing purpose)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00021",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00022-b6c415f4",
+      "id": "grammar-para-infinitive-purpose",
+      "kind": "grammar",
+      "promptEs": "para + infinitivo",
+      "answerEn": "Use para followed by the verb’s dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
+      "tags": [
+        "A2",
+        "grammar",
+        "purpose"
+      ],
+      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "example": {
+        "es": "Estudio para aprender.",
+        "en": "I study in order to learn."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cosechar--harvest",
       "kind": "word",
       "promptEs": "cosechar",
-      "answerEn": "to harvest",
-      "noteEn": "",
+      "answerEn": "to harvest; to gather",
+      "noteEn": "Cosechar normally means gathering a crop. It can also be used grimly for collecting organs or figuratively for obtaining results.",
+      "example": {
+        "es": "Van a cosechar las uvas mañana.",
+        "en": "They are going to harvest the grapes tomorrow."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "harvest",
+        "infinitive",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00022",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bdfdda9c575df3bec2f1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00023-a49ef4ea",
+      "id": "word-riñones",
       "kind": "word",
       "promptEs": "riñones",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "kidneys",
+      "noteEn": "Riñones is the plural of riñón, one of the organs that filter waste from the blood.",
+      "example": {
+        "es": "Los riñones forman parte del sistema urinario.",
+        "en": "The kidneys are part of the urinary system."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "body",
+        "organ",
+        "plural",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00023",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4bb099927413da33cd49",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00024-d6b4dc7d",
+      "id": "word-sólo--only",
       "kind": "word",
-      "promptEs": "solo",
+      "promptEs": "sólo",
       "answerEn": "only; just",
-      "noteEn": "",
+      "noteEn": "The comic uses the formerly common accent in sólo. Current standard spelling normally writes solo without an accent when it means “only,” unless an accent is exceptionally needed to prevent genuine ambiguity.",
+      "example": {
+        "es": "Solo necesito un minuto.",
+        "en": "I only need a minute."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adverb",
+        "older spelling"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00024",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5364f2f2fc4f54e9d47a",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00025-e7777232",
+      "id": "word-adultos",
       "kind": "word",
       "promptEs": "adultos",
-      "answerEn": "adult",
-      "noteEn": "",
+      "answerEn": "adults (masculine or mixed plural)",
+      "noteEn": "Adultos can name adult men or a mixed group of adults. The feminine plural is adultas.",
+      "example": {
+        "es": "La actividad es para adultos.",
+        "en": "The activity is for adults."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "people",
+        "age",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00025",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ab403bcceca8564cae90",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00026-593a652b",
+      "id": "word-sanos",
       "kind": "word",
       "promptEs": "sanos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "healthy (masculine plural)",
+      "noteEn": "Sanos ends in -os to describe a masculine or mixed plural group. The singular forms are sano and sana.",
+      "example": {
+        "es": "Los niños están sanos.",
+        "en": "The children are healthy."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "health",
+        "adjective",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00026",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b84c2663dc82e1be70e1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-estudio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00027-07380413",
+      "id": "word-de--characteristic",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "with; having (introducing a characteristic)",
+      "noteEn": "De plus a noun phrase can describe what kind of thing something is or a characteristic it has. English may use “with,” “having,” or a compound adjective.",
+      "example": {
+        "es": "Buscan una casa de gran tamaño.",
+        "en": "They are looking for a large house."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "description"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00027",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-estudio-00028-f75466d8",
+      "id": "word-tipo--kind",
       "kind": "word",
       "promptEs": "tipo",
-      "answerEn": "guy; type",
+      "answerEn": "kind; type",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00028",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e103bf13e6d917d34a9a",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-estudio-00029-7a298843",
-      "kind": "word",
-      "promptEs": "o",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00029",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65c74c15a686187bb6bb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-estudio-00030-a743a7a0",
-      "kind": "word",
-      "promptEs": "mary",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-estudio:ocr-token-00030",
-        "sourceLineId": "es-xkcd-estudio:ocr-line-0010",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-6915771be1c5aa0c8868",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     }
   ]

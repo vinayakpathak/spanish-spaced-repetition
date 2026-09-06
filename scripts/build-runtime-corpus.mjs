@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Compile machine-extracted OCR and provisional dictionary candidates into
- * the lazy runtime corpus consumed by lib/corpus/load.ts.
+ * Assemble the lazy runtime corpus consumed by lib/corpus/load.ts.
  *
- * This compiler deliberately creates a separate card for every OCR token.
- * An automated dictionary match cannot establish the meaning used in a comic,
- * so sharing cards across occurrences would falsely claim that their senses
- * are identical. Human review may later merge occurrences that genuinely use
- * the same written form and contextual sense.
+ * An individually authored artifact is authoritative whenever one exists.
+ * The small reviewed seed curriculum is the next fallback, and provisional
+ * OCR is used only when neither authored source is available. This keeps the
+ * migration reversible without letting machine-extracted cards replace the
+ * completed curriculum.
  *
  * Typical full build:
  *
@@ -19,9 +18,9 @@
  *     --overrides data/review/ocr-overrides.json \
  *     --output-dir public/corpus
  *
- * The six hand-reviewed comics are represented in the manifest but remain
- * authoritative through lib/corpus/reviewed.ts; no generated bundle replaces
- * them. All other cards remain explicitly `needs-review`.
+ * Every selected comic is serialized as its own lazy bundle, including the
+ * seed lessons. The manifest carries a deduplicated stable-card catalog for
+ * scheduling and a separate analytics target namespace for graph importance.
  */
 
 import { createHash } from "node:crypto";
@@ -37,10 +36,17 @@ import {
   importanceTargetIdsForCards,
   isImportanceTargetId,
 } from "../lib/importance-target.ts";
+import {
+  geometryForArtifacts,
+  readAuthoringFiles,
+} from "./compile-authored-comic.mjs";
+import { compileManualAuthoringCorpus } from "./lib/manual-authoring.mjs";
 
 const INPUT_SCHEMA_VERSION = 1;
-const RUNTIME_SCHEMA_VERSION = 2;
-const COMPILER_REVISION = "runtime-corpus-v5-all-cards-schedulable";
+const RUNTIME_SCHEMA_VERSION = 3;
+const COMPILER_REVISION = "runtime-corpus-v6-authored-migration";
+const INTERNAL_QA_STATUS = IMPORTANCE_TARGET_REVIEW_STATUS;
+const NEEDS_REVIEW_STATUS = "needs-review";
 const DEFAULT_EXPECTED_COUNT = 258;
 const PROJECT_ROOT = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -48,6 +54,7 @@ const PROJECT_ROOT = path.resolve(
 );
 const DEFAULTS = {
   sourcePath: path.join(PROJECT_ROOT, "data/source/es-xkcd.json"),
+  authoringDir: path.join(PROJECT_ROOT, "data/authoring/comics"),
   ocrDir: path.join(PROJECT_ROOT, "data/generated/ocr"),
   glossaryPath: path.join(
     PROJECT_ROOT,
@@ -79,6 +86,8 @@ function usage() {
 options:
   --source FILE            Spanish archive source manifest
                            (default: data/source/es-xkcd.json)
+  --authoring-dir DIR      individually authored comic artifacts
+                           (default: data/authoring/comics)
   --ocr-dir DIR            OCR corpus containing corpus-index.json
                            (default: data/generated/ocr)
   --glossary FILE          provisional surface-form glossary
@@ -96,6 +105,7 @@ function parseArguments(argv) {
   const options = { ...DEFAULTS, validateOnly: false };
   const paths = new Map([
     ["--source", "sourcePath"],
+    ["--authoring-dir", "authoringDir"],
     ["--ocr-dir", "ocrDir"],
     ["--glossary", "glossaryPath"],
     ["--overrides", "overridesPath"],
@@ -185,6 +195,9 @@ function rounded(value) {
 }
 
 function scoreManifestEntries(entries) {
+  const fullyReviewed = entries.every(
+    (entry) => entry.reviewStatus === INTERNAL_QA_STATUS,
+  );
   const result = rankComicsByCardGraph(
     entries.map(({ id, importanceTargetIds }) => ({
       id,
@@ -213,9 +226,9 @@ function scoreManifestEntries(entries) {
       edgePolicy: IMPORTANCE_TARGET_EDGE_POLICY,
       cardScope: IMPORTANCE_TARGET_CARD_SCOPE,
       includesSchedulableOnly: true,
-      reviewStatus: IMPORTANCE_TARGET_REVIEW_STATUS,
-      provisional: true,
-      contextualSensesReviewed: false,
+      reviewStatus: fullyReviewed ? IMPORTANCE_TARGET_REVIEW_STATUS : "mixed",
+      provisional: !fullyReviewed,
+      contextualSensesReviewed: fullyReviewed,
       damping: result.damping,
       tolerance: result.tolerance,
       maxIterations: result.maxIterations,
@@ -721,16 +734,169 @@ function generatedManifestEntry(sourceComic, bundle, revision) {
   };
 }
 
-function validateRuntimeCard(card, label) {
+function reviewedCardForRuntime(card) {
+  const provenance = card.provenance;
+  const definition = { ...card };
+  for (const field of [
+    "editorialStatus",
+    "humanVerified",
+    "provenance",
+    "qualityStatus",
+    "reviewStatus",
+    "schedulable",
+  ]) {
+    delete definition[field];
+  }
+  return {
+    ...definition,
+    reviewStatus: INTERNAL_QA_STATUS,
+    schedulable: true,
+    provenance: {
+      method: INTERNAL_QA_STATUS,
+      ownerComicId: provenance?.ownerComicId ?? "seed-curriculum",
+      contextualSenseReviewed: true,
+    },
+  };
+}
+
+function reviewedComicForRuntime(comic) {
+  const content = { ...comic };
+  for (const field of [
+    "editorialStatus",
+    "humanVerified",
+    "provenance",
+    "qualityStatus",
+    "reviewStatus",
+    "semanticQa",
+  ]) {
+    delete content[field];
+  }
+  return {
+    ...content,
+    reviewStatus: INTERNAL_QA_STATUS,
+    provenance: {
+      method: INTERNAL_QA_STATUS,
+      contextualSensesReviewed: true,
+    },
+  };
+}
+
+function runtimeBundleRevision(kind, comic, cards) {
+  return `runtime-${hash(
+    stableJSON({
+      compilerRevision: COMPILER_REVISION,
+      kind,
+      comic,
+      cards,
+    }),
+  ).slice(0, 16)}`;
+}
+
+function normalizeReviewedBundle(bundle, kind, fixedRevision = null) {
+  if (!isRecord(bundle) || !isRecord(bundle.comic) || !Array.isArray(bundle.cards)) {
+    fail(`${kind} bundle is invalid`);
+  }
+  const comic = reviewedComicForRuntime(bundle.comic);
+  const cards = bundle.cards.map(reviewedCardForRuntime);
+  const revision = fixedRevision ?? runtimeBundleRevision(kind, comic, cards);
+  return {
+    schemaVersion: RUNTIME_SCHEMA_VERSION,
+    revision,
+    reviewStatus: INTERNAL_QA_STATUS,
+    provenance: {
+      method: INTERNAL_QA_STATUS,
+      sourceKind: kind,
+      contextualSensesReviewed: true,
+    },
+    comic,
+    cards,
+  };
+}
+
+function seedBundle(seedComic, seedCardCatalog) {
+  const cardIds = new Set(seedComic.cardIds);
+  const cards = seedCardCatalog.filter((card) => cardIds.has(card.id));
+  if (cards.length !== cardIds.size) {
+    const present = new Set(cards.map((card) => card.id));
+    const missing = [...cardIds].filter((cardId) => !present.has(cardId));
+    fail(`${seedComic.id} seed bundle is missing cards: ${missing.join(", ")}`);
+  }
+  return normalizeReviewedBundle(
+    {
+      comic: seedComic,
+      cards,
+    },
+    "reviewed-seed",
+    "reviewed-v1",
+  );
+}
+
+function normalizeAuthoredBundle(bundle) {
+  return normalizeReviewedBundle(bundle, "individually-authored");
+}
+
+function normalizeSeedBundle(seedComic, seedCardCatalog) {
+  return seedBundle(seedComic, seedCardCatalog);
+}
+
+function reviewedManifestEntry(sourceComic, bundle, sourceKind) {
+  return {
+    id: sourceComic.id,
+    loadKey: sourceComic.id,
+    revision: bundle.revision,
+    xkcdNumber: bundle.comic.xkcdNumber,
+    publishedAt: bundle.comic.publishedAt,
+    title: bundle.comic.title,
+    titleEs: bundle.comic.titleEs,
+    imageSrc: bundle.comic.image.src,
+    cardIds: [...bundle.comic.cardIds],
+    importanceTargetIds: importanceTargetIdsForCards(bundle.cards),
+    reviewStatus: INTERNAL_QA_STATUS,
+    provenance: {
+      method: INTERNAL_QA_STATUS,
+      sourceKind,
+      contextualSensesReviewed: true,
+    },
+  };
+}
+
+function cardCatalogForBundles(bundles) {
+  const byId = new Map();
+  for (const { bundle } of bundles) {
+    for (const card of bundle.cards) {
+      if (!card.schedulable) continue;
+      const existing = byId.get(card.id);
+      if (existing && stableJSON(existing) !== stableJSON(card)) {
+        fail(`stable card ${card.id} has conflicting runtime definitions`);
+      }
+      byId.set(card.id, existing ?? card);
+    }
+  }
+  return [...byId.values()].sort((first, second) =>
+    first.id.localeCompare(second.id, "en"),
+  );
+}
+
+function validateRuntimeCard(card, label, expectedStatus = null) {
   if (!isRecord(card)) fail(`${label} must be an object`);
   requireString(card.id, `${label}.id`);
-  if (card.kind !== "word") fail(`${label}.kind must be word`);
+  if (!["word", "grammar", "phrase", "concept"].includes(card.kind)) {
+    fail(`${label}.kind is invalid`);
+  }
   requireString(card.promptEs, `${label}.promptEs`);
   requireString(card.answerEn, `${label}.answerEn`);
-  if (card.noteEn !== "") fail(`${label}.noteEn must stay compact`);
-  if (!Array.isArray(card.tags)) fail(`${label}.tags must be an array`);
-  if (card.reviewStatus !== "needs-review") {
-    fail(`${label}.reviewStatus must be needs-review`);
+  if (typeof card.noteEn !== "string") fail(`${label}.noteEn must be a string`);
+  if (
+    !Array.isArray(card.tags) ||
+    card.tags.some((tag) => typeof tag !== "string" || tag.trim() === "")
+  ) {
+    fail(`${label}.tags must contain strings`);
+  }
+  if (![INTERNAL_QA_STATUS, NEEDS_REVIEW_STATUS].includes(card.reviewStatus)) {
+    fail(`${label}.reviewStatus is invalid`);
+  }
+  if (expectedStatus && card.reviewStatus !== expectedStatus) {
+    fail(`${label}.reviewStatus must be ${expectedStatus}`);
   }
   if (typeof card.schedulable !== "boolean") {
     fail(`${label}.schedulable must be a boolean`);
@@ -738,8 +904,19 @@ function validateRuntimeCard(card, label) {
   if (!card.schedulable) {
     fail(`${label} must be schedulable even when its answer needs review`);
   }
-  if (card.provenance?.contextualSenseReviewed !== false) {
-    fail(`${label} must not claim contextual review`);
+  const expectedContextualReview = card.reviewStatus === INTERNAL_QA_STATUS;
+  if (
+    card.provenance?.contextualSenseReviewed !== expectedContextualReview
+  ) {
+    fail(
+      `${label}.provenance.contextualSenseReviewed must be ${expectedContextualReview}`,
+    );
+  }
+  if (
+    card.reviewStatus === INTERNAL_QA_STATUS &&
+    card.id.startsWith("word-auto-")
+  ) {
+    fail(`${label} retains a provisional word-auto ID`);
   }
 }
 
@@ -750,15 +927,15 @@ function equalStringSets(first, second) {
   );
 }
 
-function validateGeneratedBundle(bundle, entry) {
+function validateRuntimeBundle(bundle, entry) {
   if (!isRecord(bundle) || bundle.schemaVersion !== RUNTIME_SCHEMA_VERSION) {
     fail(`${entry.id} bundle has an unsupported schema`);
   }
   if (bundle.revision !== entry.revision) {
     fail(`${entry.id} bundle revision does not match its manifest entry`);
   }
-  if (bundle.reviewStatus !== "needs-review") {
-    fail(`${entry.id} bundle reviewStatus must be needs-review`);
+  if (bundle.reviewStatus !== entry.reviewStatus) {
+    fail(`${entry.id} bundle reviewStatus does not match its manifest entry`);
   }
   if (!isRecord(bundle.comic) || bundle.comic.id !== entry.id) {
     fail(`${entry.id} bundle comic ID mismatch`);
@@ -772,7 +949,11 @@ function validateGeneratedBundle(bundle, entry) {
 
   const cards = new Map();
   for (const [index, card] of bundle.cards.entries()) {
-    validateRuntimeCard(card, `${entry.id}.cards[${index}]`);
+    validateRuntimeCard(
+      card,
+      `${entry.id}.cards[${index}]`,
+      entry.reviewStatus,
+    );
     if (cards.has(card.id)) fail(`${entry.id} has duplicate card ID ${card.id}`);
     cards.set(card.id, card);
   }
@@ -787,8 +968,8 @@ function validateGeneratedBundle(bundle, entry) {
   if (!equalStringSets(schedulableCardIds, entry.cardIds)) {
     fail(`${entry.id} scheduler index does not match its schedulable cards`);
   }
-  if (bundle.comic.reviewStatus !== "needs-review") {
-    fail(`${entry.id} comic reviewStatus must be needs-review`);
+  if (bundle.comic.reviewStatus !== entry.reviewStatus) {
+    fail(`${entry.id} comic reviewStatus does not match its manifest entry`);
   }
   if (!Array.isArray(bundle.comic.regions) || bundle.comic.regions.length < 1) {
     fail(`${entry.id} needs at least one reveal region`);
@@ -800,13 +981,41 @@ function validateGeneratedBundle(bundle, entry) {
     if (!isRecord(region) || !Array.isArray(region.words)) {
       fail(`${entry.id} region ${regionIndex} is invalid`);
     }
-    if (region.translationEn !== "" || region.noteEn !== "") {
-      fail(`${entry.id} generated regions must not reveal sentence translations`);
+    if (
+      typeof region.translationEn !== "string" ||
+      typeof region.noteEn !== "string"
+    ) {
+      fail(`${entry.id} region ${regionIndex} teaching copy must be strings`);
     }
-    if (!Array.isArray(region.applications) || region.applications.length !== 0) {
-      fail(`${entry.id} generated regions must not invent card applications`);
+    if (!Array.isArray(region.applications)) {
+      fail(`${entry.id} region ${regionIndex}.applications must be an array`);
     }
     validateBounds(region.bounds, `${entry.id} region ${regionIndex}.bounds`);
+    const regionWordIds = new Set(region.words.map((word) => word.id));
+    for (const [applicationIndex, application] of region.applications.entries()) {
+      if (!isRecord(application)) {
+        fail(`${entry.id} application ${regionIndex}:${applicationIndex} is invalid`);
+      }
+      requireString(
+        application.id,
+        `${entry.id} application ${regionIndex}:${applicationIndex}.id`,
+      );
+      if (!cards.has(application.cardId)) {
+        fail(`${entry.id} application ${application.id} references an unknown card`);
+      }
+      if (
+        !Array.isArray(application.participantWordIds) ||
+        application.participantWordIds.length === 0 ||
+        application.participantWordIds.some((wordId) => !regionWordIds.has(wordId))
+      ) {
+        fail(`${entry.id} application ${application.id} has invalid participants`);
+      }
+      requireString(application.exampleEs, `${entry.id} application ${application.id}.exampleEs`);
+      requireString(
+        application.explanationEn,
+        `${entry.id} application ${application.id}.explanationEn`,
+      );
+    }
     for (const [wordIndex, word] of region.words.entries()) {
       occurrenceCount += 1;
       if (!isRecord(word)) fail(`${entry.id} word ${wordIndex} is invalid`);
@@ -815,7 +1024,10 @@ function validateGeneratedBundle(bundle, entry) {
       }
       occurrenceIds.add(word.id);
       requireString(word.text, `${entry.id} word ${wordIndex}.text`);
-      if (!hasLatinLetter(word.text)) {
+      if (
+        entry.reviewStatus === NEEDS_REVIEW_STATUS &&
+        !hasLatinLetter(word.text)
+      ) {
         fail(`${entry.id} word ${word.id} lacks a Latin-script letter`);
       }
       const normalized = requireString(
@@ -831,8 +1043,8 @@ function validateGeneratedBundle(bundle, entry) {
       word.bounds.forEach((bounds, boundsIndex) =>
         validateBounds(bounds, `${entry.id} word ${word.id}.bounds[${boundsIndex}]`),
       );
-      if (!Array.isArray(word.cardIds) || word.cardIds.length !== 1) {
-        fail(`${entry.id} generated word ${word.id} needs one first word card`);
+      if (!Array.isArray(word.cardIds) || word.cardIds.length < 1) {
+        fail(`${entry.id} word ${word.id} needs a first word card`);
       }
       const firstCard = cards.get(word.cardIds[0]);
       if (!firstCard || firstCard.kind !== "word") {
@@ -841,15 +1053,65 @@ function validateGeneratedBundle(bundle, entry) {
       if (firstCard.promptEs !== normalized) {
         fail(`${entry.id} word ${word.id} and card prompt do not match`);
       }
+      for (const cardId of word.cardIds) {
+        if (!cards.has(cardId)) {
+          fail(`${entry.id} word ${word.id} references unknown card ${cardId}`);
+        }
+      }
     }
-    if (!equalStringSets(region.cardIds, region.words.map((word) => word.cardIds[0]))) {
+    if (
+      !Array.isArray(region.cardIds) ||
+      !equalStringSets(
+        region.cardIds,
+        region.words.flatMap((word) => word.cardIds),
+      )
+    ) {
       fail(`${entry.id} region ${region.id} card index is inconsistent`);
     }
   }
-  if (occurrenceCount !== bundle.cards.length) {
-    fail(`${entry.id} must have one provisional card per OCR word occurrence`);
+
+  if (entry.reviewStatus === NEEDS_REVIEW_STATUS) {
+    for (const region of bundle.comic.regions) {
+      if (region.translationEn !== "" || region.noteEn !== "") {
+        fail(`${entry.id} generated regions must not reveal sentence translations`);
+      }
+      if (region.applications.length !== 0) {
+        fail(`${entry.id} generated regions must not invent card applications`);
+      }
+      if (region.words.some((word) => word.cardIds.length !== 1)) {
+        fail(`${entry.id} generated words need exactly one provisional card`);
+      }
+    }
+    if (occurrenceCount !== bundle.cards.length) {
+      fail(`${entry.id} must have one provisional card per OCR word occurrence`);
+    }
+  } else {
+    if (
+      bundle.provenance?.contextualSensesReviewed !== true ||
+      bundle.comic.provenance?.contextualSensesReviewed !== true
+    ) {
+      fail(`${entry.id} reviewed provenance is incomplete`);
+    }
+    const serialized = stableJSON(bundle);
+    for (const forbidden of [
+      "editorialStatus",
+      "qualityStatus",
+      "humanVerified",
+      "semanticQa",
+    ]) {
+      if (serialized.includes(`"${forbidden}"`)) {
+        fail(`${entry.id} serializes authoring-only field ${forbidden}`);
+      }
+    }
   }
   return { occurrenceCount, schedulableCardCount: schedulableCardIds.length };
+}
+
+function validateGeneratedBundle(bundle, entry) {
+  if (entry.reviewStatus !== NEEDS_REVIEW_STATUS) {
+    fail(`${entry.id} is not a generated needs-review entry`);
+  }
+  return validateRuntimeBundle(bundle, entry);
 }
 
 function validateManifestShape(manifest, expectedCount) {
@@ -900,8 +1162,17 @@ function validateManifestShape(manifest, expectedCount) {
     ) {
       fail(`${id}.importanceTargetIds must be sorted`);
     }
-    if (entry.reviewStatus !== "reviewed" && entry.reviewStatus !== "needs-review") {
+    if (
+      entry.reviewStatus !== INTERNAL_QA_STATUS &&
+      entry.reviewStatus !== NEEDS_REVIEW_STATUS
+    ) {
       fail(`${id}.reviewStatus is invalid`);
+    }
+    const expectedTargetsFromCards = entry.cardIds
+      .map((cardId) => `card:${encodeURIComponent(cardId)}`)
+      .sort((first, second) => first.localeCompare(second, "en"));
+    if (!equalStringSets(entry.importanceTargetIds, expectedTargetsFromCards)) {
+      fail(`${id}.importanceTargetIds does not match exact scheduled cards`);
     }
   }
   const expectedImportance = scoreManifestEntries(manifest.comics);
@@ -963,14 +1234,40 @@ function validateManifestShape(manifest, expectedCount) {
     }
     catalogIds.add(card.id);
   }
-  const generatedSchedulerIds = manifest.comics
-    .filter((entry) => entry.reviewStatus === "needs-review")
-    .flatMap((entry) => entry.cardIds);
-  if (new Set(generatedSchedulerIds).size !== generatedSchedulerIds.length) {
-    fail("generated scheduler indexes contain a duplicate card ID");
+  const schedulerIds = [
+    ...new Set(manifest.comics.flatMap((entry) => entry.cardIds)),
+  ];
+  if (!equalStringSets([...catalogIds], schedulerIds)) {
+    fail("runtime card catalog does not match scheduler indexes");
   }
-  if (!equalStringSets([...catalogIds], generatedSchedulerIds)) {
-    fail("runtime card catalog does not match generated scheduler indexes");
+  const fullyReviewed = manifest.comics.every(
+    (entry) => entry.reviewStatus === INTERNAL_QA_STATUS,
+  );
+  const expectedManifestStatus = fullyReviewed ? INTERNAL_QA_STATUS : "mixed";
+  if (manifest.reviewStatus !== expectedManifestStatus) {
+    fail(`runtime manifest.reviewStatus must be ${expectedManifestStatus}`);
+  }
+  if (
+    manifest.provenance?.contextualSensesReviewed !== fullyReviewed ||
+    manifest.importanceModel.provisional === fullyReviewed ||
+    manifest.importanceModel.contextualSensesReviewed !== fullyReviewed
+  ) {
+    fail("runtime manifest review provenance is inconsistent");
+  }
+  if (fullyReviewed) {
+    const serialized = stableJSON(manifest);
+    if (serialized.includes("word-auto-") || serialized.includes("needs-review")) {
+      fail("reviewed runtime manifest retains provisional identifiers or status");
+    }
+    for (const forbidden of [
+      "editorialStatus",
+      "qualityStatus",
+      "humanVerified",
+    ]) {
+      if (serialized.includes(`"${forbidden}"`)) {
+        fail(`runtime manifest serializes authoring-only field ${forbidden}`);
+      }
+    }
   }
   // Duplicate original xkcd numbers are intentionally allowed. The Spanish
   // archive contains four such number groups, while its comic IDs stay unique.
@@ -982,38 +1279,129 @@ async function reviewedCorpus() {
     path.join(PROJECT_ROOT, "lib/content.ts"),
   ).href;
   const content = await import(moduleURL);
-  const revision = "reviewed-v1";
-  const entries = content.COMICS.map((comic) => ({
-    id: comic.id,
-    loadKey: comic.id,
-    revision,
-    xkcdNumber: comic.xkcdNumber,
-    publishedAt: comic.publishedAt,
-    title: comic.title,
-    titleEs: comic.titleEs,
-    imageSrc: comic.image.src,
-    cardIds: comic.cardIds,
-    reviewed: true,
-  }));
-  const comicById = new Map(content.COMICS.map((comic) => [comic.id, comic]));
   return {
-    REVIEWED_CORPUS_MANIFEST: {
-      schemaVersion: RUNTIME_SCHEMA_VERSION,
-      revision,
-      comics: entries,
-    },
-    loadReviewedComic(id) {
-      const comic = comicById.get(id);
-      if (!comic) return null;
-      const cardIds = new Set(comic.cardIds);
-      return {
-        schemaVersion: RUNTIME_SCHEMA_VERSION,
-        revision,
-        comic,
-        cards: content.CARDS.filter((card) => cardIds.has(card.id)),
-      };
-    },
+    comics: content.COMICS,
+    cards: content.CARDS,
   };
+}
+
+function assembleRuntimeCorpus({
+  source,
+  authoredCompiled,
+  reviewed,
+  generatedBundlesById = new Map(),
+  buildProvenance = {},
+}) {
+  if (!isRecord(source) || !Array.isArray(source.comics)) {
+    fail("runtime assembly needs a validated source manifest");
+  }
+  if (!isRecord(authoredCompiled) || !Array.isArray(authoredCompiled.bundles)) {
+    fail("runtime assembly needs a compiled authored corpus");
+  }
+  if (!isRecord(reviewed) || !Array.isArray(reviewed.comics) || !Array.isArray(reviewed.cards)) {
+    fail("runtime assembly needs the reviewed seed corpus");
+  }
+  if (!(generatedBundlesById instanceof Map)) {
+    fail("generatedBundlesById must be a Map");
+  }
+
+  const authoredById = new Map();
+  for (const item of authoredCompiled.bundles) {
+    if (!isRecord(item) || typeof item.id !== "string") {
+      fail("compiled authored bundle entry is invalid");
+    }
+    if (authoredById.has(item.id)) {
+      fail(`compiled authored corpus repeats ${item.id}`);
+    }
+    authoredById.set(
+      item.id,
+      normalizeAuthoredBundle(item.bundle),
+    );
+  }
+  const reviewedById = new Map(reviewed.comics.map((comic) => [comic.id, comic]));
+  const bundles = [];
+  const manifestEntries = [];
+  let authoredComicCount = 0;
+  let reviewedSeedComicCount = 0;
+  let generatedComicCount = 0;
+
+  for (const sourceComic of source.comics) {
+    let bundle;
+    let entry;
+    if (authoredById.has(sourceComic.id)) {
+      authoredComicCount += 1;
+      bundle = authoredById.get(sourceComic.id);
+      entry = reviewedManifestEntry(
+        sourceComic,
+        bundle,
+        "individually-authored",
+      );
+    } else if (reviewedById.has(sourceComic.id)) {
+      reviewedSeedComicCount += 1;
+      bundle = normalizeSeedBundle(reviewedById.get(sourceComic.id), reviewed.cards);
+      entry = reviewedManifestEntry(sourceComic, bundle, "reviewed-seed");
+    } else {
+      generatedComicCount += 1;
+      bundle = generatedBundlesById.get(sourceComic.id);
+      if (!bundle) {
+        fail(`${sourceComic.id} has no authored, reviewed-seed, or OCR bundle`);
+      }
+      entry = generatedManifestEntry(sourceComic, bundle, bundle.revision);
+    }
+    bundles.push({ entry, bundle });
+    manifestEntries.push(entry);
+  }
+
+  const sourceIds = new Set(source.comics.map((comic) => comic.id));
+  for (const authoredId of authoredById.keys()) {
+    if (!sourceIds.has(authoredId)) {
+      fail(`authored comic ${authoredId} is absent from the source manifest`);
+    }
+  }
+  const cardCatalog = cardCatalogForBundles(bundles);
+  const { comics, importanceModel } = scoreManifestEntries(manifestEntries);
+  const fullyReviewed = generatedComicCount === 0;
+  const wordOccurrences = bundles.reduce(
+    (sum, { bundle }) =>
+      sum + bundle.comic.regions.reduce((subtotal, region) => subtotal + region.words.length, 0),
+    0,
+  );
+  const revision = `runtime-${hash(
+    stableJSON({
+      compilerRevision: COMPILER_REVISION,
+      bundles: bundles.map(({ entry, bundle }) => ({
+        id: entry.id,
+        revision: bundle.revision,
+        contentHash: hash(stableJSON(bundle)),
+      })),
+      catalogCardIds: cardCatalog.map((card) => card.id),
+    }),
+  ).slice(0, 16)}`;
+  const manifest = {
+    schemaVersion: RUNTIME_SCHEMA_VERSION,
+    revision,
+    importanceModel,
+    reviewStatus: fullyReviewed ? INTERNAL_QA_STATUS : "mixed",
+    counts: {
+      comics: comics.length,
+      authoredComics: authoredComicCount,
+      reviewedSeedComics: reviewedSeedComicCount,
+      needsReviewComics: generatedComicCount,
+      cards: cardCatalog.length,
+      schedulableCards: cardCatalog.length,
+      wordOccurrences,
+    },
+    provenance: {
+      ...buildProvenance,
+      method: fullyReviewed ? INTERNAL_QA_STATUS : "mixed-runtime-assembly",
+      reviewStatus: fullyReviewed ? INTERNAL_QA_STATUS : "mixed",
+      compilerRevision: COMPILER_REVISION,
+      contextualSensesReviewed: fullyReviewed,
+    },
+    cardCatalog,
+    comics,
+  };
+  return { manifest, bundles };
 }
 
 async function validateOutput(outputDir, expectedCount) {
@@ -1021,40 +1409,19 @@ async function validateOutput(outputDir, expectedCount) {
     await readJSON(path.join(outputDir, "manifest.json")),
     expectedCount,
   );
-  const { REVIEWED_CORPUS_MANIFEST, loadReviewedComic } = await reviewedCorpus();
-  const reviewedIds = new Set(REVIEWED_CORPUS_MANIFEST.comics.map((comic) => comic.id));
-  const globalGeneratedCardIds = new Set();
   const catalogById = new Map(
     manifest.cardCatalog.map((card) => [card.id, card]),
   );
+  const globalCardsById = new Map();
+  let authoredComicCount = 0;
+  let reviewedSeedComicCount = 0;
   let generatedComicCount = 0;
-  let generatedCardCount = 0;
-  let schedulableGeneratedCardCount = 0;
+  let wordOccurrenceCount = 0;
 
   for (const entry of manifest.comics) {
-    if (reviewedIds.has(entry.id)) {
-      const reviewed = loadReviewedComic(entry.id);
-      if (!reviewed || entry.reviewStatus !== "reviewed") {
-        fail(`${entry.id} does not resolve to its reviewed seed`);
-      }
-      if (!equalStringSets(reviewed.comic.cardIds, entry.cardIds)) {
-        fail(`${entry.id} reviewed manifest card index is inconsistent`);
-      }
-      if (
-        !equalStringSets(
-          importanceTargetIdsForCards(reviewed.cards),
-          entry.importanceTargetIds,
-        )
-      ) {
-        fail(`${entry.id} reviewed importance target index is inconsistent`);
-      }
-      continue;
-    }
-
-    generatedComicCount += 1;
     const filePath = path.join(outputDir, "comics", `${entry.loadKey}.json`);
     const bundle = await readJSON(filePath);
-    const { occurrenceCount, schedulableCardCount } = validateGeneratedBundle(
+    const { occurrenceCount } = validateRuntimeBundle(
       bundle,
       entry,
     );
@@ -1064,15 +1431,27 @@ async function validateOutput(outputDir, expectedCount) {
         entry.importanceTargetIds,
       )
     ) {
-      fail(`${entry.id} generated importance target index is inconsistent`);
+      fail(`${entry.id} importance target index is inconsistent`);
     }
-    generatedCardCount += occurrenceCount;
-    schedulableGeneratedCardCount += schedulableCardCount;
-    for (const card of bundle.cards) {
-      if (globalGeneratedCardIds.has(card.id)) {
-        fail(`generated card ID is not globally unique: ${card.id}`);
+    wordOccurrenceCount += occurrenceCount;
+    if (entry.reviewStatus === NEEDS_REVIEW_STATUS) {
+      generatedComicCount += 1;
+    } else if (entry.provenance?.sourceKind === "individually-authored") {
+      authoredComicCount += 1;
+    } else if (entry.provenance?.sourceKind === "reviewed-seed") {
+      reviewedSeedComicCount += 1;
+      if (entry.revision !== "reviewed-v1") {
+        fail(`${entry.id} reviewed seed revision must remain reviewed-v1`);
       }
-      globalGeneratedCardIds.add(card.id);
+    } else {
+      fail(`${entry.id} has unknown reviewed source provenance`);
+    }
+    for (const card of bundle.cards) {
+      const existing = globalCardsById.get(card.id);
+      if (existing && stableJSON(existing) !== stableJSON(card)) {
+        fail(`stable card ${card.id} differs between runtime bundles`);
+      }
+      globalCardsById.set(card.id, existing ?? card);
       if (card.schedulable) {
         const catalogCard = catalogById.get(card.id);
         if (!catalogCard || JSON.stringify(catalogCard) !== JSON.stringify(card)) {
@@ -1082,40 +1461,57 @@ async function validateOutput(outputDir, expectedCount) {
     }
   }
 
-  if (generatedComicCount !== expectedCount - reviewedIds.size) {
-    fail(
-      `expected ${expectedCount - reviewedIds.size} generated bundles, found ${generatedComicCount}`,
-    );
+  if (expectedCount === DEFAULT_EXPECTED_COUNT && generatedComicCount !== 0) {
+    fail(`full runtime corpus must not contain OCR fallback bundles`);
+  }
+  const expectedCounts = {
+    comics: manifest.comics.length,
+    authoredComics: authoredComicCount,
+    reviewedSeedComics: reviewedSeedComicCount,
+    needsReviewComics: generatedComicCount,
+    cards: manifest.cardCatalog.length,
+    schedulableCards: manifest.cardCatalog.length,
+    wordOccurrences: wordOccurrenceCount,
+  };
+  if (stableJSON(manifest.counts) !== stableJSON(expectedCounts)) {
+    fail(`runtime manifest counts do not match lazy bundles`);
   }
   process.stdout.write(
-    `Validated ${manifest.comics.length} runtime comics (${reviewedIds.size} reviewed, ${generatedComicCount} generated), ${generatedCardCount} clickable generated cards, and ${schedulableGeneratedCardCount} schedulable generated cards in ${outputDir}.\n`,
+    `Validated ${manifest.comics.length} runtime comics (${authoredComicCount} authored, ${reviewedSeedComicCount} reviewed seed, ${generatedComicCount} OCR fallback), ${manifest.cardCatalog.length} stable cards, and ${wordOccurrenceCount} printed word occurrences in ${outputDir}.\n`,
   );
   return {
     manifest,
+    authoredComicCount,
+    reviewedSeedComicCount,
     generatedComicCount,
-    generatedCardCount,
-    schedulableGeneratedCardCount,
+    stableCardCount: manifest.cardCatalog.length,
+    wordOccurrenceCount,
   };
 }
 
 async function build(options) {
-  const [rawSource, rawOCRIndex, rawGlossary, rawOverrides, reviewed] =
+  const [
+    rawSource,
+    rawOCRIndex,
+    rawGlossary,
+    rawOverrides,
+    reviewed,
+    artifacts,
+  ] =
     await Promise.all([
-    readJSON(options.sourcePath),
-    readJSON(path.join(options.ocrDir, "corpus-index.json")),
-    readJSON(options.glossaryPath),
-    readJSON(options.overridesPath),
-    reviewedCorpus(),
+      readJSON(options.sourcePath),
+      readJSON(path.join(options.ocrDir, "corpus-index.json")),
+      readJSON(options.glossaryPath),
+      readJSON(options.overridesPath),
+      reviewedCorpus(),
+      readAuthoringFiles(options.authoringDir),
     ]);
   const source = validateSourceManifest(rawSource, options.expectedCount);
   const ocrIndexById = validateOCRIndex(rawOCRIndex);
   const glossaryBySurface = validateGlossary(rawGlossary);
   const overridesByComicId = validateOverrides(rawOverrides);
-  const reviewedEntryById = new Map(
-    reviewed.REVIEWED_CORPUS_MANIFEST.comics.map((entry) => [entry.id, entry]),
-  );
   const sourceIds = new Set(source.comics.map((comic) => comic.id));
-  for (const reviewedId of reviewedEntryById.keys()) {
+  for (const reviewedId of reviewed.comics.map((comic) => comic.id)) {
     if (!sourceIds.has(reviewedId)) {
       fail(`reviewed comic ${reviewedId} is absent from the source manifest`);
     }
@@ -1124,112 +1520,100 @@ async function build(options) {
     if (!sourceIds.has(overrideId)) {
       fail(`OCR override comic ${overrideId} is absent from the source manifest`);
     }
-    if (reviewedEntryById.has(overrideId)) {
-      fail(`OCR override comic ${overrideId} is already a reviewed seed`);
-    }
   }
 
-  const inputsForRevision = [
-    COMPILER_REVISION,
-    stableJSON(rawSource),
-    stableJSON(rawOCRIndex),
-    stableJSON(rawGlossary),
-    stableJSON(rawOverrides),
-  ];
-  const ocrById = new Map();
+  const geometryByComicId = await geometryForArtifacts(
+    artifacts,
+    options.ocrDir,
+    overridesByComicId,
+  );
+  const authoredCompiled = compileManualAuthoringCorpus({
+    artifacts,
+    seedCards: reviewed.cards,
+    sourceComics: source.comics,
+    geometryByComicId,
+  });
+  const authoredIds = new Set(
+    authoredCompiled.bundles.map(({ id }) => id),
+  );
+  const reviewedIds = new Set(reviewed.comics.map((comic) => comic.id));
+  const generatedBundlesById = new Map();
   for (const sourceComic of source.comics) {
-    if (reviewedEntryById.has(sourceComic.id)) continue;
+    if (authoredIds.has(sourceComic.id) || reviewedIds.has(sourceComic.id)) {
+      continue;
+    }
     const indexEntry = ocrIndexById.get(sourceComic.id);
     if (!indexEntry) fail(`missing OCR index entry for ${sourceComic.id}`);
     const ocrPath = path.join(options.ocrDir, indexEntry.file);
     const rawOCR = await readJSON(ocrPath);
     const ocr = validateOCRComic(rawOCR, sourceComic.id);
-    ocrById.set(sourceComic.id, ocr);
-    inputsForRevision.push(stableJSON(rawOCR));
-  }
-  const revision = `generated-${hash(inputsForRevision.join("\0")).slice(0, 16)}`;
-
-  const manifestEntries = [];
-  const bundles = [];
-  for (const sourceComic of source.comics) {
-    const reviewedEntry = reviewedEntryById.get(sourceComic.id);
-    if (reviewedEntry) {
-      const reviewedBundle = reviewed.loadReviewedComic(sourceComic.id);
-      if (!reviewedBundle) {
-        fail(`reviewed bundle is missing ${sourceComic.id}`);
-      }
-      manifestEntries.push({
-        ...reviewedEntry,
-        importanceTargetIds: importanceTargetIdsForCards(reviewedBundle.cards),
-        reviewStatus: "reviewed",
-        provenance: { method: "hand-reviewed-seed" },
-      });
-      continue;
-    }
-    const bundle = buildGeneratedBundle(
+    const override = overridesByComicId.get(sourceComic.id);
+    const generatedRevision = `generated-${hash(
+      stableJSON({
+        compilerRevision: COMPILER_REVISION,
+        sourceComic,
+        ocr,
+        glossary: rawGlossary,
+        override: override ?? null,
+      }),
+    ).slice(0, 16)}`;
+    generatedBundlesById.set(sourceComic.id, buildGeneratedBundle(
       sourceComic,
-      ocrById.get(sourceComic.id),
+      ocr,
       glossaryBySurface,
-      overridesByComicId.get(sourceComic.id),
-      revision,
-    );
-    const entry = generatedManifestEntry(sourceComic, bundle, revision);
-    bundles.push({ entry, bundle });
-    manifestEntries.push(entry);
+      override,
+      generatedRevision,
+    ));
   }
 
-  const cardCatalog = bundles.flatMap(({ bundle }) =>
-    bundle.cards.filter((card) => card.schedulable),
-  );
-  const { comics: scoredManifestEntries, importanceModel } =
-    scoreManifestEntries(manifestEntries);
-  const manifest = {
-    schemaVersion: RUNTIME_SCHEMA_VERSION,
-    revision,
-    importanceModel,
-    reviewStatus: "mixed",
-    counts: {
-      comics: scoredManifestEntries.length,
-      reviewedComics: reviewedEntryById.size,
-      needsReviewComics: scoredManifestEntries.length - reviewedEntryById.size,
-      generatedCards: bundles.reduce(
-        (sum, item) => sum + item.bundle.cards.length,
-        0,
-      ),
-      schedulableGeneratedCards: cardCatalog.length,
-    },
-    provenance: {
+  const { manifest, bundles } = assembleRuntimeCorpus({
+    source,
+    authoredCompiled,
+    reviewed,
+    generatedBundlesById,
+    buildProvenance: {
       sourceArchiveUrl: source.source?.archiveUrl,
-      ocrEngine: "apple-vision",
-      glossaryGeneratedBy: rawGlossary.generatedBy,
-      compilerRevision: COMPILER_REVISION,
-      contextualSensesReviewed: false,
+      assemblyPriority: [
+        "individually-authored",
+        "reviewed-seed",
+        "ocr-fallback",
+      ],
     },
-    cardCatalog,
-    comics: scoredManifestEntries,
-  };
+  });
+  if (
+    options.expectedCount === DEFAULT_EXPECTED_COUNT &&
+    manifest.counts.needsReviewComics !== 0
+  ) {
+    fail(
+      `full runtime corpus is incomplete: ${manifest.counts.needsReviewComics} comic(s) still require OCR fallback`,
+    );
+  }
   validateManifestShape(manifest, options.expectedCount);
 
   const comicsDirectory = path.join(options.outputDir, "comics");
   await fs.mkdir(comicsDirectory, { recursive: true });
   for (const { entry, bundle } of bundles) {
-    validateGeneratedBundle(bundle, entry);
+    validateRuntimeBundle(bundle, entry);
     await atomicWriteJSON(
       path.join(comicsDirectory, `${entry.loadKey}.json`),
       bundle,
     );
   }
   await atomicWriteJSON(path.join(options.outputDir, "manifest.json"), manifest);
-  await validateOutput(options.outputDir, options.expectedCount);
+  return validateOutput(options.outputDir, options.expectedCount);
 }
 
 export {
+  assembleRuntimeCorpus,
   build,
   buildGeneratedBundle,
+  normalizeAuthoredBundle,
+  normalizeSeedBundle,
   normalizeSurface,
   validateGeneratedBundle,
   validateManifestShape,
   validateOutput,
+  validateRuntimeBundle,
 };
 
 const isMain =

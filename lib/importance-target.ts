@@ -1,25 +1,12 @@
 import type { LearningCard } from "./content";
 
 export const IMPORTANCE_TARGET_IDENTITY_POLICY =
-  "provisional-word-signature-v1" as const;
+  "stable-card-id-v1" as const;
 export const IMPORTANCE_TARGET_EDGE_POLICY =
   "one-per-comic-per-target" as const;
 export const IMPORTANCE_TARGET_CARD_SCOPE = "schedulable-only" as const;
 export const IMPORTANCE_TARGET_REVIEW_STATUS =
-  "provisional-context-unreviewed" as const;
-
-/**
- * Normalize only the analytics signature. This never changes a LearningCard
- * ID and must never be used to reconcile or schedule SRS state.
- */
-export function normalizeImportanceSignaturePart(value: string): string {
-  return value
-    .normalize("NFC")
-    .trim()
-    .replace(/\s+/gu, " ")
-    .toLocaleLowerCase("es")
-    .normalize("NFC");
-}
+  "ai-authored-internal-qa" as const;
 
 function encoded(value: string): string {
   return encodeURIComponent(value);
@@ -37,31 +24,23 @@ function isCanonicalEncoded(value: string): boolean {
 /** Validate the collision-free serialized key without assigning SRS meaning. */
 export function isImportanceTargetId(value: unknown): value is string {
   if (typeof value !== "string") return false;
-  if (value.startsWith("card:")) {
-    return isCanonicalEncoded(value.slice("card:".length));
-  }
-  if (!value.startsWith("word:")) return false;
-  const parts = value.slice("word:".length).split("|");
-  return parts.length === 2 && parts.every(isCanonicalEncoded);
+  return (
+    value.startsWith("card:") &&
+    isCanonicalEncoded(value.slice("card:".length))
+  );
 }
 
 /**
- * Return a reversible, namespace-separated graph target ID. Word targets are
- * provisional prompt/answer signatures; higher-level targets retain their
- * exact stable card identity inside a separate encoded namespace.
+ * Return a reversible analytics target for one exact stable learning card.
+ * The `card:` namespace deliberately keeps graph IDs separate from SRS IDs.
  */
 export function importanceTargetIdForCard(
-  card: Pick<LearningCard, "id" | "kind" | "promptEs" | "answerEn">,
+  card: Pick<LearningCard, "id">,
 ): string {
-  if (card.kind === "word") {
-    const prompt = normalizeImportanceSignaturePart(card.promptEs);
-    const answer = normalizeImportanceSignaturePart(card.answerEn);
-    return `word:${encoded(prompt)}|${encoded(answer)}`;
+  if (typeof card?.id !== "string" || card.id.length === 0) {
+    throw new TypeError("Learning-card ID must be a non-empty string");
   }
-  if (["grammar", "phrase", "concept"].includes(card.kind)) {
-    return `card:${encoded(card.id)}`;
-  }
-  throw new TypeError(`Unsupported learning-card kind: ${String(card.kind)}`);
+  return `card:${encoded(card.id)}`;
 }
 
 /** One analytics edge per comic/target, considering schedulable cards only. */

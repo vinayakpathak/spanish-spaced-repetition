@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-14872a0d5618344d",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.913,
-    "lowConfidenceTokenCount": 4,
-    "rawOcrTokenCount": 23,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-stephen-hawking",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "",
-      "en": "English title text pending review."
+      "en": "'Guys?  The Town is supposed to be good, and I thou--' 'PHYSICIST STEPHEN HAWKING DECLARES NEW FILM BEST IN ALL SPACE AND TIME' 'No, I just heard that--' 'SHOULD SCIENCE PLAY A ROLE IN JUDGING BEN AFFLECK?' 'I don't think--' 'WHAT ABOUT MATT DAMON?'",
+      "noteEn": "The Spanish archive supplies an exactly empty title attribute, while the official English title text is preserved verbatim, including the two spaces after ‘Guys?’. The localized raster compresses the newspaper's side question, picture caption, and warning while retaining the English masthead and Stephen Hawking's name."
     },
     "regions": [
       {
-        "id": "es-xkcd-stephen-hawking:region-0001",
-        "labelEs": "HE PENSADO QUE",
+        "id": "es-xkcd-stephen-hawking:opening-suggestion",
+        "labelEs": "HE PENSADO QUE LUEGO PODRÍAMOS IR AL CINE",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 1.0811,
           "y": 9.9099,
-          "width": 21.8919,
-          "height": 7.2072
+          "width": 24.054,
+          "height": 23.4234
         },
         "words": [
           {
-            "id": "es-xkcd-stephen-hawking:word-00001",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w01",
             "text": "HE",
             "normalized": "he",
             "bounds": [
@@ -70,11 +65,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00001-db87ae9e"
+              "word-he",
+              "grammar-present-perfect"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00002",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w02",
             "text": "PENSADO",
             "normalized": "pensado",
             "bounds": [
@@ -86,11 +82,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00002-d5392bcf"
+              "word-pensado--haber-participle",
+              "grammar-present-perfect",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00003",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w03",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -102,37 +100,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00003-fd9b4e80"
+              "word-que--clause-link"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00001-db87ae9e",
-          "word-auto-es-xkcd-stephen-hawking-00002-d5392bcf",
-          "word-auto-es-xkcd-stephen-hawking-00003-fd9b4e80"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0002",
-        "labelEs": "LUEGO PODRIAMOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 1.6216,
-          "y": 18.018,
-          "width": 23.5135,
-          "height": 6.3063
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-stephen-hawking:word-00004",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w04",
             "text": "LUEGO",
             "normalized": "luego",
             "bounds": [
@@ -144,13 +116,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00004-cf012dbe"
+              "word-luego"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00005",
-            "text": "PODRIAMOS",
-            "normalized": "podriamos",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w05",
+            "text": "PODRÍAMOS",
+            "normalized": "podríamos",
             "bounds": [
               {
                 "x": 10.1351,
@@ -160,38 +132,16 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00005-8ea815f4"
+              "word-podríamos--tentative-suggestion",
+              "grammar-simple-conditional",
+              "grammar-poder-infinitive",
+              "concept-stephen-hawking-media-authority-joke"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00004-cf012dbe",
-          "word-auto-es-xkcd-stephen-hawking-00005-8ea815f4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0003",
-        "labelEs": "JR AL CINE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 1.0811,
-          "y": 26.1261,
-          "width": 13.5135,
-          "height": 7.2072
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-stephen-hawking:word-00006",
-            "text": "JR",
-            "normalized": "jr",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w06",
+            "text": "IR",
+            "normalized": "ir",
             "bounds": [
               {
                 "x": 1.0811,
@@ -201,11 +151,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00006-b4aff150"
+              "word-ir--go",
+              "grammar-poder-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00007",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w07",
             "text": "AL",
             "normalized": "al",
             "bounds": [
@@ -217,11 +168,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00007-fcae1efa"
+              "word-al--contraction"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00008",
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:w08",
             "text": "CINE",
             "normalized": "cine",
             "bounds": [
@@ -233,37 +184,140 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00008-26f7d160"
+              "word-cine",
+              "concept-stephen-hawking-media-authority-joke"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:app-present-perfect",
+            "cardId": "grammar-present-perfect",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:opening-suggestion:w01",
+              "es-xkcd-stephen-hawking:opening-suggestion:w02"
+            ],
+            "exampleEs": "HE PENSADO",
+            "explanationEn": "He is haber's form for the speaker, and pensado is pensar's unchanged completed-action form."
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:app-conditional",
+            "cardId": "grammar-simple-conditional",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:opening-suggestion:w05"
+            ],
+            "exampleEs": "PODRÍAMOS",
+            "explanationEn": "Podríamos keeps poder's complete dictionary form and adds -íamos to make the possibility tentative for ‘we.’"
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:opening-suggestion:app-poder-action",
+            "cardId": "grammar-poder-infinitive",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:opening-suggestion:w05",
+              "es-xkcd-stephen-hawking:opening-suggestion:w06"
+            ],
+            "exampleEs": "PODRÍAMOS IR",
+            "explanationEn": "Podríamos changes for the speaker's group and tentative situation, while ir remains in its unchanged dictionary form."
+          }
+        ],
+        "cardIds": [
+          "word-he",
+          "grammar-present-perfect",
+          "word-pensado--haber-participle",
+          "concept-stephen-hawking-media-authority-joke",
+          "word-que--clause-link",
+          "word-luego",
+          "word-podríamos--tentative-suggestion",
+          "grammar-simple-conditional",
+          "grammar-poder-infinitive",
+          "word-ir--go",
+          "word-al--contraction",
+          "word-cine"
+        ]
+      },
+      {
+        "id": "es-xkcd-stephen-hawking:listeners-reaction",
+        "labelEs": "!!!",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 16.6216,
+          "y": 39.819,
+          "width": 2.7027,
+          "height": 9.0498
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-stephen-hawking:listeners-reaction:x01",
+            "text": "!!!",
+            "reason": "symbol",
+            "rationale": "The three exclamation marks signal an alarmed reaction but are punctuation rather than Spanish lexical material.",
+            "bounds": [
+              {
+                "x": 16.6216,
+                "y": 39.819,
+                "width": 2.7027,
+                "height": 9.0498
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00006-b4aff150",
-          "word-auto-es-xkcd-stephen-hawking-00007-fcae1efa",
-          "word-auto-es-xkcd-stephen-hawking-00008-26f7d160"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0003",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-stephen-hawking:region-0004",
-        "labelEs": "EL FÍSICO STEPHEN",
+        "id": "es-xkcd-stephen-hawking:newspaper-masthead",
+        "labelEs": "the Times",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 51.0811,
+          "x": 51.7568,
+          "y": 12.6697,
+          "width": 16.8919,
+          "height": 11.7647
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-masthead:x01",
+            "text": "the Times",
+            "reason": "non-spanish-text",
+            "rationale": "This is the newspaper's unchanged English publication name, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 51.7568,
+                "y": 15.8371,
+                "width": 5.2703,
+                "height": 8.5973
+              },
+              {
+                "x": 57.027,
+                "y": 12.6697,
+                "width": 11.6216,
+                "height": 11.7647
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": []
+      },
+      {
+        "id": "es-xkcd-stephen-hawking:newspaper-headline",
+        "labelEs": "EL FÍSICO STEPHEN HAWKING SUGIERE QUE VEAMOS MÁS PELÍCULAS",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 48.8621,
           "y": 26.1261,
-          "width": 17.2973,
-          "height": 9.009
+          "width": 21.7463,
+          "height": 24.0772
         },
         "words": [
           {
-            "id": "es-xkcd-stephen-hawking:word-00009",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w01",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -271,15 +325,15 @@
                 "x": 51.0811,
                 "y": 26.1261,
                 "width": 2.3649,
-                "height": 9.009
+                "height": 7.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00009-912c9aca"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00010",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w02",
             "text": "FÍSICO",
             "normalized": "físico",
             "bounds": [
@@ -287,73 +341,16 @@
                 "x": 53.7838,
                 "y": 26.1261,
                 "width": 6.0811,
-                "height": 9.009
+                "height": 7.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00010-d44b00ba"
+              "word-físico--physicist",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00011",
-            "text": "STEPHEN",
-            "normalized": "stephen",
-            "bounds": [
-              {
-                "x": 60.2027,
-                "y": 26.1261,
-                "width": 8.1757,
-                "height": 9.009
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00011-5914f2fc"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00009-912c9aca",
-          "word-auto-es-xkcd-stephen-hawking-00010-d44b00ba",
-          "word-auto-es-xkcd-stephen-hawking-00011-5914f2fc"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0005",
-        "labelEs": "HAWKING SUGIERE QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 49.67,
-          "y": 33.0209,
-          "width": 20.3836,
-          "height": 9.892
-        },
-        "words": [
-          {
-            "id": "es-xkcd-stephen-hawking:word-00012",
-            "text": "HAWKING",
-            "normalized": "hawking",
-            "bounds": [
-              {
-                "x": 49.67,
-                "y": 34.2893,
-                "width": 8.3973,
-                "height": 8.6236
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00012-4287330b"
-            ]
-          },
-          {
-            "id": "es-xkcd-stephen-hawking:word-00013",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w03",
             "text": "SUGIERE",
             "normalized": "sugiere",
             "bounds": [
@@ -361,15 +358,17 @@
                 "x": 58.2805,
                 "y": 33.4996,
                 "width": 7.2483,
-                "height": 8.4131
+                "height": 6.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00013-4f0f373d"
+              "word-sugiere--suggests",
+              "grammar-sugerir-que-subjunctive",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00014",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -377,41 +376,16 @@
                 "x": 65.743,
                 "y": 33.0209,
                 "width": 4.3106,
-                "height": 8.1912
+                "height": 6.95
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00014-a041c79a"
+              "word-que--clause-link",
+              "grammar-sugerir-que-subjunctive"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00012-4287330b",
-          "word-auto-es-xkcd-stephen-hawking-00013-4f0f373d",
-          "word-auto-es-xkcd-stephen-hawking-00014-a041c79a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0006",
-        "labelEs": "VEAMOS MÁS PELÍCULAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 48.8621,
-          "y": 40.2132,
-          "width": 21.7463,
-          "height": 9.9901
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-stephen-hawking:word-00015",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w05",
             "text": "VEAMOS",
             "normalized": "veamos",
             "bounds": [
@@ -423,11 +397,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00015-d82b5c8c"
+              "word-veamos--suggestion-subjunctive",
+              "grammar-sugerir-que-subjunctive",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00016",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w06",
             "text": "MÁS",
             "normalized": "más",
             "bounds": [
@@ -439,11 +415,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00016-a38a73e5"
+              "word-más--more",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00017",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:w07",
             "text": "PELÍCULAS",
             "normalized": "películas",
             "bounds": [
@@ -455,117 +432,149 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00017-5003bdc9"
+              "word-películas",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00015-d82b5c8c",
-          "word-auto-es-xkcd-stephen-hawking-00016-a38a73e5",
-          "word-auto-es-xkcd-stephen-hawking-00017-5003bdc9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0007",
-        "labelEs": "¿QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 64.8649,
-          "y": 54.0541,
-          "width": 4.8649,
-          "height": 8.1081
-        },
-        "words": [
+        "excludedUnits": [
           {
-            "id": "es-xkcd-stephen-hawking:word-00018",
-            "text": "QUE",
-            "normalized": "que",
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:x01",
+            "text": "STEPHEN HAWKING",
+            "reason": "non-spanish-text",
+            "rationale": "Stephen Hawking is the person's unchanged English name, not Spanish lexical vocabulary.",
             "bounds": [
               {
-                "x": 64.8649,
-                "y": 54.0541,
-                "width": 4.8649,
-                "height": 8.1081
+                "x": 60.2027,
+                "y": 26.1261,
+                "width": 8.1757,
+                "height": 6.88
+              },
+              {
+                "x": 49.67,
+                "y": 34.2893,
+                "width": 8.3973,
+                "height": 5.65
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00018-89538413"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00018-89538413"
+        "applications": [
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-headline:app-suggestion",
+            "cardId": "grammar-sugerir-que-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:newspaper-headline:w03",
+              "es-xkcd-stephen-hawking:newspaper-headline:w04",
+              "es-xkcd-stephen-hawking:newspaper-headline:w05"
+            ],
+            "exampleEs": "SUGIERE QUE VEAMOS",
+            "explanationEn": "Sugiere supplies the recommendation, que introduces the proposed action, and veamos is ver's special ‘we’ form because that action is proposed rather than reported."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0007",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": [
+          "word-el--article",
+          "word-físico--physicist",
+          "concept-stephen-hawking-media-authority-joke",
+          "word-sugiere--suggests",
+          "grammar-sugerir-que-subjunctive",
+          "word-que--clause-link",
+          "word-veamos--suggestion-subjunctive",
+          "word-más--more",
+          "word-películas"
+        ]
       },
       {
-        "id": "es-xkcd-stephen-hawking:region-0008",
-        "labelEs": "SABRÁ?",
+        "id": "es-xkcd-stephen-hawking:newspaper-question",
+        "labelEs": "¿QUÉ SABRÁ?",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 64.0541,
-          "y": 60.3604,
+          "y": 54.0541,
           "width": 6.4865,
-          "height": 8.1081
+          "height": 14.4144
         },
         "words": [
           {
-            "id": "es-xkcd-stephen-hawking:word-00019",
+            "id": "es-xkcd-stephen-hawking:newspaper-question:w01",
+            "text": "QUÉ",
+            "normalized": "qué",
+            "bounds": [
+              {
+                "x": 65.8108,
+                "y": 53.8462,
+                "width": 3.6486,
+                "height": 6.3348
+              }
+            ],
+            "cardIds": [
+              "word-qué--interrogative",
+              "question-words"
+            ]
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-question:w02",
             "text": "SABRÁ",
             "normalized": "sabrá",
             "bounds": [
               {
-                "x": 64.0541,
-                "y": 60.3604,
-                "width": 6.4865,
-                "height": 8.1081
+                "x": 64.1892,
+                "y": 60.6335,
+                "width": 5.6757,
+                "height": 7.2398
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00019-583a5885"
+              "word-sabrá--speculative-future",
+              "grammar-future-conjecture",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00019-583a5885"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-question:app-question-accent",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:newspaper-question:w01"
+            ],
+            "exampleEs": "QUÉ",
+            "explanationEn": "Qué carries a written accent because it directly asks for unknown information."
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-question:app-future-conjecture",
+            "cardId": "grammar-future-conjecture",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:newspaper-question:w02"
+            ],
+            "exampleEs": "SABRÁ",
+            "explanationEn": "Sabrá has a future-form ending, but the questioning context uses it for an uncertain guess about what the person knows now."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0008",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-qué--interrogative",
+          "question-words",
+          "word-sabrá--speculative-future",
+          "grammar-future-conjecture",
+          "concept-stephen-hawking-media-authority-joke"
+        ]
       },
       {
-        "id": "es-xkcd-stephen-hawking:region-0009",
-        "labelEs": "EL HOMBRE",
+        "id": "es-xkcd-stephen-hawking:newspaper-caption",
+        "labelEs": "EL HOMBRE MÁS LISTO",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 55.9459,
           "y": 74.7748,
           "width": 7.027,
-          "height": 4.5045
+          "height": 8.1081
         },
         "words": [
           {
-            "id": "es-xkcd-stephen-hawking:word-00020",
+            "id": "es-xkcd-stephen-hawking:newspaper-caption:w01",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -573,15 +582,16 @@
                 "x": 55.9459,
                 "y": 74.7748,
                 "width": 2.1959,
-                "height": 4.5045
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00020-a8543391"
+              "word-el--article",
+              "grammar-relative-superlative"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00021",
+            "id": "es-xkcd-stephen-hawking:newspaper-caption:w02",
             "text": "HOMBRE",
             "normalized": "hombre",
             "bounds": [
@@ -589,40 +599,17 @@
                 "x": 58.3108,
                 "y": 74.7748,
                 "width": 4.6622,
-                "height": 4.5045
+                "height": 3.4
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00021-1c671421"
+              "word-hombre--man",
+              "grammar-relative-superlative",
+              "concept-stephen-hawking-media-authority-joke"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00020-a8543391",
-          "word-auto-es-xkcd-stephen-hawking-00021-1c671421"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-stephen-hawking:region-0010",
-        "labelEs": "MÁS LISTO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.027,
-          "y": 78.3784,
-          "width": 5.9459,
-          "height": 4.5045
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-stephen-hawking:word-00022",
+            "id": "es-xkcd-stephen-hawking:newspaper-caption:w03",
             "text": "MÁS",
             "normalized": "más",
             "bounds": [
@@ -634,11 +621,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00022-e7497e5d"
+              "word-más--superlative",
+              "grammar-relative-superlative",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           },
           {
-            "id": "es-xkcd-stephen-hawking:word-00023",
+            "id": "es-xkcd-stephen-hawking:newspaper-caption:w04",
             "text": "LISTO",
             "normalized": "listo",
             "bounds": [
@@ -650,612 +639,822 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-stephen-hawking-00023-79a84190"
+              "word-listo--smart",
+              "grammar-relative-superlative",
+              "concept-stephen-hawking-media-authority-joke"
             ]
           }
         ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-caption:app-superlative",
+            "cardId": "grammar-relative-superlative",
+            "participantWordIds": [
+              "es-xkcd-stephen-hawking:newspaper-caption:w01",
+              "es-xkcd-stephen-hawking:newspaper-caption:w02",
+              "es-xkcd-stephen-hawking:newspaper-caption:w03",
+              "es-xkcd-stephen-hawking:newspaper-caption:w04"
+            ],
+            "exampleEs": "EL HOMBRE MÁS LISTO",
+            "explanationEn": "El matches the masculine singular noun hombre, while más listo marks the highest degree of the description."
+          }
+        ],
+        "cardIds": [
+          "word-el--article",
+          "grammar-relative-superlative",
+          "word-hombre--man",
+          "concept-stephen-hawking-media-authority-joke",
+          "word-más--superlative",
+          "word-listo--smart"
+        ]
+      },
+      {
+        "id": "es-xkcd-stephen-hawking:newspaper-warning",
+        "labelEs": "¿ES UN AVISO?",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 68.6486,
+          "y": 77.8281,
+          "width": 3.3784,
+          "height": 6.7873
+        },
+        "words": [
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-warning:w01",
+            "text": "ES",
+            "normalized": "es",
+            "bounds": [
+              {
+                "x": 69.3243,
+                "y": 78.733,
+                "width": 1.0811,
+                "height": 2.2624
+              }
+            ],
+            "cardIds": [
+              "word-es--classification"
+            ]
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-warning:w02",
+            "text": "UN",
+            "normalized": "un",
+            "bounds": [
+              {
+                "x": 70.9459,
+                "y": 78.733,
+                "width": 0.9459,
+                "height": 2.2624
+              }
+            ],
+            "cardIds": [
+              "word-un"
+            ]
+          },
+          {
+            "id": "es-xkcd-stephen-hawking:newspaper-warning:w03",
+            "text": "AVISO",
+            "normalized": "aviso",
+            "bounds": [
+              {
+                "x": 69.0541,
+                "y": 80.9955,
+                "width": 2.1622,
+                "height": 2.7149
+              }
+            ],
+            "cardIds": [
+              "word-aviso--warning",
+              "concept-stephen-hawking-media-authority-joke"
+            ]
+          }
+        ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-stephen-hawking-00022-e7497e5d",
-          "word-auto-es-xkcd-stephen-hawking-00023-79a84190"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0010",
-          "ocrConfidence": 1
-        }
+          "word-es--classification",
+          "word-un",
+          "word-aviso--warning",
+          "concept-stephen-hawking-media-authority-joke"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-stephen-hawking-00001-db87ae9e",
-      "word-auto-es-xkcd-stephen-hawking-00002-d5392bcf",
-      "word-auto-es-xkcd-stephen-hawking-00003-fd9b4e80",
-      "word-auto-es-xkcd-stephen-hawking-00004-cf012dbe",
-      "word-auto-es-xkcd-stephen-hawking-00005-8ea815f4",
-      "word-auto-es-xkcd-stephen-hawking-00006-b4aff150",
-      "word-auto-es-xkcd-stephen-hawking-00007-fcae1efa",
-      "word-auto-es-xkcd-stephen-hawking-00008-26f7d160",
-      "word-auto-es-xkcd-stephen-hawking-00009-912c9aca",
-      "word-auto-es-xkcd-stephen-hawking-00010-d44b00ba",
-      "word-auto-es-xkcd-stephen-hawking-00011-5914f2fc",
-      "word-auto-es-xkcd-stephen-hawking-00012-4287330b",
-      "word-auto-es-xkcd-stephen-hawking-00013-4f0f373d",
-      "word-auto-es-xkcd-stephen-hawking-00014-a041c79a",
-      "word-auto-es-xkcd-stephen-hawking-00015-d82b5c8c",
-      "word-auto-es-xkcd-stephen-hawking-00016-a38a73e5",
-      "word-auto-es-xkcd-stephen-hawking-00017-5003bdc9",
-      "word-auto-es-xkcd-stephen-hawking-00018-89538413",
-      "word-auto-es-xkcd-stephen-hawking-00019-583a5885",
-      "word-auto-es-xkcd-stephen-hawking-00020-a8543391",
-      "word-auto-es-xkcd-stephen-hawking-00021-1c671421",
-      "word-auto-es-xkcd-stephen-hawking-00022-e7497e5d",
-      "word-auto-es-xkcd-stephen-hawking-00023-79a84190"
+      "word-he",
+      "grammar-present-perfect",
+      "word-pensado--haber-participle",
+      "concept-stephen-hawking-media-authority-joke",
+      "word-que--clause-link",
+      "word-luego",
+      "word-podríamos--tentative-suggestion",
+      "grammar-simple-conditional",
+      "grammar-poder-infinitive",
+      "word-ir--go",
+      "word-al--contraction",
+      "word-cine",
+      "word-el--article",
+      "word-físico--physicist",
+      "word-sugiere--suggests",
+      "grammar-sugerir-que-subjunctive",
+      "word-veamos--suggestion-subjunctive",
+      "word-más--more",
+      "word-películas",
+      "word-qué--interrogative",
+      "question-words",
+      "word-sabrá--speculative-future",
+      "grammar-future-conjecture",
+      "grammar-relative-superlative",
+      "word-hombre--man",
+      "word-más--superlative",
+      "word-listo--smart",
+      "word-es--classification",
+      "word-un",
+      "word-aviso--warning"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.913,
-      "lowConfidenceTokenCount": 4,
-      "rawOcrTokenCount": 23,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00001-db87ae9e",
+      "id": "word-he",
       "kind": "word",
       "promptEs": "he",
       "answerEn": "I have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00001",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-372f7e2fd2d01ce2a1d7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00002-d5392bcf",
+      "id": "grammar-present-perfect",
+      "kind": "grammar",
+      "promptEs": "he/has/ha/hemos/habéis/han + participio",
+      "answerEn": "Use he, has, ha, hemos, habéis, or han followed by the verb’s completed-action form.",
+      "noteEn": "These are forms of haber, the helper verb used here like English “have.” For most verbs, the completed-action form ends in -ado after an -ar verb and -ido after an -er or -ir verb. This form is called the past participle, and it does not change after haber. How often this tense is used instead of the simple past varies by region.",
+      "tags": [
+        "B1",
+        "grammar",
+        "perfect tense"
+      ],
+      "questionEn": "How do you say “have done,” as in “I have finished”?",
+      "example": {
+        "es": "He terminado.",
+        "en": "I have finished."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pensado--haber-participle",
       "kind": "word",
       "promptEs": "pensado",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "thought; considered (completed-action form used after haber)",
+      "noteEn": "Pensado is the regular completed-action form of pensar. After he, has, ha, hemos, habéis, or han, it stays unchanged and helps describe a thought connected to the present.",
+      "example": {
+        "es": "He pensado en otra opción.",
+        "en": "I have thought about another option."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pensar",
+        "past participle",
+        "present perfect",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00002",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-635d25758b37d82fe1e6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00003-fd9b4e80",
+      "id": "concept-stephen-hawking-media-authority-joke",
+      "kind": "concept",
+      "promptEs": "Stephen Hawking · físico · sugerencia de cine · aviso",
+      "questionEn": "Why does a tentative movie suggestion become major scientific news?",
+      "answerEn": "Stephen Hawking's scientific authority makes the listeners and newspaper treat an ordinary film suggestion as if it contained expert knowledge or a warning.",
+      "noteEn": "Hawking was a famous theoretical physicist, so the newspaper labels him the smartest man and overinterprets a casual comment outside his field. The official title text escalates the same media distortion: a remark about The Town becomes a declaration about all space and time, followed by questions about whether science should judge Ben Affleck and Matt Damon.",
+      "tags": [
+        "concept",
+        "Stephen Hawking",
+        "media",
+        "scientific authority",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00003",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00004-cf012dbe",
+      "id": "word-luego",
       "kind": "word",
       "promptEs": "luego",
       "answerEn": "then; later",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00004",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5ac675ba63c5648de9a6",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00005-8ea815f4",
+      "id": "word-podríamos--tentative-suggestion",
       "kind": "word",
-      "promptEs": "podriamos",
-      "answerEn": "Meaning needs review",
+      "promptEs": "podríamos",
+      "answerEn": "we could (a possibility or tentative suggestion)",
+      "noteEn": "Podríamos is the “would/could” form of poder for “we.” Poder keeps its whole dictionary form and adds -íamos. It often makes a suggestion sound tentative rather than stating a firm plan.",
+      "example": {
+        "es": "Podríamos salir temprano.",
+        "en": "We could leave early."
+      },
+      "tags": [
+        "word",
+        "conditional",
+        "suggestion",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-caza-de-nerds",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-simple-conditional",
+      "kind": "grammar",
+      "promptEs": "infinitivo + terminación condicional (-ía, -ías, -íamos…)",
+      "questionEn": "How do you form a Spanish “would” verb such as “would forget”?",
+      "answerEn": "Keep the whole dictionary form and add a conditional ending such as -ía.",
+      "noteEn": "The same endings attach to verbs ending in -ar, -er, and -ir. The ending changes for the person: -ía, -ías, -ía, -íamos, -íais, or -ían.",
+      "example": {
+        "es": "Viajaríamos en tren.",
+        "en": "We would travel by train."
+      },
+      "tags": [
+        "grammar",
+        "conditional",
+        "would",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-merlin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-poder-infinitive",
+      "kind": "grammar",
+      "promptEs": "poder + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone can, could, or may do something?",
+      "answerEn": "Use a form of poder for the person and situation, then keep the action verb in its unchanged dictionary form.",
+      "noteEn": "Poder changes to forms such as puedo, puedes, puede, podemos, and pueden for present ability or possibility. Podría can present a possible or imagined option. The following action keeps its -ar, -er, or -ir ending.",
+      "example": {
+        "es": "Podemos entrar ahora.",
+        "en": "We can enter now."
+      },
+      "tags": [
+        "A1",
+        "grammar",
+        "ability",
+        "possibility",
+        "verb pattern"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ir--go",
+      "kind": "word",
+      "promptEs": "ir",
+      "answerEn": "to go",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "movement",
+        "infinitive"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00005",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d501a2131677c98ac6fb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00006-b4aff150",
-      "kind": "word",
-      "promptEs": "jr",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00006",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-f04a21f9e1c244d59df2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-stephen-hawking-00007-fcae1efa",
+      "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to the (a + el)",
+      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "example": {
+        "es": "Voy al mercado.",
+        "en": "I’m going to the market."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00007",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00008-26f7d160",
+      "id": "word-cine",
       "kind": "word",
       "promptEs": "cine",
-      "answerEn": "Meaning needs review",
+      "answerEn": "cinema; movie theater",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "place",
+        "film"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00008",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-1694f8317982ddce140c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00009-912c9aca",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00009",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00010-d44b00ba",
+      "id": "word-físico--physicist",
       "kind": "word",
       "promptEs": "físico",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "physicist (masculine singular)",
+      "noteEn": "Físico can be an adjective meaning “physical,” but here it is a noun for a person who works in physics.",
+      "example": {
+        "es": "El físico estudia la luz.",
+        "en": "The physicist studies light."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "profession",
+        "physics",
+        "masculine singular"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00010",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-411aa5bf827619c33331",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-caza-de-nerds",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00011-5914f2fc",
-      "kind": "word",
-      "promptEs": "stephen",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00011",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-267eed33dc459584a996",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-stephen-hawking-00012-4287330b",
-      "kind": "word",
-      "promptEs": "hawking",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00012",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8078abeaa8eba6eddf7b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-stephen-hawking-00013-4f0f373d",
+      "id": "word-sugiere--suggests",
       "kind": "word",
       "promptEs": "sugiere",
-      "answerEn": "to suggest",
-      "noteEn": "",
+      "answerEn": "suggests; recommends",
+      "noteEn": "Sugiere is the present form of sugerir for one person or thing. In the stressed part of this verb, e changes to ie: sugerir becomes sugiere.",
+      "example": {
+        "es": "Marta sugiere otra ruta.",
+        "en": "Marta suggests another route."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "sugerir",
+        "suggestion",
+        "present tense",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00013",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ddcacb6b711b40db2de1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00014-a041c79a",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-sugerir-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "sugerir que + verbo en forma especial",
+      "questionEn": "How do you say that someone suggests that another person do an action?",
+      "answerEn": "Use a form of sugerir, then que, then put the proposed action in the special subjunctive form.",
+      "noteEn": "The subjunctive is a special verb form used here because the action is being proposed rather than stated as a fact. Each verb changes for its own doer: sugiere can introduce one person's suggestion, while the later verb changes for whoever would act. For example, ordinary hablamos becomes hablemos, and ordinary vemos becomes veamos.",
+      "example": {
+        "es": "Lucía sugiere que salgamos temprano.",
+        "en": "Lucía suggests that we leave early."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "sugerir",
+        "suggestion",
+        "subjunctive",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00014",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00015-d82b5c8c",
+      "id": "word-veamos--suggestion-subjunctive",
       "kind": "word",
       "promptEs": "veamos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that we watch; that we see (special form after a suggestion)",
+      "noteEn": "Veamos is a special form of ver used when seeing or watching is proposed rather than reported as a fact. The ordinary statement form vemos changes to veamos after a frame such as sugiere que. On its own, veamos can instead mean ‘let's see.’",
+      "example": {
+        "es": "El profesor sugiere que veamos el vídeo.",
+        "en": "The teacher suggests that we watch the video."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "ver",
+        "suggestion",
+        "subjunctive",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00015",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c065aea2ef9dfca9ae67",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00016-a38a73e5",
+      "id": "word-más--more",
       "kind": "word",
       "promptEs": "más",
-      "answerEn": "Meaning needs review",
+      "answerEn": "more",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00016",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00017-5003bdc9",
+      "id": "word-películas",
       "kind": "word",
       "promptEs": "películas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "movies; films",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "film",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00017",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e2fcf11071c2d51bf79a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00018-89538413",
+      "id": "word-qué--interrogative",
       "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
+      "promptEs": "qué",
+      "answerEn": "what",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00018",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0007",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00019-583a5885",
+      "id": "question-words",
+      "kind": "grammar",
+      "promptEs": "qué · cómo · cuándo…",
+      "answerEn": "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+      "noteEn": "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "accents"
+      ],
+      "questionEn": "Why do words such as que, como, and cuando sometimes have a written accent?",
+      "example": {
+        "es": "¿Cómo te llamas?",
+        "en": "What is your name?"
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-sabrá--speculative-future",
       "kind": "word",
       "promptEs": "sabrá",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "might know; could know (a guess about what is true now)",
+      "noteEn": "Sabrá is formed from saber's future stem sabr- and the singular ending -á. A future-looking form can also express uncertainty or a guess about the present, especially in a question, rather than knowledge at a later time.",
+      "example": {
+        "es": "¿Qué sabrá Marta del problema?",
+        "en": "What might Marta know about the problem?"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "saber",
+        "future form",
+        "conjecture",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00019",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4cb7c89aba80eaf5e253",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00020-a8543391",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-future-conjecture",
+      "kind": "grammar",
+      "promptEs": "futuro para una conjetura presente",
+      "questionEn": "How can a future-looking verb form express a guess about what is true now?",
+      "answerEn": "Use the future form to present a conclusion as likely rather than certain; English often uses “probably,” “must,” or “I wonder.”",
+      "noteEn": "Spanish future endings do not always place an event later in time. With enough context, a form such as será or querrá can signal the speaker's inference about the present. The exact English wording depends on whether the line is a statement or a question.",
+      "example": {
+        "es": "Estará en casa.",
+        "en": "She is probably at home."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "future",
+        "inference",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00020",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00021-1c671421",
+      "id": "grammar-relative-superlative",
+      "kind": "grammar",
+      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
+      "questionEn": "How do you describe someone or something as the most of a quality?",
+      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
+      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "example": {
+        "es": "Es la calle más larga.",
+        "en": "It is the longest street."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "superlative",
+        "comparison"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-hombre--man",
       "kind": "word",
       "promptEs": "hombre",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "man; adult male",
+      "noteEn": "Hombre usually names an adult male in this sense. It can also be used more broadly for humankind, which is a separate meaning.",
+      "example": {
+        "es": "Ese hombre es mi vecino.",
+        "en": "That man is my neighbor."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "person",
+        "man",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00021",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f9a1d5e8c1c2981fb24e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00022-e7497e5d",
+      "id": "word-más--superlative",
       "kind": "word",
       "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "most (in a superlative description)",
+      "noteEn": "Más normally means “more.” After el, la, los, or las, it can instead mark the highest degree in a group: la más rápida means “the fastest one.”",
+      "example": {
+        "es": "Ana es la más rápida.",
+        "en": "Ana is the fastest."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "superlative",
+        "degree"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00022",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-stephen-hawking-00023-79a84190",
+      "id": "word-listo--smart",
       "kind": "word",
       "promptEs": "listo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "smart; clever (masculine singular)",
+      "noteEn": "When listo describes intelligence, it means smart or clever. The same written word can mean ready in a different context; lista is the feminine singular form.",
+      "example": {
+        "es": "Diego es muy listo.",
+        "en": "Diego is very smart."
+      },
+      "tags": [
+        "word",
+        "intelligence",
+        "adjective",
+        "masculine",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-es--classification",
+      "kind": "word",
+      "promptEs": "es",
+      "answerEn": "is; belongs to the stated category",
+      "noteEn": "Es is the present form of ser used for one person or thing. Between two naming words, it identifies or classifies the first as the second.",
+      "example": {
+        "es": "El ajedrez es un juego.",
+        "en": "Chess is a game."
+      },
+      "tags": [
+        "word",
+        "ser",
+        "classification",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-demasiado-viejo-para-esta-mierda",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-un",
+      "kind": "word",
+      "promptEs": "un",
+      "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-stephen-hawking:ocr-token-00023",
-        "sourceLineId": "es-xkcd-stephen-hawking:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fee981365e329cbf45bd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-aviso--warning",
+      "kind": "word",
+      "promptEs": "aviso",
+      "answerEn": "warning; alert",
+      "noteEn": "Aviso can be a warning about possible danger or a notice that gives information. The surrounding situation determines which English word fits.",
+      "example": {
+        "es": "El cartel contiene un aviso de peligro.",
+        "en": "The sign contains a danger warning."
+      },
+      "tags": [
+        "word",
+        "warning",
+        "notice",
+        "noun",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-stephen-hawking",
+        "contextualSenseReviewed": true
       }
     }
   ]

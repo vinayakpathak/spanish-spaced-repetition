@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-f837970186ae3ca9",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.8794,
-    "lowConfidenceTokenCount": 7,
-    "rawOcrTokenCount": 34,
-    "filteredNonLatinTokenCount": 14,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-test-de-vision-combinado",
     "xkcdNumber": 1213,
     "publishedAt": "2013-05-17",
-    "title": "Test de visión combinado",
+    "title": "Combination Vision Test",
     "titleEs": "Test de visión combinado",
     "image": {
       "src": "https://es.xkcd.com/images/combination_vision_test.png",
       "width": 345,
       "height": 412,
       "aspectRatio": 0.8374,
-      "altEn": "Spanish-language xkcd comic #1213: Test de visión combinado"
+      "altEn": "Spanish-language xkcd comic #1213: Combination Vision Test"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,11 +36,12 @@
     },
     "titleText": {
       "es": "Si ves dos números pero son el mismo y tienes que entrecerrar los ojos para verlos, tienes sinestesia, daltonismo, diplopía y miopía.",
-      "en": "English title text pending review."
+      "en": "If you see two numbers but they're both the same and you have to squint to read them, you have synesthesia, colorblindness, diplopia, and myopia.",
+      "noteEn": "The Spanish title attribute is preserved from the Spanish archive and the English title attribute is preserved from official xkcd #1213. The raster's circular field contains hundreds of tiny diagrammatic digits: they are audited together as one composite number exclusion because their combined readable result is 42, not a sequence of Spanish lexical units. OCR recognized only scattered, often incorrect fragments of that field; none of those machine fragments is used as lesson text."
     },
     "regions": [
       {
-        "id": "es-xkcd-test-de-vision-combinado:region-0001",
+        "id": "es-xkcd-test-de-vision-combinado:heading",
         "labelEs": "TEST DE VISIÓN COMBINADO",
         "translationEn": "",
         "noteEn": "",
@@ -58,7 +53,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00001",
+            "id": "es-xkcd-test-de-vision-combinado:heading:w01",
             "text": "TEST",
             "normalized": "test",
             "bounds": [
@@ -70,11 +65,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00001-8ea0e936"
+              "word-test--test",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00002",
+            "id": "es-xkcd-test-de-vision-combinado:heading:w02",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -86,11 +84,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00002-d7774ad9"
+              "word-de--noun-classifier",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00003",
+            "id": "es-xkcd-test-de-vision-combinado:heading:w03",
             "text": "VISIÓN",
             "normalized": "visión",
             "bounds": [
@@ -102,11 +102,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00003-2f2ba931"
+              "word-vision",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00004",
+            "id": "es-xkcd-test-de-vision-combinado:heading:w04",
             "text": "COMBINADO",
             "normalized": "combinado",
             "bounds": [
@@ -118,118 +121,95 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00004-6fa48c92"
+              "word-combinado",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-combination-vision-test-42"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-vision-combinado-00001-8ea0e936",
-          "word-auto-es-xkcd-test-de-vision-combinado-00002-d7774ad9",
-          "word-auto-es-xkcd-test-de-vision-combinado-00003-2f2ba931",
-          "word-auto-es-xkcd-test-de-vision-combinado-00004-6fa48c92"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-test-de-vision-combinado:heading:app-combined-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:heading:w01",
+              "es-xkcd-test-de-vision-combinado:heading:w02",
+              "es-xkcd-test-de-vision-combinado:heading:w03",
+              "es-xkcd-test-de-vision-combinado:heading:w04"
+            ],
+            "exampleEs": "TEST DE VISIÓN COMBINADO",
+            "explanationEn": "Combinado follows the complete expanded noun phrase test de visión and describes the whole test as combining more than one kind of vision check."
+          },
+          {
+            "id": "es-xkcd-test-de-vision-combinado:heading:app-combined-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:heading:w01",
+              "es-xkcd-test-de-vision-combinado:heading:w02",
+              "es-xkcd-test-de-vision-combinado:heading:w03",
+              "es-xkcd-test-de-vision-combinado:heading:w04"
+            ],
+            "exampleEs": "TEST DE VISIÓN COMBINADO",
+            "explanationEn": "Combinado uses masculine singular -o because it describes the masculine singular head noun test, not the feminine noun visión inside the de phrase."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-test--test",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-combination-vision-test-42",
+          "word-de--noun-classifier",
+          "word-vision",
+          "word-combinado"
+        ]
       },
       {
-        "id": "es-xkcd-test-de-vision-combinado:region-0002",
-        "labelEs": "¿u25031G3568ı84g",
+        "id": "es-xkcd-test-de-vision-combinado:number-field",
+        "labelEs": "42",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 12.1387,
-          "y": 33.0097,
-          "width": 46.8208,
-          "height": 9.7087
+          "x": 7,
+          "y": 14,
+          "width": 85,
+          "height": 72.8
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00005",
-            "text": "u25031G3568ı84g",
-            "normalized": "u25031g3568ı84g",
+            "id": "es-xkcd-test-de-vision-combinado:number-field:x01",
+            "text": "42",
+            "reason": "number",
+            "rationale": "The hundreds of tiny digits are diagrammatic marks whose combined readable result is the single number 42, rather than separate Spanish lexical units.",
             "bounds": [
               {
-                "x": 12.1387,
-                "y": 33.0097,
-                "width": 46.8208,
-                "height": 9.7087
+                "x": 7,
+                "y": 14,
+                "width": 85,
+                "height": 72.8
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00005-fcae2c8a"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-vision-combinado-00005-fcae2c8a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0008",
-          "ocrConfidence": 0.3
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-test-de-vision-combinado:region-0003",
-        "labelEs": "ЧI0",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 71.6763,
-          "y": 74.2718,
-          "width": 6.3584,
-          "height": 2.4272
-        },
-        "words": [
-          {
-            "id": "es-xkcd-test-de-vision-combinado:word-00006",
-            "text": "ЧI0",
-            "normalized": "чi0",
-            "bounds": [
-              {
-                "x": 71.6763,
-                "y": 74.2718,
-                "width": 6.3584,
-                "height": 2.4272
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00006-6d7d8dfb"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-vision-combinado-00006-6d7d8dfb"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0015",
-          "ocrConfidence": 0.3
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-vision-combinado:region-0004",
-        "labelEs": "SI PUEDES VER UN NÚMERO GRANDE PERO NO EL",
+        "id": "es-xkcd-test-de-vision-combinado:caption",
+        "labelEs": "SI PUEDES VER UN NÚMERO GRANDE PERO NO EL OTRO, TIENES SINESTESIA Y DALTONISMO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 0.578,
           "y": 91.2621,
           "width": 97.6879,
-          "height": 3.8835
+          "height": 8.2524
         },
         "words": [
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00007",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w01",
             "text": "SI",
             "normalized": "si",
             "bounds": [
@@ -241,11 +221,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00007-ee22d38c"
+              "word-si",
+              "grammar-si-present-real-condition"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00008",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w02",
             "text": "PUEDES",
             "normalized": "puedes",
             "bounds": [
@@ -257,11 +238,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00008-baf04064"
+              "word-puedes",
+              "grammar-si-present-real-condition",
+              "grammar-poder-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00009",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w03",
             "text": "VER",
             "normalized": "ver",
             "bounds": [
@@ -273,11 +256,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00009-6bc7ba17"
+              "word-ver",
+              "grammar-poder-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00010",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w04",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -289,11 +273,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00010-44e61c18"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00011",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w05",
             "text": "NÚMERO",
             "normalized": "número",
             "bounds": [
@@ -305,11 +289,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00011-88c0500e"
+              "word-número",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00012",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w06",
             "text": "GRANDE",
             "normalized": "grande",
             "bounds": [
@@ -321,11 +308,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00012-3be3e1cc"
+              "word-grande",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00013",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w07",
             "text": "PERO",
             "normalized": "pero",
             "bounds": [
@@ -337,11 +327,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00013-3163b7c6"
+              "word-pero"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00014",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w08",
             "text": "NO",
             "normalized": "no",
             "bounds": [
@@ -353,11 +343,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00014-47c572c8"
+              "word-no"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00015",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w09",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -369,43 +359,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00015-57a95c17"
+              "word-el--article",
+              "grammar-article-adjective-omitted-noun"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-vision-combinado-00007-ee22d38c",
-          "word-auto-es-xkcd-test-de-vision-combinado-00008-baf04064",
-          "word-auto-es-xkcd-test-de-vision-combinado-00009-6bc7ba17",
-          "word-auto-es-xkcd-test-de-vision-combinado-00010-44e61c18",
-          "word-auto-es-xkcd-test-de-vision-combinado-00011-88c0500e",
-          "word-auto-es-xkcd-test-de-vision-combinado-00012-3be3e1cc",
-          "word-auto-es-xkcd-test-de-vision-combinado-00013-3163b7c6",
-          "word-auto-es-xkcd-test-de-vision-combinado-00014-47c572c8",
-          "word-auto-es-xkcd-test-de-vision-combinado-00015-57a95c17"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-vision-combinado:region-0005",
-        "labelEs": "OTRO, TIENES SINESTESIA Y DALTONISMO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 7.5145,
-          "y": 95.1456,
-          "width": 83.815,
-          "height": 4.3689
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00016",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w10",
             "text": "OTRO",
             "normalized": "otro",
             "bounds": [
@@ -417,11 +376,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00016-5103cd7b"
+              "word-otro",
+              "grammar-article-adjective-omitted-noun",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00017",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w11",
             "text": "TIENES",
             "normalized": "tienes",
             "bounds": [
@@ -433,11 +394,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00017-32f0ed4d"
+              "word-tienes"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00018",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w12",
             "text": "SINESTESIA",
             "normalized": "sinestesia",
             "bounds": [
@@ -449,11 +410,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00018-5fad108a"
+              "word-sinestesia",
+              "concept-combination-vision-test-42"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00019",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w13",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -465,11 +427,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00019-628d97bc"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-test-de-vision-combinado:word-00020",
+            "id": "es-xkcd-test-de-vision-combinado:caption:w14",
             "text": "DALTONISMO",
             "normalized": "daltonismo",
             "bounds": [
@@ -481,540 +443,634 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-vision-combinado-00020-305293fb"
+              "word-daltonismo",
+              "concept-combination-vision-test-42"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-vision-combinado-00016-5103cd7b",
-          "word-auto-es-xkcd-test-de-vision-combinado-00017-32f0ed4d",
-          "word-auto-es-xkcd-test-de-vision-combinado-00018-5fad108a",
-          "word-auto-es-xkcd-test-de-vision-combinado-00019-628d97bc",
-          "word-auto-es-xkcd-test-de-vision-combinado-00020-305293fb"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-test-de-vision-combinado:caption:app-condition",
+            "cardId": "grammar-si-present-real-condition",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:caption:w01",
+              "es-xkcd-test-de-vision-combinado:caption:w02"
+            ],
+            "exampleEs": "SI PUEDES",
+            "explanationEn": "Si introduces a possible condition, and puedes stays in the ordinary present form for one familiar reader."
+          },
+          {
+            "id": "es-xkcd-test-de-vision-combinado:caption:app-can-see",
+            "cardId": "grammar-poder-infinitive",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:caption:w02",
+              "es-xkcd-test-de-vision-combinado:caption:w03"
+            ],
+            "exampleEs": "PUEDES VER",
+            "explanationEn": "Puedes changes for one familiar reader, while ver remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-test-de-vision-combinado:caption:app-large-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:caption:w05",
+              "es-xkcd-test-de-vision-combinado:caption:w06"
+            ],
+            "exampleEs": "NÚMERO GRANDE",
+            "explanationEn": "Grande follows número in the neutral order for a size description."
+          },
+          {
+            "id": "es-xkcd-test-de-vision-combinado:caption:app-large-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:caption:w05",
+              "es-xkcd-test-de-vision-combinado:caption:w06"
+            ],
+            "exampleEs": "NÚMERO GRANDE",
+            "explanationEn": "Grande uses its singular form with the singular noun número; that singular form does not change for gender."
+          },
+          {
+            "id": "es-xkcd-test-de-vision-combinado:caption:app-other",
+            "cardId": "grammar-article-adjective-omitted-noun",
+            "participantWordIds": [
+              "es-xkcd-test-de-vision-combinado:caption:w09",
+              "es-xkcd-test-de-vision-combinado:caption:w10"
+            ],
+            "exampleEs": "EL OTRO",
+            "explanationEn": "El otro stands for el otro número: the masculine article and adjective remain while the repeated noun is omitted."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-si",
+          "grammar-si-present-real-condition",
+          "word-puedes",
+          "grammar-poder-infinitive",
+          "word-ver",
+          "word-un",
+          "word-número",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-combination-vision-test-42",
+          "word-grande",
+          "word-pero",
+          "word-no",
+          "word-el--article",
+          "grammar-article-adjective-omitted-noun",
+          "word-otro",
+          "word-tienes",
+          "word-sinestesia",
+          "word-y",
+          "word-daltonismo"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-test-de-vision-combinado-00001-8ea0e936",
-      "word-auto-es-xkcd-test-de-vision-combinado-00002-d7774ad9",
-      "word-auto-es-xkcd-test-de-vision-combinado-00003-2f2ba931",
-      "word-auto-es-xkcd-test-de-vision-combinado-00004-6fa48c92",
-      "word-auto-es-xkcd-test-de-vision-combinado-00005-fcae2c8a",
-      "word-auto-es-xkcd-test-de-vision-combinado-00006-6d7d8dfb",
-      "word-auto-es-xkcd-test-de-vision-combinado-00007-ee22d38c",
-      "word-auto-es-xkcd-test-de-vision-combinado-00008-baf04064",
-      "word-auto-es-xkcd-test-de-vision-combinado-00009-6bc7ba17",
-      "word-auto-es-xkcd-test-de-vision-combinado-00010-44e61c18",
-      "word-auto-es-xkcd-test-de-vision-combinado-00011-88c0500e",
-      "word-auto-es-xkcd-test-de-vision-combinado-00012-3be3e1cc",
-      "word-auto-es-xkcd-test-de-vision-combinado-00013-3163b7c6",
-      "word-auto-es-xkcd-test-de-vision-combinado-00014-47c572c8",
-      "word-auto-es-xkcd-test-de-vision-combinado-00015-57a95c17",
-      "word-auto-es-xkcd-test-de-vision-combinado-00016-5103cd7b",
-      "word-auto-es-xkcd-test-de-vision-combinado-00017-32f0ed4d",
-      "word-auto-es-xkcd-test-de-vision-combinado-00018-5fad108a",
-      "word-auto-es-xkcd-test-de-vision-combinado-00019-628d97bc",
-      "word-auto-es-xkcd-test-de-vision-combinado-00020-305293fb"
+      "word-test--test",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "concept-combination-vision-test-42",
+      "word-de--noun-classifier",
+      "word-vision",
+      "word-combinado",
+      "word-si",
+      "grammar-si-present-real-condition",
+      "word-puedes",
+      "grammar-poder-infinitive",
+      "word-ver",
+      "word-un",
+      "word-número",
+      "word-grande",
+      "word-pero",
+      "word-no",
+      "word-el--article",
+      "grammar-article-adjective-omitted-noun",
+      "word-otro",
+      "word-tienes",
+      "word-sinestesia",
+      "word-y",
+      "word-daltonismo"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.8794,
-      "lowConfidenceTokenCount": 7,
-      "rawOcrTokenCount": 34,
-      "filteredNonLatinTokenCount": 14,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00001-8ea0e936",
+      "id": "word-test--test",
       "kind": "word",
       "promptEs": "test",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "test",
+      "noteEn": "Test is a widely used loanword in Spanish. Its plural is tests.",
+      "example": {
+        "es": "Mañana tenemos un test.",
+        "en": "Tomorrow we have a test."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "loanword",
+        "assessment",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00001",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9f86d081884c7d659a2f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00002-d7774ad9",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-combination-vision-test-42",
+      "kind": "concept",
+      "promptEs": "test de visión combinado · número 42 · sinestesia · daltonismo",
+      "questionEn": "Why does this single number picture claim to test two unrelated kinds of perception at once?",
+      "answerEn": "It combines an Ishihara-style color-vision plate with a number whose large shapes are themselves made from many smaller numbers.",
+      "noteEn": "Ishihara plates normally use colored dots to test color discrimination. Here the large 4 is drawn mainly from small 2s, the large 2 mainly from small 4s, and the surrounding field from other digits. The caption jokingly diagnoses color blindness if only one large figure is seen and synesthesia if the viewer treats the small numbers as creating the larger forms. The title text extends the mock diagnosis with diplopia and myopia under still more contrived viewing conditions.",
+      "tags": [
+        "concept",
+        "vision",
+        "Ishihara test",
+        "synesthesia",
+        "42",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-vision-combinado",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
+      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "example": {
+        "es": "Necesito una taza de café.",
+        "en": "I need a coffee cup."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "noun modifier",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00002",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00003-2f2ba931",
+      "id": "word-vision",
       "kind": "word",
       "promptEs": "visión",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "vision; sight",
+      "noteEn": "Visión can mean the ability to see, what someone sees, or a broader viewpoint. The written accent marks the stressed final syllable.",
+      "example": {
+        "es": "Tiene buena visión de noche.",
+        "en": "She has good night vision."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "sight",
+        "noun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00003",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3b29f4f1999d44cc53cd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-espectro-electromagnetico",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00004-6fa48c92",
+      "id": "word-combinado",
       "kind": "word",
       "promptEs": "combinado",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "combined (masculine singular)",
+      "noteEn": "Combinado describes one masculine thing made by bringing multiple elements or tests together.",
+      "example": {
+        "es": "Es un ejercicio combinado.",
+        "en": "It is a combined exercise."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "agreement",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00004",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-915ea45a9b2441fcaae2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-vision-combinado",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00005-fcae2c8a",
-      "kind": "word",
-      "promptEs": "u25031g3568ı84g",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00012",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0008",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-1f6760240faf5f12bf65",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00006-6d7d8dfb",
-      "kind": "word",
-      "promptEs": "чi0",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00019",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0015",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-f50e9d13d7b893e15bf9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00007-ee22d38c",
+      "id": "word-si",
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00021",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00008-baf04064",
+      "id": "grammar-si-present-real-condition",
+      "kind": "grammar",
+      "promptEs": "si + verbo en presente",
+      "questionEn": "How do you introduce a real or possible condition with “if”?",
+      "answerEn": "Use si without an accent, followed by an ordinary present-time verb form.",
+      "noteEn": "This pattern treats the condition as genuinely possible. Spanish normally does not put a future-tense verb directly after si in this kind of condition; the result can appear separately as a statement, prediction, or command.",
+      "example": {
+        "es": "Si tienes tiempo, llama.",
+        "en": "If you have time, call."
+      },
+      "tags": [
+        "grammar",
+        "condition",
+        "si",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-dia-de-28-horas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-puedes",
       "kind": "word",
       "promptEs": "puedes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you can; you are able to",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00022",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a8f581759d9df081d8a8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00009-6bc7ba17",
+      "id": "grammar-poder-infinitive",
+      "kind": "grammar",
+      "promptEs": "poder + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone can, could, or may do something?",
+      "answerEn": "Use a form of poder for the person and situation, then keep the action verb in its unchanged dictionary form.",
+      "noteEn": "Poder changes to forms such as puedo, puedes, puede, podemos, and pueden for present ability or possibility. Podría can present a possible or imagined option. The following action keeps its -ar, -er, or -ir ending.",
+      "example": {
+        "es": "Podemos entrar ahora.",
+        "en": "We can enter now."
+      },
+      "tags": [
+        "A1",
+        "grammar",
+        "ability",
+        "possibility",
+        "verb pattern"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ver",
       "kind": "word",
       "promptEs": "ver",
       "answerEn": "to see",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00023",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cf542ada135ee3edcbbe",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00010-44e61c18",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00024",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00011-88c0500e",
+      "id": "word-número",
       "kind": "word",
       "promptEs": "número",
-      "answerEn": "Meaning needs review",
+      "answerEn": "number",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00025",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-84871a760b20b5c33b2d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00012-3be3e1cc",
+      "id": "word-grande",
       "kind": "word",
       "promptEs": "grande",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "big; large",
+      "noteEn": "Grande has the same singular form with masculine and feminine nouns.",
+      "example": {
+        "es": "Vimos un círculo grande.",
+        "en": "We saw a large circle."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "size",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00026",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-34ca6bb1036d148d7b9a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-vision-combinado",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00013-3163b7c6",
+      "id": "word-pero",
       "kind": "word",
       "promptEs": "pero",
       "answerEn": "but",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00027",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0db9df7d8e7ff24ae598",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00014-47c572c8",
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00028",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00015-57a95c17",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00029",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00016-5103cd7b",
+      "id": "grammar-article-adjective-omitted-noun",
+      "kind": "grammar",
+      "promptEs": "el/la/los/las o un/una + adjetivo sin repetir el sustantivo",
+      "questionEn": "How do you say “the interesting one” or “a small one” without repeating the noun?",
+      "answerEn": "Keep the article and adjective, omit the repeated noun, and make both agree with that understood noun.",
+      "noteEn": "The article is a word such as el, la, un, or una. The adjective still changes to match the omitted noun: una pequeña can mean “a small feminine one,” while uno pequeño can mean “a small masculine one.” Context supplies the missing noun.",
+      "example": {
+        "es": "Quiero una taza; dame la pequeña.",
+        "en": "I want a cup; give me the small one."
+      },
+      "tags": [
+        "grammar",
+        "omitted noun",
+        "adjectives",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-otro",
       "kind": "word",
       "promptEs": "otro",
-      "answerEn": "Meaning needs review",
+      "answerEn": "another; other (masculine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00030",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c63a855fcfec62cc64a4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00017-32f0ed4d",
+      "id": "word-tienes",
       "kind": "word",
       "promptEs": "tienes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "tener",
+        "present tense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00031",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-07ecd75fc2ab536c0be1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-compromiso",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00018-5fad108a",
+      "id": "word-sinestesia",
       "kind": "word",
       "promptEs": "sinestesia",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "synesthesia",
+      "noteEn": "La sinestesia is a condition in which stimulation of one sense or kind of thought consistently produces an additional experience, such as associating letters or numbers with colors.",
+      "example": {
+        "es": "Ella asocia sonidos con colores por su sinestesia.",
+        "en": "She associates sounds with colors because of her synesthesia."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "perception",
+        "science",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00032",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4334693350baef9682d0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-vision-combinado",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00019-628d97bc",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00033",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-vision-combinado-00020-305293fb",
+      "id": "word-daltonismo",
       "kind": "word",
       "promptEs": "daltonismo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "color blindness; color-vision deficiency",
+      "noteEn": "El daltonismo is reduced ability to distinguish certain colors. Different forms affect different color pairs.",
+      "example": {
+        "es": "El test detecta algunos tipos de daltonismo.",
+        "en": "The test detects some types of color blindness."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "vision",
+        "science",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-vision-combinado:ocr-token-00034",
-        "sourceLineId": "es-xkcd-test-de-vision-combinado:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1331eb9de9dfc0693b05",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-vision-combinado",
+        "contextualSenseReviewed": true
       }
     }
   ]

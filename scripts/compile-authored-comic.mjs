@@ -279,4 +279,10 @@ if (isMain) {
   });
 }
 
-export { main, parseArguments, readAuthoringFiles, writeCompiledOutput };
+export {
+  geometryForArtifacts,
+  main,
+  parseArguments,
+  readAuthoringFiles,
+  writeCompiledOutput,
+};

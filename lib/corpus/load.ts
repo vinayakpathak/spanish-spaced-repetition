@@ -1,4 +1,8 @@
-import type { Comic, LearningCard } from "../content";
+import type {
+  Comic,
+  LearningCard,
+  LearningContentReviewStatus,
+} from "../content";
 import { loadReviewedComic } from "./reviewed";
 import {
   CORPUS_SCHEMA_VERSION,
@@ -12,6 +16,16 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }
 
+function isReviewStatus(
+  value: unknown,
+): value is LearningContentReviewStatus {
+  return (
+    value === "needs-review" ||
+    value === "ai-authored-internal-qa" ||
+    value === "human-verified"
+  );
+}
+
 function isComic(value: unknown): value is Comic {
   return (
     isRecord(value) &&
@@ -23,7 +37,11 @@ function isComic(value: unknown): value is Comic {
     typeof value.image.src === "string" &&
     Array.isArray(value.regions) &&
     Array.isArray(value.cardIds) &&
-    value.cardIds.every((cardId) => typeof cardId === "string")
+    value.cardIds.every((cardId) => typeof cardId === "string") &&
+    isReviewStatus(value.reviewStatus) &&
+    isRecord(value.provenance) &&
+    value.provenance.contextualSensesReviewed ===
+      (value.reviewStatus !== "needs-review")
   );
 }
 
@@ -36,7 +54,12 @@ function isLearningCard(value: unknown): value is LearningCard {
     typeof value.answerEn === "string" &&
     typeof value.noteEn === "string" &&
     Array.isArray(value.tags) &&
-    value.tags.every((tag) => typeof tag === "string")
+    value.tags.every((tag) => typeof tag === "string") &&
+    value.schedulable === true &&
+    isReviewStatus(value.reviewStatus) &&
+    isRecord(value.provenance) &&
+    value.provenance.contextualSenseReviewed ===
+      (value.reviewStatus !== "needs-review")
   );
 }
 
@@ -56,6 +79,7 @@ export function parseComicBundle(
   }
   if (
     typeof value.revision !== "string" ||
+    !isReviewStatus(value.reviewStatus) ||
     !isComic(value.comic) ||
     !Array.isArray(value.cards) ||
     !value.cards.every(isLearningCard)
@@ -67,6 +91,15 @@ export function parseComicBundle(
   }
   if (value.comic.id !== entry.id) {
     throw new Error(`Corpus bundle ID does not match manifest entry ${entry.id}.`);
+  }
+  if (
+    value.reviewStatus !== entry.reviewStatus ||
+    value.comic.reviewStatus !== entry.reviewStatus ||
+    (value.cards as LearningCard[]).some(
+      (card) => card.reviewStatus !== entry.reviewStatus,
+    )
+  ) {
+    throw new Error(`Corpus bundle review status does not match ${entry.id}.`);
   }
   if (!sameStringSet(value.comic.cardIds, entry.cardIds)) {
     throw new Error(`Corpus bundle card index does not match ${entry.id}.`);
@@ -90,6 +123,7 @@ export function parseComicBundle(
   return {
     schemaVersion: CORPUS_SCHEMA_VERSION,
     revision: value.revision,
+    reviewStatus: value.reviewStatus,
     comic: value.comic,
     cards,
   };
@@ -104,8 +138,13 @@ export function comicBundleUrl(entry: CorpusManifestEntry): string {
 export function loadComicBundle(
   entry: CorpusManifestEntry,
 ): Promise<CorpusComicBundle> {
-  const reviewed = loadReviewedComic(entry.id);
-  if (reviewed) return Promise.resolve(reviewed);
+  if (entry.seedFallback) {
+    const seed = loadReviewedComic(entry.id);
+    if (!seed) {
+      return Promise.reject(new Error(`Seed fallback is missing ${entry.id}.`));
+    }
+    return Promise.resolve(seed);
+  }
 
   const cacheKey = `${entry.loadKey}@${entry.revision}`;
   const cached = bundleCache.get(cacheKey);

@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { build as viteBuild } from "vite";
 import { rankComicsByCardGraph } from "../lib/comic-importance.ts";
-import { CARDS, COMICS } from "../lib/content.ts";
+import { COMICS } from "../lib/content.ts";
 import {
   IMPORTANCE_TARGET_CARD_SCOPE,
   IMPORTANCE_TARGET_EDGE_POLICY,
@@ -14,6 +14,19 @@ import {
 } from "../lib/importance-target.ts";
 
 const projectURL = new URL("../", import.meta.url);
+const INTERNAL_QA_STATUS = "ai-authored-internal-qa";
+const EXPECTED_SEED_FALLBACK_IDS = [
+  "duty-calls",
+  "exploits-of-a-mom",
+  "photos",
+  "python",
+];
+const AUTHORING_ONLY_FIELDS = [
+  "editorialStatus",
+  "qualityStatus",
+  "humanVerified",
+  "semanticQa",
+];
 
 async function json(relativePath) {
   return JSON.parse(await readFile(new URL(relativePath, projectURL), "utf8"));
@@ -22,8 +35,49 @@ async function json(relativePath) {
 function sameSet(first, second) {
   return (
     new Set(first).size === new Set(second).size &&
+    new Set(second).size === new Set(first).size &&
     first.every((value) => second.includes(value))
   );
+}
+
+function sorted(values) {
+  return [...values].sort();
+}
+
+function assertValidBounds(bounds, label) {
+  assert.equal(typeof bounds, "object", `${label} is an object`);
+  for (const key of ["x", "y", "width", "height"]) {
+    assert.equal(Number.isFinite(bounds[key]), true, `${label}.${key} is finite`);
+    assert.ok(
+      bounds[key] >= 0 && bounds[key] <= 100,
+      `${label}.${key} is a percentage`,
+    );
+  }
+  assert.ok(bounds.width > 0, `${label} has positive width`);
+  assert.ok(bounds.height > 0, `${label} has positive height`);
+  assert.ok(
+    bounds.x + bounds.width <= 100.0001,
+    `${label} stays inside the image`,
+  );
+  assert.ok(
+    bounds.y + bounds.height <= 100.0001,
+    `${label} stays inside the image`,
+  );
+}
+
+let publishedCorpusPromise;
+async function publishedCorpus() {
+  publishedCorpusPromise ??= (async () => {
+    const manifest = await json("public/corpus/manifest.json");
+    const bundles = await Promise.all(
+      manifest.comics.map(async (entry) => [
+        entry.id,
+        await json(`public/corpus/comics/${entry.loadKey}.json`),
+      ]),
+    );
+    return { manifest, bundlesById: new Map(bundles) };
+  })();
+  return publishedCorpusPromise;
 }
 
 async function loadRuntimeManifestParser() {
@@ -47,14 +101,26 @@ async function loadRuntimeManifestParser() {
   );
 }
 
-test("the lazy corpus covers all 258 archive entries and preserves source anomalies", async () => {
-  const [source, rawManifest] = await Promise.all([
+test("the schema-v3 runtime covers all 258 archive entries with only internal-QA content", async () => {
+  const [source, { manifest }] = await Promise.all([
     json("data/source/es-xkcd.json"),
-    json("public/corpus/manifest.json"),
+    publishedCorpus(),
   ]);
-  const manifest = rawManifest;
+  const sourceById = new Map(source.comics.map((comic) => [comic.id, comic]));
 
   assert.equal(source.comics.length, 258);
+  assert.equal(manifest.schemaVersion, 3);
+  assert.equal(manifest.reviewStatus, INTERNAL_QA_STATUS);
+  assert.equal(manifest.provenance.contextualSensesReviewed, true);
+  assert.deepEqual(manifest.counts, {
+    comics: 258,
+    authoredComics: 254,
+    reviewedSeedComics: 4,
+    needsReviewComics: 0,
+    cards: 6_466,
+    schedulableCards: 6_466,
+    wordOccurrences: 14_768,
+  });
   assert.equal(manifest.comics.length, 258);
   assert.deepEqual(
     new Set(manifest.comics.map((comic) => comic.id)),
@@ -64,22 +130,54 @@ test("the lazy corpus covers all 258 archive entries and preserves source anomal
   assert.equal(new Set(manifest.comics.map((comic) => comic.loadKey)).size, 258);
   assert.equal(
     new Set(manifest.comics.map((comic) => comic.xkcdNumber)).size,
+    258,
+    "the runtime keeps the source archive's distinct translation numbers",
+  );
+
+  for (const entry of manifest.comics) {
+    const sourceComic = sourceById.get(entry.id);
+    assert.ok(sourceComic, entry.id);
+    assert.equal(entry.xkcdNumber, sourceComic.number, entry.id);
+    assert.equal(entry.publishedAt, sourceComic.publishedAt, entry.id);
+    assert.equal(entry.titleEs, sourceComic.title, entry.id);
+    assert.equal(entry.reviewStatus, INTERNAL_QA_STATUS, entry.id);
+    assert.equal(entry.provenance.contextualSensesReviewed, true, entry.id);
+    assert.ok(
+      ["individually-authored", "reviewed-seed"].includes(
+        entry.provenance.sourceKind,
+      ),
+      entry.id,
+    );
+    if (entry.provenance.sourceKind === "individually-authored") {
+      assert.equal(entry.imageSrc, sourceComic.imageUrl, entry.id);
+    }
+  }
+
+  assert.deepEqual(
+    sorted(
+      manifest.comics
+        .filter((comic) => comic.provenance.sourceKind === "reviewed-seed")
+        .map((comic) => comic.id),
+    ),
+    EXPECTED_SEED_FALLBACK_IDS,
+  );
+  assert.equal(
+    manifest.comics.filter(
+      (comic) => comic.provenance.sourceKind === "individually-authored",
+    ).length,
     254,
-    "four duplicate original-number groups in the Spanish archive remain valid",
   );
-  assert.equal(
-    manifest.comics.filter((comic) => comic.reviewStatus === "reviewed").length,
-    6,
-  );
-  assert.equal(
-    manifest.comics.filter((comic) => comic.reviewStatus === "needs-review")
-      .length,
-    252,
-  );
+
+  const serialized = JSON.stringify(manifest);
+  assert.equal(serialized.includes("needs-review"), false);
+  assert.equal(serialized.includes("word-auto-"), false);
+  for (const field of AUTHORING_ONLY_FIELDS) {
+    assert.equal(serialized.includes(`"${field}"`), false, field);
+  }
 });
 
-test("all 258 manifest comics carry deterministic normalized graph importance", async () => {
-  const manifest = await json("public/corpus/manifest.json");
+test("all 258 manifest comics carry deterministic graph importance over stable card IDs", async () => {
+  const { manifest } = await publishedCorpus();
   const graph = manifest.comics.map(({ id, importanceTargetIds }) => ({
     id,
     cardIds: importanceTargetIds,
@@ -92,7 +190,6 @@ test("all 258 manifest comics carry deterministic normalized graph importance", 
   );
 
   assert.deepEqual(reordered, expected, "ranking is independent of input order");
-  assert.equal(manifest.schemaVersion, 2);
   assert.equal(expected.comics.length, 258);
   assert.equal(expected.comics[0].comicId, "es-xkcd-quince-años");
   assert.equal(expected.comics[0].rank, 1);
@@ -130,8 +227,8 @@ test("all 258 manifest comics carry deterministic normalized graph importance", 
     cardScope: IMPORTANCE_TARGET_CARD_SCOPE,
     includesSchedulableOnly: true,
     reviewStatus: IMPORTANCE_TARGET_REVIEW_STATUS,
-    provisional: true,
-    contextualSensesReviewed: false,
+    provisional: false,
+    contextualSensesReviewed: true,
     damping: expected.damping,
     tolerance: expected.tolerance,
     maxIterations: expected.maxIterations,
@@ -142,32 +239,59 @@ test("all 258 manifest comics carry deterministic normalized graph importance", 
     cardNodeCount: expected.cardNodeCount,
     edgeCount: expected.edgeCount,
   });
-  assert.equal(expected.cardNodeCount, 4_953);
-  assert.equal(expected.edgeCount, 11_758);
-  assert.equal(expected.iterations, 13);
+  assert.equal(expected.cardNodeCount, 6_466);
+  assert.equal(expected.edgeCount, 14_909);
 });
 
-test("analytics targets canonically connect schedulable cards without aliasing SRS IDs", async () => {
-  const manifest = await json("public/corpus/manifest.json");
-  const reviewedIds = new Set(COMICS.map((comic) => comic.id));
-  const reviewedCardsById = new Map(CARDS.map((card) => [card.id, card]));
+test("every lazy bundle keeps exact-card scheduling, word geometry, and authored provenance", async () => {
+  const { manifest, bundlesById } = await publishedCorpus();
+  const catalogById = new Map(
+    manifest.cardCatalog.map((card) => [card.id, card]),
+  );
+  const globalCardDefinitions = new Map();
+  const reachedCardIds = new Set();
   const targetFrequency = new Map();
+  let wordOccurrenceCount = 0;
+
+  assert.equal(bundlesById.size, 258, "all lazy bundle files exist");
+  assert.equal(catalogById.size, 6_466, "the runtime catalog is deduplicated");
 
   for (const entry of manifest.comics) {
-    let cards;
-    if (reviewedIds.has(entry.id)) {
-      cards = entry.cardIds.map((cardId) => reviewedCardsById.get(cardId));
-      assert.equal(cards.every(Boolean), true, entry.id);
-    } else {
-      const bundle = await json(`public/corpus/comics/${entry.loadKey}.json`);
-      cards = bundle.cards;
-    }
-    const expectedTargets = importanceTargetIdsForCards(cards);
-    assert.deepEqual(entry.importanceTargetIds, expectedTargets, entry.id);
+    const bundle = bundlesById.get(entry.id);
+    assert.ok(bundle, entry.id);
+    assert.equal(bundle.schemaVersion, 3, entry.id);
+    assert.equal(bundle.revision, entry.revision, entry.id);
+    assert.equal(bundle.reviewStatus, INTERNAL_QA_STATUS, entry.id);
+    assert.equal(bundle.comic.id, entry.id, entry.id);
+    assert.equal(bundle.comic.reviewStatus, INTERNAL_QA_STATUS, entry.id);
+    assert.equal(bundle.provenance.contextualSensesReviewed, true, entry.id);
+    assert.equal(
+      bundle.comic.provenance.contextualSensesReviewed,
+      true,
+      entry.id,
+    );
+    assert.ok(bundle.comic.regions.length >= 1, entry.id);
+    assert.ok(sameSet(bundle.comic.cardIds, entry.cardIds), entry.id);
+
+    const cardsById = new Map(bundle.cards.map((card) => [card.id, card]));
+    assert.equal(cardsById.size, bundle.cards.length, `${entry.id} card IDs`);
+    assert.ok(sameSet([...cardsById.keys()], entry.cardIds), entry.id);
+    assert.deepEqual(
+      entry.importanceTargetIds,
+      importanceTargetIdsForCards(bundle.cards),
+      entry.id,
+    );
     assert.equal(
       entry.importanceTargetIds.every(isImportanceTargetId),
       true,
       entry.id,
+    );
+    assert.deepEqual(
+      entry.importanceTargetIds,
+      sorted(
+        entry.cardIds.map((cardId) => `card:${encodeURIComponent(cardId)}`),
+      ),
+      `${entry.id} analytics uses namespaced stable IDs`,
     );
     assert.equal(
       entry.importanceTargetIds.some((targetId) =>
@@ -176,63 +300,165 @@ test("analytics targets canonically connect schedulable cards without aliasing S
       false,
       `${entry.id} keeps analytics targets out of exact-card SRS indexes`,
     );
-    assert.equal(entry.importance.cardCount, entry.importanceTargetIds.length);
     for (const targetId of entry.importanceTargetIds) {
       targetFrequency.set(targetId, (targetFrequency.get(targetId) ?? 0) + 1);
     }
+
+    const comicReachableIds = new Set();
+    for (const region of bundle.comic.regions) {
+      assertValidBounds(region.bounds, `${entry.id}/${region.id}`);
+      const wordsById = new Map(region.words.map((word) => [word.id, word]));
+      assert.equal(
+        wordsById.size,
+        region.words.length,
+        `${entry.id}/${region.id} word IDs`,
+      );
+      const regionReachableIds = new Set();
+
+      for (const word of region.words) {
+        wordOccurrenceCount += 1;
+        assert.ok(word.bounds.length >= 1, `${entry.id}/${word.id} has geometry`);
+        word.bounds.forEach((bounds, index) =>
+          assertValidBounds(bounds, `${entry.id}/${word.id}.bounds[${index}]`),
+        );
+        assert.ok(word.cardIds.length >= 1, `${entry.id}/${word.id} is clickable`);
+        const contextualWordCard = cardsById.get(word.cardIds[0]);
+        assert.equal(contextualWordCard?.kind, "word", `${entry.id}/${word.id}`);
+        assert.equal(
+          contextualWordCard?.promptEs,
+          word.normalized,
+          `${entry.id}/${word.id} starts with its contextual word card`,
+        );
+        for (const cardId of word.cardIds) {
+          assert.ok(cardsById.has(cardId), `${entry.id}/${word.id}/${cardId}`);
+          regionReachableIds.add(cardId);
+          comicReachableIds.add(cardId);
+        }
+      }
+
+      for (const application of region.applications) {
+        assert.ok(
+          cardsById.has(application.cardId),
+          `${entry.id}/${application.id}`,
+        );
+        assert.ok(application.participantWordIds.length >= 1, application.id);
+        for (const wordId of application.participantWordIds) {
+          const participant = wordsById.get(wordId);
+          assert.ok(participant, `${entry.id}/${application.id}/${wordId}`);
+          assert.ok(
+            participant.cardIds.includes(application.cardId),
+            `${entry.id}/${application.id} links only through participating words`,
+          );
+        }
+      }
+      assert.ok(
+        sameSet(region.cardIds, [...regionReachableIds]),
+        `${entry.id}/${region.id} region index`,
+      );
+    }
+    assert.ok(
+      sameSet(bundle.comic.cardIds, [...comicReachableIds]),
+      `${entry.id} comic index reaches every scheduled card`,
+    );
+
+    for (const card of bundle.cards) {
+      assert.equal(card.reviewStatus, INTERNAL_QA_STATUS, card.id);
+      assert.equal(card.schedulable, true, card.id);
+      assert.equal(card.provenance.contextualSenseReviewed, true, card.id);
+      assert.deepEqual(catalogById.get(card.id), card, card.id);
+      const existing = globalCardDefinitions.get(card.id);
+      if (existing) assert.deepEqual(card, existing, card.id);
+      else globalCardDefinitions.set(card.id, card);
+      reachedCardIds.add(card.id);
+    }
+
+    const serialized = JSON.stringify(bundle);
+    assert.equal(serialized.includes("needs-review"), false, entry.id);
+    assert.equal(serialized.includes("word-auto-"), false, entry.id);
+    for (const field of AUTHORING_ONLY_FIELDS) {
+      assert.equal(
+        serialized.includes(`"${field}"`),
+        false,
+        `${entry.id}/${field}`,
+      );
+    }
   }
 
-  assert.equal(targetFrequency.size, 4_953);
+  assert.equal(wordOccurrenceCount, 14_768);
+  assert.equal(targetFrequency.size, 6_466);
   assert.equal(
     [...targetFrequency.values()].reduce((sum, count) => sum + count, 0),
-    11_758,
-  );
-  assert.equal(targetFrequency.get("word:en|in%3B%20on"), 145);
-  assert.equal(
-    targetFrequency.get("word:de|meaning%20needs%20review"),
-    202,
+    14_909,
   );
   assert.equal(
     [...targetFrequency.values()].filter((comicCount) => comicCount > 1).length,
-    1_205,
+    1_700,
+    "stable shared cards connect the corpus graph",
   );
+  assert.deepEqual(reachedCardIds, new Set(catalogById.keys()));
 });
 
-test("the browser manifest parser accepts the complete corpus, including its Unicode load key", async () => {
-  const [rawManifest, parser] = await Promise.all([
-    json("public/corpus/manifest.json"),
+test("the browser parser marks exactly four checked-in seed fallbacks", async () => {
+  const [{ manifest: rawManifest }, parser] = await Promise.all([
+    publishedCorpus(),
     loadRuntimeManifestParser(),
   ]);
 
   const parsed = parser.parseCorpusManifest(rawManifest);
   const merged = parser.mergeReviewedManifest(parsed);
+  assert.equal(parsed.schemaVersion, 3);
   assert.equal(parsed.comics.length, 258);
-  assert.equal(new Set(parsed.comics.map((comic) => comic.xkcdNumber)).size, 254);
+  assert.equal(new Set(parsed.comics.map((comic) => comic.xkcdNumber)).size, 258);
   assert.equal(
     parsed.comics.find((comic) => comic.id === "es-xkcd-quince-años")
       ?.loadKey,
     "es-xkcd-quince-años",
   );
-  assert.equal(parsed.cardCatalog.length, 14_485);
-  for (const reviewed of COMICS) {
+  assert.equal(parsed.cardCatalog.length, 6_466);
+  assert.deepEqual(
+    sorted(
+      merged.comics
+        .filter((comic) => comic.seedFallback)
+        .map((comic) => comic.id),
+    ),
+    EXPECTED_SEED_FALLBACK_IDS,
+  );
+
+  for (const comicId of EXPECTED_SEED_FALLBACK_IDS) {
     assert.deepEqual(
-      merged.comics.find((comic) => comic.id === reviewed.id)?.importance,
-      parsed.comics.find((comic) => comic.id === reviewed.id)?.importance,
-      `reviewed adapter preserves the full-corpus score for ${reviewed.id}`,
+      merged.comics.find((comic) => comic.id === comicId)?.importance,
+      parsed.comics.find((comic) => comic.id === comicId)?.importance,
+      `seed adapter preserves the full-corpus score for ${comicId}`,
     );
   }
+  for (const comicId of ["correlation", "tech-support"]) {
+    const runtime = merged.comics.find((comic) => comic.id === comicId);
+    assert.equal(runtime?.seedFallback, undefined, comicId);
+    assert.equal(runtime?.revision.startsWith("runtime-"), true, comicId);
+  }
 
-  const mismatchedReviewed = {
-    ...parsed,
-    comics: parsed.comics.map((comic) =>
-      comic.id === COMICS[0].id
-        ? { ...comic, cardIds: comic.cardIds.slice(1) }
-        : comic,
-    ),
-  };
+  const wrongTarget = structuredClone(rawManifest);
+  wrongTarget.comics[0].importanceTargetIds[0] = "card:not-its-srs-card";
   assert.throws(
-    () => parser.mergeReviewedManifest(mismatchedReviewed),
-    /Remote reviewed curriculum does not match/,
+    () => parser.parseCorpusManifest(wrongTarget),
+    /invalid comic entry/,
+  );
+
+  const truncated = structuredClone(rawManifest);
+  truncated.comics.pop();
+  truncated.counts.comics -= 1;
+  truncated.counts.authoredComics -= 1;
+  assert.throws(
+    () => parser.parseCorpusManifest(truncated),
+    /must contain all 258 comics/,
+    "a partial deployment must enter degraded non-persisting mode",
+  );
+
+  const wrongCounts = structuredClone(rawManifest);
+  wrongCounts.counts.cards -= 1;
+  assert.throws(
+    () => parser.parseCorpusManifest(wrongCounts),
+    /counts do not match its card catalog/,
   );
 
   const wrongOrder = structuredClone(rawManifest);
@@ -245,7 +471,7 @@ test("the browser manifest parser accepts the complete corpus, including its Uni
   );
 });
 
-test("degraded corpus hydration never overwrites saved generated progress", async (t) => {
+test("degraded corpus hydration never overwrites saved full-corpus progress", async (t) => {
   const [parser, pageSource] = await Promise.all([
     loadRuntimeManifestParser(),
     readFile(new URL("app/page.tsx", projectURL), "utf8"),
@@ -275,7 +501,10 @@ test("degraded corpus hydration never overwrites saved generated progress", asyn
 
   const savedProgress = {
     cards: {
-      "generated-card": { status: "learning", dueDay: 2 },
+      "stable-card": {
+        status: "learning",
+        dueAt: "2026-08-31T12:00:00.000Z",
+      },
     },
   };
   const reducedFallbackState = { cards: {} };
@@ -297,153 +526,30 @@ test("degraded corpus hydration never overwrites saved generated progress", asyn
   );
 });
 
-test("every generated OCR word is directly clickable and schedules only its exact provisional card", async () => {
-  const manifest = await json("public/corpus/manifest.json");
-  const reviewedIds = new Set(COMICS.map((comic) => comic.id));
-  const catalogById = new Map(
-    manifest.cardCatalog.map((card) => [card.id, card]),
-  );
-  const globalGeneratedCardIds = new Set();
-  const globalSchedulableCardIds = new Set();
-  let generatedComicCount = 0;
-  let generatedWordCount = 0;
-  let unresolvedCardCount = 0;
-
-  for (const entry of manifest.comics) {
-    if (reviewedIds.has(entry.id)) continue;
-    generatedComicCount += 1;
-    const rawBundle = await json(`public/corpus/comics/${entry.loadKey}.json`);
-    const bundle = rawBundle;
-
-    assert.equal(rawBundle.reviewStatus, "needs-review");
-    assert.equal(rawBundle.comic.reviewStatus, "needs-review");
-    assert.ok(bundle.comic.regions.length >= 1);
-    assert.ok(sameSet(bundle.comic.cardIds, entry.cardIds));
-
-    const cardsById = new Map(bundle.cards.map((card) => [card.id, card]));
-    const schedulableIds = bundle.cards
-      .filter((card) => card.schedulable)
-      .map((card) => card.id);
-    assert.ok(sameSet(schedulableIds, entry.cardIds));
-    const words = bundle.comic.regions.flatMap((region) => {
-      assert.equal(region.translationEn, "");
-      assert.equal(region.noteEn, "");
-      assert.deepEqual(region.applications, []);
-      assert.ok(
-        sameSet(
-          region.cardIds,
-          region.words.map((word) => word.cardIds[0]),
-        ),
-      );
-      return region.words;
-    });
-
-    assert.equal(words.length, bundle.cards.length);
-    generatedWordCount += words.length;
-    for (const word of words) {
-      assert.equal(
-        [...word.text].some(
-          (character) =>
-            /\p{Letter}/u.test(character) &&
-            /\p{Script=Latin}/u.test(character),
-        ),
-        true,
-        `${entry.id}/${word.id} contains a Latin-script letter`,
-      );
-      assert.ok(word.bounds.length >= 1, `${entry.id}/${word.id} has geometry`);
-      assert.equal(word.cardIds.length, 1);
-      const card = cardsById.get(word.cardIds[0]);
-      assert.equal(card?.kind, "word");
-      assert.equal(card?.promptEs, word.normalized);
-      assert.equal(card.reviewStatus, "needs-review");
-      assert.equal(card.provenance.contextualSenseReviewed, false);
-      assert.equal(card.schedulable, true);
-      assert.ok(entry.cardIds.includes(card.id));
-      assert.ok(bundle.comic.cardIds.includes(card.id));
-      assert.deepEqual(catalogById.get(card.id), card);
-      globalSchedulableCardIds.add(card.id);
-      if (card.answerEn === "Meaning needs review") {
-        unresolvedCardCount += 1;
-      }
-      assert.equal(globalGeneratedCardIds.has(card.id), false, card.id);
-      globalGeneratedCardIds.add(card.id);
-    }
-  }
-
-  assert.equal(generatedComicCount, 252);
-  assert.equal(generatedWordCount, 14_485);
-  assert.equal(globalSchedulableCardIds.size, 14_485);
-  assert.equal(unresolvedCardCount, 9_466);
-  assert.equal(globalGeneratedCardIds.size, generatedWordCount);
-  assert.equal(manifest.counts.generatedCards, generatedWordCount);
-  assert.equal(
-    manifest.counts.schedulableGeneratedCards,
-    globalSchedulableCardIds.size,
-  );
-
-  const catalogIds = manifest.cardCatalog.map((card) => card.id);
-  assert.equal(manifest.cardCatalog.length, 14_485);
-  assert.equal(new Set(catalogIds).size, catalogIds.length);
-  assert.ok(sameSet(catalogIds, [...globalSchedulableCardIds]));
-  for (const card of manifest.cardCatalog) {
-    assert.equal(card.kind, "word");
-    assert.equal(card.reviewStatus, "needs-review");
-    assert.equal(card.schedulable, true);
-    assert.equal(card.provenance.contextualSenseReviewed, false);
-  }
-  assert.equal(
-    manifest.cardCatalog.filter(
-      (card) => card.answerEn === "Meaning needs review",
-    ).length,
-    9_466,
-  );
-});
-
-test("manual overrides recover the only two visibly textual zero-OCR comics", async () => {
-  const manifest = await json("public/corpus/manifest.json");
-  const expected = new Map([
-    ["es-xkcd-agitador-wikipedista", [["cita", "citation"], ["requerida", "required"]]],
-    ["es-xkcd-perder-el-control", [["juego", "game"], ["sexual", "sexual"]]],
-  ]);
-
-  for (const [comicId, expectedCards] of expected) {
-    const entry = manifest.comics.find((comic) => comic.id === comicId);
-    const bundle = await json(`public/corpus/comics/${entry.loadKey}.json`);
-    assert.deepEqual(
-      bundle.cards.map((card) => [card.promptEs, card.answerEn]),
-      expectedCards,
-    );
-    assert.equal(bundle.cards.every((card) => card.schedulable), true);
-    assert.equal(
-      bundle.cards.every(
-        (card) => card.provenance.method === "manual-ocr-override",
-      ),
-      true,
-    );
-    assert.equal(entry.cardIds.length, 2);
-  }
-
-  const wordless = manifest.comics.find(
-    (comic) => comic.id === "es-xkcd-ser-querido",
-  );
-  const wordlessBundle = await json(
-    `public/corpus/comics/${wordless.loadKey}.json`,
-  );
-  assert.deepEqual(wordless.cardIds, []);
-  assert.deepEqual(wordlessBundle.cards, []);
-  assert.deepEqual(wordlessBundle.comic.regions[0].words, []);
-});
-
-test("reviewed seed comics remain authoritative in the 258-comic manifest", async () => {
-  const manifest = await json("public/corpus/manifest.json");
-  const byId = new Map(manifest.comics.map((comic) => [comic.id, comic]));
+test("the four seed-only bundles stay exact while authored seed overlaps supersede them", async () => {
+  const { manifest, bundlesById } = await publishedCorpus();
+  const manifestById = new Map(manifest.comics.map((comic) => [comic.id, comic]));
 
   for (const comic of COMICS) {
-    const runtime = byId.get(comic.id);
-    assert.ok(runtime, comic.id);
-    assert.equal(runtime.reviewStatus, "reviewed");
-    assert.equal(runtime.revision, "reviewed-v1");
-    assert.equal(runtime.imageSrc, comic.image.src);
-    assert.deepEqual(runtime.cardIds, comic.cardIds);
+    const entry = manifestById.get(comic.id);
+    const bundle = bundlesById.get(comic.id);
+    assert.ok(entry, comic.id);
+    assert.ok(bundle, comic.id);
+    assert.equal(entry.reviewStatus, INTERNAL_QA_STATUS, comic.id);
+
+    if (EXPECTED_SEED_FALLBACK_IDS.includes(comic.id)) {
+      assert.equal(entry.revision, "reviewed-v1", comic.id);
+      assert.equal(entry.provenance.sourceKind, "reviewed-seed", comic.id);
+      assert.deepEqual(entry.cardIds, comic.cardIds, comic.id);
+      assert.deepEqual(bundle.comic.cardIds, comic.cardIds, comic.id);
+    } else {
+      assert.ok(["correlation", "tech-support"].includes(comic.id), comic.id);
+      assert.equal(entry.revision.startsWith("runtime-"), true, comic.id);
+      assert.equal(
+        entry.provenance.sourceKind,
+        "individually-authored",
+        comic.id,
+      );
+    }
   }
 });

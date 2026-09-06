@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-d776ca02f17feee3",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 50,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-diapositivas",
     "xkcdNumber": 365,
     "publishedAt": "2008-01-02",
-    "title": "Diapositivas",
+    "title": "Slides",
     "titleEs": "Diapositivas",
     "image": {
       "src": "https://es.xkcd.com/images/slides.png",
       "width": 476,
       "height": 405,
       "aspectRatio": 1.1753,
-      "altEn": "Spanish-language xkcd comic #365: Diapositivas"
+      "altEn": "Spanish-language xkcd comic #365: Slides"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "¿Sabíais que te pueden echar físicamente del SIGGRAPH?",
-      "en": "English title text pending review."
+      "en": "Did you all know that they can physically throw you out of SIGGRAPH?",
+      "noteEn": "The Spanish title text switches from plural informal sabíais to singular informal te. The official English source leaves the number of listeners unspecified and also includes ‘actually,’ which the Spanish version omits."
     },
     "regions": [
       {
-        "id": "es-xkcd-diapositivas:region-0001",
-        "labelEs": "ESA GRÁFICA EXPLICABA EL",
+        "id": "es-xkcd-diapositivas:presentation-speech",
+        "labelEs": "ESA GRÁFICA EXPLICABA EL EFECTO HALL CUÁNTICO. AHORA, SI ME DISCULPAN UN MOMENTO, ESTA GRÁFICA MUESTRA LA PLUVIOSIDAD SOBRE LA CUENCA DEL AMAZONAS...",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 55.4622,
           "y": 3.9409,
           "width": 40.3361,
-          "height": 5.4187
+          "height": 27.0936
         },
         "words": [
           {
-            "id": "es-xkcd-diapositivas:word-00001",
+            "id": "es-xkcd-diapositivas:presentation-speech:w01",
             "text": "ESA",
             "normalized": "esa",
             "bounds": [
@@ -70,11 +65,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00001-8365b394"
+              "word-esa"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00002",
+            "id": "es-xkcd-diapositivas:presentation-speech:w02",
             "text": "GRÁFICA",
             "normalized": "gráfica",
             "bounds": [
@@ -86,11 +81,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00002-942c3b08"
+              "word-gráfica--chart"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00003",
+            "id": "es-xkcd-diapositivas:presentation-speech:w03",
             "text": "EXPLICABA",
             "normalized": "explicaba",
             "bounds": [
@@ -102,11 +97,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00003-89ca2a1f"
+              "word-explicaba--background-description",
+              "grammar-past-contrast"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00004",
+            "id": "es-xkcd-diapositivas:presentation-speech:w04",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -118,38 +114,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00004-e850bc18"
+              "word-el--article"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00001-8365b394",
-          "word-auto-es-xkcd-diapositivas-00002-942c3b08",
-          "word-auto-es-xkcd-diapositivas-00003-89ca2a1f",
-          "word-auto-es-xkcd-diapositivas-00004-e850bc18"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0002",
-        "labelEs": "EFECTO HALL CUÁNTICO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 55.4622,
-          "y": 8.3744,
-          "width": 34.8739,
-          "height": 4.4335
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00005",
+            "id": "es-xkcd-diapositivas:presentation-speech:w05",
             "text": "EFECTO",
             "normalized": "efecto",
             "bounds": [
@@ -161,27 +130,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00005-8e33d78d"
+              "word-efecto"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00006",
-            "text": "HALL",
-            "normalized": "hall",
-            "bounds": [
-              {
-                "x": 67.2794,
-                "y": 8.3744,
-                "width": 8.0357,
-                "height": 4.4335
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00006-c432f022"
-            ]
-          },
-          {
-            "id": "es-xkcd-diapositivas:word-00007",
+            "id": "es-xkcd-diapositivas:presentation-speech:w06",
             "text": "CUÁNTICO",
             "normalized": "cuántico",
             "bounds": [
@@ -193,37 +146,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00007-d146077f"
+              "word-cuántico--quantum-physics"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00005-8e33d78d",
-          "word-auto-es-xkcd-diapositivas-00006-c432f022",
-          "word-auto-es-xkcd-diapositivas-00007-d146077f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0003",
-        "labelEs": "AHORA, SI ME DISCULPAN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 55.4622,
-          "y": 11.8227,
-          "width": 36.9748,
-          "height": 4.9261
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00008",
+            "id": "es-xkcd-diapositivas:presentation-speech:w07",
             "text": "AHORA",
             "normalized": "ahora",
             "bounds": [
@@ -235,11 +162,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00008-cb8a869b"
+              "word-ahora"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00009",
+            "id": "es-xkcd-diapositivas:presentation-speech:w08",
             "text": "SI",
             "normalized": "si",
             "bounds": [
@@ -251,11 +178,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00009-12af6d93"
+              "word-si",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00010",
+            "id": "es-xkcd-diapositivas:presentation-speech:w09",
             "text": "ME",
             "normalized": "me",
             "bounds": [
@@ -267,11 +195,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00010-6fc61027"
+              "word-me--direct",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00011",
+            "id": "es-xkcd-diapositivas:presentation-speech:w10",
             "text": "DISCULPAN",
             "normalized": "disculpan",
             "bounds": [
@@ -283,38 +212,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00011-36637e11"
+              "word-disculpan--excuse-listeners",
+              "phrase-si-me-disculpa-un-momento"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00008-cb8a869b",
-          "word-auto-es-xkcd-diapositivas-00009-12af6d93",
-          "word-auto-es-xkcd-diapositivas-00010-6fc61027",
-          "word-auto-es-xkcd-diapositivas-00011-36637e11"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0004",
-        "labelEs": "UN MOMENTO, ESTA GRA-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 56.3025,
-          "y": 16.2562,
-          "width": 35.7143,
-          "height": 3.9409
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00012",
+            "id": "es-xkcd-diapositivas:presentation-speech:w11",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -326,11 +229,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00012-ffb0e19a"
+              "word-un",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00013",
+            "id": "es-xkcd-diapositivas:presentation-speech:w12",
             "text": "MOMENTO",
             "normalized": "momento",
             "bounds": [
@@ -342,11 +246,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00013-4c85678e"
+              "word-momento",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00014",
+            "id": "es-xkcd-diapositivas:presentation-speech:w13",
             "text": "ESTA",
             "normalized": "esta",
             "bounds": [
@@ -358,57 +263,20 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00014-35694819"
+              "word-esta--demonstrative"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00015",
-            "text": "GRA",
-            "normalized": "gra",
+            "id": "es-xkcd-diapositivas:presentation-speech:w14",
+            "text": "GRÁFICA",
+            "normalized": "gráfica",
             "bounds": [
               {
                 "x": 85.7143,
                 "y": 16.2562,
                 "width": 6.3025,
                 "height": 3.9409
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00015-88fb60e9"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00012-ffb0e19a",
-          "word-auto-es-xkcd-diapositivas-00013-4c85678e",
-          "word-auto-es-xkcd-diapositivas-00014-35694819",
-          "word-auto-es-xkcd-diapositivas-00015-88fb60e9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0005",
-        "labelEs": "FICA MUESTRA LA PLUVIO-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 55.8824,
-          "y": 19.2118,
-          "width": 37.395,
-          "height": 4.4335
-        },
-        "words": [
-          {
-            "id": "es-xkcd-diapositivas:word-00016",
-            "text": "FICA",
-            "normalized": "fica",
-            "bounds": [
+              },
               {
                 "x": 55.8824,
                 "y": 19.2118,
@@ -417,11 +285,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00016-c68b82f5"
+              "word-gráfica--chart"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00017",
+            "id": "es-xkcd-diapositivas:presentation-speech:w15",
             "text": "MUESTRA",
             "normalized": "muestra",
             "bounds": [
@@ -433,11 +301,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00017-366db0fb"
+              "word-muestra--displays"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00018",
+            "id": "es-xkcd-diapositivas:presentation-speech:w16",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -449,57 +317,20 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00018-ea080218"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00019",
-            "text": "PLUVIO",
-            "normalized": "pluvio",
+            "id": "es-xkcd-diapositivas:presentation-speech:w17",
+            "text": "PLUVIOSIDAD",
+            "normalized": "pluviosidad",
             "bounds": [
               {
                 "x": 81.4076,
                 "y": 19.2118,
                 "width": 11.8697,
                 "height": 4.4335
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00019-f08d6311"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00016-c68b82f5",
-          "word-auto-es-xkcd-diapositivas-00017-366db0fb",
-          "word-auto-es-xkcd-diapositivas-00018-ea080218",
-          "word-auto-es-xkcd-diapositivas-00019-f08d6311"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0006",
-        "labelEs": "DAD SOBRE LA CUENCA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.9832,
-          "y": 23.6453,
-          "width": 32.7731,
-          "height": 4.4335
-        },
-        "words": [
-          {
-            "id": "es-xkcd-diapositivas:word-00020",
-            "text": "DAD",
-            "normalized": "dad",
-            "bounds": [
+              },
               {
                 "x": 57.9832,
                 "y": 23.6453,
@@ -508,11 +339,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00020-d159a217"
+              "word-pluviosidad--rainfall"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00021",
+            "id": "es-xkcd-diapositivas:presentation-speech:w18",
             "text": "SOBRE",
             "normalized": "sobre",
             "bounds": [
@@ -524,11 +355,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00021-37060a1b"
+              "word-sobre--over-area"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00022",
+            "id": "es-xkcd-diapositivas:presentation-speech:w19",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -540,11 +371,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00022-445c0f37"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00023",
+            "id": "es-xkcd-diapositivas:presentation-speech:w20",
             "text": "CUENCA",
             "normalized": "cuenca",
             "bounds": [
@@ -556,38 +387,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00023-87bbbdf7"
+              "word-cuenca--drainage-basin"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00020-d159a217",
-          "word-auto-es-xkcd-diapositivas-00021-37060a1b",
-          "word-auto-es-xkcd-diapositivas-00022-445c0f37",
-          "word-auto-es-xkcd-diapositivas-00023-87bbbdf7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0007",
-        "labelEs": "DEL AMAZONAS...",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 56.3025,
-          "y": 27.0936,
-          "width": 24.7899,
-          "height": 3.9409
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00024",
+            "id": "es-xkcd-diapositivas:presentation-speech:w21",
             "text": "DEL",
             "normalized": "del",
             "bounds": [
@@ -599,11 +403,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00024-ed050902"
+              "word-del--of-the"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00025",
+            "id": "es-xkcd-diapositivas:presentation-speech:w22",
             "text": "AMAZONAS",
             "normalized": "amazonas",
             "bounds": [
@@ -615,36 +419,89 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00025-d406cf29"
+              "word-amazonas--river-region"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00024-ed050902",
-          "word-auto-es-xkcd-diapositivas-00025-d406cf29"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-diapositivas:presentation-speech:excluded-hall",
+            "text": "HALL",
+            "reason": "non-spanish-text",
+            "rationale": "Hall is the physicist's English surname inside the technical name efecto Hall cuántico, not Spanish lexical vocabulary. The surrounding Spanish words retain their own contextual word cards.",
+            "bounds": [
+              {
+                "x": 67.2794,
+                "y": 8.3744,
+                "width": 8.0357,
+                "height": 4.4335
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0007",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-diapositivas:presentation-speech:app-background-past",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:presentation-speech:w03"
+            ],
+            "exampleEs": "EXPLICABA",
+            "explanationEn": "Explicaba uses the -aba background-past form because the chart's explanatory role is presented as part of the setup rather than as a separately bounded event."
+          },
+          {
+            "id": "es-xkcd-diapositivas:presentation-speech:app-polite-excuse",
+            "cardId": "phrase-si-me-disculpa-un-momento",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:presentation-speech:w08",
+              "es-xkcd-diapositivas:presentation-speech:w09",
+              "es-xkcd-diapositivas:presentation-speech:w10",
+              "es-xkcd-diapositivas:presentation-speech:w11",
+              "es-xkcd-diapositivas:presentation-speech:w12"
+            ],
+            "exampleEs": "SI ME DISCULPAN UN MOMENTO",
+            "explanationEn": "Si opens the courteous request, me identifies the speaker, disculpan addresses several listeners, and un momento states the brief time requested."
+          }
+        ],
+        "cardIds": [
+          "word-esa",
+          "word-gráfica--chart",
+          "word-explicaba--background-description",
+          "grammar-past-contrast",
+          "word-el--article",
+          "word-efecto",
+          "word-cuántico--quantum-physics",
+          "word-ahora",
+          "word-si",
+          "phrase-si-me-disculpa-un-momento",
+          "word-me--direct",
+          "word-disculpan--excuse-listeners",
+          "word-un",
+          "word-momento",
+          "word-esta--demonstrative",
+          "word-muestra--displays",
+          "word-la--article",
+          "word-pluviosidad--rainfall",
+          "word-sobre--over-area",
+          "word-cuenca--drainage-basin",
+          "word-del--of-the",
+          "word-amazonas--river-region"
+        ]
       },
       {
-        "id": "es-xkcd-diapositivas:region-0008",
-        "labelEs": "SI NO PARAS DE DECIR \"SI ME DISCULPAN UN MOMENTO\",",
+        "id": "es-xkcd-diapositivas:narration",
+        "labelEs": "SI NO PARAS DE DECIR \"SI ME DISCULPAN UN MOMENTO\", LA GENTE TARDARÁ UN RATO EN DARSE CUENTA DE QUE LES ESTÁS MOSTRANDO DIAPOSITIVAS ALEATORIAS.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 5.4622,
           "y": 82.266,
-          "width": 87.8151,
-          "height": 5.4187
+          "width": 89.4958,
+          "height": 13.7931
         },
         "words": [
           {
-            "id": "es-xkcd-diapositivas:word-00026",
+            "id": "es-xkcd-diapositivas:narration:w01",
             "text": "SI",
             "normalized": "si",
             "bounds": [
@@ -656,11 +513,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00026-bf170de1"
+              "word-si",
+              "grammar-si-present-real-condition"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00027",
+            "id": "es-xkcd-diapositivas:narration:w02",
             "text": "NO",
             "normalized": "no",
             "bounds": [
@@ -672,11 +530,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00027-c41460ce"
+              "word-no"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00028",
+            "id": "es-xkcd-diapositivas:narration:w03",
             "text": "PARAS",
             "normalized": "paras",
             "bounds": [
@@ -688,11 +546,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00028-0426d537"
+              "word-paras--stop-doing",
+              "grammar-si-present-real-condition",
+              "grammar-parar-de-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00029",
+            "id": "es-xkcd-diapositivas:narration:w04",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -704,11 +564,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00029-f6932faa"
+              "word-de--after-parar",
+              "grammar-parar-de-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00030",
+            "id": "es-xkcd-diapositivas:narration:w05",
             "text": "DECIR",
             "normalized": "decir",
             "bounds": [
@@ -720,11 +581,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00030-30676272"
+              "word-decir",
+              "grammar-parar-de-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00031",
+            "id": "es-xkcd-diapositivas:narration:w06",
             "text": "SI",
             "normalized": "si",
             "bounds": [
@@ -736,11 +598,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00031-64b88040"
+              "word-si",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00032",
+            "id": "es-xkcd-diapositivas:narration:w07",
             "text": "ME",
             "normalized": "me",
             "bounds": [
@@ -752,11 +615,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00032-aea03dee"
+              "word-me--direct",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00033",
+            "id": "es-xkcd-diapositivas:narration:w08",
             "text": "DISCULPAN",
             "normalized": "disculpan",
             "bounds": [
@@ -768,11 +632,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00033-e9c7232f"
+              "word-disculpan--excuse-listeners",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00034",
+            "id": "es-xkcd-diapositivas:narration:w09",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -784,11 +649,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00034-3f00a5d9"
+              "word-un",
+              "phrase-si-me-disculpa-un-momento"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00035",
+            "id": "es-xkcd-diapositivas:narration:w10",
             "text": "MOMENTO",
             "normalized": "momento",
             "bounds": [
@@ -800,44 +666,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00035-f0700b2d"
+              "word-momento",
+              "phrase-si-me-disculpa-un-momento"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00026-bf170de1",
-          "word-auto-es-xkcd-diapositivas-00027-c41460ce",
-          "word-auto-es-xkcd-diapositivas-00028-0426d537",
-          "word-auto-es-xkcd-diapositivas-00029-f6932faa",
-          "word-auto-es-xkcd-diapositivas-00030-30676272",
-          "word-auto-es-xkcd-diapositivas-00031-64b88040",
-          "word-auto-es-xkcd-diapositivas-00032-aea03dee",
-          "word-auto-es-xkcd-diapositivas-00033-e9c7232f",
-          "word-auto-es-xkcd-diapositivas-00034-3f00a5d9",
-          "word-auto-es-xkcd-diapositivas-00035-f0700b2d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0009",
-        "labelEs": "LA GENTE TARDARÁ UN RATO EN DARSE CUENTA DE QUE LES",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.8824,
-          "y": 86.6995,
-          "width": 89.0756,
-          "height": 4.4335
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00036",
+            "id": "es-xkcd-diapositivas:narration:w11",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -849,11 +683,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00036-6c60fd74"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00037",
+            "id": "es-xkcd-diapositivas:narration:w12",
             "text": "GENTE",
             "normalized": "gente",
             "bounds": [
@@ -865,11 +699,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00037-b11109d6"
+              "word-gente"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00038",
+            "id": "es-xkcd-diapositivas:narration:w13",
             "text": "TARDARÁ",
             "normalized": "tardará",
             "bounds": [
@@ -881,11 +715,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00038-595cc8b6"
+              "word-tardará--take-time",
+              "grammar-simple-future",
+              "phrase-tardar-tiempo-en-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00039",
+            "id": "es-xkcd-diapositivas:narration:w14",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -897,11 +733,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00039-6a7de491"
+              "word-un",
+              "phrase-tardar-tiempo-en-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00040",
+            "id": "es-xkcd-diapositivas:narration:w15",
             "text": "RATO",
             "normalized": "rato",
             "bounds": [
@@ -913,11 +750,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00040-7f8d2977"
+              "word-rato--short-while",
+              "phrase-tardar-tiempo-en-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00041",
+            "id": "es-xkcd-diapositivas:narration:w16",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -929,11 +767,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00041-396d390f"
+              "word-en--time-to-action",
+              "phrase-tardar-tiempo-en-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00042",
+            "id": "es-xkcd-diapositivas:narration:w17",
             "text": "DARSE",
             "normalized": "darse",
             "bounds": [
@@ -945,11 +784,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00042-1b625577"
+              "word-darse--realize",
+              "phrase-tardar-tiempo-en-infinitive",
+              "grammar-pronoun-attached-to-infinitive",
+              "phrase-darse-cuenta-de"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00043",
+            "id": "es-xkcd-diapositivas:narration:w18",
             "text": "CUENTA",
             "normalized": "cuenta",
             "bounds": [
@@ -961,11 +803,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00043-01044eee"
+              "word-cuenta--darse-cuenta",
+              "phrase-darse-cuenta-de"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00044",
+            "id": "es-xkcd-diapositivas:narration:w19",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -977,11 +820,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00044-bec7228b"
+              "word-de--darse-cuenta",
+              "phrase-darse-cuenta-de"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00045",
+            "id": "es-xkcd-diapositivas:narration:w20",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -993,11 +837,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00045-25a60525"
+              "word-que--clause-link",
+              "phrase-darse-cuenta-de"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00046",
+            "id": "es-xkcd-diapositivas:narration:w21",
             "text": "LES",
             "normalized": "les",
             "bounds": [
@@ -1009,45 +854,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00046-216fb170"
+              "word-les--plural-recipient",
+              "grammar-recipient-pronoun-before-conjugated-verb"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00036-6c60fd74",
-          "word-auto-es-xkcd-diapositivas-00037-b11109d6",
-          "word-auto-es-xkcd-diapositivas-00038-595cc8b6",
-          "word-auto-es-xkcd-diapositivas-00039-6a7de491",
-          "word-auto-es-xkcd-diapositivas-00040-7f8d2977",
-          "word-auto-es-xkcd-diapositivas-00041-396d390f",
-          "word-auto-es-xkcd-diapositivas-00042-1b625577",
-          "word-auto-es-xkcd-diapositivas-00043-01044eee",
-          "word-auto-es-xkcd-diapositivas-00044-bec7228b",
-          "word-auto-es-xkcd-diapositivas-00045-25a60525",
-          "word-auto-es-xkcd-diapositivas-00046-216fb170"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-diapositivas:region-0010",
-        "labelEs": "ESTÁS MOSTRANDO DIAPOSITIVAS ALEATORIAS.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.4622,
-          "y": 90.6404,
-          "width": 70.5882,
-          "height": 5.4187
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-diapositivas:word-00047",
+            "id": "es-xkcd-diapositivas:narration:w22",
             "text": "ESTÁS",
             "normalized": "estás",
             "bounds": [
@@ -1059,11 +871,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00047-3a98b5c4"
+              "word-estás",
+              "grammar-recipient-pronoun-before-conjugated-verb",
+              "grammar-estar-gerundio"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00048",
+            "id": "es-xkcd-diapositivas:narration:w23",
             "text": "MOSTRANDO",
             "normalized": "mostrando",
             "bounds": [
@@ -1075,11 +889,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00048-b2ad2356"
+              "word-mostrando--showing",
+              "grammar-estar-gerundio"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00049",
+            "id": "es-xkcd-diapositivas:narration:w24",
             "text": "DIAPOSITIVAS",
             "normalized": "diapositivas",
             "bounds": [
@@ -1091,11 +906,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00049-e8f94e84"
+              "word-diapositivas--presentation-slides"
             ]
           },
           {
-            "id": "es-xkcd-diapositivas:word-00050",
+            "id": "es-xkcd-diapositivas:narration:w25",
             "text": "ALEATORIAS",
             "normalized": "aleatorias",
             "bounds": [
@@ -1107,1289 +922,1255 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-diapositivas-00050-04013a59"
+              "word-aleatorias--random-feminine-plural"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-diapositivas-00047-3a98b5c4",
-          "word-auto-es-xkcd-diapositivas-00048-b2ad2356",
-          "word-auto-es-xkcd-diapositivas-00049-e8f94e84",
-          "word-auto-es-xkcd-diapositivas-00050-04013a59"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-diapositivas:narration:app-real-condition",
+            "cardId": "grammar-si-present-real-condition",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w01",
+              "es-xkcd-diapositivas:narration:w03"
+            ],
+            "exampleEs": "SI NO PARAS",
+            "explanationEn": "Si introduces a genuinely possible condition, and paras uses the ordinary present form for one familiar listener; no negates that action between them."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-stop-doing",
+            "cardId": "grammar-parar-de-infinitive",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w03",
+              "es-xkcd-diapositivas:narration:w04",
+              "es-xkcd-diapositivas:narration:w05"
+            ],
+            "exampleEs": "PARAS DE DECIR",
+            "explanationEn": "Paras changes parar for one familiar listener, de supplies the required link, and decir stays in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-polite-excuse",
+            "cardId": "phrase-si-me-disculpa-un-momento",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w06",
+              "es-xkcd-diapositivas:narration:w07",
+              "es-xkcd-diapositivas:narration:w08",
+              "es-xkcd-diapositivas:narration:w09",
+              "es-xkcd-diapositivas:narration:w10"
+            ],
+            "exampleEs": "SI ME DISCULPAN UN MOMENTO",
+            "explanationEn": "This quoted occurrence uses disculpan because the courteous formula is addressed to several listeners; the other four words complete the same fixed request."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-future",
+            "cardId": "grammar-simple-future",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w13"
+            ],
+            "exampleEs": "TARDARÁ",
+            "explanationEn": "Tardará keeps the whole dictionary form tardar and adds -á for a future action by one person, group, or thing."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-take-time",
+            "cardId": "phrase-tardar-tiempo-en-infinitive",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w13",
+              "es-xkcd-diapositivas:narration:w14",
+              "es-xkcd-diapositivas:narration:w15",
+              "es-xkcd-diapositivas:narration:w16",
+              "es-xkcd-diapositivas:narration:w17"
+            ],
+            "exampleEs": "TARDARÁ UN RATO EN DARSE",
+            "explanationEn": "Tardará gives the future form, un rato supplies the duration, en is the required link, and darse is the unchanged action form with se attached."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-attached-se",
+            "cardId": "grammar-pronoun-attached-to-infinitive",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w17"
+            ],
+            "exampleEs": "DARSE",
+            "explanationEn": "Se attaches directly to the unchanged verb dar, making the single printed word darse."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-word-darse",
+            "cardId": "word-darse--realize",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w17"
+            ],
+            "exampleEs": "DARSE",
+            "explanationEn": "Darse begins the fixed expression darse cuenta here, so its contextual meaning comes from that complete expression rather than literal self-giving."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-realize",
+            "cardId": "phrase-darse-cuenta-de",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w17",
+              "es-xkcd-diapositivas:narration:w18",
+              "es-xkcd-diapositivas:narration:w19",
+              "es-xkcd-diapositivas:narration:w20"
+            ],
+            "exampleEs": "DARSE CUENTA DE QUE",
+            "explanationEn": "Darse cuenta forms the fixed expression for realizing, and de que introduces the full statement that follows as what is realized."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-word-les",
+            "cardId": "word-les--plural-recipient",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w21"
+            ],
+            "exampleEs": "LES",
+            "explanationEn": "Les treats the members of la gente collectively as the several people receiving what is shown."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-recipient-placement",
+            "cardId": "grammar-recipient-pronoun-before-conjugated-verb",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w21",
+              "es-xkcd-diapositivas:narration:w22"
+            ],
+            "exampleEs": "LES ESTÁS",
+            "explanationEn": "Les identifies the plural receivers and sits before estás, the first verb changed for the listener; the following ongoing-action form stays outside this placement pattern."
+          },
+          {
+            "id": "es-xkcd-diapositivas:narration:app-progressive",
+            "cardId": "grammar-estar-gerundio",
+            "participantWordIds": [
+              "es-xkcd-diapositivas:narration:w22",
+              "es-xkcd-diapositivas:narration:w23"
+            ],
+            "exampleEs": "ESTÁS MOSTRANDO",
+            "explanationEn": "Estás changes estar for one familiar listener, and mostrando is the -ando action form that presents the showing as in progress."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-diapositivas:ocr-line-0010",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-si",
+          "grammar-si-present-real-condition",
+          "word-no",
+          "word-paras--stop-doing",
+          "grammar-parar-de-infinitive",
+          "word-de--after-parar",
+          "word-decir",
+          "phrase-si-me-disculpa-un-momento",
+          "word-me--direct",
+          "word-disculpan--excuse-listeners",
+          "word-un",
+          "word-momento",
+          "word-la--article",
+          "word-gente",
+          "word-tardará--take-time",
+          "grammar-simple-future",
+          "phrase-tardar-tiempo-en-infinitive",
+          "word-rato--short-while",
+          "word-en--time-to-action",
+          "word-darse--realize",
+          "grammar-pronoun-attached-to-infinitive",
+          "phrase-darse-cuenta-de",
+          "word-cuenta--darse-cuenta",
+          "word-de--darse-cuenta",
+          "word-que--clause-link",
+          "word-les--plural-recipient",
+          "grammar-recipient-pronoun-before-conjugated-verb",
+          "word-estás",
+          "grammar-estar-gerundio",
+          "word-mostrando--showing",
+          "word-diapositivas--presentation-slides",
+          "word-aleatorias--random-feminine-plural"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-diapositivas-00001-8365b394",
-      "word-auto-es-xkcd-diapositivas-00002-942c3b08",
-      "word-auto-es-xkcd-diapositivas-00003-89ca2a1f",
-      "word-auto-es-xkcd-diapositivas-00004-e850bc18",
-      "word-auto-es-xkcd-diapositivas-00005-8e33d78d",
-      "word-auto-es-xkcd-diapositivas-00006-c432f022",
-      "word-auto-es-xkcd-diapositivas-00007-d146077f",
-      "word-auto-es-xkcd-diapositivas-00008-cb8a869b",
-      "word-auto-es-xkcd-diapositivas-00009-12af6d93",
-      "word-auto-es-xkcd-diapositivas-00010-6fc61027",
-      "word-auto-es-xkcd-diapositivas-00011-36637e11",
-      "word-auto-es-xkcd-diapositivas-00012-ffb0e19a",
-      "word-auto-es-xkcd-diapositivas-00013-4c85678e",
-      "word-auto-es-xkcd-diapositivas-00014-35694819",
-      "word-auto-es-xkcd-diapositivas-00015-88fb60e9",
-      "word-auto-es-xkcd-diapositivas-00016-c68b82f5",
-      "word-auto-es-xkcd-diapositivas-00017-366db0fb",
-      "word-auto-es-xkcd-diapositivas-00018-ea080218",
-      "word-auto-es-xkcd-diapositivas-00019-f08d6311",
-      "word-auto-es-xkcd-diapositivas-00020-d159a217",
-      "word-auto-es-xkcd-diapositivas-00021-37060a1b",
-      "word-auto-es-xkcd-diapositivas-00022-445c0f37",
-      "word-auto-es-xkcd-diapositivas-00023-87bbbdf7",
-      "word-auto-es-xkcd-diapositivas-00024-ed050902",
-      "word-auto-es-xkcd-diapositivas-00025-d406cf29",
-      "word-auto-es-xkcd-diapositivas-00026-bf170de1",
-      "word-auto-es-xkcd-diapositivas-00027-c41460ce",
-      "word-auto-es-xkcd-diapositivas-00028-0426d537",
-      "word-auto-es-xkcd-diapositivas-00029-f6932faa",
-      "word-auto-es-xkcd-diapositivas-00030-30676272",
-      "word-auto-es-xkcd-diapositivas-00031-64b88040",
-      "word-auto-es-xkcd-diapositivas-00032-aea03dee",
-      "word-auto-es-xkcd-diapositivas-00033-e9c7232f",
-      "word-auto-es-xkcd-diapositivas-00034-3f00a5d9",
-      "word-auto-es-xkcd-diapositivas-00035-f0700b2d",
-      "word-auto-es-xkcd-diapositivas-00036-6c60fd74",
-      "word-auto-es-xkcd-diapositivas-00037-b11109d6",
-      "word-auto-es-xkcd-diapositivas-00038-595cc8b6",
-      "word-auto-es-xkcd-diapositivas-00039-6a7de491",
-      "word-auto-es-xkcd-diapositivas-00040-7f8d2977",
-      "word-auto-es-xkcd-diapositivas-00041-396d390f",
-      "word-auto-es-xkcd-diapositivas-00042-1b625577",
-      "word-auto-es-xkcd-diapositivas-00043-01044eee",
-      "word-auto-es-xkcd-diapositivas-00044-bec7228b",
-      "word-auto-es-xkcd-diapositivas-00045-25a60525",
-      "word-auto-es-xkcd-diapositivas-00046-216fb170",
-      "word-auto-es-xkcd-diapositivas-00047-3a98b5c4",
-      "word-auto-es-xkcd-diapositivas-00048-b2ad2356",
-      "word-auto-es-xkcd-diapositivas-00049-e8f94e84",
-      "word-auto-es-xkcd-diapositivas-00050-04013a59"
+      "word-esa",
+      "word-gráfica--chart",
+      "word-explicaba--background-description",
+      "grammar-past-contrast",
+      "word-el--article",
+      "word-efecto",
+      "word-cuántico--quantum-physics",
+      "word-ahora",
+      "word-si",
+      "phrase-si-me-disculpa-un-momento",
+      "word-me--direct",
+      "word-disculpan--excuse-listeners",
+      "word-un",
+      "word-momento",
+      "word-esta--demonstrative",
+      "word-muestra--displays",
+      "word-la--article",
+      "word-pluviosidad--rainfall",
+      "word-sobre--over-area",
+      "word-cuenca--drainage-basin",
+      "word-del--of-the",
+      "word-amazonas--river-region",
+      "grammar-si-present-real-condition",
+      "word-no",
+      "word-paras--stop-doing",
+      "grammar-parar-de-infinitive",
+      "word-de--after-parar",
+      "word-decir",
+      "word-gente",
+      "word-tardará--take-time",
+      "grammar-simple-future",
+      "phrase-tardar-tiempo-en-infinitive",
+      "word-rato--short-while",
+      "word-en--time-to-action",
+      "word-darse--realize",
+      "grammar-pronoun-attached-to-infinitive",
+      "phrase-darse-cuenta-de",
+      "word-cuenta--darse-cuenta",
+      "word-de--darse-cuenta",
+      "word-que--clause-link",
+      "word-les--plural-recipient",
+      "grammar-recipient-pronoun-before-conjugated-verb",
+      "word-estás",
+      "grammar-estar-gerundio",
+      "word-mostrando--showing",
+      "word-diapositivas--presentation-slides",
+      "word-aleatorias--random-feminine-plural"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 50,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-diapositivas-00001-8365b394",
+      "id": "word-esa",
       "kind": "word",
       "promptEs": "esa",
       "answerEn": "that (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00001",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fde99480a48fb6c93ca6",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00002-942c3b08",
+      "id": "word-gráfica--chart",
       "kind": "word",
       "promptEs": "gráfica",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "chart; graph",
+      "noteEn": "Here gráfica is a visual display of data, not the feminine form of an adjective meaning ‘graphic.’",
+      "example": {
+        "es": "La gráfica muestra las temperaturas.",
+        "en": "The chart shows the temperatures."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "data",
+        "feminine noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00002",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68a0c4ae17884e42a884",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00003-89ca2a1f",
+      "id": "word-explicaba--background-description",
       "kind": "word",
       "promptEs": "explicaba",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "explained; was explaining (as background)",
+      "noteEn": "Explicaba is a past form of explicar. Its -aba ending presents the explaining as part of the background or an ongoing past situation, without marking a separate completed endpoint.",
+      "example": {
+        "es": "La guía explicaba el mapa.",
+        "en": "The guide was explaining the map."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "past",
+        "background",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00003",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dd3ab407f4baaa86f95a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00004-e850bc18",
+      "id": "grammar-past-contrast",
+      "kind": "grammar",
+      "promptEs": "hablé vs. hablaba",
+      "answerEn": "Use the preterite for a completed event and the imperfect for background, an ongoing situation, or something that used to happen.",
+      "noteEn": "Think of a story: the preterite answers “What happened next?” The imperfect answers “What was happening?”, “What were things like?”, or “What used to happen?” These two names describe how the speaker presents an event, not simply how long it lasted.",
+      "tags": [
+        "A2",
+        "grammar",
+        "past tenses"
+      ],
+      "questionEn": "Spanish has two common ways to talk about the past. When do you use each one?",
+      "example": {
+        "es": "Mientras caminaba, empezó a llover.",
+        "en": "While I was walking, it started to rain."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00004",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00005-8e33d78d",
+      "id": "word-efecto",
       "kind": "word",
       "promptEs": "efecto",
       "answerEn": "effect",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "cause and effect",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00005",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4afe82085a5e8b1c763a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00006-c432f022",
-      "kind": "word",
-      "promptEs": "hall",
-      "answerEn": "hall, lobby, lounge",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00006",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3cbaeb57c64020ee4df4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00007-d146077f",
+      "id": "word-cuántico--quantum-physics",
       "kind": "word",
       "promptEs": "cuántico",
-      "answerEn": "quantum",
-      "noteEn": "",
+      "answerEn": "quantum; relating to quantum physics (masculine singular)",
+      "noteEn": "Cuántico describes phenomena governed by quantum physics, especially at atomic and subatomic scales. Its ending changes to cuántica with a feminine singular noun.",
+      "example": {
+        "es": "Estudian un sistema cuántico.",
+        "en": "They study a quantum system."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "physics",
+        "adjective",
+        "technical"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00007",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad85b51d3e67c349c95c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00008-cb8a869b",
+      "id": "word-ahora",
       "kind": "word",
       "promptEs": "ahora",
-      "answerEn": "Meaning needs review",
+      "answerEn": "now",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00008",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-078f91fbc884d7035f02",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tcmp",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00009-12af6d93",
+      "id": "word-si",
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00009",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00010-6fc61027",
+      "id": "phrase-si-me-disculpa-un-momento",
+      "kind": "phrase",
+      "promptEs": "si me disculpa(n) un momento",
+      "questionEn": "How can you politely ask one formal listener or several listeners to excuse a brief interruption?",
+      "answerEn": "Say si me disculpa un momento to one formal listener, or si me disculpan un momento when addressing several people as ustedes.",
+      "noteEn": "Si means ‘if,’ me identifies the speaker asking to be excused, and un momento gives the brief time requested. Disculpa addresses one formal listener. Disculpan addresses any group in Latin America and a formal group in Spain; an informal group in Spain would use disculpáis. The parentheses in the prompt show that the final n is added only for the disculpan form.",
+      "example": {
+        "es": "Si me disculpa un momento, voy a buscar el informe.",
+        "en": "If you'll excuse me for a moment, I am going to get the report."
+      },
+      "tags": [
+        "phrase",
+        "politeness",
+        "brief interruption",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-me--direct",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "Meaning needs review",
+      "answerEn": "me (the person directly affected)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "object pronoun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00010",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2744ccd10c7533bd736a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00011-36637e11",
+      "id": "word-disculpan--excuse-listeners",
       "kind": "word",
       "promptEs": "disculpan",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "you excuse; you pardon (addressing a group)",
+      "noteEn": "Disculpan is a present form of disculpar used with ustedes, the usual plural ‘you’ throughout Latin America and a formal plural ‘you’ in Spain. In si me disculpan, it makes a polite request for the listeners' brief patience.",
+      "example": {
+        "es": "¿Me disculpan un momento?",
+        "en": "Will you excuse me for a moment?"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "politeness",
+        "plural you",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00011",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-384daaa9b0315251ebd4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00012-ffb0e19a",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00012",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00013-4c85678e",
+      "id": "word-momento",
       "kind": "word",
       "promptEs": "momento",
       "answerEn": "moment",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00013",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70f4f3d5e856bf6b663c",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00014-35694819",
+      "id": "word-esta--demonstrative",
       "kind": "word",
       "promptEs": "esta",
-      "answerEn": "Meaning needs review",
+      "answerEn": "this (feminine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "demonstratives"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00014",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d98c0c5592a747cd6db",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00015-88fb60e9",
-      "kind": "word",
-      "promptEs": "gra",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00015",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-66daf00c96681b1de36f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00016-c68b82f5",
-      "kind": "word",
-      "promptEs": "fica",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00016",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3947511943c993430ea8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00017-366db0fb",
+      "id": "word-muestra--displays",
       "kind": "word",
       "promptEs": "muestra",
-      "answerEn": "Meaning needs review",
+      "answerEn": "it shows; displays",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "technology",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00017",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6dc523794bc2406e26c6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-red",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00018-ea080218",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00018",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00019-f08d6311",
+      "id": "word-pluviosidad--rainfall",
       "kind": "word",
-      "promptEs": "pluvio",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "pluviosidad",
+      "answerEn": "rainfall; amount of rain",
+      "noteEn": "Pluviosidad is a technical or formal word for how much rain a place receives over a period.",
+      "example": {
+        "es": "La pluviosidad aumenta en otoño.",
+        "en": "Rainfall increases in autumn."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "weather",
+        "measurement",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00019",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d8f718f08e7780b95fd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00020-d159a217",
-      "kind": "word",
-      "promptEs": "dad",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00020",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6fe8ecbc1deafa51c2ec",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00021-37060a1b",
+      "id": "word-sobre--over-area",
       "kind": "word",
       "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "over; across (an area)",
+      "noteEn": "Sobre can introduce the geographical area across which something is measured or happens. This is different from sobre meaning ‘about’ a topic.",
+      "example": {
+        "es": "La tormenta avanza sobre la costa.",
+        "en": "The storm moves over the coast."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "area",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00021",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00022-445c0f37",
-      "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00022",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00023-87bbbdf7",
+      "id": "word-cuenca--drainage-basin",
       "kind": "word",
       "promptEs": "cuenca",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "drainage basin; river basin",
+      "noteEn": "A cuenca is the land area whose water drains into the same river or body of water.",
+      "example": {
+        "es": "El río recoge agua de toda la cuenca.",
+        "en": "The river collects water from the whole basin."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "geography",
+        "water",
+        "technical"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00023",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-df3df6fae2d40547772b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00024-ed050902",
+      "id": "word-del--of-the",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "of the; from the",
-      "noteEn": "",
+      "answerEn": "of the",
+      "noteEn": "Spanish writes de followed by the masculine singular word el as the single word del.",
+      "example": {
+        "es": "El color del coche es rojo.",
+        "en": "The color of the car is red."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contraction",
+        "possession"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00024",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-75e3090289e2955dfaec",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-goto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00025-d406cf29",
+      "id": "word-amazonas--river-region",
       "kind": "word",
       "promptEs": "amazonas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "Amazon; the Amazon River region",
+      "noteEn": "Spanish commonly uses el Amazonas for the Amazon River. Cuenca del Amazonas therefore names the broad area drained by that river.",
+      "example": {
+        "es": "El Amazonas cruza una región enorme.",
+        "en": "The Amazon crosses an enormous region."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "place name",
+        "river",
+        "geography"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00025",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-226887df75c2b57ff68e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00026-bf170de1",
-      "kind": "word",
-      "promptEs": "si",
-      "answerEn": "if",
-      "noteEn": "",
+      "id": "grammar-si-present-real-condition",
+      "kind": "grammar",
+      "promptEs": "si + verbo en presente",
+      "questionEn": "How do you introduce a real or possible condition with “if”?",
+      "answerEn": "Use si without an accent, followed by an ordinary present-time verb form.",
+      "noteEn": "This pattern treats the condition as genuinely possible. Spanish normally does not put a future-tense verb directly after si in this kind of condition; the result can appear separately as a statement, prediction, or command.",
+      "example": {
+        "es": "Si tienes tiempo, llama.",
+        "en": "If you have time, call."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "condition",
+        "si",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00026",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-dia-de-28-horas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00027-c41460ce",
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00027",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00028-0426d537",
+      "id": "word-paras--stop-doing",
       "kind": "word",
       "promptEs": "paras",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "you stop (doing something)",
+      "noteEn": "Paras is the present form of parar used for tú, one familiar listener. Before de and another action verb, it means that the listener stops doing that action.",
+      "example": {
+        "es": "Paras de hablar.",
+        "en": "You stop talking."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "stopping",
+        "present",
+        "informal singular",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00028",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-04c013432ea31b4db668",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00029-f6932faa",
+      "id": "grammar-parar-de-infinitive",
+      "kind": "grammar",
+      "promptEs": "parar de + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone stops doing an action?",
+      "answerEn": "Use a form of parar, then de, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The plus signs in the prompt show the order of the three pieces. The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Only parar changes for the person and time: paro de hablar, paras de hablar, pararon de hablar. De is required even though English does not translate it separately.",
+      "example": {
+        "es": "Elena para de hablar.",
+        "en": "Elena stops talking."
+      },
+      "tags": [
+        "grammar",
+        "stopping",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--after-parar",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links parar to the action that stops",
+      "noteEn": "Spanish requires de between a form of parar and the following action verb. English does not translate this linking word separately.",
+      "example": {
+        "es": "Paramos de correr.",
+        "en": "We stop running."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "linking word",
+        "stopping",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00029",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00030-30676272",
+      "id": "word-decir",
       "kind": "word",
       "promptEs": "decir",
       "answerEn": "to say; to tell",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00030",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2cd0f4308f28d71891d6",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00031-64b88040",
-      "kind": "word",
-      "promptEs": "si",
-      "answerEn": "if",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00031",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00032-aea03dee",
-      "kind": "word",
-      "promptEs": "me",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00032",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2744ccd10c7533bd736a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00033-e9c7232f",
-      "kind": "word",
-      "promptEs": "disculpan",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00033",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-384daaa9b0315251ebd4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00034-3f00a5d9",
-      "kind": "word",
-      "promptEs": "un",
-      "answerEn": "a; an (masculine)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00034",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00035-f0700b2d",
-      "kind": "word",
-      "promptEs": "momento",
-      "answerEn": "moment",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00035",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70f4f3d5e856bf6b663c",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00036-6c60fd74",
-      "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00036",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-diapositivas-00037-b11109d6",
+      "id": "word-gente",
       "kind": "word",
       "promptEs": "gente",
       "answerEn": "people",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00037",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e5be6b2fc69cf45db8d2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00038-595cc8b6",
+      "id": "word-tardará--take-time",
       "kind": "word",
       "promptEs": "tardará",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "will take (an amount of time)",
+      "noteEn": "Tardará keeps the complete verb tardar and adds -á to place the time-taking in the future for one person, group, or thing.",
+      "example": {
+        "es": "La reparación tardará una hora.",
+        "en": "The repair will take an hour."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "future",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00038",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fef41fe079fe97b306f9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00039-6a7de491",
-      "kind": "word",
-      "promptEs": "un",
-      "answerEn": "a; an (masculine)",
-      "noteEn": "",
+      "id": "grammar-simple-future",
+      "kind": "grammar",
+      "promptEs": "infinitivo + terminación de futuro",
+      "questionEn": "How do you say what someone will do in Spanish?",
+      "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "example": {
+        "es": "Marta llamará mañana.",
+        "en": "Marta will call tomorrow."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "future",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00039",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00040-7f8d2977",
+      "id": "phrase-tardar-tiempo-en-infinitive",
+      "kind": "phrase",
+      "promptEs": "tardar + tiempo + en + infinitivo",
+      "questionEn": "How do you say how long someone takes to do something?",
+      "answerEn": "Use a form of tardar, the amount of time, en, and the action verb in its dictionary form.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Tardar changes for who takes the time. En links the time to the action and normally has no separate English word in this pattern.",
+      "example": {
+        "es": "Tardo diez minutos en llegar.",
+        "en": "I take ten minutes to arrive."
+      },
+      "tags": [
+        "phrase",
+        "time",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-rato--short-while",
       "kind": "word",
       "promptEs": "rato",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "while; a short or unspecified period of time",
+      "noteEn": "Un rato refers to an imprecise stretch of time. Its length depends on the situation rather than on a fixed number of minutes.",
+      "example": {
+        "es": "Descansamos un rato.",
+        "en": "We rest for a while."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00040",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d328b961eaf92f34702f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00041-396d390f",
+      "id": "word-en--time-to-action",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
+      "answerEn": "no separate English word; links the time taken to the action",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00041",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00042-1b625577",
+      "id": "word-darse--realize",
       "kind": "word",
       "promptEs": "darse",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to realize; to notice (as part of darse cuenta)",
+      "noteEn": "Darse combines the dictionary form dar with se attached. It does not mean ‘to give oneself’ here: darse cuenta is the complete fixed expression for realizing or noticing something.",
+      "example": {
+        "es": "Marta puede darse cuenta del error.",
+        "en": "Marta can notice the error."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "attached pronoun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00042",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-727e6c98d3b41630d6c1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00043-01044eee",
+      "id": "grammar-pronoun-attached-to-infinitive",
+      "kind": "grammar",
+      "promptEs": "verbo en forma de diccionario + pronombre unido",
+      "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
+      "answerEn": "Attach it to the end of the verb and write the result as one word.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "example": {
+        "es": "Quiero ayudarte.",
+        "en": "I want to help you."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "object pronouns",
+        "infinitive"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-darse-cuenta-de",
+      "kind": "phrase",
+      "promptEs": "darse cuenta de (que) + hecho o situación",
+      "questionEn": "How do you say that someone realizes or becomes aware of something?",
+      "answerEn": "Use the matching small pronoun, a form of dar, cuenta, and then de before what is realized.",
+      "noteEn": "The small pronoun and dar must match the person: me doy cuenta, te das cuenta, se da cuenta, nos damos cuenta, and so on. Use de before a noun and de que before a full statement. Cuenta is not translated separately in this expression.",
+      "example": {
+        "es": "Nos dimos cuenta de que faltaba una llave.",
+        "en": "We realized that a key was missing."
+      },
+      "tags": [
+        "phrase",
+        "realization",
+        "verb pattern",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cuenta--darse-cuenta",
       "kind": "word",
       "promptEs": "cuenta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; completes darse cuenta, “to realize”",
+      "noteEn": "Cuenta can mean an account, bill, or calculation. In darse cuenta, it is part of a fixed expression and is not translated separately.",
+      "example": {
+        "es": "Ella se dio cuenta muy tarde.",
+        "en": "She realized very late."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "realization"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00043",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e69ecb0f9b3fb9dd37c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00044-bec7228b",
+      "id": "word-de--darse-cuenta",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word here; introduces what is realized after darse cuenta",
+      "noteEn": "After darse cuenta, de introduces the fact or thing that becomes clear. Before a full statement, Spanish normally uses de que.",
+      "example": {
+        "es": "Se dio cuenta de que era tarde.",
+        "en": "She realized that it was late."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb complement",
+        "fixed expression"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00044",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00045-25a60525",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00045",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00046-216fb170",
+      "id": "word-les--plural-recipient",
       "kind": "word",
       "promptEs": "les",
-      "answerEn": "you",
-      "noteEn": "",
+      "answerEn": "to them; marks them as the people receiving something",
+      "noteEn": "Les identifies more than one receiver. It normally appears before a verb that changes for the person and time, although it can attach to some unchanged verb forms and positive commands.",
+      "example": {
+        "es": "Les envío una foto.",
+        "en": "I send them a photo."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "recipient",
+        "plural",
+        "pronoun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00046",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7b5454f75089acf2693b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00047-3a98b5c4",
+      "id": "grammar-recipient-pronoun-before-conjugated-verb",
+      "kind": "grammar",
+      "promptEs": "me/te/le/nos/os/les delante del verbo que cambia",
+      "questionEn": "Where do you put the short word that identifies who receives something?",
+      "answerEn": "Put me, te, le, nos, os, or les before the first verb that changes for the person and time.",
+      "noteEn": "The slashes in the prompt mean to choose the one receiver word that fits. A verb that changes for the person and time is often called a conjugated verb: estoy rather than the dictionary form estar. In a multiword verb phrase, the receiver word goes before that changed verb, so les estoy enviando places les before estoy, not between estoy and enviando.",
+      "example": {
+        "es": "Les estoy enviando una foto.",
+        "en": "I am sending them a photo."
+      },
+      "tags": [
+        "grammar",
+        "recipient",
+        "word order",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-estás",
       "kind": "word",
       "promptEs": "estás",
       "answerEn": "you are",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00047",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9803d068a920c14331bc",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00048-b2ad2356",
+      "id": "grammar-estar-gerundio",
+      "kind": "grammar",
+      "promptEs": "estar + gerundio (-ando/-iendo)",
+      "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "tags": [
+        "A2",
+        "grammar",
+        "actions in progress"
+      ],
+      "questionEn": "How do you say that someone is in the middle of doing something?",
+      "example": {
+        "es": "Estoy leyendo.",
+        "en": "I am reading."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-mostrando--showing",
       "kind": "word",
       "promptEs": "mostrando",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "showing; displaying",
+      "noteEn": "Mostrando is the ongoing-action form of mostrar. Regular verbs ending in -ar replace -ar with -ando to make this form.",
+      "example": {
+        "es": "Estoy mostrando una fotografía.",
+        "en": "I am showing a photograph."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "ongoing action",
+        "showing",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00048",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2b963bfc3f6f6df4df1d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00049-e8f94e84",
+      "id": "word-diapositivas--presentation-slides",
       "kind": "word",
       "promptEs": "diapositivas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "slides; presentation slides",
+      "noteEn": "Diapositiva can name one image or page shown as part of a presentation. The plural diapositivas refers to several such slides.",
+      "example": {
+        "es": "La presentación tiene diez diapositivas.",
+        "en": "The presentation has ten slides."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "presentation",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00049",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a2af78810bf59b2a23bf",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-diapositivas-00050-04013a59",
+      "id": "word-aleatorias--random-feminine-plural",
       "kind": "word",
       "promptEs": "aleatorias",
-      "answerEn": "random, aleatory",
-      "noteEn": "",
+      "answerEn": "random (feminine plural)",
+      "noteEn": "Aleatorias describes several feminine things selected or arranged without a planned pattern. The -as ending matches a feminine plural noun such as diapositivas.",
+      "example": {
+        "es": "Elegimos tres preguntas aleatorias.",
+        "en": "We choose three random questions."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description",
+        "feminine plural",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-diapositivas:ocr-token-00050",
-        "sourceLineId": "es-xkcd-diapositivas:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-509141505bcca029d6eb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diapositivas",
+        "contextualSenseReviewed": true
       }
     }
   ]

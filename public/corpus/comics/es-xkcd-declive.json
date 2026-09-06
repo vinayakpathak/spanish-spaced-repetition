@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-7c4560552826e12d",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 18,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-declive",
     "xkcdNumber": 523,
     "publishedAt": "2008-12-29",
-    "title": "Declive",
+    "title": "Decline",
     "titleEs": "Declive",
     "image": {
       "src": "https://es.xkcd.com/images/523_decline.png",
       "width": 425,
       "height": 241,
       "aspectRatio": 1.7635,
-      "altEn": "Spanish-language xkcd comic #523: Declive"
+      "altEn": "Spanish-language xkcd comic #523: Decline"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,69 @@
     },
     "titleText": {
       "es": "—También hay un pico en la transformada de Fourier justo en el mes que... —Te conviene callarte ahora mismo.",
-      "en": "English title text pending review."
+      "en": "'There's also a spike on the Fourier transform at the one-month mark where --' 'You want to stop talking right now.'",
+      "noteEn": "The Spanish archive preserves the Fourier-transform reference and leaves its one-month observation unfinished after justo en el mes que."
     },
     "regions": [
       {
-        "id": "es-xkcd-declive:region-0001",
-        "labelEs": "NUESTRA RELACIÓN COMENZÓ",
+        "id": "es-xkcd-declive:graph-symbols",
+        "labelEs": "↑ ♥",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 40.8451,
+          "x": 6.3529,
+          "y": 33.195,
+          "width": 5.1765,
+          "height": 22.4067
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-declive:graph-symbols:excluded-upward-arrow",
+            "text": "↑",
+            "reason": "symbol",
+            "rationale": "This arrow indicates the graph's upward direction and is a symbol rather than a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 8.2353,
+                "y": 33.195,
+                "width": 2.5882,
+                "height": 13.6929
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-declive:graph-symbols:excluded-heart",
+            "text": "♥",
+            "reason": "symbol",
+            "rationale": "This heart labels the relationship quantity plotted on the graph and is a symbol rather than a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 6.3529,
+                "y": 48.1328,
+                "width": 5.1765,
+                "height": 7.4689
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": []
+      },
+      {
+        "id": "es-xkcd-declive:relationship-decline",
+        "labelEs": "NUESTRA RELACIÓN COMENZÓ SU DECLIVE EN ESTE PUNTO.",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 40.3756,
           "y": 12.3967,
-          "width": 53.9906,
-          "height": 7.438
+          "width": 54.4601,
+          "height": 15.7025
         },
         "words": [
           {
-            "id": "es-xkcd-declive:word-00001",
+            "id": "es-xkcd-declive:relationship-decline:w01",
             "text": "NUESTRA",
             "normalized": "nuestra",
             "bounds": [
@@ -70,11 +110,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00001-bac4f684"
+              "word-nuestra"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00002",
+            "id": "es-xkcd-declive:relationship-decline:w02",
             "text": "RELACIÓN",
             "normalized": "relación",
             "bounds": [
@@ -86,11 +126,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00002-9f07a101"
+              "word-relación",
+              "concept-correlation-causation"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00003",
+            "id": "es-xkcd-declive:relationship-decline:w03",
             "text": "COMENZÓ",
             "normalized": "comenzó",
             "bounds": [
@@ -102,37 +143,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00003-af1c0067"
+              "word-comenzó--began",
+              "concept-correlation-causation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-declive-00001-bac4f684",
-          "word-auto-es-xkcd-declive-00002-9f07a101",
-          "word-auto-es-xkcd-declive-00003-af1c0067"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-declive:region-0002",
-        "labelEs": "SU DECLIVE EN ESTE PUNTO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 40.3756,
-          "y": 19.8347,
-          "width": 52.5822,
-          "height": 8.2645
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-declive:word-00004",
+            "id": "es-xkcd-declive:relationship-decline:w04",
             "text": "SU",
             "normalized": "su",
             "bounds": [
@@ -144,11 +160,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00004-81e35470"
+              "word-su--third-person-possessive"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00005",
+            "id": "es-xkcd-declive:relationship-decline:w05",
             "text": "DECLIVE",
             "normalized": "declive",
             "bounds": [
@@ -160,11 +176,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00005-d31f8535"
+              "word-declive",
+              "concept-correlation-causation"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00006",
+            "id": "es-xkcd-declive:relationship-decline:w06",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -176,11 +193,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00006-0daa70fe"
+              "word-en--at-location"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00007",
+            "id": "es-xkcd-declive:relationship-decline:w07",
             "text": "ESTE",
             "normalized": "este",
             "bounds": [
@@ -192,11 +209,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00007-32a09106"
+              "word-este"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00008",
+            "id": "es-xkcd-declive:relationship-decline:w08",
             "text": "PUNTO",
             "normalized": "punto",
             "bounds": [
@@ -208,39 +225,39 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00008-daf8f78a"
+              "word-punto--curve-location",
+              "concept-correlation-causation"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-declive-00004-81e35470",
-          "word-auto-es-xkcd-declive-00005-d31f8535",
-          "word-auto-es-xkcd-declive-00006-0daa70fe",
-          "word-auto-es-xkcd-declive-00007-32a09106",
-          "word-auto-es-xkcd-declive-00008-daf8f78a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+          "word-nuestra",
+          "word-relación",
+          "concept-correlation-causation",
+          "word-comenzó--began",
+          "word-su--third-person-possessive",
+          "word-declive",
+          "word-en--at-location",
+          "word-este",
+          "word-punto--curve-location"
+        ]
       },
       {
-        "id": "es-xkcd-declive:region-0003",
-        "labelEs": "ESO FUE CUANDO",
+        "id": "es-xkcd-declive:graphing-reply",
+        "labelEs": "ESO FUE CUANDO EMPEZASTE A HACER GRÁFICAS DE TODO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 57.7465,
           "y": 32.2314,
-          "width": 31.9249,
-          "height": 8.2645
+          "width": 38.0282,
+          "height": 22.314
         },
         "words": [
           {
-            "id": "es-xkcd-declive:word-00009",
+            "id": "es-xkcd-declive:graphing-reply:w01",
             "text": "ESO",
             "normalized": "eso",
             "bounds": [
@@ -252,11 +269,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00009-ed097724"
+              "word-eso"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00010",
+            "id": "es-xkcd-declive:graphing-reply:w02",
             "text": "FUE",
             "normalized": "fue",
             "bounds": [
@@ -268,11 +285,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00010-450fefca"
+              "word-fue--preterite-ser"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00011",
+            "id": "es-xkcd-declive:graphing-reply:w03",
             "text": "CUANDO",
             "normalized": "cuando",
             "bounds": [
@@ -284,37 +301,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00011-b920a541"
+              "word-cuando--when",
+              "concept-correlation-causation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-declive-00009-ed097724",
-          "word-auto-es-xkcd-declive-00010-450fefca",
-          "word-auto-es-xkcd-declive-00011-b920a541"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-declive:region-0004",
-        "labelEs": "EMPEZASTE A HACER",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.7465,
-          "y": 39.6694,
-          "width": 38.0282,
-          "height": 7.438
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-declive:word-00012",
+            "id": "es-xkcd-declive:graphing-reply:w04",
             "text": "EMPEZASTE",
             "normalized": "empezaste",
             "bounds": [
@@ -326,11 +318,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00012-c84c152c"
+              "word-empezaste--started",
+              "grammar-empezar-a-infinitive",
+              "concept-correlation-causation"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00013",
+            "id": "es-xkcd-declive:graphing-reply:w05",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -342,11 +336,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00013-93054a24"
+              "word-a--infinitive-link",
+              "grammar-empezar-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00014",
+            "id": "es-xkcd-declive:graphing-reply:w06",
             "text": "HACER",
             "normalized": "hacer",
             "bounds": [
@@ -358,37 +353,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00014-8f8ec6f0"
+              "word-hacer--make",
+              "grammar-empezar-a-infinitive",
+              "concept-correlation-causation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-declive-00012-c84c152c",
-          "word-auto-es-xkcd-declive-00013-93054a24",
-          "word-auto-es-xkcd-declive-00014-8f8ec6f0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-declive:region-0005",
-        "labelEs": "GRÁFICAS DE TODO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.7465,
-          "y": 47.1074,
-          "width": 35.2113,
-          "height": 7.438
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-declive:word-00015",
+            "id": "es-xkcd-declive:graphing-reply:w07",
             "text": "GRÁFICAS",
             "normalized": "gráficas",
             "bounds": [
@@ -400,11 +371,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00015-a0437d2d"
+              "word-gráficas",
+              "concept-correlation-causation",
+              "concept-fourier-transform"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00016",
+            "id": "es-xkcd-declive:graphing-reply:w08",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -416,11 +389,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00016-31b2c5df"
+              "word-de--about-topic"
             ]
           },
           {
-            "id": "es-xkcd-declive:word-00017",
+            "id": "es-xkcd-declive:graphing-reply:w09",
             "text": "TODO",
             "normalized": "todo",
             "bounds": [
@@ -432,37 +405,53 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00017-2e28a7da"
+              "word-todo"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-declive-00015-a0437d2d",
-          "word-auto-es-xkcd-declive-00016-31b2c5df",
-          "word-auto-es-xkcd-declive-00017-2e28a7da"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-declive:graphing-reply:app-start-action",
+            "cardId": "grammar-empezar-a-infinitive",
+            "participantWordIds": [
+              "es-xkcd-declive:graphing-reply:w04",
+              "es-xkcd-declive:graphing-reply:w05",
+              "es-xkcd-declive:graphing-reply:w06"
+            ],
+            "exampleEs": "EMPEZASTE A HACER",
+            "explanationEn": "Empezaste changes for one familiar person and completed past time, a links it to the action, and hacer stays in its unchanged dictionary form."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0005",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-eso",
+          "word-fue--preterite-ser",
+          "word-cuando--when",
+          "concept-correlation-causation",
+          "word-empezaste--started",
+          "grammar-empezar-a-infinitive",
+          "word-a--infinitive-link",
+          "word-hacer--make",
+          "word-gráficas",
+          "concept-fourier-transform",
+          "word-de--about-topic",
+          "word-todo"
+        ]
       },
       {
-        "id": "es-xkcd-declive:region-0006",
-        "labelEs": "~ ¡COINCIDENCIA!",
+        "id": "es-xkcd-declive:coincidence-reaction",
+        "labelEs": "¡COINCIDENCIA!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 43.5937,
+          "x": 49.7255,
           "y": 66.0482,
-          "width": 34.8785,
-          "height": 9.253
+          "width": 28.7467,
+          "height": 9.076
         },
         "words": [
           {
-            "id": "es-xkcd-declive:word-00018",
+            "id": "es-xkcd-declive:coincidence-reaction:w01",
             "text": "COINCIDENCIA",
             "normalized": "coincidencia",
             "bounds": [
@@ -474,486 +463,461 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-declive-00018-076404ed"
+              "word-coincidencia",
+              "concept-correlation-causation"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-declive-00018-076404ed"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-declive:ocr-line-0006",
-          "ocrConfidence": 1
-        }
+          "word-coincidencia",
+          "concept-correlation-causation"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-declive-00001-bac4f684",
-      "word-auto-es-xkcd-declive-00002-9f07a101",
-      "word-auto-es-xkcd-declive-00003-af1c0067",
-      "word-auto-es-xkcd-declive-00004-81e35470",
-      "word-auto-es-xkcd-declive-00005-d31f8535",
-      "word-auto-es-xkcd-declive-00006-0daa70fe",
-      "word-auto-es-xkcd-declive-00007-32a09106",
-      "word-auto-es-xkcd-declive-00008-daf8f78a",
-      "word-auto-es-xkcd-declive-00009-ed097724",
-      "word-auto-es-xkcd-declive-00010-450fefca",
-      "word-auto-es-xkcd-declive-00011-b920a541",
-      "word-auto-es-xkcd-declive-00012-c84c152c",
-      "word-auto-es-xkcd-declive-00013-93054a24",
-      "word-auto-es-xkcd-declive-00014-8f8ec6f0",
-      "word-auto-es-xkcd-declive-00015-a0437d2d",
-      "word-auto-es-xkcd-declive-00016-31b2c5df",
-      "word-auto-es-xkcd-declive-00017-2e28a7da",
-      "word-auto-es-xkcd-declive-00018-076404ed"
+      "word-nuestra",
+      "word-relación",
+      "concept-correlation-causation",
+      "word-comenzó--began",
+      "word-su--third-person-possessive",
+      "word-declive",
+      "word-en--at-location",
+      "word-este",
+      "word-punto--curve-location",
+      "word-eso",
+      "word-fue--preterite-ser",
+      "word-cuando--when",
+      "word-empezaste--started",
+      "grammar-empezar-a-infinitive",
+      "word-a--infinitive-link",
+      "word-hacer--make",
+      "word-gráficas",
+      "concept-fourier-transform",
+      "word-de--about-topic",
+      "word-todo",
+      "word-coincidencia"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 18,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-declive-00001-bac4f684",
+      "id": "word-nuestra",
       "kind": "word",
       "promptEs": "nuestra",
-      "answerEn": "Meaning needs review",
+      "answerEn": "our (before a feminine singular noun)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive",
+        "feminine"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00001",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9bb696f56f542651835d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00002-9f07a101",
+      "id": "word-relación",
       "kind": "word",
       "promptEs": "relación",
-      "answerEn": "Meaning needs review",
+      "answerEn": "relationship; relation",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "relationship",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00002",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c1ce6993ecfe5e6e2e16",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diario-5",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00003-af1c0067",
+      "id": "concept-correlation-causation",
+      "kind": "concept",
+      "promptEs": "La correlación no implica causalidad.",
+      "answerEn": "Correlation does not imply causation.",
+      "noteEn": "Two things changing together does not by itself show that one caused the other.",
+      "tags": [
+        "statistics",
+        "reasoning",
+        "cognates"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-comenzó--began",
       "kind": "word",
       "promptEs": "comenzó",
-      "answerEn": "to begin, to commence",
-      "noteEn": "",
+      "answerEn": "began; started",
+      "noteEn": "Comenzó is comenzar's completed-past form for one person or thing. The written accent marks the stress on the final ó.",
+      "example": {
+        "es": "La película comenzó tarde.",
+        "en": "The movie began late."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "completed past",
+        "beginning",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00003",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-74b823be27ee19f15ba1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-declive",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00004-81e35470",
+      "id": "word-su--third-person-possessive",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal singular)",
+      "answerEn": "his; her; its; their",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00004",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0a64ce10853f25cb3dc3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00005-d31f8535",
+      "id": "word-declive",
       "kind": "word",
       "promptEs": "declive",
-      "answerEn": "decline",
+      "answerEn": "decline; downturn",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "change",
+        "noun",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00005",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b215d03b73717ed7ea3a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-declive",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00006-0daa70fe",
+      "id": "word-en--at-location",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
+      "answerEn": "at (a location)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00006",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00007-32a09106",
+      "id": "word-este",
       "kind": "word",
       "promptEs": "este",
       "answerEn": "this (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00007",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b3aa33b34e1b14e4cf3e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00008-daf8f78a",
+      "id": "word-punto--curve-location",
       "kind": "word",
       "promptEs": "punto",
-      "answerEn": "Meaning needs review",
+      "answerEn": "point; position on a curve",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "geometry",
+        "graphs"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00008",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d909170446e389ff3117",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00009-ed097724",
+      "id": "word-eso",
       "kind": "word",
       "promptEs": "eso",
-      "answerEn": "Meaning needs review",
+      "answerEn": "that; that thing",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "demonstrative"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00009",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f45140f001d5fb767ec4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00010-450fefca",
+      "id": "word-fue--preterite-ser",
       "kind": "word",
       "promptEs": "fue",
-      "answerEn": "Meaning needs review",
+      "answerEn": "was (a completed past instance of ser)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "past"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00010",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cac4e74fa24fd257f814",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00011-b920a541",
+      "id": "word-cuando--when",
       "kind": "word",
       "promptEs": "cuando",
       "answerEn": "when",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "connector"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00011",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1a0729f2a6ed16257ff5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00012-c84c152c",
+      "id": "word-empezaste--started",
       "kind": "word",
       "promptEs": "empezaste",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "you started; you began (informal singular)",
+      "noteEn": "Empezaste is empezar's completed-past form for one familiar person addressed as tú. When an action follows, Spanish places a before that action verb's unchanged dictionary form.",
+      "example": {
+        "es": "Empezaste a leer ayer.",
+        "en": "You started reading yesterday."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "completed past",
+        "informal you",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00012",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e9c7e31a8311ab92a4ba",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-declive",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00013-93054a24",
+      "id": "grammar-empezar-a-infinitive",
+      "kind": "grammar",
+      "promptEs": "empezar a + infinitivo",
+      "questionEn": "How do you say that someone starts doing an action?",
+      "answerEn": "Use a form of empezar, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The plus sign means “followed by.” The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
+      "example": {
+        "es": "Lucía empieza a leer.",
+        "en": "Lucía starts to read."
+      },
+      "tags": [
+        "grammar",
+        "beginning actions",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--infinitive-link",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to (linking a verb to the following infinitive)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00013",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00014-8f8ec6f0",
+      "id": "word-hacer--make",
       "kind": "word",
       "promptEs": "hacer",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to make; to create",
+      "noteEn": "Hacer can mean creating or producing a physical thing. This is distinct from its very common sense “to do.”",
+      "example": {
+        "es": "Vamos a hacer una mesa.",
+        "en": "We are going to make a table."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "making",
+        "creation",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00014",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9ab06b20725ee8e41d89",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-el-collar-de-cristal",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00015-a0437d2d",
+      "id": "word-gráficas",
       "kind": "word",
       "promptEs": "gráficas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "graphs; charts",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "data",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00015",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ec8268d07602c3b7f7b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00016-31b2c5df",
+      "id": "concept-fourier-transform",
+      "kind": "concept",
+      "promptEs": "transformada de Fourier",
+      "questionEn": "What does a Fourier transform reveal about changing data?",
+      "answerEn": "It rewrites a changing signal as a collection of repeating frequencies. A strong peak can reveal a prominent repeating cycle.",
+      "noteEn": "The title text extends the graphing joke by claiming that a Fourier analysis finds a one-month pattern in the relationship data.",
+      "tags": [
+        "concept",
+        "mathematics",
+        "signal processing",
+        "data analysis"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-declive",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--about-topic",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "about; on the subject of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00016",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00017-2e28a7da",
+      "id": "word-todo",
       "kind": "word",
       "promptEs": "todo",
       "answerEn": "everything; all",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00017",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-602fae580f5863abfb31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-declive-00018-076404ed",
+      "id": "word-coincidencia",
       "kind": "word",
       "promptEs": "coincidencia",
-      "answerEn": "Meaning needs review",
+      "answerEn": "coincidence",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-declive:ocr-token-00018",
-        "sourceLineId": "es-xkcd-declive:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1dd8b21401211fbcb565",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-declive",
+        "contextualSenseReviewed": true
       }
     }
   ]

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-2ac0ad38f240e00f",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 30,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-test-de-turing",
     "xkcdNumber": 329,
     "publishedAt": "2007-10-15",
-    "title": "Test de Turing",
+    "title": "Turing Test",
     "titleEs": "Test de Turing",
     "image": {
       "src": "https://es.xkcd.com/images/turing_test.png",
       "width": 320,
       "height": 394,
       "aspectRatio": 0.8122,
-      "altEn": "Spanish-language xkcd comic #329: Test de Turing"
+      "altEn": "Spanish-language xkcd comic #329: Turing Test"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Dale a Turing justo en los test-ículos.",
-      "en": "English title text pending review."
+      "en": "Hit Turing right in the test-ees.",
+      "noteEn": "Both versions make a deliberately strained pun between test and testicles. The Spanish title inserts a hyphen into testículos, while the English title respells the ending as test-ees."
     },
     "regions": [
       {
-        "id": "es-xkcd-test-de-turing:region-0001",
-        "labelEs": "PUNTUACIÓN EXTRA",
+        "id": "es-xkcd-test-de-turing:heading",
+        "labelEs": "PUNTUACIÓN EXTRA EN EL TEST DE TURING:",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 20.625,
+          "x": 15.625,
           "y": 2.0305,
-          "width": 58.125,
-          "height": 5.5838
+          "width": 70,
+          "height": 10.6598
         },
         "words": [
           {
-            "id": "es-xkcd-test-de-turing:word-00001",
+            "id": "es-xkcd-test-de-turing:heading:w01",
             "text": "PUNTUACIÓN",
             "normalized": "puntuación",
             "bounds": [
@@ -70,11 +65,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00001-f81ac9c5"
+              "word-puntuación--score"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00002",
+            "id": "es-xkcd-test-de-turing:heading:w02",
             "text": "EXTRA",
             "normalized": "extra",
             "bounds": [
@@ -86,36 +81,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00002-5d34cb3f"
+              "word-extra--additional"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00001-f81ac9c5",
-          "word-auto-es-xkcd-test-de-turing-00002-5d34cb3f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0002",
-        "labelEs": "EN EL TEST DE TURING:",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 15.625,
-          "y": 7.6142,
-          "width": 70,
-          "height": 5.0761
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00003",
+            "id": "es-xkcd-test-de-turing:heading:w03",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -127,11 +97,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00003-2a129c7f"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00004",
+            "id": "es-xkcd-test-de-turing:heading:w04",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -143,11 +113,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00004-a009d0ae"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00005",
+            "id": "es-xkcd-test-de-turing:heading:w05",
             "text": "TEST",
             "normalized": "test",
             "bounds": [
@@ -159,11 +129,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00005-3c27f687"
+              "word-test--test",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00006",
+            "id": "es-xkcd-test-de-turing:heading:w06",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -175,13 +146,17 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00006-0868a3cd"
+              "word-de--named-after",
+              "concept-turing-test"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-test-de-turing:word-00007",
+            "id": "es-xkcd-test-de-turing:heading:excluded-turing",
             "text": "TURING",
-            "normalized": "turing",
+            "reason": "non-spanish-text",
+            "rationale": "Turing is a person's proper surname rather than Spanish lexical material; the linked Spanish word test carries the concept card.",
             "bounds": [
               {
                 "x": 61.7187,
@@ -189,41 +164,34 @@
                 "width": 23.9063,
                 "height": 5.0761
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00007-075e7932"
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00003-2a129c7f",
-          "word-auto-es-xkcd-test-de-turing-00004-a009d0ae",
-          "word-auto-es-xkcd-test-de-turing-00005-3c27f687",
-          "word-auto-es-xkcd-test-de-turing-00006-0868a3cd",
-          "word-auto-es-xkcd-test-de-turing-00007-075e7932"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+          "word-puntuación--score",
+          "word-extra--additional",
+          "word-en",
+          "word-el--article",
+          "word-test--test",
+          "concept-turing-test",
+          "word-de--named-after"
+        ]
       },
       {
-        "id": "es-xkcd-test-de-turing:region-0003",
-        "labelEs": "CONVENCE AL EXAMINADOR QUE",
+        "id": "es-xkcd-test-de-turing:instruction",
+        "labelEs": "CONVENCE AL EXAMINADOR QUE ÉL ES UNA COMPUTADORA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 6.25,
+          "x": 5.625,
           "y": 15.2284,
-          "width": 86.875,
-          "height": 5.0761
+          "width": 87.5,
+          "height": 10.66
         },
         "words": [
           {
-            "id": "es-xkcd-test-de-turing:word-00008",
+            "id": "es-xkcd-test-de-turing:instruction:w01",
             "text": "CONVENCE",
             "normalized": "convence",
             "bounds": [
@@ -235,11 +203,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00008-19259e3c"
+              "word-convence--command",
+              "grammar-affirmative-tu-command",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00009",
+            "id": "es-xkcd-test-de-turing:instruction:w02",
             "text": "AL",
             "normalized": "al",
             "bounds": [
@@ -251,11 +221,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00009-ecefc2a6"
+              "word-al--personal-a-contraction",
+              "grammar-personal-a"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00010",
+            "id": "es-xkcd-test-de-turing:instruction:w03",
             "text": "EXAMINADOR",
             "normalized": "examinador",
             "bounds": [
@@ -267,11 +238,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00010-375c8518"
+              "word-examinador",
+              "grammar-personal-a",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00011",
+            "id": "es-xkcd-test-de-turing:instruction:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -283,38 +256,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00011-d23dc6cf"
+              "word-que--clause-link"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00008-19259e3c",
-          "word-auto-es-xkcd-test-de-turing-00009-ecefc2a6",
-          "word-auto-es-xkcd-test-de-turing-00010-375c8518",
-          "word-auto-es-xkcd-test-de-turing-00011-d23dc6cf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0004",
-        "labelEs": "ÉL ES UNA COMPUTADORA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.625,
-          "y": 20.3046,
-          "width": 71.875,
-          "height": 5.5838
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00012",
+            "id": "es-xkcd-test-de-turing:instruction:w05",
             "text": "ÉL",
             "normalized": "él",
             "bounds": [
@@ -326,11 +272,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00012-740a09a8"
+              "word-él--pronoun",
+              "grammar-explicit-subject-pronoun",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00013",
+            "id": "es-xkcd-test-de-turing:instruction:w06",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -342,11 +290,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00013-f510ab5b"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00014",
+            "id": "es-xkcd-test-de-turing:instruction:w07",
             "text": "UNA",
             "normalized": "una",
             "bounds": [
@@ -358,11 +306,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00014-89dd47ef"
+              "word-una"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00015",
+            "id": "es-xkcd-test-de-turing:instruction:w08",
             "text": "COMPUTADORA",
             "normalized": "computadora",
             "bounds": [
@@ -374,38 +322,71 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00015-39dfe75f"
+              "word-computadora",
+              "concept-turing-test"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00012-740a09a8",
-          "word-auto-es-xkcd-test-de-turing-00013-f510ab5b",
-          "word-auto-es-xkcd-test-de-turing-00014-89dd47ef",
-          "word-auto-es-xkcd-test-de-turing-00015-39dfe75f"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-test-de-turing:instruction:app-tu-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:instruction:w01"
+            ],
+            "exampleEs": "CONVENCE",
+            "explanationEn": "Convence is the positive command used to direct one informally addressed person."
+          },
+          {
+            "id": "es-xkcd-test-de-turing:instruction:app-personal-a",
+            "cardId": "grammar-personal-a",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:instruction:w02",
+              "es-xkcd-test-de-turing:instruction:w03"
+            ],
+            "exampleEs": "AL EXAMINADOR",
+            "explanationEn": "Al combines a with el before the specific person who directly receives the action."
+          },
+          {
+            "id": "es-xkcd-test-de-turing:instruction:app-explicit-he",
+            "cardId": "grammar-explicit-subject-pronoun",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:instruction:w05"
+            ],
+            "exampleEs": "ÉL",
+            "explanationEn": "Él is stated to make the examiner, rather than the other participant, the emphasized subject of es."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-convence--command",
+          "grammar-affirmative-tu-command",
+          "concept-turing-test",
+          "word-al--personal-a-contraction",
+          "grammar-personal-a",
+          "word-examinador",
+          "word-que--clause-link",
+          "word-él--pronoun",
+          "grammar-explicit-subject-pronoun",
+          "word-es",
+          "word-una",
+          "word-computadora"
+        ]
       },
       {
-        "id": "es-xkcd-test-de-turing:region-0005",
-        "labelEs": "¿SABES? TIENES UNOS",
+        "id": "es-xkcd-test-de-turing:dialogue",
+        "labelEs": "¿SABES? TIENES UNOS ARGUMENTOS BASTANTE BUENOS. YO... YA NI SIQUIERA ESTOY SEGURO DE QUIÉN SOY.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 19.375,
+          "x": 18.75,
           "y": 31.9797,
-          "width": 52.5,
-          "height": 4.5685
+          "width": 63.125,
+          "height": 26.3959
         },
         "words": [
           {
-            "id": "es-xkcd-test-de-turing:word-00016",
+            "id": "es-xkcd-test-de-turing:dialogue:w01",
             "text": "SABES",
             "normalized": "sabes",
             "bounds": [
@@ -417,11 +398,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00016-3fcc635c"
+              "word-sabes--discourse-marker"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00017",
+            "id": "es-xkcd-test-de-turing:dialogue:w02",
             "text": "TIENES",
             "normalized": "tienes",
             "bounds": [
@@ -433,11 +414,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00017-c373298e"
+              "word-tienes"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00018",
+            "id": "es-xkcd-test-de-turing:dialogue:w03",
             "text": "UNOS",
             "normalized": "unos",
             "bounds": [
@@ -449,37 +430,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00018-37819a97"
+              "word-unos--some-before-noun"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00016-3fcc635c",
-          "word-auto-es-xkcd-test-de-turing-00017-c373298e",
-          "word-auto-es-xkcd-test-de-turing-00018-37819a97"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0006",
-        "labelEs": "ARGUMENTOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 18.75,
-          "y": 37.0558,
-          "width": 31.875,
-          "height": 4.0609
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00019",
+            "id": "es-xkcd-test-de-turing:dialogue:w04",
             "text": "ARGUMENTOS",
             "normalized": "argumentos",
             "bounds": [
@@ -491,93 +446,45 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00019-1033ca57"
+              "word-argumentos",
+              "concept-turing-test"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00019-1033ca57"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0007",
-        "labelEs": "BASTANTE BUENOS.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 19.3667,
-          "y": 41.083,
-          "width": 43.7665,
-          "height": 7.1741
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00020",
+            "id": "es-xkcd-test-de-turing:dialogue:w05",
             "text": "BASTANTE",
             "normalized": "bastante",
             "bounds": [
               {
-                "x": 19.3667,
-                "y": 41.083,
-                "width": 22.9853,
-                "height": 7.142
+                "x": 19.36,
+                "y": 41.1,
+                "width": 22.99,
+                "height": 3.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00020-8643a6b2"
+              "word-bastante--degree"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00021",
+            "id": "es-xkcd-test-de-turing:dialogue:w06",
             "text": "BUENOS",
             "normalized": "buenos",
             "bounds": [
               {
-                "x": 43.4292,
-                "y": 41.1201,
-                "width": 19.7041,
-                "height": 7.137
+                "x": 43.43,
+                "y": 41.1,
+                "width": 19.7,
+                "height": 3.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00021-93e2230d"
+              "word-buenos"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00020-8643a6b2",
-          "word-auto-es-xkcd-test-de-turing-00021-93e2230d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0008",
-        "labelEs": "yO... YA NI SIQUIERA ESTOY",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 18.75,
-          "y": 49.7462,
-          "width": 63.125,
-          "height": 4.5685
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00022",
-            "text": "yO",
+            "id": "es-xkcd-test-de-turing:dialogue:w07",
+            "text": "YO",
             "normalized": "yo",
             "bounds": [
               {
@@ -588,11 +495,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00022-e12947d0"
+              "word-yo",
+              "grammar-explicit-subject-pronoun",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00023",
+            "id": "es-xkcd-test-de-turing:dialogue:w08",
             "text": "YA",
             "normalized": "ya",
             "bounds": [
@@ -604,11 +513,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00023-c7b79b7b"
+              "word-ya--anymore-ni-siquiera"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00024",
+            "id": "es-xkcd-test-de-turing:dialogue:w09",
             "text": "NI",
             "normalized": "ni",
             "bounds": [
@@ -620,11 +529,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00024-5a0d2123"
+              "word-ni--fixed-ni-siquiera",
+              "phrase-ni-siquiera"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00025",
+            "id": "es-xkcd-test-de-turing:dialogue:w10",
             "text": "SIQUIERA",
             "normalized": "siquiera",
             "bounds": [
@@ -636,11 +546,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00025-cd9e6c02"
+              "word-siquiera--fixed-ni-siquiera",
+              "phrase-ni-siquiera"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00026",
+            "id": "es-xkcd-test-de-turing:dialogue:w11",
             "text": "ESTOY",
             "normalized": "estoy",
             "bounds": [
@@ -652,39 +563,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00026-2cb53191"
+              "word-estoy--state",
+              "phrase-estar-seguro-de"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00022-e12947d0",
-          "word-auto-es-xkcd-test-de-turing-00023-c7b79b7b",
-          "word-auto-es-xkcd-test-de-turing-00024-5a0d2123",
-          "word-auto-es-xkcd-test-de-turing-00025-cd9e6c02",
-          "word-auto-es-xkcd-test-de-turing-00026-2cb53191"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-test-de-turing:region-0009",
-        "labelEs": "SEGURO DE QUIÉN SOY.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 18.75,
-          "y": 53.8071,
-          "width": 52.5,
-          "height": 4.5685
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-test-de-turing:word-00027",
+            "id": "es-xkcd-test-de-turing:dialogue:w12",
             "text": "SEGURO",
             "normalized": "seguro",
             "bounds": [
@@ -696,11 +580,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00027-fd8a2e51"
+              "word-seguro--certain",
+              "phrase-estar-seguro-de",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00028",
+            "id": "es-xkcd-test-de-turing:dialogue:w13",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -712,11 +598,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00028-1b74c4da"
+              "word-de--seguro-complement",
+              "phrase-estar-seguro-de"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00029",
+            "id": "es-xkcd-test-de-turing:dialogue:w14",
             "text": "QUIÉN",
             "normalized": "quién",
             "bounds": [
@@ -728,11 +615,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00029-4d9616c2"
+              "word-quién--interrogative",
+              "question-words",
+              "phrase-estar-seguro-de",
+              "concept-turing-test"
             ]
           },
           {
-            "id": "es-xkcd-test-de-turing:word-00030",
+            "id": "es-xkcd-test-de-turing:dialogue:w15",
             "text": "SOY",
             "normalized": "soy",
             "bounds": [
@@ -744,789 +634,905 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-test-de-turing-00030-ba0792ac"
+              "word-soy--identity",
+              "phrase-estar-seguro-de",
+              "concept-turing-test"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-test-de-turing-00027-fd8a2e51",
-          "word-auto-es-xkcd-test-de-turing-00028-1b74c4da",
-          "word-auto-es-xkcd-test-de-turing-00029-4d9616c2",
-          "word-auto-es-xkcd-test-de-turing-00030-ba0792ac"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-test-de-turing:dialogue:app-explicit-i",
+            "cardId": "grammar-explicit-subject-pronoun",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:dialogue:w07"
+            ],
+            "exampleEs": "YO",
+            "explanationEn": "Yo is stated for emphasis as the speaker hesitates and turns the identity question toward himself."
+          },
+          {
+            "id": "es-xkcd-test-de-turing:dialogue:app-ni-siquiera",
+            "cardId": "phrase-ni-siquiera",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:dialogue:w09",
+              "es-xkcd-test-de-turing:dialogue:w10"
+            ],
+            "exampleEs": "NI SIQUIERA",
+            "explanationEn": "Ni siquiera adds the strong negative sense ‘not even’ before the state that follows."
+          },
+          {
+            "id": "es-xkcd-test-de-turing:dialogue:app-sure",
+            "cardId": "phrase-estar-seguro-de",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:dialogue:w11",
+              "es-xkcd-test-de-turing:dialogue:w12",
+              "es-xkcd-test-de-turing:dialogue:w13",
+              "es-xkcd-test-de-turing:dialogue:w14",
+              "es-xkcd-test-de-turing:dialogue:w15"
+            ],
+            "exampleEs": "ESTOY SEGURO DE QUIÉN SOY",
+            "explanationEn": "Estoy marks the speaker's current state, seguro describes certainty, de introduces the embedded identity question, and quién keeps its accent inside that question."
+          },
+          {
+            "id": "es-xkcd-test-de-turing:dialogue:app-who-accent",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-test-de-turing:dialogue:w14"
+            ],
+            "exampleEs": "QUIÉN",
+            "explanationEn": "Quién keeps its written accent inside an embedded question about identity, even without question marks around the whole clause."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0009",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-sabes--discourse-marker",
+          "word-tienes",
+          "word-unos--some-before-noun",
+          "word-argumentos",
+          "concept-turing-test",
+          "word-bastante--degree",
+          "word-buenos",
+          "word-yo",
+          "grammar-explicit-subject-pronoun",
+          "word-ya--anymore-ni-siquiera",
+          "word-ni--fixed-ni-siquiera",
+          "phrase-ni-siquiera",
+          "word-siquiera--fixed-ni-siquiera",
+          "word-estoy--state",
+          "phrase-estar-seguro-de",
+          "word-seguro--certain",
+          "word-de--seguro-complement",
+          "word-quién--interrogative",
+          "question-words",
+          "word-soy--identity"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-test-de-turing-00001-f81ac9c5",
-      "word-auto-es-xkcd-test-de-turing-00002-5d34cb3f",
-      "word-auto-es-xkcd-test-de-turing-00003-2a129c7f",
-      "word-auto-es-xkcd-test-de-turing-00004-a009d0ae",
-      "word-auto-es-xkcd-test-de-turing-00005-3c27f687",
-      "word-auto-es-xkcd-test-de-turing-00006-0868a3cd",
-      "word-auto-es-xkcd-test-de-turing-00007-075e7932",
-      "word-auto-es-xkcd-test-de-turing-00008-19259e3c",
-      "word-auto-es-xkcd-test-de-turing-00009-ecefc2a6",
-      "word-auto-es-xkcd-test-de-turing-00010-375c8518",
-      "word-auto-es-xkcd-test-de-turing-00011-d23dc6cf",
-      "word-auto-es-xkcd-test-de-turing-00012-740a09a8",
-      "word-auto-es-xkcd-test-de-turing-00013-f510ab5b",
-      "word-auto-es-xkcd-test-de-turing-00014-89dd47ef",
-      "word-auto-es-xkcd-test-de-turing-00015-39dfe75f",
-      "word-auto-es-xkcd-test-de-turing-00016-3fcc635c",
-      "word-auto-es-xkcd-test-de-turing-00017-c373298e",
-      "word-auto-es-xkcd-test-de-turing-00018-37819a97",
-      "word-auto-es-xkcd-test-de-turing-00019-1033ca57",
-      "word-auto-es-xkcd-test-de-turing-00020-8643a6b2",
-      "word-auto-es-xkcd-test-de-turing-00021-93e2230d",
-      "word-auto-es-xkcd-test-de-turing-00022-e12947d0",
-      "word-auto-es-xkcd-test-de-turing-00023-c7b79b7b",
-      "word-auto-es-xkcd-test-de-turing-00024-5a0d2123",
-      "word-auto-es-xkcd-test-de-turing-00025-cd9e6c02",
-      "word-auto-es-xkcd-test-de-turing-00026-2cb53191",
-      "word-auto-es-xkcd-test-de-turing-00027-fd8a2e51",
-      "word-auto-es-xkcd-test-de-turing-00028-1b74c4da",
-      "word-auto-es-xkcd-test-de-turing-00029-4d9616c2",
-      "word-auto-es-xkcd-test-de-turing-00030-ba0792ac"
+      "word-puntuación--score",
+      "word-extra--additional",
+      "word-en",
+      "word-el--article",
+      "word-test--test",
+      "concept-turing-test",
+      "word-de--named-after",
+      "word-convence--command",
+      "grammar-affirmative-tu-command",
+      "word-al--personal-a-contraction",
+      "grammar-personal-a",
+      "word-examinador",
+      "word-que--clause-link",
+      "word-él--pronoun",
+      "grammar-explicit-subject-pronoun",
+      "word-es",
+      "word-una",
+      "word-computadora",
+      "word-sabes--discourse-marker",
+      "word-tienes",
+      "word-unos--some-before-noun",
+      "word-argumentos",
+      "word-bastante--degree",
+      "word-buenos",
+      "word-yo",
+      "word-ya--anymore-ni-siquiera",
+      "word-ni--fixed-ni-siquiera",
+      "phrase-ni-siquiera",
+      "word-siquiera--fixed-ni-siquiera",
+      "word-estoy--state",
+      "phrase-estar-seguro-de",
+      "word-seguro--certain",
+      "word-de--seguro-complement",
+      "word-quién--interrogative",
+      "question-words",
+      "word-soy--identity"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 30,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00001-f81ac9c5",
+      "id": "word-puntuación--score",
       "kind": "word",
       "promptEs": "puntuación",
-      "answerEn": "Meaning needs review",
+      "answerEn": "score; points",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "score",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00001",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a2543d74f7781f9cfeb5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00002-5d34cb3f",
+      "id": "word-extra--additional",
       "kind": "word",
       "promptEs": "extra",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "extra; additional",
+      "noteEn": "Extra usually stays unchanged after both masculine and feminine nouns: tiempo extra, puntuación extra, horas extra.",
+      "example": {
+        "es": "Nos dieron tiempo extra.",
+        "en": "They gave us extra time."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "invariable",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00002",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c8dee78f8c7b466c8818",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00003-2a129c7f",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00003",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00004-a009d0ae",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00004",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00005-3c27f687",
+      "id": "word-test--test",
       "kind": "word",
       "promptEs": "test",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "test",
+      "noteEn": "Test is a widely used loanword in Spanish. Its plural is tests.",
+      "example": {
+        "es": "Mañana tenemos un test.",
+        "en": "Tomorrow we have a test."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "loanword",
+        "assessment",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00005",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9f86d081884c7d659a2f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00006-0868a3cd",
+      "id": "concept-turing-test",
+      "kind": "concept",
+      "promptEs": "el test de Turing",
+      "answerEn": "A Turing test asks whether a human evaluator can distinguish a machine's conversation from a human's.",
+      "noteEn": "The usual challenge is for a machine to persuade an evaluator that it is human. The comic reverses the task: the human earns extra credit by persuading the evaluator that the evaluator is a computer, leaving him uncertain about his own identity.",
+      "tags": [
+        "concept",
+        "artificial intelligence",
+        "Turing test",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--named-after",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "of; named after",
+      "noteEn": "De can join an invention, theorem, or named object to the person whose name it bears. English may instead use an adjective based on that name.",
+      "example": {
+        "es": "Estudiamos las leyes de Newton.",
+        "en": "We study Newton's laws."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "names"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00006",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00007-075e7932",
-      "kind": "word",
-      "promptEs": "turing",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00007",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c84e9bbecb4337cc1656",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-test-de-turing-00008-19259e3c",
+      "id": "word-convence--command",
       "kind": "word",
       "promptEs": "convence",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "convince (informal command)",
+      "noteEn": "Convence is the positive command used with one person addressed informally as tú. It is also the ordinary present form for él, ella, or usted; context distinguishes them.",
+      "example": {
+        "es": "Convence a Luis con pruebas.",
+        "en": "Convince Luis with evidence."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command",
+        "tú",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00008",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-89644593b2f12d383e4d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00009-ecefc2a6",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
+      "tags": [
+        "grammar",
+        "commands",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
+      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "example": {
+        "es": "Veo al profesor.",
+        "en": "I see the teacher."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contraction",
+        "personal a"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00009",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00010-375c8518",
+      "id": "grammar-personal-a",
+      "kind": "grammar",
+      "promptEs": "a + persona o expresión que se refiere a una persona",
+      "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
+      "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "example": {
+        "es": "Conozco a Marta.",
+        "en": "I know Marta."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "personal a"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-examinador",
       "kind": "word",
       "promptEs": "examinador",
-      "answerEn": "examiner",
+      "answerEn": "examiner; evaluator",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "person",
+        "masculine noun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00010",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7ad93c0b8b0d176deaf0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00011-d23dc6cf",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00011",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00012-740a09a8",
+      "id": "word-él--pronoun",
       "kind": "word",
       "promptEs": "él",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "he; him",
+      "noteEn": "The written accent distinguishes the pronoun él from the article el, which means “the.”",
+      "example": {
+        "es": "El libro es para él.",
+        "en": "The book is for him."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun",
+        "accent"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00012",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-018576b8030e53d8294d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-merlin",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00013-f510ab5b",
+      "id": "grammar-explicit-subject-pronoun",
+      "kind": "grammar",
+      "promptEs": "verbo + pronombre de sujeto enfático",
+      "questionEn": "Why might Spanish say tú or yo when the verb already tells you who acts?",
+      "answerEn": "Say the subject pronoun to add emphasis, contrast, or clarity; otherwise Spanish often leaves it out.",
+      "noteEn": "A verb form such as eres already points to “you.” Adding tú can stress that particular person, especially in a contrast or a surprised question. The pronoun may appear after the verb.",
+      "example": {
+        "es": "Yo no fui; fuiste tú.",
+        "en": "I didn't go; you did."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "subject pronouns",
+        "emphasis"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
       "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00013",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00014-89dd47ef",
+      "id": "word-una",
       "kind": "word",
       "promptEs": "una",
       "answerEn": "a; an (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00014",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-161f0e5ed45f6d514dc2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00015-39dfe75f",
+      "id": "word-computadora",
       "kind": "word",
       "promptEs": "computadora",
       "answerEn": "computer",
-      "noteEn": "",
+      "noteEn": "Computadora is common in much of Latin America. Ordenador is a common alternative in Spain.",
+      "example": {
+        "es": "La computadora está encendida.",
+        "en": "The computer is on."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "technology",
+        "feminine noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00015",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0c3f93b4c0001b94b9ea",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00016-3fcc635c",
+      "id": "word-sabes--discourse-marker",
       "kind": "word",
       "promptEs": "sabes",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "you know?; you see? (conversation opener)",
+      "noteEn": "A speaker can use ¿sabes? to introduce a thought or draw the listener's attention, without literally testing what the listener knows.",
+      "example": {
+        "es": "¿Sabes? Creo que tienes razón.",
+        "en": "You know? I think you're right."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "conversation",
+        "discourse marker"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00016",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-10a057b2e8c0f3453bb6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-propsito-de-mussolini",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00017-c373298e",
+      "id": "word-tienes",
       "kind": "word",
       "promptEs": "tienes",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "tener",
+        "present tense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00017",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-07ecd75fc2ab536c0be1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-compromiso",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00018-37819a97",
+      "id": "word-unos--some-before-noun",
       "kind": "word",
       "promptEs": "unos",
-      "answerEn": "one",
-      "noteEn": "",
+      "answerEn": "some; a few (before a masculine plural noun)",
+      "noteEn": "Unos introduces an indefinite masculine plural group or amount. Use unas before a feminine plural noun.",
+      "example": {
+        "es": "Tengo unos libros nuevos.",
+        "en": "I have some new books."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "indefinite",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00018",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d39b12fc85ea7bae3802",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00019-1033ca57",
+      "id": "word-argumentos",
       "kind": "word",
       "promptEs": "argumentos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "arguments; lines of reasoning",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00019",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3b7ded801aaf63c734c3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00020-8643a6b2",
+      "id": "word-bastante--degree",
       "kind": "word",
       "promptEs": "bastante",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "quite; fairly (before a description)",
+      "noteEn": "Before a describing word, bastante increases its degree and often means ‘quite,’ ‘fairly,’ or ‘pretty.’ It stays unchanged even when the following description changes for gender or number: bastante claro, bastante clara, bastante claros. This differs from bastante meaning ‘enough.’",
+      "example": {
+        "es": "Las instrucciones son bastante claras.",
+        "en": "The instructions are quite clear."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "degree",
+        "adverb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00020",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-819d4b0167a60cb7257c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00021-93e2230d",
+      "id": "word-buenos",
       "kind": "word",
       "promptEs": "buenos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "good (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00021",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c531354572569831c69f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00022-e12947d0",
+      "id": "word-yo",
       "kind": "word",
       "promptEs": "yo",
       "answerEn": "I",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00022",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e9058ab198f6908f7021",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00023-c7b79b7b",
+      "id": "word-ya--anymore-ni-siquiera",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "anymore; by now (before ni siquiera)",
+      "noteEn": "Ya often means ‘already’ or ‘now.’ Before a negative expression such as ni siquiera, it marks a change from the past and is naturally translated as ‘anymore’ or ‘no longer.’",
+      "example": {
+        "es": "Ya ni siquiera llama.",
+        "en": "He does not even call anymore."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "negative context",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00023",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6663103a3e47efc879ea",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00024-5a0d2123",
+      "id": "word-ni--fixed-ni-siquiera",
       "kind": "word",
       "promptEs": "ni",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "not even (as part of ni siquiera)",
+      "noteEn": "Ni begins the fixed emphasis ni siquiera, which says that even a minimal or surprising possibility does not apply.",
+      "example": {
+        "es": "Ni siquiera respondió.",
+        "en": "She did not even answer."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "negative emphasis",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00024",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4db03a277cfb9ef4c68b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00025-cd9e6c02",
+      "id": "phrase-ni-siquiera",
+      "kind": "phrase",
+      "promptEs": "ni siquiera",
+      "questionEn": "How do you emphasize that not even a minimal or surprising possibility applies?",
+      "answerEn": "Use ni siquiera before the excluded thing or action.",
+      "noteEn": "Ni siquiera means ‘not even.’ Before a verb, it can supply negation by itself. When it appears later, Spanish commonly also uses no before the verb.",
+      "example": {
+        "es": "Ni siquiera abrió el mensaje.",
+        "en": "He did not even open the message."
+      },
+      "tags": [
+        "phrase",
+        "negative emphasis",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-siquiera--fixed-ni-siquiera",
       "kind": "word",
       "promptEs": "siquiera",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; completes ni siquiera, ‘not even’",
+      "noteEn": "Siquiera completes ni siquiera. Learn the two words together for the common meaning ‘not even.’",
+      "example": {
+        "es": "No tengo ni siquiera un minuto.",
+        "en": "I do not even have one minute."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "negative emphasis",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00025",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e761ae2bd62533853f29",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00026-2cb53191",
+      "id": "word-estoy--state",
       "kind": "word",
       "promptEs": "estoy",
-      "answerEn": "Meaning needs review",
+      "answerEn": "I am (in a state or condition)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "state"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00026",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-44ceae1acc5c2233c405",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00027-fd8a2e51",
+      "id": "phrase-estar-seguro-de",
+      "kind": "phrase",
+      "promptEs": "estar seguro/segura de + cosa o pregunta",
+      "questionEn": "How do you say what someone is sure or certain about?",
+      "answerEn": "Use a form of estar, seguro or segura, then de before what follows.",
+      "noteEn": "Seguro changes to match the person being described: seguro for masculine singular and segura for feminine singular. De is required before a noun, before que plus a statement, and before an embedded question such as de quién or de si.",
+      "example": {
+        "es": "Ana está segura de la respuesta.",
+        "en": "Ana is sure of the answer."
+      },
+      "tags": [
+        "phrase",
+        "certainty",
+        "estar",
+        "required complement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-seguro--certain",
       "kind": "word",
       "promptEs": "seguro",
-      "answerEn": "Meaning needs review",
+      "answerEn": "sure; certain (masculine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "certainty",
+        "adjective"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00027",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b7bc7e4756d0e81f371a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00028-1b74c4da",
+      "id": "word-de--seguro-complement",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word here; links seguro to what someone is sure about",
+      "noteEn": "The adjective seguro normally takes de before the thing, fact, or question that follows. English often omits a separate preposition before a who, what, or whether clause.",
+      "example": {
+        "es": "Estoy segura de que vendrá.",
+        "en": "I am sure that he will come."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "required complement",
+        "seguro de",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00028",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-test-de-turing",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00029-4d9616c2",
+      "id": "word-quién--interrogative",
       "kind": "word",
       "promptEs": "quién",
-      "answerEn": "Meaning needs review",
+      "answerEn": "who",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "question word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00029",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fbc7949ffd242d75089f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-test-de-turing-00030-ba0792ac",
+      "id": "question-words",
+      "kind": "grammar",
+      "promptEs": "qué · cómo · cuándo…",
+      "answerEn": "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+      "noteEn": "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "accents"
+      ],
+      "questionEn": "Why do words such as que, como, and cuando sometimes have a written accent?",
+      "example": {
+        "es": "¿Cómo te llamas?",
+        "en": "What is your name?"
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-soy--identity",
       "kind": "word",
       "promptEs": "soy",
-      "answerEn": "Meaning needs review",
+      "answerEn": "I am",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "ser",
+        "identity"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-test-de-turing:ocr-token-00030",
-        "sourceLineId": "es-xkcd-test-de-turing:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e676b5103a4f9d9371d5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
       }
     }
   ]

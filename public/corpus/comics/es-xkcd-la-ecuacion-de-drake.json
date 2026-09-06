@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-d0a9bf7bc3b27e74",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9426,
-    "lowConfidenceTokenCount": 5,
-    "rawOcrTokenCount": 54,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-la-ecuacion-de-drake",
     "xkcdNumber": 384,
     "publishedAt": "2008-02-11",
-    "title": "La ecuación de Drake",
+    "title": "The Drake Equation",
     "titleEs": "La ecuación de Drake",
     "image": {
       "src": "https://es.xkcd.com/images/the_drake_equation.png",
       "width": 437,
       "height": 391,
       "aspectRatio": 1.1176,
-      "altEn": "Spanish-language xkcd comic #384: La ecuación de Drake"
+      "altEn": "Spanish-language xkcd comic #384: The Drake Equation"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,11 +36,11 @@
     },
     "titleText": {
       "es": "Ahora en serio: hay un montón de vida inteligente, sólo que no está gritando en todas direcciones en el puñado de frecuencias que miramos.",
-      "en": "English title text pending review."
+      "en": "But seriously, there's loads of intelligent life. It's just not screaming constantly in all directions on the handful of frequencies we search."
     },
     "regions": [
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0001",
+        "id": "es-xkcd-la-ecuacion-de-drake:title",
         "labelEs": "LA ECUACIÓN DE DRAKE",
         "translationEn": "",
         "noteEn": "",
@@ -58,7 +52,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00001",
+            "id": "es-xkcd-la-ecuacion-de-drake:title:w01",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -70,11 +64,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00001-b795bd03"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00002",
+            "id": "es-xkcd-la-ecuacion-de-drake:title:w02",
             "text": "ECUACIÓN",
             "normalized": "ecuación",
             "bounds": [
@@ -86,11 +80,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00002-984b3c2f"
+              "word-ecuación",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00003",
+            "id": "es-xkcd-la-ecuacion-de-drake:title:w03",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -102,13 +97,17 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00003-86e2d87a"
+              "word-de--named-after",
+              "concept-drake-equation"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00004",
+            "id": "es-xkcd-la-ecuacion-de-drake:title:excluded-drake",
             "text": "DRAKE",
-            "normalized": "drake",
+            "reason": "non-spanish-text",
+            "rationale": "This is the unchanged surname of astronomer Frank Drake, not a Spanish lexical item.",
             "bounds": [
               {
                 "x": 67.5799,
@@ -116,40 +115,31 @@
                 "width": 23.7443,
                 "height": 9.1837
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00004-3c91eff3"
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00001-b795bd03",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00002-984b3c2f",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00003-86e2d87a",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00004-3c91eff3"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+          "word-la--article",
+          "word-ecuación",
+          "concept-drake-equation",
+          "word-de--named-after"
+        ]
       },
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0002",
-        "labelEs": "NÚMERO DE",
+        "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations",
+        "labelEs": "NÚMERO DE CIVILIZACIONES QUE SE COMUNICAN EN NUESTRA GALAXIA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 5.0228,
+          "x": 5.0045,
           "y": 24.4898,
-          "width": 19.6347,
-          "height": 4.5918
+          "width": 26.5023,
+          "height": 21.5245
         },
         "words": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00005",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w01",
             "text": "NÚMERO",
             "normalized": "número",
             "bounds": [
@@ -161,11 +151,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00005-f66353ed"
+              "word-número",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00006",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w02",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -177,36 +168,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00006-32364717"
+              "word-de--of"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00005-f66353ed",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00006-32364717"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0003",
-        "labelEs": "CIVILIZACIONES",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.0228,
-          "y": 29.0816,
-          "width": 23.7443,
-          "height": 4.0816
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00007",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w03",
             "text": "CIVILIZACIONES",
             "normalized": "civilizaciones",
             "bounds": [
@@ -218,35 +184,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00007-602c126a"
+              "word-civilizaciones",
+              "grammar-relative-que",
+              "concept-drake-equation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00007-602c126a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0004",
-        "labelEs": "QUE SE COMU-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.0228,
-          "y": 33.1633,
-          "width": 23.7443,
-          "height": 4.0816
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00008",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -258,11 +202,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00008-acb2fa5b"
+              "word-que--relative",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00009",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w05",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -274,130 +219,22 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00009-f41276aa"
+              "word-se--comunicarse",
+              "phrase-comunicarse",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00010",
-            "text": "COMU",
-            "normalized": "comu",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w06",
+            "text": "COMUNICAN",
+            "normalized": "comunican",
             "bounds": [
               {
                 "x": 17.8082,
                 "y": 33.1633,
                 "width": 10.9589,
                 "height": 4.0816
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00010-ca8d1fbd"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00008-acb2fa5b",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00009-f41276aa",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00010-ca8d1fbd"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0005",
-        "labelEs": "PROBABILIDAD DE QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 47.4886,
-          "y": 33.6735,
-          "width": 34.7032,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00011",
-            "text": "PROBABILIDAD",
-            "normalized": "probabilidad",
-            "bounds": [
-              {
-                "x": 47.4886,
-                "y": 33.6735,
-                "width": 21.5753,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00011-8ecf9033"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00012",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 69.5776,
-                "y": 33.6735,
-                "width": 4.6233,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00012-041ec58e"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00013",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 74.7146,
-                "y": 33.6735,
-                "width": 7.4772,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00013-cad925c5"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00011-8ecf9033",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00012-041ec58e",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00013-cad925c5"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0006",
-        "labelEs": "NICAN EN NUES-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.0228,
-          "y": 37.2449,
-          "width": 26.484,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00014",
-            "text": "NICAN",
-            "normalized": "nican",
-            "bounds": [
+              },
               {
                 "x": 5.0228,
                 "y": 37.2449,
@@ -406,11 +243,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00014-106eb77f"
+              "word-comunican--communicate",
+              "phrase-comunicarse",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00015",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w07",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -422,164 +261,21 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00015-4e681a20"
+              "word-en",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00016",
-            "text": "NUES",
-            "normalized": "nues",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w08",
+            "text": "NUESTRA",
+            "normalized": "nuestra",
             "bounds": [
               {
                 "x": 20.9475,
                 "y": 37.2449,
                 "width": 10.5594,
                 "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00016-ccd804d0"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00014-106eb77f",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00015-4e681a20",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00016-ccd804d0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0007",
-        "labelEs": "LA VIDA DE UN PLANETA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 47.4886,
-          "y": 37.7551,
-          "width": 37.4429,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00017",
-            "text": "LA",
-            "normalized": "la",
-            "bounds": [
-              {
-                "x": 47.4886,
-                "y": 37.7551,
-                "width": 4.1096,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00017-8520dc82"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00018",
-            "text": "VIDA",
-            "normalized": "vida",
-            "bounds": [
-              {
-                "x": 52.1119,
-                "y": 37.7551,
-                "width": 7.7055,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00018-8d2492eb"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00019",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 60.3311,
-                "y": 37.7551,
-                "width": 4.6233,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00019-f21bd913"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00020",
-            "text": "UN",
-            "normalized": "un",
-            "bounds": [
-              {
-                "x": 65.468,
-                "y": 37.7551,
-                "width": 5.137,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00020-50a38720"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00021",
-            "text": "PLANETA",
-            "normalized": "planeta",
-            "bounds": [
-              {
-                "x": 71.1187,
-                "y": 37.7551,
-                "width": 13.8128,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00021-99ba925a"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00017-8520dc82",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00018-8d2492eb",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00019-f21bd913",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00020-50a38720",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00021-99ba925a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0008",
-        "labelEs": "TRA GALAXIA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.0045,
-          "y": 40.7205,
-          "width": 21.0412,
-          "height": 5.2938
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00022",
-            "text": "TRA",
-            "normalized": "tra",
-            "bounds": [
+              },
               {
                 "x": 5.0045,
                 "y": 40.7205,
@@ -588,11 +284,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00022-7d83afc2"
+              "word-nuestra",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00023",
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w09",
             "text": "GALAXIA",
             "normalized": "galaxia",
             "bounds": [
@@ -604,36 +301,208 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00023-efddef38"
+              "word-galaxia",
+              "grammar-relative-que",
+              "concept-drake-equation"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00022-7d83afc2",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00023-efddef38"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:app-relative-que",
+            "cardId": "grammar-relative-que",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w03",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w04",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w05",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w06",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w07",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w08",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w09"
+            ],
+            "exampleEs": "CIVILIZACIONES QUE SE COMUNICAN EN NUESTRA GALAXIA",
+            "explanationEn": "Que connects civilizaciones to the complete information that follows; se comunican supplies the action, and en nuestra galaxia supplies its location."
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:app-comunicarse",
+            "cardId": "phrase-comunicarse",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w05",
+              "es-xkcd-la-ecuacion-de-drake:communicating-civilizations:w06"
+            ],
+            "exampleEs": "SE COMUNICAN",
+            "explanationEn": "Se matches the plural group, and comunican is the plural present-time form of comunicar."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0008",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-número",
+          "concept-drake-equation",
+          "word-de--of",
+          "word-civilizaciones",
+          "grammar-relative-que",
+          "word-que--relative",
+          "word-se--comunicarse",
+          "phrase-comunicarse",
+          "word-comunican--communicate",
+          "word-en",
+          "word-nuestra",
+          "word-galaxia"
+        ]
       },
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0009",
-        "labelEs": "SE HAGA INTELIGENTE",
+        "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life",
+        "labelEs": "PROBABILIDAD DE QUE LA VIDA DE UN PLANETA SE HAGA INTELIGENTE",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 47.4886,
-          "y": 41.8367,
-          "width": 34.2466,
-          "height": 4.5918
+          "y": 33.6735,
+          "width": 37.4429,
+          "height": 12.755
         },
         "words": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00024",
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w01",
+            "text": "PROBABILIDAD",
+            "normalized": "probabilidad",
+            "bounds": [
+              {
+                "x": 47.4886,
+                "y": 33.6735,
+                "width": 21.5753,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-probabilidad",
+              "grammar-probabilidad-de-que-subjunctive",
+              "concept-drake-equation"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w02",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 69.5776,
+                "y": 33.6735,
+                "width": 4.6233,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-de--probabilidad-de-que",
+              "grammar-probabilidad-de-que-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w03",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 74.7146,
+                "y": 33.6735,
+                "width": 7.4772,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-que--clause-link",
+              "grammar-probabilidad-de-que-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w04",
+            "text": "LA",
+            "normalized": "la",
+            "bounds": [
+              {
+                "x": 47.4886,
+                "y": 37.7551,
+                "width": 4.1096,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-la--generic-abstract-noun",
+              "grammar-probabilidad-de-que-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w05",
+            "text": "VIDA",
+            "normalized": "vida",
+            "bounds": [
+              {
+                "x": 52.1119,
+                "y": 37.7551,
+                "width": 7.7055,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-vida",
+              "grammar-probabilidad-de-que-subjunctive",
+              "concept-drake-equation"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w06",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 60.3311,
+                "y": 37.7551,
+                "width": 4.6233,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-de--of",
+              "grammar-probabilidad-de-que-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w07",
+            "text": "UN",
+            "normalized": "un",
+            "bounds": [
+              {
+                "x": 65.468,
+                "y": 37.7551,
+                "width": 5.137,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-un",
+              "grammar-probabilidad-de-que-subjunctive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w08",
+            "text": "PLANETA",
+            "normalized": "planeta",
+            "bounds": [
+              {
+                "x": 71.1187,
+                "y": 37.7551,
+                "width": 13.8128,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-planeta",
+              "grammar-probabilidad-de-que-subjunctive",
+              "concept-drake-equation"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w09",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -645,11 +514,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00024-044ebacb"
+              "word-se--hacerse-change",
+              "grammar-probabilidad-de-que-subjunctive",
+              "grammar-hacerse-adjective-change"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00025",
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w10",
             "text": "HAGA",
             "normalized": "haga",
             "bounds": [
@@ -661,11 +532,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00025-3883b3ab"
+              "word-haga--become-subjunctive",
+              "grammar-probabilidad-de-que-subjunctive",
+              "grammar-hacerse-adjective-change"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00026",
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:w11",
             "text": "INTELIGENTE",
             "normalized": "inteligente",
             "bounds": [
@@ -677,191 +550,108 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00026-74c3fe3d"
+              "word-inteligente",
+              "grammar-probabilidad-de-que-subjunctive",
+              "grammar-hacerse-adjective-change",
+              "concept-drake-equation"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00024-044ebacb",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00025-3883b3ab",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00026-74c3fe3d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0010",
-        "labelEs": "N= R*fp",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 12.3288,
-          "y": 55.102,
-          "width": 31.0502,
-          "height": 11.2245
-        },
-        "words": [
+        "excludedUnits": [],
+        "applications": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00027",
-            "text": "N",
-            "normalized": "n",
-            "bounds": [
-              {
-                "x": 12.3288,
-                "y": 55.102,
-                "width": 12.5571,
-                "height": 11.2245
-              }
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:app-probability",
+            "cardId": "grammar-probabilidad-de-que-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w01",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w02",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w03",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w04",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w05",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w06",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w07",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w08",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w09",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w10",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w11"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00027-5e804131"
-            ]
+            "exampleEs": "PROBABILIDAD DE QUE LA VIDA DE UN PLANETA SE HAGA INTELIGENTE",
+            "explanationEn": "Probabilidad de que introduces an uncertain outcome. La vida de un planeta names what may change, haga is the special possibility form, and inteligente names its possible new state."
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00028",
-            "text": "R",
-            "normalized": "r",
-            "bounds": [
-              {
-                "x": 26.1416,
-                "y": 55.102,
-                "width": 17.2374,
-                "height": 11.2245
-              }
+            "id": "es-xkcd-la-ecuacion-de-drake:intelligent-life:app-hacerse",
+            "cardId": "grammar-hacerse-adjective-change",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w09",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w10",
+              "es-xkcd-la-ecuacion-de-drake:intelligent-life:w11"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00028-8a937064"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00029",
-            "text": "fp",
-            "normalized": "fp",
-            "bounds": [
-              {
-                "x": 26.1416,
-                "y": 55.102,
-                "width": 17.2374,
-                "height": 11.2245
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00029-80d66eea"
-            ]
+            "exampleEs": "SE HAGA INTELIGENTE",
+            "explanationEn": "Se and haga form the possibility version of hacerse, and inteligente names the resulting state."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00027-5e804131",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00028-8a937064",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00029-80d66eea"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0010",
-          "ocrConfidence": 0.3
-        }
+          "word-probabilidad",
+          "grammar-probabilidad-de-que-subjunctive",
+          "concept-drake-equation",
+          "word-de--probabilidad-de-que",
+          "word-que--clause-link",
+          "word-la--generic-abstract-noun",
+          "word-vida",
+          "word-de--of",
+          "word-un",
+          "word-planeta",
+          "word-se--hacerse-change",
+          "grammar-hacerse-adjective-change",
+          "word-haga--become-subjunctive",
+          "word-inteligente"
+        ]
       },
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0011",
-        "labelEs": "feL",
+        "id": "es-xkcd-la-ecuacion-de-drake:equation",
+        "labelEs": "N = R* f_p n_e f_l f_i f_c L B_s",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 63.0137,
-          "y": 56.6327,
-          "width": 10.5023,
-          "height": 9.6939
+          "x": 12,
+          "y": 55,
+          "width": 72,
+          "height": 14.5
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00030",
-            "text": "feL",
-            "normalized": "fel",
+            "id": "es-xkcd-la-ecuacion-de-drake:equation:excluded-formula",
+            "text": "N = R* f_p n_e f_l f_i f_c L B_s",
+            "reason": "equation",
+            "rationale": "This complete line consists of mathematical variables and operators rather than Spanish lexical vocabulary.",
             "bounds": [
               {
-                "x": 63.0137,
-                "y": 56.6327,
-                "width": 10.5023,
-                "height": 9.6939
+                "x": 12,
+                "y": 55,
+                "width": 72,
+                "height": 14.5
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00030-85c749d9"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00030-85c749d9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0011",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0012",
-        "labelEs": "te",
+        "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets",
+        "labelEs": "NÚMERO DE PLANETAS POR SISTEMA SOLAR ADECUADOS PARA LA VIDA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 51.1416,
-          "y": 57.1429,
-          "width": 4.1096,
-          "height": 8.6735
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00031",
-            "text": "te",
-            "normalized": "te",
-            "bounds": [
-              {
-                "x": 51.1416,
-                "y": 57.1429,
-                "width": 4.1096,
-                "height": 8.6735
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00031-c21859fc"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00031-c21859fc"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0012",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0013",
-        "labelEs": "NÚMERO DE PLANETAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 14.1553,
+          "x": 13.6986,
           "y": 76.0204,
-          "width": 35.6164,
-          "height": 5.102
+          "width": 41.0959,
+          "height": 13.2653
         },
         "words": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00032",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w01",
             "text": "NÚMERO",
             "normalized": "número",
             "bounds": [
@@ -873,11 +663,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00032-1f82e6d5"
+              "word-número",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00033",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w02",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -889,11 +680,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00033-ee3bdb60"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00034",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w03",
             "text": "PLANETAS",
             "normalized": "planetas",
             "bounds": [
@@ -905,185 +696,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00034-f3bf69d6"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00032-1f82e6d5",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00033-ee3bdb60",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00034-f3bf69d6"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0014",
-        "labelEs": "ANTIDAD DE GILI-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 62.1005,
-          "y": 76.5306,
-          "width": 26.9406,
-          "height": 4.0816
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00035",
-            "text": "ANTIDAD",
-            "normalized": "antidad",
-            "bounds": [
-              {
-                "x": 62.1005,
-                "y": 76.5306,
-                "width": 13.242,
-                "height": 4.0816
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00035-3a7711f6"
+              "word-planetas",
+              "grammar-adjective-gender-agreement",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00036",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 75.7991,
-                "y": 76.5306,
-                "width": 5.0228,
-                "height": 4.0816
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00036-8ef10548"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00037",
-            "text": "GILI",
-            "normalized": "gili",
-            "bounds": [
-              {
-                "x": 81.2785,
-                "y": 76.5306,
-                "width": 7.7626,
-                "height": 4.0816
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00037-4b79590b"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00035-3a7711f6",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00036-8ef10548",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00037-4b79590b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0014",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0015",
-        "labelEs": "'OLLECES DE FRANK",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 61.6438,
-          "y": 80.102,
-          "width": 30.5936,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00038",
-            "text": "OLLECES",
-            "normalized": "olleces",
-            "bounds": [
-              {
-                "x": 61.6438,
-                "y": 80.102,
-                "width": 13.8699,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00038-c14a2b43"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00039",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 76.0274,
-                "y": 80.102,
-                "width": 4.6233,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00039-28e6ac6e"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00040",
-            "text": "FRANK",
-            "normalized": "frank",
-            "bounds": [
-              {
-                "x": 81.1644,
-                "y": 80.102,
-                "width": 11.0731,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00040-5d17dd93"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00038-c14a2b43",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00039-28e6ac6e",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00040-5d17dd93"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0015",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0016",
-        "labelEs": "POR SISTEMA SOLAR",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 13.6986,
-          "y": 80.6122,
-          "width": 32.8767,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00041",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w04",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -1095,11 +714,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00041-e14b3996"
+              "word-por--per-unit"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00042",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w05",
             "text": "SISTEMA",
             "normalized": "sistema",
             "bounds": [
@@ -1111,11 +730,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00042-d9ab447a"
+              "word-sistema",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00043",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w06",
             "text": "SOLAR",
             "normalized": "solar",
             "bounds": [
@@ -1127,128 +747,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00043-f719b0f4"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00041-e14b3996",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00042-d9ab447a",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00043-f719b0f4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0016",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0017",
-        "labelEs": "DRAKE QUE LINO ESTÁ",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 59.8174,
-          "y": 84.1837,
-          "width": 34.7032,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00044",
-            "text": "DRAKE",
-            "normalized": "drake",
-            "bounds": [
-              {
-                "x": 59.8174,
-                "y": 84.1837,
-                "width": 10.7877,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00044-220d2707"
+              "word-solar",
+              "concept-drake-equation"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00045",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 71.1187,
-                "y": 84.1837,
-                "width": 7.1918,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00045-38e13d60"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00046",
-            "text": "LINO",
-            "normalized": "lino",
-            "bounds": [
-              {
-                "x": 78.8242,
-                "y": 84.1837,
-                "width": 6.6781,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00046-b2d29d45"
-            ]
-          },
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00047",
-            "text": "ESTÁ",
-            "normalized": "está",
-            "bounds": [
-              {
-                "x": 86.016,
-                "y": 84.1837,
-                "width": 8.5046,
-                "height": 4.5918
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00047-3aa079df"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00044-220d2707",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00045-38e13d60",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00046-b2d29d45",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00047-3aa079df"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0017",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0018",
-        "labelEs": "ADECUADOS PARA LA VIDA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 13.6986,
-          "y": 84.6939,
-          "width": 41.0959,
-          "height": 4.5918
-        },
-        "words": [
-          {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00048",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w07",
             "text": "ADECUADOS",
             "normalized": "adecuados",
             "bounds": [
@@ -1260,11 +764,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00048-8b66d14f"
+              "word-adecuados",
+              "grammar-adjective-gender-agreement",
+              "phrase-adecuado-para"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00049",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w08",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -1276,11 +782,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00049-878bb73f"
+              "word-para--suitability-target",
+              "phrase-adecuado-para"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00050",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w09",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -1292,11 +799,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00050-813a2473"
+              "word-la--generic-abstract-noun",
+              "phrase-adecuado-para"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00051",
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w10",
             "text": "VIDA",
             "normalized": "vida",
             "bounds": [
@@ -1308,38 +816,193 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00051-ed0842ba"
+              "word-vida",
+              "phrase-adecuado-para",
+              "concept-drake-equation"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00048-8b66d14f",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00049-878bb73f",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00050-813a2473",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00051-ed0842ba"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w03",
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w07"
+            ],
+            "exampleEs": "PLANETAS POR SISTEMA SOLAR ADECUADOS",
+            "explanationEn": "Adecuados uses masculine plural -os to match planetas; por sistema solar is intervening rate information rather than part of that agreement."
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:app-suitable-for",
+            "cardId": "phrase-adecuado-para",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w07",
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w08",
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w09",
+              "es-xkcd-la-ecuacion-de-drake:life-supporting-planets:w10"
+            ],
+            "exampleEs": "ADECUADOS PARA LA VIDA",
+            "explanationEn": "Adecuados matches the plural thing being evaluated, and para introduces the complete use or condition that follows."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0018",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-número",
+          "concept-drake-equation",
+          "word-de--of",
+          "word-planetas",
+          "grammar-adjective-gender-agreement",
+          "word-por--per-unit",
+          "word-sistema",
+          "word-solar",
+          "word-adecuados",
+          "phrase-adecuado-para",
+          "word-para--suitability-target",
+          "word-la--generic-abstract-noun",
+          "word-vida"
+        ]
       },
       {
-        "id": "es-xkcd-la-ecuacion-de-drake:region-0019",
-        "labelEs": "DISPUESTO A TRAGARSE.",
+        "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor",
+        "labelEs": "CANTIDAD DE GILIPOLLECES DE FRANK DRAKE QUE UNO ESTÁ DISPUESTO A TRAGARSE.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 59.8174,
-          "y": 88.2653,
+          "y": 76.5306,
           "width": 37.8995,
-          "height": 5.102
+          "height": 16.8367
         },
         "words": [
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00052",
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w01",
+            "text": "CANTIDAD",
+            "normalized": "cantidad",
+            "bounds": [
+              {
+                "x": 59.8,
+                "y": 75.8,
+                "width": 16,
+                "height": 5.4
+              }
+            ],
+            "cardIds": [
+              "word-cantidad",
+              "concept-drake-equation-bs-parody"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w02",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 75.7991,
+                "y": 76.5306,
+                "width": 5.0228,
+                "height": 4.0816
+              }
+            ],
+            "cardIds": [
+              "word-de--of"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w03",
+            "text": "GILIPOLLECES",
+            "normalized": "gilipolleces",
+            "bounds": [
+              {
+                "x": 81,
+                "y": 75.9,
+                "width": 8.5,
+                "height": 5.1
+              },
+              {
+                "x": 59.8,
+                "y": 79.5,
+                "width": 16,
+                "height": 5.4
+              }
+            ],
+            "cardIds": [
+              "word-gilipolleces",
+              "grammar-relative-que",
+              "concept-drake-equation-bs-parody"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w04",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 76.0274,
+                "y": 80.102,
+                "width": 4.6233,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-de--creator-source",
+              "grammar-relative-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w05",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 71.1187,
+                "y": 84.1837,
+                "width": 7.1918,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-que--relative",
+              "grammar-relative-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w06",
+            "text": "UNO",
+            "normalized": "uno",
+            "bounds": [
+              {
+                "x": 78.8242,
+                "y": 84.1837,
+                "width": 6.6781,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-uno--generic-person",
+              "grammar-relative-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w07",
+            "text": "ESTÁ",
+            "normalized": "está",
+            "bounds": [
+              {
+                "x": 86.016,
+                "y": 84.1837,
+                "width": 8.5046,
+                "height": 4.5918
+              }
+            ],
+            "cardIds": [
+              "word-está",
+              "grammar-relative-que",
+              "grammar-estar-dispuesto-a-infinitive"
+            ]
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w08",
             "text": "DISPUESTO",
             "normalized": "dispuesto",
             "bounds": [
@@ -1351,11 +1014,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00052-5eda582b"
+              "word-dispuesto--willing",
+              "grammar-relative-que",
+              "grammar-estar-dispuesto-a-infinitive",
+              "concept-drake-equation-bs-parody"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00053",
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w09",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -1367,11 +1033,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00053-6df12622"
+              "word-a--infinitive-link",
+              "grammar-relative-que",
+              "grammar-estar-dispuesto-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-la-ecuacion-de-drake:word-00054",
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w10",
             "text": "TRAGARSE",
             "normalized": "tragarse",
             "bounds": [
@@ -1383,1388 +1051,1097 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-la-ecuacion-de-drake-00054-6b9e3a78"
+              "word-tragarse--accept-uncritically",
+              "grammar-relative-que",
+              "grammar-estar-dispuesto-a-infinitive",
+              "concept-drake-equation-bs-parody"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00052-5eda582b",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00053-6df12622",
-          "word-auto-es-xkcd-la-ecuacion-de-drake-00054-6b9e3a78"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:excluded-frank-drake",
+            "text": "FRANK DRAKE",
+            "reason": "non-spanish-text",
+            "rationale": "This is the unchanged personal name of astronomer Frank Drake, not Spanish lexical vocabulary.",
+            "bounds": [
+              {
+                "x": 81.1644,
+                "y": 80.102,
+                "width": 11.0731,
+                "height": 4.5918
+              },
+              {
+                "x": 59.8174,
+                "y": 84.1837,
+                "width": 10.7877,
+                "height": 4.5918
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0019",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:app-relative-que",
+            "cardId": "grammar-relative-que",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w03",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w04",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w05",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w06",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w07",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w08",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w09",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w10"
+            ],
+            "exampleEs": "GILIPOLLECES DE FRANK DRAKE QUE UNO ESTÁ DISPUESTO A TRAGARSE",
+            "explanationEn": "The words before que name the gilipolleces and their source; que then opens the information about what uno is willing to do with them."
+          },
+          {
+            "id": "es-xkcd-la-ecuacion-de-drake:bullshit-factor:app-willing",
+            "cardId": "grammar-estar-dispuesto-a-infinitive",
+            "participantWordIds": [
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w07",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w08",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w09",
+              "es-xkcd-la-ecuacion-de-drake:bullshit-factor:w10"
+            ],
+            "exampleEs": "ESTÁ DISPUESTO A TRAGARSE",
+            "explanationEn": "Está supplies the state, dispuesto marks willingness, a introduces the action, and tragarse stays in its unchanged dictionary form."
+          }
+        ],
+        "cardIds": [
+          "word-cantidad",
+          "concept-drake-equation-bs-parody",
+          "word-de--of",
+          "word-gilipolleces",
+          "grammar-relative-que",
+          "word-de--creator-source",
+          "word-que--relative",
+          "word-uno--generic-person",
+          "word-está",
+          "grammar-estar-dispuesto-a-infinitive",
+          "word-dispuesto--willing",
+          "word-a--infinitive-link",
+          "word-tragarse--accept-uncritically"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00001-b795bd03",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00002-984b3c2f",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00003-86e2d87a",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00004-3c91eff3",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00005-f66353ed",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00006-32364717",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00007-602c126a",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00008-acb2fa5b",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00009-f41276aa",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00010-ca8d1fbd",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00011-8ecf9033",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00012-041ec58e",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00013-cad925c5",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00014-106eb77f",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00015-4e681a20",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00016-ccd804d0",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00017-8520dc82",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00018-8d2492eb",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00019-f21bd913",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00020-50a38720",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00021-99ba925a",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00022-7d83afc2",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00023-efddef38",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00024-044ebacb",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00025-3883b3ab",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00026-74c3fe3d",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00027-5e804131",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00028-8a937064",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00029-80d66eea",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00030-85c749d9",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00031-c21859fc",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00032-1f82e6d5",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00033-ee3bdb60",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00034-f3bf69d6",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00035-3a7711f6",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00036-8ef10548",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00037-4b79590b",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00038-c14a2b43",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00039-28e6ac6e",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00040-5d17dd93",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00041-e14b3996",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00042-d9ab447a",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00043-f719b0f4",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00044-220d2707",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00045-38e13d60",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00046-b2d29d45",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00047-3aa079df",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00048-8b66d14f",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00049-878bb73f",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00050-813a2473",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00051-ed0842ba",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00052-5eda582b",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00053-6df12622",
-      "word-auto-es-xkcd-la-ecuacion-de-drake-00054-6b9e3a78"
+      "word-la--article",
+      "word-ecuación",
+      "concept-drake-equation",
+      "word-de--named-after",
+      "word-número",
+      "word-de--of",
+      "word-civilizaciones",
+      "grammar-relative-que",
+      "word-que--relative",
+      "word-se--comunicarse",
+      "phrase-comunicarse",
+      "word-comunican--communicate",
+      "word-en",
+      "word-nuestra",
+      "word-galaxia",
+      "word-probabilidad",
+      "grammar-probabilidad-de-que-subjunctive",
+      "word-de--probabilidad-de-que",
+      "word-que--clause-link",
+      "word-la--generic-abstract-noun",
+      "word-vida",
+      "word-un",
+      "word-planeta",
+      "word-se--hacerse-change",
+      "grammar-hacerse-adjective-change",
+      "word-haga--become-subjunctive",
+      "word-inteligente",
+      "word-planetas",
+      "grammar-adjective-gender-agreement",
+      "word-por--per-unit",
+      "word-sistema",
+      "word-solar",
+      "word-adecuados",
+      "phrase-adecuado-para",
+      "word-para--suitability-target",
+      "word-cantidad",
+      "concept-drake-equation-bs-parody",
+      "word-gilipolleces",
+      "word-de--creator-source",
+      "word-uno--generic-person",
+      "word-está",
+      "grammar-estar-dispuesto-a-infinitive",
+      "word-dispuesto--willing",
+      "word-a--infinitive-link",
+      "word-tragarse--accept-uncritically"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9426,
-      "lowConfidenceTokenCount": 5,
-      "rawOcrTokenCount": 54,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00001-b795bd03",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00001",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00002-984b3c2f",
+      "id": "word-ecuación",
       "kind": "word",
       "promptEs": "ecuación",
       "answerEn": "equation",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics",
+        "science"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00002",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cf4b556d3025063b594c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00003-86e2d87a",
+      "id": "concept-drake-equation",
+      "kind": "concept",
+      "promptEs": "ecuación de Drake",
+      "answerEn": "a framework that multiplies estimated factors to approximate how many extraterrestrial civilizations might communicate in the Milky Way",
+      "noteEn": "Astronomer Frank Drake introduced the framework in 1961. Its factors concern stars, planets, life, intelligence, communication, and how long detectable civilizations last; their uncertain values make the result an estimate, not a measured count.",
+      "tags": [
+        "concept",
+        "astronomy",
+        "extraterrestrial life",
+        "Drake equation"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--named-after",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "of; named after",
+      "noteEn": "De can join an invention, theorem, or named object to the person whose name it bears. English may instead use an adjective based on that name.",
+      "example": {
+        "es": "Estudiamos las leyes de Newton.",
+        "en": "We study Newton's laws."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "names"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00003",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00004-3c91eff3",
-      "kind": "word",
-      "promptEs": "drake",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00004",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-54444aa7bc07ccec734f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00005-f66353ed",
+      "id": "word-número",
       "kind": "word",
       "promptEs": "número",
-      "answerEn": "Meaning needs review",
+      "answerEn": "number",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00005",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-84871a760b20b5c33b2d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00006-32364717",
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00006",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00007-602c126a",
+      "id": "word-civilizaciones",
       "kind": "word",
       "promptEs": "civilizaciones",
-      "answerEn": "civilization",
+      "answerEn": "civilizations",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "society",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00007",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fb0ab53127a2d6d4981c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00008-acb2fa5b",
+      "id": "grammar-relative-que",
+      "kind": "grammar",
+      "promptEs": "persona o cosa + que + información",
+      "questionEn": "How do you add information about a named person or thing using “who,” “that,” or “which”?",
+      "answerEn": "Put que after the person or thing, then add a verb and the information about it.",
+      "noteEn": "Que links the added description to the person or thing before it. It does not change for masculine, feminine, singular, or plural nouns. The added part needs a verb: la casa que vimos means “the house that we saw.”",
+      "example": {
+        "es": "La casa que vimos es azul.",
+        "en": "The house that we saw is blue."
+      },
+      "tags": [
+        "grammar",
+        "relative clause",
+        "description",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--relative",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00008",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00009-f41276aa",
+      "id": "word-se--comunicarse",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; helps comunicarse mean ‘to communicate’",
+      "noteEn": "Comunicarse uses a short marker that matches who communicates: me comunico, te comunicas, se comunica, nos comunicamos, os comunicáis, or se comunican. The marker stays directly before a normal changed form of comunicar.",
+      "example": {
+        "es": "Nos comunicamos por correo.",
+        "en": "We communicate by email."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronominal verb",
+        "communication"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00009",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00010-ca8d1fbd",
+      "id": "phrase-comunicarse",
+      "kind": "phrase",
+      "promptEs": "comunicarse (con alguien o por un medio)",
+      "questionEn": "How do you say that people communicate or get in touch?",
+      "answerEn": "Use a matching short marker with a form of comunicar: me comunico, te comunicas, se comunica, nos comunicamos, os comunicáis, or se comunican.",
+      "noteEn": "The short marker changes with the person or group, and comunicar changes for that same person or group. Con can introduce who receives the communication; por can introduce the medium used.",
+      "example": {
+        "es": "Nos comunicamos por mensajes.",
+        "en": "We communicate by text messages."
+      },
+      "tags": [
+        "phrase",
+        "pronominal verb",
+        "communication",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-comunican--communicate",
       "kind": "word",
-      "promptEs": "comu",
-      "answerEn": "Meaning needs review",
+      "promptEs": "comunican",
+      "answerEn": "they communicate",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "comunicar",
+        "present tense",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00010",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-31423781bdcf983e3893",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00011-8ecf9033",
-      "kind": "word",
-      "promptEs": "probabilidad",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00011",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f5a3e9f16143f374900c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00012-041ec58e",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00012",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00013-cad925c5",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00013",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00014-106eb77f",
-      "kind": "word",
-      "promptEs": "nican",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00014",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e1f37eb1d7c70c28cee8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00015-4e681a20",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00015",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00016-ccd804d0",
+      "id": "word-nuestra",
       "kind": "word",
-      "promptEs": "nues",
-      "answerEn": "Meaning needs review",
+      "promptEs": "nuestra",
+      "answerEn": "our (before a feminine singular noun)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "possessive",
+        "feminine"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00016",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d787ebff9274265a56e5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00017-8520dc82",
-      "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00017",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00018-8d2492eb",
-      "kind": "word",
-      "promptEs": "vida",
-      "answerEn": "life",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00018",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d036968052cedfb02659",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00019-f21bd913",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00019",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00020-50a38720",
-      "kind": "word",
-      "promptEs": "un",
-      "answerEn": "a; an (masculine)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00020",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00021-99ba925a",
-      "kind": "word",
-      "promptEs": "planeta",
-      "answerEn": "planet",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00021",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02f2d916bc6d8221f189",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00022-7d83afc2",
-      "kind": "word",
-      "promptEs": "tra",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00022",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b6b1ecf2b1b3b58ba2e7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00023-efddef38",
+      "id": "word-galaxia",
       "kind": "word",
       "promptEs": "galaxia",
       "answerEn": "galaxy",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "astronomy"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00023",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2a9a56061c5a368b7c2a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00024-044ebacb",
+      "id": "word-probabilidad",
       "kind": "word",
-      "promptEs": "se",
-      "answerEn": "Meaning needs review",
+      "promptEs": "probabilidad",
+      "answerEn": "probability; chance",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "probability",
+        "science"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00024",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00025-3883b3ab",
-      "kind": "word",
-      "promptEs": "haga",
-      "answerEn": "do; make (subjunctive form)",
-      "noteEn": "",
+      "id": "grammar-probabilidad-de-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "probabilidad de que + resultado incierto",
+      "questionEn": "How do you introduce an outcome whose probability or chance is being discussed?",
+      "answerEn": "Use probabilidad de que, then describe the uncertain outcome with the special verb form Spanish uses for possibilities.",
+      "noteEn": "This special form is called the subjunctive. It presents the outcome as possible rather than asserted as a fact: ordinary llueve changes to llueva, and se hace changes to se haga. The plus sign in the prompt means “followed by.”",
+      "example": {
+        "es": "Hay poca probabilidad de que llueva.",
+        "en": "There is little chance that it will rain."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "probability",
+        "subjunctive",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00025",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-783de218fbdb9fa91fe3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00026-74c3fe3d",
-      "kind": "word",
-      "promptEs": "inteligente",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00026",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fd7cad38dc29f81bd41d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00027-5e804131",
-      "kind": "word",
-      "promptEs": "n",
-      "answerEn": "letter",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00027",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0010",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-1b16b1df538ba12dc3f9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00028-8a937064",
-      "kind": "word",
-      "promptEs": "r",
-      "answerEn": "letter",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00028",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0010",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-454349e422f05297191e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00029-80d66eea",
-      "kind": "word",
-      "promptEs": "fp",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00029",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0010",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-5aef96240bca5582e6fd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00030-85c749d9",
-      "kind": "word",
-      "promptEs": "fel",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00030",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0011",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-7dbf7f81fb0094bfba81",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00031-c21859fc",
-      "kind": "word",
-      "promptEs": "te",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00031",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0012",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2d6c9a90dd38f6852515",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00032-1f82e6d5",
-      "kind": "word",
-      "promptEs": "número",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00032",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-84871a760b20b5c33b2d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00033-ee3bdb60",
+      "id": "word-de--probabilidad-de-que",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; connects probabilidad to a following que clause",
+      "noteEn": "Spanish says probabilidad de que before a full possible outcome. Natural English usually says “probability that,” absorbing de rather than translating it as a separate “of.”",
+      "example": {
+        "es": "Hay poca probabilidad de que nieve.",
+        "en": "There is little chance that it will snow."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "probability",
+        "clause link"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00033",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00034-f3bf69d6",
-      "kind": "word",
-      "promptEs": "planetas",
-      "answerEn": "planet",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00034",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2e512c12ae6c4ba726ee",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00035-3a7711f6",
-      "kind": "word",
-      "promptEs": "antidad",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00035",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b6c2ff554527af6244f8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00036-8ef10548",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00036",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00037-4b79590b",
-      "kind": "word",
-      "promptEs": "gili",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00037",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7918650a8eb48d400581",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00038-c14a2b43",
-      "kind": "word",
-      "promptEs": "olleces",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00038",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-46282f17ab0803896d3c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00039-28e6ac6e",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00039",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00040-5d17dd93",
-      "kind": "word",
-      "promptEs": "frank",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00040",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-77646f5a4f3166637627",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00041-e14b3996",
-      "kind": "word",
-      "promptEs": "por",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00041",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00042-d9ab447a",
-      "kind": "word",
-      "promptEs": "sistema",
-      "answerEn": "system",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00042",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70502ff6bb85356055ea",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00043-f719b0f4",
-      "kind": "word",
-      "promptEs": "solar",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00043",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2bfbc118abcafe8c53ee",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00044-220d2707",
-      "kind": "word",
-      "promptEs": "drake",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00044",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-54444aa7bc07ccec734f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00045-38e13d60",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00045",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00046-b2d29d45",
-      "kind": "word",
-      "promptEs": "lino",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00046",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a79c356d145709bd95d7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00047-3aa079df",
-      "kind": "word",
-      "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00047",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d898de0fb93b48e72216",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00048-8b66d14f",
-      "kind": "word",
-      "promptEs": "adecuados",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00048",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f2840b3cf4fcdf9a89be",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00049-878bb73f",
-      "kind": "word",
-      "promptEs": "para",
-      "answerEn": "in order to (expressing purpose)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00049",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00050-813a2473",
+      "id": "word-la--generic-abstract-noun",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; Spanish uses la before a general abstract idea such as vida",
+      "noteEn": "Spanish often uses el or la when discussing an idea in general, while English uses the bare noun without “the.” The article still matches the noun: la vida, la paciencia, el tiempo.",
+      "example": {
+        "es": "La paciencia es importante.",
+        "en": "Patience is important."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "article",
+        "general idea",
+        "English contrast"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00050",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00051-ed0842ba",
+      "id": "word-vida",
       "kind": "word",
       "promptEs": "vida",
       "answerEn": "life",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00051",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d036968052cedfb02659",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00052-5eda582b",
+      "id": "word-un",
+      "kind": "word",
+      "promptEs": "un",
+      "answerEn": "a; an (masculine)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-planeta",
+      "kind": "word",
+      "promptEs": "planeta",
+      "answerEn": "planet",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "astronomy",
+        "singular"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-se--hacerse-change",
+      "kind": "word",
+      "promptEs": "se",
+      "answerEn": "no separate English word; helps hacerse mean ‘to become’",
+      "noteEn": "With a describing word, hacerse can present a gradual or noticeable change in the subject's state.",
+      "example": {
+        "es": "Los días se hacen más largos.",
+        "en": "The days are getting longer."
+      },
+      "tags": [
+        "word",
+        "pronominal verb",
+        "change",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-exito",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-hacerse-adjective-change",
+      "kind": "grammar",
+      "promptEs": "hacerse + descripción",
+      "questionEn": "How can you say that a person or thing becomes or gradually grows a certain way?",
+      "answerEn": "Use the matching form of hacerse followed by the word that describes the new state.",
+      "noteEn": "The short marker and hacer form change with the subject: me hago, te haces, se hace, nos hacemos, and so on. The describing word matches the person or thing in number and, when its form changes, gender.",
+      "example": {
+        "es": "Las tardes se hacen más cortas.",
+        "en": "The afternoons are getting shorter."
+      },
+      "tags": [
+        "grammar",
+        "change of state",
+        "hacerse",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-exito",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-haga--become-subjunctive",
+      "kind": "word",
+      "promptEs": "haga",
+      "answerEn": "becomes (special form of hacerse after an uncertain possibility)",
+      "noteEn": "Haga is a changed form of hacer. With se and a describing word, it belongs to hacerse, “to become.” After an expression of uncertainty or probability, Spanish often changes se hace to se haga.",
+      "example": {
+        "es": "Es posible que se haga famoso.",
+        "en": "It is possible that he will become famous."
+      },
+      "tags": [
+        "word",
+        "hacerse",
+        "change of state",
+        "subjunctive"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-inteligente",
+      "kind": "word",
+      "promptEs": "inteligente",
+      "answerEn": "intelligent; smart (singular)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "adjective",
+        "intelligence"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-planetas",
+      "kind": "word",
+      "promptEs": "planetas",
+      "answerEn": "planets",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "astronomy",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-por--per-unit",
+      "kind": "word",
+      "promptEs": "por",
+      "answerEn": "per; for each (unit)",
+      "noteEn": "Por can introduce the unit used to divide or distribute a quantity. The unit after por stays singular when it means “for each one.”",
+      "example": {
+        "es": "Hay dos libros por alumno.",
+        "en": "There are two books per student."
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "rate",
+        "distribution"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-sistema",
+      "kind": "word",
+      "promptEs": "sistema",
+      "answerEn": "system",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-solar",
+      "kind": "word",
+      "promptEs": "solar",
+      "answerEn": "solar; relating to the Sun",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "adjective",
+        "astronomy"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-adecuados",
+      "kind": "word",
+      "promptEs": "adecuados",
+      "answerEn": "suitable; appropriate (masculine plural)",
+      "noteEn": "Adecuados ends in -os because it describes a masculine plural noun. The other matching forms are adecuado, adecuada, and adecuadas.",
+      "example": {
+        "es": "Son lugares adecuados para niños.",
+        "en": "They are suitable places for children."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "suitability",
+        "agreement"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-adecuado-para",
+      "kind": "phrase",
+      "promptEs": "adecuado/adecuada/adecuados/adecuadas para + uso",
+      "questionEn": "How do you say that something is suitable for a particular use, person, or situation?",
+      "answerEn": "Use the matching form of adecuado, then para, then name the use, person, situation, or action.",
+      "noteEn": "Adecuado changes its ending to match what is suitable: adecuado, adecuada, adecuados, or adecuadas. If an action follows para, that action stays in its unchanged dictionary form ending in -ar, -er, or -ir. The slash marks alternatives, and the plus sign means “followed by.”",
+      "example": {
+        "es": "Esta sala es adecuada para estudiar.",
+        "en": "This room is suitable for studying."
+      },
+      "tags": [
+        "phrase",
+        "suitability",
+        "adjective",
+        "preposition",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-para--suitability-target",
+      "kind": "word",
+      "promptEs": "para",
+      "answerEn": "for; introduces what something is suitable for",
+      "noteEn": "After adecuado or a matching form such as adecuada or adecuados, para introduces the intended use, person, situation, or action.",
+      "example": {
+        "es": "Esta mesa es adecuada para niños.",
+        "en": "This table is suitable for children."
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "suitability"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cantidad",
+      "kind": "word",
+      "promptEs": "cantidad",
+      "answerEn": "amount; quantity; number",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "quantity"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-drake-equation-bs-parody",
+      "kind": "concept",
+      "promptEs": "factor B_s en esta parodia de la ecuación de Drake",
+      "answerEn": "the comic's invented “bullshit” factor: how much of Drake's speculation someone is willing to accept",
+      "noteEn": "B_s is not part of the real Drake equation. The comic turns skepticism about uncertain inputs into one more fake multiplier, making the amount of accepted nonsense determine the answer.",
+      "tags": [
+        "concept",
+        "joke",
+        "Drake equation",
+        "parody"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-gilipolleces",
+      "kind": "word",
+      "promptEs": "gilipolleces",
+      "answerEn": "bullshit; stupid nonsense (vulgar plural)",
+      "noteEn": "Gilipolleces is a strongly informal and vulgar plural. The singular gilipollez can mean one stupid or nonsensical thing.",
+      "example": {
+        "es": "Deja de decir gilipolleces.",
+        "en": "Stop talking bullshit."
+      },
+      "tags": [
+        "word",
+        "vulgar",
+        "nonsense",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--creator-source",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "by; from (identifying the creator or source)",
+      "noteEn": "De can connect a work, statement, or piece of commentary to the person who created or supplied it. Natural English often uses “by” rather than literal “of.”",
+      "example": {
+        "es": "Leí un artículo de Marta.",
+        "en": "I read an article by Marta."
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "source",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-huelga-de-guionistas",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-uno--generic-person",
+      "kind": "word",
+      "promptEs": "uno",
+      "answerEn": "one; you; people in general",
+      "noteEn": "Uno can stand for an unspecified person rather than the number one. Natural English often uses generic “you” or “people” instead of formal “one.”",
+      "example": {
+        "es": "Uno nunca sabe.",
+        "en": "You never know."
+      },
+      "tags": [
+        "word",
+        "generic person",
+        "pronoun"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-está",
+      "kind": "word",
+      "promptEs": "está",
+      "answerEn": "is (a state or location)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-estar-dispuesto-a-infinitive",
+      "kind": "grammar",
+      "promptEs": "estar dispuesto/dispuesta a + verbo en forma de diccionario",
+      "questionEn": "How do you say that someone is willing or prepared to do something?",
+      "answerEn": "Use a form of estar, then a matching form of dispuesto, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "Estar changes for the person and time. Dispuesto changes to match that person in gender and number. The action after a remains in its dictionary form ending in -ar, -er, or -ir. The slash marks alternatives, and the plus sign means “followed by.”",
+      "example": {
+        "es": "Ana está dispuesta a ayudar.",
+        "en": "Ana is willing to help."
+      },
+      "tags": [
+        "grammar",
+        "willingness",
+        "infinitive",
+        "agreement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-dispuesto--willing",
       "kind": "word",
       "promptEs": "dispuesto",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "willing; prepared (masculine singular)",
+      "noteEn": "Dispuesto changes to dispuesta, dispuestos, or dispuestas to match the person or group being described. A following a can introduce the action that person is willing to do.",
+      "example": {
+        "es": "Luis está dispuesto a esperar.",
+        "en": "Luis is willing to wait."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "willingness",
+        "agreement"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00052",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-db02576ef295f1ba77e1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00053-6df12622",
+      "id": "word-a--infinitive-link",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to (linking a verb to the following infinitive)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00053",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-la-ecuacion-de-drake-00054-6b9e3a78",
+      "id": "word-tragarse--accept-uncritically",
       "kind": "word",
       "promptEs": "tragarse",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to swallow; to buy or accept uncritically",
+      "noteEn": "Tragarse can describe literal swallowing, but it also means accepting a claim or story too readily. The attached se is part of this dictionary form.",
+      "example": {
+        "es": "No me trago ese rumor.",
+        "en": "I don't buy that rumor."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "figurative meaning",
+        "belief",
+        "pronominal verb"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-la-ecuacion-de-drake:ocr-token-00054",
-        "sourceLineId": "es-xkcd-la-ecuacion-de-drake:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65b58d893bf1408a569a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-ecuacion-de-drake",
+        "contextualSenseReviewed": true
       }
     }
   ]

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-e16709e3a0700bfc",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 12,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-asombroso",
     "xkcdNumber": 354,
     "publishedAt": "2007-12-07",
-    "title": "Asombroso",
+    "title": "Startling",
     "titleEs": "Asombroso",
     "image": {
       "src": "https://es.xkcd.com/images/startling.png",
       "width": 703,
       "height": 189,
       "aspectRatio": 3.7196,
-      "altEn": "Spanish-language xkcd comic #354: Asombroso"
+      "altEn": "Spanish-language xkcd comic #354: Startling"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "En realidad, el futuro llegó hará unos 3 años.",
-      "en": "English title text pending review."
+      "en": "We actually reached the future about three years ago.",
+      "noteEn": "The joke treats suddenly noticing that it is already the twenty-first century as a recurring surprise; the title text says that the imagined ‘future’ had in fact arrived several years earlier."
     },
     "regions": [
       {
-        "id": "es-xkcd-asombroso:region-0001",
-        "labelEs": "TODAVÍA ME PASA",
+        "id": "es-xkcd-asombroso:narration",
+        "labelEs": "TODAVÍA ME PASA CADA POCOS MESES.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 5.3977,
           "y": 3.1579,
-          "width": 18.75,
-          "height": 10.5263
+          "width": 21.3068,
+          "height": 18.9474
         },
         "words": [
           {
-            "id": "es-xkcd-asombroso:word-00001",
+            "id": "es-xkcd-asombroso:narration:w01",
             "text": "TODAVÍA",
             "normalized": "todavía",
             "bounds": [
@@ -70,11 +65,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00001-568b3ade"
+              "word-todavía--still"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00002",
+            "id": "es-xkcd-asombroso:narration:w02",
             "text": "ME",
             "normalized": "me",
             "bounds": [
@@ -86,11 +81,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00002-550994a5"
+              "word-me--indirect",
+              "grammar-pasarle-algo-a-alguien"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00003",
+            "id": "es-xkcd-asombroso:narration:w03",
             "text": "PASA",
             "normalized": "pasa",
             "bounds": [
@@ -102,37 +98,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00003-63b76451"
+              "word-pasa--happens",
+              "grammar-pasarle-algo-a-alguien"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-asombroso-00001-568b3ade",
-          "word-auto-es-xkcd-asombroso-00002-550994a5",
-          "word-auto-es-xkcd-asombroso-00003-63b76451"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-asombroso:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-asombroso:region-0002",
-        "labelEs": "CADA POCOS MESES.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 5.3977,
-          "y": 12.6316,
-          "width": 21.3068,
-          "height": 9.4737
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-asombroso:word-00004",
+            "id": "es-xkcd-asombroso:narration:w04",
             "text": "CADA",
             "normalized": "cada",
             "bounds": [
@@ -144,11 +115,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00004-457c0695"
+              "word-cada",
+              "phrase-cada-pocos-time-periods"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00005",
+            "id": "es-xkcd-asombroso:narration:w05",
             "text": "POCOS",
             "normalized": "pocos",
             "bounds": [
@@ -160,11 +132,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00005-1d4cfc89"
+              "word-pocos--few",
+              "phrase-cada-pocos-time-periods"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00006",
+            "id": "es-xkcd-asombroso:narration:w06",
             "text": "MESES",
             "normalized": "meses",
             "bounds": [
@@ -176,37 +149,60 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00006-d20bc177"
+              "word-meses",
+              "phrase-cada-pocos-time-periods"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-asombroso-00004-457c0695",
-          "word-auto-es-xkcd-asombroso-00005-1d4cfc89",
-          "word-auto-es-xkcd-asombroso-00006-d20bc177"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-asombroso:narration:app-happens-to-me",
+            "cardId": "grammar-pasarle-algo-a-alguien",
+            "participantWordIds": [
+              "es-xkcd-asombroso:narration:w02",
+              "es-xkcd-asombroso:narration:w03"
+            ],
+            "exampleEs": "ME PASA",
+            "explanationEn": "Me identifies the person affected, while pasa presents a recurring event whose content is understood from the situation."
+          },
+          {
+            "id": "es-xkcd-asombroso:narration:app-every-few-months",
+            "cardId": "phrase-cada-pocos-time-periods",
+            "participantWordIds": [
+              "es-xkcd-asombroso:narration:w04",
+              "es-xkcd-asombroso:narration:w05",
+              "es-xkcd-asombroso:narration:w06"
+            ],
+            "exampleEs": "CADA POCOS MESES",
+            "explanationEn": "Cada marks recurrence, pocos gives an inexact small number, and meses names the repeated time unit."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-asombroso:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-todavía--still",
+          "word-me--indirect",
+          "grammar-pasarle-algo-a-alguien",
+          "word-pasa--happens",
+          "word-cada",
+          "phrase-cada-pocos-time-periods",
+          "word-pocos--few",
+          "word-meses"
+        ]
       },
       {
-        "id": "es-xkcd-asombroso:region-0003",
-        "labelEs": "JODER, ESTAMOS EN",
+        "id": "es-xkcd-asombroso:exclamation",
+        "labelEs": "JODER, ESTAMOS EN EL SIGLO XXI.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 77.5568,
           "y": 14.7368,
           "width": 22.1591,
-          "height": 10.5263
+          "height": 18.9474
         },
         "words": [
           {
-            "id": "es-xkcd-asombroso:word-00007",
+            "id": "es-xkcd-asombroso:exclamation:w01",
             "text": "JODER",
             "normalized": "joder",
             "bounds": [
@@ -218,11 +214,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00007-613c1cd1"
+              "word-joder--exclamation"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00008",
+            "id": "es-xkcd-asombroso:exclamation:w02",
             "text": "ESTAMOS",
             "normalized": "estamos",
             "bounds": [
@@ -234,11 +230,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00008-dc776fb4"
+              "word-estamos"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00009",
+            "id": "es-xkcd-asombroso:exclamation:w03",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -250,37 +246,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00009-312b0aaf"
+              "word-en"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-asombroso-00007-613c1cd1",
-          "word-auto-es-xkcd-asombroso-00008-dc776fb4",
-          "word-auto-es-xkcd-asombroso-00009-312b0aaf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-asombroso:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-asombroso:region-0004",
-        "labelEs": "EL SIGLO XXI.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 77.5568,
-          "y": 24.2105,
-          "width": 14.4886,
-          "height": 9.4737
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-asombroso:word-00010",
+            "id": "es-xkcd-asombroso:exclamation:w04",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -292,11 +262,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00010-8ea35702"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-asombroso:word-00011",
+            "id": "es-xkcd-asombroso:exclamation:w05",
             "text": "SIGLO",
             "normalized": "siglo",
             "bounds": [
@@ -308,13 +278,17 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-asombroso-00011-fe37a60e"
+              "word-siglo",
+              "grammar-siglo-roman-numeral"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-asombroso:word-00012",
+            "id": "es-xkcd-asombroso:exclamation:excluded-century-number",
             "text": "XXI",
-            "normalized": "xxi",
+            "reason": "number",
+            "rationale": "XXI is a Roman numeral naming the century, not a Spanish lexical word; the linked century-pattern card explains how it is read.",
             "bounds": [
               {
                 "x": 87.4645,
@@ -322,340 +296,341 @@
                 "width": 4.581,
                 "height": 9.4737
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-asombroso-00012-4b1c8f1a"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-asombroso-00010-8ea35702",
-          "word-auto-es-xkcd-asombroso-00011-fe37a60e",
-          "word-auto-es-xkcd-asombroso-00012-4b1c8f1a"
+        "applications": [
+          {
+            "id": "es-xkcd-asombroso:exclamation:app-century-number",
+            "cardId": "grammar-siglo-roman-numeral",
+            "participantWordIds": [
+              "es-xkcd-asombroso:exclamation:w05"
+            ],
+            "exampleEs": "SIGLO XXI",
+            "explanationEn": "Siglo comes before the Roman numeral XXI, which is read veintiuno when naming the twenty-first century."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-asombroso:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-joder--exclamation",
+          "word-estamos",
+          "word-en",
+          "word-el--article",
+          "word-siglo",
+          "grammar-siglo-roman-numeral"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-asombroso-00001-568b3ade",
-      "word-auto-es-xkcd-asombroso-00002-550994a5",
-      "word-auto-es-xkcd-asombroso-00003-63b76451",
-      "word-auto-es-xkcd-asombroso-00004-457c0695",
-      "word-auto-es-xkcd-asombroso-00005-1d4cfc89",
-      "word-auto-es-xkcd-asombroso-00006-d20bc177",
-      "word-auto-es-xkcd-asombroso-00007-613c1cd1",
-      "word-auto-es-xkcd-asombroso-00008-dc776fb4",
-      "word-auto-es-xkcd-asombroso-00009-312b0aaf",
-      "word-auto-es-xkcd-asombroso-00010-8ea35702",
-      "word-auto-es-xkcd-asombroso-00011-fe37a60e",
-      "word-auto-es-xkcd-asombroso-00012-4b1c8f1a"
+      "word-todavía--still",
+      "word-me--indirect",
+      "grammar-pasarle-algo-a-alguien",
+      "word-pasa--happens",
+      "word-cada",
+      "phrase-cada-pocos-time-periods",
+      "word-pocos--few",
+      "word-meses",
+      "word-joder--exclamation",
+      "word-estamos",
+      "word-en",
+      "word-el--article",
+      "word-siglo",
+      "grammar-siglo-roman-numeral"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 12,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-asombroso-00001-568b3ade",
+      "id": "word-todavía--still",
       "kind": "word",
       "promptEs": "todavía",
-      "answerEn": "Meaning needs review",
+      "answerEn": "still",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "continuation"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00001",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8cc40274110af6a803dd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-seguimiento-en-linea-de-paquetes",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00002-550994a5",
+      "id": "word-me--indirect",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to me; for me",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00002",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2744ccd10c7533bd736a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00003-63b76451",
+      "id": "grammar-pasarle-algo-a-alguien",
+      "kind": "grammar",
+      "promptEs": "pasarle algo a alguien",
+      "questionEn": "How do you say that something happens to a particular person?",
+      "answerEn": "Name what happens, and put me, te, le, nos, os, or les before a changed form of pasar to identify the affected person. You may also name that person after the Spanish word a.",
+      "noteEn": "Pasar changes to match the thing or event that happens, not the affected person: esto me pasa but estas cosas me pasan. With the verb's unchanged dictionary form, attach the short pronoun to the end: pasarle. In the prompt, algo stands for what happens and alguien for the affected person; those words do not have to appear literally. Spanish may repeat the affected person after a, a word often translated as ‘to,’ for clarity or emphasis, while English normally states the person once.",
+      "example": {
+        "es": "Eso me pasó a mí ayer.",
+        "en": "That happened to me yesterday."
+      },
+      "tags": [
+        "A2",
+        "grammar",
+        "object pronouns"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pasa--happens",
       "kind": "word",
       "promptEs": "pasa",
-      "answerEn": "Meaning needs review",
+      "answerEn": "it happens",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00003",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6efa459a35b81d5c7aa4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00004-457c0695",
+      "id": "word-cada",
       "kind": "word",
       "promptEs": "cada",
       "answerEn": "each; every",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00004",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-74767fb71638182aedc8",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00005-1d4cfc89",
+      "id": "phrase-cada-pocos-time-periods",
+      "kind": "phrase",
+      "promptEs": "cada pocos/pocas + períodos de tiempo",
+      "questionEn": "How do you say that something happens every few days, weeks, months, or similar periods?",
+      "answerEn": "Use cada, then pocos or pocas, then the plural time period.",
+      "noteEn": "Pocos or pocas matches the time noun: cada pocos días, cada pocas semanas, cada pocos meses. This describes a recurring interval without saying its exact length.",
+      "example": {
+        "es": "Nos reunimos cada pocas semanas.",
+        "en": "We meet every few weeks."
+      },
+      "tags": [
+        "phrase",
+        "time",
+        "frequency",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-asombroso",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pocos--few",
       "kind": "word",
       "promptEs": "pocos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "few (masculine plural)",
+      "noteEn": "Pocos describes a small number of masculine plural things. Use pocas with a feminine plural noun.",
+      "example": {
+        "es": "Quedan pocos días.",
+        "en": "Few days remain."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "quantity",
+        "agreement",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00005",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c160c3421a5b7fa3c347",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-asombroso",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00006-d20bc177",
+      "id": "word-meses",
       "kind": "word",
       "promptEs": "meses",
-      "answerEn": "month",
+      "answerEn": "months",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00006",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a0ca8cf00d2c896cacdf",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-asombroso",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00007-613c1cd1",
+      "id": "word-joder--exclamation",
       "kind": "word",
       "promptEs": "joder",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "fuck; damn (vulgar exclamation)",
+      "noteEn": "As a reaction, joder can express anger, shock, pain, or frustration. It is common in informal speech in Spain but is strongly vulgar and unsuitable for polite situations.",
+      "example": {
+        "es": "¡Joder, he perdido las llaves!",
+        "en": "Fuck, I have lost the keys!"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "exclamation",
+        "vulgar",
+        "Spain"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00007",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-717164af499c2899a39b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ancho-fijo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00008-dc776fb4",
+      "id": "word-estamos",
       "kind": "word",
       "promptEs": "estamos",
       "answerEn": "we are",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00008",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-908dbf03533a0bb39bbe",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00009-312b0aaf",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00009",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00010-8ea35702",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00010",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00011-fe37a60e",
+      "id": "word-siglo",
       "kind": "word",
       "promptEs": "siglo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "century",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00011",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c929d6668436555f46d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-asombroso-00012-4b1c8f1a",
-      "kind": "word",
-      "promptEs": "xxi",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-siglo-roman-numeral",
+      "kind": "grammar",
+      "promptEs": "siglo + número romano",
+      "questionEn": "How do Spanish texts label a numbered century, such as the nineteenth or twentieth century?",
+      "answerEn": "Put siglo before a Roman numeral, as in siglo XIX or siglo XX.",
+      "noteEn": "Roman numerals use letters such as X, V, and I to represent numbers. For centuries after ten, Spanish normally reads the numeral as an ordinary number: siglo XIX is read siglo diecinueve, and siglo XX is siglo veinte. Del siglo dates something to that century.",
+      "example": {
+        "es": "El puente es del siglo XX.",
+        "en": "The bridge is from the twentieth century."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "dates",
+        "centuries",
+        "Roman numerals",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-asombroso:ocr-token-00012",
-        "sourceLineId": "es-xkcd-asombroso:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7857eb38d1c9f8073ca4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     }
   ]

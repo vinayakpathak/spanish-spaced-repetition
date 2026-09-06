@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-44c10e03bd2bc896",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 3,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-rps",
@@ -42,11 +36,12 @@
     },
     "titleText": {
       "es": "",
-      "en": "English title text pending review."
+      "en": "It looks good, but it needs more postfixins.",
+      "noteEn": "The Spanish archive has an empty title-text attribute. The official English title text makes a second joke by blending “postfix” with “fixings.” The Spanish raster translates the caption while preserving the image's reverse-Polish-notation arrangement: the sausage appears to the right of, and therefore after, the bun in left-to-right reading order."
     },
     "regions": [
       {
-        "id": "es-xkcd-rps:region-0001",
+        "id": "es-xkcd-rps:caption",
         "labelEs": "SALCHICHA POLACA INVERSA",
         "translationEn": "",
         "noteEn": "",
@@ -58,7 +53,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-rps:word-00001",
+            "id": "es-xkcd-rps:caption:w01",
             "text": "SALCHICHA",
             "normalized": "salchicha",
             "bounds": [
@@ -70,11 +65,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-rps-00001-fc994aa6"
+              "word-salchicha",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-reverse-polish-sausage-pun"
             ]
           },
           {
-            "id": "es-xkcd-rps:word-00002",
+            "id": "es-xkcd-rps:caption:w02",
             "text": "POLACA",
             "normalized": "polaca",
             "bounds": [
@@ -86,11 +84,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-rps-00002-eccaed94"
+              "word-polaca--polish",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-reverse-polish-sausage-pun"
             ]
           },
           {
-            "id": "es-xkcd-rps:word-00003",
+            "id": "es-xkcd-rps:caption:w03",
             "text": "INVERSA",
             "normalized": "inversa",
             "bounds": [
@@ -102,113 +103,203 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-rps-00003-6c3a02ae"
+              "word-inversa--reverse",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-reverse-polish-sausage-pun"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-rps-00001-fc994aa6",
-          "word-auto-es-xkcd-rps-00002-eccaed94",
-          "word-auto-es-xkcd-rps-00003-6c3a02ae"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-rps:caption:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-rps:caption:w01",
+              "es-xkcd-rps:caption:w02",
+              "es-xkcd-rps:caption:w03"
+            ],
+            "exampleEs": "SALCHICHA POLACA INVERSA",
+            "explanationEn": "Polaca and inversa both follow the naming word salchicha in the common neutral order for descriptions."
+          },
+          {
+            "id": "es-xkcd-rps:caption:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-rps:caption:w01",
+              "es-xkcd-rps:caption:w02",
+              "es-xkcd-rps:caption:w03"
+            ],
+            "exampleEs": "SALCHICHA POLACA INVERSA",
+            "explanationEn": "Because salchicha is feminine singular, both descriptions use their feminine singular -a forms: polaca and inversa."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-rps:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-salchicha",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-reverse-polish-sausage-pun",
+          "word-polaca--polish",
+          "word-inversa--reverse"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-rps-00001-fc994aa6",
-      "word-auto-es-xkcd-rps-00002-eccaed94",
-      "word-auto-es-xkcd-rps-00003-6c3a02ae"
+      "word-salchicha",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "concept-reverse-polish-sausage-pun",
+      "word-polaca--polish",
+      "word-inversa--reverse"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 3,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-rps-00001-fc994aa6",
+      "id": "word-salchicha",
       "kind": "word",
       "promptEs": "salchicha",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "sausage",
+      "noteEn": "Salchicha is a feminine naming word, so descriptions of it use feminine forms such as polaca and inversa.",
+      "example": {
+        "es": "Calentaron una salchicha.",
+        "en": "They heated a sausage."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "food",
+        "feminine noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-rps:ocr-token-00001",
-        "sourceLineId": "es-xkcd-rps:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8e878289809f923e3806",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-rps",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-rps-00002-eccaed94",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-reverse-polish-sausage-pun",
+      "kind": "concept",
+      "promptEs": "salchicha polaca inversa",
+      "answerEn": "a literal “reverse Polish sausage” arranged like reverse Polish notation",
+      "noteEn": "Reverse Polish notation places an operator after its operands. The image similarly puts the Polish sausage to the right of the empty bun—after it in left-to-right reading order—turning the separated hot dog into a postfix-style visual pun. The Spanish caption preserves the wordplay exactly.",
+      "tags": [
+        "concept",
+        "reverse Polish notation",
+        "wordplay",
+        "comic joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-rps",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-polaca--polish",
       "kind": "word",
       "promptEs": "polaca",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "Polish; from Poland (feminine singular)",
+      "noteEn": "Polaca describes a feminine singular person or thing as Polish. The masculine singular form is polaco.",
+      "example": {
+        "es": "Compró una revista polaca.",
+        "en": "She bought a Polish magazine."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "nationality",
+        "adjective",
+        "feminine singular"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-rps:ocr-token-00002",
-        "sourceLineId": "es-xkcd-rps:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-99022a601ac401b01151",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-rps",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-rps-00003-6c3a02ae",
+      "id": "word-inversa--reverse",
       "kind": "word",
       "promptEs": "inversa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "reverse; inverted (feminine singular)",
+      "noteEn": "Inversa describes a feminine singular thing whose order or direction is reversed. The masculine singular form is inverso.",
+      "example": {
+        "es": "Siguieron la ruta inversa.",
+        "en": "They followed the reverse route."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "order",
+        "adjective",
+        "feminine singular"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-rps:ocr-token-00003",
-        "sourceLineId": "es-xkcd-rps:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d5863f4685c4cef87c96",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-rps",
+        "contextualSenseReviewed": true
       }
     }
   ]

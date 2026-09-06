@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-e071eb8b8810dff1",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 16,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-abre-parentesis",
@@ -42,39 +36,40 @@
     },
     "titleText": {
       "es": "Dejando a un lado los cerebros, me pregunto cuántos scripts que parsean xkcd.com se romperán con este título (o con \\\\;;",
-      "en": "English title text pending review."
+      "en": "Brains aside, I wonder how many poorly-written xkcd.com-parsing scripts will break on this title (or ;;\"''{<<[' this mouseover text.\"",
+      "noteEn": "The Spanish title text is preserved exactly as the manifest stores it, including its two literal backslashes and abrupt ending after semicolons. The translation page's raw title attribute is malformed and truncates the continuation; this artifact documents the defect without repairing the source manifest. The English field preserves the complete official title text, including its deliberately troublesome punctuation and markup-like characters. The raster's giant opening parenthesis is a separate printed symbol exclusion, while OCR's LIN is corrected and split into that symbol plus the Spanish word UN."
     },
     "regions": [
       {
-        "id": "es-xkcd-abre-parentesis:region-0001",
-        "labelEs": "(LIN PARÉNTESIS SIN CERRAR CREA",
+        "id": "es-xkcd-abre-parentesis:statement",
+        "labelEs": "(UN PARÉNTESIS SIN CERRAR CREA UNA TENSIÓN NO RESUELTA QUE SE QUEDA CONTIGO TODO EL DÍA",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 2.6667,
           "y": 20,
           "width": 94,
-          "height": 20
+          "height": 68.8889
         },
         "words": [
           {
-            "id": "es-xkcd-abre-parentesis:word-00001",
-            "text": "LIN",
-            "normalized": "lin",
+            "id": "es-xkcd-abre-parentesis:statement:w01",
+            "text": "UN",
+            "normalized": "un",
             "bounds": [
               {
-                "x": 2.6667,
+                "x": 6.2,
                 "y": 20,
-                "width": 12,
+                "width": 8.45,
                 "height": 20
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00001-1ee4213f"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00002",
+            "id": "es-xkcd-abre-parentesis:statement:w02",
             "text": "PARÉNTESIS",
             "normalized": "paréntesis",
             "bounds": [
@@ -86,11 +81,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00002-5ee91c01"
+              "word-parentesis",
+              "concept-unmatched-opening-parenthesis-tension"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00003",
+            "id": "es-xkcd-abre-parentesis:statement:w03",
             "text": "SIN",
             "normalized": "sin",
             "bounds": [
@@ -102,11 +98,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00003-cb163803"
+              "word-sin",
+              "grammar-sin-infinitive",
+              "concept-unmatched-opening-parenthesis-tension"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00004",
+            "id": "es-xkcd-abre-parentesis:statement:w04",
             "text": "CERRAR",
             "normalized": "cerrar",
             "bounds": [
@@ -118,11 +116,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00004-b3128338"
+              "word-cerrar",
+              "grammar-sin-infinitive",
+              "concept-unmatched-opening-parenthesis-tension"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00005",
+            "id": "es-xkcd-abre-parentesis:statement:w05",
             "text": "CREA",
             "normalized": "crea",
             "bounds": [
@@ -134,39 +134,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00005-1008d8b3"
+              "word-crea"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-abre-parentesis-00001-1ee4213f",
-          "word-auto-es-xkcd-abre-parentesis-00002-5ee91c01",
-          "word-auto-es-xkcd-abre-parentesis-00003-cb163803",
-          "word-auto-es-xkcd-abre-parentesis-00004-b3128338",
-          "word-auto-es-xkcd-abre-parentesis-00005-1008d8b3"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-abre-parentesis:region-0002",
-        "labelEs": "UNA TENSIÓN NO RESUELTA QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6,
-          "y": 42.2222,
-          "width": 88.6667,
-          "height": 22.2222
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-abre-parentesis:word-00006",
+            "id": "es-xkcd-abre-parentesis:statement:w06",
             "text": "UNA",
             "normalized": "una",
             "bounds": [
@@ -178,11 +150,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00006-af30e633"
+              "word-una"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00007",
+            "id": "es-xkcd-abre-parentesis:statement:w07",
             "text": "TENSIÓN",
             "normalized": "tensión",
             "bounds": [
@@ -194,11 +166,15 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00007-78cff55c"
+              "word-tensión",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "grammar-relative-que",
+              "concept-unmatched-opening-parenthesis-tension"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00008",
+            "id": "es-xkcd-abre-parentesis:statement:w08",
             "text": "NO",
             "normalized": "no",
             "bounds": [
@@ -210,11 +186,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00008-12d3a8da"
+              "word-no"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00009",
+            "id": "es-xkcd-abre-parentesis:statement:w09",
             "text": "RESUELTA",
             "normalized": "resuelta",
             "bounds": [
@@ -226,11 +202,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00009-9c16f02b"
+              "word-resuelta",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-unmatched-opening-parenthesis-tension"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00010",
+            "id": "es-xkcd-abre-parentesis:statement:w10",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -242,39 +221,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00010-203a90d1"
+              "word-que--relative",
+              "grammar-relative-que"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-abre-parentesis-00006-af30e633",
-          "word-auto-es-xkcd-abre-parentesis-00007-78cff55c",
-          "word-auto-es-xkcd-abre-parentesis-00008-12d3a8da",
-          "word-auto-es-xkcd-abre-parentesis-00009-9c16f02b",
-          "word-auto-es-xkcd-abre-parentesis-00010-203a90d1"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-abre-parentesis:region-0003",
-        "labelEs": "SE QUEDA CONTIGO TODO EL DÍA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6,
-          "y": 66.6667,
-          "width": 88,
-          "height": 22.2222
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-abre-parentesis:word-00011",
+            "id": "es-xkcd-abre-parentesis:statement:w11",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -286,11 +238,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00011-cad9e688"
+              "word-se--quedarse-remain",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00012",
+            "id": "es-xkcd-abre-parentesis:statement:w12",
             "text": "QUEDA",
             "normalized": "queda",
             "bounds": [
@@ -302,11 +255,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00012-c2fb05a6"
+              "word-queda--remains",
+              "grammar-relative-que"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00013",
+            "id": "es-xkcd-abre-parentesis:statement:w13",
             "text": "CONTIGO",
             "normalized": "contigo",
             "bounds": [
@@ -318,11 +272,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00013-660e7775"
+              "word-contigo"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00014",
+            "id": "es-xkcd-abre-parentesis:statement:w14",
             "text": "TODO",
             "normalized": "todo",
             "bounds": [
@@ -334,11 +288,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00014-a9b19be8"
+              "word-todo--whole",
+              "phrase-todo-el-dia"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00015",
+            "id": "es-xkcd-abre-parentesis:statement:w15",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -350,11 +305,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00015-4ad3bee6"
+              "word-el--article",
+              "phrase-todo-el-dia"
             ]
           },
           {
-            "id": "es-xkcd-abre-parentesis:word-00016",
+            "id": "es-xkcd-abre-parentesis:statement:w16",
             "text": "DÍA",
             "normalized": "día",
             "bounds": [
@@ -366,441 +322,616 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-abre-parentesis-00016-5409bb66"
+              "word-día",
+              "phrase-todo-el-dia"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-abre-parentesis-00011-cad9e688",
-          "word-auto-es-xkcd-abre-parentesis-00012-c2fb05a6",
-          "word-auto-es-xkcd-abre-parentesis-00013-660e7775",
-          "word-auto-es-xkcd-abre-parentesis-00014-a9b19be8",
-          "word-auto-es-xkcd-abre-parentesis-00015-4ad3bee6",
-          "word-auto-es-xkcd-abre-parentesis-00016-5409bb66"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-abre-parentesis:statement:x01",
+            "text": "(",
+            "reason": "symbol",
+            "rationale": "This standalone opening parenthesis is a printed punctuation symbol rather than Spanish lexical vocabulary.",
+            "bounds": [
+              {
+                "x": 3.55,
+                "y": 20,
+                "width": 2.45,
+                "height": 20
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-abre-parentesis:statement:app-without-closing",
+            "cardId": "grammar-sin-infinitive",
+            "participantWordIds": [
+              "es-xkcd-abre-parentesis:statement:w03",
+              "es-xkcd-abre-parentesis:statement:w04"
+            ],
+            "exampleEs": "SIN CERRAR",
+            "explanationEn": "Sin introduces the absent action, and cerrar remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-abre-parentesis:statement:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-abre-parentesis:statement:w07",
+              "es-xkcd-abre-parentesis:statement:w09"
+            ],
+            "exampleEs": "TENSIÓN NO RESUELTA",
+            "explanationEn": "Resuelta follows the noun tensión; no remains between them to negate the description."
+          },
+          {
+            "id": "es-xkcd-abre-parentesis:statement:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-abre-parentesis:statement:w07",
+              "es-xkcd-abre-parentesis:statement:w09"
+            ],
+            "exampleEs": "TENSIÓN NO RESUELTA",
+            "explanationEn": "Resuelta uses its feminine singular ending to match tensión."
+          },
+          {
+            "id": "es-xkcd-abre-parentesis:statement:app-relative",
+            "cardId": "grammar-relative-que",
+            "participantWordIds": [
+              "es-xkcd-abre-parentesis:statement:w07",
+              "es-xkcd-abre-parentesis:statement:w10",
+              "es-xkcd-abre-parentesis:statement:w11",
+              "es-xkcd-abre-parentesis:statement:w12"
+            ],
+            "exampleEs": "TENSIÓN NO RESUELTA QUE SE QUEDA",
+            "explanationEn": "Que links the earlier noun tensión to the added se queda information; no resuelta remains an intervening description."
+          },
+          {
+            "id": "es-xkcd-abre-parentesis:statement:app-all-day",
+            "cardId": "phrase-todo-el-dia",
+            "participantWordIds": [
+              "es-xkcd-abre-parentesis:statement:w14",
+              "es-xkcd-abre-parentesis:statement:w15",
+              "es-xkcd-abre-parentesis:statement:w16"
+            ],
+            "exampleEs": "TODO EL DÍA",
+            "explanationEn": "Todo, el, and día form the fixed duration expression."
+          }
+        ],
+        "cardIds": [
+          "word-un",
+          "word-parentesis",
+          "concept-unmatched-opening-parenthesis-tension",
+          "word-sin",
+          "grammar-sin-infinitive",
+          "word-cerrar",
+          "word-crea",
+          "word-una",
+          "word-tensión",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "grammar-relative-que",
+          "word-no",
+          "word-resuelta",
+          "word-que--relative",
+          "word-se--quedarse-remain",
+          "word-queda--remains",
+          "word-contigo",
+          "word-todo--whole",
+          "phrase-todo-el-dia",
+          "word-el--article",
+          "word-día"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-abre-parentesis-00001-1ee4213f",
-      "word-auto-es-xkcd-abre-parentesis-00002-5ee91c01",
-      "word-auto-es-xkcd-abre-parentesis-00003-cb163803",
-      "word-auto-es-xkcd-abre-parentesis-00004-b3128338",
-      "word-auto-es-xkcd-abre-parentesis-00005-1008d8b3",
-      "word-auto-es-xkcd-abre-parentesis-00006-af30e633",
-      "word-auto-es-xkcd-abre-parentesis-00007-78cff55c",
-      "word-auto-es-xkcd-abre-parentesis-00008-12d3a8da",
-      "word-auto-es-xkcd-abre-parentesis-00009-9c16f02b",
-      "word-auto-es-xkcd-abre-parentesis-00010-203a90d1",
-      "word-auto-es-xkcd-abre-parentesis-00011-cad9e688",
-      "word-auto-es-xkcd-abre-parentesis-00012-c2fb05a6",
-      "word-auto-es-xkcd-abre-parentesis-00013-660e7775",
-      "word-auto-es-xkcd-abre-parentesis-00014-a9b19be8",
-      "word-auto-es-xkcd-abre-parentesis-00015-4ad3bee6",
-      "word-auto-es-xkcd-abre-parentesis-00016-5409bb66"
+      "word-un",
+      "word-parentesis",
+      "concept-unmatched-opening-parenthesis-tension",
+      "word-sin",
+      "grammar-sin-infinitive",
+      "word-cerrar",
+      "word-crea",
+      "word-una",
+      "word-tensión",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "grammar-relative-que",
+      "word-no",
+      "word-resuelta",
+      "word-que--relative",
+      "word-se--quedarse-remain",
+      "word-queda--remains",
+      "word-contigo",
+      "word-todo--whole",
+      "phrase-todo-el-dia",
+      "word-el--article",
+      "word-día"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 16,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00001-1ee4213f",
+      "id": "word-un",
       "kind": "word",
-      "promptEs": "lin",
-      "answerEn": "Meaning needs review",
+      "promptEs": "un",
+      "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00001",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2f48b881ea7073f1c6f0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00002-5ee91c01",
+      "id": "word-parentesis",
       "kind": "word",
       "promptEs": "paréntesis",
-      "answerEn": "Meaning needs review",
+      "answerEn": "parenthesis",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "punctuation",
+        "computing"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00002",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d74492f00f7a778a9718",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-con-permiso-de-robert-frost",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00003-cb163803",
+      "id": "concept-unmatched-opening-parenthesis-tension",
+      "kind": "concept",
+      "promptEs": "( · paréntesis sin cerrar · tensión no resuelta",
+      "questionEn": "How do the title, the first symbol, and the sentence create the same unresolved feeling?",
+      "answerEn": "The comic opens a parenthesis but never prints its matching closing mark, so the reader visually experiences the tension that the text leaves open.",
+      "noteEn": "An opening parenthesis conventionally promises a later closing parenthesis. Here the title is itself “(”, the raster begins with another large opening mark, and neither is balanced. The form of the comic therefore performs its claim rather than merely mentioning it.",
+      "example": {
+        "es": "En «Ana (mi vecina llegó», falta cerrar el paréntesis.",
+        "en": "In “Ana (my neighbor arrived,” the parenthesis still needs to be closed."
+      },
+      "tags": [
+        "concept",
+        "punctuation",
+        "parenthesis",
+        "typography",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-abre-parentesis",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-sin",
       "kind": "word",
       "promptEs": "sin",
       "answerEn": "without",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00003",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cccc68c7928e63feb966",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00004-b3128338",
+      "id": "grammar-sin-infinitive",
+      "kind": "grammar",
+      "promptEs": "sin + infinitivo",
+      "questionEn": "How do you say that someone does one thing without doing another?",
+      "answerEn": "Put sin before the second action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. When the same person performs both actions, Spanish uses sin directly before that form; it does not add a word equivalent to English “-ing.”",
+      "example": {
+        "es": "Salió sin cerrar la puerta.",
+        "en": "She left without closing the door."
+      },
+      "tags": [
+        "grammar",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cerrar",
       "kind": "word",
       "promptEs": "cerrar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to close; end",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00004",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65cb34a1d0f5707cfb87",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conferencia-ted",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00005-1008d8b3",
+      "id": "word-crea",
       "kind": "word",
       "promptEs": "crea",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "creates; makes",
+      "noteEn": "Crea is the present form of crear used with one third-person subject or as a familiar positive command.",
+      "example": {
+        "es": "El programa crea un archivo.",
+        "en": "The program creates a file."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verbs",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00005",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8726bca729a334e7484e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-abstraccion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00006-af30e633",
+      "id": "word-una",
       "kind": "word",
       "promptEs": "una",
       "answerEn": "a; an (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00006",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-161f0e5ed45f6d514dc2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00007-78cff55c",
+      "id": "word-tensión",
       "kind": "word",
       "promptEs": "tensión",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "tension; strain",
+      "noteEn": "Tensión can be physical tightness, emotional suspense, or mental strain that has not been settled. Its final syllable is stressed, so it carries a written accent.",
+      "example": {
+        "es": "La espera creó mucha tensión.",
+        "en": "The wait created a lot of tension."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "emotion",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00007",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-db83de9648e8cf0f6cd6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-abre-parentesis",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00008-12d3a8da",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-relative-que",
+      "kind": "grammar",
+      "promptEs": "persona o cosa + que + información",
+      "questionEn": "How do you add information about a named person or thing using “who,” “that,” or “which”?",
+      "answerEn": "Put que after the person or thing, then add a verb and the information about it.",
+      "noteEn": "Que links the added description to the person or thing before it. It does not change for masculine, feminine, singular, or plural nouns. The added part needs a verb: la casa que vimos means “the house that we saw.”",
+      "example": {
+        "es": "La casa que vimos es azul.",
+        "en": "The house that we saw is blue."
+      },
+      "tags": [
+        "grammar",
+        "relative clause",
+        "description",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00008",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00009-9c16f02b",
+      "id": "word-resuelta",
       "kind": "word",
       "promptEs": "resuelta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "resolved; settled (feminine singular)",
+      "noteEn": "Resuelta is the irregular completed-action form of resolver used here as a description. It changes to match the noun: resuelto, resuelta, resueltos, or resueltas.",
+      "example": {
+        "es": "La duda quedó resuelta.",
+        "en": "The doubt was resolved."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "resolver",
+        "participle",
+        "adjective",
+        "agreement",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00009",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-315f1a93bc8d893ea686",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-abre-parentesis",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00010-203a90d1",
+      "id": "word-que--relative",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00010",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00011-cad9e688",
+      "id": "word-se--quedarse-remain",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; marks quedarse, “to remain” or “stay”",
+      "noteEn": "Quedar and quedarse have several uses. With se here, the subject continues to be present rather than leaving.",
+      "example": {
+        "es": "El recuerdo se queda conmigo.",
+        "en": "The memory stays with me."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun",
+        "pronominal verb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00011",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00012-c2fb05a6",
+      "id": "word-queda--remains",
       "kind": "word",
       "promptEs": "queda",
-      "answerEn": "Meaning needs review",
+      "answerEn": "stays; remains",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "quedar",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00012",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e7cfd39ac99ec3f6b3f6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diario",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00013-660e7775",
+      "id": "word-contigo",
       "kind": "word",
       "promptEs": "contigo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "with you (informal singular)",
+      "noteEn": "Spanish combines con and ti into the special single word contigo.",
+      "example": {
+        "es": "Quiero hablar contigo.",
+        "en": "I want to talk with you."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00013",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0cc87231cbee9febf8f3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00014-a9b19be8",
+      "id": "word-todo--whole",
       "kind": "word",
       "promptEs": "todo",
-      "answerEn": "everything; all",
-      "noteEn": "",
+      "answerEn": "all of; the whole",
+      "noteEn": "Before el plus a masculine singular noun, todo means the whole amount or extent of it: todo el día, todo el trabajo.",
+      "example": {
+        "es": "Estudió todo el capítulo.",
+        "en": "She studied the whole chapter."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "quantity",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00014",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-602fae580f5863abfb31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diagramas-de-narrativa-de-peliculas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00015-4ad3bee6",
+      "id": "phrase-todo-el-dia",
+      "kind": "phrase",
+      "promptEs": "todo/toda + el/la + período de tiempo singular",
+      "questionEn": "How do you say that something continues for an entire day, night, week, or similar period?",
+      "answerEn": "Use todo or toda, then the matching singular article el or la, then the time period.",
+      "noteEn": "Todo and the article match the time noun: todo el día, toda la noche, toda la semana. This pattern covers the whole named period. Plural forms such as todos los años usually mean “every year” and are a separate frequency pattern.",
+      "example": {
+        "es": "Llovió todo el día.",
+        "en": "It rained all day."
+      },
+      "tags": [
+        "phrase",
+        "duration",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-merlin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00015",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-abre-parentesis-00016-5409bb66",
+      "id": "word-día",
       "kind": "word",
       "promptEs": "día",
-      "answerEn": "Meaning needs review",
+      "answerEn": "day",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-abre-parentesis:ocr-token-00016",
-        "sourceLineId": "es-xkcd-abre-parentesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bfbf44740f41554ddddd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     }
   ]

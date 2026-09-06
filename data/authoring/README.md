@@ -248,6 +248,21 @@ Every printed word's first `cardIds` entry must be its contextual word card.
 Grammar, expression, and concept IDs follow it. A newly owned definition that
 is never linked from a printed word is rejected as unreachable.
 
+Do not turn a surrounding phrase's meaning into a new word sense. For example,
+`de momento` supplies the time limit in `de momento, bien`; `bien` uses the same
+`word-bien--well` card as ordinary `ir bien` and `hacer bien`. Keep any necessary
+occurrence explanation in a single-word `CardApplication`. A different comic,
+verb, or English phrasing alone does not justify a new word-card ID.
+
+After rebuilding the runtime, inspect reuse with
+`npm run corpus:audit-word-reuse -- --surface bien`. It lists meanings, review
+status, and the comics that use each exact ID. `--check` rejects newly introduced
+identical teaching content under different IDs; `--json` reports all shared-form
+candidates. The existing `intento` duplicate pair is explicitly recorded in
+`data/review/word-card-reuse-baseline.json` pending a separate semantic and
+history-migration review. Text matching supplements individual sense review;
+it cannot decide whether differently worded lessons teach the same meaning.
+
 ### Occurrence applications
 
 Every grammar or expression link has exactly one reverse-linked application

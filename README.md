@@ -4,10 +4,10 @@ Tira is a Spanish-learning prototype for English speakers that turns translated 
 
 ## Learning model
 
-- Every reviewed word—and every Latin-script word recovered by the draft OCR pipeline—is a direct click target. Choosing a word is only navigation: it records no learning event or card timestamp.
+- Every authored Spanish word is a direct click target. Choosing a word is only navigation: it records no learning event or card timestamp.
 - The sidebar then shows that word's meaning card plus any reusable expression, grammar, or necessary context cards connected to that exact occurrence.
-- All 48 reusable grammar and expression cards use plain-English questions, beginner explanations, and generic bilingual examples. A separate display-only “In this comic” note explains the current occurrence; the shared card itself remains reusable across strips.
-- Loading a comic starts a pending timestamped exposure for every unique, exact card connected to that strip, including machine-generated cards marked **Review needed**. Opening one specific card records the answer-opening timestamp for that exact card. Reopening it may preserve additional timestamps, but still counts as one help outcome for that comic exposure. Review status never changes scheduling eligibility.
+- Reusable grammar and expression cards use plain-English questions, beginner explanations, and generic bilingual examples. A separate display-only “In this comic” note explains the current occurrence; the shared card itself remains reusable across strips.
+- Loading a comic starts a pending timestamped exposure for every unique, exact stable card connected to that strip. Opening one specific card records the answer-opening timestamp for that exact card. Reopening it may preserve additional timestamps, but still counts as one help outcome for that comic exposure.
 - Finishing a comic means “I understand the whole strip” and turns the pending exposure into a completed one. A card opened at least once is evidence that help was needed; a card left unopened is evidence of independent understanding. An unfinished comic never turns its unopened cards into successes, and resuming it after a reload does not create a duplicate exposure.
 - Completed exposures retain their comic-display, completion, and exact-card opening timestamps. The full history is preserved rather than truncated to a recent event window, so every new selection can be evaluated against the learner's complete record.
 - There are no simulated days, due dates, or fixed review intervals. After every completed comic, the scheduler recalculates every card's current priority and chooses the next unread comic immediately. A completed comic is permanently marked read and never scheduled again. When all 258 have been read, the session ends; resetting progress is the explicit way to read the collection again.
@@ -37,17 +37,19 @@ P = 1 − (1 − H) × (1 − G)
 
 ### Choosing the next comic
 
-For each unread comic, the scheduler sums `P` over all of its unique exact card IDs, including review-needed drafts. That raw sum is the selection score (`x`):
+For each unread comic, the scheduler averages `P` over all of its unique exact stable card IDs. If `N` is the number of distinct cards, that average is the comic's priority density (`D`):
 
 ```text
-x(comic) = Σ P(card) for each distinct exact card in the comic
+D(comic) = Σ P(card) / N(comic)
 ```
 
-The unread comic with the largest `x` is selected; comic ID is only a deterministic tie-breaker. This calculation runs for every Next action, not once per calendar day. Card priorities can recur through other unread comics that share those cards, but a read comic itself never returns. Corpus importance/PageRank is not part of scheduling—not even as a tie-breaker—and its provisional analytics target IDs are never used or merged into exact SRS card IDs.
+An empty comic has density zero. The unread comic with the largest `D` is selected; comic ID is only a deterministic tie-breaker. Dividing by `N` means a longer comic does not win merely because it contains more cards: selection rewards the concentration of high-priority cards instead. This calculation runs for every Next action, not once per calendar day. Card priorities can recur through other unread comics that share those cards, but a read comic itself never returns. Corpus importance/PageRank is not part of scheduling—not even as a tie-breaker—and analytics never mutate or merge SRS history.
 
 ### Persistence and research basis
 
-The continuous scheduler starts with a clean timestamp history instead of converting progress from the earlier simulated-day prototype. Only native schema-v4 snapshots marked as complete timestamp history are restored from IndexedDB. Schema-v3 localStorage records are never read as progress and are removed on a best-effort basis; previously imported, bounded legacy histories are also rejected. When an old learning history is discarded, its opened-region UI state is discarded with it so no part of the old session leaks into the fresh start. Current schema-v4 progress continues to survive ordinary reloads.
+The stable authored curriculum starts with a clean timestamp history instead of aliasing provisional `word-auto-*` evidence to new contextual card IDs. Only native schema-v5 snapshots marked as complete timestamp history are restored from IndexedDB. Schema-v4 generated-runtime snapshots, schema-v3 localStorage records, and previously imported bounded histories are rejected. When an old learning history is discarded, its opened-region UI state is discarded with it so no part of the old session leaks into the fresh start. Current schema-v5 progress survives ordinary reloads.
+
+Reviewed corrections within that authored curriculum preserve existing evidence. The retired `word-bien--so-far-so-good`, `word-bien--working-properly`, and `word-bien--well-played` IDs now become `word-bien--well` before reconciliation. Their four source comics are distinct, so joining the histories retains every display and open timestamp with one help outcome per comic exposure. The active session keeps its original timestamps and open status, and completed comics stay read. This correction does not import older scheduler schemas or merge other meanings of `bien`.
 
 The model is a deliberately explainable adaptation rather than an implementation of any one published scheduler. Its exponential retrievability curve and history features follow [Half-Life Regression for language learning](https://aclanthology.org/P16-1174/); its use of item difficulty plus the amount, timing, and outcome of practice follows the [DASH personalized-review model](https://doi.org/10.1177/0956797613504302); and its separate stability, difficulty, and retrievability signals follow the [official FSRS algorithm description](https://github.com/open-spaced-repetition/awesome-fsrs/wiki/The-Algorithm).
 
@@ -55,13 +57,15 @@ The model is a deliberately explainable adaptation rather than an implementation
 
 Every comic also has an informational corpus-wide score computed as **PageRank-style recursive importance**, or damped two-way comic–target centrality. This analysis is visible in the Rankings view but does not influence scheduling. One node set contains comics, the other contains connected learning targets, and an edge means that a comic uses that target. Comics raise the targets they link to, and targets raise every comic that links to them. On each iteration, 85% of influence follows these links while a 15% baseline/reset prevents disconnected components and zero-target comics from vanishing. Iteration continues until the change is below `1e-12` or 1,000 iterations have run.
 
-The published centrality is normalized across the comic partition, so all 258 comic scores sum to 100%. Rank uses descending score with comic ID as the deterministic tie-breaker. For this analytics graph, reviewed and generated word cards—including unresolved review-needed cards—map to one canonical target when their normalized Spanish prompt and English answer match; higher-level grammar, expression, and concept cards use exact IDs. This grouping is analytics-only: it never merges SRS card IDs or progress. Because generated contextual senses have not been reviewed, their relationships and resulting scores remain provisional.
+The published centrality is normalized across the comic partition, so all 258 comic scores sum to 100%. Rank uses descending score with comic ID as the deterministic tie-breaker. Every graph target is the exact stable card ID used by the curriculum. Shared reusable cards therefore connect comics, while sense-specific or occurrence-specific cards stay separate. The graph is analytics-only: it never changes SRS card IDs or progress.
 
 ## Content and review status
 
-The corpus contains all 258 entries currently listed in the Spanish xkcd archive. Six are locally cached and manually annotated: 27 bubbles, 530 ordered word occurrences, 342 context-aware word-meaning cards, and 61 higher-level cards, including 25 grammar lessons and 23 reusable expressions. Those reviewed higher-level cards are limited to reusable grammar, common idioms, lexicalized collocations, and concepts genuinely needed to understand a joke; ordinary sentence translations are neither shown as learning aids nor scheduled as cards. Repeated exact forms share a card only when their meanings match; polysemous forms split by sense, while accents and conjugations remain distinct.
+The runtime contains all 258 entries currently listed in the Spanish xkcd archive. Individually authored artifacts are preferred for 254 entries; four checked-in seed lessons provide the remaining fallback content. The old OCR and conservative-glossary pipeline remains available as historical ingestion tooling, but none of its `word-auto-*` cards is on the published semantic path.
 
-The other 252 entries are an explicitly provisional authoring corpus. Apple Vision found 15,486 raw positioned tokens across the archive. After obvious non-Latin OCR noise was removed and four missed visible words were manually restored, the draft exposes 14,485 clickable word occurrences. Of these, 5,019 have a conservative dictionary match and 9,466 still say that their meaning needs review. All 14,485 enter SRS and the importance graph. Every generated comic and card is visibly marked **Review needed**; the label means the Spanish token, English gloss, or contextual sense may be wrong and must not be presented as reviewed fact. Generated grammar, expression, and contextual-sense lessons still require human authoring. Occurrence cards stay separate until a reviewer confirms that two written forms genuinely have the same contextual sense. The app lazily downloads one comic bundle at a time, while a compressed catalog restores scheduling, ranking, and card history.
+The catalog contains 6,466 shared cards and 14,768 printed word occurrences. The word `bien` occurs 23 times across 20 comics and has seven contextual meaning cards; its ordinary “well; properly” card is shared by four comics. In *Dibujar estrellas*, the time qualification belongs to `de momento`; the `bien` card keeps its reusable meaning and a separate occurrence note explains its use.
+
+All published lessons and cards carry the truthful status `ai-authored-internal-qa`. Each authored comic received source, inventory, contextual-sense, reusable-copy, application-link, and geometry checks. This is not a claim of human expert verification. The `human-verified` tier is reserved for future expert review, and corrections are welcome. Repeated forms share a stable card only when their contextual meanings match; polysemous forms split by sense, while accents and conjugations remain distinct. The browser downloads a compact stable-card catalog first and then fetches one self-contained comic bundle at a time.
 
 Original comics are by Randall Munroe. Spanish translations are by Gabriel Rodríguez Alberich at [xkcd en español](https://es.xkcd.com/), the unofficial Spanish edition linked from xkcd's own About page. Both editions publish the work under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/). Tira's hotspots and English learning notes are additional unofficial adaptations for this noncommercial prototype. Each lesson links to the Spanish translation, the original comic, and the license.
 
@@ -105,8 +109,16 @@ node scripts/build-provisional-glossary.mjs \
   --dictionary /path/to/es-en.data \
   --frequency /path/to/frequency.csv
 
-# Compile lazy browser bundles after the OCR and glossary stages.
+# Assemble lazy browser bundles, preferring individually authored artifacts.
 node scripts/build-runtime-corpus.mjs
+
+# Inspect shared spellings, meanings, and distinct-comic usage.
+npm run corpus:audit-word-reuse -- --surface bien
+
+# Reject new pairs with identical teaching content under different IDs.
+npm run corpus:audit-word-reuse -- --check
 ```
 
-`data/source` preserves archive URLs, source anomalies, translation credit, and license metadata. `data/generated` keeps OCR confidence and glossary ambiguity visible instead of silently upgrading machine output to reviewed curriculum. Browser files are written to `public/corpus`; their lightweight manifest is loaded first, then a single comic bundle is fetched when selected.
+The word-reuse audit is read-only. Matching spellings are candidates for semantic review, never automatic merges. Its exact-content check also runs in `npm test`; the narrowly documented baseline in `data/review/word-card-reuse-baseline.json` acknowledges the pre-existing `word-intento` / `word-intento--try` pair for a separate review. Additional duplicate pairs or IDs fail the check. Use `--json` for the complete candidate report.
+
+`data/source` preserves archive URLs, source anomalies, translation credit, and license metadata. `data/authoring/comics` is the semantic source of truth; `data/generated` keeps the earlier OCR evidence visible for provenance and fallback ingestion. Browser files are written to `public/corpus`; their lightweight manifest and stable-card catalog load first, then a single comic bundle is fetched when selected.

@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-69a1088ddcbf63a8",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.75,
-    "lowConfidenceTokenCount": 13,
-    "rawOcrTokenCount": 26,
-    "filteredNonLatinTokenCount": 4,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-algoritmos-geneticos",
     "xkcdNumber": 534,
     "publishedAt": "2009-01-23",
-    "title": "Algoritmos genéticos",
+    "title": "Genetic Algorithms",
     "titleEs": "Algoritmos genéticos",
     "image": {
       "src": "https://es.xkcd.com/images/genetic_algorithms.png",
       "width": 565,
       "height": 207,
       "aspectRatio": 2.7295,
-      "altEn": "Spanish-language xkcd comic #534: Algoritmos genéticos"
+      "altEn": "Spanish-language xkcd comic #534: Genetic Algorithms"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,12 +36,13 @@
     },
     "titleText": {
       "es": "Tan solo asegúrate de que no lo pones a maximizar en lugar de minimizar.",
-      "en": "English title text pending review."
+      "en": "Just make sure you don't have it maximize instead of minimize.",
+      "noteEn": "The Spanish archive translates the official warning about accidentally maximizing rather than minimizing the cost; both title texts depend on the optimization joke in the image."
     },
     "regions": [
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0001",
-        "labelEs": "def get Costesolucion (codigo Navegacion):",
+        "id": "es-xkcd-algoritmos-geneticos:code-definition",
+        "labelEs": "def getCosteSolucion (codigoNavegacion):",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -56,105 +51,28 @@
           "width": 59.364,
           "height": 11.5385
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00001",
-            "text": "def",
-            "normalized": "def",
+            "id": "es-xkcd-algoritmos-geneticos:code-definition:excluded-code",
+            "text": "def getCosteSolucion (codigoNavegacion):",
+            "reason": "non-spanish-text",
+            "rationale": "This is a Python-like function declaration with camel-case identifiers and programming punctuation, not ordinary Spanish prose.",
             "bounds": [
               {
                 "x": 7.7739,
                 "y": 4.8077,
-                "width": 5.3004,
+                "width": 59.364,
                 "height": 11.5385
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00001-0af29d0d"
-            ]
-          },
-          {
-            "id": "es-xkcd-algoritmos-geneticos:word-00002",
-            "text": "get",
-            "normalized": "get",
-            "bounds": [
-              {
-                "x": 13.6042,
-                "y": 4.8077,
-                "width": 5.3004,
-                "height": 11.5385
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00002-ef995374"
-            ]
-          },
-          {
-            "id": "es-xkcd-algoritmos-geneticos:word-00003",
-            "text": "Costesolucion",
-            "normalized": "costesolucion",
-            "bounds": [
-              {
-                "x": 19.4346,
-                "y": 4.8077,
-                "width": 18.0212,
-                "height": 11.5385
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00003-c635e464"
-            ]
-          },
-          {
-            "id": "es-xkcd-algoritmos-geneticos:word-00004",
-            "text": "codigo",
-            "normalized": "codigo",
-            "bounds": [
-              {
-                "x": 37.9859,
-                "y": 4.8077,
-                "width": 10.0707,
-                "height": 11.5385
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00004-5c32864b"
-            ]
-          },
-          {
-            "id": "es-xkcd-algoritmos-geneticos:word-00005",
-            "text": "Navegacion",
-            "normalized": "navegacion",
-            "bounds": [
-              {
-                "x": 48.5866,
-                "y": 4.8077,
-                "width": 18.5512,
-                "height": 11.5385
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00005-a5afb2da"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00001-0af29d0d",
-          "word-auto-es-xkcd-algoritmos-geneticos-00002-ef995374",
-          "word-auto-es-xkcd-algoritmos-geneticos-00003-c635e464",
-          "word-auto-es-xkcd-algoritmos-geneticos-00004-5c32864b",
-          "word-auto-es-xkcd-algoritmos-geneticos-00005-a5afb2da"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0002",
+        "id": "es-xkcd-algoritmos-geneticos:code-refueling-cost",
         "labelEs": "costeRepostaje = 15",
         "translationEn": "",
         "noteEn": "",
@@ -164,37 +82,28 @@
           "width": 30.0353,
           "height": 9.6154
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00006",
-            "text": "costeRepostaje",
-            "normalized": "costerepostaje",
+            "id": "es-xkcd-algoritmos-geneticos:code-refueling-cost:excluded-code",
+            "text": "costeRepostaje = 15",
+            "reason": "non-spanish-text",
+            "rationale": "This entire printed unit is a code assignment containing an identifier, operator, and numeric value rather than Spanish prose.",
             "bounds": [
               {
                 "x": 18.0212,
                 "y": 17.3077,
-                "width": 23.4099,
+                "width": 30.0353,
                 "height": 9.6154
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00006-223806e5"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00006-223806e5"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0002",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0003",
+        "id": "es-xkcd-algoritmos-geneticos:code-computation-cost",
         "labelEs": "costeExtraDeComputacion = 8",
         "translationEn": "",
         "noteEn": "",
@@ -204,77 +113,90 @@
           "width": 44.523,
           "height": 10.5769
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00007",
-            "text": "costeExtraDeComputacion",
-            "normalized": "costeextradecomputacion",
+            "id": "es-xkcd-algoritmos-geneticos:code-computation-cost:excluded-code",
+            "text": "costeExtraDeComputacion = 8",
+            "reason": "non-spanish-text",
+            "rationale": "This entire printed unit is a code assignment containing a camel-case identifier, operator, and numeric value rather than Spanish prose.",
             "bounds": [
               {
                 "x": 18.3746,
                 "y": 29.8077,
-                "width": 39.3551,
+                "width": 44.523,
                 "height": 10.5769
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00007-8657afa4"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00007-8657afa4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0003",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0004",
-        "labelEs": "• costeDeQuetsteAlgoritmoleConviertaEnskynet=999999999",
+        "id": "es-xkcd-algoritmos-geneticos:emphasis-arrow",
+        "labelEs": "→",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 16.2544,
-          "y": 43.2692,
-          "width": 81.6254,
-          "height": 10.5769
+          "x": 3.1,
+          "y": 38.6,
+          "width": 15.3,
+          "height": 17.5
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00008",
-            "text": "costeDeQuetsteAlgoritmoleConviertaEnskynet",
-            "normalized": "costedequetstealgoritmoleconviertaenskynet",
+            "id": "es-xkcd-algoritmos-geneticos:emphasis-arrow:excluded-arrow",
+            "text": "→",
+            "reason": "symbol",
+            "rationale": "The arrow is a visual emphasis symbol rather than a Spanish lexical word.",
             "bounds": [
               {
-                "x": 18.6837,
-                "y": 43.2692,
-                "width": 79.1961,
-                "height": 10.5769
+                "x": 3.1,
+                "y": 38.6,
+                "width": 15.3,
+                "height": 17.5
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00008-95320cb4"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00008-95320cb4"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0004",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0005",
+        "id": "es-xkcd-algoritmos-geneticos:code-skynet-cost",
+        "labelEs": "costeDeQueEsteAlgoritmoSeConviertaEnSkynet = 999999999",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 18.5,
+          "y": 42.8,
+          "width": 79.4,
+          "height": 10.8
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-algoritmos-geneticos:code-skynet-cost:excluded-code",
+            "text": "costeDeQueEsteAlgoritmoSeConviertaEnSkynet = 999999999",
+            "reason": "non-spanish-text",
+            "rationale": "This entire printed unit is a camel-case code assignment, including the Skynet name and numeric value, rather than ordinary Spanish prose.",
+            "bounds": [
+              {
+                "x": 18.5,
+                "y": 42.8,
+                "width": 79.4,
+                "height": 10.8
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": []
+      },
+      {
+        "id": "es-xkcd-algoritmos-geneticos:code-water-cost",
         "labelEs": "costeDeCruzarAgua = 45",
         "translationEn": "",
         "noteEn": "",
@@ -284,49 +206,40 @@
           "width": 37.4558,
           "height": 10.5769
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00009",
-            "text": "costeDeCruzarAgua",
-            "normalized": "costedecruzaragua",
+            "id": "es-xkcd-algoritmos-geneticos:code-water-cost:excluded-code",
+            "text": "costeDeCruzarAgua = 45",
+            "reason": "non-spanish-text",
+            "rationale": "This entire printed unit is a code assignment containing a camel-case identifier, operator, and numeric value rather than Spanish prose.",
             "bounds": [
               {
                 "x": 18.7279,
                 "y": 55.7692,
-                "width": 29.1519,
+                "width": 37.4558,
                 "height": 10.5769
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00009-8ff99af6"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00009-8ff99af6"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0005",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-algoritmos-geneticos:region-0006",
-        "labelEs": "CONSEJO PARA LOS ALGORITMOS GENÉTICOS:",
+        "id": "es-xkcd-algoritmos-geneticos:advice-caption",
+        "labelEs": "CONSEJO PARA LOS ALGORITMOS GENÉTICOS: INCLUYE SIEMPRE ESTO EN TU FUNCIÓN DE APTITUD",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 16.2544,
+          "x": 11.25,
           "y": 75,
-          "width": 72.0848,
-          "height": 9.6154
+          "width": 80.4167,
+          "height": 21.6346
         },
         "words": [
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00010",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w01",
             "text": "CONSEJO",
             "normalized": "consejo",
             "bounds": [
@@ -338,11 +251,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00010-b9e653fe"
+              "word-consejo"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00011",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w02",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -354,11 +267,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00011-df2ab6b8"
+              "word-para--advice-topic"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00012",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w03",
             "text": "LOS",
             "normalized": "los",
             "bounds": [
@@ -370,11 +283,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00012-b7f22806"
+              "word-los--generic-group"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00013",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w04",
             "text": "ALGORITMOS",
             "normalized": "algoritmos",
             "bounds": [
@@ -386,11 +299,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00013-14862bb3"
+              "word-algoritmos",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-genetic-algorithm-skynet-cost"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00014",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w05",
             "text": "GENÉTICOS",
             "normalized": "genéticos",
             "bounds": [
@@ -402,39 +318,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00014-3feef0b8"
+              "word-genéticos",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-genetic-algorithm-skynet-cost"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00010-b9e653fe",
-          "word-auto-es-xkcd-algoritmos-geneticos-00011-df2ab6b8",
-          "word-auto-es-xkcd-algoritmos-geneticos-00012-b7f22806",
-          "word-auto-es-xkcd-algoritmos-geneticos-00013-14862bb3",
-          "word-auto-es-xkcd-algoritmos-geneticos-00014-3feef0b8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-algoritmos-geneticos:region-0007",
-        "labelEs": "INCLUYE SIEMPRE ESTO EN TU FUNCIÓN DE APTITUD",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 11.25,
-          "y": 86.3636,
-          "width": 80.4167,
-          "height": 10.271
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00015",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w06",
             "text": "INCLUYE",
             "normalized": "incluye",
             "bounds": [
@@ -446,11 +337,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00015-85fa8078"
+              "word-incluye--command",
+              "grammar-affirmative-tu-command"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00016",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w07",
             "text": "SIEMPRE",
             "normalized": "siempre",
             "bounds": [
@@ -462,11 +354,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00016-47393122"
+              "word-siempre"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00017",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w08",
             "text": "ESTO",
             "normalized": "esto",
             "bounds": [
@@ -478,11 +370,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00017-9fc90e8c"
+              "word-esto"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00018",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w09",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -494,11 +386,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00018-8b4ba225"
+              "word-en"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00019",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w10",
             "text": "TU",
             "normalized": "tu",
             "bounds": [
@@ -510,11 +402,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00019-ecf5cf89"
+              "word-tu"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00020",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w11",
             "text": "FUNCIÓN",
             "normalized": "función",
             "bounds": [
@@ -526,11 +418,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00020-01413d3a"
+              "word-función--mathematical",
+              "phrase-funcion-de-aptitud",
+              "concept-genetic-algorithm-skynet-cost"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00021",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w12",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -542,11 +436,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00021-b9d226dc"
+              "word-de--type-classifier",
+              "phrase-funcion-de-aptitud"
             ]
           },
           {
-            "id": "es-xkcd-algoritmos-geneticos:word-00022",
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:w13",
             "text": "APTITUD",
             "normalized": "aptitud",
             "bounds": [
@@ -558,593 +453,509 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-algoritmos-geneticos-00022-ee41a284"
+              "word-aptitud--fitness",
+              "phrase-funcion-de-aptitud",
+              "concept-genetic-algorithm-skynet-cost"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-algoritmos-geneticos-00015-85fa8078",
-          "word-auto-es-xkcd-algoritmos-geneticos-00016-47393122",
-          "word-auto-es-xkcd-algoritmos-geneticos-00017-9fc90e8c",
-          "word-auto-es-xkcd-algoritmos-geneticos-00018-8b4ba225",
-          "word-auto-es-xkcd-algoritmos-geneticos-00019-ecf5cf89",
-          "word-auto-es-xkcd-algoritmos-geneticos-00020-01413d3a",
-          "word-auto-es-xkcd-algoritmos-geneticos-00021-b9d226dc",
-          "word-auto-es-xkcd-algoritmos-geneticos-00022-ee41a284"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-algoritmos-geneticos:advice-caption:w04",
+              "es-xkcd-algoritmos-geneticos:advice-caption:w05"
+            ],
+            "exampleEs": "ALGORITMOS GENÉTICOS",
+            "explanationEn": "Algoritmos names the technical objects first, and the neutral description genéticos follows it."
+          },
+          {
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-adjective-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-algoritmos-geneticos:advice-caption:w04",
+              "es-xkcd-algoritmos-geneticos:advice-caption:w05"
+            ],
+            "exampleEs": "ALGORITMOS GENÉTICOS",
+            "explanationEn": "Genéticos uses masculine plural -os to match algoritmos."
+          },
+          {
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-command",
+            "cardId": "grammar-affirmative-tu-command",
+            "participantWordIds": [
+              "es-xkcd-algoritmos-geneticos:advice-caption:w06"
+            ],
+            "exampleEs": "INCLUYE",
+            "explanationEn": "Incluye is the positive command for one familiar listener."
+          },
+          {
+            "id": "es-xkcd-algoritmos-geneticos:advice-caption:app-fitness-function",
+            "cardId": "phrase-funcion-de-aptitud",
+            "participantWordIds": [
+              "es-xkcd-algoritmos-geneticos:advice-caption:w11",
+              "es-xkcd-algoritmos-geneticos:advice-caption:w12",
+              "es-xkcd-algoritmos-geneticos:advice-caption:w13"
+            ],
+            "exampleEs": "FUNCIÓN DE APTITUD",
+            "explanationEn": "Función names the scoring rule, de links it to its technical type, and aptitud names the score used to compare candidate solutions."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-consejo",
+          "word-para--advice-topic",
+          "word-los--generic-group",
+          "word-algoritmos",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-genetic-algorithm-skynet-cost",
+          "word-genéticos",
+          "word-incluye--command",
+          "grammar-affirmative-tu-command",
+          "word-siempre",
+          "word-esto",
+          "word-en",
+          "word-tu",
+          "word-función--mathematical",
+          "phrase-funcion-de-aptitud",
+          "word-de--type-classifier",
+          "word-aptitud--fitness"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-algoritmos-geneticos-00001-0af29d0d",
-      "word-auto-es-xkcd-algoritmos-geneticos-00002-ef995374",
-      "word-auto-es-xkcd-algoritmos-geneticos-00003-c635e464",
-      "word-auto-es-xkcd-algoritmos-geneticos-00004-5c32864b",
-      "word-auto-es-xkcd-algoritmos-geneticos-00005-a5afb2da",
-      "word-auto-es-xkcd-algoritmos-geneticos-00006-223806e5",
-      "word-auto-es-xkcd-algoritmos-geneticos-00007-8657afa4",
-      "word-auto-es-xkcd-algoritmos-geneticos-00008-95320cb4",
-      "word-auto-es-xkcd-algoritmos-geneticos-00009-8ff99af6",
-      "word-auto-es-xkcd-algoritmos-geneticos-00010-b9e653fe",
-      "word-auto-es-xkcd-algoritmos-geneticos-00011-df2ab6b8",
-      "word-auto-es-xkcd-algoritmos-geneticos-00012-b7f22806",
-      "word-auto-es-xkcd-algoritmos-geneticos-00013-14862bb3",
-      "word-auto-es-xkcd-algoritmos-geneticos-00014-3feef0b8",
-      "word-auto-es-xkcd-algoritmos-geneticos-00015-85fa8078",
-      "word-auto-es-xkcd-algoritmos-geneticos-00016-47393122",
-      "word-auto-es-xkcd-algoritmos-geneticos-00017-9fc90e8c",
-      "word-auto-es-xkcd-algoritmos-geneticos-00018-8b4ba225",
-      "word-auto-es-xkcd-algoritmos-geneticos-00019-ecf5cf89",
-      "word-auto-es-xkcd-algoritmos-geneticos-00020-01413d3a",
-      "word-auto-es-xkcd-algoritmos-geneticos-00021-b9d226dc",
-      "word-auto-es-xkcd-algoritmos-geneticos-00022-ee41a284"
+      "word-consejo",
+      "word-para--advice-topic",
+      "word-los--generic-group",
+      "word-algoritmos",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "concept-genetic-algorithm-skynet-cost",
+      "word-genéticos",
+      "word-incluye--command",
+      "grammar-affirmative-tu-command",
+      "word-siempre",
+      "word-esto",
+      "word-en",
+      "word-tu",
+      "word-función--mathematical",
+      "phrase-funcion-de-aptitud",
+      "word-de--type-classifier",
+      "word-aptitud--fitness"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.75,
-      "lowConfidenceTokenCount": 13,
-      "rawOcrTokenCount": 26,
-      "filteredNonLatinTokenCount": 4,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00001-0af29d0d",
-      "kind": "word",
-      "promptEs": "def",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00001",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-cb8379ac2098aa165029",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00002-ef995374",
-      "kind": "word",
-      "promptEs": "get",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00002",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-2998b3232d29e8dc5a78",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00003-c635e464",
-      "kind": "word",
-      "promptEs": "costesolucion",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00003",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-c2d9dcbaae1d5efeceb3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00004-5c32864b",
-      "kind": "word",
-      "promptEs": "codigo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00004",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-67524139a20cf891b53b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00005-a5afb2da",
-      "kind": "word",
-      "promptEs": "navegacion",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00005",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-4a2eb4d112f5e2120d4c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00006-223806e5",
-      "kind": "word",
-      "promptEs": "costerepostaje",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00006",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0002",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-8f963c36beede69f09f1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00007-8657afa4",
-      "kind": "word",
-      "promptEs": "costeextradecomputacion",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00008",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0003",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-76dbc6570baabe6bcfcb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00008-95320cb4",
-      "kind": "word",
-      "promptEs": "costedequetstealgoritmoleconviertaenskynet",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00010",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0004",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-46623d953052a0ae655f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00009-8ff99af6",
-      "kind": "word",
-      "promptEs": "costedecruzaragua",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00012",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0005",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-e0d0d7807d28689f2fe5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00010-b9e653fe",
+      "id": "word-consejo",
       "kind": "word",
       "promptEs": "consejo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "piece of advice; tip",
+      "noteEn": "Consejo is countable in Spanish: un consejo is one piece of advice and consejos is advice or several tips.",
+      "example": {
+        "es": "Necesito un consejo.",
+        "en": "I need some advice."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00014",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-55bbc228e0c7ca0b5b29",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00011-df2ab6b8",
+      "id": "word-para--advice-topic",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "in order to (expressing purpose)",
-      "noteEn": "",
+      "answerEn": "for; introduces the topic or field that advice applies to",
+      "noteEn": "After consejo, guía, or recomendación, para can introduce the area or situation in which the advice is meant to be used.",
+      "example": {
+        "es": "Este consejo es para viajes largos.",
+        "en": "This tip is for long trips."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "advice",
+        "topic",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00015",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00012-b7f22806",
+      "id": "word-los--generic-group",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "the (masculine plural)",
-      "noteEn": "",
+      "answerEn": "no separate English word here; Spanish uses the article before a general group",
+      "noteEn": "Spanish normally uses los before a plural group discussed as a whole, as in los programadores. English often leaves “the” out and simply says “programmers” when making the same general statement.",
+      "example": {
+        "es": "Los perros necesitan agua.",
+        "en": "Dogs need water."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "generic plural",
+        "article",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00016",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb6e53541e37a1d6076e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00013-14862bb3",
+      "id": "word-algoritmos",
       "kind": "word",
       "promptEs": "algoritmos",
-      "answerEn": "algorithm",
+      "answerEn": "algorithms",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "computing",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00017",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dfd48507e8b13849c502",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-1337-parte-2",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00014-3feef0b8",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-genetic-algorithm-skynet-cost",
+      "kind": "concept",
+      "promptEs": "algoritmos genéticos · función de aptitud",
+      "questionEn": "Why does the enormous cost assigned to becoming Skynet matter to the joke?",
+      "answerEn": "A genetic algorithm searches for good candidate solutions by optimizing a fitness or cost function, so a huge cost can make an unwanted outcome extremely unattractive when the program minimizes cost.",
+      "noteEn": "Skynet is the hostile artificial intelligence in the Terminator stories. The code treats an AI takeover as just another outcome to penalize. The title-text warning completes the joke: if the program maximized this cost instead, the enormous number would encourage precisely that outcome.",
+      "tags": [
+        "concept",
+        "genetic algorithm",
+        "fitness function",
+        "Skynet",
+        "optimization",
+        "humor"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-genéticos",
       "kind": "word",
       "promptEs": "genéticos",
-      "answerEn": "genetic",
-      "noteEn": "",
+      "answerEn": "genetic (masculine plural)",
+      "noteEn": "Genéticos describes masculine plural things as related to genes, inheritance, or a process modeled on biological evolution.",
+      "example": {
+        "es": "Estudian varios factores genéticos.",
+        "en": "They study several genetic factors."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "genetics",
+        "adjective",
+        "masculine plural",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00018",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ab09fda23a9e2856c680",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00015-85fa8078",
+      "id": "word-incluye--command",
       "kind": "word",
       "promptEs": "incluye",
-      "answerEn": "to include, to enclose, to contain",
-      "noteEn": "",
+      "answerEn": "include (informal singular command)",
+      "noteEn": "Incluye tells one familiar listener to include something. The same written form can mean ‘he, she, or formal you includes’ in a statement; the advice context makes it a command here.",
+      "example": {
+        "es": "Incluye tu dirección en el formulario.",
+        "en": "Include your address on the form."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "command",
+        "informal singular",
+        "incluir",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00019",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a5a25758295e176b7d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00016-47393122",
+      "id": "grammar-affirmative-tu-command",
+      "kind": "grammar",
+      "promptEs": "orden afirmativa para tú: habla, come, escribe",
+      "questionEn": "How do you give one friend or familiar person a positive command?",
+      "answerEn": "Use the informal singular command form, often the same form used for “he” or “she” in the present.",
+      "noteEn": "For many regular verbs, -ar becomes -a and -er or -ir becomes -e: hablar becomes habla, comer becomes come, and escribir becomes escribe. Some common verbs are irregular or change their stem. Negative commands use a different form and are a separate pattern.",
+      "example": {
+        "es": "Abre la ventana.",
+        "en": "Open the window."
+      },
+      "tags": [
+        "grammar",
+        "commands",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-siempre",
       "kind": "word",
       "promptEs": "siempre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "always",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "frequency"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00020",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8d6b69638b96ccd3d80b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-puzzle-del-laberinto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00017-9fc90e8c",
+      "id": "word-esto",
       "kind": "word",
       "promptEs": "esto",
       "answerEn": "this (thing or situation)",
-      "noteEn": "",
+      "noteEn": "Esto is a neutral demonstrative for an unidentified thing, fact, or whole situation. It is not used directly before a noun.",
+      "example": {
+        "es": "Esto es difícil.",
+        "en": "This is difficult."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00021",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-be39af610558299c60eb",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00018-8b4ba225",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00022",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00019-ecf5cf89",
+      "id": "word-tu",
       "kind": "word",
       "promptEs": "tu",
       "answerEn": "your",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00023",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-764c4c7b78d6fd3b7bf7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00020-01413d3a",
+      "id": "word-función--mathematical",
       "kind": "word",
       "promptEs": "función",
-      "answerEn": "Meaning needs review",
+      "answerEn": "function (in mathematics)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00024",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dd65f29192913cd0c8a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00021-b9d226dc",
+      "id": "phrase-funcion-de-aptitud",
+      "kind": "phrase",
+      "promptEs": "función de aptitud",
+      "questionEn": "What do you call the rule that scores candidate solutions in a genetic algorithm?",
+      "answerEn": "Use función de aptitud for ‘fitness function.’",
+      "noteEn": "Función names the scoring rule, de links it to the technical noun aptitud, and the complete phrase names the function used to compare candidate solutions. Depending on the setup, a program may seek a higher fitness score or a lower cost.",
+      "example": {
+        "es": "La función de aptitud asigna una puntuación a cada solución.",
+        "en": "The fitness function assigns a score to each solution."
+      },
+      "tags": [
+        "phrase",
+        "genetic algorithm",
+        "optimization",
+        "technical",
+        "B2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--type-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links an item to its type",
+      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "example": {
+        "es": "Compré un libro de historia.",
+        "en": "I bought a history book."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun phrases",
+        "classification",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00025",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-algoritmos-geneticos-00022-ee41a284",
+      "id": "word-aptitud--fitness",
       "kind": "word",
       "promptEs": "aptitud",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "fitness; quality score (in an optimization algorithm)",
+      "noteEn": "In a genetic algorithm, aptitud is the measured quality assigned to a candidate solution. It is a technical use related to how well that candidate meets the goal, not a person's ordinary talent.",
+      "example": {
+        "es": "El programa calcula la aptitud de cada solución.",
+        "en": "The program calculates the fitness of each solution."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "genetic algorithm",
+        "optimization",
+        "technical",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-algoritmos-geneticos:ocr-token-00026",
-        "sourceLineId": "es-xkcd-algoritmos-geneticos:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f8e95d3af4e21445c9e6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-algoritmos-geneticos",
+        "contextualSenseReviewed": true
       }
     }
   ]

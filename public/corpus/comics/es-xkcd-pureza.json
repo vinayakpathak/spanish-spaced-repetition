@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-a8744a1667af0b37",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9754,
-    "lowConfidenceTokenCount": 3,
-    "rawOcrTokenCount": 61,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-pureza",
     "xkcdNumber": 435,
     "publishedAt": "2008-06-11",
-    "title": "Pureza",
+    "title": "Purity",
     "titleEs": "Pureza",
     "image": {
       "src": "https://es.xkcd.com/images/purity.png",
       "width": 740,
       "height": 308,
       "aspectRatio": 2.4026,
-      "altEn": "Spanish-language xkcd comic #435: Pureza"
+      "altEn": "Spanish-language xkcd comic #435: Purity"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,11 +36,12 @@
     },
     "titleText": {
       "es": "Por otro lado, a los físicos les gusta decir que la física es a la matemática lo que el sexo a la masturbación.",
-      "en": "English title text pending review."
+      "en": "On the other hand, physicists like to say physics is to math as sex is to masturbation.",
+      "noteEn": "The Spanish archive preserves the same separate analogy as the official English title text."
     },
     "regions": [
       {
-        "id": "es-xkcd-pureza:region-0001",
+        "id": "es-xkcd-pureza:heading",
         "labelEs": "CAMPOS ORDENADOS POR PUREZA",
         "translationEn": "",
         "noteEn": "",
@@ -58,7 +53,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00001",
+            "id": "es-xkcd-pureza:heading:w01",
             "text": "CAMPOS",
             "normalized": "campos",
             "bounds": [
@@ -70,11 +65,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00001-63670d8d"
+              "word-campos--academic-fields",
+              "phrase-ordenar-por-criterio",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00002",
+            "id": "es-xkcd-pureza:heading:w02",
             "text": "ORDENADOS",
             "normalized": "ordenados",
             "bounds": [
@@ -86,11 +83,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00002-53b68aa1"
+              "word-ordenados--ranked",
+              "phrase-ordenar-por-criterio",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00003",
+            "id": "es-xkcd-pureza:heading:w03",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -102,11 +101,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00003-01be8d51"
+              "word-por--category",
+              "phrase-ordenar-por-criterio",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00004",
+            "id": "es-xkcd-pureza:heading:w04",
             "text": "PUREZA",
             "normalized": "pureza",
             "bounds": [
@@ -118,26 +119,69 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00004-e928ad4b"
+              "word-pureza",
+              "phrase-ordenar-por-criterio",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:heading:app-ordering",
+            "cardId": "phrase-ordenar-por-criterio",
+            "participantWordIds": [
+              "es-xkcd-pureza:heading:w01",
+              "es-xkcd-pureza:heading:w02",
+              "es-xkcd-pureza:heading:w03",
+              "es-xkcd-pureza:heading:w04"
+            ],
+            "exampleEs": "CAMPOS ORDENADOS POR PUREZA",
+            "explanationEn": "Campos supplies the ranked items, ordenados describes their arrangement, and por introduces pureza as the criterion used for that ranking."
+          }
+        ],
+        "cardIds": [
+          "word-campos--academic-fields",
+          "phrase-ordenar-por-criterio",
+          "concept-academic-fields-purity-hierarchy",
+          "word-ordenados--ranked",
+          "word-por--category",
+          "word-pureza"
+        ]
+      },
+      {
+        "id": "es-xkcd-pureza:ranking-arrow",
+        "labelEs": "→",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 37.3,
+          "y": 16.56,
+          "width": 22.03,
+          "height": 4.55
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-pureza:ranking-arrow:excluded-arrow",
+            "text": "→",
+            "reason": "symbol",
+            "rationale": "The arrow shows the direction of increasing purity and is not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 37.3,
+                "y": 16.56,
+                "width": 22.03,
+                "height": 4.55
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00001-63670d8d",
-          "word-auto-es-xkcd-pureza-00002-53b68aa1",
-          "word-auto-es-xkcd-pureza-00003-01be8d51",
-          "word-auto-es-xkcd-pureza-00004-e928ad4b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-pureza:region-0002",
+        "id": "es-xkcd-pureza:direction",
         "labelEs": "MÁS PUROS",
         "translationEn": "",
         "noteEn": "",
@@ -149,7 +193,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00005",
+            "id": "es-xkcd-pureza:direction:w01",
             "text": "MÁS",
             "normalized": "más",
             "bounds": [
@@ -161,11 +205,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00005-2c39f5db"
+              "word-más--more",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00006",
+            "id": "es-xkcd-pureza:direction:w02",
             "text": "PUROS",
             "normalized": "puros",
             "bounds": [
@@ -177,169 +222,35 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00006-db4e832f"
+              "word-puros",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-pureza-00005-2c39f5db",
-          "word-auto-es-xkcd-pureza-00006-db4e832f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0002",
-          "ocrConfidence": 1
-        }
+          "word-más--more",
+          "concept-academic-fields-purity-hierarchy",
+          "word-puros"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0003",
-        "labelEs": "LA BIOLOGÍA",
+        "id": "es-xkcd-pureza:sociology-claim",
+        "labelEs": "LA SOCIOLOGÍA NO ES MÁS QUE PSICOLOGÍA APLICADA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 38.3669,
-          "y": 29.7351,
-          "width": 11.6446,
-          "height": 6.1143
+          "x": 7.827,
+          "y": 30.5195,
+          "width": 28.9297,
+          "height": 18.8312
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00007",
+            "id": "es-xkcd-pureza:sociology-claim:w01",
             "text": "LA",
             "normalized": "la",
-            "bounds": [
-              {
-                "x": 38.3669,
-                "y": 29.7351,
-                "width": 2.7599,
-                "height": 5.9075
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00007-d0dc6589"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00008",
-            "text": "BIOLOGÍA",
-            "normalized": "biología",
-            "bounds": [
-              {
-                "x": 41.4073,
-                "y": 29.8058,
-                "width": 8.6042,
-                "height": 6.0435
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00008-d209880d"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00007-d0dc6589",
-          "word-auto-es-xkcd-pureza-00008-d209880d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0004",
-        "labelEs": "QUE NO ES",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 54.8312,
-          "y": 30.1507,
-          "width": 9.2565,
-          "height": 5.9325
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00009",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 54.8312,
-                "y": 30.1506,
-                "width": 3.5841,
-                "height": 5.475
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00009-0076ed17"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00010",
-            "text": "NO",
-            "normalized": "no",
-            "bounds": [
-              {
-                "x": 58.6128,
-                "y": 30.4556,
-                "width": 2.7737,
-                "height": 5.4097
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00010-53cd4d1a"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00011",
-            "text": "ES",
-            "normalized": "es",
-            "bounds": [
-              {
-                "x": 61.5841,
-                "y": 30.6952,
-                "width": 2.5036,
-                "height": 5.3879
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00011-71b203be"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00009-0076ed17",
-          "word-auto-es-xkcd-pureza-00010-53cd4d1a",
-          "word-auto-es-xkcd-pureza-00011-71b203be"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0004",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0005",
-        "labelEs": "-A SOCIOLOGIA LA PSICOLOGIA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 8.6486,
-          "y": 30.5195,
-          "width": 27.027,
-          "height": 5.1948
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00012",
-            "text": "A",
-            "normalized": "a",
             "bounds": [
               {
                 "x": 8.6486,
@@ -349,13 +260,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00012-74ef88d1"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00013",
-            "text": "SOCIOLOGIA",
-            "normalized": "sociologia",
+            "id": "es-xkcd-pureza:sociology-claim:w02",
+            "text": "SOCIOLOGÍA",
+            "normalized": "sociología",
             "bounds": [
               {
                 "x": 10.8108,
@@ -365,220 +276,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00013-09e62fd5"
+              "word-sociología",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00014",
-            "text": "LA",
-            "normalized": "la",
-            "bounds": [
-              {
-                "x": 22.7027,
-                "y": 30.5195,
-                "width": 2.7027,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00014-3266d997"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00015",
-            "text": "PSICOLOGIA",
-            "normalized": "psicologia",
-            "bounds": [
-              {
-                "x": 25.6757,
-                "y": 30.5195,
-                "width": 10,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00015-2f997ded"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00012-74ef88d1",
-          "word-auto-es-xkcd-pureza-00013-09e62fd5",
-          "word-auto-es-xkcd-pureza-00014-3266d997",
-          "word-auto-es-xkcd-pureza-00015-2f997ded"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0006",
-        "labelEs": "AH, HOLA. NO O:",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 80,
-          "y": 33.7662,
-          "width": 13.5135,
-          "height": 5.1948
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00016",
-            "text": "AH",
-            "normalized": "ah",
-            "bounds": [
-              {
-                "x": 80,
-                "y": 33.7662,
-                "width": 2.4324,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00016-42ae3e0c"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00017",
-            "text": "HOLA",
-            "normalized": "hola",
-            "bounds": [
-              {
-                "x": 82.7027,
-                "y": 33.7662,
-                "width": 5.4054,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00017-18758765"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00018",
+            "id": "es-xkcd-pureza:sociology-claim:w03",
             "text": "NO",
             "normalized": "no",
-            "bounds": [
-              {
-                "x": 88.3784,
-                "y": 33.7662,
-                "width": 2.973,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00018-75881dc6"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00019",
-            "text": "O",
-            "normalized": "o",
-            "bounds": [
-              {
-                "x": 91.6216,
-                "y": 33.7662,
-                "width": 1.8919,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00019-1376fb0d"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00016-42ae3e0c",
-          "word-auto-es-xkcd-pureza-00017-18758765",
-          "word-auto-es-xkcd-pureza-00018-75881dc6",
-          "word-auto-es-xkcd-pureza-00019-1376fb0d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0007",
-        "labelEs": "MÁS QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 54.5856,
-          "y": 34.3358,
-          "width": 7.8559,
-          "height": 5.3544
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00020",
-            "text": "MÁS",
-            "normalized": "más",
-            "bounds": [
-              {
-                "x": 54.5856,
-                "y": 34.4184,
-                "width": 3.802,
-                "height": 5.2718
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00020-16e373a2"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00021",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 58.6395,
-                "y": 34.3358,
-                "width": 3.802,
-                "height": 5.2718
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00021-b3c3ff28"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00020-16e373a2",
-          "word-auto-es-xkcd-pureza-00021-b3c3ff28"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0008",
-        "labelEs": "VO ES MÁS QUE NO ES MÁS QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 8.6486,
-          "y": 34.4156,
-          "width": 28.1081,
-          "height": 5.1948
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00022",
-            "text": "VO",
-            "normalized": "vo",
             "bounds": [
               {
                 "x": 8.6486,
@@ -588,11 +293,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00022-9baee6b3"
+              "word-no",
+              "phrase-no-ser-mas-que"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00023",
+            "id": "es-xkcd-pureza:sociology-claim:w04",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -604,11 +310,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00023-2f23efb7"
+              "word-es",
+              "phrase-no-ser-mas-que"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00024",
+            "id": "es-xkcd-pureza:sociology-claim:w05",
             "text": "MÁS",
             "normalized": "más",
             "bounds": [
@@ -620,11 +327,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00024-29d44fc4"
+              "word-más--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00025",
+            "id": "es-xkcd-pureza:sociology-claim:w06",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -636,421 +344,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00025-adbd0b7f"
+              "word-que--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00026",
-            "text": "NO",
-            "normalized": "no",
-            "bounds": [
-              {
-                "x": 22.973,
-                "y": 34.4156,
-                "width": 2.973,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00026-56411f04"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00027",
-            "text": "ES",
-            "normalized": "es",
-            "bounds": [
-              {
-                "x": 26.2162,
-                "y": 34.4156,
-                "width": 2.4324,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00027-79c7d377"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00028",
-            "text": "MÁS",
-            "normalized": "más",
-            "bounds": [
-              {
-                "x": 28.9189,
-                "y": 34.4156,
-                "width": 4.0541,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00028-376dba48"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00029",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 33.2432,
-                "y": 34.4156,
-                "width": 3.5135,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00029-61c6643a"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00022-9baee6b3",
-          "word-auto-es-xkcd-pureza-00023-2f23efb7",
-          "word-auto-es-xkcd-pureza-00024-29d44fc4",
-          "word-auto-es-xkcd-pureza-00025-adbd0b7f",
-          "word-auto-es-xkcd-pureza-00026-56411f04",
-          "word-auto-es-xkcd-pureza-00027-79c7d377",
-          "word-auto-es-xkcd-pureza-00028-376dba48",
-          "word-auto-es-xkcd-pureza-00029-61c6643a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0009",
-        "labelEs": "NO ES MÁS QUE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 37.5676,
-          "y": 34.4156,
-          "width": 15.4054,
-          "height": 5.8442
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00030",
-            "text": "NO",
-            "normalized": "no",
-            "bounds": [
-              {
-                "x": 37.5676,
-                "y": 34.4156,
-                "width": 3.9527,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00030-b75ab313"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00031",
-            "text": "ES",
-            "normalized": "es",
-            "bounds": [
-              {
-                "x": 41.8243,
-                "y": 34.4156,
-                "width": 2.4324,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00031-ac576d34"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00032",
-            "text": "MÁS",
-            "normalized": "más",
-            "bounds": [
-              {
-                "x": 44.5608,
-                "y": 34.4156,
-                "width": 4.2568,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00032-417c266a"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00033",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 49.1216,
-                "y": 34.4156,
-                "width": 3.8514,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00033-321f415e"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00030-b75ab313",
-          "word-auto-es-xkcd-pureza-00031-ac576d34",
-          "word-auto-es-xkcd-pureza-00032-417c266a",
-          "word-auto-es-xkcd-pureza-00033-321f415e"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0010",
-        "labelEs": "BIOLOGÍA APLI-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 22.973,
-          "y": 38.961,
-          "width": 13.5135,
-          "height": 5.1948
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00034",
-            "text": "BIOLOGÍA",
-            "normalized": "biología",
-            "bounds": [
-              {
-                "x": 22.973,
-                "y": 38.961,
-                "width": 8.3784,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00034-882da25f"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00035",
-            "text": "APLI",
-            "normalized": "apli",
-            "bounds": [
-              {
-                "x": 31.6216,
-                "y": 38.961,
-                "width": 4.8649,
-                "height": 5.1948
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00035-a5507173"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00034-882da25f",
-          "word-auto-es-xkcd-pureza-00035-a5507173"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0010",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0011",
-        "labelEs": "QUÍMICA APLICA- FÍSICA APLI-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 38.3784,
-          "y": 38.961,
-          "width": 26.7568,
-          "height": 5.8442
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00036",
-            "text": "QUÍMICA",
-            "normalized": "química",
-            "bounds": [
-              {
-                "x": 38.3784,
-                "y": 38.961,
-                "width": 7.6014,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00036-1ce57940"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00037",
-            "text": "APLICA",
-            "normalized": "aplica",
-            "bounds": [
-              {
-                "x": 46.2838,
-                "y": 38.961,
-                "width": 7.6014,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00037-9b00e66c"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00038",
-            "text": "FÍSICA",
-            "normalized": "física",
-            "bounds": [
-              {
-                "x": 54.1892,
-                "y": 38.961,
-                "width": 5.777,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00038-35f7f126"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00039",
-            "text": "APLI",
-            "normalized": "apli",
-            "bounds": [
-              {
-                "x": 60.2703,
-                "y": 38.961,
-                "width": 4.8649,
-                "height": 5.8442
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00039-36bf3c14"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00036-1ce57940",
-          "word-auto-es-xkcd-pureza-00037-9b00e66c",
-          "word-auto-es-xkcd-pureza-00038-35f7f126",
-          "word-auto-es-xkcd-pureza-00039-36bf3c14"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0012",
-        "labelEs": "LABIA VISTO DESD",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 80,
-          "y": 38.961,
-          "width": 14.5946,
-          "height": 3.8961
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00040",
-            "text": "LABIA",
-            "normalized": "labia",
-            "bounds": [
-              {
-                "x": 80,
-                "y": 38.961,
-                "width": 4.2568,
-                "height": 3.8961
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00040-87fcfa58"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00041",
-            "text": "VISTO",
-            "normalized": "visto",
-            "bounds": [
-              {
-                "x": 84.4595,
-                "y": 38.961,
-                "width": 5.6757,
-                "height": 3.8961
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00041-6911850e"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00042",
-            "text": "DESD",
-            "normalized": "desd",
-            "bounds": [
-              {
-                "x": 90.3378,
-                "y": 38.961,
-                "width": 4.2568,
-                "height": 3.8961
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00042-8fcabf80"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00040-87fcfa58",
-          "word-auto-es-xkcd-pureza-00041-6911850e",
-          "word-auto-es-xkcd-pureza-00042-8fcabf80"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0012",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0013",
-        "labelEs": "PSICOLOGIA",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 7.827,
-          "y": 39.4835,
-          "width": 10.292,
-          "height": 5.4486
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00043",
-            "text": "PSICOLOGIA",
-            "normalized": "psicologia",
+            "id": "es-xkcd-pureza:sociology-claim:w07",
+            "text": "PSICOLOGÍA",
+            "normalized": "psicología",
             "bounds": [
               {
                 "x": 7.827,
@@ -1060,149 +361,15 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00043-7e438374"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00043-7e438374"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0014",
-        "labelEs": "TAN LEJOS.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 78.911,
-          "y": 42.7627,
-          "width": 10.5564,
-          "height": 5.3838
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00044",
-            "text": "TAN",
-            "normalized": "tan",
-            "bounds": [
-              {
-                "x": 78.911,
-                "y": 42.7627,
-                "width": 3.7998,
-                "height": 5.2625
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00044-d118114d"
+              "word-psicología",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00045",
-            "text": "LEJOS",
-            "normalized": "lejos",
-            "bounds": [
-              {
-                "x": 82.9649,
-                "y": 42.8354,
-                "width": 6.5024,
-                "height": 5.311
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00045-85a14c59"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00044-d118114d",
-          "word-auto-es-xkcd-pureza-00045-85a14c59"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0014",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0015",
-        "labelEs": "CADA. ESTÁ",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 54.5893,
-          "y": 43.4505,
-          "width": 10.5512,
-          "height": 5.9561
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00046",
-            "text": "CADA",
-            "normalized": "cada",
-            "bounds": [
-              {
-                "x": 54.5893,
-                "y": 43.5141,
-                "width": 4.5715,
-                "height": 5.8926
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00046-78063725"
-            ]
-          },
-          {
-            "id": "es-xkcd-pureza:word-00047",
-            "text": "ESTÁ",
-            "normalized": "está",
-            "bounds": [
-              {
-                "x": 59.4541,
-                "y": 43.4505,
-                "width": 5.6864,
-                "height": 5.9044
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-pureza-00047-941215c9"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00046-78063725",
-          "word-auto-es-xkcd-pureza-00047-941215c9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0015",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0016",
-        "labelEs": "APLICADA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 7.8378,
-          "y": 43.5065,
-          "width": 8.6486,
-          "height": 5.8442
-        },
-        "words": [
-          {
-            "id": "es-xkcd-pureza:word-00048",
+            "id": "es-xkcd-pureza:sociology-claim:w08",
             "text": "APLICADA",
             "normalized": "aplicada",
             "bounds": [
@@ -1214,38 +381,210 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00048-cc63f7ee"
+              "word-aplicada--academic-field",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00048-cc63f7ee"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:sociology-claim:app-only",
+            "cardId": "phrase-no-ser-mas-que",
+            "participantWordIds": [
+              "es-xkcd-pureza:sociology-claim:w03",
+              "es-xkcd-pureza:sociology-claim:w04",
+              "es-xkcd-pureza:sociology-claim:w05",
+              "es-xkcd-pureza:sociology-claim:w06",
+              "es-xkcd-pureza:sociology-claim:w07",
+              "es-xkcd-pureza:sociology-claim:w08"
+            ],
+            "exampleEs": "NO ES MÁS QUE PSICOLOGÍA APLICADA",
+            "explanationEn": "No and es establish the negative identity frame, más que restricts what remains, and psicología aplicada fills the resulting description."
+          },
+          {
+            "id": "es-xkcd-pureza:sociology-claim:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-pureza:sociology-claim:w07",
+              "es-xkcd-pureza:sociology-claim:w08"
+            ],
+            "exampleEs": "PSICOLOGÍA APLICADA",
+            "explanationEn": "The field name psicología comes first and aplicada follows it as the neutral descriptive order."
+          },
+          {
+            "id": "es-xkcd-pureza:sociology-claim:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-pureza:sociology-claim:w07",
+              "es-xkcd-pureza:sociology-claim:w08"
+            ],
+            "exampleEs": "PSICOLOGÍA APLICADA",
+            "explanationEn": "Aplicada uses feminine singular -a because it describes the feminine singular noun psicología."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0016",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-la--article",
+          "word-sociología",
+          "concept-academic-fields-purity-hierarchy",
+          "word-no",
+          "phrase-no-ser-mas-que",
+          "word-es",
+          "word-más--fixed-no-ser-mas-que",
+          "word-que--fixed-no-ser-mas-que",
+          "word-psicología",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-aplicada--academic-field"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0017",
-        "labelEs": "CADA.",
+        "id": "es-xkcd-pureza:psychology-claim",
+        "labelEs": "LA PSICOLOGÍA NO ES MÁS QUE BIOLOGÍA APLICADA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 22.973,
-          "y": 43.5065,
-          "width": 4.8649,
-          "height": 5.8442
+          "x": 8.6486,
+          "y": 30.5195,
+          "width": 28.1081,
+          "height": 18.8312
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00049",
-            "text": "CADA",
-            "normalized": "cada",
+            "id": "es-xkcd-pureza:psychology-claim:w01",
+            "text": "LA",
+            "normalized": "la",
             "bounds": [
+              {
+                "x": 22.7027,
+                "y": 30.5195,
+                "width": 2.7027,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-la--article"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w02",
+            "text": "PSICOLOGÍA",
+            "normalized": "psicología",
+            "bounds": [
+              {
+                "x": 25.6757,
+                "y": 30.5195,
+                "width": 10,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-psicología",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w03",
+            "text": "NO",
+            "normalized": "no",
+            "bounds": [
+              {
+                "x": 22.973,
+                "y": 34.4156,
+                "width": 2.973,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-no",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w04",
+            "text": "ES",
+            "normalized": "es",
+            "bounds": [
+              {
+                "x": 26.2162,
+                "y": 34.4156,
+                "width": 2.4324,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-es",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w05",
+            "text": "MÁS",
+            "normalized": "más",
+            "bounds": [
+              {
+                "x": 28.9189,
+                "y": 34.4156,
+                "width": 4.0541,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-más--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w06",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 33.2432,
+                "y": 34.4156,
+                "width": 3.5135,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-que--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w07",
+            "text": "BIOLOGÍA",
+            "normalized": "biología",
+            "bounds": [
+              {
+                "x": 22.973,
+                "y": 38.961,
+                "width": 8.3784,
+                "height": 5.1948
+              }
+            ],
+            "cardIds": [
+              "word-biología",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:w08",
+            "text": "APLICADA",
+            "normalized": "aplicada",
+            "bounds": [
+              {
+                "x": 31.6216,
+                "y": 38.961,
+                "width": 4.8649,
+                "height": 5.1948
+              },
               {
                 "x": 22.973,
                 "y": 43.5065,
@@ -1254,38 +593,210 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00049-bb47fd3f"
+              "word-aplicada--academic-field",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00049-bb47fd3f"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:psychology-claim:app-only",
+            "cardId": "phrase-no-ser-mas-que",
+            "participantWordIds": [
+              "es-xkcd-pureza:psychology-claim:w03",
+              "es-xkcd-pureza:psychology-claim:w04",
+              "es-xkcd-pureza:psychology-claim:w05",
+              "es-xkcd-pureza:psychology-claim:w06",
+              "es-xkcd-pureza:psychology-claim:w07",
+              "es-xkcd-pureza:psychology-claim:w08"
+            ],
+            "exampleEs": "NO ES MÁS QUE BIOLOGÍA APLICADA",
+            "explanationEn": "No and es establish the negative identity frame, más que restricts what remains, and biología aplicada fills the resulting description."
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-pureza:psychology-claim:w07",
+              "es-xkcd-pureza:psychology-claim:w08"
+            ],
+            "exampleEs": "BIOLOGÍA APLICADA",
+            "explanationEn": "The field name biología comes first and aplicada follows it as the neutral descriptive order."
+          },
+          {
+            "id": "es-xkcd-pureza:psychology-claim:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-pureza:psychology-claim:w07",
+              "es-xkcd-pureza:psychology-claim:w08"
+            ],
+            "exampleEs": "BIOLOGÍA APLICADA",
+            "explanationEn": "Aplicada uses feminine singular -a because it describes the feminine singular noun biología."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0017",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-la--article",
+          "word-psicología",
+          "concept-academic-fields-purity-hierarchy",
+          "word-no",
+          "phrase-no-ser-mas-que",
+          "word-es",
+          "word-más--fixed-no-ser-mas-que",
+          "word-que--fixed-no-ser-mas-que",
+          "word-biología",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-aplicada--academic-field"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0018",
-        "labelEs": "DA.",
+        "id": "es-xkcd-pureza:biology-claim",
+        "labelEs": "LA BIOLOGÍA NO ES MÁS QUE QUÍMICA APLICADA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 38.3784,
-          "y": 43.5065,
-          "width": 2.973,
-          "height": 5.8442
+          "x": 37.5676,
+          "y": 29.7351,
+          "width": 27.5676,
+          "height": 19.6156
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00050",
-            "text": "DA",
-            "normalized": "da",
+            "id": "es-xkcd-pureza:biology-claim:w01",
+            "text": "LA",
+            "normalized": "la",
             "bounds": [
+              {
+                "x": 38.3669,
+                "y": 29.7351,
+                "width": 2.7599,
+                "height": 5.9075
+              }
+            ],
+            "cardIds": [
+              "word-la--article"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w02",
+            "text": "BIOLOGÍA",
+            "normalized": "biología",
+            "bounds": [
+              {
+                "x": 41.4073,
+                "y": 29.8058,
+                "width": 8.6042,
+                "height": 6.0435
+              }
+            ],
+            "cardIds": [
+              "word-biología",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w03",
+            "text": "NO",
+            "normalized": "no",
+            "bounds": [
+              {
+                "x": 37.5676,
+                "y": 34.4156,
+                "width": 3.9527,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-no",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w04",
+            "text": "ES",
+            "normalized": "es",
+            "bounds": [
+              {
+                "x": 41.8243,
+                "y": 34.4156,
+                "width": 2.4324,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-es",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w05",
+            "text": "MÁS",
+            "normalized": "más",
+            "bounds": [
+              {
+                "x": 44.5608,
+                "y": 34.4156,
+                "width": 4.2568,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-más--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w06",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 49.1216,
+                "y": 34.4156,
+                "width": 3.8514,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-que--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w07",
+            "text": "QUÍMICA",
+            "normalized": "química",
+            "bounds": [
+              {
+                "x": 38.3784,
+                "y": 38.961,
+                "width": 7.6014,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-química",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:w08",
+            "text": "APLICADA",
+            "normalized": "aplicada",
+            "bounds": [
+              {
+                "x": 46.2838,
+                "y": 38.961,
+                "width": 7.6014,
+                "height": 5.8442
+              },
               {
                 "x": 38.3784,
                 "y": 43.5065,
@@ -1294,35 +805,227 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00050-4f59718a"
+              "word-aplicada--academic-field",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00050-4f59718a"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:biology-claim:app-only",
+            "cardId": "phrase-no-ser-mas-que",
+            "participantWordIds": [
+              "es-xkcd-pureza:biology-claim:w03",
+              "es-xkcd-pureza:biology-claim:w04",
+              "es-xkcd-pureza:biology-claim:w05",
+              "es-xkcd-pureza:biology-claim:w06",
+              "es-xkcd-pureza:biology-claim:w07",
+              "es-xkcd-pureza:biology-claim:w08"
+            ],
+            "exampleEs": "NO ES MÁS QUE QUÍMICA APLICADA",
+            "explanationEn": "No and es establish the negative identity frame, más que restricts what remains, and química aplicada fills the resulting description."
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-pureza:biology-claim:w07",
+              "es-xkcd-pureza:biology-claim:w08"
+            ],
+            "exampleEs": "QUÍMICA APLICADA",
+            "explanationEn": "The field name química comes first and aplicada follows it as the neutral descriptive order."
+          },
+          {
+            "id": "es-xkcd-pureza:biology-claim:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-pureza:biology-claim:w07",
+              "es-xkcd-pureza:biology-claim:w08"
+            ],
+            "exampleEs": "QUÍMICA APLICADA",
+            "explanationEn": "Aplicada uses feminine singular -a because it describes the feminine singular noun química."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0018",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": [
+          "word-la--article",
+          "word-biología",
+          "concept-academic-fields-purity-hierarchy",
+          "word-no",
+          "phrase-no-ser-mas-que",
+          "word-es",
+          "word-más--fixed-no-ser-mas-que",
+          "word-que--fixed-no-ser-mas-que",
+          "word-química",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-aplicada--academic-field"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0019",
-        "labelEs": "BIEN ESTAR",
+        "id": "es-xkcd-pureza:physics-claim",
+        "labelEs": "QUE NO ES MÁS QUE FÍSICA APLICADA. ESTÁ BIEN ESTAR EN LA CIMA.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 54.5829,
-          "y": 47.9277,
-          "width": 10.5639,
-          "height": 6.0927
+          "x": 38.3784,
+          "y": 30.1507,
+          "width": 26.769,
+          "height": 28.4212
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00051",
+            "id": "es-xkcd-pureza:physics-claim:w01",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 54.8312,
+                "y": 30.1506,
+                "width": 3.5841,
+                "height": 5.475
+              }
+            ],
+            "cardIds": [
+              "word-que--relative"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w02",
+            "text": "NO",
+            "normalized": "no",
+            "bounds": [
+              {
+                "x": 58.6128,
+                "y": 30.4556,
+                "width": 2.7737,
+                "height": 5.4097
+              }
+            ],
+            "cardIds": [
+              "word-no",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w03",
+            "text": "ES",
+            "normalized": "es",
+            "bounds": [
+              {
+                "x": 61.5841,
+                "y": 30.6952,
+                "width": 2.5036,
+                "height": 5.3879
+              }
+            ],
+            "cardIds": [
+              "word-es",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w04",
+            "text": "MÁS",
+            "normalized": "más",
+            "bounds": [
+              {
+                "x": 54.5856,
+                "y": 34.4184,
+                "width": 3.802,
+                "height": 5.2718
+              }
+            ],
+            "cardIds": [
+              "word-más--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w05",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 58.6395,
+                "y": 34.3358,
+                "width": 3.802,
+                "height": 5.2718
+              }
+            ],
+            "cardIds": [
+              "word-que--fixed-no-ser-mas-que",
+              "phrase-no-ser-mas-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w06",
+            "text": "FÍSICA",
+            "normalized": "física",
+            "bounds": [
+              {
+                "x": 54.1892,
+                "y": 38.961,
+                "width": 5.777,
+                "height": 5.8442
+              }
+            ],
+            "cardIds": [
+              "word-física",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w07",
+            "text": "APLICADA",
+            "normalized": "aplicada",
+            "bounds": [
+              {
+                "x": 60.2703,
+                "y": 38.961,
+                "width": 4.8649,
+                "height": 5.8442
+              },
+              {
+                "x": 54.5893,
+                "y": 43.5141,
+                "width": 4.5715,
+                "height": 5.8926
+              }
+            ],
+            "cardIds": [
+              "word-aplicada--academic-field",
+              "phrase-no-ser-mas-que",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w08",
+            "text": "ESTÁ",
+            "normalized": "está",
+            "bounds": [
+              {
+                "x": 59.4541,
+                "y": 43.4505,
+                "width": 5.6864,
+                "height": 5.9044
+              }
+            ],
+            "cardIds": [
+              "word-está--impersonal-evaluation",
+              "grammar-estar-bien-infinitive-evaluation"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:w09",
             "text": "BIEN",
             "normalized": "bien",
             "bounds": [
@@ -1334,11 +1037,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00051-5b7fbb8d"
+              "word-bien--good-experience",
+              "grammar-estar-bien-infinitive-evaluation"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00052",
+            "id": "es-xkcd-pureza:physics-claim:w10",
             "text": "ESTAR",
             "normalized": "estar",
             "bounds": [
@@ -1350,36 +1054,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00052-25fc292f"
+              "word-estar--state-infinitive",
+              "grammar-estar-bien-infinitive-evaluation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00051-5b7fbb8d",
-          "word-auto-es-xkcd-pureza-00052-25fc292f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0019",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0020",
-        "labelEs": "EN LA CIMA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 54.5823,
-          "y": 52.467,
-          "width": 10.5651,
-          "height": 6.1049
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-pureza:word-00053",
+            "id": "es-xkcd-pureza:physics-claim:w11",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -1391,11 +1071,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00053-52023c3a"
+              "word-en--at-location",
+              "grammar-estar-bien-infinitive-evaluation"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00054",
+            "id": "es-xkcd-pureza:physics-claim:w12",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -1407,11 +1088,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00054-2c373670"
+              "word-la--article",
+              "grammar-estar-bien-infinitive-evaluation"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00055",
+            "id": "es-xkcd-pureza:physics-claim:w13",
             "text": "CIMA",
             "normalized": "cima",
             "bounds": [
@@ -1423,157 +1105,309 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00055-a45e0ff2"
+              "word-cima",
+              "grammar-estar-bien-infinitive-evaluation",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00053-52023c3a",
-          "word-auto-es-xkcd-pureza-00054-2c373670",
-          "word-auto-es-xkcd-pureza-00055-a45e0ff2"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:physics-claim:app-only",
+            "cardId": "phrase-no-ser-mas-que",
+            "participantWordIds": [
+              "es-xkcd-pureza:physics-claim:w02",
+              "es-xkcd-pureza:physics-claim:w03",
+              "es-xkcd-pureza:physics-claim:w04",
+              "es-xkcd-pureza:physics-claim:w05",
+              "es-xkcd-pureza:physics-claim:w06",
+              "es-xkcd-pureza:physics-claim:w07"
+            ],
+            "exampleEs": "NO ES MÁS QUE FÍSICA APLICADA",
+            "explanationEn": "No and es establish the negative identity frame, más que restricts what remains, and física aplicada fills the resulting description."
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:app-adjective-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-pureza:physics-claim:w06",
+              "es-xkcd-pureza:physics-claim:w07"
+            ],
+            "exampleEs": "FÍSICA APLICADA",
+            "explanationEn": "The field name física comes first and aplicada follows it as the neutral descriptive order."
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:app-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-pureza:physics-claim:w06",
+              "es-xkcd-pureza:physics-claim:w07"
+            ],
+            "exampleEs": "FÍSICA APLICADA",
+            "explanationEn": "Aplicada uses feminine singular -a because it describes the feminine singular noun física."
+          },
+          {
+            "id": "es-xkcd-pureza:physics-claim:app-good-to-be",
+            "cardId": "grammar-estar-bien-infinitive-evaluation",
+            "participantWordIds": [
+              "es-xkcd-pureza:physics-claim:w08",
+              "es-xkcd-pureza:physics-claim:w09",
+              "es-xkcd-pureza:physics-claim:w10",
+              "es-xkcd-pureza:physics-claim:w11",
+              "es-xkcd-pureza:physics-claim:w12",
+              "es-xkcd-pureza:physics-claim:w13"
+            ],
+            "exampleEs": "ESTÁ BIEN ESTAR EN LA CIMA",
+            "explanationEn": "Está bien supplies the evaluation, while estar remains in its unchanged dictionary form and en la cima completes the location being evaluated."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0020",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-que--relative",
+          "word-no",
+          "phrase-no-ser-mas-que",
+          "word-es",
+          "word-más--fixed-no-ser-mas-que",
+          "word-que--fixed-no-ser-mas-que",
+          "word-física",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "concept-academic-fields-purity-hierarchy",
+          "word-aplicada--academic-field",
+          "word-está--impersonal-evaluation",
+          "grammar-estar-bien-infinitive-evaluation",
+          "word-bien--good-experience",
+          "word-estar--state-infinitive",
+          "word-en--at-location",
+          "word-la--article",
+          "word-cima"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0021",
-        "labelEs": "BIÓLOGOS",
+        "id": "es-xkcd-pureza:mathematician-retort",
+        "labelEs": "AH, HOLA. NO OS HABÍA VISTO DESDE TAN LEJOS.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 26.4697,
-          "y": 89.4346,
-          "width": 10.3039,
-          "height": 6.1957
+          "x": 78.8,
+          "y": 33.3,
+          "width": 16.5,
+          "height": 15
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00056",
-            "text": "BIÓLOGOS",
-            "normalized": "biólogos",
+            "id": "es-xkcd-pureza:mathematician-retort:w01",
+            "text": "AH",
+            "normalized": "ah",
             "bounds": [
               {
-                "x": 26.4697,
-                "y": 89.4346,
-                "width": 10.3039,
-                "height": 6.1957
+                "x": 79.25,
+                "y": 33.4,
+                "width": 3.15,
+                "height": 5.6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00056-bf6ba21c"
+              "word-ah--realization"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00056-bf6ba21c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0021",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0022",
-        "labelEs": "MATEMÁTICOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 84.5831,
-          "y": 89.4622,
-          "width": 12.7258,
-          "height": 6.1406
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-pureza:word-00057",
-            "text": "MATEMÁTICOS",
-            "normalized": "matemáticos",
+            "id": "es-xkcd-pureza:mathematician-retort:w02",
+            "text": "HOLA",
+            "normalized": "hola",
             "bounds": [
               {
-                "x": 84.5831,
-                "y": 89.4622,
-                "width": 12.7258,
-                "height": 6.1406
+                "x": 82.7027,
+                "y": 33.7662,
+                "width": 5.4054,
+                "height": 5.1948
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00057-48e02e2b"
+              "word-hola"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00057-48e02e2b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0022",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0023",
-        "labelEs": "Fisicos",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 53.2408,
-          "y": 89.5924,
-          "width": 7.3023,
-          "height": 5.8802
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-pureza:word-00058",
-            "text": "Fisicos",
-            "normalized": "fisicos",
+            "id": "es-xkcd-pureza:mathematician-retort:w03",
+            "text": "NO",
+            "normalized": "no",
             "bounds": [
               {
-                "x": 53.2408,
-                "y": 89.5924,
-                "width": 7.3023,
-                "height": 5.8802
+                "x": 88.3784,
+                "y": 33.7662,
+                "width": 2.973,
+                "height": 5.1948
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00058-6c5942d0"
+              "word-no"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w04",
+            "text": "OS",
+            "normalized": "os",
+            "bounds": [
+              {
+                "x": 91.35,
+                "y": 33.4,
+                "width": 2.85,
+                "height": 5.6
+              }
+            ],
+            "cardIds": [
+              "word-os--recipient",
+              "grammar-vosotros-informal-plural"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w05",
+            "text": "HABÍA",
+            "normalized": "había",
+            "bounds": [
+              {
+                "x": 79.3,
+                "y": 38.65,
+                "width": 5.15,
+                "height": 4.55
+              }
+            ],
+            "cardIds": [
+              "word-había--past-perfect-helper",
+              "grammar-past-perfect"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w06",
+            "text": "VISTO",
+            "normalized": "visto",
+            "bounds": [
+              {
+                "x": 84.4595,
+                "y": 38.961,
+                "width": 5.6757,
+                "height": 3.8961
+              }
+            ],
+            "cardIds": [
+              "word-visto--seen",
+              "grammar-past-perfect"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w07",
+            "text": "DESDE",
+            "normalized": "desde",
+            "bounds": [
+              {
+                "x": 90.2,
+                "y": 38.65,
+                "width": 5.05,
+                "height": 4.55
+              }
+            ],
+            "cardIds": [
+              "word-desde--from"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w08",
+            "text": "TAN",
+            "normalized": "tan",
+            "bounds": [
+              {
+                "x": 78.911,
+                "y": 42.7627,
+                "width": 3.7998,
+                "height": 5.2625
+              }
+            ],
+            "cardIds": [
+              "word-tan",
+              "grammar-tan-adjective-degree"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:w09",
+            "text": "LEJOS",
+            "normalized": "lejos",
+            "bounds": [
+              {
+                "x": 82.9649,
+                "y": 42.8354,
+                "width": 6.5024,
+                "height": 5.311
+              }
+            ],
+            "cardIds": [
+              "word-lejos",
+              "grammar-tan-adjective-degree",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00058-6c5942d0"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:app-vosotros",
+            "cardId": "grammar-vosotros-informal-plural",
+            "participantWordIds": [
+              "es-xkcd-pureza:mathematician-retort:w04"
+            ],
+            "exampleEs": "OS",
+            "explanationEn": "Os marks the several people addressed informally, a plural form especially common in Spain."
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:app-past-perfect",
+            "cardId": "grammar-past-perfect",
+            "participantWordIds": [
+              "es-xkcd-pureza:mathematician-retort:w05",
+              "es-xkcd-pureza:mathematician-retort:w06"
+            ],
+            "exampleEs": "HABÍA VISTO",
+            "explanationEn": "Había is the past helper and visto is ver's completed-action form, placing the seeing before the moment of speaking."
+          },
+          {
+            "id": "es-xkcd-pureza:mathematician-retort:app-degree",
+            "cardId": "grammar-tan-adjective-degree",
+            "participantWordIds": [
+              "es-xkcd-pureza:mathematician-retort:w08",
+              "es-xkcd-pureza:mathematician-retort:w09"
+            ],
+            "exampleEs": "TAN LEJOS",
+            "explanationEn": "Tan goes immediately before lejos to intensify the distance as “so far.”"
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0023",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": [
+          "word-ah--realization",
+          "word-hola",
+          "word-no",
+          "word-os--recipient",
+          "grammar-vosotros-informal-plural",
+          "word-había--past-perfect-helper",
+          "grammar-past-perfect",
+          "word-visto--seen",
+          "word-desde--from",
+          "word-tan",
+          "grammar-tan-adjective-degree",
+          "word-lejos",
+          "concept-academic-fields-purity-hierarchy"
+        ]
       },
       {
-        "id": "es-xkcd-pureza:region-0024",
-        "labelEs": "SOCIÓLOGOS PSICÓLOGOS",
+        "id": "es-xkcd-pureza:field-labels",
+        "labelEs": "SOCIÓLOGOS PSICÓLOGOS BIÓLOGOS QUÍMICOS FÍSICOS MATEMÁTICOS",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 1.0811,
-          "y": 89.6104,
-          "width": 24.0541,
-          "height": 5.8442
+          "y": 89.4346,
+          "width": 96.2278,
+          "height": 6.1957
         },
         "words": [
           {
-            "id": "es-xkcd-pureza:word-00059",
+            "id": "es-xkcd-pureza:field-labels:w01",
             "text": "SOCIÓLOGOS",
             "normalized": "sociólogos",
             "bounds": [
@@ -1585,11 +1419,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00059-f3ead5ae"
+              "word-sociólogos",
+              "concept-academic-fields-purity-hierarchy"
             ]
           },
           {
-            "id": "es-xkcd-pureza:word-00060",
+            "id": "es-xkcd-pureza:field-labels:w02",
             "text": "PSICÓLOGOS",
             "normalized": "psicólogos",
             "bounds": [
@@ -1601,36 +1436,29 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00060-a472cac0"
+              "word-psicólogos",
+              "concept-academic-fields-purity-hierarchy"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-pureza-00059-f3ead5ae",
-          "word-auto-es-xkcd-pureza-00060-a472cac0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0024",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-pureza:region-0025",
-        "labelEs": "QUÍMICOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 40.8108,
-          "y": 89.6104,
-          "width": 8.9189,
-          "height": 5.1948
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-pureza:word-00061",
+            "id": "es-xkcd-pureza:field-labels:w03",
+            "text": "BIÓLOGOS",
+            "normalized": "biólogos",
+            "bounds": [
+              {
+                "x": 26.4697,
+                "y": 89.4346,
+                "width": 10.3039,
+                "height": 6.1957
+              }
+            ],
+            "cardIds": [
+              "word-biólogos",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:field-labels:w04",
             "text": "QUÍMICOS",
             "normalized": "químicos",
             "bounds": [
@@ -1642,1561 +1470,1158 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-pureza-00061-15cc155c"
+              "word-químicos",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:field-labels:w05",
+            "text": "FÍSICOS",
+            "normalized": "físicos",
+            "bounds": [
+              {
+                "x": 53.2408,
+                "y": 89.5924,
+                "width": 7.3023,
+                "height": 5.8802
+              }
+            ],
+            "cardIds": [
+              "word-físicos--physicists",
+              "concept-academic-fields-purity-hierarchy"
+            ]
+          },
+          {
+            "id": "es-xkcd-pureza:field-labels:w06",
+            "text": "MATEMÁTICOS",
+            "normalized": "matemáticos",
+            "bounds": [
+              {
+                "x": 84.5831,
+                "y": 89.4622,
+                "width": 12.7258,
+                "height": 6.1406
+              }
+            ],
+            "cardIds": [
+              "word-matemáticos",
+              "concept-academic-fields-purity-hierarchy"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-pureza-00061-15cc155c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-pureza:ocr-line-0025",
-          "ocrConfidence": 1
-        }
+          "word-sociólogos",
+          "concept-academic-fields-purity-hierarchy",
+          "word-psicólogos",
+          "word-biólogos",
+          "word-químicos",
+          "word-físicos--physicists",
+          "word-matemáticos"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-pureza-00001-63670d8d",
-      "word-auto-es-xkcd-pureza-00002-53b68aa1",
-      "word-auto-es-xkcd-pureza-00003-01be8d51",
-      "word-auto-es-xkcd-pureza-00004-e928ad4b",
-      "word-auto-es-xkcd-pureza-00005-2c39f5db",
-      "word-auto-es-xkcd-pureza-00006-db4e832f",
-      "word-auto-es-xkcd-pureza-00007-d0dc6589",
-      "word-auto-es-xkcd-pureza-00008-d209880d",
-      "word-auto-es-xkcd-pureza-00009-0076ed17",
-      "word-auto-es-xkcd-pureza-00010-53cd4d1a",
-      "word-auto-es-xkcd-pureza-00011-71b203be",
-      "word-auto-es-xkcd-pureza-00012-74ef88d1",
-      "word-auto-es-xkcd-pureza-00013-09e62fd5",
-      "word-auto-es-xkcd-pureza-00014-3266d997",
-      "word-auto-es-xkcd-pureza-00015-2f997ded",
-      "word-auto-es-xkcd-pureza-00016-42ae3e0c",
-      "word-auto-es-xkcd-pureza-00017-18758765",
-      "word-auto-es-xkcd-pureza-00018-75881dc6",
-      "word-auto-es-xkcd-pureza-00019-1376fb0d",
-      "word-auto-es-xkcd-pureza-00020-16e373a2",
-      "word-auto-es-xkcd-pureza-00021-b3c3ff28",
-      "word-auto-es-xkcd-pureza-00022-9baee6b3",
-      "word-auto-es-xkcd-pureza-00023-2f23efb7",
-      "word-auto-es-xkcd-pureza-00024-29d44fc4",
-      "word-auto-es-xkcd-pureza-00025-adbd0b7f",
-      "word-auto-es-xkcd-pureza-00026-56411f04",
-      "word-auto-es-xkcd-pureza-00027-79c7d377",
-      "word-auto-es-xkcd-pureza-00028-376dba48",
-      "word-auto-es-xkcd-pureza-00029-61c6643a",
-      "word-auto-es-xkcd-pureza-00030-b75ab313",
-      "word-auto-es-xkcd-pureza-00031-ac576d34",
-      "word-auto-es-xkcd-pureza-00032-417c266a",
-      "word-auto-es-xkcd-pureza-00033-321f415e",
-      "word-auto-es-xkcd-pureza-00034-882da25f",
-      "word-auto-es-xkcd-pureza-00035-a5507173",
-      "word-auto-es-xkcd-pureza-00036-1ce57940",
-      "word-auto-es-xkcd-pureza-00037-9b00e66c",
-      "word-auto-es-xkcd-pureza-00038-35f7f126",
-      "word-auto-es-xkcd-pureza-00039-36bf3c14",
-      "word-auto-es-xkcd-pureza-00040-87fcfa58",
-      "word-auto-es-xkcd-pureza-00041-6911850e",
-      "word-auto-es-xkcd-pureza-00042-8fcabf80",
-      "word-auto-es-xkcd-pureza-00043-7e438374",
-      "word-auto-es-xkcd-pureza-00044-d118114d",
-      "word-auto-es-xkcd-pureza-00045-85a14c59",
-      "word-auto-es-xkcd-pureza-00046-78063725",
-      "word-auto-es-xkcd-pureza-00047-941215c9",
-      "word-auto-es-xkcd-pureza-00048-cc63f7ee",
-      "word-auto-es-xkcd-pureza-00049-bb47fd3f",
-      "word-auto-es-xkcd-pureza-00050-4f59718a",
-      "word-auto-es-xkcd-pureza-00051-5b7fbb8d",
-      "word-auto-es-xkcd-pureza-00052-25fc292f",
-      "word-auto-es-xkcd-pureza-00053-52023c3a",
-      "word-auto-es-xkcd-pureza-00054-2c373670",
-      "word-auto-es-xkcd-pureza-00055-a45e0ff2",
-      "word-auto-es-xkcd-pureza-00056-bf6ba21c",
-      "word-auto-es-xkcd-pureza-00057-48e02e2b",
-      "word-auto-es-xkcd-pureza-00058-6c5942d0",
-      "word-auto-es-xkcd-pureza-00059-f3ead5ae",
-      "word-auto-es-xkcd-pureza-00060-a472cac0",
-      "word-auto-es-xkcd-pureza-00061-15cc155c"
+      "word-campos--academic-fields",
+      "phrase-ordenar-por-criterio",
+      "concept-academic-fields-purity-hierarchy",
+      "word-ordenados--ranked",
+      "word-por--category",
+      "word-pureza",
+      "word-más--more",
+      "word-puros",
+      "word-la--article",
+      "word-sociología",
+      "word-no",
+      "phrase-no-ser-mas-que",
+      "word-es",
+      "word-más--fixed-no-ser-mas-que",
+      "word-que--fixed-no-ser-mas-que",
+      "word-psicología",
+      "grammar-descriptive-adjective-after-noun",
+      "grammar-adjective-gender-agreement",
+      "word-aplicada--academic-field",
+      "word-biología",
+      "word-química",
+      "word-que--relative",
+      "word-física",
+      "word-está--impersonal-evaluation",
+      "grammar-estar-bien-infinitive-evaluation",
+      "word-bien--good-experience",
+      "word-estar--state-infinitive",
+      "word-en--at-location",
+      "word-cima",
+      "word-ah--realization",
+      "word-hola",
+      "word-os--recipient",
+      "grammar-vosotros-informal-plural",
+      "word-había--past-perfect-helper",
+      "grammar-past-perfect",
+      "word-visto--seen",
+      "word-desde--from",
+      "word-tan",
+      "grammar-tan-adjective-degree",
+      "word-lejos",
+      "word-sociólogos",
+      "word-psicólogos",
+      "word-biólogos",
+      "word-químicos",
+      "word-físicos--physicists",
+      "word-matemáticos"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9754,
-      "lowConfidenceTokenCount": 3,
-      "rawOcrTokenCount": 61,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-pureza-00001-63670d8d",
+      "id": "word-campos--academic-fields",
       "kind": "word",
       "promptEs": "campos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "fields; areas of study",
+      "noteEn": "Campo can mean a physical field, but in an academic context it means an area of knowledge or study. Campos is its plural.",
+      "example": {
+        "es": "La historia y la química son campos distintos.",
+        "en": "History and chemistry are different fields."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "academia",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00001",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-deae46ac01968516adb2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00002-53b68aa1",
+      "id": "phrase-ordenar-por-criterio",
+      "kind": "phrase",
+      "promptEs": "ordenar algo por + criterio",
+      "questionEn": "How do you say what criterion is used to order or rank a set of things?",
+      "answerEn": "Use a form of ordenar, then por before the criterion used for the order.",
+      "noteEn": "The things can come first when ordenado functions as a description: libros ordenados por autor. Ordenado changes to match them: ordenada, ordenados, or ordenadas.",
+      "example": {
+        "es": "La lista está ordenada por fecha.",
+        "en": "The list is ordered by date."
+      },
+      "tags": [
+        "phrase",
+        "ordering",
+        "por",
+        "criterion",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-academic-fields-purity-hierarchy",
+      "kind": "concept",
+      "promptEs": "campos ordenados por pureza · ciencias aplicadas · matemáticas",
+      "answerEn": "the comic ranks academic fields by how abstract or theoretical they appear",
+      "noteEn": "Each field dismisses the one to its left as merely an applied form of itself. Mathematics is drawn farthest from practical application, which makes the distance itself part of the joke.",
+      "tags": [
+        "concept",
+        "academic fields",
+        "purity",
+        "hierarchy",
+        "xkcd"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ordenados--ranked",
       "kind": "word",
       "promptEs": "ordenados",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "ordered; ranked (masculine plural)",
+      "noteEn": "Ordenados describes several masculine or mixed items placed in an order. In a heading, that order can be a ranking by some criterion.",
+      "example": {
+        "es": "Los resultados están ordenados por fecha.",
+        "en": "The results are ordered by date."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "ordering",
+        "past participle",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00002",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-41135299c4c35bb91f1e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00003-01be8d51",
+      "id": "word-por--category",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "by; grouped according to",
+      "noteEn": "Por can identify the feature used to sort or organize things. In a heading, por causa means that the entries are grouped according to their cause.",
+      "example": {
+        "es": "Ordenamos los libros por tema.",
+        "en": "We sort the books by topic."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "classification",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00003",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-putas-conchas-azules",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00004-e928ad4b",
+      "id": "word-pureza",
       "kind": "word",
       "promptEs": "pureza",
       "answerEn": "purity",
-      "noteEn": "",
+      "noteEn": "Pureza is the quality of being pure. It can be literal, or figurative when an idea is presented as abstract and free from practical complications.",
+      "example": {
+        "es": "El laboratorio mide la pureza del agua.",
+        "en": "The laboratory measures the purity of the water."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "quality",
+        "noun",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00004",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4a6fd84c2b86af9e722a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00005-2c39f5db",
+      "id": "word-más--more",
       "kind": "word",
       "promptEs": "más",
-      "answerEn": "Meaning needs review",
+      "answerEn": "more",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00005",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00006-db4e832f",
+      "id": "word-puros",
       "kind": "word",
       "promptEs": "puros",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "pure (masculine plural)",
+      "noteEn": "Puros is the masculine plural form of puro. In a ranking of academic fields, it describes fields as more abstract or theoretical rather than more practical.",
+      "example": {
+        "es": "Buscan materiales puros.",
+        "en": "They are looking for pure materials."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "plural",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00006",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c81be9c8d3b7605828f0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00007-d0dc6589",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00007",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00008-d209880d",
+      "id": "word-sociología",
       "kind": "word",
-      "promptEs": "biología",
-      "answerEn": "biology",
-      "noteEn": "",
+      "promptEs": "sociología",
+      "answerEn": "sociology",
+      "noteEn": "Sociología is the study of societies, social relationships, and institutions.",
+      "example": {
+        "es": "Estudia sociología en la universidad.",
+        "en": "She studies sociology at the university."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "academic field",
+        "social science",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00008",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-80bcda9c576829bcd407",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00009-0076ed17",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00009",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00010-53cd4d1a",
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00010",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00011-71b203be",
+      "id": "phrase-no-ser-mas-que",
+      "kind": "phrase",
+      "promptEs": "no + ser + más que",
+      "questionEn": "How do you say that something is nothing but, or only, a particular thing?",
+      "answerEn": "Use no, a form of ser, then más que and the thing or description that remains.",
+      "noteEn": "Ser means “to be” and changes for time and subject: no es más que, no era más que, no fue más que. Más que normally introduces a comparison, but inside this negative frame it restricts the subject to only what follows.",
+      "example": {
+        "es": "La llamada no fue más que una broma.",
+        "en": "The call was nothing but a joke."
+      },
+      "tags": [
+        "phrase",
+        "restriction",
+        "ser",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
       "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00011",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00012-74ef88d1",
+      "id": "word-más--fixed-no-ser-mas-que",
       "kind": "word",
-      "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "promptEs": "más",
+      "answerEn": "no more than; only (as part of no ser más que)",
+      "noteEn": "Más normally means “more.” Between a negative form of ser and que, it helps restrict something to the description that follows.",
+      "example": {
+        "es": "No fue más que un error.",
+        "en": "It was nothing more than a mistake."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "restriction"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--fixed-no-ser-mas-que",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "than; no separate word in the full expression “nothing but”",
+      "noteEn": "In no ser más que, que completes the restriction introduced by más. The form of ser changes for the person and time.",
+      "example": {
+        "es": "Eso no es más que una idea.",
+        "en": "That is nothing but an idea."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "restriction"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-psicología",
+      "kind": "word",
+      "promptEs": "psicología",
+      "answerEn": "psychology",
+      "noteEn": "Psicología is the study of the mind, behavior, and mental processes.",
+      "example": {
+        "es": "La psicología estudia la conducta humana.",
+        "en": "Psychology studies human behavior."
+      },
+      "tags": [
+        "word",
+        "academic field",
+        "social science",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
+      "tags": [
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-aplicada--academic-field",
+      "kind": "word",
+      "promptEs": "aplicada",
+      "answerEn": "applied; put to practical use (feminine singular)",
+      "noteEn": "In the name or description of a field, aplicada contrasts practical use with more abstract theory. Use feminine singular aplicada with a feminine singular field name, such as física or lingüística.",
+      "example": {
+        "es": "El curso trata de lingüística aplicada.",
+        "en": "The course is about applied linguistics."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "academia",
+        "feminine singular",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-biología",
+      "kind": "word",
+      "promptEs": "biología",
+      "answerEn": "biology",
+      "noteEn": "Biología is the scientific study of living things.",
+      "example": {
+        "es": "La biología estudia los seres vivos.",
+        "en": "Biology studies living things."
+      },
+      "tags": [
+        "word",
+        "academic field",
+        "science",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-química",
+      "kind": "word",
+      "promptEs": "química",
+      "answerEn": "chemistry",
+      "noteEn": "Química is the science of substances, their properties, and how they change.",
+      "example": {
+        "es": "Tenemos una clase de química.",
+        "en": "We have a chemistry class."
+      },
+      "tags": [
+        "word",
+        "academic field",
+        "science",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--relative",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-física",
+      "kind": "word",
+      "promptEs": "física",
+      "answerEn": "physics",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "science",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00012",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-giroscopios",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00013-09e62fd5",
+      "id": "word-está--impersonal-evaluation",
       "kind": "word",
-      "promptEs": "sociologia",
-      "answerEn": "Meaning needs review",
+      "promptEs": "está",
+      "answerEn": "it is (introducing an evaluation)",
+      "noteEn": "In está bien followed by an action, está introduces a general judgment. Spanish does not add a separate word for English “it.”",
+      "example": {
+        "es": "Está bien pedir ayuda.",
+        "en": "It is good to ask for help."
+      },
+      "tags": [
+        "word",
+        "estar",
+        "impersonal evaluation",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-estar-bien-infinitive-evaluation",
+      "kind": "grammar",
+      "promptEs": "estar bien + verbo en forma de diccionario",
+      "questionEn": "How do you say that an action or state is good, nice, fine, or acceptable?",
+      "answerEn": "Use a matching form of estar followed by bien, then put the verb that names the action or state in its unchanged dictionary form.",
+      "noteEn": "The plus sign in the prompt means “followed by.” The form of estar can change with time or uncertainty: está bien, estaría bien, or puede que estuviera bien. Spanish does not need a separate subject meaning “it” in this general evaluation. The following verb remains in the unchanged form ending in -ar, -er, or -ir: preguntar, ser, or salir.",
+      "example": {
+        "es": "Está bien cambiar de opinión.",
+        "en": "It is fine to change your mind."
+      },
+      "tags": [
+        "grammar",
+        "evaluation",
+        "estar bien",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-bien--good-experience",
+      "kind": "word",
+      "promptEs": "bien",
+      "answerEn": "good; nice",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "evaluation"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00013",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f9612539442a7f89e3e9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ancho-fijo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00014-3266d997",
+      "id": "word-estar--state-infinitive",
       "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "promptEs": "estar",
+      "answerEn": "to be (in a state or condition)",
+      "noteEn": "Estar is the unchanged dictionary form used for states, conditions, and locations. After another conjugated verb, estar itself remains unchanged.",
+      "example": {
+        "es": "Quiero estar tranquilo.",
+        "en": "I want to be calm."
+      },
+      "tags": [
+        "word",
+        "estar",
+        "state",
+        "infinitive"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en--at-location",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "at (a location)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00014",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00015-2f997ded",
+      "id": "word-cima",
       "kind": "word",
-      "promptEs": "psicologia",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "cima",
+      "answerEn": "top; summit",
+      "noteEn": "Cima is the highest point of a mountain or, figuratively, the top position in a ranking.",
+      "example": {
+        "es": "Llegaron a la cima de la montaña.",
+        "en": "They reached the summit of the mountain."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "location",
+        "ranking",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00015",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c2b78c90f214c5ec2b2c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00016-42ae3e0c",
+      "id": "word-ah--realization",
       "kind": "word",
       "promptEs": "ah",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "ah; oh (recognition or realization)",
+      "noteEn": "Ah can show that the speaker has just understood, noticed, or recognized something. Its exact English equivalent depends on tone.",
+      "example": {
+        "es": "Ah, sí, ahora lo recuerdo.",
+        "en": "Oh, yes, now I remember."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "interjection",
+        "realization"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00016",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-70a0d5198ebb88f97a2c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-insomnio",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00017-18758765",
+      "id": "word-hola",
       "kind": "word",
       "promptEs": "hola",
       "answerEn": "hello",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00017",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b221d9dbb083a7f33428",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00018-75881dc6",
+      "id": "word-os--recipient",
       "kind": "word",
-      "promptEs": "no",
-      "answerEn": "no; not",
-      "noteEn": "",
+      "promptEs": "os",
+      "answerEn": "to you all; you all (informal plural, used mainly in Spain)",
+      "noteEn": "Os is the short object form used with vosotros or vosotras. It identifies several informally addressed people as receiving or being affected by an action.",
+      "example": {
+        "es": "Os envío una foto.",
+        "en": "I am sending you all a photo."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "pronoun",
+        "Spain",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00018",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tcmp",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00019-1376fb0d",
+      "id": "grammar-vosotros-informal-plural",
+      "kind": "grammar",
+      "promptEs": "vosotros/as: vuestro, podéis, habéis…",
+      "questionEn": "How does Spanish in Spain address several people informally?",
+      "answerEn": "Use vosotros or vosotras forms, such as vuestro for “your” and podéis for “you all can.”",
+      "noteEn": "Vosotros addresses a mixed or all-male group; vosotras addresses an all-female group. These forms are common in Spain. Most of Latin America uses ustedes instead, with different verb and possessive forms.",
+      "example": {
+        "es": "Vosotras podéis traer vuestros libros.",
+        "en": "You all can bring your books."
+      },
+      "tags": [
+        "grammar",
+        "Spain",
+        "plural you",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-había--past-perfect-helper",
       "kind": "word",
-      "promptEs": "o",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "había",
+      "answerEn": "had (helper for an earlier completed action)",
+      "noteEn": "Before a completed-action form such as escrito, había is a past form of the helper haber. It places one completed action before another point in the past.",
+      "example": {
+        "es": "Ya había comido cuando llamaste.",
+        "en": "I had already eaten when you called."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "helper verb",
+        "past perfect",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00019",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65c74c15a686187bb6bb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pelea",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00020-16e373a2",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-past-perfect",
+      "kind": "grammar",
+      "promptEs": "había/habías/habíamos/habíais/habían + forma de acción completada",
+      "questionEn": "How do you say that something had already happened before another past moment?",
+      "answerEn": "Use the matching past form of haber, then the action verb's completed-action form.",
+      "noteEn": "Use había for I, he, she, or one thing; habías for informal singular “you”; habíamos for “we”; habíais for informal plural “you” in Spain; and habían for “they” or plural formal “you.” The second verb uses a completed-action form, called a past participle: most -ar verbs end in -ado and most -er or -ir verbs end in -ido, although some are irregular, such as escribir → escrito. Only haber changes for the person; the completed-action form stays unchanged.",
+      "example": {
+        "es": "Ya habíamos terminado cuando llegó Luis.",
+        "en": "We had already finished when Luis arrived."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "past perfect",
+        "haber",
+        "past sequence",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00020",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pelea",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00021-b3c3ff28",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00021",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00022-9baee6b3",
-      "kind": "word",
-      "promptEs": "vo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00022",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3f98114b0f77b7da78bc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00023-2f23efb7",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00023",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00024-29d44fc4",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00024",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00025-adbd0b7f",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00025",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00026-56411f04",
-      "kind": "word",
-      "promptEs": "no",
-      "answerEn": "no; not",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00026",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00027-79c7d377",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00027",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00028-376dba48",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00028",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00029-61c6643a",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00029",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00030-b75ab313",
-      "kind": "word",
-      "promptEs": "no",
-      "answerEn": "no; not",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00030",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00031-ac576d34",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00031",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00032-417c266a",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00032",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00033-321f415e",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00033",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00034-882da25f",
-      "kind": "word",
-      "promptEs": "biología",
-      "answerEn": "biology",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00034",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-80bcda9c576829bcd407",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00035-a5507173",
-      "kind": "word",
-      "promptEs": "apli",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00035",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-36fde8ab6382e5fb82b2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00036-1ce57940",
-      "kind": "word",
-      "promptEs": "química",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00036",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb8f6c7fa489cfd81d3d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00037-9b00e66c",
-      "kind": "word",
-      "promptEs": "aplica",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00037",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-96fb9a87a0ef19d698d8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00038-35f7f126",
-      "kind": "word",
-      "promptEs": "física",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00038",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d87559ce274be33e6cc6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00039-36bf3c14",
-      "kind": "word",
-      "promptEs": "apli",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00039",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-36fde8ab6382e5fb82b2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00040-87fcfa58",
-      "kind": "word",
-      "promptEs": "labia",
-      "answerEn": "gift of the gab",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00040",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6cd1442aa2721a94defc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00041-6911850e",
+      "id": "word-visto--seen",
       "kind": "word",
       "promptEs": "visto",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "seen",
+      "noteEn": "Visto is the irregular completed-action form of ver, ‘to see.’ After hemos, it helps form ‘we have seen.’",
+      "example": {
+        "es": "Hemos visto esa película.",
+        "en": "We have seen that movie."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "ver",
+        "past participle",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00041",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-179077dedbe1fec9da9b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-manana",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00042-8fcabf80",
+      "id": "word-desde--from",
       "kind": "word",
-      "promptEs": "desd",
-      "answerEn": "Meaning needs review",
+      "promptEs": "desde",
+      "answerEn": "from; from within (a starting place)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00042",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-557364a89049a2bddcf0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-tcmp",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00043-7e438374",
-      "kind": "word",
-      "promptEs": "psicologia",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00043",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c2b78c90f214c5ec2b2c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00044-d118114d",
+      "id": "word-tan",
       "kind": "word",
       "promptEs": "tan",
       "answerEn": "so; such",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00044",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0e5123df1126f9d22824",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00045-85a14c59",
+      "id": "grammar-tan-adjective-degree",
+      "kind": "grammar",
+      "promptEs": "tan + palabra descriptiva",
+      "questionEn": "How do you intensify a describing word to mean “so,” as in “so difficult”?",
+      "answerEn": "Put tan immediately before the word that describes the person, thing, or action.",
+      "noteEn": "Tan does not change form. It goes before an adjective, a word that describes a person or thing, or before an adverb, a word that describes an action. Use forms of tanto instead before a noun or when saying “so much” or “so many.”",
+      "example": {
+        "es": "El examen fue tan difícil.",
+        "en": "The exam was so difficult."
+      },
+      "tags": [
+        "grammar",
+        "degree",
+        "description",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-lejos",
       "kind": "word",
       "promptEs": "lejos",
-      "answerEn": "far, far away",
-      "noteEn": "",
+      "answerEn": "far; far away",
+      "noteEn": "Lejos describes distance. It normally appears without changing form and often follows de before the point of reference.",
+      "example": {
+        "es": "La estación está lejos de aquí.",
+        "en": "The station is far from here."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "distance",
+        "adverb",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00045",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bbd6749e09b8bf8b0b89",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00046-78063725",
-      "kind": "word",
-      "promptEs": "cada",
-      "answerEn": "each; every",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00046",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-74767fb71638182aedc8",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00047-941215c9",
-      "kind": "word",
-      "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00047",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d898de0fb93b48e72216",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00048-cc63f7ee",
-      "kind": "word",
-      "promptEs": "aplicada",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00048",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4d7ab45edc2ca60d044d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00049-bb47fd3f",
-      "kind": "word",
-      "promptEs": "cada",
-      "answerEn": "each; every",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00049",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-74767fb71638182aedc8",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00050-4f59718a",
-      "kind": "word",
-      "promptEs": "da",
-      "answerEn": "doesn't matter (as part of da igual)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00050",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0018",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-aa58b21b01d6b8a99c1a",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00051-5b7fbb8d",
-      "kind": "word",
-      "promptEs": "bien",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00051",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-48b3f8392fb766ae5aa7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00052-25fc292f",
-      "kind": "word",
-      "promptEs": "estar",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00052",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d58646be575a364b41a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00053-52023c3a",
-      "kind": "word",
-      "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00053",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00054-2c373670",
-      "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00054",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00055-a45e0ff2",
-      "kind": "word",
-      "promptEs": "cima",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00055",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-93f6049f700758a7a873",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00056-bf6ba21c",
-      "kind": "word",
-      "promptEs": "biólogos",
-      "answerEn": "biologist",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00056",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0021",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-e7d6f14170eb979592fc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00057-48e02e2b",
-      "kind": "word",
-      "promptEs": "matemáticos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00057",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0022",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-017bff3da6582317119e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00058-6c5942d0",
-      "kind": "word",
-      "promptEs": "fisicos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00058",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0023",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-797b8f8dab870c1353ed",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-pureza-00059-f3ead5ae",
+      "id": "word-sociólogos",
       "kind": "word",
       "promptEs": "sociólogos",
-      "answerEn": "sociologist",
-      "noteEn": "",
+      "answerEn": "sociologists",
+      "noteEn": "Sociólogos is the masculine or mixed-group plural for people who work in sociology.",
+      "example": {
+        "es": "Los sociólogos analizaron la encuesta.",
+        "en": "The sociologists analyzed the survey."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "profession",
+        "social science",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00059",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0024",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-257ea736d5c7e2e20a51",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00060-a472cac0",
+      "id": "word-psicólogos",
       "kind": "word",
       "promptEs": "psicólogos",
-      "answerEn": "psychologist",
-      "noteEn": "",
+      "answerEn": "psychologists",
+      "noteEn": "Psicólogos is the masculine or mixed-group plural for people who work in psychology.",
+      "example": {
+        "es": "Los psicólogos estudian la conducta.",
+        "en": "Psychologists study behavior."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "profession",
+        "psychology",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00060",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0024",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-251aa2d9ea71d920d42e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-pureza-00061-15cc155c",
+      "id": "word-biólogos",
+      "kind": "word",
+      "promptEs": "biólogos",
+      "answerEn": "biologists",
+      "noteEn": "Biólogos is the masculine or mixed-group plural for people who work in biology.",
+      "example": {
+        "es": "Los biólogos observaron las células.",
+        "en": "The biologists observed the cells."
+      },
+      "tags": [
+        "word",
+        "profession",
+        "biology",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-químicos",
       "kind": "word",
       "promptEs": "químicos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "chemists",
+      "noteEn": "As a noun, químicos names people who work in chemistry. The same form can mean “chemical” when it describes masculine plural things.",
+      "example": {
+        "es": "Los químicos comprobaron la reacción.",
+        "en": "The chemists checked the reaction."
+      },
+      "tags": [
+        "word",
+        "profession",
+        "chemistry",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-físicos--physicists",
+      "kind": "word",
+      "promptEs": "físicos",
+      "answerEn": "physicists",
+      "noteEn": "As a noun, físicos names people who work in physics. The same written form can be an adjective meaning “physical” when it describes a plural masculine noun.",
+      "example": {
+        "es": "Los físicos comparan los datos.",
+        "en": "The physicists compare the data."
+      },
+      "tags": [
+        "word",
+        "profession",
+        "physics",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-caza-de-nerds",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-matemáticos",
+      "kind": "word",
+      "promptEs": "matemáticos",
+      "answerEn": "mathematicians",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "people",
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-pureza:ocr-token-00061",
-        "sourceLineId": "es-xkcd-pureza:ocr-line-0025",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ef68fcd090e6da3574cf",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     }
   ]

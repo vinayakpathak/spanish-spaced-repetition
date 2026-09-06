@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-7fe3420fddfbcbe3",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.7688,
-    "lowConfidenceTokenCount": 7,
-    "rawOcrTokenCount": 16,
-    "filteredNonLatinTokenCount": 8,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-ascensor",
     "xkcdNumber": 288,
     "publishedAt": "2007-07-11",
-    "title": "Ascensor",
+    "title": "Elevator",
     "titleEs": "Ascensor",
     "image": {
       "src": "https://es.xkcd.com/images/elevator.png",
       "width": 740,
       "height": 702,
       "aspectRatio": 1.0541,
-      "altEn": "Spanish-language xkcd comic #288: Ascensor"
+      "altEn": "Spanish-language xkcd comic #288: Elevator"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,12 +36,82 @@
     },
     "titleText": {
       "es": "Rápido, intentadlo con 'AMOR'.",
-      "en": "English title text pending review."
+      "en": "Quick, try it with 'LOVE'.",
+      "noteEn": "Intentadlo is an informal plural command used in Spain: intentad + lo, “try it.”"
     },
     "regions": [
       {
-        "id": "es-xkcd-ascensor:region-0001",
-        "labelEs": "• PLANTA 1",
+        "id": "es-xkcd-ascensor:left-certificate",
+        "labelEs": "CERTIFICADO DE INSPECCIÓN",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 2.7,
+          "y": 3.1,
+          "width": 6.8,
+          "height": 4.9
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:left-certificate:w01",
+            "text": "CERTIFICADO",
+            "normalized": "certificado",
+            "bounds": [
+              {
+                "x": 3.2,
+                "y": 3.8,
+                "width": 4.7,
+                "height": 1.3
+              }
+            ],
+            "cardIds": [
+              "word-certificado"
+            ]
+          },
+          {
+            "id": "es-xkcd-ascensor:left-certificate:w02",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 8,
+                "y": 3.8,
+                "width": 1.1,
+                "height": 1.3
+              }
+            ],
+            "cardIds": [
+              "word-de--of"
+            ]
+          },
+          {
+            "id": "es-xkcd-ascensor:left-certificate:w03",
+            "text": "INSPECCIÓN",
+            "normalized": "inspección",
+            "bounds": [
+              {
+                "x": 4.4,
+                "y": 5.2,
+                "width": 4.4,
+                "height": 1.4
+              }
+            ],
+            "cardIds": [
+              "word-inspección"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-certificado",
+          "word-de--of",
+          "word-inspección"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:left-floor-1",
+        "labelEs": "PLANTA 1",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -58,7 +122,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-ascensor:word-00001",
+            "id": "es-xkcd-ascensor:left-floor-1:w01",
             "text": "PLANTA",
             "normalized": "planta",
             "bounds": [
@@ -70,104 +134,34 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-ascensor-00001-00b48142"
+              "word-planta--building-floor"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-ascensor-00001-00b48142"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-ascensor:region-0002",
-        "labelEs": "• PLANTA 1",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 52.4324,
-          "y": 9.6866,
-          "width": 6.7568,
-          "height": 1.4245
-        },
-        "words": [
+        "excludedUnits": [
           {
-            "id": "es-xkcd-ascensor:word-00002",
-            "text": "PLANTA",
-            "normalized": "planta",
+            "id": "es-xkcd-ascensor:left-floor-1:excluded-number",
+            "text": "1",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
             "bounds": [
               {
-                "x": 54.2905,
+                "x": 8.0743,
                 "y": 9.6866,
-                "width": 4.0541,
+                "width": 0.8446,
                 "height": 1.4245
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-ascensor-00002-a7eeaecf"
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-ascensor-00002-a7eeaecf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0002",
-          "ocrConfidence": 0.5
-        }
+          "word-planta--building-floor"
+        ]
       },
       {
-        "id": "es-xkcd-ascensor:region-0003",
-        "labelEs": "• PLANTA 2",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 52.4324,
-          "y": 11.396,
-          "width": 7.027,
-          "height": 1.7094
-        },
-        "words": [
-          {
-            "id": "es-xkcd-ascensor:word-00003",
-            "text": "PLANTA",
-            "normalized": "planta",
-            "bounds": [
-              {
-                "x": 54.2568,
-                "y": 11.396,
-                "width": 3.8514,
-                "height": 1.7094
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-ascensor-00003-390a7d72"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-ascensor-00003-390a7d72"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-ascensor:region-0004",
-        "labelEs": "• PLANTA 2",
+        "id": "es-xkcd-ascensor:left-floor-2",
+        "labelEs": "PLANTA 2",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -178,7 +172,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-ascensor:word-00004",
+            "id": "es-xkcd-ascensor:left-floor-2:w01",
             "text": "PLANTA",
             "normalized": "planta",
             "bounds": [
@@ -190,24 +184,34 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-ascensor-00004-0f6d06e1"
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:left-floor-2:excluded-number",
+            "text": "2",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 7.9054,
+                "y": 11.6809,
+                "width": 1.2838,
+                "height": 1.4245
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-ascensor-00004-0f6d06e1"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+          "word-planta--building-floor"
+        ]
       },
       {
-        "id": "es-xkcd-ascensor:region-0005",
-        "labelEs": "© PLANTA 3",
+        "id": "es-xkcd-ascensor:left-floor-3",
+        "labelEs": "PLANTA 3",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -218,7 +222,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-ascensor:word-00005",
+            "id": "es-xkcd-ascensor:left-floor-3:w01",
             "text": "PLANTA",
             "normalized": "planta",
             "bounds": [
@@ -230,81 +234,34 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-ascensor-00005-55378596"
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:left-floor-3:excluded-number",
+            "text": "3",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 7.8378,
+                "y": 13.3903,
+                "width": 1.0811,
+                "height": 1.7094
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-ascensor-00005-55378596"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0005",
-          "ocrConfidence": 1
-        }
+          "word-planta--building-floor"
+        ]
       },
       {
-        "id": "es-xkcd-ascensor:region-0006",
-        "labelEs": "O PLANTA 3",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 52.7027,
-          "y": 13.3903,
-          "width": 6.7568,
-          "height": 1.7094
-        },
-        "words": [
-          {
-            "id": "es-xkcd-ascensor:word-00006",
-            "text": "O",
-            "normalized": "o",
-            "bounds": [
-              {
-                "x": 52.7027,
-                "y": 13.3903,
-                "width": 1.2162,
-                "height": 1.7094
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-ascensor-00006-3033cf0f"
-            ]
-          },
-          {
-            "id": "es-xkcd-ascensor:word-00007",
-            "text": "PLANTA",
-            "normalized": "planta",
-            "bounds": [
-              {
-                "x": 54.1216,
-                "y": 13.3903,
-                "width": 4.0541,
-                "height": 1.7094
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-ascensor-00007-64ad5d12"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-ascensor-00006-3033cf0f",
-          "word-auto-es-xkcd-ascensor-00007-64ad5d12"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-ascensor:region-0007",
-        "labelEs": "@ PLANTA 4",
+        "id": "es-xkcd-ascensor:left-floor-4",
+        "labelEs": "PLANTA 4",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -315,7 +272,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-ascensor:word-00008",
+            "id": "es-xkcd-ascensor:left-floor-4:w01",
             "text": "PLANTA",
             "normalized": "planta",
             "bounds": [
@@ -327,236 +284,750 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-ascensor-00008-1d40710f"
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:left-floor-4:excluded-number",
+            "text": "4",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 7.8378,
+                "y": 15.0997,
+                "width": 1.3514,
+                "height": 1.7094
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-ascensor-00008-1d40710f"
+          "word-planta--building-floor"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:first-writing",
+        "labelEs": "ESCRIBE",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 25.2,
+          "y": 8.4,
+          "width": 5.6,
+          "height": 3.8
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:first-writing:w01",
+            "text": "ESCRIBE",
+            "normalized": "escribe",
+            "bounds": [
+              {
+                "x": 25.5,
+                "y": 8.7,
+                "width": 5,
+                "height": 3.3
+              }
+            ],
+            "cardIds": [
+              "word-escribe--action-caption",
+              "grammar-present-third-person-regular"
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-ascensor:ocr-line-0007",
-          "ocrConfidence": 0.5
-        }
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-ascensor:first-writing:app-present",
+            "cardId": "grammar-present-third-person-regular",
+            "participantWordIds": [
+              "es-xkcd-ascensor:first-writing:w01"
+            ],
+            "exampleEs": "ESCRIBE",
+            "explanationEn": "Escribir ends in -ir, so its regular present form for one other person replaces -ir with -e."
+          }
+        ],
+        "cardIds": [
+          "word-escribe--action-caption",
+          "grammar-present-third-person-regular"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:second-writing",
+        "labelEs": "ESCRIBE",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 25.3,
+          "y": 12.3,
+          "width": 5.8,
+          "height": 3.9
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:second-writing:w01",
+            "text": "ESCRIBE",
+            "normalized": "escribe",
+            "bounds": [
+              {
+                "x": 25.6,
+                "y": 12.6,
+                "width": 5,
+                "height": 3.3
+              }
+            ],
+            "cardIds": [
+              "word-escribe--action-caption",
+              "grammar-present-third-person-regular"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-ascensor:second-writing:app-present",
+            "cardId": "grammar-present-third-person-regular",
+            "participantWordIds": [
+              "es-xkcd-ascensor:second-writing:w01"
+            ],
+            "exampleEs": "ESCRIBE",
+            "explanationEn": "This repeated caption uses the same regular third-person present form to narrate the continued writing action."
+          }
+        ],
+        "cardIds": [
+          "word-escribe--action-caption",
+          "grammar-present-third-person-regular"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:right-certificate",
+        "labelEs": "CERTIFICADO DE INSPECCIÓN",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 53,
+          "y": 3.1,
+          "width": 6.9,
+          "height": 4.9
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:right-certificate:w01",
+            "text": "CERTIFICADO",
+            "normalized": "certificado",
+            "bounds": [
+              {
+                "x": 53.5,
+                "y": 3.8,
+                "width": 4.7,
+                "height": 1.3
+              }
+            ],
+            "cardIds": [
+              "word-certificado"
+            ]
+          },
+          {
+            "id": "es-xkcd-ascensor:right-certificate:w02",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 58.3,
+                "y": 3.8,
+                "width": 1.1,
+                "height": 1.3
+              }
+            ],
+            "cardIds": [
+              "word-de--of"
+            ]
+          },
+          {
+            "id": "es-xkcd-ascensor:right-certificate:w03",
+            "text": "INSPECCIÓN",
+            "normalized": "inspección",
+            "bounds": [
+              {
+                "x": 54.7,
+                "y": 5.2,
+                "width": 4.4,
+                "height": 1.4
+              }
+            ],
+            "cardIds": [
+              "word-inspección"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-certificado",
+          "word-de--of",
+          "word-inspección"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:right-floor-1",
+        "labelEs": "PLANTA 1",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 52.4324,
+          "y": 9.6866,
+          "width": 6.7568,
+          "height": 1.4245
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-1:w01",
+            "text": "PLANTA",
+            "normalized": "planta",
+            "bounds": [
+              {
+                "x": 54.2905,
+                "y": 9.6866,
+                "width": 4.0541,
+                "height": 1.4245
+              }
+            ],
+            "cardIds": [
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-1:excluded-number",
+            "text": "1",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 58.5135,
+                "y": 9.6866,
+                "width": 0.6757,
+                "height": 1.4245
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": [
+          "word-planta--building-floor"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:right-floor-2",
+        "labelEs": "PLANTA 2",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 52.4324,
+          "y": 11.396,
+          "width": 7.027,
+          "height": 1.7094
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-2:w01",
+            "text": "PLANTA",
+            "normalized": "planta",
+            "bounds": [
+              {
+                "x": 54.2568,
+                "y": 11.396,
+                "width": 3.8514,
+                "height": 1.7094
+              }
+            ],
+            "cardIds": [
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-2:excluded-number",
+            "text": "2",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 58.3108,
+                "y": 11.396,
+                "width": 1.1486,
+                "height": 1.7094
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": [
+          "word-planta--building-floor"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:right-floor-3",
+        "labelEs": "PLANTA 3",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 52.7027,
+          "y": 13.3903,
+          "width": 6.7568,
+          "height": 1.7094
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-3:w01",
+            "text": "PLANTA",
+            "normalized": "planta",
+            "bounds": [
+              {
+                "x": 54.1216,
+                "y": 13.3903,
+                "width": 4.0541,
+                "height": 1.7094
+              }
+            ],
+            "cardIds": [
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-3:excluded-number",
+            "text": "3",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 58.3784,
+                "y": 13.3903,
+                "width": 1.0811,
+                "height": 1.7094
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": [
+          "word-planta--building-floor"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:right-floor-4",
+        "labelEs": "PLANTA 4",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 52.4,
+          "y": 14.9,
+          "width": 7.2,
+          "height": 2.1
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-4:w01",
+            "text": "PLANTA",
+            "normalized": "planta",
+            "bounds": [
+              {
+                "x": 53.8,
+                "y": 15,
+                "width": 4,
+                "height": 1.7
+              }
+            ],
+            "cardIds": [
+              "word-planta--building-floor"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-ascensor:right-floor-4:excluded-number",
+            "text": "4",
+            "reason": "number",
+            "rationale": "This is the elevator's floor number, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 58.1,
+                "y": 15,
+                "width": 0.9,
+                "height": 1.7
+              }
+            ]
+          }
+        ],
+        "applications": [],
+        "cardIds": [
+          "word-planta--building-floor"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:zeppelin-label",
+        "labelEs": "ZEPELIN",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 53.2,
+          "y": 16.1,
+          "width": 9.5,
+          "height": 4.3
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:zeppelin-label:w01",
+            "text": "ZEPELIN",
+            "normalized": "zepelin",
+            "bounds": [
+              {
+                "x": 53.5,
+                "y": 16.8,
+                "width": 8.6,
+                "height": 3.1
+              }
+            ],
+            "cardIds": [
+              "word-zepelin--printed-missing-accent",
+              "concept-zeppelin-airship"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-zepelin--printed-missing-accent",
+          "concept-zeppelin-airship"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:pressing",
+        "labelEs": "PULSA",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 63.5,
+          "y": 13.6,
+          "width": 4.2,
+          "height": 4.5
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:pressing:w01",
+            "text": "PULSA",
+            "normalized": "pulsa",
+            "bounds": [
+              {
+                "x": 63.7,
+                "y": 13.9,
+                "width": 3.8,
+                "height": 4
+              }
+            ],
+            "cardIds": [
+              "word-pulsa--action-caption",
+              "grammar-present-third-person-regular"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-ascensor:pressing:app-present",
+            "cardId": "grammar-present-third-person-regular",
+            "participantWordIds": [
+              "es-xkcd-ascensor:pressing:w01"
+            ],
+            "exampleEs": "PULSA",
+            "explanationEn": "Pulsar ends in -ar, so its regular present form for one other person replaces -ar with -a."
+          }
+        ],
+        "cardIds": [
+          "word-pulsa--action-caption",
+          "grammar-present-third-person-regular"
+        ]
+      },
+      {
+        "id": "es-xkcd-ascensor:ding",
+        "labelEs": "DING",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 89,
+          "y": 3,
+          "width": 5.6,
+          "height": 4.2
+        },
+        "words": [
+          {
+            "id": "es-xkcd-ascensor:ding:w01",
+            "text": "DING",
+            "normalized": "ding",
+            "bounds": [
+              {
+                "x": 89.6,
+                "y": 3.5,
+                "width": 4.2,
+                "height": 2.8
+              }
+            ],
+            "cardIds": [
+              "word-ding--sound"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [],
+        "cardIds": [
+          "word-ding--sound"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-ascensor-00001-00b48142",
-      "word-auto-es-xkcd-ascensor-00002-a7eeaecf",
-      "word-auto-es-xkcd-ascensor-00003-390a7d72",
-      "word-auto-es-xkcd-ascensor-00004-0f6d06e1",
-      "word-auto-es-xkcd-ascensor-00005-55378596",
-      "word-auto-es-xkcd-ascensor-00006-3033cf0f",
-      "word-auto-es-xkcd-ascensor-00007-64ad5d12",
-      "word-auto-es-xkcd-ascensor-00008-1d40710f"
+      "word-certificado",
+      "word-de--of",
+      "word-inspección",
+      "word-planta--building-floor",
+      "word-escribe--action-caption",
+      "grammar-present-third-person-regular",
+      "word-zepelin--printed-missing-accent",
+      "concept-zeppelin-airship",
+      "word-pulsa--action-caption",
+      "word-ding--sound"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.7688,
-      "lowConfidenceTokenCount": 7,
-      "rawOcrTokenCount": 16,
-      "filteredNonLatinTokenCount": 8,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-ascensor-00001-00b48142",
+      "id": "word-certificado",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
+      "promptEs": "certificado",
+      "answerEn": "certificate",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "document"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00001",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00002-a7eeaecf",
+      "id": "word-de--of",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
+      "promptEs": "de",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00003",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0002",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00003-390a7d72",
+      "id": "word-inspección",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
+      "promptEs": "inspección",
+      "answerEn": "inspection",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "safety",
+        "document"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00005",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00004-0f6d06e1",
+      "id": "word-planta--building-floor",
       "kind": "word",
       "promptEs": "planta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "floor; storey (of a building)",
+      "noteEn": "Planta can mean a plant, the sole of a foot, or a floor in a building. On an elevator sign or building directory, planta means a floor of a building.",
+      "example": {
+        "es": "La oficina está en la tercera planta.",
+        "en": "The office is on the third floor."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "building",
+        "floor",
+        "polysemy"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00007",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00005-55378596",
+      "id": "word-escribe--action-caption",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "escribe",
+      "answerEn": "writes; is writing (action caption)",
+      "noteEn": "Escribe is the present form of escribir for él, ella, or usted. The same written form can also be an informal command. In an action caption, it narrates what the person does.",
+      "example": {
+        "es": "Marta escribe una nota.",
+        "en": "Marta writes a note."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "escribir",
+        "present",
+        "third person",
+        "caption"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00009",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00006-3033cf0f",
-      "kind": "word",
-      "promptEs": "o",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-present-third-person-regular",
+      "kind": "grammar",
+      "promptEs": "presente regular para él/ella/usted",
+      "questionEn": "How do regular present-tense verbs change for “he,” “she,” or formal singular “you”?",
+      "answerEn": "For -ar verbs, replace -ar with -a; for -er and -ir verbs, replace the ending with -e.",
+      "noteEn": "Hablar becomes habla, comer becomes come, and escribir becomes escribe. Comics also use this same form as a short caption that reports one person's action. Some verbs are irregular and must be learned separately.",
+      "example": {
+        "es": "Ella abre la ventana.",
+        "en": "She opens the window."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "present",
+        "third person",
+        "regular verbs",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00011",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-65c74c15a686187bb6bb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00007-64ad5d12",
+      "id": "word-zepelin--printed-missing-accent",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "zepelin",
+      "answerEn": "zeppelin; printed without the accent required in standard Spanish",
+      "noteEn": "The visible label says ZEPELIN. Standard Spanish writes zepelín, with one p and an accent on í; the German/English proper name is Zeppelin, with two p's.",
+      "example": {
+        "es": "El zepelín cruzó el cielo.",
+        "en": "The zeppelin crossed the sky."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "airship",
+        "printed anomaly",
+        "spelling",
+        "accent"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00012",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-ascensor-00008-1d40710f",
+      "id": "concept-zeppelin-airship",
+      "kind": "concept",
+      "promptEs": "zepelín / Zeppelin",
+      "answerEn": "a large rigid airship whose shape is held by an internal framework",
+      "noteEn": "The craft is named after German airship pioneer Ferdinand von Zeppelin. A blimp keeps its shape mainly from internal gas pressure; a Zeppelin-style rigid airship has a structural frame.",
+      "tags": [
+        "concept",
+        "airship",
+        "transport",
+        "history"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pulsa--action-caption",
       "kind": "word",
-      "promptEs": "planta",
-      "answerEn": "Meaning needs review",
+      "promptEs": "pulsa",
+      "answerEn": "presses; pushes (a button)",
+      "noteEn": "Pulsa is the present form of pulsar for él, ella, or usted. It can also be an informal command; in an action caption it reports what the person does.",
+      "example": {
+        "es": "Ella pulsa el botón rojo.",
+        "en": "She presses the red button."
+      },
+      "tags": [
+        "word",
+        "pulsar",
+        "present",
+        "third person",
+        "caption"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ding--sound",
+      "kind": "word",
+      "promptEs": "ding",
+      "answerEn": "ding (bell or elevator sound)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "onomatopoeia",
+        "sound"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-ascensor:ocr-token-00014",
-        "sourceLineId": "es-xkcd-ascensor:ocr-line-0007",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-9874e221c8a2c10c5783",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-ascensor",
+        "contextualSenseReviewed": true
       }
     }
   ]

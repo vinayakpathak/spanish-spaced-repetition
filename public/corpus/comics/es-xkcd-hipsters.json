@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-b196c1df4ffcb2a2",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9231,
-    "lowConfidenceTokenCount": 8,
-    "rawOcrTokenCount": 52,
-    "filteredNonLatinTokenCount": 1,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-hipsters",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Se podría afirmar que este mismo recurso al distanciamiento irónico, participando al mismo tiempo de la cosa en cuestión, es la definición misma de hipsterismo contemporáneo. Pero, por otro lado, un momento, estás en una habitación vacía. ¿A quién le hablas?",
-      "en": "English title text pending review."
+      "en": "You may point out that this very retreat into ironic detachment while still clearly participating in the thing in question is the very definition of contemporary hipsterdom. But on the other hand, wait, you're in an empty room. Who are you talking to?",
+      "noteEn": "The Spanish and official English title attributes are preserved exactly. OCR followed the graph curves rather than semantic source order, fused decorative strokes into spurious 1 and 4S tokens, and split the printed wrap PA-/LABRA; the authored inventory restores one PALABRA and audits only the two axis arrows as exclusions."
     },
     "regions": [
       {
-        "id": "es-xkcd-hipsters:region-0001",
-        "labelEs": "FRECUENCIA CON",
+        "id": "es-xkcd-hipsters:y-axis-label",
+        "labelEs": "↑ FRECUENCIA CON LA QUE VEO",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 5.0505,
-          "y": 15.7895,
-          "width": 19.1919,
-          "height": 6.015
+          "x": 4,
+          "y": 7,
+          "width": 21.5,
+          "height": 21
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00001",
+            "id": "es-xkcd-hipsters:y-axis-label:w01",
             "text": "FRECUENCIA",
             "normalized": "frecuencia",
             "bounds": [
@@ -66,15 +61,15 @@
                 "x": 5.0505,
                 "y": 15.7895,
                 "width": 13.8047,
-                "height": 6.015
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00001-4ea54ff7"
+              "word-frecuencia"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00002",
+            "id": "es-xkcd-hipsters:y-axis-label:w02",
             "text": "CON",
             "normalized": "con",
             "bounds": [
@@ -82,40 +77,16 @@
                 "x": 19.1919,
                 "y": 15.7895,
                 "width": 5.0505,
-                "height": 6.015
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00002-8dced4af"
+              "word-con",
+              "grammar-preposition-article-que-relative"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00001-4ea54ff7",
-          "word-auto-es-xkcd-hipsters-00002-8dced4af"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0002",
-        "labelEs": "LA QUE VEO...",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6.0378,
-          "y": 20.7592,
-          "width": 14.8603,
-          "height": 6.602
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-hipsters:word-00003",
+            "id": "es-xkcd-hipsters:y-axis-label:w03",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -127,11 +98,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00003-65667b51"
+              "word-la--relative-article",
+              "grammar-preposition-article-que-relative"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00004",
+            "id": "es-xkcd-hipsters:y-axis-label:w04",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -143,11 +115,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00004-60ba6511"
+              "word-que--relative",
+              "grammar-preposition-article-que-relative"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00005",
+            "id": "es-xkcd-hipsters:y-axis-label:w05",
             "text": "VEO",
             "normalized": "veo",
             "bounds": [
@@ -159,94 +132,62 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00005-41655579"
+              "word-veo"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00003-65667b51",
-          "word-auto-es-xkcd-hipsters-00004-60ba6511",
-          "word-auto-es-xkcd-hipsters-00005-41655579"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0003",
-        "labelEs": "QUEJAS SOBRE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 24.2424,
-          "y": 36.8421,
-          "width": 16.1616,
-          "height": 6.015
-        },
-        "words": [
+        "excludedUnits": [
           {
-            "id": "es-xkcd-hipsters:word-00006",
-            "text": "QUEJAS",
-            "normalized": "quejas",
+            "id": "es-xkcd-hipsters:y-axis-label:x01",
+            "text": "↑",
+            "reason": "symbol",
+            "rationale": "The arrow is a graph-axis symbol, not Spanish lexical vocabulary.",
             "bounds": [
               {
-                "x": 24.2424,
-                "y": 36.8421,
-                "width": 8.4175,
-                "height": 6.015
+                "x": 4.2,
+                "y": 7.2,
+                "width": 2.1,
+                "height": 7.8
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00006-e402352c"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00007",
-            "text": "SOBRE",
-            "normalized": "sobre",
-            "bounds": [
-              {
-                "x": 32.9966,
-                "y": 36.8421,
-                "width": 7.4074,
-                "height": 6.015
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00007-9cc609b6"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00006-e402352c",
-          "word-auto-es-xkcd-hipsters-00007-9cc609b6"
+        "applications": [
+          {
+            "id": "es-xkcd-hipsters:y-axis-label:app-relative",
+            "cardId": "grammar-preposition-article-que-relative",
+            "participantWordIds": [
+              "es-xkcd-hipsters:y-axis-label:w02",
+              "es-xkcd-hipsters:y-axis-label:w03",
+              "es-xkcd-hipsters:y-axis-label:w04"
+            ],
+            "exampleEs": "CON LA QUE",
+            "explanationEn": "Con supplies ‘with,’ while la que refers back to the feminine noun frecuencia."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-frecuencia",
+          "word-con",
+          "grammar-preposition-article-que-relative",
+          "word-la--relative-article",
+          "word-que--relative",
+          "word-veo"
+        ]
       },
       {
-        "id": "es-xkcd-hipsters:region-0004",
+        "id": "es-xkcd-hipsters:curve-hipsters",
         "labelEs": "HIPSTERS",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 6.3973,
-          "y": 40.6015,
-          "width": 11.4478,
-          "height": 6.7669
+          "x": 5.5,
+          "y": 39.5,
+          "width": 13,
+          "height": 9.5
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00008",
+            "id": "es-xkcd-hipsters:curve-hipsters:w01",
             "text": "HIPSTERS",
             "normalized": "hipsters",
             "bounds": [
@@ -258,35 +199,65 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00008-13f56e59"
+              "word-hipsters",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-hipsters-00008-13f56e59"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0004",
-          "ocrConfidence": 0.5
-        }
+          "word-hipsters",
+          "concept-hipster-meta-complaint-frequency-graph"
+        ]
       },
       {
-        "id": "es-xkcd-hipsters:region-0005",
-        "labelEs": "HIPSTERS",
+        "id": "es-xkcd-hipsters:curve-complaints",
+        "labelEs": "QUEJAS SOBRE HIPSTERS",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 26.5499,
-          "y": 41.6117,
-          "width": 11.2099,
-          "height": 7.0022
+          "x": 23.5,
+          "y": 35.8,
+          "width": 17.5,
+          "height": 13
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00009",
+            "id": "es-xkcd-hipsters:curve-complaints:w01",
+            "text": "QUEJAS",
+            "normalized": "quejas",
+            "bounds": [
+              {
+                "x": 24.2424,
+                "y": 36.8421,
+                "width": 8.4175,
+                "height": 4.6
+              }
+            ],
+            "cardIds": [
+              "word-quejas",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-complaints:w02",
+            "text": "SOBRE",
+            "normalized": "sobre",
+            "bounds": [
+              {
+                "x": 32.9966,
+                "y": 36.8421,
+                "width": 7.4074,
+                "height": 4.6
+              }
+            ],
+            "cardIds": [
+              "word-sobre--about"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-complaints:w03",
             "text": "HIPSTERS",
             "normalized": "hipsters",
             "bounds": [
@@ -298,35 +269,34 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00009-d5d6c017"
+              "word-hipsters",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-hipsters-00009-d5d6c017"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0005",
-          "ocrConfidence": 0.5
-        }
+          "word-quejas",
+          "concept-hipster-meta-complaint-frequency-graph",
+          "word-sobre--about",
+          "word-hipsters"
+        ]
       },
       {
-        "id": "es-xkcd-hipsters:region-0006",
-        "labelEs": "QUEJAS SOBRE EL",
+        "id": "es-xkcd-hipsters:curve-word-complaints",
+        "labelEs": "QUEJAS SOBRE EL CONTINUO USO Y ABUSO DE LA PALABRA HIPSTER",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 39.7306,
-          "y": 51.1278,
-          "width": 16.4983,
-          "height": 5.2632
+          "x": 35.5,
+          "y": 50.4,
+          "width": 21.5,
+          "height": 22
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00010",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w01",
             "text": "QUEJAS",
             "normalized": "quejas",
             "bounds": [
@@ -338,11 +308,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00010-3b619abe"
+              "word-quejas",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00011",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w02",
             "text": "SOBRE",
             "normalized": "sobre",
             "bounds": [
@@ -354,11 +325,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00011-4deba54c"
+              "word-sobre--about"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00012",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w03",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -370,145 +341,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00012-6c17ca43"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00010-3b619abe",
-          "word-auto-es-xkcd-hipsters-00011-4deba54c",
-          "word-auto-es-xkcd-hipsters-00012-6c17ca43"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0007",
-        "labelEs": "QUEJAS DE QUE TODO NIVEL",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 60.2694,
-          "y": 55.6391,
-          "width": 25.5892,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00013",
-            "text": "QUEJAS",
-            "normalized": "quejas",
-            "bounds": [
-              {
-                "x": 60.2694,
-                "y": 55.6391,
-                "width": 7.5758,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00013-cc6ce13e"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00014",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 68.0976,
-                "y": 55.6391,
-                "width": 2.5253,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00014-9a484652"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00015",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 70.8754,
-                "y": 55.6391,
-                "width": 4.2929,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00015-fda9c269"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00016",
-            "text": "TODO",
-            "normalized": "todo",
-            "bounds": [
-              {
-                "x": 75.4209,
-                "y": 55.6391,
-                "width": 5.0505,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00016-d002d0af"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00017",
-            "text": "NIVEL",
-            "normalized": "nivel",
-            "bounds": [
-              {
-                "x": 80.7239,
-                "y": 55.6391,
-                "width": 5.1347,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00017-f35e0298"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00013-cc6ce13e",
-          "word-auto-es-xkcd-hipsters-00014-9a484652",
-          "word-auto-es-xkcd-hipsters-00015-fda9c269",
-          "word-auto-es-xkcd-hipsters-00016-d002d0af",
-          "word-auto-es-xkcd-hipsters-00017-f35e0298"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0008",
-        "labelEs": "CONTINUO USO Y",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 38.7205,
-          "y": 56.391,
-          "width": 15.4882,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00018",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w04",
             "text": "CONTINUO",
             "normalized": "continuo",
             "bounds": [
@@ -520,11 +357,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00018-e232621c"
+              "word-continuo--continual",
+              "grammar-adjective-gender-agreement",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00019",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w05",
             "text": "USO",
             "normalized": "uso",
             "bounds": [
@@ -536,11 +375,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00019-e25b916a"
+              "word-uso--noun",
+              "grammar-adjective-gender-agreement",
+              "phrase-uso-y-abuso-de",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00020",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w06",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -552,128 +394,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00020-300272c0"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00018-e232621c",
-          "word-auto-es-xkcd-hipsters-00019-e25b916a",
-          "word-auto-es-xkcd-hipsters-00020-300272c0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0009",
-        "labelEs": "DE META-OPINIÓN SOBRE LOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 59.2593,
-          "y": 60.1504,
-          "width": 27.2727,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00021",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 59.2593,
-                "y": 60.1504,
-                "width": 2.5253,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00021-cbbf9774"
+              "word-y",
+              "phrase-uso-y-abuso-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00022",
-            "text": "META-OPINIÓN",
-            "normalized": "meta-opinión",
-            "bounds": [
-              {
-                "x": 62.037,
-                "y": 60.1504,
-                "width": 13.8889,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00022-4af06fb6"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00023",
-            "text": "SOBRE",
-            "normalized": "sobre",
-            "bounds": [
-              {
-                "x": 76.1785,
-                "y": 60.1504,
-                "width": 6.0606,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00023-8c26a493"
-            ]
-          },
-          {
-            "id": "es-xkcd-hipsters:word-00024",
-            "text": "LOS",
-            "normalized": "los",
-            "bounds": [
-              {
-                "x": 82.4916,
-                "y": 60.1504,
-                "width": 4.0404,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00024-570a56a9"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00021-cbbf9774",
-          "word-auto-es-xkcd-hipsters-00022-4af06fb6",
-          "word-auto-es-xkcd-hipsters-00023-8c26a493",
-          "word-auto-es-xkcd-hipsters-00024-570a56a9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0010",
-        "labelEs": "ABUSO DE LA PA-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 37.7104,
-          "y": 60.9023,
-          "width": 16.4983,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00025",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w07",
             "text": "ABUSO",
             "normalized": "abuso",
             "bounds": [
@@ -681,15 +407,17 @@
                 "x": 37.7104,
                 "y": 60.9023,
                 "width": 6.3131,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00025-7a128bde"
+              "word-abuso",
+              "phrase-uso-y-abuso-de",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00026",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w08",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -697,15 +425,16 @@
                 "x": 44.2761,
                 "y": 60.9023,
                 "width": 2.7778,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00026-0fcb9dda"
+              "word-de--of",
+              "phrase-uso-y-abuso-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00027",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w09",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -713,101 +442,25 @@
                 "x": 47.3064,
                 "y": 60.9023,
                 "width": 2.5253,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00027-e812407b"
+              "word-la--article",
+              "phrase-uso-y-abuso-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00028",
-            "text": "PA",
-            "normalized": "pa",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w10",
+            "text": "PALABRA",
+            "normalized": "palabra",
             "bounds": [
               {
                 "x": 50.0842,
                 "y": 60.9023,
                 "width": 4.1246,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00028-e91e6a96"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00025-7a128bde",
-          "word-auto-es-xkcd-hipsters-00026-0fcb9dda",
-          "word-auto-es-xkcd-hipsters-00027-e812407b",
-          "word-auto-es-xkcd-hipsters-00028-e91e6a96"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0010",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0011",
-        "labelEs": "GRÁFICAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 88.5323,
-          "y": 63.6927,
-          "width": 9.4673,
-          "height": 4.9453
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00029",
-            "text": "GRÁFICAS",
-            "normalized": "gráficas",
-            "bounds": [
-              {
-                "x": 88.5323,
-                "y": 63.6927,
-                "width": 9.4673,
-                "height": 4.9453
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00029-bbfc1f01"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00029-bbfc1f01"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0012",
-        "labelEs": "LABRA \"HIPSTER\"",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 36.7003,
-          "y": 65.4135,
-          "width": 15.8249,
-          "height": 6.015
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00030",
-            "text": "LABRA",
-            "normalized": "labra",
-            "bounds": [
+                "height": 4.5
+              },
               {
                 "x": 36.7003,
                 "y": 65.4135,
@@ -816,11 +469,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00030-1c171c59"
+              "word-palabra",
+              "phrase-uso-y-abuso-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00031",
+            "id": "es-xkcd-hipsters:curve-word-complaints:w11",
             "text": "HIPSTER",
             "normalized": "hipster",
             "bounds": [
@@ -832,36 +486,235 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00031-5d6f4d54"
+              "word-hipster",
+              "phrase-uso-y-abuso-de",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00030-1c171c59",
-          "word-auto-es-xkcd-hipsters-00031-5d6f4d54"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-hipsters:curve-word-complaints:app-continuo-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-word-complaints:w04",
+              "es-xkcd-hipsters:curve-word-complaints:w05"
+            ],
+            "exampleEs": "CONTINUO USO",
+            "explanationEn": "Continuo takes masculine singular -o because it describes the masculine singular noun uso."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-word-complaints:app-uso-abuso",
+            "cardId": "phrase-uso-y-abuso-de",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-word-complaints:w05",
+              "es-xkcd-hipsters:curve-word-complaints:w06",
+              "es-xkcd-hipsters:curve-word-complaints:w07",
+              "es-xkcd-hipsters:curve-word-complaints:w08",
+              "es-xkcd-hipsters:curve-word-complaints:w09",
+              "es-xkcd-hipsters:curve-word-complaints:w10",
+              "es-xkcd-hipsters:curve-word-complaints:w11"
+            ],
+            "exampleEs": "USO Y ABUSO DE LA PALABRA HIPSTER",
+            "explanationEn": "Uso y abuso forms the conventional pair, and de introduces the particular word whose use is being criticized."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0012",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-quejas",
+          "concept-hipster-meta-complaint-frequency-graph",
+          "word-sobre--about",
+          "word-el--article",
+          "word-continuo--continual",
+          "grammar-adjective-gender-agreement",
+          "word-uso--noun",
+          "phrase-uso-y-abuso-de",
+          "word-y",
+          "word-abuso",
+          "word-de--of",
+          "word-la--article",
+          "word-palabra",
+          "word-hipster"
+        ]
       },
       {
-        "id": "es-xkcd-hipsters:region-0013",
-        "labelEs": "HIPSTERS SUPONE EL MISMO",
+        "id": "es-xkcd-hipsters:curve-meta-complaints",
+        "labelEs": "QUEJAS DE QUE TODO NIVEL DE META-OPINIÓN SOBRE LOS HIPSTERS SUPONE EL MISMO TIPO DE OMBLIGUISMO PETARDO POR PARTE DE GENTE INSEGURA",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 58.2492,
-          "y": 65.4135,
-          "width": 27.2727,
-          "height": 4.5113
+          "x": 55.5,
+          "y": 54.8,
+          "width": 31.5,
+          "height": 31.5
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00032",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w01",
+            "text": "QUEJAS",
+            "normalized": "quejas",
+            "bounds": [
+              {
+                "x": 60.2694,
+                "y": 55.6391,
+                "width": 7.5758,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-quejas",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w02",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 68.0976,
+                "y": 55.6391,
+                "width": 2.5253,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-de--queja-content"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w03",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 70.8754,
+                "y": 55.6391,
+                "width": 4.2929,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-que--clause-link"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w04",
+            "text": "TODO",
+            "normalized": "todo",
+            "bounds": [
+              {
+                "x": 75.4209,
+                "y": 55.6391,
+                "width": 5.0505,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-todo--every-before-singular"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w05",
+            "text": "NIVEL",
+            "normalized": "nivel",
+            "bounds": [
+              {
+                "x": 80.7239,
+                "y": 55.6391,
+                "width": 5.1347,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-nivel--degree",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w06",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 59.2593,
+                "y": 60.1504,
+                "width": 2.5253,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-de--of"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w07a",
+            "text": "META",
+            "normalized": "meta",
+            "bounds": [
+              {
+                "x": 62.037,
+                "y": 60.1504,
+                "width": 4.72,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-meta--prefix",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w07b",
+            "text": "OPINIÓN",
+            "normalized": "opinión",
+            "bounds": [
+              {
+                "x": 67.33,
+                "y": 60.1504,
+                "width": 8.596,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-opinión",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w08",
+            "text": "SOBRE",
+            "normalized": "sobre",
+            "bounds": [
+              {
+                "x": 76.1785,
+                "y": 60.1504,
+                "width": 6.0606,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-sobre--about"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w09",
+            "text": "LOS",
+            "normalized": "los",
+            "bounds": [
+              {
+                "x": 82.4916,
+                "y": 60.1504,
+                "width": 4.0404,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-los"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w10",
             "text": "HIPSTERS",
             "normalized": "hipsters",
             "bounds": [
@@ -873,11 +726,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00032-0eee8832"
+              "word-hipsters",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00033",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w11",
             "text": "SUPONE",
             "normalized": "supone",
             "bounds": [
@@ -889,11 +743,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00033-e54b48ab"
+              "word-supone--amounts-to"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00034",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w12",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -905,11 +759,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00034-8af238cc"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00035",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w13",
             "text": "MISMO",
             "normalized": "mismo",
             "bounds": [
@@ -921,95 +775,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00035-84b2d7fb"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00032-0eee8832",
-          "word-auto-es-xkcd-hipsters-00033-e54b48ab",
-          "word-auto-es-xkcd-hipsters-00034-8af238cc",
-          "word-auto-es-xkcd-hipsters-00035-84b2d7fb"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0014",
-        "labelEs": "QUE LO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 87.5421,
-          "y": 69.1729,
-          "width": 7.0707,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00036",
-            "text": "QUE",
-            "normalized": "que",
-            "bounds": [
-              {
-                "x": 87.5421,
-                "y": 69.1729,
-                "width": 4.0404,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00036-f6c3ce4b"
+              "word-mismo"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00037",
-            "text": "LO",
-            "normalized": "lo",
-            "bounds": [
-              {
-                "x": 91.835,
-                "y": 69.1729,
-                "width": 2.7778,
-                "height": 4.5113
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00037-827f836c"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00036-f6c3ce4b",
-          "word-auto-es-xkcd-hipsters-00037-827f836c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0014",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0015",
-        "labelEs": "TIPO DE OMBLIGUISMO 1",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.9125,
-          "y": 69.9248,
-          "width": 23.2323,
-          "height": 6.7669
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00038",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w14",
             "text": "TIPO",
             "normalized": "tipo",
             "bounds": [
@@ -1017,15 +787,15 @@
                 "x": 57.9125,
                 "y": 69.9248,
                 "width": 3.7879,
-                "height": 6.7669
+                "height": 5.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00038-7461e274"
+              "word-tipo--kind"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00039",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w15",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -1033,15 +803,15 @@
                 "x": 62.0791,
                 "y": 69.9248,
                 "width": 2.6515,
-                "height": 6.7669
+                "height": 5.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00039-570b8d46"
+              "word-de--noun-classifier"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00040",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w16",
             "text": "OMBLIGUISMO",
             "normalized": "ombliguismo",
             "bounds": [
@@ -1049,81 +819,18 @@
                 "x": 65.1094,
                 "y": 69.9248,
                 "width": 13.2576,
-                "height": 6.7669
+                "height": 5.15
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00040-6f486a5b"
+              "word-ombliguismo",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00038-7461e274",
-          "word-auto-es-xkcd-hipsters-00039-570b8d46",
-          "word-auto-es-xkcd-hipsters-00040-6f486a5b"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0015",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0016",
-        "labelEs": "EMPEORAN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 86.1953,
-          "y": 73.6842,
-          "width": 10.4377,
-          "height": 5.2632
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-hipsters:word-00041",
-            "text": "EMPEORAN",
-            "normalized": "empeoran",
-            "bounds": [
-              {
-                "x": 86.1953,
-                "y": 73.6842,
-                "width": 10.4377,
-                "height": 5.2632
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00041-c2e52d92"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00041-c2e52d92"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0016",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0017",
-        "labelEs": "PETARDO POR PARTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 57.5758,
-          "y": 75.188,
-          "width": 19.1919,
-          "height": 4.5113
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00042",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w17",
             "text": "PETARDO",
             "normalized": "petardo",
             "bounds": [
@@ -1131,15 +838,18 @@
                 "x": 57.5758,
                 "y": 75.188,
                 "width": 8.3333,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00042-6b2ca3c8"
+              "word-petardo--annoying-adjective",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00043",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w18",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -1147,15 +857,16 @@
                 "x": 66.1616,
                 "y": 75.188,
                 "width": 3.7879,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00043-04de0b01"
+              "word-por--por-parte-de",
+              "phrase-por-parte-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00044",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w19",
             "text": "PARTE",
             "normalized": "parte",
             "bounds": [
@@ -1163,98 +874,16 @@
                 "x": 70.202,
                 "y": 75.188,
                 "width": 6.5657,
-                "height": 4.5113
+                "height": 4.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00044-2c47d4ae"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00042-6b2ca3c8",
-          "word-auto-es-xkcd-hipsters-00043-04de0b01",
-          "word-auto-es-xkcd-hipsters-00044-2c47d4ae"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0017",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0018",
-        "labelEs": "TODO 4S",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 85.8586,
-          "y": 78.9474,
-          "width": 10.101,
-          "height": 6.015
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00045",
-            "text": "TODO",
-            "normalized": "todo",
-            "bounds": [
-              {
-                "x": 85.8586,
-                "y": 78.9474,
-                "width": 5.7239,
-                "height": 6.015
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00045-86a51fd7"
+              "word-parte--por-parte-de",
+              "phrase-por-parte-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00046",
-            "text": "4S",
-            "normalized": "4s",
-            "bounds": [
-              {
-                "x": 91.9192,
-                "y": 78.9474,
-                "width": 4.0404,
-                "height": 6.015
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hipsters-00046-305e30cf"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00045-86a51fd7",
-          "word-auto-es-xkcd-hipsters-00046-305e30cf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0018",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0019",
-        "labelEs": "DE GENTE INSEGURA.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 56.5657,
-          "y": 79.6992,
-          "width": 19.5286,
-          "height": 6.015
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hipsters:word-00047",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w20",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -1266,11 +895,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00047-36ecbda0"
+              "word-de--of",
+              "phrase-por-parte-de"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00048",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w21",
             "text": "GENTE",
             "normalized": "gente",
             "bounds": [
@@ -1282,11 +912,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00048-1ca43b4e"
+              "word-gente",
+              "phrase-por-parte-de",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement"
             ]
           },
           {
-            "id": "es-xkcd-hipsters:word-00049",
+            "id": "es-xkcd-hipsters:curve-meta-complaints:w22",
             "text": "INSEGURA",
             "normalized": "insegura",
             "bounds": [
@@ -1298,37 +931,247 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00049-20c64c43"
+              "word-insegura",
+              "grammar-descriptive-adjective-after-noun",
+              "grammar-adjective-gender-agreement",
+              "concept-hipster-meta-complaint-frequency-graph"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00047-36ecbda0",
-          "word-auto-es-xkcd-hipsters-00048-1ca43b4e",
-          "word-auto-es-xkcd-hipsters-00049-20c64c43"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:app-ombliguismo-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-meta-complaints:w16",
+              "es-xkcd-hipsters:curve-meta-complaints:w17"
+            ],
+            "exampleEs": "OMBLIGUISMO PETARDO",
+            "explanationEn": "Petardo follows ombliguismo and describes the navel-gazing as tiresome."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:app-ombliguismo-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-meta-complaints:w16",
+              "es-xkcd-hipsters:curve-meta-complaints:w17"
+            ],
+            "exampleEs": "OMBLIGUISMO PETARDO",
+            "explanationEn": "Petardo takes masculine singular form to match ombliguismo."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:app-por-parte",
+            "cardId": "phrase-por-parte-de",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-meta-complaints:w18",
+              "es-xkcd-hipsters:curve-meta-complaints:w19",
+              "es-xkcd-hipsters:curve-meta-complaints:w20",
+              "es-xkcd-hipsters:curve-meta-complaints:w21"
+            ],
+            "exampleEs": "POR PARTE DE GENTE",
+            "explanationEn": "Por parte de introduces gente as the source responsible for the attitude."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:app-gente-order",
+            "cardId": "grammar-descriptive-adjective-after-noun",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-meta-complaints:w21",
+              "es-xkcd-hipsters:curve-meta-complaints:w22"
+            ],
+            "exampleEs": "GENTE INSEGURA",
+            "explanationEn": "Insegura follows gente and describes those people."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-meta-complaints:app-gente-agreement",
+            "cardId": "grammar-adjective-gender-agreement",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-meta-complaints:w21",
+              "es-xkcd-hipsters:curve-meta-complaints:w22"
+            ],
+            "exampleEs": "GENTE INSEGURA",
+            "explanationEn": "Insegura is feminine singular because the collective noun gente is feminine singular."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0019",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-quejas",
+          "concept-hipster-meta-complaint-frequency-graph",
+          "word-de--queja-content",
+          "word-que--clause-link",
+          "word-todo--every-before-singular",
+          "word-nivel--degree",
+          "word-de--of",
+          "word-meta--prefix",
+          "word-opinión",
+          "word-sobre--about",
+          "word-los",
+          "word-hipsters",
+          "word-supone--amounts-to",
+          "word-el--article",
+          "word-mismo",
+          "word-tipo--kind",
+          "word-de--noun-classifier",
+          "word-ombliguismo",
+          "grammar-descriptive-adjective-after-noun",
+          "grammar-adjective-gender-agreement",
+          "word-petardo--annoying-adjective",
+          "word-por--por-parte-de",
+          "phrase-por-parte-de",
+          "word-parte--por-parte-de",
+          "word-gente",
+          "word-insegura"
+        ]
       },
       {
-        "id": "es-xkcd-hipsters:region-0020",
-        "labelEs": "TIEMPO →",
+        "id": "es-xkcd-hipsters:curve-graphs",
+        "labelEs": "GRÁFICAS QUE LO EMPEORAN TODO",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 4.7005,
-          "y": 87.8221,
-          "width": 13.1578,
-          "height": 6.3107
+          "x": 85,
+          "y": 62.5,
+          "width": 14,
+          "height": 23
         },
         "words": [
           {
-            "id": "es-xkcd-hipsters:word-00050",
+            "id": "es-xkcd-hipsters:curve-graphs:w01",
+            "text": "GRÁFICAS",
+            "normalized": "gráficas",
+            "bounds": [
+              {
+                "x": 88.5323,
+                "y": 63.6927,
+                "width": 9.4673,
+                "height": 4.9453
+              }
+            ],
+            "cardIds": [
+              "word-gráficas",
+              "grammar-relative-que",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:w02",
+            "text": "QUE",
+            "normalized": "que",
+            "bounds": [
+              {
+                "x": 87.5421,
+                "y": 69.1729,
+                "width": 4.0404,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-que--relative",
+              "grammar-relative-que"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:w03",
+            "text": "LO",
+            "normalized": "lo",
+            "bounds": [
+              {
+                "x": 91.835,
+                "y": 69.1729,
+                "width": 2.7778,
+                "height": 4.5113
+              }
+            ],
+            "cardIds": [
+              "word-lo--object-pronoun",
+              "grammar-direct-object-pronoun-before-finite-verb"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:w04",
+            "text": "EMPEORAN",
+            "normalized": "empeoran",
+            "bounds": [
+              {
+                "x": 86.1953,
+                "y": 73.6842,
+                "width": 10.4377,
+                "height": 5.2632
+              }
+            ],
+            "cardIds": [
+              "word-empeoran",
+              "grammar-relative-que",
+              "grammar-direct-object-pronoun-before-finite-verb",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:w05",
+            "text": "TODO",
+            "normalized": "todo",
+            "bounds": [
+              {
+                "x": 85.8586,
+                "y": 78.9474,
+                "width": 5.7239,
+                "height": 6.015
+              }
+            ],
+            "cardIds": [
+              "word-todo",
+              "concept-hipster-meta-complaint-frequency-graph"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:app-relative",
+            "cardId": "grammar-relative-que",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-graphs:w01",
+              "es-xkcd-hipsters:curve-graphs:w02",
+              "es-xkcd-hipsters:curve-graphs:w04"
+            ],
+            "exampleEs": "GRÁFICAS QUE LO EMPEORAN",
+            "explanationEn": "Que refers back to gráficas, and empeoran states what those graphs do; lo supplies the affected situation between them."
+          },
+          {
+            "id": "es-xkcd-hipsters:curve-graphs:app-object",
+            "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+            "participantWordIds": [
+              "es-xkcd-hipsters:curve-graphs:w03",
+              "es-xkcd-hipsters:curve-graphs:w04"
+            ],
+            "exampleEs": "LO EMPEORAN",
+            "explanationEn": "Lo stands before the changed verb empeoran and represents the situation being made worse."
+          }
+        ],
+        "cardIds": [
+          "word-gráficas",
+          "grammar-relative-que",
+          "concept-hipster-meta-complaint-frequency-graph",
+          "word-que--relative",
+          "word-lo--object-pronoun",
+          "grammar-direct-object-pronoun-before-finite-verb",
+          "word-empeoran",
+          "word-todo"
+        ]
+      },
+      {
+        "id": "es-xkcd-hipsters:x-axis-labels",
+        "labelEs": "TIEMPO → ACTUALIDAD",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 4,
+          "y": 87,
+          "width": 94.5,
+          "height": 8.5
+        },
+        "words": [
+          {
+            "id": "es-xkcd-hipsters:x-axis-labels:w01",
             "text": "TIEMPO",
             "normalized": "tiempo",
             "bounds": [
@@ -1340,35 +1183,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00050-6a81e3aa"
+              "word-tiempo"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hipsters-00050-6a81e3aa"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0020",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hipsters:region-0021",
-        "labelEs": "ACTUALIDAD",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 84.5118,
-          "y": 88.7218,
-          "width": 13.468,
-          "height": 6.015
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-hipsters:word-00051",
+            "id": "es-xkcd-hipsters:x-axis-labels:w02",
             "text": "ACTUALIDAD",
             "normalized": "actualidad",
             "bounds": [
@@ -1380,1311 +1199,1125 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hipsters-00051-20642c4a"
+              "word-actualidad"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-hipsters:x-axis-labels:x01",
+            "text": "→",
+            "reason": "symbol",
+            "rationale": "The arrow shows the graph's time direction and is not Spanish lexical vocabulary.",
+            "bounds": [
+              {
+                "x": 14.1,
+                "y": 89.6,
+                "width": 4.1,
+                "height": 2.7
+              }
             ]
           }
         ],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-hipsters-00051-20642c4a"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hipsters:ocr-line-0021",
-          "ocrConfidence": 1
-        }
+          "word-tiempo",
+          "word-actualidad"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-hipsters-00001-4ea54ff7",
-      "word-auto-es-xkcd-hipsters-00002-8dced4af",
-      "word-auto-es-xkcd-hipsters-00003-65667b51",
-      "word-auto-es-xkcd-hipsters-00004-60ba6511",
-      "word-auto-es-xkcd-hipsters-00005-41655579",
-      "word-auto-es-xkcd-hipsters-00006-e402352c",
-      "word-auto-es-xkcd-hipsters-00007-9cc609b6",
-      "word-auto-es-xkcd-hipsters-00008-13f56e59",
-      "word-auto-es-xkcd-hipsters-00009-d5d6c017",
-      "word-auto-es-xkcd-hipsters-00010-3b619abe",
-      "word-auto-es-xkcd-hipsters-00011-4deba54c",
-      "word-auto-es-xkcd-hipsters-00012-6c17ca43",
-      "word-auto-es-xkcd-hipsters-00013-cc6ce13e",
-      "word-auto-es-xkcd-hipsters-00014-9a484652",
-      "word-auto-es-xkcd-hipsters-00015-fda9c269",
-      "word-auto-es-xkcd-hipsters-00016-d002d0af",
-      "word-auto-es-xkcd-hipsters-00017-f35e0298",
-      "word-auto-es-xkcd-hipsters-00018-e232621c",
-      "word-auto-es-xkcd-hipsters-00019-e25b916a",
-      "word-auto-es-xkcd-hipsters-00020-300272c0",
-      "word-auto-es-xkcd-hipsters-00021-cbbf9774",
-      "word-auto-es-xkcd-hipsters-00022-4af06fb6",
-      "word-auto-es-xkcd-hipsters-00023-8c26a493",
-      "word-auto-es-xkcd-hipsters-00024-570a56a9",
-      "word-auto-es-xkcd-hipsters-00025-7a128bde",
-      "word-auto-es-xkcd-hipsters-00026-0fcb9dda",
-      "word-auto-es-xkcd-hipsters-00027-e812407b",
-      "word-auto-es-xkcd-hipsters-00028-e91e6a96",
-      "word-auto-es-xkcd-hipsters-00029-bbfc1f01",
-      "word-auto-es-xkcd-hipsters-00030-1c171c59",
-      "word-auto-es-xkcd-hipsters-00031-5d6f4d54",
-      "word-auto-es-xkcd-hipsters-00032-0eee8832",
-      "word-auto-es-xkcd-hipsters-00033-e54b48ab",
-      "word-auto-es-xkcd-hipsters-00034-8af238cc",
-      "word-auto-es-xkcd-hipsters-00035-84b2d7fb",
-      "word-auto-es-xkcd-hipsters-00036-f6c3ce4b",
-      "word-auto-es-xkcd-hipsters-00037-827f836c",
-      "word-auto-es-xkcd-hipsters-00038-7461e274",
-      "word-auto-es-xkcd-hipsters-00039-570b8d46",
-      "word-auto-es-xkcd-hipsters-00040-6f486a5b",
-      "word-auto-es-xkcd-hipsters-00041-c2e52d92",
-      "word-auto-es-xkcd-hipsters-00042-6b2ca3c8",
-      "word-auto-es-xkcd-hipsters-00043-04de0b01",
-      "word-auto-es-xkcd-hipsters-00044-2c47d4ae",
-      "word-auto-es-xkcd-hipsters-00045-86a51fd7",
-      "word-auto-es-xkcd-hipsters-00046-305e30cf",
-      "word-auto-es-xkcd-hipsters-00047-36ecbda0",
-      "word-auto-es-xkcd-hipsters-00048-1ca43b4e",
-      "word-auto-es-xkcd-hipsters-00049-20c64c43",
-      "word-auto-es-xkcd-hipsters-00050-6a81e3aa",
-      "word-auto-es-xkcd-hipsters-00051-20642c4a"
+      "word-frecuencia",
+      "word-con",
+      "grammar-preposition-article-que-relative",
+      "word-la--relative-article",
+      "word-que--relative",
+      "word-veo",
+      "word-hipsters",
+      "concept-hipster-meta-complaint-frequency-graph",
+      "word-quejas",
+      "word-sobre--about",
+      "word-el--article",
+      "word-continuo--continual",
+      "grammar-adjective-gender-agreement",
+      "word-uso--noun",
+      "phrase-uso-y-abuso-de",
+      "word-y",
+      "word-abuso",
+      "word-de--of",
+      "word-la--article",
+      "word-palabra",
+      "word-hipster",
+      "word-de--queja-content",
+      "word-que--clause-link",
+      "word-todo--every-before-singular",
+      "word-nivel--degree",
+      "word-meta--prefix",
+      "word-opinión",
+      "word-los",
+      "word-supone--amounts-to",
+      "word-mismo",
+      "word-tipo--kind",
+      "word-de--noun-classifier",
+      "word-ombliguismo",
+      "grammar-descriptive-adjective-after-noun",
+      "word-petardo--annoying-adjective",
+      "word-por--por-parte-de",
+      "phrase-por-parte-de",
+      "word-parte--por-parte-de",
+      "word-gente",
+      "word-insegura",
+      "word-gráficas",
+      "grammar-relative-que",
+      "word-lo--object-pronoun",
+      "grammar-direct-object-pronoun-before-finite-verb",
+      "word-empeoran",
+      "word-todo",
+      "word-tiempo",
+      "word-actualidad"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9231,
-      "lowConfidenceTokenCount": 8,
-      "rawOcrTokenCount": 52,
-      "filteredNonLatinTokenCount": 1,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-hipsters-00001-4ea54ff7",
+      "id": "word-frecuencia",
       "kind": "word",
       "promptEs": "frecuencia",
-      "answerEn": "Meaning needs review",
+      "answerEn": "frequency; how often something happens",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "frequency",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00001",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5f010769bb205ba94e8a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00002-8dced4af",
+      "id": "word-con",
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00002",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1143da2bc54c495c4be3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00003-65667b51",
+      "id": "grammar-preposition-article-que-relative",
+      "kind": "grammar",
+      "promptEs": "preposición + el/la/los/las que",
+      "questionEn": "How do you say forms such as “in which,” “with whom,” or “for whom” when referring back to a person or thing?",
+      "answerEn": "Put the needed preposition before el que, la que, los que, or las que, matching the earlier person or thing.",
+      "noteEn": "A preposition is a short relationship word such as en (“in”), con (“with”), or para (“for”). Choose el, la, los, or las to match the gender and number of the person or thing being described; que itself does not change. English may use “which” for a thing or “who” or “whom” for a person.",
+      "example": {
+        "es": "Esta es la silla en la que me siento.",
+        "en": "This is the chair that I sit in."
+      },
+      "tags": [
+        "B1",
+        "grammar",
+        "relative clause",
+        "preposition"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-la--relative-article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the feminine article in la que; helps mean which, who, or whom",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "relative clause",
+        "article"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00003",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00004-60ba6511",
+      "id": "word-que--relative",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "who; that; which (relative pronoun)",
+      "noteEn": "Que connects a noun to information describing it. Depending on the noun, English translates it as “who,” “that,” or “which.”",
+      "example": {
+        "es": "La persona que llamó es mi amiga.",
+        "en": "The person who called is my friend."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00004",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00005-41655579",
+      "id": "word-veo",
       "kind": "word",
       "promptEs": "veo",
       "answerEn": "I see",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00005",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-61b77e47289aa9c2436a",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00006-e402352c",
-      "kind": "word",
-      "promptEs": "quejas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00006",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-85ef090f0b5b7fc31738",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00007-9cc609b6",
-      "kind": "word",
-      "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00007",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00008-13f56e59",
+      "id": "word-hipsters",
       "kind": "word",
       "promptEs": "hipsters",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "hipsters",
+      "noteEn": "Hipster is a loanword used in Spanish for someone associated with deliberately alternative, fashionable, or non-mainstream tastes. The plural keeps the English-looking spelling hipsters.",
+      "example": {
+        "es": "Ese barrio atrae a muchos hipsters.",
+        "en": "That neighborhood attracts many hipsters."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "loanword",
+        "subculture",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00008",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0004",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-d58d1d942751f5e84482",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00009-d5d6c017",
-      "kind": "word",
-      "promptEs": "hipsters",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "concept-hipster-meta-complaint-frequency-graph",
+      "kind": "concept",
+      "promptEs": "hipsters · quejas · meta-opinión · gráfica",
+      "questionEn": "What progression do the rising curves satirize?",
+      "answerEn": "Each later curve represents a more self-aware complaint about hipsters, ending with a graph that complains about the whole chain and thereby adds yet another level.",
+      "noteEn": "The chart moves from seeing hipsters, to complaints about them, to complaints about the repeated word, and then to complaints that all such meta-commentary is the same insecure navel-gazing. The final curve says that graphs make everything worse, but that graph is itself another example. The similarly rising curves visualize an escalating loop of ironic detachment.",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "concept",
+        "meta-commentary",
+        "graph",
+        "joke"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00009",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0005",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-d58d1d942751f5e84482",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00010-3b619abe",
+      "id": "word-quejas",
       "kind": "word",
       "promptEs": "quejas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "complaints",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "opinion",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00010",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-85ef090f0b5b7fc31738",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00011-4deba54c",
+      "id": "word-sobre--about",
       "kind": "word",
       "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "about; concerning",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "topic",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00011",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00012-6c17ca43",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00012",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00013-cc6ce13e",
-      "kind": "word",
-      "promptEs": "quejas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00013",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-85ef090f0b5b7fc31738",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00014-9a484652",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00014",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00015-fda9c269",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00015",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00016-d002d0af",
-      "kind": "word",
-      "promptEs": "todo",
-      "answerEn": "everything; all",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00016",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-602fae580f5863abfb31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00017-f35e0298",
-      "kind": "word",
-      "promptEs": "nivel",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00017",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-afa6cbf68e0274ddb0af",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00018-e232621c",
+      "id": "word-continuo--continual",
       "kind": "word",
       "promptEs": "continuo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "continual; repeated",
+      "noteEn": "Continuo describes something that keeps recurring or carries on. This adjective is written without an accent; continuó with an accent would be a past verb form.",
+      "example": {
+        "es": "El continuo ruido resulta molesto.",
+        "en": "The continual noise is annoying."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "frequency",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00018",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-217fbff6d4370d226fd6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00019-e25b916a",
+      "id": "grammar-adjective-gender-agreement",
+      "kind": "grammar",
+      "promptEs": "adjetivo que concuerda con masculino o femenino",
+      "questionEn": "How does a Spanish describing word change for a man, woman, or gendered noun?",
+      "answerEn": "Make the describing word match the gender and number of the person or thing it describes.",
+      "noteEn": "Many describing words ending in -o change to -a for a feminine singular person or noun: cansado becomes cansada. Plurals normally add -s. Some describing words have one form for both genders.",
+      "example": {
+        "es": "Pedro está cansado y Ana está cansada.",
+        "en": "Pedro is tired and Ana is tired."
+      },
+      "tags": [
+        "grammar",
+        "agreement",
+        "gender",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-frases-para-ligar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-uso--noun",
       "kind": "word",
       "promptEs": "uso",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "use; usage (noun)",
+      "noteEn": "Here uso names the act or amount of using something. The same spelling can also be a verb meaning “I use,” so the surrounding words determine which meaning applies.",
+      "example": {
+        "es": "El uso del teléfono está prohibido.",
+        "en": "Phone use is prohibited."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "polysemy",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00019",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9c5a2b2a6419710bedb8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-putas-conchas-azules",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00020-300272c0",
+      "id": "phrase-uso-y-abuso-de",
+      "kind": "phrase",
+      "promptEs": "uso y abuso de algo",
+      "questionEn": "How do you criticize both the use and excessive use of something?",
+      "answerEn": "Use uso y abuso de followed by the thing being used.",
+      "noteEn": "Uso is ordinary use, while abuso intensifies the idea to overuse or misuse. The two nouns form a conventional pairing, and de introduces their object.",
+      "example": {
+        "es": "El artículo analiza el uso y abuso de las estadísticas.",
+        "en": "The article analyzes the use and abuse of statistics."
+      },
+      "tags": [
+        "phrase",
+        "criticism",
+        "usage",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00020",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00021-cbbf9774",
+      "id": "word-abuso",
+      "kind": "word",
+      "promptEs": "abuso",
+      "answerEn": "overuse; abuse",
+      "noteEn": "With a word or expression, abuso can mean using it excessively until it becomes tiresome.",
+      "example": {
+        "es": "Criticaron el abuso de esa expresión.",
+        "en": "They criticized the overuse of that expression."
+      },
+      "tags": [
+        "word",
+        "usage",
+        "noun",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00021",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00022-4af06fb6",
+      "id": "word-la--article",
       "kind": "word",
-      "promptEs": "meta-opinión",
-      "answerEn": "Meaning needs review",
+      "promptEs": "la",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00022",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a829228066db6bcab025",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00023-8c26a493",
+      "id": "word-palabra",
       "kind": "word",
-      "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
+      "promptEs": "palabra",
+      "answerEn": "word",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00023",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00024-570a56a9",
+      "id": "word-hipster",
+      "kind": "word",
+      "promptEs": "hipster",
+      "answerEn": "hipster",
+      "noteEn": "Hipster is an English loanword used in Spanish for a person linked to deliberately alternative tastes or style.",
+      "example": {
+        "es": "La revista describe un estilo hipster.",
+        "en": "The magazine describes a hipster style."
+      },
+      "tags": [
+        "word",
+        "loanword",
+        "subculture",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--queja-content",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "that; about the fact that (after queja)",
+      "noteEn": "After queja, de can introduce the content of the complaint. English often uses ‘that’ rather than translating de separately.",
+      "example": {
+        "es": "Hubo quejas de que faltaba información.",
+        "en": "There were complaints that information was missing."
+      },
+      "tags": [
+        "word",
+        "preposition",
+        "complaint content",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--clause-link",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-todo--every-before-singular",
+      "kind": "word",
+      "promptEs": "todo",
+      "answerEn": "every; any (before a singular noun)",
+      "noteEn": "Before a singular noun without an article, todo can cover every instance of that kind. This differs from standalone todo, ‘everything.’",
+      "example": {
+        "es": "Todo nivel requiere práctica.",
+        "en": "Every level requires practice."
+      },
+      "tags": [
+        "word",
+        "determiner",
+        "generality",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-nivel--degree",
+      "kind": "word",
+      "promptEs": "nivel",
+      "answerEn": "level; layer or degree",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "viewpoint",
+        "degree"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-merlin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-meta--prefix",
+      "kind": "word",
+      "promptEs": "meta",
+      "answerEn": "meta-; about itself or a higher level of the same subject",
+      "noteEn": "The prefix meta- forms words for something that comments on, describes, or operates at a level above the original thing. It may be shown separately before a hyphen when its parts are being emphasized.",
+      "example": {
+        "es": "La novela incluye un metacomentario sobre su propia historia.",
+        "en": "The novel includes meta-commentary about its own story."
+      },
+      "tags": [
+        "word",
+        "prefix",
+        "meta",
+        "B2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-opinión",
+      "kind": "word",
+      "promptEs": "opinión",
+      "answerEn": "opinion; view",
+      "noteEn": "Una opinión is a belief or judgment rather than an established fact.",
+      "example": {
+        "es": "Ana explicó su opinión sobre el proyecto.",
+        "en": "Ana explained her opinion about the project."
+      },
+      "tags": [
+        "word",
+        "noun",
+        "viewpoint",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-opinion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-los",
       "kind": "word",
       "promptEs": "los",
       "answerEn": "the (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00024",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb6e53541e37a1d6076e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00025-7a128bde",
-      "kind": "word",
-      "promptEs": "abuso",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00025",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dc2522c6eef913db825a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00026-0fcb9dda",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00026",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00027-e812407b",
-      "kind": "word",
-      "promptEs": "la",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00027",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00028-e91e6a96",
-      "kind": "word",
-      "promptEs": "pa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00028",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9513229d435978263d82",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00029-bbfc1f01",
-      "kind": "word",
-      "promptEs": "gráficas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00029",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ec8268d07602c3b7f7b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00030-1c171c59",
-      "kind": "word",
-      "promptEs": "labra",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00030",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1d9da7acc541d71f4c2f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00031-5d6f4d54",
-      "kind": "word",
-      "promptEs": "hipster",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00031",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ce8e43836e891296b625",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00032-0eee8832",
-      "kind": "word",
-      "promptEs": "hipsters",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00032",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d58d1d942751f5e84482",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00033-e54b48ab",
+      "id": "word-supone--amounts-to",
       "kind": "word",
       "promptEs": "supone",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "means; amounts to; represents",
+      "noteEn": "Suponer can mean “to suppose,” but it also describes the result, amount, or consequence that something represents.",
+      "example": {
+        "es": "El cambio supone una hora más.",
+        "en": "The change means one extra hour."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "suponer",
+        "result",
+        "present"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00033",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d661ef97b599bd146c81",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-dia-de-28-horas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00034-8af238cc",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00034",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00035-84b2d7fb",
+      "id": "word-mismo",
       "kind": "word",
       "promptEs": "mismo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "same",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00035",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7850454930a3573c85a7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00036-f6c3ce4b",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00036",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00037-827f836c",
-      "kind": "word",
-      "promptEs": "lo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00037",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9294ab38039f60d2ec53",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00038-7461e274",
+      "id": "word-tipo--kind",
       "kind": "word",
       "promptEs": "tipo",
-      "answerEn": "guy; type",
+      "answerEn": "kind; type",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00038",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0015",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-e103bf13e6d917d34a9a",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00039-570b8d46",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
+      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "example": {
+        "es": "Necesito una taza de café.",
+        "en": "I need a coffee cup."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "noun modifier",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00039",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0015",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00040-6f486a5b",
+      "id": "word-ombliguismo",
       "kind": "word",
       "promptEs": "ombliguismo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "navel-gazing; self-absorbed introspection",
+      "noteEn": "Ombligo means ‘navel.’ Ombliguismo figuratively criticizes excessive attention to oneself or one's own small circle.",
+      "example": {
+        "es": "El ensayo critica el ombliguismo del sector.",
+        "en": "The essay criticizes the sector's navel-gazing."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "figurative",
+        "criticism",
+        "C1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00040",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0015",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-6222521f46469239989b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00041-c2e52d92",
-      "kind": "word",
-      "promptEs": "empeoran",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-descriptive-adjective-after-noun",
+      "kind": "grammar",
+      "promptEs": "sustantivo + adjetivo descriptivo",
+      "questionEn": "Where does a basic Spanish describing word usually go relative to its noun?",
+      "answerEn": "Put it after the noun in the common neutral order.",
+      "noteEn": "Many ordinary descriptive words follow the person or thing they describe: un coche rojo, una casa grande. Some adjectives commonly come before the noun, and moving an adjective can change emphasis or meaning, so this is a useful default rather than an absolute rule.",
+      "example": {
+        "es": "Necesito una mochila nueva.",
+        "en": "I need a new backpack."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "word order",
+        "adjective",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00042",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7693e3807e824f8bccb3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-bibliotecarias",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00042-6b2ca3c8",
+      "id": "word-petardo--annoying-adjective",
       "kind": "word",
       "promptEs": "petardo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "annoying; tiresome",
+      "noteEn": "In informal Spanish, petardo can describe a person or thing that is a bore or a pain. As an adjective, its ending follows the noun it describes.",
+      "example": {
+        "es": "Fue un discurso bastante petardo.",
+        "en": "It was a pretty tiresome speech."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "colloquial",
+        "adjective",
+        "B2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00043",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9045e0cb243ddb56f9db",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00043-04de0b01",
+      "id": "word-por--por-parte-de",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
+      "answerEn": "no separate English word; part of por parte de",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "responsibility"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00044",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-propsito-de-mussolini",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00044-2c47d4ae",
+      "id": "phrase-por-parte-de",
+      "kind": "phrase",
+      "promptEs": "por parte de + persona o grupo",
+      "questionEn": "How do you formally identify the person or group responsible for an action, judgment, or reaction?",
+      "answerEn": "Use por parte de followed by the person or group.",
+      "noteEn": "The expression often corresponds to English “on the part of” or, in some sentences, simply “by.” It highlights the source or responsible side rather than a physical part.",
+      "example": {
+        "es": "Hubo un error por parte del banco.",
+        "en": "There was an error on the bank's part."
+      },
+      "tags": [
+        "phrase",
+        "responsibility",
+        "formal",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-propsito-de-mussolini",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-parte--por-parte-de",
       "kind": "word",
       "promptEs": "parte",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "part; side (in por parte de)",
+      "noteEn": "In the formal expression por parte de, parte helps identify the person or group responsible for an action, judgment, or reaction.",
+      "example": {
+        "es": "Fue un error por parte del equipo.",
+        "en": "It was a mistake on the team's part."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "responsibility"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00045",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e5f6a0c82f3e9be557c3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-propsito-de-mussolini",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00045-86a51fd7",
-      "kind": "word",
-      "promptEs": "todo",
-      "answerEn": "everything; all",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00046",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0018",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-602fae580f5863abfb31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00046-305e30cf",
-      "kind": "word",
-      "promptEs": "4s",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00047",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0018",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-3fffd018d2223020be85",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00047-36ecbda0",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00048",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hipsters-00048-1ca43b4e",
+      "id": "word-gente",
       "kind": "word",
       "promptEs": "gente",
       "answerEn": "people",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00049",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e5be6b2fc69cf45db8d2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00049-20c64c43",
+      "id": "word-insegura",
       "kind": "word",
       "promptEs": "insegura",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "insecure; lacking confidence",
+      "noteEn": "Insegura is feminine singular. Spanish describing words agree with the grammatical gender and number of what they describe.",
+      "example": {
+        "es": "La gente insegura busca aprobación.",
+        "en": "Insecure people seek approval."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "emotion",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00050",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0f052edd78dd1a7e2340",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00050-6a81e3aa",
+      "id": "word-gráficas",
+      "kind": "word",
+      "promptEs": "gráficas",
+      "answerEn": "graphs; charts",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "data",
+        "plural"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-relative-que",
+      "kind": "grammar",
+      "promptEs": "persona o cosa + que + información",
+      "questionEn": "How do you add information about a named person or thing using “who,” “that,” or “which”?",
+      "answerEn": "Put que after the person or thing, then add a verb and the information about it.",
+      "noteEn": "Que links the added description to the person or thing before it. It does not change for masculine, feminine, singular, or plural nouns. The added part needs a verb: la casa que vimos means “the house that we saw.”",
+      "example": {
+        "es": "La casa que vimos es azul.",
+        "en": "The house that we saw is blue."
+      },
+      "tags": [
+        "grammar",
+        "relative clause",
+        "description",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-lo--object-pronoun",
+      "kind": "word",
+      "promptEs": "lo",
+      "answerEn": "it (direct-object pronoun)",
+      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "example": {
+        "es": "Tengo el libro y lo leo.",
+        "en": "I have the book and I’m reading it."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-direct-object-pronoun-before-finite-verb",
+      "kind": "grammar",
+      "promptEs": "lo, la, los, las delante de un verbo conjugado",
+      "questionEn": "Where do you put the Spanish word for “it” or “them” when the main verb already shows who acts and when?",
+      "answerEn": "Put lo, la, los, or las directly before that verb.",
+      "noteEn": "These short words replace the person or thing directly affected by the action; that role is called the direct object. Choose lo or los for a masculine thing, la or las for a feminine thing, and match singular or plural. Before a verb form such as conté or vimos, write the short word separately in front: lo conté, las vimos. With an unchanged dictionary form, it can instead attach to the end, as in verlo.",
+      "example": {
+        "es": "La película, la vimos ayer.",
+        "en": "The movie—we watched it yesterday."
+      },
+      "tags": [
+        "grammar",
+        "direct object",
+        "pronoun",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-empeoran",
+      "kind": "word",
+      "promptEs": "empeoran",
+      "answerEn": "they make it worse; they worsen",
+      "noteEn": "Empeoran is a plural present form of empeorar. With lo before it, lo stands for the situation being made worse.",
+      "example": {
+        "es": "Esos cambios lo empeoran.",
+        "en": "Those changes make it worse."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "change",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-todo",
+      "kind": "word",
+      "promptEs": "todo",
+      "answerEn": "everything; all",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-tiempo",
       "kind": "word",
       "promptEs": "tiempo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "time",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00051",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0020",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-666a9f67617f9f9ac26e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hipsters-00051-20642c4a",
+      "id": "word-actualidad",
       "kind": "word",
       "promptEs": "actualidad",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "the present day; current times",
+      "noteEn": "Actualidad refers to what is current now. It does not mean the English word ‘actuality.’",
+      "example": {
+        "es": "El gráfico llega hasta la actualidad.",
+        "en": "The graph reaches the present day."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "false friend",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hipsters:ocr-token-00052",
-        "sourceLineId": "es-xkcd-hipsters:ocr-line-0021",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-121a2824183c7a23a984",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hipsters",
+        "contextualSenseReviewed": true
       }
     }
   ]

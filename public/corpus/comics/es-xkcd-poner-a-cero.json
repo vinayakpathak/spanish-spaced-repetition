@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-3cc195cdc9bd9012",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.875,
-    "lowConfidenceTokenCount": 3,
-    "rawOcrTokenCount": 12,
-    "filteredNonLatinTokenCount": 2,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-poner-a-cero",
     "xkcdNumber": 363,
     "publishedAt": "2007-12-28",
-    "title": "Poner a cero",
+    "title": "Reset",
     "titleEs": "Poner a cero",
     "image": {
       "src": "https://es.xkcd.com/images/reset.png",
       "width": 340,
       "height": 280,
       "aspectRatio": 1.2143,
-      "altEn": "Spanish-language xkcd comic #363: Poner a cero"
+      "altEn": "Spanish-language xkcd comic #363: Reset"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,25 +36,26 @@
     },
     "titleText": {
       "es": "Distancia mínima de seguridad a esta señal: 3 metros.",
-      "en": "English title text pending review."
+      "en": "Clearance for this Sign: 11 Feet",
+      "noteEn": "The Spanish title text localizes the distance as a rounded three metres and changes the wording to a minimum safe distance. Both versions extend the absurdity by treating this ordinary wall sign as something people must keep well away from."
     },
     "regions": [
       {
-        "id": "es-xkcd-poner-a-cero:region-0001",
-        "labelEs": "3 8 DiAS",
+        "id": "es-xkcd-poner-a-cero:wall-sign",
+        "labelEs": "38 DÍAS DESDE QUE ALGUIEN PUSO A CERO ESTA SEÑAL",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 27.4281,
+          "x": 24.1176,
           "y": 22.8091,
-          "width": 26.7909,
-          "height": 9.096
+          "width": 34.1177,
+          "height": 24.3338
         },
         "words": [
           {
-            "id": "es-xkcd-poner-a-cero:word-00001",
-            "text": "DiAS",
-            "normalized": "dias",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w01",
+            "text": "DÍAS",
+            "normalized": "días",
             "bounds": [
               {
                 "x": 43.0529,
@@ -70,35 +65,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00001-13731d85"
+              "word-días",
+              "concept-days-since-counter-sign"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-poner-a-cero-00001-13731d85"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-poner-a-cero:region-0002",
-        "labelEs": "DESDE QUE AL-",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 25.2941,
-          "y": 32.1429,
-          "width": 27.0588,
-          "height": 4.2857
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-poner-a-cero:word-00002",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w02",
             "text": "DESDE",
             "normalized": "desde",
             "bounds": [
@@ -110,11 +82,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00002-e6886ebc"
+              "word-desde--since-event",
+              "grammar-desde-que-evento",
+              "concept-days-since-counter-sign"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00003",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w03",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -126,56 +100,21 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00003-5e674ed1"
+              "word-que--fixed-desde-que",
+              "grammar-desde-que-evento"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00004",
-            "text": "AL",
-            "normalized": "al",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w04",
+            "text": "ALGUIEN",
+            "normalized": "alguien",
             "bounds": [
               {
                 "x": 45.5882,
                 "y": 32.1429,
                 "width": 6.7647,
                 "height": 4.2857
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00004-67ea70ed"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-poner-a-cero-00002-e6886ebc",
-          "word-auto-es-xkcd-poner-a-cero-00003-5e674ed1",
-          "word-auto-es-xkcd-poner-a-cero-00004-67ea70ed"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-poner-a-cero:region-0003",
-        "labelEs": "GUIEN PUSO A",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 24.1176,
-          "y": 36.4286,
-          "width": 27.0588,
-          "height": 5
-        },
-        "words": [
-          {
-            "id": "es-xkcd-poner-a-cero:word-00005",
-            "text": "GUIEN",
-            "normalized": "guien",
-            "bounds": [
+              },
               {
                 "x": 24.1176,
                 "y": 36.4286,
@@ -184,11 +123,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00005-15af955c"
+              "word-alguien",
+              "grammar-desde-que-evento"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00006",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w05",
             "text": "PUSO",
             "normalized": "puso",
             "bounds": [
@@ -200,11 +140,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00006-09481a77"
+              "word-puso--set-to-zero",
+              "grammar-desde-que-evento",
+              "phrase-poner-a-cero",
+              "concept-days-since-counter-sign"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00007",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w06",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -216,37 +159,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00007-bdd9a1d0"
+              "word-a--fixed-poner-a-cero",
+              "grammar-desde-que-evento",
+              "phrase-poner-a-cero"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-poner-a-cero-00005-15af955c",
-          "word-auto-es-xkcd-poner-a-cero-00006-09481a77",
-          "word-auto-es-xkcd-poner-a-cero-00007-bdd9a1d0"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-poner-a-cero:region-0004",
-        "labelEs": "CERO ESTA SEÑAL",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 24.7059,
-          "y": 41.4286,
-          "width": 33.5294,
-          "height": 5.7143
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-poner-a-cero:word-00008",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w07",
             "text": "CERO",
             "normalized": "cero",
             "bounds": [
@@ -258,11 +177,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00008-00d3e255"
+              "word-cero",
+              "grammar-desde-que-evento",
+              "phrase-poner-a-cero",
+              "concept-days-since-counter-sign"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00009",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w08",
             "text": "ESTA",
             "normalized": "esta",
             "bounds": [
@@ -274,11 +196,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00009-66aa3850"
+              "word-esta--demonstrative",
+              "grammar-desde-que-evento",
+              "phrase-poner-a-cero"
             ]
           },
           {
-            "id": "es-xkcd-poner-a-cero:word-00010",
+            "id": "es-xkcd-poner-a-cero:wall-sign:w09",
             "text": "SEÑAL",
             "normalized": "señal",
             "bounds": [
@@ -290,288 +214,365 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-poner-a-cero-00010-f81f8519"
+              "word-señal--posted-sign",
+              "grammar-desde-que-evento",
+              "phrase-poner-a-cero",
+              "concept-days-since-counter-sign"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-poner-a-cero-00008-00d3e255",
-          "word-auto-es-xkcd-poner-a-cero-00009-66aa3850",
-          "word-auto-es-xkcd-poner-a-cero-00010-f81f8519"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-poner-a-cero:wall-sign:excluded-counter-number",
+            "text": "38",
+            "reason": "number",
+            "rationale": "This is the sign's numerical day count, not a Spanish lexical word.",
+            "bounds": [
+              {
+                "x": 27.4281,
+                "y": 22.8091,
+                "width": 6.4714,
+                "height": 8.9685
+              },
+              {
+                "x": 34.7809,
+                "y": 22.8549,
+                "width": 7.3905,
+                "height": 8.9742
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-poner-a-cero:wall-sign:app-since-event",
+            "cardId": "grammar-desde-que-evento",
+            "participantWordIds": [
+              "es-xkcd-poner-a-cero:wall-sign:w02",
+              "es-xkcd-poner-a-cero:wall-sign:w03",
+              "es-xkcd-poner-a-cero:wall-sign:w04",
+              "es-xkcd-poner-a-cero:wall-sign:w05",
+              "es-xkcd-poner-a-cero:wall-sign:w06",
+              "es-xkcd-poner-a-cero:wall-sign:w07",
+              "es-xkcd-poner-a-cero:wall-sign:w08",
+              "es-xkcd-poner-a-cero:wall-sign:w09"
+            ],
+            "exampleEs": "DESDE QUE ALGUIEN PUSO A CERO ESTA SEÑAL",
+            "explanationEn": "Desde que introduces the starting event; puso is its completed-past verb, alguien supplies the subject, and esta señal is the thing linked to a cero."
+          },
+          {
+            "id": "es-xkcd-poner-a-cero:wall-sign:app-reset",
+            "cardId": "phrase-poner-a-cero",
+            "participantWordIds": [
+              "es-xkcd-poner-a-cero:wall-sign:w05",
+              "es-xkcd-poner-a-cero:wall-sign:w06",
+              "es-xkcd-poner-a-cero:wall-sign:w07",
+              "es-xkcd-poner-a-cero:wall-sign:w08",
+              "es-xkcd-poner-a-cero:wall-sign:w09"
+            ],
+            "exampleEs": "PUSO A CERO ESTA SEÑAL",
+            "explanationEn": "Puso supplies the completed-past form, a cero gives the fixed result, and esta señal fills the slot for the thing being reset."
+          }
+        ],
+        "cardIds": [
+          "word-días",
+          "concept-days-since-counter-sign",
+          "word-desde--since-event",
+          "grammar-desde-que-evento",
+          "word-que--fixed-desde-que",
+          "word-alguien",
+          "word-puso--set-to-zero",
+          "phrase-poner-a-cero",
+          "word-a--fixed-poner-a-cero",
+          "word-cero",
+          "word-esta--demonstrative",
+          "word-señal--posted-sign"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-poner-a-cero-00001-13731d85",
-      "word-auto-es-xkcd-poner-a-cero-00002-e6886ebc",
-      "word-auto-es-xkcd-poner-a-cero-00003-5e674ed1",
-      "word-auto-es-xkcd-poner-a-cero-00004-67ea70ed",
-      "word-auto-es-xkcd-poner-a-cero-00005-15af955c",
-      "word-auto-es-xkcd-poner-a-cero-00006-09481a77",
-      "word-auto-es-xkcd-poner-a-cero-00007-bdd9a1d0",
-      "word-auto-es-xkcd-poner-a-cero-00008-00d3e255",
-      "word-auto-es-xkcd-poner-a-cero-00009-66aa3850",
-      "word-auto-es-xkcd-poner-a-cero-00010-f81f8519"
+      "word-días",
+      "concept-days-since-counter-sign",
+      "word-desde--since-event",
+      "grammar-desde-que-evento",
+      "word-que--fixed-desde-que",
+      "word-alguien",
+      "word-puso--set-to-zero",
+      "phrase-poner-a-cero",
+      "word-a--fixed-poner-a-cero",
+      "word-cero",
+      "word-esta--demonstrative",
+      "word-señal--posted-sign"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.875,
-      "lowConfidenceTokenCount": 3,
-      "rawOcrTokenCount": 12,
-      "filteredNonLatinTokenCount": 2,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00001-13731d85",
+      "id": "word-días",
       "kind": "word",
-      "promptEs": "dias",
-      "answerEn": "Meaning needs review",
+      "promptEs": "días",
+      "answerEn": "days",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00003",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-d470eac94870d2f30148",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-dia-de-28-horas",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00002-e6886ebc",
+      "id": "concept-days-since-counter-sign",
+      "kind": "concept",
+      "promptEs": "cartel de “días desde…”",
+      "answerEn": "a safety-style counter sign that reports how long it has been since an incident",
+      "noteEn": "Workplaces often display the number of days since the last accident or another unwanted event. This sign is self-referential: it counts the days since someone reset the sign itself, even though resetting is also how its displayed count would normally be updated.",
+      "tags": [
+        "concept",
+        "workplace safety",
+        "signs",
+        "self-reference"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-desde--since-event",
       "kind": "word",
       "promptEs": "desde",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "since; from the time when (with que)",
+      "noteEn": "Desde marks a starting point. Followed by que and a full event, it means that the event supplies the point from which a later period is measured.",
+      "example": {
+        "es": "Vivo aquí desde que terminé los estudios.",
+        "en": "I have lived here since I finished my studies."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "starting point",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00004",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1e06e6dac28b3890b9f1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00003-5e674ed1",
+      "id": "grammar-desde-que-evento",
+      "kind": "grammar",
+      "promptEs": "desde que + evento",
+      "questionEn": "How do you say that a period or situation has continued since an event?",
+      "answerEn": "Use desde que, then state the event that marks the starting point.",
+      "noteEn": "Desde marks the starting point, and que allows a full event with its own verb to follow. When that event happened at one completed moment in the past, use a completed-past form such as llegó, terminó, or cambió. The period or situation that continues appears outside the desde que part.",
+      "example": {
+        "es": "Trabajo aquí desde que terminé la universidad.",
+        "en": "I have worked here since I finished university."
+      },
+      "tags": [
+        "grammar",
+        "time",
+        "starting point",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--fixed-desde-que",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; completes desde que, “since”",
+      "noteEn": "Que lets desde introduce a whole event with its own verb. Learn the two words together as desde que when the starting point is an event rather than a date or place.",
+      "example": {
+        "es": "No lo veo desde que cambió de trabajo.",
+        "en": "I have not seen him since he changed jobs."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed connector",
+        "time",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00005",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00004-67ea70ed",
+      "id": "word-alguien",
       "kind": "word",
-      "promptEs": "al",
-      "answerEn": "Meaning needs review",
+      "promptEs": "alguien",
+      "answerEn": "someone; anyone",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00006",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00005-15af955c",
-      "kind": "word",
-      "promptEs": "guien",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00007",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-32fedce2a729b2092e9f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-poner-a-cero-00006-09481a77",
+      "id": "word-puso--set-to-zero",
       "kind": "word",
       "promptEs": "puso",
-      "answerEn": "named; gave a name to",
-      "noteEn": "",
+      "answerEn": "reset; set (something) to zero (with a cero)",
+      "noteEn": "Puso is a completed-past form of poner used with one doer. Poner has several meanings; with a cero, it means to return a counter, device, or value to zero.",
+      "example": {
+        "es": "El técnico puso el contador a cero.",
+        "en": "The technician reset the counter to zero."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "completed past",
+        "reset",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00008",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f9c6d3ad90b0b7d87b31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00007-bdd9a1d0",
+      "id": "phrase-poner-a-cero",
+      "kind": "phrase",
+      "promptEs": "poner algo a cero",
+      "questionEn": "How do you say that someone resets a counter, device, or value to zero?",
+      "answerEn": "Use a form of poner with a cero, and name the thing being reset.",
+      "noteEn": "Change poner to match the doer and time, but keep a cero unchanged. The thing being reset can appear before a cero, as in puso el contador a cero, or after it, as in puso a cero el contador.",
+      "example": {
+        "es": "Marta puso el cronómetro a cero.",
+        "en": "Marta reset the stopwatch to zero."
+      },
+      "tags": [
+        "phrase",
+        "reset",
+        "numbers",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--fixed-poner-a-cero",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; links poner to cero in poner a cero",
+      "noteEn": "A is required between a form of poner and cero in this expression. The full expression poner algo a cero means to reset something or set it to zero.",
+      "example": {
+        "es": "Pon el reloj a cero.",
+        "en": "Reset the clock to zero."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "reset",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00009",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00008-00d3e255",
+      "id": "word-cero",
       "kind": "word",
       "promptEs": "cero",
       "answerEn": "zero",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "number"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00010",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-976393f9a9d6098bc038",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00009-66aa3850",
+      "id": "word-esta--demonstrative",
       "kind": "word",
       "promptEs": "esta",
-      "answerEn": "Meaning needs review",
+      "answerEn": "this (feminine singular)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "demonstratives"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00011",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d98c0c5592a747cd6db",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-poner-a-cero-00010-f81f8519",
+      "id": "word-señal--posted-sign",
       "kind": "word",
       "promptEs": "señal",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "sign; posted notice",
+      "noteEn": "Señal can also mean a signal or indication. Here it is a physical sign carrying information on a wall.",
+      "example": {
+        "es": "La señal está junto a la puerta.",
+        "en": "The sign is beside the door."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "sign",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-poner-a-cero:ocr-token-00012",
-        "sourceLineId": "es-xkcd-poner-a-cero:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-42c311b38af927c837a9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-poner-a-cero",
+        "contextualSenseReviewed": true
       }
     }
   ]

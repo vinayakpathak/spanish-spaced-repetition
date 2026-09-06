@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-77f23a8197f48cbf",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9762,
-    "lowConfidenceTokenCount": 2,
-    "rawOcrTokenCount": 42,
-    "filteredNonLatinTokenCount": 3,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-coche-nuevo",
     "xkcdNumber": 570,
     "publishedAt": "2009-04-17",
-    "title": "Coche nuevo",
+    "title": "New Car",
     "titleEs": "Coche nuevo",
     "image": {
       "src": "https://es.xkcd.com/images/new_car.png",
       "width": 715,
       "height": 187,
       "aspectRatio": 3.8235,
-      "altEn": "Spanish-language xkcd comic #570: Coche nuevo"
+      "altEn": "Spanish-language xkcd comic #570: New Car"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,336 +36,500 @@
     },
     "titleText": {
       "es": "Hay por ahí una empresa que realmente ha descubierto una forma de alargar los penes, pero es incapaz de alcanzar clientes potenciales.",
-      "en": "English title text pending review."
+      "en": "Somewhere out there is a company that has actually figured out how to enlarge penises, and it's helpless to reach potential customers.",
+      "noteEn": "The Spanish archive closely translates the official title text. Both connect the strip's fake web prize to implausible advertising claims; this wording is not printed inside the comic."
     },
     "regions": [
       {
-        "id": "es-xkcd-coche-nuevo:region-0001",
-        "labelEs": "ES DE LO MÁS CURIOSO.",
+        "id": "es-xkcd-coche-nuevo:car-question",
+        "labelEs": "¿CUÁNDO HAS PILLADO EL COCHE?",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 27.095,
-          "y": 5.3191,
-          "width": 21.5084,
-          "height": 7.4468
+          "x": 1.8,
+          "y": 14.5,
+          "width": 18.8,
+          "height": 19
         },
         "words": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00001",
+            "id": "es-xkcd-coche-nuevo:car-question:w01",
+            "text": "CUÁNDO",
+            "normalized": "cuándo",
+            "bounds": [
+              {
+                "x": 2.514,
+                "y": 17,
+                "width": 8.6592,
+                "height": 6.7
+              }
+            ],
+            "cardIds": [
+              "word-cuándo--interrogative",
+              "question-words"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:w02",
+            "text": "HAS",
+            "normalized": "has",
+            "bounds": [
+              {
+                "x": 11.4525,
+                "y": 17,
+                "width": 3.9106,
+                "height": 6.7
+              }
+            ],
+            "cardIds": [
+              "word-has",
+              "grammar-present-perfect"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:w03",
+            "text": "PILLADO",
+            "normalized": "pillado",
+            "bounds": [
+              {
+                "x": 2.514,
+                "y": 24.3,
+                "width": 7.5419,
+                "height": 6.7
+              }
+            ],
+            "cardIds": [
+              "word-pillado--got-car",
+              "grammar-present-perfect"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:w04",
+            "text": "EL",
+            "normalized": "el",
+            "bounds": [
+              {
+                "x": 10.3352,
+                "y": 24.3,
+                "width": 2.2346,
+                "height": 6.7
+              }
+            ],
+            "cardIds": [
+              "word-el--article"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:w05",
+            "text": "COCHE",
+            "normalized": "coche",
+            "bounds": [
+              {
+                "x": 12.8492,
+                "y": 24.3,
+                "width": 6.9832,
+                "height": 6.7
+              }
+            ],
+            "cardIds": [
+              "word-coche"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:app-question-word",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:car-question:w01"
+            ],
+            "exampleEs": "¿CUÁNDO?",
+            "explanationEn": "Cuándo keeps its written accent because it opens a direct time question."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:car-question:app-present-perfect",
+            "cardId": "grammar-present-perfect",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:car-question:w02",
+              "es-xkcd-coche-nuevo:car-question:w03"
+            ],
+            "exampleEs": "HAS PILLADO",
+            "explanationEn": "Has is the present helper for informal singular you, and pillado supplies the completed action."
+          }
+        ],
+        "cardIds": [
+          "word-cuándo--interrogative",
+          "question-words",
+          "word-has",
+          "grammar-present-perfect",
+          "word-pillado--got-car",
+          "word-el--article",
+          "word-coche"
+        ]
+      },
+      {
+        "id": "es-xkcd-coche-nuevo:prize-explanation",
+        "labelEs": "ES DE LO MÁS CURIOSO. LO COMPRAMOS COMO PREMIO AL VISITANTE NÚMERO 100.000.000 DE NUESTRA WEB.",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 26.1,
+          "y": 4.2,
+          "width": 23.4,
+          "height": 39.8
+        },
+        "words": [
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w01",
             "text": "ES",
             "normalized": "es",
             "bounds": [
               {
                 "x": 27.095,
-                "y": 5.3191,
+                "y": 5.25,
                 "width": 2.6885,
-                "height": 7.4468
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00001-0bc6f139"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00002",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w02",
             "text": "DE",
             "normalized": "de",
             "bounds": [
               {
                 "x": 30.0279,
-                "y": 5.3191,
+                "y": 5.25,
                 "width": 2.4441,
-                "height": 7.4468
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00002-b651d9fc"
+              "word-de--fixed-de-lo-mas",
+              "grammar-de-lo-mas-adjective"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00003",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w03",
             "text": "LO",
             "normalized": "lo",
             "bounds": [
               {
                 "x": 32.7165,
-                "y": 5.3191,
+                "y": 5.25,
                 "width": 2.6885,
-                "height": 7.4468
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00003-40440e1f"
+              "word-lo--fixed-de-lo-mas",
+              "grammar-de-lo-mas-adjective"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00004",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w04",
             "text": "MÁS",
             "normalized": "más",
             "bounds": [
               {
                 "x": 35.6494,
-                "y": 5.3191,
+                "y": 5.25,
                 "width": 4.3994,
-                "height": 7.4468
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00004-b8565d6a"
+              "word-más--fixed-de-lo-mas",
+              "grammar-de-lo-mas-adjective"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00005",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w05",
             "text": "CURIOSO",
             "normalized": "curioso",
             "bounds": [
               {
                 "x": 40.2933,
-                "y": 5.3191,
+                "y": 5.25,
                 "width": 8.3101,
-                "height": 7.4468
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00005-c72cd7d2"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00001-0bc6f139",
-          "word-auto-es-xkcd-coche-nuevo-00002-b651d9fc",
-          "word-auto-es-xkcd-coche-nuevo-00003-40440e1f",
-          "word-auto-es-xkcd-coche-nuevo-00004-b8565d6a",
-          "word-auto-es-xkcd-coche-nuevo-00005-c72cd7d2"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0002",
-        "labelEs": "QUIZÁS NO VIERON",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 74.8603,
-          "y": 7.4468,
-          "width": 17.3184,
-          "height": 7.4468
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00006",
-            "text": "QUIZÁS",
-            "normalized": "quizás",
-            "bounds": [
-              {
-                "x": 74.8603,
-                "y": 7.4468,
-                "width": 6.8436,
-                "height": 7.4468
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00006-247efc11"
+              "word-curioso--odd",
+              "grammar-de-lo-mas-adjective"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00007",
-            "text": "NO",
-            "normalized": "no",
-            "bounds": [
-              {
-                "x": 81.9483,
-                "y": 7.4468,
-                "width": 2.933,
-                "height": 7.4468
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00007-ed4788d4"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00008",
-            "text": "VIERON",
-            "normalized": "vieron",
-            "bounds": [
-              {
-                "x": 85.1257,
-                "y": 7.4468,
-                "width": 7.0531,
-                "height": 7.4468
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00008-aefc3e80"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00006-247efc11",
-          "word-auto-es-xkcd-coche-nuevo-00007-ed4788d4",
-          "word-auto-es-xkcd-coche-nuevo-00008-aefc3e80"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0003",
-        "labelEs": "LO COMPRAMOS COMO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.8156,
-          "y": 11.7021,
-          "width": 20.6704,
-          "height": 9.5745
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00009",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w06",
             "text": "LO",
             "normalized": "lo",
             "bounds": [
               {
                 "x": 26.8156,
-                "y": 11.7021,
+                "y": 11.65,
                 "width": 2.8282,
-                "height": 9.5745
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00009-59421540"
+              "word-lo--object-pronoun",
+              "grammar-direct-object-pronoun-before-finite-verb"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00010",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w07",
             "text": "COMPRAMOS",
             "normalized": "compramos",
             "bounds": [
               {
                 "x": 29.9581,
-                "y": 11.7021,
+                "y": 11.65,
                 "width": 11.3128,
-                "height": 9.5745
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00010-815c599a"
+              "word-compramos",
+              "grammar-direct-object-pronoun-before-finite-verb",
+              "grammar-past-contrast"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00011",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w08",
             "text": "COMO",
             "normalized": "como",
             "bounds": [
               {
                 "x": 41.5852,
-                "y": 11.7021,
+                "y": 11.65,
                 "width": 5.9008,
-                "height": 9.5745
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00011-ec0002ab"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00009-59421540",
-          "word-auto-es-xkcd-coche-nuevo-00010-815c599a",
-          "word-auto-es-xkcd-coche-nuevo-00011-ec0002ab"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0004",
-        "labelEs": "EL ANUNCIO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 74.8603,
-          "y": 13.8298,
-          "width": 11.4525,
-          "height": 9.5745
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00012",
-            "text": "EL",
-            "normalized": "el",
-            "bounds": [
-              {
-                "x": 74.8603,
-                "y": 13.8298,
-                "width": 2.514,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00012-7f37ea9b"
+              "word-como--role"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00013",
-            "text": "ANUNCIO",
-            "normalized": "anuncio",
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w09",
+            "text": "PREMIO",
+            "normalized": "premio",
             "bounds": [
               {
-                "x": 77.6885,
-                "y": 13.8298,
-                "width": 8.6243,
-                "height": 9.5745
+                "x": 26.8156,
+                "y": 20.15,
+                "width": 6.9134,
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00013-825368ed"
+              "word-premio",
+              "concept-millionth-visitor-popup-scam"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w10",
+            "text": "AL",
+            "normalized": "al",
+            "bounds": [
+              {
+                "x": 34.0433,
+                "y": 20.15,
+                "width": 2.514,
+                "height": 6
+              }
+            ],
+            "cardIds": [
+              "word-al--contraction"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w11",
+            "text": "VISITANTE",
+            "normalized": "visitante",
+            "bounds": [
+              {
+                "x": 36.8715,
+                "y": 20.15,
+                "width": 9.7765,
+                "height": 6
+              }
+            ],
+            "cardIds": [
+              "word-visitante",
+              "concept-millionth-visitor-popup-scam"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w12",
+            "text": "NÚMERO",
+            "normalized": "número",
+            "bounds": [
+              {
+                "x": 26.8156,
+                "y": 26.55,
+                "width": 7.5419,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-número",
+              "concept-millionth-visitor-popup-scam"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w13",
+            "text": "DE",
+            "normalized": "de",
+            "bounds": [
+              {
+                "x": 46.6131,
+                "y": 26.55,
+                "width": 2.5489,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-de--of"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w14",
+            "text": "NUESTRA",
+            "normalized": "nuestra",
+            "bounds": [
+              {
+                "x": 26.5363,
+                "y": 35.05,
+                "width": 8.6592,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-nuestra",
+              "grammar-nuestro-possessive-agreement"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:w15",
+            "text": "WEB",
+            "normalized": "web",
+            "bounds": [
+              {
+                "x": 35.4749,
+                "y": 35.05,
+                "width": 4.1899,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-web",
+              "grammar-nuestro-possessive-agreement",
+              "concept-millionth-visitor-popup-scam"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00012-7f37ea9b",
-          "word-auto-es-xkcd-coche-nuevo-00013-825368ed"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:excluded-visitor-number",
+            "text": "100.000.000",
+            "reason": "number",
+            "rationale": "This is a printed visitor count rather than a Spanish lexical word. Vision emitted three duplicate token records for the grouped digits.",
+            "bounds": [
+              {
+                "x": 34.6718,
+                "y": 26.55,
+                "width": 11.6271,
+                "height": 6.1
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:app-degree",
+            "cardId": "grammar-de-lo-mas-adjective",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:prize-explanation:w02",
+              "es-xkcd-coche-nuevo:prize-explanation:w03",
+              "es-xkcd-coche-nuevo:prize-explanation:w04",
+              "es-xkcd-coche-nuevo:prize-explanation:w05"
+            ],
+            "exampleEs": "DE LO MÁS CURIOSO",
+            "explanationEn": "De lo más is the fixed degree expression, and curioso supplies the description being strengthened."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:app-object-pronoun",
+            "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:prize-explanation:w06",
+              "es-xkcd-coche-nuevo:prize-explanation:w07"
+            ],
+            "exampleEs": "LO COMPRAMOS",
+            "explanationEn": "Lo replaces the masculine singular car and appears immediately before the conjugated verb compramos."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:app-past",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:prize-explanation:w07"
+            ],
+            "exampleEs": "COMPRAMOS",
+            "explanationEn": "Compramos presents buying the car as one completed event in the story."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:prize-explanation:app-possessive-agreement",
+            "cardId": "grammar-nuestro-possessive-agreement",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:prize-explanation:w14",
+              "es-xkcd-coche-nuevo:prize-explanation:w15"
+            ],
+            "exampleEs": "NUESTRA WEB",
+            "explanationEn": "Nuestra takes the feminine singular form because the owned noun web is feminine singular here."
+          }
+        ],
+        "cardIds": [
+          "word-es",
+          "word-de--fixed-de-lo-mas",
+          "grammar-de-lo-mas-adjective",
+          "word-lo--fixed-de-lo-mas",
+          "word-más--fixed-de-lo-mas",
+          "word-curioso--odd",
+          "word-lo--object-pronoun",
+          "grammar-direct-object-pronoun-before-finite-verb",
+          "word-compramos",
+          "grammar-past-contrast",
+          "word-como--role",
+          "word-premio",
+          "concept-millionth-visitor-popup-scam",
+          "word-al--contraction",
+          "word-visitante",
+          "word-número",
+          "word-de--of",
+          "word-nuestra",
+          "grammar-nuestro-possessive-agreement",
+          "word-web"
+        ]
       },
       {
-        "id": "es-xkcd-coche-nuevo:region-0005",
+        "id": "es-xkcd-coche-nuevo:refusal-question",
         "labelEs": "¿Y NO LO QUISIERON?",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 52.2346,
-          "y": 15.9574,
-          "width": 20.3911,
-          "height": 9.5745
+          "x": 51.7,
+          "y": 14.8,
+          "width": 21.3,
+          "height": 12.7
         },
         "words": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00014",
+            "id": "es-xkcd-coche-nuevo:refusal-question:w01",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -383,11 +541,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00014-e71667e5"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00015",
+            "id": "es-xkcd-coche-nuevo:refusal-question:w02",
             "text": "NO",
             "normalized": "no",
             "bounds": [
@@ -399,11 +557,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00015-12574239"
+              "word-no",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00016",
+            "id": "es-xkcd-coche-nuevo:refusal-question:w03",
             "text": "LO",
             "normalized": "lo",
             "bounds": [
@@ -415,11 +574,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00016-5d6cef66"
+              "word-lo--object-pronoun",
+              "grammar-direct-object-pronoun-before-finite-verb",
+              "grammar-yes-no-question"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00017",
+            "id": "es-xkcd-coche-nuevo:refusal-question:w04",
             "text": "QUISIERON",
             "normalized": "quisieron",
             "bounds": [
@@ -431,528 +592,428 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00017-0da1d518"
+              "word-quisieron",
+              "grammar-direct-object-pronoun-before-finite-verb",
+              "grammar-yes-no-question",
+              "grammar-past-contrast"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00014-e71667e5",
-          "word-auto-es-xkcd-coche-nuevo-00015-12574239",
-          "word-auto-es-xkcd-coche-nuevo-00016-5d6cef66",
-          "word-auto-es-xkcd-coche-nuevo-00017-0da1d518"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-coche-nuevo:refusal-question:app-object-pronoun",
+            "cardId": "grammar-direct-object-pronoun-before-finite-verb",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:refusal-question:w03",
+              "es-xkcd-coche-nuevo:refusal-question:w04"
+            ],
+            "exampleEs": "LO QUISIERON",
+            "explanationEn": "Lo replaces the car and remains before the conjugated verb quisieron."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:refusal-question:app-yes-no",
+            "cardId": "grammar-yes-no-question",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:refusal-question:w02",
+              "es-xkcd-coche-nuevo:refusal-question:w03",
+              "es-xkcd-coche-nuevo:refusal-question:w04"
+            ],
+            "exampleEs": "¿NO LO QUISIERON?",
+            "explanationEn": "Spanish keeps the ordinary no + object pronoun + verb order; question marks and intonation turn it into a negative yes-or-no question."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:refusal-question:app-past",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:refusal-question:w04"
+            ],
+            "exampleEs": "QUISIERON",
+            "explanationEn": "Quisieron treats the visitors' response as one completed reaction."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0005",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-y",
+          "word-no",
+          "grammar-yes-no-question",
+          "word-lo--object-pronoun",
+          "grammar-direct-object-pronoun-before-finite-verb",
+          "word-quisieron",
+          "grammar-past-contrast"
+        ]
       },
       {
-        "id": "es-xkcd-coche-nuevo:region-0006",
-        "labelEs": "¿CUÁNDO HAS",
+        "id": "es-xkcd-coche-nuevo:apparently-reply",
+        "labelEs": "PARECE SER.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 2.514,
-          "y": 17.0213,
-          "width": 12.8492,
-          "height": 8.5106
+          "x": 61,
+          "y": 59.3,
+          "width": 13.2,
+          "height": 18.7
         },
         "words": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00018",
-            "text": "CUÁNDO",
-            "normalized": "cuándo",
+            "id": "es-xkcd-coche-nuevo:apparently-reply:w01",
+            "text": "PARECE",
+            "normalized": "parece",
             "bounds": [
               {
-                "x": 2.514,
-                "y": 17.0213,
-                "width": 8.6592,
-                "height": 8.5106
+                "x": 61.723,
+                "y": 61.7,
+                "width": 6.8265,
+                "height": 7.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00018-6a655749"
+              "word-parece",
+              "phrase-parece-ser"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00019",
-            "text": "HAS",
-            "normalized": "has",
+            "id": "es-xkcd-coche-nuevo:apparently-reply:w02",
+            "text": "SER",
+            "normalized": "ser",
             "bounds": [
               {
-                "x": 11.4525,
-                "y": 17.0213,
-                "width": 3.9106,
-                "height": 8.5106
+                "x": 69.0553,
+                "y": 61.7,
+                "width": 4.138,
+                "height": 7.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00019-2479b6d5"
+              "word-ser",
+              "phrase-parece-ser"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00018-6a655749",
-          "word-auto-es-xkcd-coche-nuevo-00019-2479b6d5"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-coche-nuevo:apparently-reply:app-parece-ser",
+            "cardId": "phrase-parece-ser",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:apparently-reply:w01",
+              "es-xkcd-coche-nuevo:apparently-reply:w02"
+            ],
+            "exampleEs": "PARECE SER",
+            "explanationEn": "Parece ser stands alone because the omitted description is already clear from the preceding question."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0006",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-parece",
+          "phrase-parece-ser",
+          "word-ser"
+        ]
       },
       {
-        "id": "es-xkcd-coche-nuevo:region-0007",
-        "labelEs": "¡SI ESTABA",
+        "id": "es-xkcd-coche-nuevo:notice-suggestion",
+        "labelEs": "QUIZÁS NO VIERON EL ANUNCIO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 86.2992,
-          "y": 17.8433,
-          "width": 11.4797,
-          "height": 10.0581
+          "x": 74.2,
+          "y": 6.5,
+          "width": 18.5,
+          "height": 17.7
         },
         "words": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00020",
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:w01",
+            "text": "QUIZÁS",
+            "normalized": "quizás",
+            "bounds": [
+              {
+                "x": 74.8603,
+                "y": 7.35,
+                "width": 6.8436,
+                "height": 6
+              }
+            ],
+            "cardIds": [
+              "word-quizás",
+              "grammar-quizas-indicative-possibility"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:w02",
+            "text": "NO",
+            "normalized": "no",
+            "bounds": [
+              {
+                "x": 81.9483,
+                "y": 7.35,
+                "width": 2.933,
+                "height": 6
+              }
+            ],
+            "cardIds": [
+              "word-no"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:w03",
+            "text": "VIERON",
+            "normalized": "vieron",
+            "bounds": [
+              {
+                "x": 85.1257,
+                "y": 7.35,
+                "width": 7.0531,
+                "height": 6
+              }
+            ],
+            "cardIds": [
+              "word-vieron--saw",
+              "grammar-quizas-indicative-possibility",
+              "grammar-past-contrast"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:w04",
+            "text": "EL",
+            "normalized": "el",
+            "bounds": [
+              {
+                "x": 74.8603,
+                "y": 13.8,
+                "width": 2.514,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-el--article"
+            ]
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:w05",
+            "text": "ANUNCIO",
+            "normalized": "anuncio",
+            "bounds": [
+              {
+                "x": 77.6885,
+                "y": 13.8,
+                "width": 8.6,
+                "height": 6.1
+              }
+            ],
+            "cardIds": [
+              "word-anuncio--notice",
+              "concept-millionth-visitor-popup-scam"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:app-quizas",
+            "cardId": "grammar-quizas-indicative-possibility",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:notice-suggestion:w01",
+              "es-xkcd-coche-nuevo:notice-suggestion:w03"
+            ],
+            "exampleEs": "QUIZÁS NO VIERON",
+            "explanationEn": "Quizás marks this as a possibility, while vieron remains in the ordinary statement form rather than changing to vieran."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:notice-suggestion:app-past",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:notice-suggestion:w03"
+            ],
+            "exampleEs": "VIERON",
+            "explanationEn": "Vieron presents seeing—or failing to see—the notice as a completed event."
+          }
+        ],
+        "cardIds": [
+          "word-quizás",
+          "grammar-quizas-indicative-possibility",
+          "word-no",
+          "word-vieron--saw",
+          "grammar-past-contrast",
+          "word-el--article",
+          "word-anuncio--notice",
+          "concept-millionth-visitor-popup-scam"
+        ]
+      },
+      {
+        "id": "es-xkcd-coche-nuevo:flashing-reply",
+        "labelEs": "¡SI ESTABA PARPADEANDO Y TODO ESO!",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 85.7,
+          "y": 16.7,
+          "width": 14.3,
+          "height": 26.5
+        },
+        "words": [
+          {
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w01",
             "text": "SI",
             "normalized": "si",
             "bounds": [
               {
                 "x": 86.2992,
-                "y": 18.1681,
+                "y": 17.8,
                 "width": 3.7986,
-                "height": 9.7333
+                "height": 6.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00020-252770a6"
+              "word-si--emphatic-objection"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00021",
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w02",
             "text": "ESTABA",
             "normalized": "estaba",
             "bounds": [
               {
                 "x": 90.3842,
-                "y": 17.8433,
+                "y": 17.8,
                 "width": 7.3948,
-                "height": 9.8854
+                "height": 6.7
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00021-8305b7cf"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00020-252770a6",
-          "word-auto-es-xkcd-coche-nuevo-00021-8305b7cf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0008",
-        "labelEs": "PREMIO AL VISITANTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.8156,
-          "y": 20.2128,
-          "width": 19.8324,
-          "height": 9.5745
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00022",
-            "text": "PREMIO",
-            "normalized": "premio",
-            "bounds": [
-              {
-                "x": 26.8156,
-                "y": 20.2128,
-                "width": 6.9134,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00022-5ce0c335"
+              "word-estaba--progressive-auxiliary",
+              "grammar-estar-gerundio",
+              "grammar-past-contrast"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00023",
-            "text": "AL",
-            "normalized": "al",
-            "bounds": [
-              {
-                "x": 34.0433,
-                "y": 20.2128,
-                "width": 2.514,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00023-af77b9c3"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00024",
-            "text": "VISITANTE",
-            "normalized": "visitante",
-            "bounds": [
-              {
-                "x": 36.8715,
-                "y": 20.2128,
-                "width": 9.7765,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00024-5e21e815"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00022-5ce0c335",
-          "word-auto-es-xkcd-coche-nuevo-00023-af77b9c3",
-          "word-auto-es-xkcd-coche-nuevo-00024-5e21e815"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0009",
-        "labelEs": "PILLADO EL COCHE?",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.514,
-          "y": 24.4681,
-          "width": 17.3184,
-          "height": 8.5106
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00025",
-            "text": "PILLADO",
-            "normalized": "pillado",
-            "bounds": [
-              {
-                "x": 2.514,
-                "y": 24.4681,
-                "width": 7.5419,
-                "height": 8.5106
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00025-4bec26a1"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00026",
-            "text": "EL",
-            "normalized": "el",
-            "bounds": [
-              {
-                "x": 10.3352,
-                "y": 24.4681,
-                "width": 2.2346,
-                "height": 8.5106
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00026-8fc7339c"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00027",
-            "text": "COCHE",
-            "normalized": "coche",
-            "bounds": [
-              {
-                "x": 12.8492,
-                "y": 24.4681,
-                "width": 6.9832,
-                "height": 8.5106
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00027-0ee61828"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00025-4bec26a1",
-          "word-auto-es-xkcd-coche-nuevo-00026-8fc7339c",
-          "word-auto-es-xkcd-coche-nuevo-00027-0ee61828"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0010",
-        "labelEs": "NÚMERO 100.000.000 DE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.8156,
-          "y": 26.5957,
-          "width": 22.3464,
-          "height": 9.5745
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00028",
-            "text": "NÚMERO",
-            "normalized": "número",
-            "bounds": [
-              {
-                "x": 26.8156,
-                "y": 26.5957,
-                "width": 7.5419,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00028-2c1f1383"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00029",
-            "text": "DE",
-            "normalized": "de",
-            "bounds": [
-              {
-                "x": 46.6131,
-                "y": 26.5957,
-                "width": 2.5489,
-                "height": 9.5745
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00029-05fb18cf"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00028-2c1f1383",
-          "word-auto-es-xkcd-coche-nuevo-00029-05fb18cf"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0010",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0011",
-        "labelEs": "PARPADEANDO",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 87.1508,
-          "y": 26.5957,
-          "width": 12.2905,
-          "height": 8.5106
-        },
-        "words": [
-          {
-            "id": "es-xkcd-coche-nuevo:word-00030",
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w03",
             "text": "PARPADEANDO",
             "normalized": "parpadeando",
             "bounds": [
               {
                 "x": 87.1508,
-                "y": 26.5957,
+                "y": 26.55,
                 "width": 12.2905,
-                "height": 8.5106
+                "height": 6.2
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00030-cf1d0570"
+              "word-parpadeando",
+              "grammar-estar-gerundio",
+              "concept-millionth-visitor-popup-scam"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00030-cf1d0570"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0012",
-        "labelEs": "Y TODO ESO!",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 87.1326,
-          "y": 32.6345,
-          "width": 12.0477,
-          "height": 10.2629
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-coche-nuevo:word-00031",
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w04",
             "text": "Y",
             "normalized": "y",
             "bounds": [
               {
                 "x": 87.1326,
-                "y": 32.6345,
+                "y": 33,
                 "width": 1.2947,
-                "height": 9.6455
+                "height": 6.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00031-fdace6c4"
+              "word-y",
+              "phrase-y-todo-eso"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00032",
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w05",
             "text": "TODO",
             "normalized": "todo",
             "bounds": [
               {
                 "x": 88.7036,
-                "y": 32.7247,
+                "y": 33,
                 "width": 5.0653,
-                "height": 9.862
+                "height": 6.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00032-f9a5b6a5"
+              "word-todo",
+              "phrase-y-todo-eso"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00033",
+            "id": "es-xkcd-coche-nuevo:flashing-reply:w06",
             "text": "ESO",
             "normalized": "eso",
             "bounds": [
               {
                 "x": 94.0452,
-                "y": 33.0314,
+                "y": 33,
                 "width": 5.1351,
-                "height": 9.866
+                "height": 6.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00033-59e58a42"
+              "word-eso",
+              "phrase-y-todo-eso"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00031-fdace6c4",
-          "word-auto-es-xkcd-coche-nuevo-00032-f9a5b6a5",
-          "word-auto-es-xkcd-coche-nuevo-00033-59e58a42"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0012",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0013",
-        "labelEs": "NUESTRA WEB.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 26.5363,
-          "y": 35.1064,
-          "width": 13.1285,
-          "height": 8.5106
-        },
-        "words": [
+        "excludedUnits": [],
+        "applications": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00034",
-            "text": "NUESTRA",
-            "normalized": "nuestra",
-            "bounds": [
-              {
-                "x": 26.5363,
-                "y": 35.1064,
-                "width": 8.6592,
-                "height": 8.5106
-              }
+            "id": "es-xkcd-coche-nuevo:flashing-reply:app-progressive",
+            "cardId": "grammar-estar-gerundio",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:flashing-reply:w02",
+              "es-xkcd-coche-nuevo:flashing-reply:w03"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00034-ad2c9245"
-            ]
+            "exampleEs": "ESTABA PARPADEANDO",
+            "explanationEn": "Estaba supplies the past setting and parpadeando names the action that was in progress."
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00035",
-            "text": "WEB",
-            "normalized": "web",
-            "bounds": [
-              {
-                "x": 35.4749,
-                "y": 35.1064,
-                "width": 4.1899,
-                "height": 8.5106
-              }
+            "id": "es-xkcd-coche-nuevo:flashing-reply:app-past",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:flashing-reply:w02"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00035-220f5c49"
-            ]
+            "exampleEs": "ESTABA",
+            "explanationEn": "Estaba presents the flashing as an ongoing background condition rather than one completed event."
+          },
+          {
+            "id": "es-xkcd-coche-nuevo:flashing-reply:app-all-that",
+            "cardId": "phrase-y-todo-eso",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:flashing-reply:w04",
+              "es-xkcd-coche-nuevo:flashing-reply:w05",
+              "es-xkcd-coche-nuevo:flashing-reply:w06"
+            ],
+            "exampleEs": "Y TODO ESO",
+            "explanationEn": "The fixed expression loosely adds other attention-getting features like the flashing one without listing them."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00034-ad2c9245",
-          "word-auto-es-xkcd-coche-nuevo-00035-220f5c49"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0013",
-          "ocrConfidence": 1
-        }
+          "word-si--emphatic-objection",
+          "word-estaba--progressive-auxiliary",
+          "grammar-estar-gerundio",
+          "grammar-past-contrast",
+          "word-parpadeando",
+          "concept-millionth-visitor-popup-scam",
+          "word-y",
+          "phrase-y-todo-eso",
+          "word-todo",
+          "word-eso"
+        ]
       },
       {
-        "id": "es-xkcd-coche-nuevo:region-0014",
-        "labelEs": "•QUÉ RARO.",
+        "id": "es-xkcd-coche-nuevo:bizarre-reaction",
+        "labelEs": "QUÉ RARO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 80.9977,
-          "y": 56.2463,
-          "width": 10.0716,
-          "height": 8.7841
+          "x": 80.3,
+          "y": 54.7,
+          "width": 11.3,
+          "height": 11
         },
         "words": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00036",
+            "id": "es-xkcd-coche-nuevo:bizarre-reaction:w01",
             "text": "QUÉ",
             "normalized": "qué",
             "bounds": [
@@ -964,11 +1025,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00036-08662136"
+              "word-qué--exclamative-degree",
+              "question-words"
             ]
           },
           {
-            "id": "es-xkcd-coche-nuevo:word-00037",
+            "id": "es-xkcd-coche-nuevo:bizarre-reaction:w02",
             "text": "RARO",
             "normalized": "raro",
             "bounds": [
@@ -980,1069 +1042,1127 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00037-deb31108"
+              "word-raro--strange"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00036-08662136",
-          "word-auto-es-xkcd-coche-nuevo-00037-deb31108"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0014",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-coche-nuevo:region-0015",
-        "labelEs": "PARECE SER.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 61.723,
-          "y": 61.6091,
-          "width": 11.4703,
-          "height": 16.1435
-        },
-        "words": [
+        "excludedUnits": [],
+        "applications": [
           {
-            "id": "es-xkcd-coche-nuevo:word-00038",
-            "text": "PARECE",
-            "normalized": "parece",
-            "bounds": [
-              {
-                "x": 61.723,
-                "y": 61.6846,
-                "width": 6.8265,
-                "height": 16.068
-              }
+            "id": "es-xkcd-coche-nuevo:bizarre-reaction:app-exclamation",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-coche-nuevo:bizarre-reaction:w01"
             ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00038-eba6f47b"
-            ]
-          },
-          {
-            "id": "es-xkcd-coche-nuevo:word-00039",
-            "text": "SER",
-            "normalized": "ser",
-            "bounds": [
-              {
-                "x": 69.0553,
-                "y": 61.6091,
-                "width": 4.138,
-                "height": 16.0243
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-coche-nuevo-00039-7429847e"
-            ]
+            "exampleEs": "QUÉ",
+            "explanationEn": "Qué carries a written accent because it raises the degree of the following exclamatory description."
           }
         ],
-        "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-coche-nuevo-00038-eba6f47b",
-          "word-auto-es-xkcd-coche-nuevo-00039-7429847e"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0015",
-          "ocrConfidence": 1
-        }
+          "word-qué--exclamative-degree",
+          "question-words",
+          "word-raro--strange"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-coche-nuevo-00001-0bc6f139",
-      "word-auto-es-xkcd-coche-nuevo-00002-b651d9fc",
-      "word-auto-es-xkcd-coche-nuevo-00003-40440e1f",
-      "word-auto-es-xkcd-coche-nuevo-00004-b8565d6a",
-      "word-auto-es-xkcd-coche-nuevo-00005-c72cd7d2",
-      "word-auto-es-xkcd-coche-nuevo-00006-247efc11",
-      "word-auto-es-xkcd-coche-nuevo-00007-ed4788d4",
-      "word-auto-es-xkcd-coche-nuevo-00008-aefc3e80",
-      "word-auto-es-xkcd-coche-nuevo-00009-59421540",
-      "word-auto-es-xkcd-coche-nuevo-00010-815c599a",
-      "word-auto-es-xkcd-coche-nuevo-00011-ec0002ab",
-      "word-auto-es-xkcd-coche-nuevo-00012-7f37ea9b",
-      "word-auto-es-xkcd-coche-nuevo-00013-825368ed",
-      "word-auto-es-xkcd-coche-nuevo-00014-e71667e5",
-      "word-auto-es-xkcd-coche-nuevo-00015-12574239",
-      "word-auto-es-xkcd-coche-nuevo-00016-5d6cef66",
-      "word-auto-es-xkcd-coche-nuevo-00017-0da1d518",
-      "word-auto-es-xkcd-coche-nuevo-00018-6a655749",
-      "word-auto-es-xkcd-coche-nuevo-00019-2479b6d5",
-      "word-auto-es-xkcd-coche-nuevo-00020-252770a6",
-      "word-auto-es-xkcd-coche-nuevo-00021-8305b7cf",
-      "word-auto-es-xkcd-coche-nuevo-00022-5ce0c335",
-      "word-auto-es-xkcd-coche-nuevo-00023-af77b9c3",
-      "word-auto-es-xkcd-coche-nuevo-00024-5e21e815",
-      "word-auto-es-xkcd-coche-nuevo-00025-4bec26a1",
-      "word-auto-es-xkcd-coche-nuevo-00026-8fc7339c",
-      "word-auto-es-xkcd-coche-nuevo-00027-0ee61828",
-      "word-auto-es-xkcd-coche-nuevo-00028-2c1f1383",
-      "word-auto-es-xkcd-coche-nuevo-00029-05fb18cf",
-      "word-auto-es-xkcd-coche-nuevo-00030-cf1d0570",
-      "word-auto-es-xkcd-coche-nuevo-00031-fdace6c4",
-      "word-auto-es-xkcd-coche-nuevo-00032-f9a5b6a5",
-      "word-auto-es-xkcd-coche-nuevo-00033-59e58a42",
-      "word-auto-es-xkcd-coche-nuevo-00034-ad2c9245",
-      "word-auto-es-xkcd-coche-nuevo-00035-220f5c49",
-      "word-auto-es-xkcd-coche-nuevo-00036-08662136",
-      "word-auto-es-xkcd-coche-nuevo-00037-deb31108",
-      "word-auto-es-xkcd-coche-nuevo-00038-eba6f47b",
-      "word-auto-es-xkcd-coche-nuevo-00039-7429847e"
+      "word-cuándo--interrogative",
+      "question-words",
+      "word-has",
+      "grammar-present-perfect",
+      "word-pillado--got-car",
+      "word-el--article",
+      "word-coche",
+      "word-es",
+      "word-de--fixed-de-lo-mas",
+      "grammar-de-lo-mas-adjective",
+      "word-lo--fixed-de-lo-mas",
+      "word-más--fixed-de-lo-mas",
+      "word-curioso--odd",
+      "word-lo--object-pronoun",
+      "grammar-direct-object-pronoun-before-finite-verb",
+      "word-compramos",
+      "grammar-past-contrast",
+      "word-como--role",
+      "word-premio",
+      "concept-millionth-visitor-popup-scam",
+      "word-al--contraction",
+      "word-visitante",
+      "word-número",
+      "word-de--of",
+      "word-nuestra",
+      "grammar-nuestro-possessive-agreement",
+      "word-web",
+      "word-y",
+      "word-no",
+      "grammar-yes-no-question",
+      "word-quisieron",
+      "word-parece",
+      "phrase-parece-ser",
+      "word-ser",
+      "word-quizás",
+      "grammar-quizas-indicative-possibility",
+      "word-vieron--saw",
+      "word-anuncio--notice",
+      "word-si--emphatic-objection",
+      "word-estaba--progressive-auxiliary",
+      "grammar-estar-gerundio",
+      "word-parpadeando",
+      "phrase-y-todo-eso",
+      "word-todo",
+      "word-eso",
+      "word-qué--exclamative-degree",
+      "word-raro--strange"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9762,
-      "lowConfidenceTokenCount": 2,
-      "rawOcrTokenCount": 42,
-      "filteredNonLatinTokenCount": 3,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00001-0bc6f139",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00001",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00002-b651d9fc",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00002",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00003-40440e1f",
-      "kind": "word",
-      "promptEs": "lo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00003",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9294ab38039f60d2ec53",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00004-b8565d6a",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00004",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5abe317bcd483e94dfa8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00005-c72cd7d2",
-      "kind": "word",
-      "promptEs": "curioso",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00005",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-77b5f3a38452c2880b2a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00006-247efc11",
-      "kind": "word",
-      "promptEs": "quizás",
-      "answerEn": "maybe; perhaps",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00006",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bca1c5906fb876e7aa63",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00007-ed4788d4",
-      "kind": "word",
-      "promptEs": "no",
-      "answerEn": "no; not",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00007",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00008-aefc3e80",
-      "kind": "word",
-      "promptEs": "vieron",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00008",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ae89689ff883a757718c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00009-59421540",
-      "kind": "word",
-      "promptEs": "lo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00009",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9294ab38039f60d2ec53",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00010-815c599a",
-      "kind": "word",
-      "promptEs": "compramos",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00010",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3a0fcfbd73dda615c55d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00011-ec0002ab",
-      "kind": "word",
-      "promptEs": "como",
-      "answerEn": "as; like",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00011",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ea3dc747f15400ac1d8b",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00012-7f37ea9b",
-      "kind": "word",
-      "promptEs": "el",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00012",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00013-825368ed",
-      "kind": "word",
-      "promptEs": "anuncio",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00013",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5c1acf62b200249a0f12",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00014-e71667e5",
-      "kind": "word",
-      "promptEs": "y",
-      "answerEn": "and",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00014",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00015-12574239",
-      "kind": "word",
-      "promptEs": "no",
-      "answerEn": "no; not",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00015",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00016-5d6cef66",
-      "kind": "word",
-      "promptEs": "lo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00016",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9294ab38039f60d2ec53",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00017-0da1d518",
-      "kind": "word",
-      "promptEs": "quisieron",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00017",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-13fcb69ea063c0e4e13f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00018-6a655749",
+      "id": "word-cuándo--interrogative",
       "kind": "word",
       "promptEs": "cuándo",
-      "answerEn": "when",
-      "noteEn": "",
+      "answerEn": "when?",
+      "noteEn": "Cuándo has an accent when it asks, directly or indirectly, at what time something happens.",
+      "example": {
+        "es": "¿Cuándo empieza la clase?",
+        "en": "When does the class start?"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "question",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00018",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e311c57df6c9a04224fb",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-semaforo-largo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00019-2479b6d5",
+      "id": "question-words",
+      "kind": "grammar",
+      "promptEs": "qué · cómo · cuándo…",
+      "answerEn": "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+      "noteEn": "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "accents"
+      ],
+      "questionEn": "Why do words such as que, como, and cuando sometimes have a written accent?",
+      "example": {
+        "es": "¿Cómo te llamas?",
+        "en": "What is your name?"
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-has",
       "kind": "word",
       "promptEs": "has",
       "answerEn": "you have",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00019",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9150c74c5f92d51a9285",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00020-252770a6",
-      "kind": "word",
-      "promptEs": "si",
-      "answerEn": "if",
-      "noteEn": "",
+      "id": "grammar-present-perfect",
+      "kind": "grammar",
+      "promptEs": "he/has/ha/hemos/habéis/han + participio",
+      "answerEn": "Use he, has, ha, hemos, habéis, or han followed by the verb’s completed-action form.",
+      "noteEn": "These are forms of haber, the helper verb used here like English “have.” For most verbs, the completed-action form ends in -ado after an -ar verb and -ido after an -er or -ir verb. This form is called the past participle, and it does not change after haber. How often this tense is used instead of the simple past varies by region.",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "B1",
+        "grammar",
+        "perfect tense"
       ],
-      "reviewStatus": "needs-review",
+      "questionEn": "How do you say “have done,” as in “I have finished”?",
+      "example": {
+        "es": "He terminado.",
+        "en": "I have finished."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00020",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-97a62ad21d79c01cceb7",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00021-8305b7cf",
-      "kind": "word",
-      "promptEs": "estaba",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00021",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fe32f47ebccdb1201d5b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00022-5ce0c335",
-      "kind": "word",
-      "promptEs": "premio",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00022",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e6084c09d6b69f3d87ac",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00023-af77b9c3",
-      "kind": "word",
-      "promptEs": "al",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00023",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00024-5e21e815",
-      "kind": "word",
-      "promptEs": "visitante",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00024",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d57f72e1c8e3cdd482d7",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00025-4bec26a1",
+      "id": "word-pillado--got-car",
       "kind": "word",
       "promptEs": "pillado",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "got; picked up (a car or other item)",
+      "noteEn": "Pillado is the completed-action form of pillar. In informal Spain Spanish, pillar can mean to get, obtain, or pick up something; with has, it asks about an action connected to the present.",
+      "example": {
+        "es": "He pillado un coche de segunda mano.",
+        "en": "I have picked up a second-hand car."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "informal",
+        "getting something",
+        "Spain",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00025",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63d3ef637440279a4226",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00026-8fc7339c",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00026",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00027-0ee61828",
+      "id": "word-coche",
       "kind": "word",
       "promptEs": "coche",
-      "answerEn": "Meaning needs review",
+      "answerEn": "car",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "vehicle",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00027",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8fb3aaa2de45e021c0a8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diario-5",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00028-2c1f1383",
+      "id": "word-es",
       "kind": "word",
-      "promptEs": "número",
-      "answerEn": "Meaning needs review",
+      "promptEs": "es",
+      "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00028",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-84871a760b20b5c33b2d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00029-05fb18cf",
+      "id": "word-de--fixed-de-lo-mas",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; begins de lo más before a description",
+      "noteEn": "De is the first fixed piece of de lo más, an expression that raises the degree of the description that follows.",
+      "example": {
+        "es": "La visita fue de lo más agradable.",
+        "en": "The visit was extremely pleasant."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "degree",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00032",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00030-cf1d0570",
+      "id": "grammar-de-lo-mas-adjective",
+      "kind": "grammar",
+      "promptEs": "de lo más + adjetivo",
+      "questionEn": "How can you strongly raise the degree of a description, meaning ‘very’ or ‘extremely’?",
+      "answerEn": "Use the fixed words de lo más, then the describing word.",
+      "noteEn": "The plus sign means ‘followed by.’ De lo más stays fixed and is translated as a unit. The following describing word can change in its ordinary way to match what it describes: curioso, curiosa, curiosos, curiosas.",
+      "example": {
+        "es": "Las historias son de lo más curiosas.",
+        "en": "The stories are extremely odd."
+      },
+      "tags": [
+        "grammar",
+        "degree",
+        "description",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-lo--fixed-de-lo-mas",
       "kind": "word",
-      "promptEs": "parpadeando",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "lo",
+      "answerEn": "no separate English word; middle piece of de lo más",
+      "noteEn": "Lo is neutral here: it does not stand for a masculine object. Learn it as part of the fixed degree expression de lo más.",
+      "example": {
+        "es": "La visita fue de lo más agradable.",
+        "en": "The visit was extremely pleasant."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "neutral lo",
+        "degree",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00033",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f770d84def5ed3cee5fc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00031-fdace6c4",
+      "id": "word-más--fixed-de-lo-mas",
+      "kind": "word",
+      "promptEs": "más",
+      "answerEn": "very; extremely (inside de lo más)",
+      "noteEn": "Inside de lo más, más strengthens the following description. The whole expression is usually translated together rather than word by word.",
+      "example": {
+        "es": "El resultado es de lo más extraño.",
+        "en": "The result is extremely strange."
+      },
+      "tags": [
+        "word",
+        "fixed expression",
+        "degree",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-curioso--odd",
+      "kind": "word",
+      "promptEs": "curioso",
+      "answerEn": "odd; curious; unusual",
+      "noteEn": "Curioso can describe something as strange or noteworthy, not only a person who wants to know more.",
+      "example": {
+        "es": "Es un caso curioso.",
+        "en": "It is an odd case."
+      },
+      "tags": [
+        "word",
+        "description",
+        "odd",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-lo--object-pronoun",
+      "kind": "word",
+      "promptEs": "lo",
+      "answerEn": "it (direct-object pronoun)",
+      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "example": {
+        "es": "Tengo el libro y lo leo.",
+        "en": "I have the book and I’m reading it."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-direct-object-pronoun-before-finite-verb",
+      "kind": "grammar",
+      "promptEs": "lo, la, los, las delante de un verbo conjugado",
+      "questionEn": "Where do you put the Spanish word for “it” or “them” when the main verb already shows who acts and when?",
+      "answerEn": "Put lo, la, los, or las directly before that verb.",
+      "noteEn": "These short words replace the person or thing directly affected by the action; that role is called the direct object. Choose lo or los for a masculine thing, la or las for a feminine thing, and match singular or plural. Before a verb form such as conté or vimos, write the short word separately in front: lo conté, las vimos. With an unchanged dictionary form, it can instead attach to the end, as in verlo.",
+      "example": {
+        "es": "La película, la vimos ayer.",
+        "en": "The movie—we watched it yesterday."
+      },
+      "tags": [
+        "grammar",
+        "direct object",
+        "pronoun",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-compramos",
+      "kind": "word",
+      "promptEs": "compramos",
+      "answerEn": "we bought",
+      "noteEn": "Compramos has the same spelling for present ‘we buy’ and completed-past ‘we bought.’ Time words and the surrounding story show which reading is intended.",
+      "example": {
+        "es": "Ayer compramos una mesa.",
+        "en": "Yesterday we bought a table."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "completed past",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-past-contrast",
+      "kind": "grammar",
+      "promptEs": "hablé vs. hablaba",
+      "answerEn": "Use the preterite for a completed event and the imperfect for background, an ongoing situation, or something that used to happen.",
+      "noteEn": "Think of a story: the preterite answers “What happened next?” The imperfect answers “What was happening?”, “What were things like?”, or “What used to happen?” These two names describe how the speaker presents an event, not simply how long it lasted.",
+      "tags": [
+        "A2",
+        "grammar",
+        "past tenses"
+      ],
+      "questionEn": "Spanish has two common ways to talk about the past. When do you use each one?",
+      "example": {
+        "es": "Mientras caminaba, empezó a llover.",
+        "en": "While I was walking, it started to rain."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-como--role",
+      "kind": "word",
+      "promptEs": "como",
+      "answerEn": "as (in the role or capacity of)",
+      "noteEn": "Unaccented como can introduce the role, identity, or point of view from which someone speaks or acts. This is different from cómo with an accent, which asks “how.”",
+      "example": {
+        "es": "Como médico, recomiendo descansar.",
+        "en": "As a doctor, I recommend resting."
+      },
+      "tags": [
+        "word",
+        "role",
+        "point of view",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fotos-porfa",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-premio",
+      "kind": "word",
+      "promptEs": "premio",
+      "answerEn": "prize; award",
+      "noteEn": "Premio can name something won or awarded, including a promotional prize.",
+      "example": {
+        "es": "El premio era un viaje.",
+        "en": "The prize was a trip."
+      },
+      "tags": [
+        "word",
+        "noun",
+        "prize",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-millionth-visitor-popup-scam",
+      "kind": "concept",
+      "promptEs": "premio al visitante número 100.000.000 · anuncio parpadeante en la web",
+      "answerEn": "Early web advertisements often falsely claimed that the viewer was a numbered visitor who had won a valuable prize. Flashing text was meant to attract clicks, not prove that a real prize existed.",
+      "noteEn": "The speakers treat the familiar fake promotion literally: they bought a car for the supposed winner and assume the winner simply missed the flashing notice. The official title text extends the joke to other implausible advertising claims that legitimate businesses would struggle to distinguish from spam.",
+      "tags": [
+        "concept",
+        "web history",
+        "advertising scam",
+        "comic joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-al--contraction",
+      "kind": "word",
+      "promptEs": "al",
+      "answerEn": "to the (a + el)",
+      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "example": {
+        "es": "Voy al mercado.",
+        "en": "I’m going to the market."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-visitante",
+      "kind": "word",
+      "promptEs": "visitante",
+      "answerEn": "visitor",
+      "noteEn": "Visitante has the same singular form for a male or female visitor: el visitante or la visitante.",
+      "example": {
+        "es": "Cada visitante recibe un mapa.",
+        "en": "Each visitor receives a map."
+      },
+      "tags": [
+        "word",
+        "person",
+        "visitor",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-número",
+      "kind": "word",
+      "promptEs": "número",
+      "answerEn": "number",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "mathematics"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--of",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-nuestra",
+      "kind": "word",
+      "promptEs": "nuestra",
+      "answerEn": "our (before a feminine singular noun)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "possessive",
+        "feminine"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-nuestro-possessive-agreement",
+      "kind": "grammar",
+      "promptEs": "nuestro/nuestra/nuestros/nuestras + sustantivo",
+      "questionEn": "How do you choose the Spanish form of ‘our’ before a noun?",
+      "answerEn": "Choose nuestro, nuestra, nuestros, or nuestras to match the gender and number of what is owned.",
+      "noteEn": "The form matches the owned noun, not the owners. Use nuestro before one masculine thing, nuestra before one feminine thing, nuestros before masculine or mixed plural things, and nuestras before feminine plural things.",
+      "example": {
+        "es": "Nuestras maletas están aquí.",
+        "en": "Our suitcases are here."
+      },
+      "tags": [
+        "grammar",
+        "possessives",
+        "agreement",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-nostalgia",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-web",
+      "kind": "word",
+      "promptEs": "web",
+      "answerEn": "web; internet",
+      "noteEn": "Web is an English loan commonly used as a feminine noun in Spanish, as in la web. It can refer to the World Wide Web or to a website, depending on context.",
+      "example": {
+        "es": "Encontré la información en la web.",
+        "en": "I found the information on the web."
+      },
+      "tags": [
+        "word",
+        "technology",
+        "internet",
+        "loanword",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-kindle",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00034",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00032-f9a5b6a5",
+      "id": "word-no",
       "kind": "word",
-      "promptEs": "todo",
-      "answerEn": "everything; all",
+      "promptEs": "no",
+      "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00035",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-602fae580f5863abfb31",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00033-59e58a42",
+      "id": "grammar-yes-no-question",
+      "kind": "grammar",
+      "promptEs": "¿verbo + resto de la idea?",
+      "questionEn": "How can Spanish turn an ordinary statement into a yes-or-no question?",
+      "answerEn": "Use question marks and questioning intonation; Spanish does not need a separate helper like English do or does.",
+      "noteEn": "The word order can remain the same as in a statement, especially in conversation. The opening and closing question marks show the question in writing.",
+      "example": {
+        "es": "¿Tienen café?",
+        "en": "Do they have coffee?"
+      },
+      "tags": [
+        "grammar",
+        "questions",
+        "word order",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conmovedor",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-quisieron",
       "kind": "word",
-      "promptEs": "eso",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "quisieron",
+      "answerEn": "they wanted; you all wanted",
+      "noteEn": "Quisieron is a completed-past form of querer for ellos, ellas, or ustedes. In a negative sentence, no quisieron can mean that they did not want something or refused it.",
+      "example": {
+        "es": "No quisieron el premio.",
+        "en": "They did not want the prize."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "querer",
+        "completed past",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00036",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f45140f001d5fb767ec4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00034-ad2c9245",
-      "kind": "word",
-      "promptEs": "nuestra",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00037",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9bb696f56f542651835d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00035-220f5c49",
-      "kind": "word",
-      "promptEs": "web",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00038",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4b5e57f6eb2f42b9039b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00036-08662136",
-      "kind": "word",
-      "promptEs": "qué",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00039",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0014",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-9030c4df6adca92b9580",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00037-deb31108",
-      "kind": "word",
-      "promptEs": "raro",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00040",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0014",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-424bda6cb8f712909a03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-coche-nuevo-00038-eba6f47b",
+      "id": "word-parece",
       "kind": "word",
       "promptEs": "parece",
       "answerEn": "seems; appears",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00041",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4788c9ca81d9fdd54ac0",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-coche-nuevo-00039-7429847e",
+      "id": "phrase-parece-ser",
+      "kind": "phrase",
+      "promptEs": "parece ser · parece ser + descripción",
+      "questionEn": "How do you say that something apparently is a certain way, or answer ‘apparently’ by itself?",
+      "answerEn": "Use parece ser before the description; parece ser can also stand alone when the missing information is already clear.",
+      "noteEn": "Parece changes for time if needed, while ser stays in its unchanged dictionary form: parecía ser means ‘it seemed to be.’ A following noun or description can state what seems true.",
+      "example": {
+        "es": "Parece ser una buena opción.",
+        "en": "It seems to be a good option."
+      },
+      "tags": [
+        "phrase",
+        "appearance",
+        "ellipsis",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ser",
       "kind": "word",
       "promptEs": "ser",
       "answerEn": "to be",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-coche-nuevo:ocr-token-00042",
-        "sourceLineId": "es-xkcd-coche-nuevo:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f0e948db590cf453844d",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-quizás",
+      "kind": "word",
+      "promptEs": "quizás",
+      "answerEn": "maybe; perhaps",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-quizas-indicative-possibility",
+      "kind": "grammar",
+      "promptEs": "quizás + forma normal de afirmación",
+      "questionEn": "How can you say “maybe” while presenting an idea as a neutral or fairly plausible possibility?",
+      "answerEn": "Put quizás before the idea and use the verb form you would use in an ordinary statement.",
+      "noteEn": "This ordinary statement form is called the indicative: es stays es, and tiene stays tiene. Spanish can instead use a special possibility form called the subjunctive after quizás when the speaker wants to emphasize uncertainty; quizás alone does not force either choice.",
+      "example": {
+        "es": "Quizás Ana tiene razón.",
+        "en": "Maybe Ana is right."
+      },
+      "tags": [
+        "grammar",
+        "possibility",
+        "indicative",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-hibris-del-ingeniero",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-vieron--saw",
+      "kind": "word",
+      "promptEs": "vieron",
+      "answerEn": "they saw; you all saw",
+      "noteEn": "Vieron is the completed-past form of ver for ellos, ellas, or ustedes.",
+      "example": {
+        "es": "Vieron el aviso ayer.",
+        "en": "They saw the notice yesterday."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "seeing",
+        "completed past",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-anuncio--notice",
+      "kind": "word",
+      "promptEs": "anuncio",
+      "answerEn": "notice; advertisement",
+      "noteEn": "An anuncio can be a notice that informs readers or an advertisement that promotes something.",
+      "example": {
+        "es": "Vi el anuncio en la página web.",
+        "en": "I saw the notice on the website."
+      },
+      "tags": [
+        "word",
+        "media",
+        "notice",
+        "advertising",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-si--emphatic-objection",
+      "kind": "word",
+      "promptEs": "si",
+      "answerEn": "but; after all (introduces an emphatic objection or reminder)",
+      "noteEn": "This is standard unaccented si at the start of an exclamation: it pushes back or reminds someone of an obvious fact. It is not accented sí, ‘yes,’ and it does not set a condition as in si llueve, ‘if it rains.’",
+      "example": {
+        "es": "¡Si ya te lo dije!",
+        "en": "But I already told you!"
+      },
+      "tags": [
+        "word",
+        "discourse",
+        "emphatic objection",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-estaba--progressive-auxiliary",
+      "kind": "word",
+      "promptEs": "estaba",
+      "answerEn": "was; forms an ongoing past action with an -ando or -iendo form",
+      "noteEn": "Estaba is a past form of estar for I, he, she, or one thing. Before an ongoing-action form such as parpadeando, it presents an action in progress in the past.",
+      "example": {
+        "es": "La luz estaba parpadeando.",
+        "en": "The light was flashing."
+      },
+      "tags": [
+        "word",
+        "estar",
+        "past progressive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-estar-gerundio",
+      "kind": "grammar",
+      "promptEs": "estar + gerundio (-ando/-iendo)",
+      "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "tags": [
+        "A2",
+        "grammar",
+        "actions in progress"
+      ],
+      "questionEn": "How do you say that someone is in the middle of doing something?",
+      "example": {
+        "es": "Estoy leyendo.",
+        "en": "I am reading."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-parpadeando",
+      "kind": "word",
+      "promptEs": "parpadeando",
+      "answerEn": "flashing; blinking",
+      "noteEn": "Parpadeando is the ongoing-action form of parpadear. It can describe eyes blinking or a light repeatedly switching on and off.",
+      "example": {
+        "es": "La pantalla sigue parpadeando.",
+        "en": "The screen keeps flashing."
+      },
+      "tags": [
+        "word",
+        "ongoing action",
+        "light",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-y-todo-eso",
+      "kind": "phrase",
+      "promptEs": "y todo eso",
+      "questionEn": "How do you add ‘and all that’ or ‘and everything like that’ after one detail?",
+      "answerEn": "Use the fixed conversational expression y todo eso.",
+      "noteEn": "The expression loosely adds other similar details without listing them. Eso points back to the kind of thing just mentioned; it does not identify one new object.",
+      "example": {
+        "es": "Trajo luces, música y todo eso.",
+        "en": "He brought lights, music, and all that."
+      },
+      "tags": [
+        "phrase",
+        "conversation",
+        "additional details",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-coche-nuevo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-todo",
+      "kind": "word",
+      "promptEs": "todo",
+      "answerEn": "everything; all",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-eso",
+      "kind": "word",
+      "promptEs": "eso",
+      "answerEn": "that; that thing",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "demonstrative"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-qué--exclamative-degree",
+      "kind": "word",
+      "promptEs": "qué",
+      "answerEn": "how (to what a degree, as in qué insoportable)",
+      "noteEn": "Qué before an adjective can express a strong degree, like English “how” in “how strange!” It keeps its written accent.",
+      "example": {
+        "es": "¡Qué bonito es el jardín!",
+        "en": "How beautiful the garden is!"
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-raro--strange",
+      "kind": "word",
+      "promptEs": "raro",
+      "answerEn": "strange; unusual",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "descriptions",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-alucinaciones",
+        "contextualSenseReviewed": true
       }
     }
   ]

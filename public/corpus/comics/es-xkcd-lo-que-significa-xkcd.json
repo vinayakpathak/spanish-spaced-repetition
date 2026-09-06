@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-19fe04f57fc9db4c",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9756,
-    "lowConfidenceTokenCount": 4,
-    "rawOcrTokenCount": 82,
-    "filteredNonLatinTokenCount": 1,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-lo-que-significa-xkcd",
     "xkcdNumber": 207,
     "publishedAt": "2007-01-08",
-    "title": "Lo que significa XKCD",
+    "title": "What xkcd Means",
     "titleEs": "Lo que significa XKCD",
     "image": {
       "src": "https://es.xkcd.com/images/207_what_xkcd_means.png",
       "width": 350,
       "height": 891,
       "aspectRatio": 0.3928,
-      "altEn": "Spanish-language xkcd comic #207: Lo que significa XKCD"
+      "altEn": "Spanish-language xkcd comic #207: What xkcd Means"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,11 +36,11 @@
     },
     "titleText": {
       "es": "Significa pasar junto a monjas por la calle con ketchup en las manos, haciendo como que ocultas estigmas.",
-      "en": "English title text pending review."
+      "en": "It means shuffling quickly past nuns on the street with ketchup in your palms, pretending you're hiding stigmata."
     },
     "regions": [
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0001",
+        "id": "es-xkcd-lo-que-significa-xkcd:header",
         "labelEs": "¿QUÉ SIGNIFICA XKCD?",
         "translationEn": "",
         "noteEn": "",
@@ -58,7 +52,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00001",
+            "id": "es-xkcd-lo-que-significa-xkcd:header:word-1",
             "text": "QUÉ",
             "normalized": "qué",
             "bounds": [
@@ -70,11 +64,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00001-0d629e1b"
+              "word-qué--interrogative",
+              "question-words"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00002",
+            "id": "es-xkcd-lo-que-significa-xkcd:header:word-2",
             "text": "SIGNIFICA",
             "normalized": "significa",
             "bounds": [
@@ -86,13 +81,16 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00002-07cc5b00"
+              "word-significa--means"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00003",
+            "id": "es-xkcd-lo-que-significa-xkcd:header:excluded-xkcd",
             "text": "XKCD",
-            "normalized": "xkcd",
+            "reason": "non-spanish-text",
+            "rationale": "XKCD is the comic's non-Spanish name, not a Spanish vocabulary item.",
             "bounds": [
               {
                 "x": 63.7857,
@@ -100,39 +98,40 @@
                 "width": 24.7857,
                 "height": 2.9148
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00003-7cdbc4cd"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00001-0d629e1b",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00002-07cc5b00",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00003-7cdbc4cd"
+        "applications": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:header:app-question-what",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:header:word-1"
+            ],
+            "exampleEs": "QUÉ",
+            "explanationEn": "Qué carries a written accent because it directly asks what."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-qué--interrogative",
+          "question-words",
+          "word-significa--means"
+        ]
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0002",
-        "labelEs": "SIGNIFICA AHORRAR ALGUNOS SEGUNDOS EN",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption",
+        "labelEs": "SIGNIFICA AHORRAR ALGUNOS SEGUNDOS EN UN SEMÁFORO EN ROJO HACIENDO MANIOBRAS ELABORADAS Y DUDOSAMENTE LEGALES.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 2.2857,
+          "x": 1.7143,
           "y": 6.7265,
-          "width": 90.2857,
-          "height": 1.7937
+          "width": 96.5714,
+          "height": 5.6053
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00004",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-1",
             "text": "SIGNIFICA",
             "normalized": "significa",
             "bounds": [
@@ -144,11 +143,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00004-4fb83634"
+              "word-significa--means",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00005",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-2",
             "text": "AHORRAR",
             "normalized": "ahorrar",
             "bounds": [
@@ -160,11 +160,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00005-e9a75fe4"
+              "word-ahorrar",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00006",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-3",
             "text": "ALGUNOS",
             "normalized": "algunos",
             "bounds": [
@@ -176,11 +177,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00006-7ff8db77"
+              "word-algunos"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00007",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-4",
             "text": "SEGUNDOS",
             "normalized": "segundos",
             "bounds": [
@@ -192,11 +193,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00007-fe85d552"
+              "word-segundos"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00008",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-5",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -208,39 +209,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00008-9268ce88"
+              "word-en--at-location"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00004-4fb83634",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00005-e9a75fe4",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00006-7ff8db77",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00007-fe85d552",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00008-9268ce88"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0003",
-        "labelEs": "UN SEMÁFORO EN ROJO HACIENDO MANIOBRAS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 1.7143,
-          "y": 8.296,
-          "width": 96.5714,
-          "height": 2.0179
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00009",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-6",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -252,11 +225,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00009-14c54019"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00010",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-7",
             "text": "SEMÁFORO",
             "normalized": "semáforo",
             "bounds": [
@@ -268,11 +241,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00010-31af6c3c"
+              "word-semáforo",
+              "phrase-semáforo-en-rojo"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00011",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-8",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -284,11 +258,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00011-94be8370"
+              "word-en--signal-state",
+              "phrase-semáforo-en-rojo"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00012",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-9",
             "text": "ROJO",
             "normalized": "rojo",
             "bounds": [
@@ -300,11 +275,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00012-9cce8398"
+              "word-rojo--traffic-signal",
+              "phrase-semáforo-en-rojo"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00013",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-10",
             "text": "HACIENDO",
             "normalized": "haciendo",
             "bounds": [
@@ -316,11 +292,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00013-27b79a4a"
+              "word-haciendo--by-doing",
+              "grammar-adverbial-gerund"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00014",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-11",
             "text": "MANIOBRAS",
             "normalized": "maniobras",
             "bounds": [
@@ -332,40 +309,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00014-041b3a3c"
+              "word-maniobras"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00009-14c54019",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00010-31af6c3c",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00011-94be8370",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00012-9cce8398",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00013-27b79a4a",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00014-041b3a3c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0004",
-        "labelEs": "ELABORADAS Y DUDOSAMENTE LEGALES.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.2857,
-          "y": 10.3139,
-          "width": 80.5714,
-          "height": 2.0179
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00015",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-12",
             "text": "ELABORADAS",
             "normalized": "elaboradas",
             "bounds": [
@@ -377,11 +325,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00015-2f5259da"
+              "word-elaboradas"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00016",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-13",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -393,11 +341,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00016-f59ddae4"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00017",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-14",
             "text": "DUDOSAMENTE",
             "normalized": "dudosamente",
             "bounds": [
@@ -409,11 +357,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00017-977afe17"
+              "word-dudosamente"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00018",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-15",
             "text": "LEGALES",
             "normalized": "legales",
             "bounds": [
@@ -425,38 +373,109 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00018-e983ed63"
+              "word-legales"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:app-means-action",
+            "cardId": "grammar-significar-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-1",
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-2"
+            ],
+            "exampleEs": "SIGNIFICA AHORRAR",
+            "explanationEn": "Significa introduces what the activity means, and ahorrar remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:app-red-light",
+            "cardId": "phrase-semáforo-en-rojo",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-7",
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-8",
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-9"
+            ],
+            "exampleEs": "SEMÁFORO EN ROJO",
+            "explanationEn": "Semáforo names the traffic light, while en rojo gives its current signal color."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:app-method-gerund",
+            "cardId": "grammar-adverbial-gerund",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-10"
+            ],
+            "exampleEs": "HACIENDO",
+            "explanationEn": "Haciendo uses the -iendo form to identify the method used to save time."
+          }
+        ],
+        "cardIds": [
+          "word-significa--means",
+          "grammar-significar-infinitive",
+          "word-ahorrar",
+          "word-algunos",
+          "word-segundos",
+          "word-en--at-location",
+          "word-un",
+          "word-semáforo",
+          "phrase-semáforo-en-rojo",
+          "word-en--signal-state",
+          "word-rojo--traffic-signal",
+          "word-haciendo--by-doing",
+          "grammar-adverbial-gerund",
+          "word-maniobras",
+          "word-elaboradas",
+          "word-y",
+          "word-dudosamente",
+          "word-legales"
+        ]
+      },
+      {
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-1-route-arrow",
+        "labelEs": "↑",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 33.1429,
+          "y": 14.7026,
+          "width": 4.2857,
+          "height": 3.5915
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-1-route-arrow:excluded-arrow",
+            "text": "↑",
+            "reason": "symbol",
+            "rationale": "This arrow marks the car's route and is not a Spanish lexical item.",
+            "bounds": [
+              {
+                "x": 33.1429,
+                "y": 14.7026,
+                "width": 4.2857,
+                "height": 3.5915
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00015-2f5259da",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00016-f59ddae4",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00017-977afe17",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00018-e983ed63"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0005",
-        "labelEs": "SIGNIFICA HACER QUE ALGUIEN TE LLAME",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption",
+        "labelEs": "SIGNIFICA HACER QUE ALGUIEN TE LLAME AL MÓVIL PARA AVERIGUAR DÓNDE ESTÁ.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 2.2857,
           "y": 34.7534,
           "width": 84.5714,
-          "height": 2.0179
+          "height": 3.8116
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00019",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-1",
             "text": "SIGNIFICA",
             "normalized": "significa",
             "bounds": [
@@ -468,11 +487,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00019-98ed95d2"
+              "word-significa--means",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00020",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-2",
             "text": "HACER",
             "normalized": "hacer",
             "bounds": [
@@ -484,11 +504,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00020-013c97be"
+              "word-hacer--cause-action",
+              "grammar-significar-infinitive",
+              "grammar-hacer-que-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00021",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-3",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -500,11 +522,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00021-75d5f8bb"
+              "word-que--clause-link",
+              "grammar-hacer-que-subjunctive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00022",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-4",
             "text": "ALGUIEN",
             "normalized": "alguien",
             "bounds": [
@@ -516,11 +539,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00022-57d23b52"
+              "word-alguien"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00023",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-5",
             "text": "TE",
             "normalized": "te",
             "bounds": [
@@ -532,11 +555,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00023-9b3c773a"
+              "word-te--direct"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00024",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-6",
             "text": "LLAME",
             "normalized": "llame",
             "bounds": [
@@ -548,40 +571,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00024-625b5aea"
+              "word-llame--phone",
+              "grammar-hacer-que-subjunctive"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00019-98ed95d2",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00020-013c97be",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00021-75d5f8bb",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00022-57d23b52",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00023-9b3c773a",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00024-625b5aea"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0006",
-        "labelEs": "AL MÓVIL PARA AVERIGUAR DÓNDE ESTÁ.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.2857,
-          "y": 36.5471,
-          "width": 82.2857,
-          "height": 2.0179
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00025",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-7",
             "text": "AL",
             "normalized": "al",
             "bounds": [
@@ -593,11 +588,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00025-517b790f"
+              "word-al--contraction"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00026",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-8",
             "text": "MÓVIL",
             "normalized": "móvil",
             "bounds": [
@@ -609,11 +604,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00026-394f8085"
+              "word-móvil--cell-phone"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00027",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-9",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -625,11 +620,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00027-b0145892"
+              "word-para",
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00028",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-10",
             "text": "AVERIGUAR",
             "normalized": "averiguar",
             "bounds": [
@@ -641,11 +637,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00028-f9a820d9"
+              "word-averiguar",
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00029",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-11",
             "text": "DÓNDE",
             "normalized": "dónde",
             "bounds": [
@@ -657,11 +654,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00029-9788610c"
+              "word-dónde--indirect-question",
+              "question-words"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00030",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-12",
             "text": "ESTÁ",
             "normalized": "está",
             "bounds": [
@@ -673,40 +671,117 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00030-152e31f9"
+              "word-está"
+            ]
+          }
+        ],
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:app-means-action",
+            "cardId": "grammar-significar-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-1",
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-2"
+            ],
+            "exampleEs": "SIGNIFICA HACER",
+            "explanationEn": "Significa introduces the meaning, and hacer remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:app-cause-call",
+            "cardId": "grammar-hacer-que-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-2",
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-3",
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-6"
+            ],
+            "exampleEs": "HACER QUE ALGUIEN TE LLAME",
+            "explanationEn": "Hacer que introduces a caused action, and llame is the special form of llamar used for that action."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:app-purpose",
+            "cardId": "grammar-para-infinitive-purpose",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-9",
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-10"
+            ],
+            "exampleEs": "PARA AVERIGUAR",
+            "explanationEn": "Para introduces the purpose, and averiguar stays in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-caption:app-indirect-where",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-2-caption:word-11"
+            ],
+            "exampleEs": "DÓNDE",
+            "explanationEn": "Dónde keeps its accent because it introduces an indirect question about location."
+          }
+        ],
+        "cardIds": [
+          "word-significa--means",
+          "grammar-significar-infinitive",
+          "word-hacer--cause-action",
+          "grammar-hacer-que-subjunctive",
+          "word-que--clause-link",
+          "word-alguien",
+          "word-te--direct",
+          "word-llame--phone",
+          "word-al--contraction",
+          "word-móvil--cell-phone",
+          "word-para",
+          "grammar-para-infinitive-purpose",
+          "word-averiguar",
+          "word-dónde--indirect-question",
+          "question-words",
+          "word-está"
+        ]
+      },
+      {
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-2-sound",
+        "labelEs": "RING",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 61.1429,
+          "y": 43.8833,
+          "width": 15.1429,
+          "height": 4.0404
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-2-sound:excluded-ring",
+            "text": "RING",
+            "reason": "non-spanish-text",
+            "rationale": "RING is an English phone sound effect, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 61.1429,
+                "y": 43.8833,
+                "width": 15.1429,
+                "height": 4.0404
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00025-517b790f",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00026-394f8085",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00027-b0145892",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00028-f9a820d9",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00029-9788610c",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00030-152e31f9"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0007",
-        "labelEs": "SIGNIFICA LLAMAR A LA FUNCIÓN DE",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption",
+        "labelEs": "SIGNIFICA LLAMAR A LA FUNCIÓN DE ACKERMANN CON EL NÚMERO DE GRAHAM COMO ARGUMENTO SÓLO PARA HORRORIZAR A LOS MATEMÁTICOS.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 2.8571,
+          "x": 2.2857,
           "y": 55.8296,
-          "width": 74.2857,
-          "height": 2.0179
+          "width": 90.8571,
+          "height": 7.3991
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00031",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-1",
             "text": "SIGNIFICA",
             "normalized": "significa",
             "bounds": [
@@ -718,11 +793,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00031-d225c6b9"
+              "word-significa--means",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00032",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-2",
             "text": "LLAMAR",
             "normalized": "llamar",
             "bounds": [
@@ -734,11 +810,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00032-e5283f69"
+              "word-llamar--invoke-function",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00033",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-3",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -750,11 +827,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00033-be9dd9f0"
+              "word-a--function-call"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00034",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-4",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -766,11 +843,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00034-2f1ec05f"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00035",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-5",
             "text": "FUNCIÓN",
             "normalized": "función",
             "bounds": [
@@ -782,11 +859,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00035-a2da7301"
+              "word-función--mathematical",
+              "concept-ackermann-function-graham-number"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00036",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-6",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -798,56 +876,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00036-e2bb357c"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00031-d225c6b9",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00032-e5283f69",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00033-be9dd9f0",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00034-2f1ec05f",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00035-a2da7301",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00036-e2bb357c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0008",
-        "labelEs": "ACKERMANN CON EL NÚMERO DE GRAHAM",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.8571,
-          "y": 57.6233,
-          "width": 88,
-          "height": 2.0179
-        },
-        "words": [
-          {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00037",
-            "text": "ACKERMANN",
-            "normalized": "ackermann",
-            "bounds": [
-              {
-                "x": 2.8571,
-                "y": 57.6233,
-                "width": 26.3571,
-                "height": 2.0179
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00037-689a3690"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00038",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-7",
             "text": "CON",
             "normalized": "con",
             "bounds": [
@@ -859,11 +892,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00038-f64657c7"
+              "word-con"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00039",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-8",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -875,11 +908,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00039-607223d9"
+              "word-el--article"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00040",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-9",
             "text": "NÚMERO",
             "normalized": "número",
             "bounds": [
@@ -891,11 +924,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00040-8a4c5659"
+              "word-número",
+              "concept-ackermann-function-graham-number"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00041",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-10",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -907,56 +941,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00041-94e08b20"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00042",
-            "text": "GRAHAM",
-            "normalized": "graham",
-            "bounds": [
-              {
-                "x": 72.2857,
-                "y": 57.6233,
-                "width": 18.5714,
-                "height": 2.0179
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00042-8c680a86"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00037-689a3690",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00038-f64657c7",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00039-607223d9",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00040-8a4c5659",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00041-94e08b20",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00042-8c680a86"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0009",
-        "labelEs": "COMO ARGUMENTO SÓLO PARA HORRORIZAR",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.8571,
-          "y": 59.417,
-          "width": 90.2857,
-          "height": 2.0179
-        },
-        "words": [
-          {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00043",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-11",
             "text": "COMO",
             "normalized": "como",
             "bounds": [
@@ -968,11 +957,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00043-2cc1fdc0"
+              "word-como"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00044",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-12",
             "text": "ARGUMENTO",
             "normalized": "argumento",
             "bounds": [
@@ -984,11 +973,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00044-cd97f873"
+              "word-argumento--function-input",
+              "concept-ackermann-function-graham-number"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00045",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-13",
             "text": "SÓLO",
             "normalized": "sólo",
             "bounds": [
@@ -1000,11 +990,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00045-5664335f"
+              "word-sólo--only"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00046",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-14",
             "text": "PARA",
             "normalized": "para",
             "bounds": [
@@ -1016,11 +1006,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00046-44efb9be"
+              "word-para",
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00047",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-15",
             "text": "HORRORIZAR",
             "normalized": "horrorizar",
             "bounds": [
@@ -1032,39 +1023,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00047-d8ca82cd"
+              "word-horrorizar",
+              "grammar-para-infinitive-purpose"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00043-2cc1fdc0",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00044-cd97f873",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00045-5664335f",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00046-44efb9be",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00047-d8ca82cd"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0010",
-        "labelEs": "A LOS MATEMATICOS.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 2.2857,
-          "y": 61.435,
-          "width": 45.7143,
-          "height": 1.7937
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00048",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-16",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -1076,11 +1040,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00048-549660ae"
+              "word-a--personal-a"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00049",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-17",
             "text": "LOS",
             "normalized": "los",
             "bounds": [
@@ -1092,13 +1056,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00049-43460e6f"
+              "word-los"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00050",
-            "text": "MATEMATICOS",
-            "normalized": "matematicos",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-18",
+            "text": "MATEMÁTICOS",
+            "normalized": "matemáticos",
             "bounds": [
               {
                 "x": 16.5714,
@@ -1108,25 +1072,118 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00050-e18c179f"
+              "word-matemáticos"
+            ]
+          }
+        ],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:excluded-ackermann",
+            "text": "ACKERMANN",
+            "reason": "non-spanish-text",
+            "rationale": "Ackermann is a mathematician's surname naming the function, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 2.8571,
+                "y": 57.6233,
+                "width": 26.3571,
+                "height": 2.0179
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:excluded-graham",
+            "text": "GRAHAM",
+            "reason": "non-spanish-text",
+            "rationale": "Graham is a mathematician's surname naming the number, not Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 72.2857,
+                "y": 57.6233,
+                "width": 18.5714,
+                "height": 2.0179
+              }
+            ]
+          }
+        ],
+        "applications": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:app-means-action",
+            "cardId": "grammar-significar-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-1",
+              "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-2"
+            ],
+            "exampleEs": "SIGNIFICA LLAMAR",
+            "explanationEn": "Significa introduces the meaning, and llamar remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-caption:app-purpose",
+            "cardId": "grammar-para-infinitive-purpose",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-14",
+              "es-xkcd-lo-que-significa-xkcd:panel-3-caption:word-15"
+            ],
+            "exampleEs": "PARA HORRORIZAR",
+            "explanationEn": "Para introduces the purpose, and horrorizar stays in its unchanged dictionary form."
+          }
+        ],
+        "cardIds": [
+          "word-significa--means",
+          "grammar-significar-infinitive",
+          "word-llamar--invoke-function",
+          "word-a--function-call",
+          "word-la--article",
+          "word-función--mathematical",
+          "concept-ackermann-function-graham-number",
+          "word-de--of",
+          "word-con",
+          "word-el--article",
+          "word-número",
+          "word-como",
+          "word-argumento--function-input",
+          "word-sólo--only",
+          "word-para",
+          "grammar-para-infinitive-purpose",
+          "word-horrorizar",
+          "word-a--personal-a",
+          "word-los",
+          "word-matemáticos"
+        ]
+      },
+      {
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-3-equation",
+        "labelEs": "A(g₆₄, g₆₄) =",
+        "translationEn": "",
+        "noteEn": "",
+        "bounds": {
+          "x": 16.7535,
+          "y": 67.5898,
+          "width": 38.8752,
+          "height": 4.7245
+        },
+        "words": [],
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-equation:excluded-equation",
+            "text": "A(g₆₄, g₆₄) =",
+            "reason": "equation",
+            "rationale": "This is mathematical notation for a function call, not a sequence of Spanish words.",
+            "bounds": [
+              {
+                "x": 16.7535,
+                "y": 67.5898,
+                "width": 38.8752,
+                "height": 4.7245
+              }
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00048-549660ae",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00049-43460e6f",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00050-e18c179f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0010",
-          "ocrConfidence": 1
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0011",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-3-sound",
         "labelEs": "AUGHHH",
         "translationEn": "",
         "noteEn": "",
@@ -1136,11 +1193,13 @@
           "width": 14.3949,
           "height": 2.7762
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00051",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-3-sound:excluded-aughhh",
             "text": "AUGHHH",
-            "normalized": "aughhh",
+            "reason": "non-spanish-text",
+            "rationale": "AUGHHH is a nonlexical English-style cry and not Spanish vocabulary.",
             "bounds": [
               {
                 "x": 69.6886,
@@ -1148,94 +1207,26 @@
                 "width": 14.3949,
                 "height": 2.7762
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00051-4e3a0fd7"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00051-4e3a0fd7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0011",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0012",
-        "labelEs": "A (9o. 904) =",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 16.7535,
-          "y": 67.5898,
-          "width": 38.8752,
-          "height": 4.7245
-        },
-        "words": [
-          {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00052",
-            "text": "A",
-            "normalized": "a",
-            "bounds": [
-              {
-                "x": 16.7535,
-                "y": 67.5898,
-                "width": 5.8274,
-                "height": 4.4215
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00052-7a9db9d4"
-            ]
-          },
-          {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00053",
-            "text": "9o",
-            "normalized": "9o",
-            "bounds": [
-              {
-                "x": 23.7162,
-                "y": 67.6529,
-                "width": 12.7897,
-                "height": 4.4846
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00053-75c64eb7"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00052-7a9db9d4",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00053-75c64eb7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0012",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0013",
-        "labelEs": "SIGNIFICA CREAR INSTINTIVAMENTE",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption",
+        "labelEs": "SIGNIFICA CREAR INSTINTIVAMENTE REGLAS SOBRE QUÉ BALDOSAS SE PUEDEN PISAR Y EMPEZAR A ANDAR RARO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 4,
           "y": 76.4574,
-          "width": 73.1429,
-          "height": 2.0179
+          "width": 85.7143,
+          "height": 5.6054
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00054",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-1",
             "text": "SIGNIFICA",
             "normalized": "significa",
             "bounds": [
@@ -1247,11 +1238,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00054-05d78995"
+              "word-significa--means",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00055",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-2",
             "text": "CREAR",
             "normalized": "crear",
             "bounds": [
@@ -1263,11 +1255,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00055-4582fa2d"
+              "word-crear",
+              "grammar-significar-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00056",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-3",
             "text": "INSTINTIVAMENTE",
             "normalized": "instintivamente",
             "bounds": [
@@ -1279,37 +1272,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00056-90a83128"
+              "word-instintivamente"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00054-05d78995",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00055-4582fa2d",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00056-90a83128"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0014",
-        "labelEs": "REGLAS SOBRE QUÉ BALDOSAS SE PUEDEN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 4,
-          "y": 78.2511,
-          "width": 85.7143,
-          "height": 2.0179
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00057",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-4",
             "text": "REGLAS",
             "normalized": "reglas",
             "bounds": [
@@ -1321,11 +1288,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00057-bbf5ad5c"
+              "word-reglas"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00058",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-5",
             "text": "SOBRE",
             "normalized": "sobre",
             "bounds": [
@@ -1337,11 +1304,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00058-75b816c1"
+              "word-sobre--about"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00059",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-6",
             "text": "QUÉ",
             "normalized": "qué",
             "bounds": [
@@ -1353,11 +1320,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00059-768aa8a0"
+              "word-qué--interrogative",
+              "question-words"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00060",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-7",
             "text": "BALDOSAS",
             "normalized": "baldosas",
             "bounds": [
@@ -1369,11 +1337,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00060-fdd48c22"
+              "word-baldosas"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00061",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-8",
             "text": "SE",
             "normalized": "se",
             "bounds": [
@@ -1385,11 +1353,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00061-262254c6"
+              "word-se--passive-permission",
+              "grammar-se-puede-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00062",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-9",
             "text": "PUEDEN",
             "normalized": "pueden",
             "bounds": [
@@ -1401,40 +1370,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00062-6bb611cb"
+              "word-pueden",
+              "grammar-se-puede-infinitive"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00057-bbf5ad5c",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00058-75b816c1",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00059-768aa8a0",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00060-fdd48c22",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00061-262254c6",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00062-6bb611cb"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0015",
-        "labelEs": "PISAR Y EMPEZAR A ANDAR RARO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 4,
-          "y": 80.2691,
-          "width": 68,
-          "height": 1.7937
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00063",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-10",
             "text": "PISAR",
             "normalized": "pisar",
             "bounds": [
@@ -1446,11 +1387,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00063-0720f687"
+              "word-pisar",
+              "grammar-se-puede-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00064",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-11",
             "text": "Y",
             "normalized": "y",
             "bounds": [
@@ -1462,11 +1404,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00064-6dd160ac"
+              "word-y"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00065",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-12",
             "text": "EMPEZAR",
             "normalized": "empezar",
             "bounds": [
@@ -1478,11 +1420,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00065-56ce0234"
+              "word-empezar",
+              "grammar-empezar-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00066",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-13",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -1494,11 +1437,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00066-27b3a340"
+              "word-a--infinitive-link",
+              "grammar-empezar-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00067",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-14",
             "text": "ANDAR",
             "normalized": "andar",
             "bounds": [
@@ -1510,11 +1454,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00067-613a5527"
+              "word-andar",
+              "grammar-empezar-a-infinitive"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00068",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-15",
             "text": "RARO",
             "normalized": "raro",
             "bounds": [
@@ -1526,28 +1471,78 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00068-7c4afca0"
+              "word-raro--adverbial-manner"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00063-0720f687",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00064-6dd160ac",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00065-56ce0234",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00066-27b3a340",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00067-613a5527",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00068-7c4afca0"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:app-means-action",
+            "cardId": "grammar-significar-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-1",
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-2"
+            ],
+            "exampleEs": "SIGNIFICA CREAR",
+            "explanationEn": "Significa introduces the meaning, and crear remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:app-indirect-which",
+            "cardId": "question-words",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-6"
+            ],
+            "exampleEs": "QUÉ",
+            "explanationEn": "Qué keeps its accent because it introduces an indirect question about which tiles."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:app-passive-possibility",
+            "cardId": "grammar-se-puede-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-8",
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-9",
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-10"
+            ],
+            "exampleEs": "SE PUEDEN PISAR",
+            "explanationEn": "Se puts attention on the tiles receiving the action, plural pueden agrees with them, and pisar stays unchanged."
+          },
+          {
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-caption:app-start-action",
+            "cardId": "grammar-empezar-a-infinitive",
+            "participantWordIds": [
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-12",
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-13",
+              "es-xkcd-lo-que-significa-xkcd:panel-4-caption:word-14"
+            ],
+            "exampleEs": "EMPEZAR A ANDAR",
+            "explanationEn": "Empezar names the beginning, a links it to the action, and andar stays in its unchanged dictionary form."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-significa--means",
+          "grammar-significar-infinitive",
+          "word-crear",
+          "word-instintivamente",
+          "word-reglas",
+          "word-sobre--about",
+          "word-qué--interrogative",
+          "question-words",
+          "word-baldosas",
+          "word-se--passive-permission",
+          "grammar-se-puede-infinitive",
+          "word-pueden",
+          "word-pisar",
+          "word-y",
+          "word-empezar",
+          "grammar-empezar-a-infinitive",
+          "word-a--infinitive-link",
+          "word-andar",
+          "word-raro--adverbial-manner"
+        ]
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0016",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-black",
         "labelEs": "LAS BALDOSAS NEGRAS VALEN",
         "translationEn": "",
         "noteEn": "",
@@ -1559,7 +1554,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00069",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-black:word-1",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -1571,11 +1566,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00069-e776fde5"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00070",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-black:word-2",
             "text": "BALDOSAS",
             "normalized": "baldosas",
             "bounds": [
@@ -1587,11 +1582,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00070-e93b990c"
+              "word-baldosas"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00071",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-black:word-3",
             "text": "NEGRAS",
             "normalized": "negras",
             "bounds": [
@@ -1603,11 +1598,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00071-6b1ef727"
+              "word-negras"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00072",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-black:word-4",
             "text": "VALEN",
             "normalized": "valen",
             "bounds": [
@@ -1619,38 +1614,33 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00072-67a8d868"
+              "word-valen--allowed"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00069-e776fde5",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00070-e93b990c",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00071-6b1ef727",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00072-67a8d868"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0016",
-          "ocrConfidence": 1
-        }
+          "word-las",
+          "word-baldosas",
+          "word-negras",
+          "word-valen--allowed"
+        ]
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0017",
-        "labelEs": "LAS BALDOSAS BLANCAS",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between",
+        "labelEs": "LAS BALDOSAS BLANCAS ENTRE LAS NEGRAS VALEN",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 40.5714,
+          "x": 40,
           "y": 89.9103,
-          "width": 30.2857,
-          "height": 1.1211
+          "width": 33.7143,
+          "height": 2.2422
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00073",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-1",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -1662,11 +1652,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00073-7853307f"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00074",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-2",
             "text": "BALDOSAS",
             "normalized": "baldosas",
             "bounds": [
@@ -1678,11 +1668,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00074-b3e4186b"
+              "word-baldosas"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00075",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-3",
             "text": "BLANCAS",
             "normalized": "blancas",
             "bounds": [
@@ -1694,37 +1684,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00075-d8eacdf6"
+              "word-blancas"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00073-7853307f",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00074-b3e4186b",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00075-d8eacdf6"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0017",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0018",
-        "labelEs": "ENTRE LAS NEGRAS VALEN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 40,
-          "y": 90.8072,
-          "width": 33.7143,
-          "height": 1.3453
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00076",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-4",
             "text": "ENTRE",
             "normalized": "entre",
             "bounds": [
@@ -1736,11 +1700,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00076-3c63fff3"
+              "word-entre"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00077",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-5",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -1752,11 +1716,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00077-a0cd8f1e"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00078",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-6",
             "text": "NEGRAS",
             "normalized": "negras",
             "bounds": [
@@ -1768,11 +1732,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00078-bfdec534"
+              "word-negras"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00079",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-between:word-7",
             "text": "VALEN",
             "normalized": "valen",
             "bounds": [
@@ -1784,27 +1748,24 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00079-742361a8"
+              "word-valen--allowed"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00076-3c63fff3",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00077-a0cd8f1e",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00078-bfdec534",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00079-742361a8"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0018",
-          "ocrConfidence": 1
-        }
+          "word-las",
+          "word-baldosas",
+          "word-blancas",
+          "word-entre",
+          "word-negras",
+          "word-valen--allowed"
+        ]
       },
       {
-        "id": "es-xkcd-lo-que-significa-xkcd:region-0019",
-        "labelEs": "• NO VALEN",
+        "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-not-allowed",
+        "labelEs": "NO VALEN",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -1815,7 +1776,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00080",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-not-allowed:word-1",
             "text": "NO",
             "normalized": "no",
             "bounds": [
@@ -1827,11 +1788,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00080-c95eccf8"
+              "word-no"
             ]
           },
           {
-            "id": "es-xkcd-lo-que-significa-xkcd:word-00081",
+            "id": "es-xkcd-lo-que-significa-xkcd:panel-4-legend-not-allowed:word-2",
             "text": "VALEN",
             "normalized": "valen",
             "bounds": [
@@ -1843,2062 +1804,1456 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-lo-que-significa-xkcd-00081-56c4fa19"
+              "word-valen--allowed"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00080-c95eccf8",
-          "word-auto-es-xkcd-lo-que-significa-xkcd-00081-56c4fa19"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0019",
-          "ocrConfidence": 1
-        }
+          "word-no",
+          "word-valen--allowed"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00001-0d629e1b",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00002-07cc5b00",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00003-7cdbc4cd",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00004-4fb83634",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00005-e9a75fe4",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00006-7ff8db77",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00007-fe85d552",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00008-9268ce88",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00009-14c54019",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00010-31af6c3c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00011-94be8370",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00012-9cce8398",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00013-27b79a4a",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00014-041b3a3c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00015-2f5259da",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00016-f59ddae4",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00017-977afe17",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00018-e983ed63",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00019-98ed95d2",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00020-013c97be",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00021-75d5f8bb",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00022-57d23b52",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00023-9b3c773a",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00024-625b5aea",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00025-517b790f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00026-394f8085",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00027-b0145892",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00028-f9a820d9",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00029-9788610c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00030-152e31f9",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00031-d225c6b9",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00032-e5283f69",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00033-be9dd9f0",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00034-2f1ec05f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00035-a2da7301",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00036-e2bb357c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00037-689a3690",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00038-f64657c7",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00039-607223d9",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00040-8a4c5659",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00041-94e08b20",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00042-8c680a86",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00043-2cc1fdc0",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00044-cd97f873",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00045-5664335f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00046-44efb9be",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00047-d8ca82cd",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00048-549660ae",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00049-43460e6f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00050-e18c179f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00051-4e3a0fd7",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00052-7a9db9d4",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00053-75c64eb7",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00054-05d78995",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00055-4582fa2d",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00056-90a83128",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00057-bbf5ad5c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00058-75b816c1",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00059-768aa8a0",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00060-fdd48c22",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00061-262254c6",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00062-6bb611cb",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00063-0720f687",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00064-6dd160ac",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00065-56ce0234",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00066-27b3a340",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00067-613a5527",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00068-7c4afca0",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00069-e776fde5",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00070-e93b990c",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00071-6b1ef727",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00072-67a8d868",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00073-7853307f",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00074-b3e4186b",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00075-d8eacdf6",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00076-3c63fff3",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00077-a0cd8f1e",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00078-bfdec534",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00079-742361a8",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00080-c95eccf8",
-      "word-auto-es-xkcd-lo-que-significa-xkcd-00081-56c4fa19"
+      "word-qué--interrogative",
+      "question-words",
+      "word-significa--means",
+      "grammar-significar-infinitive",
+      "word-ahorrar",
+      "word-algunos",
+      "word-segundos",
+      "word-en--at-location",
+      "word-un",
+      "word-semáforo",
+      "phrase-semáforo-en-rojo",
+      "word-en--signal-state",
+      "word-rojo--traffic-signal",
+      "word-haciendo--by-doing",
+      "grammar-adverbial-gerund",
+      "word-maniobras",
+      "word-elaboradas",
+      "word-y",
+      "word-dudosamente",
+      "word-legales",
+      "word-hacer--cause-action",
+      "grammar-hacer-que-subjunctive",
+      "word-que--clause-link",
+      "word-alguien",
+      "word-te--direct",
+      "word-llame--phone",
+      "word-al--contraction",
+      "word-móvil--cell-phone",
+      "word-para",
+      "grammar-para-infinitive-purpose",
+      "word-averiguar",
+      "word-dónde--indirect-question",
+      "word-está",
+      "word-llamar--invoke-function",
+      "word-a--function-call",
+      "word-la--article",
+      "word-función--mathematical",
+      "concept-ackermann-function-graham-number",
+      "word-de--of",
+      "word-con",
+      "word-el--article",
+      "word-número",
+      "word-como",
+      "word-argumento--function-input",
+      "word-sólo--only",
+      "word-horrorizar",
+      "word-a--personal-a",
+      "word-los",
+      "word-matemáticos",
+      "word-crear",
+      "word-instintivamente",
+      "word-reglas",
+      "word-sobre--about",
+      "word-baldosas",
+      "word-se--passive-permission",
+      "grammar-se-puede-infinitive",
+      "word-pueden",
+      "word-pisar",
+      "word-empezar",
+      "grammar-empezar-a-infinitive",
+      "word-a--infinitive-link",
+      "word-andar",
+      "word-raro--adverbial-manner",
+      "word-las",
+      "word-negras",
+      "word-valen--allowed",
+      "word-blancas",
+      "word-entre",
+      "word-no"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9756,
-      "lowConfidenceTokenCount": 4,
-      "rawOcrTokenCount": 82,
-      "filteredNonLatinTokenCount": 1,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00001-0d629e1b",
+      "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "Meaning needs review",
+      "answerEn": "what",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00001",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9030c4df6adca92b9580",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00002-07cc5b00",
+      "id": "question-words",
+      "kind": "grammar",
+      "promptEs": "qué · cómo · cuándo…",
+      "answerEn": "Write qué, cómo, cuándo, and similar words with an accent when they ask a question or add an exclamation.",
+      "noteEn": "This includes direct questions (¿Qué quieres?), questions inside another sentence (No sé qué quiere), and exclamations (¡Qué bonito!). Without the accent, these words usually connect parts of a sentence instead: el libro que quiero means “the book that I want.”",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "accents"
+      ],
+      "questionEn": "Why do words such as que, como, and cuando sometimes have a written accent?",
+      "example": {
+        "es": "¿Cómo te llamas?",
+        "en": "What is your name?"
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-significa--means",
       "kind": "word",
       "promptEs": "significa",
-      "answerEn": "Meaning needs review",
+      "answerEn": "it means; does it mean",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00002",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-605a4f72370df15c28d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00003-7cdbc4cd",
-      "kind": "word",
-      "promptEs": "xkcd",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-significar-infinitive",
+      "kind": "grammar",
+      "promptEs": "significar + infinitivo",
+      "questionEn": "How do you say that something means doing an action?",
+      "answerEn": "Use a form of significar followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The plus sign means “followed by.” The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Spanish uses that unchanged form where English often uses an -ing form after “mean.”",
+      "example": {
+        "es": "Ser voluntario significa ayudar.",
+        "en": "Being a volunteer means helping."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "verb pattern",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00003",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-79ceee92a9eeb18c1ccc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00004-4fb83634",
-      "kind": "word",
-      "promptEs": "significa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00004",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-605a4f72370df15c28d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00005-e9a75fe4",
+      "id": "word-ahorrar",
       "kind": "word",
       "promptEs": "ahorrar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to save",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00005",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-38039a482174b4cf38bd",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00006-7ff8db77",
+      "id": "word-algunos",
       "kind": "word",
       "promptEs": "algunos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "some (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00006",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-04bbfc0c2d5f04538820",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00007-fe85d552",
+      "id": "word-segundos",
       "kind": "word",
       "promptEs": "segundos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "seconds",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00007",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-324ea98f7cd80cd7afc0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00008-9268ce88",
+      "id": "word-en--at-location",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
+      "answerEn": "at (a location)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00008",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00009-14c54019",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00009",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00010-31af6c3c",
+      "id": "word-semáforo",
       "kind": "word",
       "promptEs": "semáforo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "traffic light",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "transport"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00010",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-368476a929c0cc3dfd07",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00011-94be8370",
+      "id": "phrase-semáforo-en-rojo",
+      "kind": "phrase",
+      "promptEs": "semáforo en rojo",
+      "questionEn": "How do you describe a traffic light that is showing red?",
+      "answerEn": "Say semáforo en rojo.",
+      "noteEn": "Spanish commonly uses en plus the color to name the signal's current state. Semáforo names the traffic light, en introduces its state, and rojo names the color.",
+      "example": {
+        "es": "Esperamos ante un semáforo en rojo.",
+        "en": "We wait at a red light."
+      },
+      "tags": [
+        "phrase",
+        "traffic",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en--signal-state",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
+      "answerEn": "on; showing (a signal state)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense",
+        "traffic"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00011",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00012-9cce8398",
+      "id": "word-rojo--traffic-signal",
       "kind": "word",
       "promptEs": "rojo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "red",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "color",
+        "traffic"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00012",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-49bfb8998b3fabca7428",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00013-27b79a4a",
+      "id": "word-haciendo--by-doing",
       "kind": "word",
       "promptEs": "haciendo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "doing; making; by doing",
+      "noteEn": "Haciendo is the -iendo form of hacer. Without a form of estar, it can describe how another action happens or what someone does at the same time.",
+      "example": {
+        "es": "Aprendemos haciendo preguntas.",
+        "en": "We learn by asking questions."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb form",
+        "manner"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00013",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0019af1bf944100af1c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00014-041b3a3c",
+      "id": "grammar-adverbial-gerund",
+      "kind": "grammar",
+      "promptEs": "-ando / -iendo para una acción simultánea o un medio",
+      "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
+      "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "example": {
+        "es": "Entró corriendo.",
+        "en": "She came in running."
+      },
+      "tags": [
+        "grammar",
+        "gerund",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-maniobras",
       "kind": "word",
       "promptEs": "maniobras",
-      "answerEn": "maneuver",
+      "answerEn": "maneuvers",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "driving"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00014",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fc35fff4bfaf9bf2a325",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00015-2f5259da",
+      "id": "word-elaboradas",
       "kind": "word",
       "promptEs": "elaboradas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "elaborate; complex (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00015",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-62454ad760c67c0a5d43",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00016-f59ddae4",
+      "id": "word-y",
       "kind": "word",
       "promptEs": "y",
       "answerEn": "and",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00016",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00017-977afe17",
+      "id": "word-dudosamente",
       "kind": "word",
       "promptEs": "dudosamente",
-      "answerEn": "Meaning needs review",
+      "answerEn": "dubiously; questionably",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "manner"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00017",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-556e1d914881e1658b5f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00018-e983ed63",
+      "id": "word-legales",
       "kind": "word",
       "promptEs": "legales",
-      "answerEn": "Meaning needs review",
+      "answerEn": "legal (plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00018",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7c76c5965634deb8ae02",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00019-98ed95d2",
-      "kind": "word",
-      "promptEs": "significa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00019",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-605a4f72370df15c28d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00020-013c97be",
+      "id": "word-hacer--cause-action",
       "kind": "word",
       "promptEs": "hacer",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to make; to cause (someone to do something)",
+      "noteEn": "Hacer followed by que and a changed verb form can mean causing or making another person perform an action. This is a different sense from hacer meaning simply “to do.”",
+      "example": {
+        "es": "El ruido hizo que todos salieran.",
+        "en": "The noise made everyone leave."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "causation",
+        "hacer que",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00020",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9ab06b20725ee8e41d89",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00021-75d5f8bb",
+      "id": "grammar-hacer-que-subjunctive",
+      "kind": "grammar",
+      "promptEs": "hacer que + acción causada",
+      "questionEn": "How do you say that someone makes or gets another person to do something?",
+      "answerEn": "Use a form of hacer, then que, then the person and the action in a special caused-action form.",
+      "noteEn": "The plus sign means “followed by.” Hacer changes for who causes the action. The later verb uses a special form called the subjunctive because that action is being caused rather than simply reported: llama becomes llame, and cierra becomes cierre.",
+      "example": {
+        "es": "Hago que Ana cierre la puerta.",
+        "en": "I make Ana close the door."
+      },
+      "tags": [
+        "grammar",
+        "causation",
+        "subjunctive",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00021",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00022-57d23b52",
+      "id": "word-alguien",
       "kind": "word",
       "promptEs": "alguien",
       "answerEn": "someone; anyone",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00022",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ceeda0e109e9a7d62372",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00023-9b3c773a",
+      "id": "word-te--direct",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you (direct-object pronoun)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00023",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d6c9a90dd38f6852515",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00024-625b5aea",
+      "id": "word-llame--phone",
       "kind": "word",
       "promptEs": "llame",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "calls; phones (special form used for a caused action)",
+      "noteEn": "After hacer que, Spanish uses a special verb form for the action being caused. Llama is the ordinary “calls” form; llame is the corresponding special form here.",
+      "example": {
+        "es": "Hago que Luis llame hoy.",
+        "en": "I make Luis call today."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "phone",
+        "verb form"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00024",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-56aebc24475384e50ff4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00025-517b790f",
+      "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "to the (a + el)",
+      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "example": {
+        "es": "Voy al mercado.",
+        "en": "I’m going to the market."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00025",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-63518250301558366648",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00026-394f8085",
+      "id": "word-móvil--cell-phone",
       "kind": "word",
       "promptEs": "móvil",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "cell phone; mobile phone",
+      "noteEn": "Móvil is the ordinary word for a cell phone in Spain. Many Latin American regions instead use celular.",
+      "example": {
+        "es": "Mi móvil está en la mochila.",
+        "en": "My cell phone is in the backpack."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "technology",
+        "Spain"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00026",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d6041bf2c01d673c22c3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00027-b0145892",
+      "id": "word-para",
       "kind": "word",
       "promptEs": "para",
       "answerEn": "in order to (expressing purpose)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00027",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00028-f9a820d9",
+      "id": "grammar-para-infinitive-purpose",
+      "kind": "grammar",
+      "promptEs": "para + infinitivo",
+      "answerEn": "Use para followed by the verb’s dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
+      "tags": [
+        "A2",
+        "grammar",
+        "purpose"
+      ],
+      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "example": {
+        "es": "Estudio para aprender.",
+        "en": "I study in order to learn."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-averiguar",
       "kind": "word",
       "promptEs": "averiguar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to find out; figure out",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00028",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e107e38e93a815ce419c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00029-9788610c",
+      "id": "word-dónde--indirect-question",
       "kind": "word",
       "promptEs": "dónde",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "where",
+      "noteEn": "Dónde keeps its written accent in an indirect question: the location is being asked about even though the words do not stand alone as a direct question.",
+      "example": {
+        "es": "No sé dónde vive Ana.",
+        "en": "I don't know where Ana lives."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "question word",
+        "location"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00029",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cd8781997b308c1653a2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00030-152e31f9",
+      "id": "word-está",
       "kind": "word",
       "promptEs": "está",
       "answerEn": "is (a state or location)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00030",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d898de0fb93b48e72216",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00031-d225c6b9",
-      "kind": "word",
-      "promptEs": "significa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00031",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-605a4f72370df15c28d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00032-e5283f69",
+      "id": "word-llamar--invoke-function",
       "kind": "word",
       "promptEs": "llamar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to call; invoke (a function)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics",
+        "computing"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00032",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-93984397fbe62b5fce79",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00033-be9dd9f0",
+      "id": "word-a--function-call",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "no separate English word; follows llamar before the function invoked",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb complement",
+        "technical language"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00033",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00034-2f1ec05f",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00034",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00035-a2da7301",
+      "id": "word-función--mathematical",
       "kind": "word",
       "promptEs": "función",
-      "answerEn": "Meaning needs review",
+      "answerEn": "function (in mathematics)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00035",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dd65f29192913cd0c8a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00036-e2bb357c",
+      "id": "concept-ackermann-function-graham-number",
+      "kind": "concept",
+      "promptEs": "función de Ackermann con el número de Graham",
+      "answerEn": "an intentionally absurd computation involving extraordinarily fast-growing quantities",
+      "noteEn": "The Ackermann function grows extremely quickly even from modest inputs, while Graham's number is already unimaginably large. Using Graham's number as both inputs makes the written calculation comically impossible to carry out, which explains the mathematician's reaction.",
+      "tags": [
+        "concept",
+        "mathematics",
+        "humor"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00036",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00037-689a3690",
-      "kind": "word",
-      "promptEs": "ackermann",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00037",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d055961703864e3e2976",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00038-f64657c7",
+      "id": "word-con",
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00038",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1143da2bc54c495c4be3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00039-607223d9",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00039",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00040-8a4c5659",
+      "id": "word-número",
       "kind": "word",
       "promptEs": "número",
-      "answerEn": "Meaning needs review",
+      "answerEn": "number",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00040",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-84871a760b20b5c33b2d",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00041-94e08b20",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00041",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00042-8c680a86",
-      "kind": "word",
-      "promptEs": "graham",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00042",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fa7c171ac94aac19ab64",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00043-2cc1fdc0",
+      "id": "word-como",
       "kind": "word",
       "promptEs": "como",
       "answerEn": "as; like",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00043",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ea3dc747f15400ac1d8b",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00044-cd97f873",
+      "id": "word-argumento--function-input",
       "kind": "word",
       "promptEs": "argumento",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "argument; input supplied to a function",
+      "noteEn": "In mathematics and computing, an argumento is a value given to a function, not a disagreement between people.",
+      "example": {
+        "es": "La función recibe dos argumentos.",
+        "en": "The function receives two arguments."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "mathematics",
+        "technical sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00044",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-459ab440e9f3e20c348b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00045-5664335f",
+      "id": "word-sólo--only",
       "kind": "word",
       "promptEs": "sólo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "only; just",
+      "noteEn": "The comic uses the formerly common accent in sólo. Current standard spelling normally writes solo without an accent when it means “only,” unless an accent is exceptionally needed to prevent genuine ambiguity.",
+      "example": {
+        "es": "Solo necesito un minuto.",
+        "en": "I only need a minute."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adverb",
+        "older spelling"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00045",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-912e6bea0f8dd1df24b6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00046-44efb9be",
-      "kind": "word",
-      "promptEs": "para",
-      "answerEn": "in order to (expressing purpose)",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00046",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1453f380fa9f1a08e84",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00047-d8ca82cd",
+      "id": "word-horrorizar",
       "kind": "word",
       "promptEs": "horrorizar",
       "answerEn": "to horrify",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "emotion"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00047",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ac2d1e97c8044726bc42",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00048-549660ae",
+      "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; marks a specific person as the object",
+      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "example": {
+        "es": "Veo a Marta.",
+        "en": "I see Marta."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00048",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00049-43460e6f",
+      "id": "word-los",
       "kind": "word",
       "promptEs": "los",
       "answerEn": "the (masculine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00049",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb6e53541e37a1d6076e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00050-e18c179f",
+      "id": "word-matemáticos",
       "kind": "word",
-      "promptEs": "matematicos",
-      "answerEn": "Meaning needs review",
+      "promptEs": "matemáticos",
+      "answerEn": "mathematicians",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "people",
+        "mathematics"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00050",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0010",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bda78080525887c412c2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00051-4e3a0fd7",
-      "kind": "word",
-      "promptEs": "aughhh",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00051",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0011",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-a5eb6a3c789a80d7b64e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00052-7a9db9d4",
-      "kind": "word",
-      "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00052",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0012",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00053-75c64eb7",
-      "kind": "word",
-      "promptEs": "9o",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00053",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0012",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-701cc7676f6112a64aa6",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00054-05d78995",
-      "kind": "word",
-      "promptEs": "significa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00055",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-605a4f72370df15c28d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00055-4582fa2d",
+      "id": "word-crear",
       "kind": "word",
       "promptEs": "crear",
       "answerEn": "to create",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00056",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-683284df7ab21707425b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00056-90a83128",
+      "id": "word-instintivamente",
       "kind": "word",
       "promptEs": "instintivamente",
-      "answerEn": "instinctively, intuitively",
+      "answerEn": "instinctively",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "manner"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00057",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c5d47d4b10e57466e168",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00057-bbf5ad5c",
+      "id": "word-reglas",
       "kind": "word",
       "promptEs": "reglas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "rules",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00058",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-342a6f5c0dec293038a3",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00058-75b816c1",
+      "id": "word-sobre--about",
       "kind": "word",
       "promptEs": "sobre",
-      "answerEn": "Meaning needs review",
+      "answerEn": "about; concerning",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "topic",
+        "preposition"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00059",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-6919d6353a2a0be00c39",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00059-768aa8a0",
-      "kind": "word",
-      "promptEs": "qué",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00060",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9030c4df6adca92b9580",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00060-fdd48c22",
+      "id": "word-baldosas",
       "kind": "word",
       "promptEs": "baldosas",
-      "answerEn": "tile, slab",
+      "answerEn": "tiles; floor tiles",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "objects"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00061",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68c7cb870478695472bc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00061-262254c6",
+      "id": "word-se--passive-permission",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "marks something as receiving a possible action; the doer is not named",
+      "noteEn": "With a form of poder and an unchanged action verb, se shifts attention away from the person doing the action and toward the thing that can receive it.",
+      "example": {
+        "es": "La puerta se puede abrir.",
+        "en": "The door can be opened."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "passive construction"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00062",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ad9a67fefa847de87753",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00062-6bb611cb",
+      "id": "grammar-se-puede-infinitive",
+      "kind": "grammar",
+      "promptEs": "se + forma de poder + infinitivo",
+      "questionEn": "How do you say that an action can be done without naming who does it?",
+      "answerEn": "Use se, then the form of poder that fits the sentence, then the action verb in its unchanged dictionary form.",
+      "noteEn": "In a direct statement, one thing normally takes puede and several things take pueden. Other sentence types can require forms such as pueda. The final action verb stays unchanged, ending in -ar, -er, or -ir. Se keeps the person doing the action unnamed.",
+      "example": {
+        "es": "La puerta se puede abrir.",
+        "en": "The door can be opened."
+      },
+      "tags": [
+        "grammar",
+        "passive se",
+        "possibility",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-pueden",
       "kind": "word",
       "promptEs": "pueden",
-      "answerEn": "Meaning needs review",
+      "answerEn": "they can; they are able to",
       "noteEn": "",
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "word"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00063",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0014",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-19b6d495c217c6f93d4c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-sustituto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00063-0720f687",
+      "id": "word-pisar",
       "kind": "word",
       "promptEs": "pisar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to step on; be stepped on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "movement"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00064",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d141b40c5ca95d51b760",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00064-6dd160ac",
-      "kind": "word",
-      "promptEs": "y",
-      "answerEn": "and",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00065",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a1fce4363854ff888cff",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00065-56ce0234",
+      "id": "word-empezar",
       "kind": "word",
       "promptEs": "empezar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to begin; start",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00066",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9414d9d81d9e9cc49701",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00066-27b3a340",
+      "id": "grammar-empezar-a-infinitive",
+      "kind": "grammar",
+      "promptEs": "empezar a + infinitivo",
+      "questionEn": "How do you say that someone starts doing an action?",
+      "answerEn": "Use a form of empezar, then a, then the action verb in its unchanged dictionary form.",
+      "noteEn": "The plus sign means “followed by.” The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
+      "example": {
+        "es": "Lucía empieza a leer.",
+        "en": "Lucía starts to read."
+      },
+      "tags": [
+        "grammar",
+        "beginning actions",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--infinitive-link",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to (linking a verb to the following infinitive)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00067",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00067-613a5527",
+      "id": "word-andar",
       "kind": "word",
       "promptEs": "andar",
-      "answerEn": "Meaning needs review",
+      "answerEn": "to walk",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "movement"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00068",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3bf3af05917f056e00f2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00068-7c4afca0",
+      "id": "word-raro--adverbial-manner",
       "kind": "word",
       "promptEs": "raro",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "strangely; in an odd way",
+      "noteEn": "Raro is normally an adjective meaning “strange.” Spanish sometimes leaves an adjective in its basic masculine singular form to describe how an action happens, much as an English adverb does.",
+      "example": {
+        "es": "El motor suena raro.",
+        "en": "The engine sounds strange."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description",
+        "adverbial use"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00069",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0015",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-424bda6cb8f712909a03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00069-e776fde5",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00070",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00070-e93b990c",
-      "kind": "word",
-      "promptEs": "baldosas",
-      "answerEn": "tile, slab",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00071",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68c7cb870478695472bc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00071-6b1ef727",
+      "id": "word-negras",
       "kind": "word",
       "promptEs": "negras",
-      "answerEn": "Meaning needs review",
+      "answerEn": "black (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "color"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00072",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8cc6fcf13fa6be4df83a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00072-67a8d868",
+      "id": "word-valen--allowed",
       "kind": "word",
       "promptEs": "valen",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "are okay; are allowed; count as valid",
+      "noteEn": "Valer can mean “to be worth” or “to be valid.” In a rule or permission label, vale or valen can say that an option is acceptable.",
+      "example": {
+        "es": "Esas opciones también valen.",
+        "en": "Those options are okay too."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "rules",
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00073",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0016",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ebb28927f9181fb33897",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00073-7853307f",
-      "kind": "word",
-      "promptEs": "las",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00074",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00074-b3e4186b",
-      "kind": "word",
-      "promptEs": "baldosas",
-      "answerEn": "tile, slab",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00075",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68c7cb870478695472bc",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00075-d8eacdf6",
+      "id": "word-blancas",
       "kind": "word",
       "promptEs": "blancas",
-      "answerEn": "Meaning needs review",
+      "answerEn": "white (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "color"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00076",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0017",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c092b6973ad4c9e34580",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00076-3c63fff3",
+      "id": "word-entre",
       "kind": "word",
       "promptEs": "entre",
       "answerEn": "between; among",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00077",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-5239d9e7ada97912253f",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00077-a0cd8f1e",
-      "kind": "word",
-      "promptEs": "las",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00078",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00078-bfdec534",
-      "kind": "word",
-      "promptEs": "negras",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00079",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8cc6fcf13fa6be4df83a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00079-742361a8",
-      "kind": "word",
-      "promptEs": "valen",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00080",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0018",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ebb28927f9181fb33897",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00080-c95eccf8",
+      "id": "word-no",
       "kind": "word",
       "promptEs": "no",
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00081",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9390298f3fb0c5b16049",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-lo-que-significa-xkcd-00081-56c4fa19",
-      "kind": "word",
-      "promptEs": "valen",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-lo-que-significa-xkcd:ocr-token-00082",
-        "sourceLineId": "es-xkcd-lo-que-significa-xkcd:ocr-line-0019",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ebb28927f9181fb33897",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     }
   ]

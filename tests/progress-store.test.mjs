@@ -86,9 +86,9 @@ test("obsolete localStorage progress is deleted without being imported", async (
   assert.equal(backend.writes.length, 0);
 });
 
-test("a native schema-four IndexedDB snapshot wins over obsolete keys", async () => {
+test("a native schema-five IndexedDB snapshot wins over obsolete keys", async () => {
   const serializedSrs = JSON.stringify({
-    schemaVersion: 4,
+    schemaVersion: 5,
     historyCompleteness: "complete",
     cards: {},
   });

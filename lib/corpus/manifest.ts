@@ -3,6 +3,7 @@ import type { LearningCard } from "../content";
 import { isImportanceTargetId } from "../importance-target";
 import {
   CORPUS_SCHEMA_VERSION,
+  TARGET_CORPUS_COMIC_COUNT,
   type ComicImportance,
   type ComicImportanceModel,
   type CorpusManifest,
@@ -55,6 +56,33 @@ function nonnegativeInteger(value: unknown): value is number {
   return typeof value === "number" && Number.isSafeInteger(value) && value >= 0;
 }
 
+interface ParsedManifestCounts {
+  comics: number;
+  authoredComics: number;
+  reviewedSeedComics: number;
+  needsReviewComics: number;
+  cards: number;
+  schedulableCards: number;
+  wordOccurrences: number;
+}
+
+function parseManifestCounts(value: unknown): ParsedManifestCounts | null {
+  if (!isRecord(value)) return null;
+  const fields = [
+    "comics",
+    "authoredComics",
+    "reviewedSeedComics",
+    "needsReviewComics",
+    "cards",
+    "schedulableCards",
+    "wordOccurrences",
+  ] as const;
+  if (fields.some((field) => !nonnegativeInteger(value[field]))) return null;
+  return Object.fromEntries(
+    fields.map((field) => [field, value[field]]),
+  ) as unknown as ParsedManifestCounts;
+}
+
 function compareIds(left: string, right: string): number {
   const leftCharacters = Array.from(left);
   const rightCharacters = Array.from(right);
@@ -72,6 +100,16 @@ function sameStringSet(left: readonly string[], right: readonly string[]) {
   return (
     left.length === right.length &&
     left.every((value) => right.includes(value))
+  );
+}
+
+function isReviewStatus(
+  value: unknown,
+): value is "needs-review" | "ai-authored-internal-qa" | "human-verified" {
+  return (
+    value === "needs-review" ||
+    value === "ai-authored-internal-qa" ||
+    value === "human-verified"
   );
 }
 
@@ -98,17 +136,21 @@ function parseImportance(value: unknown): ComicImportance | null {
 }
 
 function parseImportanceModel(value: unknown): ComicImportanceModel | null {
+  const fullyReviewed =
+    isRecord(value) &&
+    (value.reviewStatus === "ai-authored-internal-qa" ||
+      value.reviewStatus === "human-verified");
   if (
     !isRecord(value) ||
     value.algorithm !== "damped-bipartite-centrality-v1" ||
     value.normalization !== "comic-sum-1" ||
-    value.identityPolicy !== "provisional-word-signature-v1" ||
+    value.identityPolicy !== "stable-card-id-v1" ||
     value.edgePolicy !== "one-per-comic-per-target" ||
     value.cardScope !== "schedulable-only" ||
     value.includesSchedulableOnly !== true ||
-    value.reviewStatus !== "provisional-context-unreviewed" ||
-    value.provisional !== true ||
-    value.contextualSensesReviewed !== false ||
+    (!fullyReviewed && value.reviewStatus !== "mixed") ||
+    value.provisional !== !fullyReviewed ||
+    value.contextualSensesReviewed !== fullyReviewed ||
     !finiteNumberInRange(value.damping, 0, 1) ||
     value.damping === 1 ||
     typeof value.tolerance !== "number" ||
@@ -134,7 +176,7 @@ function parseImportanceModel(value: unknown): ComicImportanceModel | null {
     edgePolicy: value.edgePolicy,
     cardScope: value.cardScope,
     includesSchedulableOnly: value.includesSchedulableOnly,
-    reviewStatus: value.reviewStatus,
+    reviewStatus: value.reviewStatus as ComicImportanceModel["reviewStatus"],
     provisional: value.provisional,
     contextualSensesReviewed: value.contextualSensesReviewed,
     damping: value.damping,
@@ -160,6 +202,9 @@ function parseEntry(
     isImportanceTargetId,
   );
   const importance = parseImportance(value.importance);
+  const expectedImportanceTargetIds = cardIds
+    ?.map((cardId) => `card:${encodeURIComponent(cardId)}`)
+    .sort() ?? null;
   if (
     typeof value.id !== "string" ||
     typeof value.loadKey !== "string" ||
@@ -170,10 +215,13 @@ function parseEntry(
     typeof value.title !== "string" ||
     typeof value.titleEs !== "string" ||
     typeof value.imageSrc !== "string" ||
+    !isReviewStatus(value.reviewStatus) ||
     !cardIds ||
     !importanceTargetIds ||
+    !expectedImportanceTargetIds ||
     !importance ||
     importance.cardCount !== importanceTargetIds.length ||
+    !sameStringSet(importanceTargetIds, expectedImportanceTargetIds) ||
     importanceTargetIds.some(
       (targetId, index) => index > 0 && importanceTargetIds[index - 1] >= targetId,
     )
@@ -194,7 +242,7 @@ function parseEntry(
     cardIds,
     importanceTargetIds,
     importance,
-    reviewStatus: value.reviewStatus === "reviewed" ? "reviewed" : "needs-review",
+    reviewStatus: value.reviewStatus,
   };
 }
 
@@ -209,7 +257,12 @@ function parseCatalogCard(value: unknown): LearningCard | null {
     !Array.isArray(value.tags) ||
     value.tags.some((tag) => typeof tag !== "string") ||
     value.schedulable !== true ||
-    value.reviewStatus !== "needs-review"
+    !isReviewStatus(value.reviewStatus) ||
+    !isRecord(value.provenance) ||
+    typeof value.provenance.contextualSenseReviewed !== "boolean" ||
+    (value.reviewStatus === "needs-review"
+      ? value.provenance.contextualSenseReviewed !== false
+      : value.provenance.contextualSenseReviewed !== true)
   ) {
     return null;
   }
@@ -222,13 +275,31 @@ export function parseCorpusManifest(value: unknown): CorpusManifest {
     throw new Error("Unsupported corpus manifest schema version.");
   }
   const importanceModel = parseImportanceModel(value.importanceModel);
+  const counts = parseManifestCounts(value.counts);
   if (
     typeof value.revision !== "string" ||
     !Array.isArray(value.comics) ||
     !Array.isArray(value.cardCatalog) ||
-    !importanceModel
+    !importanceModel ||
+    !counts
   ) {
     throw new Error("Corpus manifest is missing its revision or comics list.");
+  }
+  if (
+    value.comics.length !== TARGET_CORPUS_COMIC_COUNT ||
+    counts.comics !== TARGET_CORPUS_COMIC_COUNT
+  ) {
+    throw new Error(
+      `Corpus manifest must contain all ${TARGET_CORPUS_COMIC_COUNT} comics.`,
+    );
+  }
+  if (
+    counts.authoredComics +
+      counts.reviewedSeedComics +
+      counts.needsReviewComics !==
+    counts.comics
+  ) {
+    throw new Error("Corpus manifest source counts do not match its comic count.");
   }
 
   const entries = value.comics.map((entry) =>
@@ -317,16 +388,19 @@ export function parseCorpusManifest(value: unknown): CorpusManifest {
   if (catalogIds.size !== cardCatalog.length) {
     throw new Error("Corpus manifest contains duplicate catalog card IDs.");
   }
-  const generatedSchedulerIds = new Set(
-    comics
-      .filter((comic) => comic.reviewStatus === "needs-review")
-      .flatMap((comic) => [...comic.cardIds]),
-  );
+  const schedulerIds = new Set(comics.flatMap((comic) => [...comic.cardIds]));
   if (
-    catalogIds.size !== generatedSchedulerIds.size ||
-    [...generatedSchedulerIds].some((cardId) => !catalogIds.has(cardId))
+    catalogIds.size !== schedulerIds.size ||
+    [...schedulerIds].some((cardId) => !catalogIds.has(cardId))
   ) {
-    throw new Error("Corpus card catalog does not match generated scheduler IDs.");
+    throw new Error("Corpus card catalog does not match stable scheduler IDs.");
+  }
+  if (
+    counts.cards !== cardCatalog.length ||
+    counts.schedulableCards !==
+      cardCatalog.filter((card) => card.schedulable !== false).length
+  ) {
+    throw new Error("Corpus manifest counts do not match its card catalog.");
   }
   return {
     schemaVersion: CORPUS_SCHEMA_VERSION,
@@ -338,38 +412,28 @@ export function parseCorpusManifest(value: unknown): CorpusManifest {
 }
 
 /**
- * Checked-in reviewed comics win over generated versions with the same ID.
- * This preserves their hand-authored word bounds and curriculum while still
- * allowing the generated manifest to control the overall ordering.
+ * Exact checked-in seed fallbacks stay synchronous and offline-capable. An
+ * authored runtime entry with the same comic ID wins unless its load key,
+ * revision, card IDs, and analytics targets exactly match the seed adapter.
  */
 export function mergeReviewedManifest(remote: CorpusManifest): CorpusManifest {
   const reviewedById = new Map(
     REVIEWED_CORPUS_MANIFEST.comics.map((comic) => [comic.id, comic]),
   );
-  const remoteById = new Map(remote.comics.map((comic) => [comic.id, comic]));
-  for (const reviewed of REVIEWED_CORPUS_MANIFEST.comics) {
-    const remoteEntry = remoteById.get(reviewed.id);
-    if (
-      !remoteEntry ||
-      remoteEntry.reviewStatus !== "reviewed" ||
-      !sameStringSet(remoteEntry.cardIds, reviewed.cardIds) ||
-      !sameStringSet(
-        remoteEntry.importanceTargetIds,
-        reviewed.importanceTargetIds,
-      )
-    ) {
-      throw new Error(
-        `Remote reviewed curriculum does not match ${reviewed.id}.`,
-      );
-    }
-  }
   const comics = remote.comics.map((entry) => {
-    const reviewed = reviewedById.get(entry.id);
-    return reviewed
+    const seed = reviewedById.get(entry.id);
+    const isExactSeedFallback = Boolean(
+      seed &&
+        entry.loadKey === seed.loadKey &&
+        entry.revision === seed.revision &&
+        sameStringSet(entry.cardIds, seed.cardIds) &&
+        sameStringSet(entry.importanceTargetIds, seed.importanceTargetIds),
+    );
+    return seed && isExactSeedFallback
       ? {
-          ...reviewed,
+          ...seed,
           // Ranking is corpus-wide. Keep the remote 258-comic result even
-          // though the checked-in reviewed curriculum wins for content.
+          // though the checked-in seed adapter wins for fallback content.
           importance: entry.importance,
         }
       : entry;

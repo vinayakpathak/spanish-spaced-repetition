@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-59b556682f5d1bb6",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 1,
-    "lowConfidenceTokenCount": 0,
-    "rawOcrTokenCount": 16,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-digno",
     "xkcdNumber": 291,
     "publishedAt": "2007-07-18",
-    "title": "Digno",
+    "title": "Dignified",
     "titleEs": "Digno",
     "image": {
       "src": "https://es.xkcd.com/images/dignified.png",
       "width": 400,
       "height": 336,
       "aspectRatio": 1.1905,
-      "altEn": "Spanish-language xkcd comic #291: Digno"
+      "altEn": "Spanish-language xkcd comic #291: Dignified"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,23 @@
     },
     "titleText": {
       "es": "―No lo sé. ¿Por qué no se te cae la boina de la cabeza? ―Grapas.",
-      "en": "English title text pending review."
+      "en": "—I don't know. Why doesn't your beret fall off your head? —Staples."
     },
     "regions": [
       {
-        "id": "es-xkcd-digno:region-0001",
-        "labelEs": "TE SACARON A EMPUJONES DE",
+        "id": "es-xkcd-digno:bubble",
+        "labelEs": "TE SACARON A EMPUJONES DE CABEZA POR LA VAGINA DE ALGUIEN. ¿POR QUÉ ACTÚAS TAN DIGNO?",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 17,
           "y": 10.119,
-          "width": 63.5,
-          "height": 5.9524
+          "width": 74.5,
+          "height": 17.262
         },
         "words": [
           {
-            "id": "es-xkcd-digno:word-00001",
+            "id": "es-xkcd-digno:bubble:w01",
             "text": "TE",
             "normalized": "te",
             "bounds": [
@@ -70,11 +64,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00001-3be38117"
+              "word-te--direct"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00002",
+            "id": "es-xkcd-digno:bubble:w02",
             "text": "SACARON",
             "normalized": "sacaron",
             "bounds": [
@@ -86,11 +80,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00002-cf8cc9a2"
+              "word-sacaron--removed",
+              "grammar-third-person-plural-unnamed-agent"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00003",
+            "id": "es-xkcd-digno:bubble:w03",
             "text": "A",
             "normalized": "a",
             "bounds": [
@@ -102,11 +97,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00003-cf905219"
+              "word-a--fixed-a-empujones",
+              "phrase-a-empujones"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00004",
+            "id": "es-xkcd-digno:bubble:w04",
             "text": "EMPUJONES",
             "normalized": "empujones",
             "bounds": [
@@ -118,11 +114,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00004-9464805f"
+              "word-empujones",
+              "phrase-a-empujones"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00005",
+            "id": "es-xkcd-digno:bubble:w05",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -134,39 +131,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00005-62b41a90"
+              "word-de--fixed-de-cabeza",
+              "phrase-de-cabeza--headfirst"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-digno-00001-3be38117",
-          "word-auto-es-xkcd-digno-00002-cf8cc9a2",
-          "word-auto-es-xkcd-digno-00003-cf905219",
-          "word-auto-es-xkcd-digno-00004-9464805f",
-          "word-auto-es-xkcd-digno-00005-62b41a90"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-digno:region-0002",
-        "labelEs": "CABEZA POR LA VAGINA DE ALGUIEN.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 17,
-          "y": 16.6667,
-          "width": 74.5,
-          "height": 5.3571
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-digno:word-00006",
+            "id": "es-xkcd-digno:bubble:w06",
             "text": "CABEZA",
             "normalized": "cabeza",
             "bounds": [
@@ -178,11 +148,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00006-4e5f6fbc"
+              "word-cabeza",
+              "phrase-de-cabeza--headfirst"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00007",
+            "id": "es-xkcd-digno:bubble:w07",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -194,11 +165,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00007-9d4f4cff"
+              "word-por--through"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00008",
+            "id": "es-xkcd-digno:bubble:w08",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -210,11 +181,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00008-91dcd97a"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00009",
+            "id": "es-xkcd-digno:bubble:w09",
             "text": "VAGINA",
             "normalized": "vagina",
             "bounds": [
@@ -226,11 +197,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00009-8ec264d0"
+              "word-vagina"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00010",
+            "id": "es-xkcd-digno:bubble:w10",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -242,11 +213,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00010-b0b172ca"
+              "word-de--of"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00011",
+            "id": "es-xkcd-digno:bubble:w11",
             "text": "ALGUIEN",
             "normalized": "alguien",
             "bounds": [
@@ -258,40 +229,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00011-3e719788"
+              "word-alguien"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-digno-00006-4e5f6fbc",
-          "word-auto-es-xkcd-digno-00007-9d4f4cff",
-          "word-auto-es-xkcd-digno-00008-91dcd97a",
-          "word-auto-es-xkcd-digno-00009-8ec264d0",
-          "word-auto-es-xkcd-digno-00010-b0b172ca",
-          "word-auto-es-xkcd-digno-00011-3e719788"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-digno:region-0003",
-        "labelEs": "¿POR QUÉ ACTÚAS TAN DIGNO?",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 17,
-          "y": 21.4286,
-          "width": 65.5,
-          "height": 5.9524
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-digno:word-00012",
+            "id": "es-xkcd-digno:bubble:w12",
             "text": "POR",
             "normalized": "por",
             "bounds": [
@@ -303,11 +245,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00012-e5cdc9a9"
+              "word-por--question",
+              "grammar-por-que-vs-porque"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00013",
+            "id": "es-xkcd-digno:bubble:w13",
             "text": "QUÉ",
             "normalized": "qué",
             "bounds": [
@@ -319,11 +262,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00013-eca815fd"
+              "word-qué--why-complement",
+              "grammar-por-que-vs-porque"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00014",
+            "id": "es-xkcd-digno:bubble:w14",
             "text": "ACTÚAS",
             "normalized": "actúas",
             "bounds": [
@@ -335,11 +279,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00014-a760b76a"
+              "word-actúas--behave"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00015",
+            "id": "es-xkcd-digno:bubble:w15",
             "text": "TAN",
             "normalized": "tan",
             "bounds": [
@@ -351,11 +295,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00015-864106a3"
+              "word-tan",
+              "grammar-tan-adjective-degree"
             ]
           },
           {
-            "id": "es-xkcd-digno:word-00016",
+            "id": "es-xkcd-digno:bubble:w16",
             "text": "DIGNO",
             "normalized": "digno",
             "bounds": [
@@ -367,440 +312,562 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-digno-00016-47aad7ac"
+              "word-digno",
+              "grammar-tan-adjective-degree"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-digno-00012-e5cdc9a9",
-          "word-auto-es-xkcd-digno-00013-eca815fd",
-          "word-auto-es-xkcd-digno-00014-a760b76a",
-          "word-auto-es-xkcd-digno-00015-864106a3",
-          "word-auto-es-xkcd-digno-00016-47aad7ac"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-digno:bubble:app-unnamed-agent",
+            "cardId": "grammar-third-person-plural-unnamed-agent",
+            "participantWordIds": [
+              "es-xkcd-digno:bubble:w02"
+            ],
+            "exampleEs": "SACARON",
+            "explanationEn": "Sacaron is a plural completed-past verb, while the people who performed the action are left unnamed."
+          },
+          {
+            "id": "es-xkcd-digno:bubble:app-a-empujones",
+            "cardId": "phrase-a-empujones",
+            "participantWordIds": [
+              "es-xkcd-digno:bubble:w03",
+              "es-xkcd-digno:bubble:w04"
+            ],
+            "exampleEs": "A EMPUJONES",
+            "explanationEn": "A and the plural noun empujones form the fixed expression for movement caused by repeated shoves."
+          },
+          {
+            "id": "es-xkcd-digno:bubble:app-de-cabeza",
+            "cardId": "phrase-de-cabeza--headfirst",
+            "participantWordIds": [
+              "es-xkcd-digno:bubble:w05",
+              "es-xkcd-digno:bubble:w06"
+            ],
+            "exampleEs": "DE CABEZA",
+            "explanationEn": "De cabeza describes the head as leading the movement."
+          },
+          {
+            "id": "es-xkcd-digno:bubble:app-por-que",
+            "cardId": "grammar-por-que-vs-porque",
+            "participantWordIds": [
+              "es-xkcd-digno:bubble:w12",
+              "es-xkcd-digno:bubble:w13"
+            ],
+            "exampleEs": "POR QUÉ",
+            "explanationEn": "The two written words por qué ask for a reason, and qué carries a written accent."
+          },
+          {
+            "id": "es-xkcd-digno:bubble:app-tan-degree",
+            "cardId": "grammar-tan-adjective-degree",
+            "participantWordIds": [
+              "es-xkcd-digno:bubble:w15",
+              "es-xkcd-digno:bubble:w16"
+            ],
+            "exampleEs": "TAN DIGNO",
+            "explanationEn": "Tan immediately precedes digno and intensifies that description."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-te--direct",
+          "word-sacaron--removed",
+          "grammar-third-person-plural-unnamed-agent",
+          "word-a--fixed-a-empujones",
+          "phrase-a-empujones",
+          "word-empujones",
+          "word-de--fixed-de-cabeza",
+          "phrase-de-cabeza--headfirst",
+          "word-cabeza",
+          "word-por--through",
+          "word-la--article",
+          "word-vagina",
+          "word-de--of",
+          "word-alguien",
+          "word-por--question",
+          "grammar-por-que-vs-porque",
+          "word-qué--why-complement",
+          "word-actúas--behave",
+          "word-tan",
+          "grammar-tan-adjective-degree",
+          "word-digno"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-digno-00001-3be38117",
-      "word-auto-es-xkcd-digno-00002-cf8cc9a2",
-      "word-auto-es-xkcd-digno-00003-cf905219",
-      "word-auto-es-xkcd-digno-00004-9464805f",
-      "word-auto-es-xkcd-digno-00005-62b41a90",
-      "word-auto-es-xkcd-digno-00006-4e5f6fbc",
-      "word-auto-es-xkcd-digno-00007-9d4f4cff",
-      "word-auto-es-xkcd-digno-00008-91dcd97a",
-      "word-auto-es-xkcd-digno-00009-8ec264d0",
-      "word-auto-es-xkcd-digno-00010-b0b172ca",
-      "word-auto-es-xkcd-digno-00011-3e719788",
-      "word-auto-es-xkcd-digno-00012-e5cdc9a9",
-      "word-auto-es-xkcd-digno-00013-eca815fd",
-      "word-auto-es-xkcd-digno-00014-a760b76a",
-      "word-auto-es-xkcd-digno-00015-864106a3",
-      "word-auto-es-xkcd-digno-00016-47aad7ac"
+      "word-te--direct",
+      "word-sacaron--removed",
+      "grammar-third-person-plural-unnamed-agent",
+      "word-a--fixed-a-empujones",
+      "phrase-a-empujones",
+      "word-empujones",
+      "word-de--fixed-de-cabeza",
+      "phrase-de-cabeza--headfirst",
+      "word-cabeza",
+      "word-por--through",
+      "word-la--article",
+      "word-vagina",
+      "word-de--of",
+      "word-alguien",
+      "word-por--question",
+      "grammar-por-que-vs-porque",
+      "word-qué--why-complement",
+      "word-actúas--behave",
+      "word-tan",
+      "grammar-tan-adjective-degree",
+      "word-digno"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 1,
-      "lowConfidenceTokenCount": 0,
-      "rawOcrTokenCount": 16,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-digno-00001-3be38117",
+      "id": "word-te--direct",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "Meaning needs review",
+      "answerEn": "you (direct-object pronoun)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00001",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d6c9a90dd38f6852515",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00002-cf8cc9a2",
+      "id": "word-sacaron--removed",
       "kind": "word",
       "promptEs": "sacaron",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "they took; pulled (someone or something) out",
+      "noteEn": "Sacaron is a completed-past form of sacar used for more than one doer. Sacar often means moving someone or something from inside to outside.",
+      "example": {
+        "es": "Sacaron las cajas del coche.",
+        "en": "They took the boxes out of the car."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "removal",
+        "completed past",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00002",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-787420fda584e2e1c697",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00003-cf905219",
+      "id": "grammar-third-person-plural-unnamed-agent",
+      "kind": "grammar",
+      "promptEs": "verbo en forma de ellos/ellas sin agente nombrado",
+      "questionEn": "How can Spanish describe an action by unnamed people, where English might use a vague “they” or a passive sentence?",
+      "answerEn": "Use the plural “they” form of the verb and do not name who performed the action.",
+      "noteEn": "The plural verb ending points to people who did the action, but the speaker leaves them unidentified. Depending on the context, English may use “they,” “people,” “someone,” or a passive form such as “was built.” For a completed regular -ar action, the plural ending is -aron, as in llamaron.",
+      "example": {
+        "es": "Construyeron el puente en 1990.",
+        "en": "The bridge was built in 1990."
+      },
+      "tags": [
+        "grammar",
+        "unnamed agent",
+        "plural verb",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-a--fixed-a-empujones",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "by; with (as part of a empujones, “by shoving”)",
+      "noteEn": "In the fixed expression a empujones, a introduces the repeated pushes that describe how something moves. It is not the usual destination meaning of a.",
+      "example": {
+        "es": "Movieron la mesa a empujones.",
+        "en": "They moved the table by shoving it."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "manner"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00003",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ca978112ca1bbdcafac2",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00004-9464805f",
+      "id": "phrase-a-empujones",
+      "kind": "phrase",
+      "promptEs": "a empujones",
+      "questionEn": "How do you say that someone or something moves because it is shoved repeatedly?",
+      "answerEn": "Use a empujones to mean “by shoving” or “with repeated pushes.”",
+      "noteEn": "Empujón means one push or shove. Spanish normally uses its plural, empujones, after a in this fixed expression. The complete expression describes the manner of movement; neither word changes.",
+      "example": {
+        "es": "Movieron la mesa a empujones.",
+        "en": "They moved the table by shoving it."
+      },
+      "tags": [
+        "phrase",
+        "manner",
+        "movement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-empujones",
       "kind": "word",
       "promptEs": "empujones",
-      "answerEn": "Meaning needs review",
+      "answerEn": "shoves; pushes",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "movement",
+        "plural"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00004",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8dcf82eb06b18b173598",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00005-62b41a90",
+      "id": "word-de--fixed-de-cabeza",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "no separate English word; part of de cabeza (“headfirst”)",
+      "noteEn": "In the fixed movement expression de cabeza, de introduces the body part that leads. The two words work together rather than using de in its ordinary “of” sense.",
+      "example": {
+        "es": "El niño cayó de cabeza.",
+        "en": "The child fell headfirst."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "fixed expression",
+        "manner"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00005",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00006-4e5f6fbc",
+      "id": "phrase-de-cabeza--headfirst",
+      "kind": "phrase",
+      "promptEs": "de cabeza",
+      "questionEn": "How do you say that a person or thing moves with the head leading?",
+      "answerEn": "Put de cabeza after the movement verb to mean “headfirst.”",
+      "noteEn": "Cabeza means “head.” In this fixed expression, de does not have its ordinary “of” meaning; de cabeza describes the direction or manner of the movement. The expression stays unchanged.",
+      "example": {
+        "es": "Cayó de cabeza al agua.",
+        "en": "He fell headfirst into the water."
+      },
+      "tags": [
+        "phrase",
+        "manner",
+        "movement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-cabeza",
       "kind": "word",
       "promptEs": "cabeza",
-      "answerEn": "Meaning needs review",
+      "answerEn": "head",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "body"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00006",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-f5cbe7d88182a4b8e400",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00007-9d4f4cff",
+      "id": "word-por--through",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "through; along; down; via (a movement path)",
+      "noteEn": "Por can mark the path followed during movement. English may choose through, along, down, or via according to the route.",
+      "example": {
+        "es": "Bajamos por el sendero.",
+        "en": "We went down the path."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "movement"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00007",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00008-91dcd97a",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00008",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00009-8ec264d0",
+      "id": "word-vagina",
       "kind": "word",
       "promptEs": "vagina",
       "answerEn": "vagina",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "anatomy"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00009",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0508a634445d401652d0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00010-b0b172ca",
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
+      "answerEn": "of",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00010",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00011-3e719788",
+      "id": "word-alguien",
       "kind": "word",
       "promptEs": "alguien",
       "answerEn": "someone; anyone",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00011",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-ceeda0e109e9a7d62372",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00012-e5cdc9a9",
+      "id": "word-por--question",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "Meaning needs review",
+      "answerEn": "why (together with qué: por qué)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00012",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3ea6bc47a6277afef178",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00013-eca815fd",
+      "id": "grammar-por-que-vs-porque",
+      "kind": "grammar",
+      "promptEs": "por qué / porque",
+      "answerEn": "Por qué means “why”; porque means “because.”",
+      "noteEn": "Write the question form as two words, with an accent on qué. Write the usual answer word porque as one word without an accent.",
+      "tags": [
+        "A1",
+        "grammar",
+        "questions",
+        "spelling"
+      ],
+      "questionEn": "How do you write “why” and “because” in Spanish?",
+      "example": {
+        "es": "¿Por qué estudias español? Porque me gusta.",
+        "en": "Why do you study Spanish? Because I like it."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-qué--why-complement",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "Meaning needs review",
+      "answerEn": "why (together with por: por qué)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00013",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9030c4df6adca92b9580",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00014-a760b76a",
+      "id": "word-actúas--behave",
       "kind": "word",
       "promptEs": "actúas",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "you act; you behave (informal singular)",
+      "noteEn": "Actúas comes from actuar. The ending -as identifies one person addressed informally, and the written accent keeps the stress on ú.",
+      "example": {
+        "es": "Actúas con mucha calma.",
+        "en": "You act very calmly."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "behavior",
+        "present",
+        "informal singular"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00014",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-7d0a820dc90a5f438282",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00015-864106a3",
+      "id": "word-tan",
       "kind": "word",
       "promptEs": "tan",
       "answerEn": "so; such",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00015",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0e5123df1126f9d22824",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-digno-00016-47aad7ac",
-      "kind": "word",
-      "promptEs": "digno",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-tan-adjective-degree",
+      "kind": "grammar",
+      "promptEs": "tan + palabra descriptiva",
+      "questionEn": "How do you intensify a describing word to mean “so,” as in “so difficult”?",
+      "answerEn": "Put tan immediately before the word that describes the person, thing, or action.",
+      "noteEn": "Tan does not change form. It goes before an adjective, a word that describes a person or thing, or before an adverb, a word that describes an action. Use forms of tanto instead before a noun or when saying “so much” or “so many.”",
+      "example": {
+        "es": "El examen fue tan difícil.",
+        "en": "The exam was so difficult."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "degree",
+        "description",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-digno:ocr-token-00016",
-        "sourceLineId": "es-xkcd-digno:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-aae44f97a661a4525ff9",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-digno",
+      "kind": "word",
+      "promptEs": "digno",
+      "answerEn": "dignified (masculine singular)",
+      "noteEn": "Digno describes a masculine singular person or thing. Use digna for a feminine singular person or thing.",
+      "example": {
+        "es": "Él mantuvo un silencio digno.",
+        "en": "He maintained a dignified silence."
+      },
+      "tags": [
+        "word",
+        "description",
+        "masculine singular"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-digno",
+        "contextualSenseReviewed": true
       }
     }
   ]

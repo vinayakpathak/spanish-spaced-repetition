@@ -46,7 +46,10 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(page, /formatImportanceScore\(currentManifestEntry\.importance\.score\)/);
   assert.match(page, /currentManifestEntry\.importance\.rank/);
   assert.match(page, /Informational comic importance/);
-  assert.match(page, /PageRank-style recursive analysis does not affect scheduling/);
+  assert.match(
+    page,
+    /PageRank-style recursive analysis uses exact stable card IDs and does not affect scheduling/,
+  );
   assert.match(page, /corpusManifest\.comics\.length/);
   assert.match(page, /first\.importance\.rank - second\.importance\.rank/);
   assert.match(page, /aria-labelledby="rankings-title"/);
@@ -64,11 +67,10 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(page, /tabIndex=\{0\}/);
   assert.match(page, /aria-label="Comic importance rankings; scroll to view all comics"/);
   assert.match(page, /Connected targets/);
-  assert.match(page, /normalized Spanish prompt and English answer match/);
-  assert.match(page, /Higher-level targets use exact card IDs/);
+  assert.match(page, /Every analytics target uses the same exact stable card ID/);
   assert.match(page, /cross-comic targets/);
   assert.match(page, /importanceModel\.cardNodeCount\.toLocaleString\("en"\)/);
-  assert.match(page, /Review-needed cards are included/i);
+  assert.match(page, /exact stable card IDs/i);
   assert.match(page, /never merges SRS card IDs or progress/i);
   assert.match(page, /informational PageRank-style recursive importance does not affect scheduling/i);
   assert.match(styles, /\.importance-badge\s*\{/);
@@ -84,12 +86,11 @@ test("comic importance is visible as a normalized badge and accessible ranking d
   assert.match(readme, /damped two-way comic–target centrality/);
   assert.match(readme, /15% baseline\/reset prevents disconnected components and zero-target comics from vanishing/);
   assert.match(readme, /all 258 comic scores sum to 100%/);
-  assert.match(readme, /normalized Spanish prompt and English answer match/);
-  assert.match(readme, /higher-level grammar, expression, and concept cards use exact IDs/);
-  assert.match(readme, /never merges SRS card IDs or progress/);
-  assert.match(readme, /All 14,485 enter SRS and the importance graph/);
+  assert.match(readme, /Every graph target is the exact stable card ID/);
+  assert.match(readme, /never changes SRS card IDs or progress/);
+  assert.match(readme, /All published lessons and cards carry the truthful status/);
   assert.match(readme, /starts with a clean timestamp history/i);
-  assert.match(readme, /Schema-v3 localStorage records are never read as progress/i);
+  assert.match(readme, /Schema-v4 generated-runtime snapshots/);
   assert.doesNotMatch(readme, /Migration preserves its aggregate learning evidence/i);
 });
 
@@ -105,18 +106,18 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
   assert.match(page, /selectNextComic/);
   assert.match(page, /recordCardOpen/);
   assert.match(page, /scoreCardPriority/);
-  assert.match(page, /chooses the unread comic with the largest sum of live exact-card priorities/);
+  assert.match(page, /chooses the unread comic with the highest average live priority per distinct exact card/);
   assert.match(page, /Corpus importance is not part of this decision/);
-  assert.match(page, /CURRENT CARD-PRIORITY FIT/);
-  assert.match(page, /relative priority fit/);
-  assert.match(page, /total card priority across/);
-  assert.match(page, /cardPrioritySum\.toFixed\(2\)/);
+  assert.match(page, /CURRENT PRIORITY DENSITY/);
+  assert.match(page, /relative priority density/);
+  assert.match(page, /average card priority across/);
+  assert.match(page, /cardPriorityDensity\.toFixed\(2\)/);
   assert.doesNotMatch(page, /combined fit|normalizedImportance/);
   assert.match(page, /reason === "complete"/);
   assert.match(page, /You’ve read every comic/);
   assert.match(page, /Tira will not repeat them/);
   assert.match(page, /memory-review-flag/);
-  assert.match(page, /Review needed/);
+  assert.match(page, /AI-authored · Internal QA/);
   assert.doesNotMatch(page, /one-step cooldown|unresolved previews are excluded/i);
   assert.doesNotMatch(page, /studyDay|dueDay|advancedDays/);
   assert.match(page, /Word opened · no cards selected/);
@@ -131,7 +132,7 @@ test("the curriculum stays Spanish-first and starter artifacts are gone", async 
     page,
     /canRestoreStoredProgress\s*\?\s*storedProgress\.openedByComic\s*:\s*\{\}/,
   );
-  assert.match(page, /earlier simulated-day prototype is not imported/i);
+  assert.match(page, /earlier generated-card curriculum is not aliased/i);
   assert.match(progressStore, /tira:srs:v3/);
   assert.match(progressStore, /tira:ui:v3/);
   assert.match(progressStore, /indexedDB/i);

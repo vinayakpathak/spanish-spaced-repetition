@@ -1,8 +1,6 @@
 import {
   CARDS,
-  CARD_BY_ID,
   COMICS,
-  COMIC_BY_ID,
   type Comic,
   type LearningCard,
 } from "../content";
@@ -22,11 +20,38 @@ import {
 } from "./types";
 
 const REVIEWED_REVISION = "reviewed-v1";
+const INTERNAL_QA_STATUS = "ai-authored-internal-qa" as const;
 
-export const REVIEWED_COMICS: readonly Comic[] = COMICS;
-export const REVIEWED_CARDS: readonly LearningCard[] = CARDS;
-export const REVIEWED_COMIC_BY_ID = COMIC_BY_ID;
-export const REVIEWED_CARD_BY_ID = CARD_BY_ID;
+/**
+ * These six checked-in lessons are an offline seed fallback. They receive the
+ * same honest internal-QA status as the authored runtime; this is not a claim
+ * that a human expert verified them.
+ */
+export const REVIEWED_COMICS: readonly Comic[] = COMICS.map((comic) => ({
+  ...comic,
+  reviewStatus: INTERNAL_QA_STATUS,
+  provenance: {
+    method: INTERNAL_QA_STATUS,
+    sourceKind: "reviewed-seed",
+    contextualSensesReviewed: true,
+  },
+}));
+export const REVIEWED_CARDS: readonly LearningCard[] = CARDS.map((card) => ({
+  ...card,
+  reviewStatus: INTERNAL_QA_STATUS,
+  schedulable: true,
+  provenance: {
+    method: INTERNAL_QA_STATUS,
+    ownerComicId: "seed-curriculum",
+    contextualSenseReviewed: true,
+  },
+}));
+export const REVIEWED_COMIC_BY_ID = new Map(
+  REVIEWED_COMICS.map((comic) => [comic.id, comic]),
+);
+export const REVIEWED_CARD_BY_ID = new Map(
+  REVIEWED_CARDS.map((card) => [card.id, card]),
+);
 
 const REVIEWED_IMPORTANCE_TARGET_IDS_BY_ID = new Map(
   REVIEWED_COMICS.map((comic) => {
@@ -71,8 +96,8 @@ function manifestEntry(comic: Comic): CorpusManifestEntry {
     cardIds: comic.cardIds,
     importanceTargetIds,
     importance,
-    reviewStatus: "reviewed",
-    reviewed: true,
+    reviewStatus: INTERNAL_QA_STATUS,
+    seedFallback: true,
   };
 }
 
@@ -87,8 +112,8 @@ export const REVIEWED_CORPUS_MANIFEST: CorpusManifest = {
     cardScope: IMPORTANCE_TARGET_CARD_SCOPE,
     includesSchedulableOnly: true,
     reviewStatus: IMPORTANCE_TARGET_REVIEW_STATUS,
-    provisional: true,
-    contextualSensesReviewed: false,
+    provisional: false,
+    contextualSensesReviewed: true,
     damping: REVIEWED_IMPORTANCE_RESULT.damping,
     tolerance: REVIEWED_IMPORTANCE_RESULT.tolerance,
     maxIterations: REVIEWED_IMPORTANCE_RESULT.maxIterations,
@@ -100,8 +125,7 @@ export const REVIEWED_CORPUS_MANIFEST: CorpusManifest = {
     edgeCount: REVIEWED_IMPORTANCE_RESULT.edgeCount,
   },
   comics: REVIEWED_COMICS.map(manifestEntry),
-  // Reviewed cards are already initialized synchronously from lib/content.ts.
-  cardCatalog: [],
+  cardCatalog: REVIEWED_CARDS,
 };
 
 export function loadReviewedComic(id: string): CorpusComicBundle | null {
@@ -112,6 +136,7 @@ export function loadReviewedComic(id: string): CorpusComicBundle | null {
   return {
     schemaVersion: CORPUS_SCHEMA_VERSION,
     revision: REVIEWED_REVISION,
+    reviewStatus: INTERNAL_QA_STATUS,
     comic,
     cards: REVIEWED_CARDS.filter((card) => referenced.has(card.id)),
   };

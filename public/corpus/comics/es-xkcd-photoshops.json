@@ -1,17 +1,11 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-4704552e401e1f40",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9371,
-    "lowConfidenceTokenCount": 4,
-    "rawOcrTokenCount": 35,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-photoshops",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "Cuando te miro a los ojos, veo artefactos JPEG. Por los píxeles puedo saber que no estamos hechos el uno para el otro.",
-      "en": "English title text pending review."
+      "en": "When I look into your eyes, I see JPEG artifacts. I can tell by the pixels that we're wrong for each other.",
+      "noteEn": "The title text treats JPEG artifacts and visible pixels as mock evidence that the two people are wrong for each other."
     },
     "regions": [
       {
-        "id": "es-xkcd-photoshops:region-0001",
-        "labelEs": "MI HOBBY:",
+        "id": "es-xkcd-photoshops:caption",
+        "labelEs": "MI HOBBY: INSISTIR EN QUE OBJETOS DEL MUNDO REAL ESTÁN RETOCADOS CON PHOTOSHOP.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 27.8442,
+          "x": 7.5581,
           "y": 4.5053,
-          "width": 38.4976,
-          "height": 7.2287
+          "width": 82.5581,
+          "height": 20.281
         },
         "words": [
           {
-            "id": "es-xkcd-photoshops:word-00001",
+            "id": "es-xkcd-photoshops:caption:w01",
             "text": "MI",
             "normalized": "mi",
             "bounds": [
@@ -70,11 +65,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00001-e0c8de5d"
+              "word-mi"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00002",
+            "id": "es-xkcd-photoshops:caption:w02",
             "text": "HOBBY",
             "normalized": "hobby",
             "bounds": [
@@ -86,36 +81,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00002-311e30a3"
+              "word-hobby"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00001-e0c8de5d",
-          "word-auto-es-xkcd-photoshops-00002-311e30a3"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0001",
-          "ocrConfidence": 0.5
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0002",
-        "labelEs": "INSISTIR EN QUE OBJETOS DEL",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 8.1395,
-          "y": 11.1111,
-          "width": 79.0698,
-          "height": 5.1282
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00003",
+            "id": "es-xkcd-photoshops:caption:w03",
             "text": "INSISTIR",
             "normalized": "insistir",
             "bounds": [
@@ -127,11 +97,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00003-641e8fb2"
+              "word-insistir",
+              "grammar-insistir-en-que-claim"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00004",
+            "id": "es-xkcd-photoshops:caption:w04",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -143,11 +114,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00004-16c9e98b"
+              "word-en--insistir-complement",
+              "grammar-insistir-en-que-claim"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00005",
+            "id": "es-xkcd-photoshops:caption:w05",
             "text": "QUE",
             "normalized": "que",
             "bounds": [
@@ -159,11 +131,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00005-87a70f63"
+              "word-que--clause-link",
+              "grammar-insistir-en-que-claim"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00006",
+            "id": "es-xkcd-photoshops:caption:w06",
             "text": "OBJETOS",
             "normalized": "objetos",
             "bounds": [
@@ -175,11 +148,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00006-e1ca6fa1"
+              "word-objetos",
+              "grammar-insistir-en-que-claim"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00007",
+            "id": "es-xkcd-photoshops:caption:w07",
             "text": "DEL",
             "normalized": "del",
             "bounds": [
@@ -191,39 +165,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00007-07a52164"
+              "word-del--of-the",
+              "grammar-insistir-en-que-claim"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00003-641e8fb2",
-          "word-auto-es-xkcd-photoshops-00004-16c9e98b",
-          "word-auto-es-xkcd-photoshops-00005-87a70f63",
-          "word-auto-es-xkcd-photoshops-00006-e1ca6fa1",
-          "word-auto-es-xkcd-photoshops-00007-07a52164"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0003",
-        "labelEs": "MUNDO REAL ESTÁN RETOCADOS",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 7.5581,
-          "y": 15.3846,
-          "width": 82.5581,
-          "height": 5.1282
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00008",
+            "id": "es-xkcd-photoshops:caption:w08",
             "text": "MUNDO",
             "normalized": "mundo",
             "bounds": [
@@ -235,11 +182,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00008-09fefd68"
+              "word-mundo",
+              "grammar-insistir-en-que-claim",
+              "concept-photoshop-image-manipulation"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00009",
+            "id": "es-xkcd-photoshops:caption:w09",
             "text": "REAL",
             "normalized": "real",
             "bounds": [
@@ -251,11 +200,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00009-41d971f9"
+              "word-real--genuine",
+              "grammar-insistir-en-que-claim",
+              "concept-photoshop-image-manipulation"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00010",
+            "id": "es-xkcd-photoshops:caption:w10",
             "text": "ESTÁN",
             "normalized": "están",
             "bounds": [
@@ -267,11 +218,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00010-789ee025"
+              "word-estan--location",
+              "grammar-insistir-en-que-claim",
+              "grammar-estar-participle-result-state"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00011",
+            "id": "es-xkcd-photoshops:caption:w11",
             "text": "RETOCADOS",
             "normalized": "retocados",
             "bounds": [
@@ -283,38 +236,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00011-efcfd2c7"
+              "word-retocados",
+              "grammar-insistir-en-que-claim",
+              "grammar-estar-participle-result-state",
+              "concept-photoshop-image-manipulation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00008-09fefd68",
-          "word-auto-es-xkcd-photoshops-00009-41d971f9",
-          "word-auto-es-xkcd-photoshops-00010-789ee025",
-          "word-auto-es-xkcd-photoshops-00011-efcfd2c7"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0003",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0004",
-        "labelEs": "CON PHOTOSHOP.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 7.5581,
-          "y": 19.6581,
-          "width": 45.3488,
-          "height": 5.1282
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00012",
+            "id": "es-xkcd-photoshops:caption:w12",
             "text": "CON",
             "normalized": "con",
             "bounds": [
@@ -326,11 +255,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00012-74b0fa5d"
+              "word-con",
+              "grammar-insistir-en-que-claim"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00013",
+            "id": "es-xkcd-photoshops:caption:w13",
             "text": "PHOTOSHOP",
             "normalized": "photoshop",
             "bounds": [
@@ -342,36 +272,77 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00013-7a3d252c"
+              "word-photoshop--software",
+              "grammar-insistir-en-que-claim",
+              "concept-photoshop-image-manipulation"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00012-74b0fa5d",
-          "word-auto-es-xkcd-photoshops-00013-7a3d252c"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-photoshops:caption:app-insistir-claim",
+            "cardId": "grammar-insistir-en-que-claim",
+            "participantWordIds": [
+              "es-xkcd-photoshops:caption:w03",
+              "es-xkcd-photoshops:caption:w04",
+              "es-xkcd-photoshops:caption:w05",
+              "es-xkcd-photoshops:caption:w06",
+              "es-xkcd-photoshops:caption:w07",
+              "es-xkcd-photoshops:caption:w08",
+              "es-xkcd-photoshops:caption:w09",
+              "es-xkcd-photoshops:caption:w10",
+              "es-xkcd-photoshops:caption:w11",
+              "es-xkcd-photoshops:caption:w12",
+              "es-xkcd-photoshops:caption:w13"
+            ],
+            "exampleEs": "INSISTIR EN QUE OBJETOS DEL MUNDO REAL ESTÁN RETOCADOS CON PHOTOSHOP",
+            "explanationEn": "Insistir is unchanged because the caption names an activity; en que introduces the following statement, and the remaining words fill that statement slot."
+          },
+          {
+            "id": "es-xkcd-photoshops:caption:app-result-state",
+            "cardId": "grammar-estar-participle-result-state",
+            "participantWordIds": [
+              "es-xkcd-photoshops:caption:w10",
+              "es-xkcd-photoshops:caption:w11"
+            ],
+            "exampleEs": "ESTÁN RETOCADOS",
+            "explanationEn": "Están matches the plural objetos, and retocados has a masculine plural ending to describe their alleged edited state."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0004",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-mi",
+          "word-hobby",
+          "word-insistir",
+          "grammar-insistir-en-que-claim",
+          "word-en--insistir-complement",
+          "word-que--clause-link",
+          "word-objetos",
+          "word-del--of-the",
+          "word-mundo",
+          "concept-photoshop-image-manipulation",
+          "word-real--genuine",
+          "word-estan--location",
+          "grammar-estar-participle-result-state",
+          "word-retocados",
+          "word-con",
+          "word-photoshop--software"
+        ]
       },
       {
-        "id": "es-xkcd-photoshops:region-0005",
-        "labelEs": "ESTE SABLE ES UNA",
+        "id": "es-xkcd-photoshops:sabre-claim",
+        "labelEs": "ESTE SABLE ES UNA RELIQUIA FAMILIAR DEL SIGLO XIX.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 6.3953,
           "y": 30.3419,
           "width": 44.186,
-          "height": 4.2735
+          "height": 11.639
         },
         "words": [
           {
-            "id": "es-xkcd-photoshops:word-00014",
+            "id": "es-xkcd-photoshops:sabre-claim:w01",
             "text": "ESTE",
             "normalized": "este",
             "bounds": [
@@ -383,11 +354,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00014-21f79278"
+              "word-este"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00015",
+            "id": "es-xkcd-photoshops:sabre-claim:w02",
             "text": "SABLE",
             "normalized": "sable",
             "bounds": [
@@ -399,11 +370,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00015-083b3549"
+              "word-sable--sabre"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00016",
+            "id": "es-xkcd-photoshops:sabre-claim:w03",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -415,11 +386,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00016-c4a26ec9"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00017",
+            "id": "es-xkcd-photoshops:sabre-claim:w04",
             "text": "UNA",
             "normalized": "una",
             "bounds": [
@@ -431,38 +402,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00017-88a11810"
+              "word-una"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00014-21f79278",
-          "word-auto-es-xkcd-photoshops-00015-083b3549",
-          "word-auto-es-xkcd-photoshops-00016-c4a26ec9",
-          "word-auto-es-xkcd-photoshops-00017-88a11810"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0005",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0006",
-        "labelEs": "RELIQUIA FAMILIAR",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6.9767,
-          "y": 33.7607,
-          "width": 40.6977,
-          "height": 4.7009
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00018",
+            "id": "es-xkcd-photoshops:sabre-claim:w05",
             "text": "RELIQUIA",
             "normalized": "reliquia",
             "bounds": [
@@ -474,11 +418,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00018-ce34aca8"
+              "word-reliquia--heirloom",
+              "phrase-reliquia-familiar"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00019",
+            "id": "es-xkcd-photoshops:sabre-claim:w06",
             "text": "FAMILIAR",
             "normalized": "familiar",
             "bounds": [
@@ -490,36 +435,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00019-06a6639c"
+              "word-familiar--family",
+              "phrase-reliquia-familiar"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00018-ce34aca8",
-          "word-auto-es-xkcd-photoshops-00019-06a6639c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0006",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0007",
-        "labelEs": "DEL SIGLO XIX.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 6.9509,
-          "y": 37.0789,
-          "width": 33.1913,
-          "height": 4.902
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00020",
+            "id": "es-xkcd-photoshops:sabre-claim:w07",
             "text": "DEL",
             "normalized": "del",
             "bounds": [
@@ -531,11 +452,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00020-e4a49c2d"
+              "word-del--from-the-period"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00021",
+            "id": "es-xkcd-photoshops:sabre-claim:w08",
             "text": "SIGLO",
             "normalized": "siglo",
             "bounds": [
@@ -547,13 +468,17 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00021-8e79abbd"
+              "word-siglo",
+              "grammar-siglo-roman-numeral"
             ]
-          },
+          }
+        ],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-photoshops:word-00022",
+            "id": "es-xkcd-photoshops:sabre-claim:excluded-century-number",
             "text": "XIX",
-            "normalized": "xix",
+            "reason": "number",
+            "rationale": "XIX is a Roman numeral naming the century rather than a Spanish lexical word; the linked century-pattern card explains how it is read.",
             "bounds": [
               {
                 "x": 29.3338,
@@ -561,39 +486,57 @@
                 "width": 10.8083,
                 "height": 4.766
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-photoshops-00022-e3513b7f"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00020-e4a49c2d",
-          "word-auto-es-xkcd-photoshops-00021-8e79abbd",
-          "word-auto-es-xkcd-photoshops-00022-e3513b7f"
+        "applications": [
+          {
+            "id": "es-xkcd-photoshops:sabre-claim:app-family-heirloom",
+            "cardId": "phrase-reliquia-familiar",
+            "participantWordIds": [
+              "es-xkcd-photoshops:sabre-claim:w05",
+              "es-xkcd-photoshops:sabre-claim:w06"
+            ],
+            "exampleEs": "RELIQUIA FAMILIAR",
+            "explanationEn": "Reliquia names the valued old object, and familiar classifies it as belonging to or passed down through a family."
+          },
+          {
+            "id": "es-xkcd-photoshops:sabre-claim:app-century-number",
+            "cardId": "grammar-siglo-roman-numeral",
+            "participantWordIds": [
+              "es-xkcd-photoshops:sabre-claim:w08"
+            ],
+            "exampleEs": "SIGLO XIX",
+            "explanationEn": "Siglo comes before the Roman numeral XIX, which is read diecinueve when naming this century."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0007",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-este",
+          "word-sable--sabre",
+          "word-es",
+          "word-una",
+          "word-reliquia--heirloom",
+          "phrase-reliquia-familiar",
+          "word-familiar--family",
+          "word-del--from-the-period",
+          "word-siglo",
+          "grammar-siglo-roman-numeral"
+        ]
       },
       {
-        "id": "es-xkcd-photoshops:region-0008",
-        "labelEs": "PARECE RETOCADO",
+        "id": "es-xkcd-photoshops:photoshop-accusation",
+        "labelEs": "PARECE RETOCADO CON PHOTOSHOP.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 50.5814,
+          "x": 50.5455,
           "y": 41.0256,
-          "width": 40.1163,
-          "height": 5.1282
+          "width": 40.1522,
+          "height": 12.4826
         },
         "words": [
           {
-            "id": "es-xkcd-photoshops:word-00023",
+            "id": "es-xkcd-photoshops:photoshop-accusation:w01",
             "text": "PARECE",
             "normalized": "parece",
             "bounds": [
@@ -605,11 +548,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00023-b97dcfb2"
+              "word-parece"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00024",
+            "id": "es-xkcd-photoshops:photoshop-accusation:w02",
             "text": "RETOCADO",
             "normalized": "retocado",
             "bounds": [
@@ -621,36 +564,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00024-cd392b16"
+              "word-retocado",
+              "concept-photoshop-image-manipulation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00023-b97dcfb2",
-          "word-auto-es-xkcd-photoshops-00024-cd392b16"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0008",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0009",
-        "labelEs": "CON PHOTOSHOP.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 50.5455,
-          "y": 44.7825,
-          "width": 39.0254,
-          "height": 8.7257
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00025",
+            "id": "es-xkcd-photoshops:photoshop-accusation:w03",
             "text": "CON",
             "normalized": "con",
             "bounds": [
@@ -658,15 +577,15 @@
                 "x": 50.5455,
                 "y": 44.7825,
                 "width": 8.7934,
-                "height": 8.5869
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00025-eb653d18"
+              "word-con"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00026",
+            "id": "es-xkcd-photoshops:photoshop-accusation:w04",
             "text": "PHOTOSHOP",
             "normalized": "photoshop",
             "bounds": [
@@ -674,28 +593,27 @@
                 "x": 60.7197,
                 "y": 44.8292,
                 "width": 28.8511,
-                "height": 8.679
+                "height": 4.8
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00026-f99a3f1e"
+              "word-photoshop--software",
+              "concept-photoshop-image-manipulation"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-photoshops-00025-eb653d18",
-          "word-auto-es-xkcd-photoshops-00026-f99a3f1e"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0009",
-          "ocrConfidence": 1
-        }
+          "word-parece",
+          "word-retocado",
+          "concept-photoshop-image-manipulation",
+          "word-con",
+          "word-photoshop--software"
+        ]
       },
       {
-        "id": "es-xkcd-photoshops:region-0010",
+        "id": "es-xkcd-photoshops:confused-reaction",
         "labelEs": "¿EH?",
         "translationEn": "",
         "noteEn": "",
@@ -707,7 +625,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-photoshops:word-00027",
+            "id": "es-xkcd-photoshops:confused-reaction:w01",
             "text": "EH",
             "normalized": "eh",
             "bounds": [
@@ -719,35 +637,30 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00027-208f6788"
+              "word-eh--confusion"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-photoshops-00027-208f6788"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0010",
-          "ocrConfidence": 0.3
-        }
+          "word-eh--confusion"
+        ]
       },
       {
-        "id": "es-xkcd-photoshops:region-0011",
-        "labelEs": "SÍ, LAS REFLEXIONES",
+        "id": "es-xkcd-photoshops:reflection-explanation",
+        "labelEs": "SÍ, LAS REFLEXIONES ESTÁN COMPLETAMENTE MAL. DEFINITIVAMENTE PHOTOSHOPEADO.",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
           "x": 40.6977,
           "y": 54.2735,
-          "width": 48.2558,
-          "height": 4.7009
+          "width": 53.4884,
+          "height": 14.9573
         },
         "words": [
           {
-            "id": "es-xkcd-photoshops:word-00028",
+            "id": "es-xkcd-photoshops:reflection-explanation:w01",
             "text": "SÍ",
             "normalized": "sí",
             "bounds": [
@@ -759,11 +672,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00028-05aa2720"
+              "word-sí"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00029",
+            "id": "es-xkcd-photoshops:reflection-explanation:w02",
             "text": "LAS",
             "normalized": "las",
             "bounds": [
@@ -775,11 +688,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00029-ff56403b"
+              "word-las"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00030",
+            "id": "es-xkcd-photoshops:reflection-explanation:w03",
             "text": "REFLEXIONES",
             "normalized": "reflexiones",
             "bounds": [
@@ -791,37 +704,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00030-64eb93a3"
+              "word-reflexiones--visual-reflections",
+              "concept-photoshop-image-manipulation"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00028-05aa2720",
-          "word-auto-es-xkcd-photoshops-00029-ff56403b",
-          "word-auto-es-xkcd-photoshops-00030-64eb93a3"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0011",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0012",
-        "labelEs": "ESTÁN COMPLETAMENTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 42.4419,
-          "y": 58.1197,
-          "width": 51.7442,
-          "height": 3.4188
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00031",
+            "id": "es-xkcd-photoshops:reflection-explanation:w04",
             "text": "ESTÁN",
             "normalized": "están",
             "bounds": [
@@ -833,11 +721,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00031-46382c09"
+              "word-estan--location"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00032",
+            "id": "es-xkcd-photoshops:reflection-explanation:w05",
             "text": "COMPLETAMENTE",
             "normalized": "completamente",
             "bounds": [
@@ -849,38 +737,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00032-5e071bbe"
+              "word-completamente"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00031-46382c09",
-          "word-auto-es-xkcd-photoshops-00032-5e071bbe"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0012",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0013",
-        "labelEs": "NAL. DEFINITIVAMENTE",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 43.6047,
-          "y": 61.5385,
-          "width": 49.4186,
-          "height": 4.2735
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00033",
-            "text": "NAL",
-            "normalized": "nal",
+            "id": "es-xkcd-photoshops:reflection-explanation:w06",
+            "text": "MAL",
+            "normalized": "mal",
             "bounds": [
               {
                 "x": 43.6047,
@@ -890,11 +753,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00033-5577da6e"
+              "word-mal--wrong"
             ]
           },
           {
-            "id": "es-xkcd-photoshops:word-00034",
+            "id": "es-xkcd-photoshops:reflection-explanation:w07",
             "text": "DEFINITIVAMENTE",
             "normalized": "definitivamente",
             "bounds": [
@@ -906,36 +769,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00034-7d505d4d"
+              "word-definitivamente"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-photoshops-00033-5577da6e",
-          "word-auto-es-xkcd-photoshops-00034-7d505d4d"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0013",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-photoshops:region-0014",
-        "labelEs": "PHOTOSHOPEADO.",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 43.6047,
-          "y": 65.3846,
-          "width": 36.0465,
-          "height": 3.8462
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-photoshops:word-00035",
+            "id": "es-xkcd-photoshops:reflection-explanation:w08",
             "text": "PHOTOSHOPEADO",
             "normalized": "photoshopeado",
             "bounds": [
@@ -947,911 +785,842 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-photoshops-00035-15ae6b0f"
+              "word-photoshopeado",
+              "concept-photoshop-image-manipulation"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-photoshops-00035-15ae6b0f"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-photoshops:ocr-line-0014",
-          "ocrConfidence": 0.5
-        }
+          "word-sí",
+          "word-las",
+          "word-reflexiones--visual-reflections",
+          "concept-photoshop-image-manipulation",
+          "word-estan--location",
+          "word-completamente",
+          "word-mal--wrong",
+          "word-definitivamente",
+          "word-photoshopeado"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-photoshops-00001-e0c8de5d",
-      "word-auto-es-xkcd-photoshops-00002-311e30a3",
-      "word-auto-es-xkcd-photoshops-00003-641e8fb2",
-      "word-auto-es-xkcd-photoshops-00004-16c9e98b",
-      "word-auto-es-xkcd-photoshops-00005-87a70f63",
-      "word-auto-es-xkcd-photoshops-00006-e1ca6fa1",
-      "word-auto-es-xkcd-photoshops-00007-07a52164",
-      "word-auto-es-xkcd-photoshops-00008-09fefd68",
-      "word-auto-es-xkcd-photoshops-00009-41d971f9",
-      "word-auto-es-xkcd-photoshops-00010-789ee025",
-      "word-auto-es-xkcd-photoshops-00011-efcfd2c7",
-      "word-auto-es-xkcd-photoshops-00012-74b0fa5d",
-      "word-auto-es-xkcd-photoshops-00013-7a3d252c",
-      "word-auto-es-xkcd-photoshops-00014-21f79278",
-      "word-auto-es-xkcd-photoshops-00015-083b3549",
-      "word-auto-es-xkcd-photoshops-00016-c4a26ec9",
-      "word-auto-es-xkcd-photoshops-00017-88a11810",
-      "word-auto-es-xkcd-photoshops-00018-ce34aca8",
-      "word-auto-es-xkcd-photoshops-00019-06a6639c",
-      "word-auto-es-xkcd-photoshops-00020-e4a49c2d",
-      "word-auto-es-xkcd-photoshops-00021-8e79abbd",
-      "word-auto-es-xkcd-photoshops-00022-e3513b7f",
-      "word-auto-es-xkcd-photoshops-00023-b97dcfb2",
-      "word-auto-es-xkcd-photoshops-00024-cd392b16",
-      "word-auto-es-xkcd-photoshops-00025-eb653d18",
-      "word-auto-es-xkcd-photoshops-00026-f99a3f1e",
-      "word-auto-es-xkcd-photoshops-00027-208f6788",
-      "word-auto-es-xkcd-photoshops-00028-05aa2720",
-      "word-auto-es-xkcd-photoshops-00029-ff56403b",
-      "word-auto-es-xkcd-photoshops-00030-64eb93a3",
-      "word-auto-es-xkcd-photoshops-00031-46382c09",
-      "word-auto-es-xkcd-photoshops-00032-5e071bbe",
-      "word-auto-es-xkcd-photoshops-00033-5577da6e",
-      "word-auto-es-xkcd-photoshops-00034-7d505d4d",
-      "word-auto-es-xkcd-photoshops-00035-15ae6b0f"
+      "word-mi",
+      "word-hobby",
+      "word-insistir",
+      "grammar-insistir-en-que-claim",
+      "word-en--insistir-complement",
+      "word-que--clause-link",
+      "word-objetos",
+      "word-del--of-the",
+      "word-mundo",
+      "concept-photoshop-image-manipulation",
+      "word-real--genuine",
+      "word-estan--location",
+      "grammar-estar-participle-result-state",
+      "word-retocados",
+      "word-con",
+      "word-photoshop--software",
+      "word-este",
+      "word-sable--sabre",
+      "word-es",
+      "word-una",
+      "word-reliquia--heirloom",
+      "phrase-reliquia-familiar",
+      "word-familiar--family",
+      "word-del--from-the-period",
+      "word-siglo",
+      "grammar-siglo-roman-numeral",
+      "word-parece",
+      "word-retocado",
+      "word-eh--confusion",
+      "word-sí",
+      "word-las",
+      "word-reflexiones--visual-reflections",
+      "word-completamente",
+      "word-mal--wrong",
+      "word-definitivamente",
+      "word-photoshopeado"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9371,
-      "lowConfidenceTokenCount": 4,
-      "rawOcrTokenCount": 35,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-photoshops-00001-e0c8de5d",
+      "id": "word-mi",
       "kind": "word",
       "promptEs": "mi",
       "answerEn": "my",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00001",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-eee1c1ade6525d246318",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00002-311e30a3",
+      "id": "word-hobby",
       "kind": "word",
       "promptEs": "hobby",
-      "answerEn": "hobby",
-      "noteEn": "",
+      "answerEn": "hobby; pastime",
+      "noteEn": "Hobby is an English loanword used in Spanish. A common Spanish alternative is afición or pasatiempo.",
+      "example": {
+        "es": "La fotografía es mi hobby.",
+        "en": "Photography is my hobby."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "loanword",
+        "leisure"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00002",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0001",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-0834a044f52ddbed8d49",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-all-your-base",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00003-641e8fb2",
+      "id": "word-insistir",
       "kind": "word",
       "promptEs": "insistir",
-      "answerEn": "to insist",
+      "answerEn": "to insist; to keep firmly claiming",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00003",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-e9e9c6ce2e43a8fba07f",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00004-16c9e98b",
+      "id": "grammar-insistir-en-que-claim",
+      "kind": "grammar",
+      "promptEs": "insistir en que + afirmación",
+      "questionEn": "How do you say that someone keeps firmly claiming that a statement is true?",
+      "answerEn": "Use a form of insistir, then en que, then state the claim.",
+      "noteEn": "Insistir changes for the person and time, but en is required before the claim. Que introduces the statement being asserted. This card covers insisting that something is true; pressing another person to perform an action can use a different verb form after que.",
+      "example": {
+        "es": "Leo insiste en que el informe es correcto.",
+        "en": "Leo insists that the report is correct."
+      },
+      "tags": [
+        "grammar",
+        "verb pattern",
+        "claim",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en--insistir-complement",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; on",
-      "noteEn": "",
+      "answerEn": "no separate English word here; required after insistir before the claim",
+      "noteEn": "Spanish uses insistir en before the topic or claim someone keeps pressing. When a full statement follows, the sequence is insistir en que.",
+      "example": {
+        "es": "Insisto en que es verdad.",
+        "en": "I insist that it is true."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "verb complement",
+        "insistir en",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00004",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00005-87a70f63",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "that (introducing a clause)",
+      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00005",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c57b7501cd843672550c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00006-e1ca6fa1",
+      "id": "word-objetos",
       "kind": "word",
       "promptEs": "objetos",
-      "answerEn": "Meaning needs review",
+      "answerEn": "objects; things",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "plural",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00006",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-9683b8b6a95a417e2454",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00007-07a52164",
+      "id": "word-del--of-the",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "of the; from the",
-      "noteEn": "",
+      "answerEn": "of the",
+      "noteEn": "Spanish writes de followed by the masculine singular word el as the single word del.",
+      "example": {
+        "es": "El color del coche es rojo.",
+        "en": "The color of the car is red."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contraction",
+        "possession"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00007",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-75e3090289e2955dfaec",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-goto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00008-09fefd68",
+      "id": "word-mundo",
       "kind": "word",
       "promptEs": "mundo",
       "answerEn": "world",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00008",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cb9c245f6cf4910aca44",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00009-41d971f9",
+      "id": "concept-photoshop-image-manipulation",
+      "kind": "concept",
+      "promptEs": "Photoshop y el retoque digital",
+      "answerEn": "Photoshop is software used to alter images, and ‘Photoshopped’ commonly means digitally manipulated.",
+      "noteEn": "Edited images can contain clues such as inconsistent reflections, lighting, edges, or compression artifacts. The joke treats those familiar signs of manipulation as if they could prove that physical objects in the real world had been edited too.",
+      "tags": [
+        "concept",
+        "Photoshop",
+        "image manipulation",
+        "joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-real--genuine",
       "kind": "word",
       "promptEs": "real",
-      "answerEn": "Meaning needs review",
+      "answerEn": "real; genuine",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "description"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00009",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-aa33996d60e89311b4d1",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00010-789ee025",
+      "id": "word-estan--location",
       "kind": "word",
       "promptEs": "están",
-      "answerEn": "Meaning needs review",
+      "answerEn": "they are (in a place or state)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "estar",
+        "location"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00010",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-72be774d2df7e3c3c691",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00011-efcfd2c7",
+      "id": "grammar-estar-participle-result-state",
+      "kind": "grammar",
+      "promptEs": "estar + forma de acción completada que describe un estado",
+      "questionEn": "How do you describe the state something is in as the result of an action?",
+      "answerEn": "Use a form of estar followed by the action's completed form, with an ending that matches the thing being described.",
+      "noteEn": "The completed form, often ending in -ado or -ido, is also called a participle. Estar changes for who or what is in the state. The participle changes like a describing word: cerrado, cerrada, cerrados, or cerradas. This pattern focuses on the resulting state, not on who performed the action.",
+      "example": {
+        "es": "Las puertas están cerradas.",
+        "en": "The doors are closed."
+      },
+      "tags": [
+        "grammar",
+        "result state",
+        "participle",
+        "agreement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-retocados",
       "kind": "word",
       "promptEs": "retocados",
-      "answerEn": "to touch up",
-      "noteEn": "",
+      "answerEn": "retouched; edited (masculine plural)",
+      "noteEn": "Retocados is the masculine plural completed-action form of retocar, ‘to touch up’ or ‘to alter.’ Here it describes several objects as digitally edited.",
+      "example": {
+        "es": "Los retratos están retocados.",
+        "en": "The portraits have been retouched."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "image editing",
+        "participle",
+        "plural",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00011",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-8660a1923ce28f18d28a",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00012-74b0fa5d",
+      "id": "word-con",
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00012",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1143da2bc54c495c4be3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00013-7a3d252c",
+      "id": "word-photoshop--software",
       "kind": "word",
       "promptEs": "photoshop",
-      "answerEn": "photoshop",
-      "noteEn": "",
+      "answerEn": "Photoshop (image-editing software)",
+      "noteEn": "Photoshop is a product name retained in Spanish. Con Photoshop means that the software is the tool used for the edit.",
+      "example": {
+        "es": "Editó la foto con Photoshop.",
+        "en": "She edited the photo with Photoshop."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "proper name",
+        "software",
+        "image editing"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00013",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0004",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3f4a09b92ccf3382d71c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00014-21f79278",
+      "id": "word-este",
       "kind": "word",
       "promptEs": "este",
       "answerEn": "this (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00014",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b3aa33b34e1b14e4cf3e",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00015-083b3549",
+      "id": "word-sable--sabre",
       "kind": "word",
       "promptEs": "sable",
-      "answerEn": "Meaning needs review",
+      "answerEn": "sabre; curved sword",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "weapon",
+        "noun"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00015",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-cfd90af8403941bfc0b0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00016-c4a26ec9",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
       "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00016",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00017-88a11810",
+      "id": "word-una",
       "kind": "word",
       "promptEs": "una",
       "answerEn": "a; an (feminine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00017",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0005",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-161f0e5ed45f6d514dc2",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00018-ce34aca8",
+      "id": "word-reliquia--heirloom",
       "kind": "word",
       "promptEs": "reliquia",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "heirloom; treasured old object",
+      "noteEn": "Reliquia can be an old object valued because of its history. With familiar, it refers to an object preserved and passed down in a family.",
+      "example": {
+        "es": "Este reloj es una reliquia familiar.",
+        "en": "This watch is a family heirloom."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "heirloom",
+        "noun",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00018",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2d58da28b06fc54e978c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00019-06a6639c",
+      "id": "phrase-reliquia-familiar",
+      "kind": "phrase",
+      "promptEs": "reliquia familiar",
+      "questionEn": "How do you refer to an old, valued object kept and passed down within a family?",
+      "answerEn": "Use reliquia familiar for a family heirloom.",
+      "noteEn": "Reliquia names the treasured old object. Familiar comes after it and means ‘family-related’; it does not mean that the object is recognizable.",
+      "example": {
+        "es": "Guardamos esta medalla como reliquia familiar.",
+        "en": "We keep this medal as a family heirloom."
+      },
+      "tags": [
+        "phrase",
+        "family",
+        "heirloom",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-familiar--family",
       "kind": "word",
       "promptEs": "familiar",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "family; related to a family",
+      "noteEn": "After a noun, familiar can mean ‘family’ or ‘family-related.’ It is a false friend here: it does not mean that the object looks familiar.",
+      "example": {
+        "es": "Es una tradición familiar.",
+        "en": "It is a family tradition."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "family",
+        "false friend",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00019",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0006",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3a419467866c1174426c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00020-e4a49c2d",
+      "id": "word-del--from-the-period",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "of the; from the",
-      "noteEn": "",
+      "answerEn": "from the (a historical period)",
+      "noteEn": "Del is the required single-word contraction of de followed by el. Before a century, it dates an object or event to that period.",
+      "example": {
+        "es": "Es una casa del siglo XX.",
+        "en": "It is a house from the twentieth century."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contraction",
+        "historical period",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00020",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-75e3090289e2955dfaec",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00021-8e79abbd",
+      "id": "word-siglo",
       "kind": "word",
       "promptEs": "siglo",
-      "answerEn": "Meaning needs review",
+      "answerEn": "century",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "time",
+        "noun",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00021",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c929d6668436555f46d4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00022-e3513b7f",
-      "kind": "word",
-      "promptEs": "xix",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "id": "grammar-siglo-roman-numeral",
+      "kind": "grammar",
+      "promptEs": "siglo + número romano",
+      "questionEn": "How do Spanish texts label a numbered century, such as the nineteenth or twentieth century?",
+      "answerEn": "Put siglo before a Roman numeral, as in siglo XIX or siglo XX.",
+      "noteEn": "Roman numerals use letters such as X, V, and I to represent numbers. For centuries after ten, Spanish normally reads the numeral as an ordinary number: siglo XIX is read siglo diecinueve, and siglo XX is siglo veinte. Del siglo dates something to that century.",
+      "example": {
+        "es": "El puente es del siglo XX.",
+        "en": "The bridge is from the twentieth century."
+      },
       "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
+        "grammar",
+        "dates",
+        "centuries",
+        "Roman numerals",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00022",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0007",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a78309cc08960bd3b516",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00023-b97dcfb2",
+      "id": "word-parece",
       "kind": "word",
       "promptEs": "parece",
       "answerEn": "seems; appears",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00023",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4788c9ca81d9fdd54ac0",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00024-cd392b16",
+      "id": "word-retocado",
       "kind": "word",
       "promptEs": "retocado",
-      "answerEn": "to touch up",
-      "noteEn": "",
+      "answerEn": "retouched; edited (masculine singular)",
+      "noteEn": "Retocado is the masculine singular completed-action form of retocar, ‘to touch up’ or ‘to alter.’ In an image context it commonly means digitally edited.",
+      "example": {
+        "es": "El retrato parece retocado.",
+        "en": "The portrait looks retouched."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "image editing",
+        "participle",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00024",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0008",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d4b34b9b3a422435f8d8",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00025-eb653d18",
-      "kind": "word",
-      "promptEs": "con",
-      "answerEn": "with",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00025",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1143da2bc54c495c4be3",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-photoshops-00026-f99a3f1e",
-      "kind": "word",
-      "promptEs": "photoshop",
-      "answerEn": "photoshop",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00026",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0009",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3f4a09b92ccf3382d71c",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-photoshops-00027-208f6788",
+      "id": "word-eh--confusion",
       "kind": "word",
       "promptEs": "eh",
-      "answerEn": "uh; um",
-      "noteEn": "",
+      "answerEn": "huh?; what?",
+      "noteEn": "Eh can show that the speaker is surprised or did not understand what was just said.",
+      "example": {
+        "es": "¿Eh? No te oí.",
+        "en": "Huh? I didn't hear you."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "interjection",
+        "reaction"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00027",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0010",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-0c044a36c373b6a8955c",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00028-05aa2720",
+      "id": "word-sí",
       "kind": "word",
       "promptEs": "sí",
       "answerEn": "yes",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00028",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-4f87498b67d58967fc51",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00029-ff56403b",
+      "id": "word-las",
       "kind": "word",
       "promptEs": "las",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine plural)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "articles"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00029",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-02d5d0522a76608d64a5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-fuerza-centrifuga",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00030-64eb93a3",
+      "id": "word-reflexiones--visual-reflections",
       "kind": "word",
       "promptEs": "reflexiones",
-      "answerEn": "reflection",
-      "noteEn": "",
+      "answerEn": "reflections (images made by light)",
+      "noteEn": "This is the visual sense of reflexión: an image produced when light bounces from a surface, not thoughts or careful consideration.",
+      "example": {
+        "es": "Veo dos reflexiones en el cristal.",
+        "en": "I see two reflections in the glass."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "optics",
+        "noun",
+        "plural",
+        "sense split"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00030",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0011",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-2318f679b6c293d2951e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00031-46382c09",
-      "kind": "word",
-      "promptEs": "están",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00031",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-72be774d2df7e3c3c691",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-photoshops-00032-5e071bbe",
+      "id": "word-completamente",
       "kind": "word",
       "promptEs": "completamente",
-      "answerEn": "completely",
+      "answerEn": "completely; entirely",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "degree",
+        "adverb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00032",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0012",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d66e2fbb71669e46ba48",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00033-5577da6e",
+      "id": "word-mal--wrong",
       "kind": "word",
-      "promptEs": "nal",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "mal",
+      "answerEn": "wrong; incorrect",
+      "noteEn": "After estar, mal can describe something as wrong, incorrect, or not as it should be. English uses the adjective ‘wrong,’ even though mal often works like an adverb in Spanish.",
+      "example": {
+        "es": "La fecha está mal.",
+        "en": "The date is wrong."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "state",
+        "incorrect",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00033",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-77f908e6ab73cd274437",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00034-7d505d4d",
+      "id": "word-definitivamente",
       "kind": "word",
       "promptEs": "definitivamente",
-      "answerEn": "Meaning needs review",
+      "answerEn": "definitely; certainly",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "certainty",
+        "adverb",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00034",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0013",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bf72cb4d187f7d54e595",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-photoshops-00035-15ae6b0f",
+      "id": "word-photoshopeado",
       "kind": "word",
       "promptEs": "photoshopeado",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "Photoshopped; edited with Photoshop (masculine singular)",
+      "noteEn": "The informal verb photoshopear is built from the product name Photoshop. Photoshopeado is its masculine singular completed-action form, used here as a description.",
+      "example": {
+        "es": "El fondo está photoshopeado.",
+        "en": "The background is Photoshopped."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "loanword",
+        "image editing",
+        "participle"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-photoshops:ocr-token-00035",
-        "sourceLineId": "es-xkcd-photoshops:ocr-line-0014",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-313929bdfce90687173b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-photoshops",
+        "contextualSenseReviewed": true
       }
     }
   ]

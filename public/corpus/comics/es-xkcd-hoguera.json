@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-745652b78fd01e26",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9533,
-    "lowConfidenceTokenCount": 1,
-    "rawOcrTokenCount": 15,
-    "filteredNonLatinTokenCount": 3,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-hoguera",
     "xkcdNumber": 742,
     "publishedAt": "2010-05-19",
-    "title": "Hoguera",
+    "title": "Campfire",
     "titleEs": "Hoguera",
     "image": {
       "src": "https://es.xkcd.com/images/campfire.png",
       "width": 273,
       "height": 276,
       "aspectRatio": 0.9891,
-      "altEn": "Spanish-language xkcd comic #742: Hoguera"
+      "altEn": "Spanish-language xkcd comic #742: Campfire"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "100 años después, esta historia sigue siendo aterradora. No porque el asesino esté en la red local, sino porque sigue usando IPv4.",
-      "en": "English title text pending review."
+      "en": "100 years later, this story remains terrifying--not because it's the local network block, but because the killer is still on IPv4.",
+      "noteEn": "Both title attributes are preserved exactly, including the official double hyphen. OCR omitted the accent in AVERIGUÓ, fused the complete 192.168/16 network prefix into three identical boxes, and misread the initial inverted exclamation mark before GLUPS as a dotted capital I."
     },
     "regions": [
       {
-        "id": "es-xkcd-hoguera:region-0001",
-        "labelEs": "PERO CUANDO AVERIGUO LA",
+        "id": "es-xkcd-hoguera:network-horror-story",
+        "labelEs": "PERO CUANDO AVERIGUÓ LA IP DEL ASESINO... ¡ESTABA EN EL BLOQUE 192.168/16!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 11.6788,
+          "x": 9.4891,
           "y": 12.3188,
-          "width": 73.7226,
-          "height": 5.7971
+          "width": 78.8321,
+          "height": 18.1159
         },
         "words": [
           {
-            "id": "es-xkcd-hoguera:word-00001",
+            "id": "es-xkcd-hoguera:network-horror-story:w01",
             "text": "PERO",
             "normalized": "pero",
             "bounds": [
@@ -66,15 +61,15 @@
                 "x": 11.6788,
                 "y": 12.3188,
                 "width": 16.0584,
-                "height": 5.7971
+                "height": 5.6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00001-9eb40093"
+              "word-pero"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00002",
+            "id": "es-xkcd-hoguera:network-horror-story:w02",
             "text": "CUANDO",
             "normalized": "cuando",
             "bounds": [
@@ -82,31 +77,33 @@
                 "x": 28.4672,
                 "y": 12.3188,
                 "width": 21.8978,
-                "height": 5.7971
+                "height": 5.6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00002-a6d2bd66"
+              "word-cuando--when"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00003",
-            "text": "AVERIGUO",
-            "normalized": "averiguo",
+            "id": "es-xkcd-hoguera:network-horror-story:w03",
+            "text": "AVERIGUÓ",
+            "normalized": "averiguó",
             "bounds": [
               {
                 "x": 51.0949,
                 "y": 12.3188,
                 "width": 26.2774,
-                "height": 5.7971
+                "height": 5.6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00003-f65a5a74"
+              "word-averiguó--found-out",
+              "grammar-past-contrast",
+              "concept-private-ipv4-local-network-horror"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00004",
+            "id": "es-xkcd-hoguera:network-horror-story:w04",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -114,58 +111,15 @@
                 "x": 78.1022,
                 "y": 12.3188,
                 "width": 7.2993,
-                "height": 5.7971
+                "height": 5.6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00004-d77594b5"
-            ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hoguera-00001-9eb40093",
-          "word-auto-es-xkcd-hoguera-00002-a6d2bd66",
-          "word-auto-es-xkcd-hoguera-00003-f65a5a74",
-          "word-auto-es-xkcd-hoguera-00004-d77594b5"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hoguera:ocr-line-0001",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hoguera:region-0002",
-        "labelEs": "IP DEL ASESINO... ¡ESTABA EN",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 9.4891,
-          "y": 18.1159,
-          "width": 78.8321,
-          "height": 7.2464
-        },
-        "words": [
-          {
-            "id": "es-xkcd-hoguera:word-00005",
-            "text": "IP",
-            "normalized": "ip",
-            "bounds": [
-              {
-                "x": 9.4891,
-                "y": 18.1159,
-                "width": 6.3869,
-                "height": 7.2464
-              }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-hoguera-00005-b5f92d8c"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00006",
+            "id": "es-xkcd-hoguera:network-horror-story:w05",
             "text": "DEL",
             "normalized": "del",
             "bounds": [
@@ -173,15 +127,15 @@
                 "x": 16.7883,
                 "y": 18.1159,
                 "width": 10.0365,
-                "height": 7.2464
+                "height": 5.65
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00006-c254e4c1"
+              "word-del--of-the"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00007",
+            "id": "es-xkcd-hoguera:network-horror-story:w06",
             "text": "ASESINO",
             "normalized": "asesino",
             "bounds": [
@@ -189,15 +143,16 @@
                 "x": 27.7372,
                 "y": 18.1159,
                 "width": 28.2847,
-                "height": 7.2464
+                "height": 5.65
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00007-ab463438"
+              "word-asesino--killer-noun",
+              "concept-private-ipv4-local-network-horror"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00008",
+            "id": "es-xkcd-hoguera:network-horror-story:w07",
             "text": "ESTABA",
             "normalized": "estaba",
             "bounds": [
@@ -205,15 +160,17 @@
                 "x": 56.9343,
                 "y": 18.1159,
                 "width": 22.8102,
-                "height": 7.2464
+                "height": 5.65
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00008-14cc2797"
+              "word-estaba--state",
+              "grammar-past-contrast",
+              "grammar-ser-identity-estar-location"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00009",
+            "id": "es-xkcd-hoguera:network-horror-story:w08",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -221,43 +178,16 @@
                 "x": 80.6569,
                 "y": 18.1159,
                 "width": 7.6642,
-                "height": 7.2464
+                "height": 5.65
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00009-b889b81c"
+              "word-en",
+              "grammar-ser-identity-estar-location"
             ]
-          }
-        ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hoguera-00005-b5f92d8c",
-          "word-auto-es-xkcd-hoguera-00006-c254e4c1",
-          "word-auto-es-xkcd-hoguera-00007-ab463438",
-          "word-auto-es-xkcd-hoguera-00008-14cc2797",
-          "word-auto-es-xkcd-hoguera-00009-b889b81c"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-          "ocrConfidence": 1
-        }
-      },
-      {
-        "id": "es-xkcd-hoguera:region-0003",
-        "labelEs": "EL BLOQUE 192.168/16!",
-        "translationEn": "",
-        "noteEn": "",
-        "bounds": {
-          "x": 18.2482,
-          "y": 23.913,
-          "width": 62.7737,
-          "height": 6.5217
-        },
-        "words": [
+          },
           {
-            "id": "es-xkcd-hoguera:word-00010",
+            "id": "es-xkcd-hoguera:network-horror-story:w09",
             "text": "EL",
             "normalized": "el",
             "bounds": [
@@ -265,15 +195,16 @@
                 "x": 18.2482,
                 "y": 23.913,
                 "width": 6.5693,
-                "height": 6.5217
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00010-5e07f258"
+              "word-el--article",
+              "grammar-ser-identity-estar-location"
             ]
           },
           {
-            "id": "es-xkcd-hoguera:word-00011",
+            "id": "es-xkcd-hoguera:network-horror-story:w10",
             "text": "BLOQUE",
             "normalized": "bloque",
             "bounds": [
@@ -281,29 +212,97 @@
                 "x": 25.6387,
                 "y": 23.913,
                 "width": 22.1715,
-                "height": 6.5217
+                "height": 6
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00011-45c18045"
+              "word-bloque--network-block",
+              "grammar-ser-identity-estar-location",
+              "concept-private-ipv4-local-network-horror"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-hoguera-00010-5e07f258",
-          "word-auto-es-xkcd-hoguera-00011-45c18045"
+        "excludedUnits": [
+          {
+            "id": "es-xkcd-hoguera:network-horror-story:x01",
+            "text": "IP",
+            "reason": "symbol",
+            "rationale": "IP is a technical initialism rather than a full Spanish lexical word in the image.",
+            "bounds": [
+              {
+                "x": 9.4891,
+                "y": 18.1159,
+                "width": 6.3869,
+                "height": 5.65
+              }
+            ]
+          },
+          {
+            "id": "es-xkcd-hoguera:network-horror-story:x02",
+            "text": "192.168/16",
+            "reason": "symbol",
+            "rationale": "This dotted-and-slashed IPv4 network prefix is technical notation rather than Spanish vocabulary.",
+            "bounds": [
+              {
+                "x": 48.6314,
+                "y": 23.913,
+                "width": 30.3,
+                "height": 6
+              }
+            ]
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hoguera:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+        "applications": [
+          {
+            "id": "es-xkcd-hoguera:network-horror-story:app-completed-discovery",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-hoguera:network-horror-story:w03"
+            ],
+            "exampleEs": "AVERIGUÓ",
+            "explanationEn": "Averiguó uses the preterite because it presents finding out as one completed discovery."
+          },
+          {
+            "id": "es-xkcd-hoguera:network-horror-story:app-background-location",
+            "cardId": "grammar-past-contrast",
+            "participantWordIds": [
+              "es-xkcd-hoguera:network-horror-story:w07"
+            ],
+            "exampleEs": "ESTABA",
+            "explanationEn": "Estaba uses the imperfect because it describes the address's background location at the time of the discovery."
+          },
+          {
+            "id": "es-xkcd-hoguera:network-horror-story:app-estar-location",
+            "cardId": "grammar-ser-identity-estar-location",
+            "participantWordIds": [
+              "es-xkcd-hoguera:network-horror-story:w07",
+              "es-xkcd-hoguera:network-horror-story:w08",
+              "es-xkcd-hoguera:network-horror-story:w09",
+              "es-xkcd-hoguera:network-horror-story:w10"
+            ],
+            "exampleEs": "ESTABA EN EL BLOQUE",
+            "explanationEn": "Estaba is a form of estar because en el bloque states where the address was located rather than what it was."
+          }
+        ],
+        "cardIds": [
+          "word-pero",
+          "word-cuando--when",
+          "word-averiguó--found-out",
+          "grammar-past-contrast",
+          "concept-private-ipv4-local-network-horror",
+          "word-la--article",
+          "word-del--of-the",
+          "word-asesino--killer-noun",
+          "word-estaba--state",
+          "grammar-ser-identity-estar-location",
+          "word-en",
+          "word-el--article",
+          "word-bloque--network-block"
+        ]
       },
       {
-        "id": "es-xkcd-hoguera:region-0004",
-        "labelEs": "İGLUPS!",
+        "id": "es-xkcd-hoguera:gulp-reaction",
+        "labelEs": "¡GLUPS!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
@@ -314,348 +313,358 @@
         },
         "words": [
           {
-            "id": "es-xkcd-hoguera:word-00012",
-            "text": "İGLUPS",
-            "normalized": "i̇glups",
+            "id": "es-xkcd-hoguera:gulp-reaction:w01",
+            "text": "GLUPS",
+            "normalized": "glups",
             "bounds": [
               {
-                "x": 64.9635,
-                "y": 41.3043,
-                "width": 24.8175,
-                "height": 9.4203
+                "x": 68.6,
+                "y": 41.3,
+                "width": 17.5,
+                "height": 9.5
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-hoguera-00012-03bc3e70"
+              "word-glups--gulp-reaction",
+              "concept-private-ipv4-local-network-horror"
             ]
           }
         ],
+        "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-auto-es-xkcd-hoguera-00012-03bc3e70"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-hoguera:ocr-line-0004",
-          "ocrConfidence": 0.3
-        }
+          "word-glups--gulp-reaction",
+          "concept-private-ipv4-local-network-horror"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-hoguera-00001-9eb40093",
-      "word-auto-es-xkcd-hoguera-00002-a6d2bd66",
-      "word-auto-es-xkcd-hoguera-00003-f65a5a74",
-      "word-auto-es-xkcd-hoguera-00004-d77594b5",
-      "word-auto-es-xkcd-hoguera-00005-b5f92d8c",
-      "word-auto-es-xkcd-hoguera-00006-c254e4c1",
-      "word-auto-es-xkcd-hoguera-00007-ab463438",
-      "word-auto-es-xkcd-hoguera-00008-14cc2797",
-      "word-auto-es-xkcd-hoguera-00009-b889b81c",
-      "word-auto-es-xkcd-hoguera-00010-5e07f258",
-      "word-auto-es-xkcd-hoguera-00011-45c18045",
-      "word-auto-es-xkcd-hoguera-00012-03bc3e70"
+      "word-pero",
+      "word-cuando--when",
+      "word-averiguó--found-out",
+      "grammar-past-contrast",
+      "concept-private-ipv4-local-network-horror",
+      "word-la--article",
+      "word-del--of-the",
+      "word-asesino--killer-noun",
+      "word-estaba--state",
+      "grammar-ser-identity-estar-location",
+      "word-en",
+      "word-el--article",
+      "word-bloque--network-block",
+      "word-glups--gulp-reaction"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9533,
-      "lowConfidenceTokenCount": 1,
-      "rawOcrTokenCount": 15,
-      "filteredNonLatinTokenCount": 3,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-hoguera-00001-9eb40093",
+      "id": "word-pero",
       "kind": "word",
       "promptEs": "pero",
       "answerEn": "but",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00001",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-0db9df7d8e7ff24ae598",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00002-a6d2bd66",
+      "id": "word-cuando--when",
       "kind": "word",
       "promptEs": "cuando",
       "answerEn": "when",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "connector"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00002",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1a0729f2a6ed16257ff5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-donald-knuth",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00003-f65a5a74",
+      "id": "word-averiguó--found-out",
       "kind": "word",
-      "promptEs": "averiguo",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "averiguó",
+      "answerEn": "he or she found out; discovered",
+      "noteEn": "Averiguó is a completed-past form of averiguar for one person or thing. The written accent marks the stressed final syllable.",
+      "example": {
+        "es": "Ella averiguó la verdad ayer.",
+        "en": "She found out the truth yesterday."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "discovery",
+        "preterite",
+        "third person",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00003",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bbd3cc971c39da5dde74",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00004-d77594b5",
+      "id": "grammar-past-contrast",
+      "kind": "grammar",
+      "promptEs": "hablé vs. hablaba",
+      "answerEn": "Use the preterite for a completed event and the imperfect for background, an ongoing situation, or something that used to happen.",
+      "noteEn": "Think of a story: the preterite answers “What happened next?” The imperfect answers “What was happening?”, “What were things like?”, or “What used to happen?” These two names describe how the speaker presents an event, not simply how long it lasted.",
+      "tags": [
+        "A2",
+        "grammar",
+        "past tenses"
+      ],
+      "questionEn": "Spanish has two common ways to talk about the past. When do you use each one?",
+      "example": {
+        "es": "Mientras caminaba, empezó a llover.",
+        "en": "While I was walking, it started to rain."
+      },
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-private-ipv4-local-network-horror",
+      "kind": "concept",
+      "promptEs": "asesino · bloque 192.168/16 · red local · IPv4",
+      "questionEn": "Why does the network prefix turn the campfire story into a technical horror joke?",
+      "answerEn": "192.168.0.0/16 is private IPv4 address space, so an address in that block suggests that the killer is on the same local network rather than somewhere remote.",
+      "noteEn": "The abbreviated prefix 192.168/16 denotes the private-use range from 192.168.0.0 through 192.168.255.255 reserved by RFC 1918. The listener's alarm treats local-network proximity like the classic horror reveal that danger is already inside. The title text adds a second programmer joke: a century later, continuing to use IPv4 would itself be frighteningly outdated.",
+      "tags": [
+        "concept",
+        "IPv4",
+        "private network",
+        "RFC 1918",
+        "horror joke"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00004",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00005-b5f92d8c",
-      "kind": "word",
-      "promptEs": "ip",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00005",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-bb9af5d1915da1fbc132",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-hoguera-00006-c254e4c1",
+      "id": "word-del--of-the",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "of the; from the",
-      "noteEn": "",
+      "answerEn": "of the",
+      "noteEn": "Spanish writes de followed by the masculine singular word el as the single word del.",
+      "example": {
+        "es": "El color del coche es rojo.",
+        "en": "The color of the car is red."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contraction",
+        "possession"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00006",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-75e3090289e2955dfaec",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-goto",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00007-ab463438",
+      "id": "word-asesino--killer-noun",
       "kind": "word",
       "promptEs": "asesino",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "killer; murderer (a person)",
+      "noteEn": "As a noun, asesino names a male killer or a person whose gender is not being specified. Asesina is the feminine form.",
+      "example": {
+        "es": "La policía busca al asesino.",
+        "en": "The police are looking for the killer."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "person",
+        "crime",
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00007",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-840710f8b16091b04831",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00008-14cc2797",
+      "id": "word-estaba--state",
       "kind": "word",
       "promptEs": "estaba",
-      "answerEn": "Meaning needs review",
+      "answerEn": "it was; used to be (a past state)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "estar",
+        "imperfect",
+        "past",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00008",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-fe32f47ebccdb1201d5b",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-exito",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00009-b889b81c",
+      "id": "grammar-ser-identity-estar-location",
+      "kind": "grammar",
+      "promptEs": "ser para identidad · estar para ubicación",
+      "questionEn": "Which Spanish “to be” verb says what something is, and which says where it is?",
+      "answerEn": "Use ser for identity or a defining description; use estar for the location of a person or thing.",
+      "noteEn": "This contrast is not simply permanent versus temporary. Forms of ser such as soy and es identify or describe what something is. Forms of estar such as están normally locate people and things. Events are a common exception: Spanish uses ser to say where or when an event takes place.",
+      "example": {
+        "es": "El museo es famoso y está en Madrid.",
+        "en": "The museum is famous and is in Madrid."
+      },
+      "tags": [
+        "A1",
+        "grammar",
+        "ser",
+        "estar",
+        "location"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pong",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00009",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0002",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00010-5e07f258",
+      "id": "word-el--article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (masculine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00010",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d65c3e892354b17a4c03",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00011-45c18045",
+      "id": "word-bloque--network-block",
       "kind": "word",
       "promptEs": "bloque",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "block; range (of network addresses)",
+      "noteEn": "In networking, a bloque is a group or range of addresses identified by one prefix.",
+      "example": {
+        "es": "Ese bloque contiene muchas direcciones de red.",
+        "en": "That block contains many network addresses."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "networking",
+        "addresses",
+        "technical",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00011",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-d602e8fc07a5578db912",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-hoguera-00012-03bc3e70",
+      "id": "word-glups--gulp-reaction",
       "kind": "word",
-      "promptEs": "i̇glups",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "glups",
+      "answerEn": "gulp! (a nervous or alarmed reaction)",
+      "noteEn": "Glups imitates the sound of swallowing and is written as a reaction when someone suddenly feels afraid, worried, or embarrassed.",
+      "example": {
+        "es": "¡Glups! Olvidé las llaves.",
+        "en": "Gulp! I forgot the keys."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "onomatopoeia",
+        "reaction",
+        "fear",
+        "A1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-hoguera:ocr-token-00015",
-        "sourceLineId": "es-xkcd-hoguera:ocr-line-0004",
-        "ocrConfidence": 0.3,
-        "glossaryRecordId": "provisional-word-8b8a057b08f67a9250e0",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
       }
     }
   ]

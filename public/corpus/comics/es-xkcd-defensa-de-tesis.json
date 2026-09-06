@@ -1,30 +1,24 @@
 {
-  "schemaVersion": 2,
-  "revision": "generated-002da94a0266a154",
-  "reviewStatus": "needs-review",
+  "schemaVersion": 3,
+  "revision": "runtime-75cdadc8cf4b25c0",
+  "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
-    "method": "apple-vision-ocr-and-provisional-dictionary",
-    "ocrReviewStatus": "needs_review",
-    "meanTokenConfidence": 0.9643,
-    "lowConfidenceTokenCount": 1,
-    "rawOcrTokenCount": 14,
-    "filteredNonLatinTokenCount": 0,
-    "manualOverrideTokenCount": 0,
-    "contextualSensesReviewed": false,
-    "englishTitleAvailable": false
+    "method": "ai-authored-internal-qa",
+    "sourceKind": "individually-authored",
+    "contextualSensesReviewed": true
   },
   "comic": {
     "id": "es-xkcd-defensa-de-tesis",
     "xkcdNumber": 1403,
     "publishedAt": "2014-08-04",
-    "title": "Defensa de tesis",
+    "title": "Thesis Defense",
     "titleEs": "Defensa de tesis",
     "image": {
       "src": "https://es.xkcd.com/images/thesis_defense.png",
       "width": 489,
       "height": 350,
       "aspectRatio": 1.3971,
-      "altEn": "Spanish-language xkcd comic #1403: Defensa de tesis"
+      "altEn": "Spanish-language xkcd comic #1403: Thesis Defense"
     },
     "source": {
       "creator": "Randall Munroe",
@@ -42,23 +36,24 @@
     },
     "titleText": {
       "es": "MIS RESULTADOS SON UNA MEJORA SIGNIFICATIVA DEL ESTADO DEL AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARTE",
-      "en": "English title text pending review."
+      "en": "MY RESULTS ARE A SIGNIFICANT IMPROVEMENT ON THE STATE OF THE AAAAAAAAAAAART",
+      "noteEn": "The Spanish and English texts are the exact title attributes from the Spanish archive and official xkcd. The Spanish raster has a twelve-A scream; OCR mistook the three opening exclamation marks for letters. The readable English heading on the tiny presentation slide is inventoried as non-Spanish text; the remaining miniature slide strokes are not determinately readable lexical units."
     },
     "regions": [
       {
-        "id": "es-xkcd-defensa-de-tesis:region-0001",
-        "labelEs": "EN CONCLUSIÓN,",
+        "id": "es-xkcd-defensa-de-tesis:conclusion",
+        "labelEs": "EN CONCLUSIÓN, ¡¡¡AAAAAAAAAAAA!!!",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 39.5841,
+          "x": 31.4286,
           "y": 4.506,
-          "width": 29.4032,
-          "height": 6.9879
+          "width": 64.898,
+          "height": 17.2083
         },
         "words": [
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00001",
+            "id": "es-xkcd-defensa-de-tesis:conclusion:w01",
             "text": "EN",
             "normalized": "en",
             "bounds": [
@@ -66,15 +61,16 @@
                 "x": 39.5841,
                 "y": 4.6123,
                 "width": 5.5257,
-                "height": 6.8816
+                "height": 5.95
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00001-f78f9a24"
+              "word-en",
+              "phrase-en-conclusion"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00002",
+            "id": "es-xkcd-defensa-de-tesis:conclusion:w02",
             "text": "CONCLUSIÓN",
             "normalized": "conclusión",
             "bounds": [
@@ -82,68 +78,87 @@
                 "x": 45.7065,
                 "y": 4.506,
                 "width": 23.2808,
-                "height": 6.9607
+                "height": 6.05
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00002-82a471e1"
+              "word-conclusión",
+              "phrase-en-conclusion",
+              "concept-thesis-defense-offense-sword-pun"
+            ]
+          },
+          {
+            "id": "es-xkcd-defensa-de-tesis:conclusion:w03",
+            "text": "AAAAAAAAAAAA",
+            "normalized": "aaaaaaaaaaaa",
+            "bounds": [
+              {
+                "x": 39.15,
+                "y": 10.75,
+                "width": 51.2,
+                "height": 9.9
+              }
+            ],
+            "cardIds": [
+              "word-aaaaaaaaaaaa--scream",
+              "concept-thesis-defense-offense-sword-pun"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-defensa-de-tesis-00001-f78f9a24",
-          "word-auto-es-xkcd-defensa-de-tesis-00002-82a471e1"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-defensa-de-tesis:conclusion:app-en-conclusion",
+            "cardId": "phrase-en-conclusion",
+            "participantWordIds": [
+              "es-xkcd-defensa-de-tesis:conclusion:w01",
+              "es-xkcd-defensa-de-tesis:conclusion:w02"
+            ],
+            "exampleEs": "EN CONCLUSIÓN",
+            "explanationEn": "En and conclusión form the conventional transition that announces a final summary."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0001",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-en",
+          "phrase-en-conclusion",
+          "word-conclusión",
+          "concept-thesis-defense-offense-sword-pun",
+          "word-aaaaaaaaaaaa--scream"
+        ]
       },
       {
-        "id": "es-xkcd-defensa-de-tesis:region-0002",
-        "labelEs": "¡liAAAAAAAAAAAA!!!",
+        "id": "es-xkcd-defensa-de-tesis:slide-heading",
+        "labelEs": "The Evolution of Threat Defence in Mammals",
         "translationEn": "",
         "noteEn": "",
         "bounds": {
-          "x": 31.4286,
-          "y": 9.7143,
-          "width": 64.898,
-          "height": 12
+          "x": 5,
+          "y": 28.3,
+          "width": 9.1,
+          "height": 7.2
         },
-        "words": [
+        "words": [],
+        "excludedUnits": [
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00003",
-            "text": "liAAAAAAAAAAAA",
-            "normalized": "liaaaaaaaaaaaa",
+            "id": "es-xkcd-defensa-de-tesis:slide-heading:x01",
+            "text": "The Evolution of Threat Defence in Mammals",
+            "reason": "non-spanish-text",
+            "rationale": "This miniature presentation heading is printed in English and is not Spanish vocabulary.",
             "bounds": [
               {
-                "x": 31.4286,
-                "y": 9.7143,
-                "width": 64.898,
-                "height": 12
+                "x": 5,
+                "y": 28.3,
+                "width": 9.1,
+                "height": 7.2
               }
-            ],
-            "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00003-3f36d3ee"
             ]
           }
         ],
         "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-defensa-de-tesis-00003-3f36d3ee"
-        ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0002",
-          "ocrConfidence": 0.5
-        }
+        "cardIds": []
       },
       {
-        "id": "es-xkcd-defensa-de-tesis:region-0003",
+        "id": "es-xkcd-defensa-de-tesis:caption",
         "labelEs": "LA MEJOR DEFENSA DE TESIS ES UN BUEN ATAQUE DE TESIS",
         "translationEn": "",
         "noteEn": "",
@@ -155,7 +170,7 @@
         },
         "words": [
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00004",
+            "id": "es-xkcd-defensa-de-tesis:caption:w01",
             "text": "LA",
             "normalized": "la",
             "bounds": [
@@ -167,11 +182,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00004-cde36adb"
+              "word-la--article"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00005",
+            "id": "es-xkcd-defensa-de-tesis:caption:w02",
             "text": "MEJOR",
             "normalized": "mejor",
             "bounds": [
@@ -183,11 +198,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00005-7838e65a"
+              "word-mejor--best",
+              "grammar-evaluative-adjective-before-noun"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00006",
+            "id": "es-xkcd-defensa-de-tesis:caption:w03",
             "text": "DEFENSA",
             "normalized": "defensa",
             "bounds": [
@@ -199,11 +215,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00006-7ebedd46"
+              "word-defensa--academic-defense",
+              "grammar-evaluative-adjective-before-noun",
+              "phrase-defensa-de-tesis",
+              "concept-thesis-defense-offense-sword-pun"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00007",
+            "id": "es-xkcd-defensa-de-tesis:caption:w04",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -215,11 +234,12 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00007-aca3ab1f"
+              "word-de--noun-classifier",
+              "phrase-defensa-de-tesis"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00008",
+            "id": "es-xkcd-defensa-de-tesis:caption:w05",
             "text": "TESIS",
             "normalized": "tesis",
             "bounds": [
@@ -231,11 +251,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00008-2acd96a6"
+              "word-tesis",
+              "phrase-defensa-de-tesis",
+              "concept-thesis-defense-offense-sword-pun"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00009",
+            "id": "es-xkcd-defensa-de-tesis:caption:w06",
             "text": "ES",
             "normalized": "es",
             "bounds": [
@@ -247,11 +269,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00009-cf63ba42"
+              "word-es"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00010",
+            "id": "es-xkcd-defensa-de-tesis:caption:w07",
             "text": "UN",
             "normalized": "un",
             "bounds": [
@@ -263,11 +285,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00010-16d5be56"
+              "word-un"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00011",
+            "id": "es-xkcd-defensa-de-tesis:caption:w08",
             "text": "BUEN",
             "normalized": "buen",
             "bounds": [
@@ -279,11 +301,13 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00011-301c9d70"
+              "word-buen",
+              "grammar-evaluative-adjective-before-noun",
+              "grammar-bueno-to-buen-before-masculine-noun"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00012",
+            "id": "es-xkcd-defensa-de-tesis:caption:w09",
             "text": "ATAQUE",
             "normalized": "ataque",
             "bounds": [
@@ -295,11 +319,14 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00012-61c55640"
+              "word-ataque",
+              "grammar-evaluative-adjective-before-noun",
+              "grammar-bueno-to-buen-before-masculine-noun",
+              "concept-thesis-defense-offense-sword-pun"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00013",
+            "id": "es-xkcd-defensa-de-tesis:caption:w10",
             "text": "DE",
             "normalized": "de",
             "bounds": [
@@ -311,11 +338,11 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00013-5ed1c110"
+              "word-de--noun-classifier"
             ]
           },
           {
-            "id": "es-xkcd-defensa-de-tesis:word-00014",
+            "id": "es-xkcd-defensa-de-tesis:caption:w11",
             "text": "TESIS",
             "normalized": "tesis",
             "bounds": [
@@ -327,396 +354,475 @@
               }
             ],
             "cardIds": [
-              "word-auto-es-xkcd-defensa-de-tesis-00014-17c07762"
+              "word-tesis",
+              "concept-thesis-defense-offense-sword-pun"
             ]
           }
         ],
-        "applications": [],
-        "cardIds": [
-          "word-auto-es-xkcd-defensa-de-tesis-00004-cde36adb",
-          "word-auto-es-xkcd-defensa-de-tesis-00005-7838e65a",
-          "word-auto-es-xkcd-defensa-de-tesis-00006-7ebedd46",
-          "word-auto-es-xkcd-defensa-de-tesis-00007-aca3ab1f",
-          "word-auto-es-xkcd-defensa-de-tesis-00008-2acd96a6",
-          "word-auto-es-xkcd-defensa-de-tesis-00009-cf63ba42",
-          "word-auto-es-xkcd-defensa-de-tesis-00010-16d5be56",
-          "word-auto-es-xkcd-defensa-de-tesis-00011-301c9d70",
-          "word-auto-es-xkcd-defensa-de-tesis-00012-61c55640",
-          "word-auto-es-xkcd-defensa-de-tesis-00013-5ed1c110",
-          "word-auto-es-xkcd-defensa-de-tesis-00014-17c07762"
+        "excludedUnits": [],
+        "applications": [
+          {
+            "id": "es-xkcd-defensa-de-tesis:caption:app-best-defense",
+            "cardId": "grammar-evaluative-adjective-before-noun",
+            "participantWordIds": [
+              "es-xkcd-defensa-de-tesis:caption:w02",
+              "es-xkcd-defensa-de-tesis:caption:w03"
+            ],
+            "exampleEs": "MEJOR DEFENSA",
+            "explanationEn": "Mejor comes before defensa to evaluate and rank it rather than merely classify it."
+          },
+          {
+            "id": "es-xkcd-defensa-de-tesis:caption:app-thesis-defense",
+            "cardId": "phrase-defensa-de-tesis",
+            "participantWordIds": [
+              "es-xkcd-defensa-de-tesis:caption:w03",
+              "es-xkcd-defensa-de-tesis:caption:w04",
+              "es-xkcd-defensa-de-tesis:caption:w05"
+            ],
+            "exampleEs": "DEFENSA DE TESIS",
+            "explanationEn": "Defensa names the academic event, while de tesis identifies the work being defended."
+          },
+          {
+            "id": "es-xkcd-defensa-de-tesis:caption:app-good-order",
+            "cardId": "grammar-evaluative-adjective-before-noun",
+            "participantWordIds": [
+              "es-xkcd-defensa-de-tesis:caption:w08",
+              "es-xkcd-defensa-de-tesis:caption:w09"
+            ],
+            "exampleEs": "BUEN ATAQUE",
+            "explanationEn": "Buen comes before ataque to evaluate it positively."
+          },
+          {
+            "id": "es-xkcd-defensa-de-tesis:caption:app-buen",
+            "cardId": "grammar-bueno-to-buen-before-masculine-noun",
+            "participantWordIds": [
+              "es-xkcd-defensa-de-tesis:caption:w08",
+              "es-xkcd-defensa-de-tesis:caption:w09"
+            ],
+            "exampleEs": "BUEN ATAQUE",
+            "explanationEn": "Bueno shortens to buen directly before the masculine singular noun ataque."
+          }
         ],
-        "reviewStatus": "needs-review",
-        "provenance": {
-          "method": "apple-vision-ocr-line",
-          "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-          "ocrConfidence": 1
-        }
+        "cardIds": [
+          "word-la--article",
+          "word-mejor--best",
+          "grammar-evaluative-adjective-before-noun",
+          "word-defensa--academic-defense",
+          "phrase-defensa-de-tesis",
+          "concept-thesis-defense-offense-sword-pun",
+          "word-de--noun-classifier",
+          "word-tesis",
+          "word-es",
+          "word-un",
+          "word-buen",
+          "grammar-bueno-to-buen-before-masculine-noun",
+          "word-ataque"
+        ]
       }
     ],
     "cardIds": [
-      "word-auto-es-xkcd-defensa-de-tesis-00001-f78f9a24",
-      "word-auto-es-xkcd-defensa-de-tesis-00002-82a471e1",
-      "word-auto-es-xkcd-defensa-de-tesis-00003-3f36d3ee",
-      "word-auto-es-xkcd-defensa-de-tesis-00004-cde36adb",
-      "word-auto-es-xkcd-defensa-de-tesis-00005-7838e65a",
-      "word-auto-es-xkcd-defensa-de-tesis-00006-7ebedd46",
-      "word-auto-es-xkcd-defensa-de-tesis-00007-aca3ab1f",
-      "word-auto-es-xkcd-defensa-de-tesis-00008-2acd96a6",
-      "word-auto-es-xkcd-defensa-de-tesis-00009-cf63ba42",
-      "word-auto-es-xkcd-defensa-de-tesis-00010-16d5be56",
-      "word-auto-es-xkcd-defensa-de-tesis-00011-301c9d70",
-      "word-auto-es-xkcd-defensa-de-tesis-00012-61c55640",
-      "word-auto-es-xkcd-defensa-de-tesis-00013-5ed1c110",
-      "word-auto-es-xkcd-defensa-de-tesis-00014-17c07762"
+      "word-en",
+      "phrase-en-conclusion",
+      "word-conclusión",
+      "concept-thesis-defense-offense-sword-pun",
+      "word-aaaaaaaaaaaa--scream",
+      "word-la--article",
+      "word-mejor--best",
+      "grammar-evaluative-adjective-before-noun",
+      "word-defensa--academic-defense",
+      "phrase-defensa-de-tesis",
+      "word-de--noun-classifier",
+      "word-tesis",
+      "word-es",
+      "word-un",
+      "word-buen",
+      "grammar-bueno-to-buen-before-masculine-noun",
+      "word-ataque"
     ],
-    "reviewStatus": "needs-review",
+    "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
-      "method": "apple-vision-ocr-and-provisional-dictionary",
-      "ocrReviewStatus": "needs_review",
-      "meanTokenConfidence": 0.9643,
-      "lowConfidenceTokenCount": 1,
-      "rawOcrTokenCount": 14,
-      "filteredNonLatinTokenCount": 0,
-      "manualOverrideTokenCount": 0,
-      "contextualSensesReviewed": false,
-      "englishTitleAvailable": false
+      "method": "ai-authored-internal-qa",
+      "contextualSensesReviewed": true
     }
   },
   "cards": [
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00001-f78f9a24",
+      "id": "word-en",
       "kind": "word",
       "promptEs": "en",
       "answerEn": "in; on",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00001",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-dbd3a49d0d906b4ed921",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00002-82a471e1",
+      "id": "phrase-en-conclusion",
+      "kind": "phrase",
+      "promptEs": "en conclusión",
+      "questionEn": "What expression introduces a final summary or conclusion?",
+      "answerEn": "Use en conclusión, meaning “in conclusion.”",
+      "noteEn": "This transition signals that the speaker or writer is finishing an argument and stating its main result. It is common in formal speech and writing.",
+      "example": {
+        "es": "En conclusión, necesitamos otro plan.",
+        "en": "In conclusion, we need another plan."
+      },
+      "tags": [
+        "phrase",
+        "discourse",
+        "formal",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-conclusión",
       "kind": "word",
       "promptEs": "conclusión",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "conclusion",
+      "noteEn": "Conclusión has a written accent on the final ó.",
+      "example": {
+        "es": "La conclusión es breve.",
+        "en": "The conclusion is brief."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00002",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0001",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c8534d6d44e2f98e0775",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00003-3f36d3ee",
+      "id": "concept-thesis-defense-offense-sword-pun",
+      "kind": "concept",
+      "promptEs": "defensa de tesis · ataque de tesis",
+      "questionEn": "Why does the thesis presentation turn into a sword attack?",
+      "answerEn": "The comic takes the defensive metaphor in “thesis defense” literally and answers it with a thesis offense.",
+      "noteEn": "A thesis defense is normally an oral examination, not combat. Calling the sword charge an ataque de tesis creates the opposite of defensa de tesis and literalizes the English caption's defense/offense wordplay.",
+      "tags": [
+        "concept",
+        "joke",
+        "academic",
+        "wordplay"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-aaaaaaaaaaaa--scream",
       "kind": "word",
-      "promptEs": "liaaaaaaaaaaaa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "promptEs": "aaaaaaaaaaaa",
+      "answerEn": "aaaaah!; a prolonged scream",
+      "noteEn": "A repeated vowel can spell out a sustained cry. The number of letters shows its length or intensity rather than changing its basic meaning.",
+      "example": {
+        "es": "¡Aaaaa, una araña!",
+        "en": "Aaaaah, a spider!"
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "interjection",
+        "sound",
+        "conversation"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00003",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0002",
-        "ocrConfidence": 0.5,
-        "glossaryRecordId": "provisional-word-b35c358e914f3505bf30",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00004-cde36adb",
+      "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "Meaning needs review",
+      "answerEn": "the (feminine singular article)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00004",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b737ca7ee563ae80e457",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00005-7838e65a",
+      "id": "word-mejor--best",
       "kind": "word",
       "promptEs": "mejor",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "best",
+      "noteEn": "With el, la, lo, los, or las, mejor usually means “best.” Without one of those words, it often means “better.”",
+      "example": {
+        "es": "Esta es la mejor opción.",
+        "en": "This is the best option."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "comparison",
+        "superlative"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00005",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-a9222478217b151579d5",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00006-7ebedd46",
+      "id": "grammar-evaluative-adjective-before-noun",
+      "kind": "grammar",
+      "promptEs": "adjetivo de valoración + sustantivo",
+      "questionEn": "Where do common judgment words such as bueno or malo often go?",
+      "answerEn": "Put them before the noun when they give an overall evaluation: buena idea, mala noticia.",
+      "noteEn": "Spanish often puts a neutral descriptive word after its noun, but common evaluation words can come before it. The describing word still changes to match the noun: bueno becomes buena before a feminine singular noun.",
+      "example": {
+        "es": "Fue una buena decisión.",
+        "en": "It was a good decision."
+      },
+      "tags": [
+        "grammar",
+        "adjective position",
+        "evaluation",
+        "agreement",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-perfil-aerodinamico",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-defensa--academic-defense",
       "kind": "word",
       "promptEs": "defensa",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "defense; academic defense",
+      "noteEn": "In an academic setting, defensa can name the formal presentation and questioning in which a student defends a thesis.",
+      "example": {
+        "es": "Su defensa será el viernes.",
+        "en": "Her defense will be on Friday."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "noun",
+        "academic",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00006",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-1ea93f8211f7577c0fbf",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00007-aca3ab1f",
+      "id": "phrase-defensa-de-tesis",
+      "kind": "phrase",
+      "promptEs": "defensa de tesis",
+      "questionEn": "How do you name the formal academic presentation in which a student defends a thesis?",
+      "answerEn": "Use defensa de tesis.",
+      "noteEn": "Defensa names the act of defending the research, and de tesis identifies the academic work being defended. The expression can refer to the event or the process.",
+      "example": {
+        "es": "Preparó las diapositivas para la defensa de tesis.",
+        "en": "She prepared the slides for the thesis defense."
+      },
+      "tags": [
+        "phrase",
+        "academic",
+        "university",
+        "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-defensa-de-tesis",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
+      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "example": {
+        "es": "Necesito una taza de café.",
+        "en": "I need a coffee cup."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "preposition",
+        "noun modifier",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00007",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00008-2acd96a6",
+      "id": "word-tesis",
       "kind": "word",
       "promptEs": "tesis",
-      "answerEn": "thesis",
-      "noteEn": "",
+      "answerEn": "thesis; dissertation",
+      "noteEn": "Tesis has the same written form in the singular and plural; surrounding words show the number.",
+      "example": {
+        "es": "Leyó dos tesis sobre el tema.",
+        "en": "She read two theses on the topic."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "academia",
+        "number",
+        "B1"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00008",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b5372154b53bf87d8e57",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-mundo-academico-vs-mundo-empresarial",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00009-cf63ba42",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
       "answerEn": "is",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00009",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-c0bc1e08f9743b2d50d5",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00010-16d5be56",
+      "id": "word-un",
       "kind": "word",
       "promptEs": "un",
       "answerEn": "a; an (masculine)",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "contextual sense"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00010",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-68bca10eea2ba33f6f15",
-        "glossaryReviewStatus": "reviewed",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00011-301c9d70",
+      "id": "word-buen",
       "kind": "word",
       "promptEs": "buen",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
+      "answerEn": "good (before a masculine singular noun)",
+      "noteEn": "Bueno shortens to buen directly before a masculine singular noun.",
+      "example": {
+        "es": "Es un buen libro.",
+        "en": "It is a good book."
+      },
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "adjective",
+        "bueno",
+        "apocope"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00011",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-11f940fd7064526930a4",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00012-61c55640",
+      "id": "grammar-bueno-to-buen-before-masculine-noun",
+      "kind": "grammar",
+      "promptEs": "bueno → buen delante de un sustantivo masculino singular",
+      "questionEn": "Why does bueno sometimes appear as buen?",
+      "answerEn": "Shorten bueno to buen when it comes directly before a masculine singular noun.",
+      "noteEn": "Use un buen libro but el libro es bueno. The shortening happens only before a masculine singular noun. Before a feminine noun, use buena, as in una buena idea; in plural, use buenos or buenas.",
+      "example": {
+        "es": "Carlos es un buen vecino.",
+        "en": "Carlos is a good neighbor."
+      },
+      "tags": [
+        "grammar",
+        "adjective",
+        "apocope",
+        "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-peliculas-de-accion",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-ataque",
       "kind": "word",
       "promptEs": "ataque",
-      "answerEn": "Meaning needs review",
+      "answerEn": "attack",
       "noteEn": "",
       "tags": [
         "word",
-        "machine extracted",
-        "needs review"
+        "events",
+        "A2"
       ],
-      "reviewStatus": "needs-review",
+      "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00012",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-3328186d9e8741d5a523",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00013-5ed1c110",
-      "kind": "word",
-      "promptEs": "de",
-      "answerEn": "Meaning needs review",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00013",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-959a45d44e6fcf58361e",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
-      }
-    },
-    {
-      "id": "word-auto-es-xkcd-defensa-de-tesis-00014-17c07762",
-      "kind": "word",
-      "promptEs": "tesis",
-      "answerEn": "thesis",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "machine extracted",
-        "needs review"
-      ],
-      "reviewStatus": "needs-review",
-      "schedulable": true,
-      "provenance": {
-        "method": "apple-vision-ocr-and-provisional-dictionary",
-        "sourceTokenId": "es-xkcd-defensa-de-tesis:ocr-token-00014",
-        "sourceLineId": "es-xkcd-defensa-de-tesis:ocr-line-0003",
-        "ocrConfidence": 1,
-        "glossaryRecordId": "provisional-word-b5372154b53bf87d8e57",
-        "glossaryReviewStatus": "needs-review",
-        "manualOverrideReason": null,
-        "contextualSenseReviewed": false
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-diagramas-de-narrativa-de-peliculas",
+        "contextualSenseReviewed": true
       }
     }
   ]

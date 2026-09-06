@@ -10,6 +10,12 @@ import { WORD_BOUNDS_BY_REGION } from "./word-bounds.generated.js";
 
 export type CardKind = "word" | "phrase" | "grammar" | "concept";
 
+/** Editorial confidence carried by published runtime lessons and cards. */
+export type LearningContentReviewStatus =
+  | "needs-review"
+  | "ai-authored-internal-qa"
+  | "human-verified";
+
 export interface LearningCard {
   id: string;
   kind: CardKind;
@@ -22,8 +28,8 @@ export interface LearningCard {
   /** A reusable example invented for the lesson, never copied from a comic. */
   example?: { es: string; en: string };
   tags: readonly string[];
-  /** Generated cards remain provisional until a human reviews the OCR and sense. */
-  reviewStatus?: "reviewed" | "needs-review";
+  /** Internal-QA content is useful but must not be presented as human-verified. */
+  reviewStatus?: LearningContentReviewStatus;
   /** Exceptional opt-out; never set false merely because content needs review. */
   schedulable?: boolean;
   /** Build provenance is intentionally display metadata, never an SRS identity. */
@@ -1921,8 +1927,8 @@ const WORD_SENSES = {
   ],
   bien: [
     {
-      key: "working-properly",
-      answerEn: "properly; well (ir bien means to be working)",
+      key: "well",
+      answerEn: "well; properly",
       contexts: [{ pattern: ["ir", "bien"], at: 1 }],
     },
     { key: "discourse", answerEn: "well; all right (opening a response)" },
@@ -2569,6 +2575,13 @@ export interface Comic {
   regions: readonly RevealRegion[];
   /** De-duplicated union of all region card IDs; this is the scheduler index. */
   cardIds: readonly CardId[];
+  /** Runtime editorial confidence; omitted only by the source seed constants. */
+  reviewStatus?: LearningContentReviewStatus;
+  /** Runtime build provenance is display metadata, never an SRS identity. */
+  provenance?: {
+    contextualSensesReviewed?: boolean;
+    [key: string]: unknown;
+  };
 }
 
 interface RevealRegionSeed extends Omit<RevealRegion, "words" | "applications" | "cardIds"> {

@@ -201,7 +201,7 @@ test("well-spaced successes grow stability more than massed successes", () => {
   assert.ok(massedScore.stabilityDays < 1.01);
 });
 
-test("comic ranking uses only the max-normalized sum of exact card priorities", () => {
+test("comic ranking uses only the max-normalized density of exact card priorities", () => {
   const state = repeatOutcomes([true, true, true, true, true]);
   const candidates = [
     comic("hard", ["target"], 0),
@@ -222,12 +222,31 @@ test("comic ranking uses only the max-normalized sum of exact card priorities", 
   assert.equal(ranked[0].score, 1);
   assert.equal(ranked[1].score, ranked[1].normalizedCardPriority);
   assert.ok(ranked[0].cardPrioritySum > ranked[1].cardPrioritySum);
+  assert.ok(ranked[0].cardPriorityDensity > ranked[1].cardPriorityDensity);
 });
 
-test("equal card-priority sums ignore importance and break ties by comic ID", () => {
+test("priority density beats a larger raw sum from a card-heavy comic", () => {
+  const evidence = comic("evidence", ["hard"]);
+  const state = expose(createSrsState(), evidence, NOW, [NOW]);
+  const candidates = [
+    comic("wide", ["hard", "fresh-one", "fresh-two"]),
+    comic("dense", ["hard"]),
+  ];
+  const ranked = rankComics(candidates, state, NOW);
+  const selected = selectNextComic(candidates, state, NOW);
+
+  assert.deepEqual(ranked.map((entry) => entry.comic.id), ["dense", "wide"]);
+  assert.ok(ranked[1].cardPrioritySum > ranked[0].cardPrioritySum);
+  assert.ok(ranked[0].cardPriorityDensity > ranked[1].cardPriorityDensity);
+  assert.equal(ranked[0].cardPriorityDensity, 0.675);
+  assert.equal(ranked[0].score, 1);
+  assert.equal(selected.comic.id, "dense");
+});
+
+test("equal card-priority densities ignore card count and importance, then use comic ID", () => {
   const ranked = rankComics(
     [
-      comic("z-enormous-importance", ["a"], Number.MAX_VALUE),
+      comic("z-enormous-importance", ["a", "b", "c"], Number.MAX_VALUE),
       comic("a-zero-importance", ["b"], 0),
     ],
     createSrsState(),
@@ -238,6 +257,9 @@ test("equal card-priority sums ignore importance and break ties by comic ID", ()
     "z-enormous-importance",
   ]);
   assert.equal(ranked[0].score, ranked[1].score);
+  assert.equal(ranked[0].cardPriorityDensity, 0.35);
+  assert.equal(ranked[1].cardPriorityDensity, 0.35);
+  assert.ok(ranked[1].cardPrioritySum > ranked[0].cardPrioritySum);
   const selected = selectNextComic(
     ranked.map((entry) => entry.comic),
     createSrsState(),
@@ -261,6 +283,7 @@ test("duplicate exact card IDs contribute once to a comic", () => {
     NOW,
   );
   assert.equal(ranked.cardPrioritySum, 0.35);
+  assert.equal(ranked.cardPriorityDensity, 0.35);
   assert.deepEqual(ranked.cardPriorities.map((entry) => entry.cardId), ["shared"]);
 });
 
@@ -272,6 +295,7 @@ test("zero-card comics have finite zero scores and sort by comic ID", () => {
   );
   assert.equal(ranked[0].comic.id, "a-low");
   assert.equal(ranked[0].cardPrioritySum, 0);
+  assert.equal(ranked[0].cardPriorityDensity, 0);
   assert.equal(ranked[0].normalizedCardPriority, 0);
   assert.ok(ranked.every((entry) => Number.isFinite(entry.score)));
 });
@@ -322,7 +346,7 @@ test("startComic rejects a comic that has already been completed", () => {
   );
 });
 
-test("completion eligibility survives serialization and schema-four hydration", () => {
+test("completion eligibility survives serialization and schema-five hydration", () => {
   const read = comic("read", ["shared"], 1);
   const unread = comic("unread", ["shared"], 0);
   const completed = expose(createSrsState(), read, NOW);
@@ -419,7 +443,7 @@ test("all timestamped exposure history survives beyond the old 500-event cap", (
   assert.equal(restored.historyCompleteness, "complete");
 });
 
-test("schema-four hydration sanitizes malformed and orphan pending exposures", () => {
+test("schema-five hydration sanitizes malformed and orphan pending exposures", () => {
   const stored = {
     ...createSrsState(),
     cards: {
@@ -485,6 +509,40 @@ test("legacy schema-three progress starts a fresh timestamped state", () => {
   assert.equal(selectNextComic([comic("old", ["hard"])], hydrated, NOW).reason, "priority");
 });
 
+test("schema-four provisional curriculum progress starts fresh", () => {
+  const provisionalState = {
+    schemaVersion: 4,
+    nextSessionId: 8,
+    historyCompleteness: "complete",
+    cards: {
+      "word-auto-comic-token": {
+        exposures: [
+          {
+            sessionId: 7,
+            comicId: "old-generated-comic",
+            displayedAtMs: NOW - DAY,
+            openedAtMs: [NOW - DAY],
+            completedAtMs: NOW - DAY,
+          },
+        ],
+      },
+    },
+    comics: {
+      "old-generated-comic": {
+        views: 1,
+        completions: 1,
+        lastViewedAtMs: NOW - DAY,
+        lastCompletedAtMs: NOW - DAY,
+      },
+    },
+    activeSession: null,
+    lastCompletedComicId: "old-generated-comic",
+  };
+
+  assert.deepEqual(hydrateSrsState(provisionalState, NOW), createSrsState());
+  assert.equal(isCurrentSrsSnapshot(provisionalState), false);
+});
+
 test("already-migrated legacy snapshots also start fresh", () => {
   const migratedLegacyState = {
     ...createSrsState(),
@@ -509,7 +567,7 @@ test("already-migrated legacy snapshots also start fresh", () => {
   assert.deepEqual(hydrateSrsState(migratedLegacyState, NOW), createSrsState());
 });
 
-test("current-snapshot detection accepts only complete schema four markers", () => {
+test("current-snapshot detection accepts only complete schema five markers", () => {
   const current = createSrsState();
 
   assert.equal(isCurrentSrsSnapshot(current), true);
@@ -522,7 +580,7 @@ test("current-snapshot detection accepts only complete schema four markers", () 
     }),
     false,
   );
-  assert.equal(isCurrentSrsSnapshot({ schemaVersion: 4 }), false);
+  assert.equal(isCurrentSrsSnapshot({ schemaVersion: 5 }), false);
   assert.equal(isCurrentSrsSnapshot("not json"), false);
   assert.equal(isCurrentSrsSnapshot(null), false);
 });

@@ -1,16 +1,20 @@
-import type { Comic, LearningCard } from "../content";
+import type {
+  Comic,
+  LearningCard,
+  LearningContentReviewStatus,
+} from "../content";
 
 /**
  * Runtime JSON format version. Increment this only for a breaking corpus
  * schema change; content-only updates belong in `revision`.
  */
-export const CORPUS_SCHEMA_VERSION = 2 as const;
+export const CORPUS_SCHEMA_VERSION = 3 as const;
 
 /** The intended size of the generated Spanish xkcd corpus. */
 export const TARGET_CORPUS_COMIC_COUNT = 258 as const;
 
 /**
- * A comic's position in the provisional comic/learning-target graph. These
+ * A comic's position in the informational comic/learning-target graph. These
  * analytics fields never replace or alias the exact `cardIds` used by SRS.
  */
 export interface ComicImportance {
@@ -30,13 +34,13 @@ export interface ComicImportance {
 export interface ComicImportanceModel {
   algorithm: "damped-bipartite-centrality-v1";
   normalization: "comic-sum-1";
-  identityPolicy: "provisional-word-signature-v1";
+  identityPolicy: "stable-card-id-v1";
   edgePolicy: "one-per-comic-per-target";
   cardScope: "schedulable-only";
   includesSchedulableOnly: true;
-  reviewStatus: "provisional-context-unreviewed";
-  provisional: true;
-  contextualSensesReviewed: false;
+  reviewStatus: "ai-authored-internal-qa" | "human-verified" | "mixed";
+  provisional: boolean;
+  contextualSensesReviewed: boolean;
   damping: number;
   tolerance: number;
   maxIterations: number;
@@ -65,10 +69,10 @@ export interface CorpusManifestEntry {
   /** Analytics-only canonical targets; never use these IDs for SRS state. */
   importanceTargetIds: readonly string[];
   importance: ComicImportance;
-  /** Machine-extracted lessons remain visibly provisional until reviewed. */
-  reviewStatus: "reviewed" | "needs-review";
-  /** Reviewed entries always use the checked-in seed adapter. */
-  reviewed?: boolean;
+  /** Editorial confidence; internal QA is not a claim of human verification. */
+  reviewStatus: LearningContentReviewStatus;
+  /** Internal-only marker for an exact checked-in seed fallback. Never serialized. */
+  seedFallback?: true;
 }
 
 export interface CorpusManifest {
@@ -87,6 +91,7 @@ export interface CorpusManifest {
 export interface CorpusComicBundle {
   schemaVersion: typeof CORPUS_SCHEMA_VERSION;
   revision: string;
+  reviewStatus: LearningContentReviewStatus;
   comic: Comic;
   cards: readonly LearningCard[];
 }
