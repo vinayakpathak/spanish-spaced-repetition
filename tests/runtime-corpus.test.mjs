@@ -117,8 +117,8 @@ test("the schema-v3 runtime covers all 258 archive entries with only internal-QA
     authoredComics: 254,
     reviewedSeedComics: 4,
     needsReviewComics: 0,
-    cards: 6_466,
-    schedulableCards: 6_466,
+    cards: 6_465,
+    schedulableCards: 6_465,
     wordOccurrences: 14_768,
   });
   assert.equal(manifest.comics.length, 258);
@@ -239,8 +239,8 @@ test("all 258 manifest comics carry deterministic graph importance over stable c
     cardNodeCount: expected.cardNodeCount,
     edgeCount: expected.edgeCount,
   });
-  assert.equal(expected.cardNodeCount, 6_466);
-  assert.equal(expected.edgeCount, 14_909);
+  assert.equal(expected.cardNodeCount, 6_465);
+  assert.equal(expected.edgeCount, 14_908);
 });
 
 test("every lazy bundle keeps exact-card scheduling, word geometry, and authored provenance", async () => {
@@ -254,7 +254,7 @@ test("every lazy bundle keeps exact-card scheduling, word geometry, and authored
   let wordOccurrenceCount = 0;
 
   assert.equal(bundlesById.size, 258, "all lazy bundle files exist");
-  assert.equal(catalogById.size, 6_466, "the runtime catalog is deduplicated");
+  assert.equal(catalogById.size, 6_465, "the runtime catalog is deduplicated");
 
   for (const entry of manifest.comics) {
     const bundle = bundlesById.get(entry.id);
@@ -385,10 +385,10 @@ test("every lazy bundle keeps exact-card scheduling, word geometry, and authored
   }
 
   assert.equal(wordOccurrenceCount, 14_768);
-  assert.equal(targetFrequency.size, 6_466);
+  assert.equal(targetFrequency.size, 6_465);
   assert.equal(
     [...targetFrequency.values()].reduce((sum, count) => sum + count, 0),
-    14_909,
+    14_908,
   );
   assert.equal(
     [...targetFrequency.values()].filter((comicCount) => comicCount > 1).length,
@@ -414,7 +414,7 @@ test("the browser parser marks exactly four checked-in seed fallbacks", async ()
       ?.loadKey,
     "es-xkcd-quince-años",
   );
-  assert.equal(parsed.cardCatalog.length, 6_466);
+  assert.equal(parsed.cardCatalog.length, 6_465);
   assert.deepEqual(
     sorted(
       merged.comics

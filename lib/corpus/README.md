@@ -37,7 +37,7 @@ Each comic's `cardIds` is its complete de-duplicated schedulable SRS index.
 the card library can initialize without fetching every comic. Repeated card IDs
 must have byte-equivalent definitions.
 
-The current catalog has 6,466 cards. The three former ordinary `bien` IDs are
+The current catalog has 6,465 cards. The three former ordinary `bien` IDs are
 consolidated into seed-owned `word-bien--well`, used in four comics; the other
 six `bien` senses remain separate. Native complete schema-v5 histories migrate
 those reviewed IDs before curriculum reconciliation, including active-session

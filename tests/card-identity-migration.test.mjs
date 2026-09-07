@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
+import fs from "node:fs/promises";
 import test from "node:test";
 import {
   completeComic,
   createSrsState,
   getCardHistory,
+  getRecentlyOpenedCardIds,
   hydrateSrsState,
   reconcileSrsState,
   recordCardOpen,
@@ -117,4 +119,41 @@ test("authored ID corrections never admit obsolete or incomplete snapshots", () 
   ]) {
     assert.deepEqual(hydrateSrsState(JSON.stringify(invalid), NOW + 100), createSrsState());
   }
+});
+
+test("removing the Drawing Stars joke card drops its saved help without changing language exposures", async () => {
+  const removedId = "concept-drawing-five-point-star-failure";
+  const [manifest, bundle] = await Promise.all([
+    "../public/corpus/manifest.json",
+    "../public/corpus/comics/es-xkcd-dibujar-estrellas.json",
+  ].map(async (file) => JSON.parse(await fs.readFile(new URL(file, import.meta.url), "utf8"))));
+  const target = manifest.comics.find(({ id }) => id === bundle.comic.id);
+  assert.ok(!manifest.cardCatalog.some(({ id }) => id === removedId));
+  assert.ok(manifest.comics.every(({ cardIds }) => !cardIds.includes(removedId)));
+  assert.ok(!JSON.stringify(bundle).includes(removedId), "no candidate, application, or catalog link survives");
+
+  // Reproduce the already-open card from the user's previous curriculum.
+  let before = startComic(createSrsState(), {
+    ...target, cardIds: [...target.cardIds, removedId],
+  }, NOW);
+  before = recordCardOpen(before, removedId, NOW + 10);
+  before = recordCardOpen(before, CANONICAL, NOW + 20);
+  const restored = reconcileSrsState(
+    hydrateSrsState(serializeSrsState(before), NOW + 100), manifest.comics, NOW + 100,
+  );
+  assert.equal(restored.cards[removedId], undefined);
+  assert.deepEqual(restored.activeSession.cardIds, target.cardIds);
+  assert.deepEqual(restored.activeSession.openedCardIds, [CANONICAL]);
+  assert.deepEqual(getRecentlyOpenedCardIds(restored, NOW + 100), [CANONICAL]);
+  assert.deepEqual(restored.comics, before.comics);
+  for (const id of target.cardIds) {
+    assert.deepEqual(restored.cards[id], before.cards[id], id);
+  }
+  const resumed = selectNextComic(manifest.comics, restored, NOW + 200);
+  assert.equal(resumed.reason, "resume");
+  assert.deepEqual(resumed.state, restored, "no new display or learning event on resume");
+  assert.deepEqual(recordCardOpen(restored, removedId, NOW + 300), restored);
+  const completed = completeComic(restored, NOW + 300);
+  assert.equal(completed.comics[target.id].completions, 1);
+  assert.equal(completed.cards[removedId], undefined);
 });
