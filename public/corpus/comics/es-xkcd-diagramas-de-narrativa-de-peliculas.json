@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-3072dca5abefe484",
+  "revision": "runtime-527bd36e6c79f089",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -6107,7 +6107,7 @@
               }
             ],
             "cardIds": [
-              "word-se--comerse",
+              "word-se--completive",
               "grammar-completive-se-reading-consumption"
             ]
           },
@@ -6262,7 +6262,7 @@
           "word-centro",
           "word-de--of",
           "word-visitantes",
-          "word-se--comerse",
+          "word-se--completive",
           "grammar-completive-se-reading-consumption",
           "word-comen--eat",
           "word-a--personal-a",
@@ -8521,7 +8521,7 @@
       "word-escapa",
       "word-centro",
       "word-visitantes",
-      "word-se--comerse",
+      "word-se--completive",
       "grammar-completive-se-reading-consumption",
       "word-comen--eat",
       "word-a--personal-a",
@@ -8593,6 +8593,7 @@
         "data visualization",
         "joke"
       ],
+      "questionEn": "What do the lines in these movie narrative charts represent?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -8956,8 +8957,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -8999,8 +9004,12 @@
       "id": "word-estan--location",
       "kind": "word",
       "promptEs": "están",
-      "answerEn": "they are (in a place or state)",
-      "noteEn": "",
+      "answerEn": "are (a place or condition)",
+      "noteEn": "Están is a form of estar for they or plural you, ustedes. It describes where people or things are, or their condition. Spanish often leaves out the separate word for they or you because the context identifies them. Before another verb's ongoing-action form, están has a different helping-verb use.",
+      "example": {
+        "es": "Las maletas están junto a la puerta.",
+        "en": "The suitcases are beside the door."
+      },
       "tags": [
         "word",
         "estar",
@@ -9685,8 +9694,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -10609,7 +10618,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -10815,20 +10828,18 @@
       }
     },
     {
-      "id": "word-se--comerse",
+      "id": "word-se--completive",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; with comen, it emphasizes eating someone up",
-      "noteEn": "Comer means 'to eat.' With a matching short word such as me, te, or se, comerse can emphasize eating something completely.",
+      "answerEn": "no separate English word; can emphasize doing an action through or completely",
+      "noteEn": "With actions such as comer or leer, se can emphasize doing the action over a specified thing, as in eating something up or reading it through. It does not mean 'himself' here. Se goes with él, ella, usted, ellos, ellas, or ustedes; other people use matching words such as me or te.",
       "example": {
-        "es": "Los niños se comen el pastel.",
-        "en": "The children eat up the cake."
+        "es": "Clara se leyó el libro.",
+        "en": "Clara read through the book."
       },
       "tags": [
         "word",
-        "verbs",
-        "consumption",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -10888,11 +10899,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -10912,7 +10923,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."

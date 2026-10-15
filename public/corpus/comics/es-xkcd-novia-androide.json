@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-dd3f59f1d4159d98",
+  "revision": "runtime-e7518437ce5951a7",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -219,7 +219,7 @@
               }
             ],
             "cardIds": [
-              "word-es--classification"
+              "word-es"
             ]
           },
           {
@@ -287,7 +287,7 @@
           }
         ],
         "cardIds": [
-          "word-es--classification",
+          "word-es",
           "word-un",
           "word-robot",
           "grammar-descriptive-adjective-after-noun",
@@ -550,7 +550,7 @@
               }
             ],
             "cardIds": [
-              "word-de--noun-classifier"
+              "word-de--of"
             ]
           },
           {
@@ -600,7 +600,7 @@
               }
             ],
             "cardIds": [
-              "word-como--fixed-contar-como",
+              "word-como--role",
               "phrase-contar-como"
             ]
           },
@@ -657,6 +657,15 @@
             ],
             "exampleEs": "CUENTE COMO SEXY",
             "explanationEn": "Cuente supplies the doubted form of contar, como introduces the category, and sexy fills that category slot."
+          },
+          {
+            "id": "es-xkcd-novia-androide:arc-welding-comment:review-word-w09",
+            "cardId": "word-de--of",
+            "participantWordIds": [
+              "es-xkcd-novia-androide:arc-welding-comment:w09"
+            ],
+            "exampleEs": "RABITO DE CEREZA",
+            "explanationEn": "Here de connects a part to the fruit it is part of; it does not name the stem's intended use."
           }
         ],
         "cardIds": [
@@ -670,11 +679,11 @@
           "word-arco--electric-arc",
           "word-un",
           "word-rabito--cherry-stem",
-          "word-de--noun-classifier",
+          "word-de--of",
           "word-cereza",
           "word-cuente--count-as",
           "phrase-contar-como",
-          "word-como--fixed-contar-como",
+          "word-como--role",
           "word-sexy"
         ]
       },
@@ -722,7 +731,7 @@
               }
             ],
             "cardIds": [
-              "word-los--clothing-owner-clear",
+              "word-los--affected-owner-article",
               "grammar-quitarse-clothing-definite-article"
             ]
           },
@@ -781,7 +790,7 @@
           "grammar-affirmative-tu-command",
           "grammar-informal-command",
           "grammar-quitarse-clothing-definite-article",
-          "word-los--clothing-owner-clear",
+          "word-los--affected-owner-article",
           "word-pantalones"
         ]
       },
@@ -831,7 +840,7 @@
       "word-novia--girlfriend",
       "grammar-descriptive-adjective-after-noun",
       "word-androide",
-      "word-es--classification",
+      "word-es",
       "word-un",
       "word-robot",
       "word-sexual",
@@ -845,16 +854,16 @@
       "word-al--method",
       "word-arco--electric-arc",
       "word-rabito--cherry-stem",
-      "word-de--noun-classifier",
+      "word-de--of",
       "word-cereza",
       "word-cuente--count-as",
       "phrase-contar-como",
-      "word-como--fixed-contar-como",
+      "word-como--role",
       "word-sexy",
       "word-quítate--remove-clothing",
       "grammar-informal-command",
       "grammar-quitarse-clothing-definite-article",
-      "word-los--clothing-owner-clear",
+      "word-los--affected-owner-article",
       "word-pantalones"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -1059,26 +1068,24 @@
       }
     },
     {
-      "id": "word-es--classification",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is; belongs to the stated category",
-      "noteEn": "Es is the present form of ser used for one person or thing. Between two naming words, it identifies or classifies the first as the second.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "El ajedrez es un juego.",
-        "en": "Chess is a game."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "classification",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-demasiado-viejo-para-esta-mierda",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1169,8 +1176,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1227,8 +1233,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1295,7 +1301,7 @@
       "id": "word-al--method",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "with; by means of the (a + el, introducing a method)",
+      "answerEn": "with; by means of the",
       "noteEn": "Al is the required contraction of a and el. In some technical expressions, it introduces the tool or process used, as in al láser and al arco.",
       "example": {
         "es": "La pieza se cortó al láser.",
@@ -1366,26 +1372,20 @@
       }
     },
     {
-      "id": "word-de--noun-classifier",
+      "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
-      "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
-      },
+      "answerEn": "of",
+      "noteEn": "",
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1459,26 +1459,24 @@
       }
     },
     {
-      "id": "word-como--fixed-contar-como",
+      "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as; completes contar como, “to count as”",
-      "noteEn": "After a form of contar meaning to qualify, como introduces the category or description that applies. It has no written accent in this use.",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "La práctica cuenta como experiencia.",
-        "en": "The internship counts as experience."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "contar como",
-        "classification",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-novia-androide",
+        "ownerComicId": "es-xkcd-fotos-porfa",
         "contextualSenseReviewed": true
       }
     },
@@ -1530,20 +1528,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1579,27 +1577,24 @@
       }
     },
     {
-      "id": "word-los--clothing-owner-clear",
+      "id": "word-los--affected-owner-article",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "your here; Spanish uses los before clothing whose wearer is clear",
-      "noteEn": "Spanish often uses el, la, los, or las rather than a possessive before clothing when a verb or a short word such as me, te, or se already identifies the wearer. Los is the masculine plural form.",
+      "answerEn": "the; English often uses my, your, our, or another owner's word",
+      "noteEn": "Spanish often uses los before masculine plural body parts or clothing when the verb, a word such as me or te, or the context already identifies the owner or wearer. Los matches the plural things, not the people they belong to.",
       "example": {
-        "es": "Se puso los guantes.",
-        "en": "She put on her gloves."
+        "es": "Cruzamos los brazos.",
+        "en": "We cross our arms."
       },
       "tags": [
         "word",
-        "definite article",
-        "clothing",
-        "possession",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-novia-androide",
+        "ownerComicId": "es-xkcd-colchon",
         "contextualSenseReviewed": true
       }
     },

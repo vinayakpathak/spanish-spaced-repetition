@@ -20,30 +20,253 @@
     "noteEn": "The Spanish and English strings preserve the malformed legacy encodings in the Spanish archive and official xkcd title attributes exactly. In panel three, the raster visibly ends DEGRA with a hyphen and never prints a following DA; it is inventoried as the truncated lexical form DEGRA rather than silently repaired. By contrast, TIE-/NE and PER-/MANENTE visibly continue across adjacent lines and are joined as TIENE and PERMANENTE. Verizon LTE, 4:45 PM, and 9GAG are audited non-lexical exclusions. Faint, obscured repost-watermark fragments in the embedded screenshot are not determinately readable lexical units."
   },
   "cardDefinitions": [
-    { "id": "word-digitales", "kind": "word", "promptEs": "digitales", "answerEn": "digital (plural)", "noteEn": "Digitales is plural and has the same form with masculine and feminine plural nouns.", "example": { "es": "Guardamos copias digitales.", "en": "We keep digital copies." }, "tags": ["word", "adjective", "technology", "A2"] },
-    { "id": "word-degradan", "kind": "word", "promptEs": "degradan", "answerEn": "they degrade; they deteriorate", "noteEn": "With se, degradan describes several things losing quality or condition over time.", "example": { "es": "Algunos materiales se degradan con la luz.", "en": "Some materials degrade in light." }, "tags": ["word", "verb", "change", "B1"] },
-    { "id": "word-discos--hard-drives", "kind": "word", "promptEs": "discos", "answerEn": "drives; disks (in discos duros)", "noteEn": "Discos is plural. In computing, disco duro is the conventional name for a hard disk or hard drive.", "example": { "es": "El servidor tiene dos discos duros.", "en": "The server has two hard drives." }, "tags": ["word", "computing", "plural", "A2"] },
-    { "id": "word-duros--hard-drive", "kind": "word", "promptEs": "duros", "answerEn": "hard (in discos duros)", "noteEn": "Duros is masculine plural to match discos in the computing term discos duros.", "example": { "es": "Reemplazaron los discos duros.", "en": "They replaced the hard drives." }, "tags": ["word", "computing", "adjective", "A2"] },
-    { "id": "word-fallan--malfunction", "kind": "word", "promptEs": "fallan", "answerEn": "they fail; they malfunction", "noteEn": "For machines or components, fallar means to stop working correctly or fail.", "example": { "es": "Las baterías viejas fallan a menudo.", "en": "Old batteries often fail." }, "tags": ["word", "verb", "technology", "A2"] },
-    { "id": "word-copiarse--be-copied", "kind": "word", "promptEs": "copiarse", "answerEn": "to be copied", "noteEn": "Copiarse combines copiar with se. After poder, this se can leave the doer unnamed and present the bits as the things that can be copied.", "example": { "es": "Los archivos pueden copiarse rápidamente.", "en": "The files can be copied quickly." }, "tags": ["word", "verb", "passive se", "B1"] },
-    { "id": "word-eternamente", "kind": "word", "promptEs": "eternamente", "answerEn": "eternally; forever", "noteEn": "Eternamente is formed from eterna plus -mente and describes how long an action can continue.", "example": { "es": "Nada dura eternamente.", "en": "Nothing lasts forever." }, "tags": ["word", "adverb", "B1"] },
-    { "id": "word-degra--truncated-degrada", "kind": "word", "promptEs": "degra", "answerEn": "deterio—; visibly truncated beginning of degrada", "noteEn": "Degra is not a complete ordinary verb form. It is the printed beginning of degrada, “it deteriorates,” cut off after degra and a hyphen without a visible continuation.", "example": { "es": "El texto termina en «se degra-».", "en": "The text ends at “it deterio—.”" }, "tags": ["word", "truncated text", "verb", "B1"] },
-    { "id": "word-pintura--paint-material", "kind": "word", "promptEs": "pintura", "answerEn": "paint", "noteEn": "In its material sense, pintura is the coating that can crack, not an individual painting or picture.", "example": { "es": "La pintura de la puerta se agrieta.", "en": "The paint on the door is cracking." }, "tags": ["word", "material", "noun", "A2"] },
-    { "id": "word-agrieta--cracks", "kind": "word", "promptEs": "agrieta", "answerEn": "it cracks", "noteEn": "With se, agrieta describes one thing developing cracks.", "example": { "es": "El barro se agrieta al secarse.", "en": "The mud cracks as it dries." }, "tags": ["word", "verb", "change", "A2"] },
-    { "id": "word-centenario--century-old", "kind": "word", "promptEs": "centenario", "answerEn": "century-old; one hundred years old", "noteEn": "Centenario can describe something that has existed for a century. The masculine singular form ends in -o.", "example": { "es": "Visitaron un edificio centenario.", "en": "They visited a century-old building." }, "tags": ["word", "adjective", "time", "B1"] },
-    { "id": "word-idéntica", "kind": "word", "promptEs": "idéntica", "answerEn": "identical (feminine singular)", "noteEn": "Idéntica uses feminine singular -a to match a feminine noun and normally takes a before the thing used for comparison.", "example": { "es": "Esta copia es idéntica a la otra.", "en": "This copy is identical to the other one." }, "tags": ["word", "adjective", "comparison", "A2"] },
-    { "id": "word-humanidad", "kind": "word", "promptEs": "humanidad", "answerEn": "humanity; humankind", "noteEn": "", "tags": ["word", "noun", "B1"] },
-    { "id": "word-registro--record", "kind": "word", "promptEs": "registro", "answerEn": "record; archive", "noteEn": "Registro can name stored information that preserves what happened, not only the act of registering something.", "example": { "es": "El museo conserva un registro histórico.", "en": "The museum keeps a historical record." }, "tags": ["word", "information", "noun", "A2"] },
-    { "id": "word-permanente", "kind": "word", "promptEs": "permanente", "answerEn": "permanent; lasting", "noteEn": "Permanente has the same singular form with masculine and feminine nouns.", "example": { "es": "Buscan una solución permanente.", "en": "They are looking for a permanent solution." }, "tags": ["word", "adjective", "A2"] },
     {
-      "id": "grammar-passive-se-with-poder",
-      "kind": "grammar",
-      "promptEs": "poder + acción + se / se + poder + acción",
-      "questionEn": "How can you say that something can be done without naming who does it?",
-      "answerEn": "Use se with a form of poder and the action verb; se can come before the changed verb or attach to the unchanged action verb.",
-      "noteEn": "Only poder changes for number and time. The action stays in its dictionary form ending in -ar, -er, or -ir. Both los archivos se pueden copiar and los archivos pueden copiarse mean that the files can be copied, without naming a copier.",
-      "example": { "es": "Las entradas pueden comprarse en línea.", "en": "The tickets can be bought online." },
-      "tags": ["grammar", "passive se", "poder", "B1"]
+      "id": "word-digitales",
+      "kind": "word",
+      "promptEs": "digitales",
+      "answerEn": "digital (plural)",
+      "noteEn": "Digitales is plural and has the same form with masculine and feminine plural nouns.",
+      "example": {
+        "es": "Guardamos copias digitales.",
+        "en": "We keep digital copies."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "technology",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-degradan",
+      "kind": "word",
+      "promptEs": "degradan",
+      "answerEn": "they degrade; they deteriorate",
+      "noteEn": "With se, degradan describes several things losing quality or condition over time.",
+      "example": {
+        "es": "Algunos materiales se degradan con la luz.",
+        "en": "Some materials degrade in light."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "change",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-discos--hard-drives",
+      "kind": "word",
+      "promptEs": "discos",
+      "answerEn": "drives; disks (in discos duros)",
+      "noteEn": "Discos is plural. In computing, disco duro is the conventional name for a hard disk or hard drive.",
+      "example": {
+        "es": "El servidor tiene dos discos duros.",
+        "en": "The server has two hard drives."
+      },
+      "tags": [
+        "word",
+        "computing",
+        "plural",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-duros--hard-drive",
+      "kind": "word",
+      "promptEs": "duros",
+      "answerEn": "hard (in discos duros)",
+      "noteEn": "Duros is masculine plural to match discos in the computing term discos duros.",
+      "example": {
+        "es": "Reemplazaron los discos duros.",
+        "en": "They replaced the hard drives."
+      },
+      "tags": [
+        "word",
+        "computing",
+        "adjective",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-fallan--malfunction",
+      "kind": "word",
+      "promptEs": "fallan",
+      "answerEn": "they fail; they malfunction",
+      "noteEn": "For machines or components, fallar means to stop working correctly or fail.",
+      "example": {
+        "es": "Las baterías viejas fallan a menudo.",
+        "en": "Old batteries often fail."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "technology",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-copiarse--be-copied",
+      "kind": "word",
+      "promptEs": "copiarse",
+      "answerEn": "to be copied",
+      "noteEn": "Copiarse combines copiar with se. After poder, this se can leave the doer unnamed and present the bits as the things that can be copied.",
+      "example": {
+        "es": "Los archivos pueden copiarse rápidamente.",
+        "en": "The files can be copied quickly."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "passive se",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-eternamente",
+      "kind": "word",
+      "promptEs": "eternamente",
+      "answerEn": "eternally; forever",
+      "noteEn": "Eternamente is formed from eterna plus -mente and describes how long an action can continue.",
+      "example": {
+        "es": "Nada dura eternamente.",
+        "en": "Nothing lasts forever."
+      },
+      "tags": [
+        "word",
+        "adverb",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-degra--truncated-degrada",
+      "kind": "word",
+      "promptEs": "degra",
+      "answerEn": "deterio—; visibly truncated beginning of degrada",
+      "noteEn": "Degra is not a complete ordinary verb form. It is the printed beginning of degrada, “it deteriorates,” cut off after degra and a hyphen without a visible continuation.",
+      "example": {
+        "es": "El texto termina en «se degra-».",
+        "en": "The text ends at “it deterio—.”"
+      },
+      "tags": [
+        "word",
+        "truncated text",
+        "verb",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-pintura--paint-material",
+      "kind": "word",
+      "promptEs": "pintura",
+      "answerEn": "paint",
+      "noteEn": "In its material sense, pintura is the coating that can crack, not an individual painting or picture.",
+      "example": {
+        "es": "La pintura de la puerta se agrieta.",
+        "en": "The paint on the door is cracking."
+      },
+      "tags": [
+        "word",
+        "material",
+        "noun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-agrieta--cracks",
+      "kind": "word",
+      "promptEs": "agrieta",
+      "answerEn": "it cracks",
+      "noteEn": "With se, agrieta describes one thing developing cracks.",
+      "example": {
+        "es": "El barro se agrieta al secarse.",
+        "en": "The mud cracks as it dries."
+      },
+      "tags": [
+        "word",
+        "verb",
+        "change",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-centenario--century-old",
+      "kind": "word",
+      "promptEs": "centenario",
+      "answerEn": "century-old; one hundred years old",
+      "noteEn": "Centenario can describe something that has existed for a century. The masculine singular form ends in -o.",
+      "example": {
+        "es": "Visitaron un edificio centenario.",
+        "en": "They visited a century-old building."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "time",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-idéntica",
+      "kind": "word",
+      "promptEs": "idéntica",
+      "answerEn": "identical (feminine singular)",
+      "noteEn": "Idéntica uses feminine singular -a to match a feminine noun and normally takes a before the thing used for comparison.",
+      "example": {
+        "es": "Esta copia es idéntica a la otra.",
+        "en": "This copy is identical to the other one."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "comparison",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-humanidad",
+      "kind": "word",
+      "promptEs": "humanidad",
+      "answerEn": "humanity; humankind",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "noun",
+        "B1"
+      ]
+    },
+    {
+      "id": "word-registro--record",
+      "kind": "word",
+      "promptEs": "registro",
+      "answerEn": "record; archive",
+      "noteEn": "Registro can name stored information that preserves what happened, not only the act of registering something.",
+      "example": {
+        "es": "El museo conserva un registro histórico.",
+        "en": "The museum keeps a historical record."
+      },
+      "tags": [
+        "word",
+        "information",
+        "noun",
+        "A2"
+      ]
+    },
+    {
+      "id": "word-permanente",
+      "kind": "word",
+      "promptEs": "permanente",
+      "answerEn": "permanent; lasting",
+      "noteEn": "Permanente has the same singular form with masculine and feminine nouns.",
+      "example": {
+        "es": "Buscan una solución permanente.",
+        "en": "They are looking for a permanent solution."
+      },
+      "tags": [
+        "word",
+        "adjective",
+        "A2"
+      ]
     },
     {
       "id": "phrase-sin-perdida",
@@ -52,8 +275,16 @@
       "questionEn": "How do you say that information or quality is preserved with no loss?",
       "answerEn": "Use sin pérdida, meaning “without loss” or “losslessly.”",
       "noteEn": "In technical contexts, pérdida is the information or quality that disappears during copying, compression, or transmission. Sin states that no such loss occurs.",
-      "example": { "es": "El audio se comprimió sin pérdida.", "en": "The audio was compressed losslessly." },
-      "tags": ["phrase", "technology", "information", "B1"]
+      "example": {
+        "es": "El audio se comprimió sin pérdida.",
+        "en": "The audio was compressed losslessly."
+      },
+      "tags": [
+        "phrase",
+        "technology",
+        "information",
+        "B1"
+      ]
     },
     {
       "id": "phrase-identico-a",
@@ -62,8 +293,16 @@
       "questionEn": "How do you say that one thing is identical to another?",
       "answerEn": "Use a matching form of idéntico followed by a and the comparison.",
       "noteEn": "Idéntico changes to match the first thing: idéntico, idéntica, idénticos, idénticas. The a remains before the comparison. Before el, a and el combine as al: idéntico al original.",
-      "example": { "es": "La llave nueva es idéntica a la vieja.", "en": "The new key is identical to the old one." },
-      "tags": ["phrase", "comparison", "adjective", "A2"]
+      "example": {
+        "es": "La llave nueva es idéntica a la vieja.",
+        "en": "The new key is identical to the old one."
+      },
+      "tags": [
+        "phrase",
+        "comparison",
+        "adjective",
+        "A2"
+      ]
     },
     {
       "id": "concept-digital-data-copy-survival-meme-decay",
@@ -72,7 +311,12 @@
       "questionEn": "Why does the final reposted screenshot undermine the claim about permanent digital data?",
       "answerEn": "Exact bit-for-bit copying is possible, but the visibly degraded screenshot has been transformed, recompressed, and stripped of context rather than preserved as the same original file.",
       "noteEn": "Digital storage does not guarantee that people keep and transmit an unchanged source. The final image accumulates interface chrome, watermarks, blur, and a repost-site logo, visually contrasting mathematical copying fidelity with how online culture actually preserves material.",
-      "tags": ["concept", "joke", "digital preservation", "reposting"]
+      "tags": [
+        "concept",
+        "joke",
+        "digital preservation",
+        "reposting"
+      ]
     }
   ],
   "regions": [
@@ -123,8 +367,8 @@
         { "id": "es-xkcd-datos-digitales:panel-2:w06", "text": "PERO", "normalized": "pero", "explicitBounds": [{"x":42.0946,"y":9.2699,"width":5.7432,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate PERO.", "cardIds": ["word-pero"] },
         { "id": "es-xkcd-datos-digitales:panel-2:w07", "text": "SUS", "normalized": "sus", "explicitBounds": [{"x":26.4865,"y":14.9436,"width":4.2568,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate SUS.", "cardIds": ["word-sus--their"] },
         { "id": "es-xkcd-datos-digitales:panel-2:w08", "text": "BITS", "normalized": "bits", "explicitBounds": [{"x":31.0473,"y":14.9436,"width":5.1689,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate BITS.", "cardIds": ["word-bits"] },
-        { "id": "es-xkcd-datos-digitales:panel-2:w09", "text": "PUEDEN", "normalized": "pueden", "explicitBounds": [{"x":36.5203,"y":14.9436,"width":7.8041,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate PUEDEN.", "cardIds": ["word-pueden", "grammar-poder-infinitive", "grammar-passive-se-with-poder"] },
-        { "id": "es-xkcd-datos-digitales:panel-2:w10", "text": "COPIARSE", "normalized": "copiarse", "explicitBounds": [{"x":26.4865,"y":20.6174,"width":9.7297,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate COPIARSE.", "cardIds": ["word-copiarse--be-copied", "grammar-poder-infinitive", "grammar-passive-se-with-poder", "concept-digital-data-copy-survival-meme-decay"] },
+        { "id": "es-xkcd-datos-digitales:panel-2:w09", "text": "PUEDEN", "normalized": "pueden", "explicitBounds": [{"x":36.5203,"y":14.9436,"width":7.8041,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate PUEDEN.", "cardIds": ["word-pueden", "grammar-poder-infinitive", "grammar-se-puede-infinitive"] },
+        { "id": "es-xkcd-datos-digitales:panel-2:w10", "text": "COPIARSE", "normalized": "copiarse", "explicitBounds": [{"x":26.4865,"y":20.6174,"width":9.7297,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate COPIARSE.", "cardIds": ["word-copiarse--be-copied", "grammar-poder-infinitive", "grammar-se-puede-infinitive", "concept-digital-data-copy-survival-meme-decay"] },
         { "id": "es-xkcd-datos-digitales:panel-2:w11", "text": "SIN", "normalized": "sin", "explicitBounds": [{"x":36.5203,"y":20.6174,"width":3.6486,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate SIN.", "cardIds": ["word-sin", "phrase-sin-perdida"] },
         { "id": "es-xkcd-datos-digitales:panel-2:w12", "text": "PÉRDIDA", "normalized": "pérdida", "explicitBounds": [{"x":40.473,"y":20.6174,"width":8.1757,"height":5.5}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate PÉRDIDA.", "cardIds": ["word-pérdida", "phrase-sin-perdida"] },
         { "id": "es-xkcd-datos-digitales:panel-2:w13", "text": "ETERNAMENTE", "normalized": "eternamente", "explicitBounds": [{"x":26.4865,"y":26.2911,"width":14.8554,"height":5.6}], "geometryRationale": "OCR boxes crossed adjacent handwritten rows or punctuation; these source-checked bounds tightly isolate ETERNAMENTE.", "cardIds": ["word-eternamente", "grammar-adverbs-mente", "concept-digital-data-copy-survival-meme-decay"] }
@@ -134,7 +378,7 @@
         { "id": "es-xkcd-datos-digitales:panel-2:app-hard-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w02", "es-xkcd-datos-digitales:panel-2:w03"], "exampleEs": "DISCOS DUROS", "explanationEn": "Duros follows discos in the ordinary order for this classifying description." },
         { "id": "es-xkcd-datos-digitales:panel-2:app-hard-agreement", "cardId": "grammar-adjective-gender-agreement", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w02", "es-xkcd-datos-digitales:panel-2:w03"], "exampleEs": "DISCOS DUROS", "explanationEn": "Duros uses masculine plural -os to match discos." },
         { "id": "es-xkcd-datos-digitales:panel-2:app-can-copy", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w09", "es-xkcd-datos-digitales:panel-2:w10"], "exampleEs": "PUEDEN COPIARSE", "explanationEn": "Pueden changes for the plural bits, and copiarse keeps copiar in its unchanged -ar form with se attached." },
-        { "id": "es-xkcd-datos-digitales:panel-2:app-passive-copy", "cardId": "grammar-passive-se-with-poder", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w09", "es-xkcd-datos-digitales:panel-2:w10"], "exampleEs": "PUEDEN COPIARSE", "explanationEn": "Pueden matches the plural things, copiar names the possible action, and the attached se leaves the copier unnamed." },
+        { "id": "es-xkcd-datos-digitales:panel-2:app-passive-copy", "cardId": "grammar-se-puede-infinitive", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w09", "es-xkcd-datos-digitales:panel-2:w10"], "exampleEs": "PUEDEN COPIARSE", "explanationEn": "Pueden matches the plural things, copiar names the possible action, and the attached se leaves the copier unnamed." },
         { "id": "es-xkcd-datos-digitales:panel-2:app-lossless", "cardId": "phrase-sin-perdida", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w11", "es-xkcd-datos-digitales:panel-2:w12"], "exampleEs": "SIN PÉRDIDA", "explanationEn": "Sin removes the possibility of pérdida, the information or quality that might otherwise disappear." },
         { "id": "es-xkcd-datos-digitales:panel-2:app-eternally", "cardId": "grammar-adverbs-mente", "participantWordIds": ["es-xkcd-datos-digitales:panel-2:w13"], "exampleEs": "ETERNAMENTE", "explanationEn": "Eterna takes -mente to form the adverb eternamente, which describes the duration of the copying." }
       ]

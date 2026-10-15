@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-1f4a291aa15796b7",
+  "revision": "runtime-a448799fe684325e",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -181,7 +181,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-infinitive",
+              "word-de--after-antes",
               "grammar-antes-de-infinitive"
             ]
           },
@@ -296,7 +296,7 @@
         "cardIds": [
           "word-antes--before-event",
           "grammar-antes-de-infinitive",
-          "word-de--fixed-antes-de-infinitive",
+          "word-de--after-antes",
           "word-darle--press-control",
           "phrase-darle-a-control",
           "word-a--fixed-darle-a-control",
@@ -1183,7 +1183,7 @@
       "word-eh--confusion",
       "word-antes--before-event",
       "grammar-antes-de-infinitive",
-      "word-de--fixed-antes-de-infinitive",
+      "word-de--after-antes",
       "word-darle--press-control",
       "phrase-darle-a-control",
       "word-a--fixed-darle-a-control",
@@ -1376,26 +1376,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-infinitive",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links antes to the following action",
-      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Lávate las manos antes de comer.",
-        "en": "Wash your hands before eating."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "time",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -1590,17 +1588,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1633,7 +1629,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -1812,10 +1808,10 @@
     {
       "id": "phrase-o-algo",
       "kind": "phrase",
-      "promptEs": "o algo",
-      "questionEn": "How can you make a suggestion less exact by adding “or something”?",
-      "answerEn": "Add o algo after the example or suggestion.",
-      "noteEn": "O algo leaves the alternatives open. It often makes an informal suggestion sound broad rather than precise.",
+      "promptEs": "o algo, con así opcional",
+      "questionEn": "How do you add 'or something' or 'or something like that' to an informal suggestion?",
+      "answerEn": "Add o algo after the suggestion; add así if you mean 'or something like that.'",
+      "noteEn": "These words stay unchanged. O algo leaves the alternative open rather than insisting on one exact thing. Optional así points to something similar to what you just mentioned. The phrase can soften a suggestion or mark a description or estimate as approximate; it does not make the preceding statement exact.",
       "example": {
         "es": "Podemos tomar un café o algo.",
         "en": "We can have a coffee or something."
@@ -1823,7 +1819,7 @@
       "tags": [
         "phrase",
         "hedge",
-        "conversation",
+        "approximation",
         "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1839,10 +1835,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2129,8 +2128,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2271,6 +2274,7 @@
         "pointers",
         "joke reference"
       ],
+      "questionEn": "How can an invalid pointer cause a segmentation fault?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {

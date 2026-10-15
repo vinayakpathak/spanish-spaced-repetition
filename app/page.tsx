@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element, jsx-a11y/no-noninteractive-tabindex */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { cardTitle, cardTitleLanguage } from "../lib/card-presentation";
 import {
   type Comic,
   type LearningCard,
@@ -829,7 +830,7 @@ export default function Home() {
 
           <div className="target-peek">
             {targetCards.slice(0, 3).map((card) => (
-              <span key={card.id} lang="es">{card.promptEs}</span>
+              <span key={card.id} lang={cardTitleLanguage(card)}>{cardTitle(card)}</span>
             ))}
             {targetCards.length > 3 ? <em>+{targetCards.length - 3}</em> : null}
           </div>
@@ -1062,7 +1063,6 @@ export default function Home() {
                               const candidateId = `candidate-${encodeURIComponent(card.id)}`;
                               const frontId = `${candidateId}-front`;
                               const answerId = `${candidateId}-answer`;
-                              const patternId = `${candidateId}-pattern`;
                               const howItWorksId = `${candidateId}-how-it-works`;
                               const generalExampleId = `${candidateId}-general-example`;
                               const comicApplicationId = `${candidateId}-in-this-comic`;
@@ -1096,15 +1096,13 @@ export default function Home() {
                                   >
                                     <span className="candidate-state" aria-hidden="true">{isLearned ? "✓" : "→"}</span>
                                     <span className="candidate-copy">
-                                      {card.questionEn ? (
-                                        <strong id={frontId} className="candidate-question">
-                                          {card.questionEn}
-                                        </strong>
-                                      ) : (
-                                        <strong id={frontId} className="candidate-prompt" lang="es">
-                                          {card.promptEs}
-                                        </strong>
-                                      )}
+                                      <strong
+                                        id={frontId}
+                                        className={card.kind === "word" ? "candidate-prompt" : "candidate-question"}
+                                        lang={cardTitleLanguage(card)}
+                                      >
+                                        {cardTitle(card)}
+                                      </strong>
                                       {isDraft ? (
                                         <span className="candidate-review-flag">
                                           Draft
@@ -1152,20 +1150,6 @@ export default function Home() {
                                         </p>
                                       ) : null}
 
-                                      {card.questionEn ? (
-                                        <section
-                                          className={`candidate-pattern ${card.kind === "phrase" ? "is-expression" : ""}`}
-                                          aria-labelledby={patternId}
-                                        >
-                                          <h5 id={patternId}>
-                                            {card.kind === "phrase"
-                                              ? "SPANISH EXPRESSION"
-                                              : "SPANISH PATTERN"}
-                                          </h5>
-                                          <p lang="es">{card.promptEs}</p>
-                                        </section>
-                                      ) : null}
-
                                       {card.noteEn ? (
                                         <section
                                           className="candidate-explanation"
@@ -1204,11 +1188,6 @@ export default function Home() {
                                         </section>
                                       ) : null}
 
-                                      {card.kind !== "word" ? (
-                                        <div className="candidate-tags">
-                                          {card.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                                        </div>
-                                      ) : null}
                                       <div className="candidate-memory"><span>✓</span> Priority now {formatPriority(cardPriority.priorityIndex)} · reconsidered on every Next</div>
                                     </div>
                                   ) : null}
@@ -1299,7 +1278,7 @@ export default function Home() {
               <div className="overlap-chips">
                 {summary.priorityCardIds.slice(0, 4).map((id) => {
                   const card = cardsById.get(id);
-                  return card ? <span key={id} lang="es">{card.promptEs}</span> : null;
+                  return card ? <span key={id} lang={cardTitleLanguage(card)}>{cardTitle(card)}</span> : null;
                 })}
               </div>
             ) : null}
@@ -1355,7 +1334,7 @@ export default function Home() {
                       <article className="memory-row" key={card.id}>
                         <span className={`memory-kind kind-${card.kind}`}>{card.kind === "word" ? "A" : card.kind === "phrase" ? "“”" : card.kind === "grammar" ? "≋" : "✦"}</span>
                         <div>
-                          <strong lang="es">{card.promptEs}</strong>
+                          <strong lang={cardTitleLanguage(card)}>{cardTitle(card)}</strong>
                           {card.reviewStatus === "needs-review" ? (
                             <span className="memory-review-flag">Draft</span>
                           ) : null}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-0799792eb3b7440f",
+  "revision": "runtime-e033538c1b5903a3",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -167,7 +167,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--fixed-qué-tal-result",
+              "word-qué--fixed-qué-tal",
               "phrase-que-tal-went",
               "question-words"
             ]
@@ -231,7 +231,7 @@
           }
         ],
         "cardIds": [
-          "word-qué--fixed-qué-tal-result",
+          "word-qué--fixed-qué-tal",
           "phrase-que-tal-went",
           "question-words",
           "word-tal--fixed-qué-tal-result",
@@ -725,7 +725,7 @@
       "phrase-hacer-un-trio",
       "word-un",
       "word-trío--threesome",
-      "word-qué--fixed-qué-tal-result",
+      "word-qué--fixed-qué-tal",
       "phrase-que-tal-went",
       "question-words",
       "word-tal--fixed-qué-tal-result",
@@ -872,26 +872,24 @@
       }
     },
     {
-      "id": "word-qué--fixed-qué-tal-result",
+      "id": "word-qué--fixed-qué-tal",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "how (as part of asking qué tal about an experience)",
-      "noteEn": "Qué keeps its written accent inside the fixed question qué tal. When the question includes fue or ha ido, it asks how an event or experience went.",
+      "answerEn": "how; part of qué tal",
+      "noteEn": "Qué tal asks for an opinion, how someone or something is doing, or how an experience went. It can also suggest an option: 'How about ...?' Qué keeps its accent, and the two words work together.",
       "example": {
         "es": "¿Qué tal fue la reunión?",
         "en": "How did the meeting go?"
       },
       "tags": [
         "word",
-        "fixed question",
-        "experience",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-comportamiento-responsable",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
         "contextualSenseReviewed": true
       }
     },
@@ -900,8 +898,8 @@
       "kind": "phrase",
       "promptEs": "¿qué tal fue…? / ¿qué tal ha ido…?",
       "questionEn": "How do you ask how an event or experience went?",
-      "answerEn": "Ask ¿qué tal fue...? for a finished past event, or ¿qué tal ha ido...? for one viewed as connected to now.",
-      "noteEn": "Qué tal works as one fixed question expression. Fue is a simple completed-past form of ser used to evaluate a finished event. Ha ido combines ha with ido, the completed-action form of ir, and is common when asking about a recent experience. The slash in the prompt separates these two alternatives; it does not belong in a Spanish sentence.",
+      "answerEn": "Begin with qué tal fue for a finished past event, or qué tal ha ido for one viewed as connected to now. Name the event if it is not already clear.",
+      "noteEn": "Qué tal works as one fixed question expression. Fue is a simple completed-past form of ser used to evaluate a finished event. Ha ido combines ha with ido, the completed-action form of ir, and is common when asking about a recent experience.",
       "example": {
         "es": "¿Qué tal fue el concierto?",
         "en": "How did the concert go?"
@@ -1017,7 +1015,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1137,8 +1139,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1176,8 +1182,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

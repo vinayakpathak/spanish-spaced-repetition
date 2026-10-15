@@ -1,3 +1,10 @@
+import {
+  CARD_IDENTITY_REVISION,
+  CARD_IDENTITY_MERGES,
+  CARD_IDENTITY_COMIC_ROUTES,
+  RETIRED_CARD_IDS,
+} from "./card-identity-migrations.generated.js";
+
 export type CardStatus = "unseen" | "learning" | "review" | "mastered";
 
 export interface CardExposure {
@@ -5,10 +12,14 @@ export interface CardExposure {
   sessionId: number;
   comicId: string;
   displayedAtMs: number;
+  /** Original display events when aliases shared a session; not extra outcomes. */
+  displayedAtHistoryMs?: number[];
   /** Every reveal is retained, although the score uses one binary lapse. */
   openedAtMs: number[];
   /** Null while the learner is still working through the comic. */
   completedAtMs: number | null;
+  /** Original completion events retained when same-session histories combine. */
+  completedAtHistoryMs?: number[];
 }
 
 export interface CardHistory {
@@ -40,6 +51,10 @@ export interface SrsState {
   schemaVersion: 5;
   nextSessionId: number;
   cards: Record<string, CardHistory>;
+  /** Audit-only evidence for retired or ambiguously reassigned identities. */
+  archivedCards?: Record<string, CardHistory>;
+  /** Applies contextual history routing once, without importing legacy schemas. */
+  cardIdentityRevision?: number;
   comics: Record<string, ComicProgress>;
   activeSession: ActiveSession | null;
   lastCompletedComicId: string | null;
@@ -148,6 +163,7 @@ export function createSrsState(): SrsState {
     schemaVersion: 5,
     nextSessionId: 1,
     cards: {},
+    cardIdentityRevision: CARD_IDENTITY_REVISION,
     comics: {},
     activeSession: null,
     lastCompletedComicId: null,
@@ -166,53 +182,141 @@ function uniqueStrings(values: readonly string[]): string[] {
   return [...new Set(values.filter((value) => value.length > 0))];
 }
 
-/**
- * Reviewed corrections within the authored, complete-history curriculum.
- * These three retired cards occurred in disjoint comics, so a native session
- * contains at most one of them. Joining their histories preserves every
- * display/open timestamp and still leaves one exposure per comic session.
- * This is not a surface-form alias or a migration of legacy scheduler data.
- */
-const AUTHORED_CARD_ID_MERGES = new Map([
-  ["word-bien--so-far-so-good", "word-bien--well"],
-  ["word-bien--working-properly", "word-bien--well"],
-  ["word-bien--well-played", "word-bien--well"],
-]);
+export interface CardIdentityMigration {
+  revision: number;
+  merges: readonly (readonly [string, string])[];
+  comicRoutes: readonly {
+    cardId: string;
+    comicId: string;
+    /** Null means old opens cannot be attributed to a single corrected sense. */
+    targetCardId: string | null;
+    /** Keep old contextual corrections from rerunning when a later migration ships. */
+    introducedRevision?: number;
+  }[];
+  retiredCardIds: readonly string[];
+}
 
-function mergeAuthoredCardHistories(state: SrsState): SrsState {
-  const canonicalId = (id: string) => AUTHORED_CARD_ID_MERGES.get(id) ?? id;
-  const session = state.activeSession;
-  if (
-    !Object.keys(state.cards).some((id) => AUTHORED_CARD_ID_MERGES.has(id)) &&
-    !session?.cardIds.some((id) => AUTHORED_CARD_ID_MERGES.has(id)) &&
-    !session?.openedCardIds.some((id) => AUTHORED_CARD_ID_MERGES.has(id))
-  ) {
-    return state;
+const AUTHORED_IDENTITY_MIGRATION: CardIdentityMigration = {
+  revision: CARD_IDENTITY_REVISION,
+  merges: CARD_IDENTITY_MERGES as [string, string][],
+  comicRoutes: CARD_IDENTITY_COMIC_ROUTES,
+  retiredCardIds: RETIRED_CARD_IDS,
+};
+
+/** One exact target in one comic session contributes one binary outcome. */
+function coalesceExposures(
+  exposures: readonly CardExposure[],
+  activeSession: ActiveSession | null,
+): CardExposure[] {
+  const bySession = new Map<string, CardExposure>();
+  for (const exposure of exposures) {
+    const key = JSON.stringify([exposure.sessionId, exposure.comicId]);
+    const previous = bySession.get(key);
+    if (!previous) {
+      bySession.set(key, exposure);
+      continue;
+    }
+    const displays = [
+      ...(previous.displayedAtHistoryMs ?? [previous.displayedAtMs]),
+      ...(exposure.displayedAtHistoryMs ?? [exposure.displayedAtMs]),
+    ].sort((a, b) => a - b);
+    const completions = [
+      ...(previous.completedAtHistoryMs ??
+        (previous.completedAtMs === null ? [] : [previous.completedAtMs])),
+      ...(exposure.completedAtHistoryMs ??
+        (exposure.completedAtMs === null ? [] : [exposure.completedAtMs])),
+    ].sort((a, b) => a - b);
+    const pending = (previous.completedAtMs === null || exposure.completedAtMs === null) &&
+      activeSession?.sessionId === exposure.sessionId && activeSession.comicId === exposure.comicId;
+    bySession.set(key, {
+      sessionId: exposure.sessionId,
+      comicId: exposure.comicId,
+      displayedAtMs: displays[0],
+      displayedAtHistoryMs: displays,
+      openedAtMs: [...previous.openedAtMs, ...exposure.openedAtMs].sort((a, b) => a - b),
+      completedAtMs: pending ? null : (completions.at(-1) ?? null),
+      ...(completions.length > 0 ? { completedAtHistoryMs: completions } : {}),
+    });
   }
+  return [...bySession.values()].sort(
+    (a, b) => a.displayedAtMs - b.displayedAtMs || a.sessionId - b.sessionId ||
+      a.comicId.localeCompare(b.comicId),
+  );
+}
 
+/**
+ * Explicit reviewed identities only. Contextual routes run once: a mixed old
+ * ID can still be a valid target in the corrected curriculum. Ambiguous old
+ * opens are archived, never copied to every possible new meaning.
+ */
+export function migrateCardIdentities(
+  state: SrsState,
+  migration: CardIdentityMigration = AUTHORED_IDENTITY_MIGRATION,
+): SrsState {
+  const aliases = new Map(migration.merges);
+  const retired = new Set(migration.retiredCardIds);
+  const routeBatches = new Map<number, Map<string, string | null>>();
+  for (const route of migration.comicRoutes) {
+    const introduced = route.introducedRevision ?? migration.revision;
+    if (introduced <= (state.cardIdentityRevision ?? 0) || introduced > migration.revision) continue;
+    const batch = routeBatches.get(introduced) ?? new Map<string, string | null>();
+    const key = JSON.stringify([route.cardId, route.comicId]);
+    if (batch.has(key) && batch.get(key) !== route.targetCardId) {
+      throw new Error("Conflicting reviewed contextual card identities.");
+    }
+    batch.set(key, route.targetCardId);
+    routeBatches.set(introduced, batch);
+  }
+  const orderedBatches = [...routeBatches].sort(([a], [b]) => a - b).map(([, batch]) => batch);
+  const canonicalId = (oldId: string, comicId: string): string | null => {
+    let id: string | null = oldId;
+    // One lookup per release: another old ID in that release may now be a
+    // valid destination. Later releases can intentionally route it again.
+    for (const batch of orderedBatches) {
+      if (id === null) break;
+      const key: string = JSON.stringify([id, comicId]);
+      if (batch.has(key)) id = batch.get(key)!;
+    }
+    const seen = new Set<string>();
+    while (id !== null && aliases.has(id)) {
+      if (seen.has(id)) throw new Error("Cyclic reviewed card identities.");
+      seen.add(id);
+      id = aliases.get(id)!;
+    }
+    return id !== null && retired.has(id) ? null : id;
+  };
+  const session = state.activeSession;
   const cards: Record<string, CardHistory> = {};
+  const archivedCards = { ...state.archivedCards };
   for (const [oldId, history] of Object.entries(state.cards)) {
-    const id = canonicalId(oldId);
-    cards[id] = {
-      exposures: [...(cards[id]?.exposures ?? []), ...history.exposures],
+    const archived: CardExposure[] = [];
+    for (const exposure of history.exposures) {
+      const id = canonicalId(oldId, exposure.comicId);
+      if (id !== oldId) archived.push(exposure);
+      if (id === null) continue;
+      cards[id] = { exposures: [...(cards[id]?.exposures ?? []), exposure] };
+    }
+    if (archived.length > 0) archivedCards[oldId] = {
+      exposures: [...(archivedCards[oldId]?.exposures ?? []), ...archived],
     };
   }
-  // Sort after joining, so dictionary insertion order cannot affect replay.
-  for (const id of new Set(AUTHORED_CARD_ID_MERGES.values())) {
-    cards[id]?.exposures.sort(
-      (a, b) => a.displayedAtMs - b.displayedAtMs || a.sessionId - b.sessionId,
-    );
+  for (const [id, history] of Object.entries(cards)) {
+    cards[id] = { exposures: coalesceExposures(history.exposures, session) };
   }
+  const mapSessionIds = (ids: readonly string[]) => uniqueStrings(ids.flatMap((oldId) => {
+    const id = canonicalId(oldId, session!.comicId);
+    return id === null ? [] : [id];
+  }));
   return {
     ...state,
+    cardIdentityRevision: Math.max(state.cardIdentityRevision ?? 0, migration.revision),
     cards,
-    activeSession: session
-      ? {
-          ...session,
-          cardIds: uniqueStrings(session.cardIds.map(canonicalId)),
-          openedCardIds: uniqueStrings(session.openedCardIds.map(canonicalId)),
-        }
-      : null,
+    ...(Object.keys(archivedCards).length > 0 ? { archivedCards } : {}),
+    activeSession: session ? {
+      ...session,
+      cardIds: mapSessionIds(session.cardIds),
+      openedCardIds: mapSessionIds(session.openedCardIds),
+    } : null,
   };
 }
 
@@ -371,8 +475,8 @@ export function scoreCardPriority(
   const lastDisplayedAtMs = history.exposures.reduce<number | null>(
     (latest, exposure) =>
       latest === null
-        ? exposure.displayedAtMs
-        : Math.max(latest, exposure.displayedAtMs),
+        ? (exposure.displayedAtHistoryMs?.at(-1) ?? exposure.displayedAtMs)
+        : Math.max(latest, exposure.displayedAtHistoryMs?.at(-1) ?? exposure.displayedAtMs),
     null,
   );
   const lastOpenedAtMs = openedTimestamps.reduce<number | null>(
@@ -450,7 +554,7 @@ export function reconcileSrsState<T extends ComicLike>(
   nowMs: number,
 ): SrsState {
   const now = finiteTimestamp(nowMs, "nowMs");
-  state = mergeAuthoredCardHistories(state);
+  state = migrateCardIdentities(state);
   const comicById = new Map(comics.map((comic) => [comic.id, comic]));
   const allowedComicIds = new Set(comicById.keys());
   const allowedCardIds = new Set(
@@ -476,8 +580,14 @@ export function reconcileSrsState<T extends ComicLike>(
       : null;
 
   const cards: Record<string, CardHistory> = {};
+  const archivedCards = { ...state.archivedCards };
   for (const [cardId, history] of Object.entries(state.cards)) {
-    if (!allowedCardIds.has(cardId)) continue;
+    if (!allowedCardIds.has(cardId)) {
+      archivedCards[cardId] = {
+        exposures: [...(archivedCards[cardId]?.exposures ?? []), ...history.exposures],
+      };
+      continue;
+    }
     const exposures = history.exposures.flatMap((exposure) => {
       if (exposure.completedAtMs !== null) return [exposure];
       if (
@@ -489,6 +599,9 @@ export function reconcileSrsState<T extends ComicLike>(
       }
       // A reveal remains valid difficulty evidence even if its session or
       // comic disappeared. An unopened pending display has no outcome.
+      archivedCards[cardId] = {
+        exposures: [...(archivedCards[cardId]?.exposures ?? []), exposure],
+      };
       const lastOpen = exposure.openedAtMs.at(-1);
       return lastOpen === undefined
         ? []
@@ -529,6 +642,7 @@ export function reconcileSrsState<T extends ComicLike>(
   return {
     ...state,
     cards,
+    ...(Object.keys(archivedCards).length > 0 ? { archivedCards } : {}),
     comics: comicsProgress,
     activeSession,
     lastCompletedComicId:
@@ -654,9 +768,13 @@ export function completeComic(state: SrsState, nowMs: number): SrsState {
     const exposure = history.exposures[exposureIndex];
     const lastOpen = exposure.openedAtMs.at(-1) ?? exposure.displayedAtMs;
     const exposures = [...history.exposures];
+    const completedAtMs = Math.max(now, exposure.displayedAtMs, lastOpen);
     exposures[exposureIndex] = {
       ...exposure,
-      completedAtMs: Math.max(now, exposure.displayedAtMs, lastOpen),
+      completedAtMs,
+      ...(exposure.completedAtHistoryMs ? {
+        completedAtHistoryMs: [...exposure.completedAtHistoryMs, completedAtMs].sort((a, b) => a - b),
+      } : {}),
     };
     cards[cardId] = { ...history, exposures };
   }
@@ -739,6 +857,7 @@ function abandonActiveSession(state: SrsState): SrsState {
   const session = state.activeSession;
   if (!session) return state;
   const cards: Record<string, CardHistory> = {};
+  const archivedCards = { ...state.archivedCards };
   for (const [cardId, history] of Object.entries(state.cards)) {
     const exposures = history.exposures.flatMap((exposure) => {
       if (
@@ -747,6 +866,9 @@ function abandonActiveSession(state: SrsState): SrsState {
       ) {
         return [exposure];
       }
+      archivedCards[cardId] = {
+        exposures: [...(archivedCards[cardId]?.exposures ?? []), exposure],
+      };
       const lastOpen = exposure.openedAtMs.at(-1);
       return lastOpen === undefined
         ? []
@@ -754,7 +876,10 @@ function abandonActiveSession(state: SrsState): SrsState {
     });
     if (exposures.length > 0) cards[cardId] = { exposures };
   }
-  return { ...state, cards, activeSession: null };
+  return {
+    ...state, cards, activeSession: null,
+    ...(Object.keys(archivedCards).length > 0 ? { archivedCards } : {}),
+  };
 }
 
 export function selectNextComic<T extends ComicLike>(
@@ -850,10 +975,17 @@ function parseExposure(value: unknown): CardExposure | null {
   const rawCompletedAtMs =
     value.completedAtMs === null ? null : finiteNumber(value.completedAtMs);
   if (value.completedAtMs !== null && rawCompletedAtMs === null) return null;
+  const parseAuditTimestamps = (timestamps: unknown) => Array.isArray(timestamps)
+    ? timestamps.map(finiteNumber).filter((at): at is number => at !== null).sort((a, b) => a - b)
+    : [];
+  const displayedAtHistoryMs = parseAuditTimestamps(value.displayedAtHistoryMs);
+  const completedAtHistoryMs = parseAuditTimestamps(value.completedAtHistoryMs);
   return {
     sessionId,
     comicId: value.comicId,
     displayedAtMs,
+    ...(displayedAtHistoryMs.length > 0 ? { displayedAtHistoryMs } : {}),
+    ...(completedAtHistoryMs.length > 0 ? { completedAtHistoryMs } : {}),
     openedAtMs,
     completedAtMs:
       rawCompletedAtMs === null
@@ -900,6 +1032,7 @@ function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
   }
 
   const cards: Record<string, CardHistory> = {};
+  const orphanedCards: Record<string, CardHistory> = {};
   let greatestSessionId = activeSession?.sessionId ?? 0;
   if (isRecord(parsed.cards)) {
     for (const [cardId, rawHistory] of Object.entries(parsed.cards)) {
@@ -908,6 +1041,7 @@ function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
         .map(parseExposure)
         .filter((exposure): exposure is CardExposure => exposure !== null)
         .flatMap((exposure) => {
+          greatestSessionId = Math.max(greatestSessionId, exposure.sessionId);
           if (exposure.completedAtMs !== null) return [exposure];
           if (
             activeSession !== null &&
@@ -917,6 +1051,9 @@ function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
           ) {
             return [exposure];
           }
+          orphanedCards[cardId] = {
+            exposures: [...(orphanedCards[cardId]?.exposures ?? []), exposure],
+          };
           const lastOpen = exposure.openedAtMs.at(-1);
           return lastOpen === undefined
             ? []
@@ -930,6 +1067,21 @@ function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
   }
 
   const comics: Record<string, ComicProgress> = {};
+  const archivedCards: Record<string, CardHistory> = {};
+  if (isRecord(parsed.archivedCards)) {
+    for (const [id, rawHistory] of Object.entries(parsed.archivedCards)) {
+      if (!isRecord(rawHistory) || !Array.isArray(rawHistory.exposures)) continue;
+      const exposures = rawHistory.exposures.map(parseExposure)
+        .filter((exposure): exposure is CardExposure => exposure !== null);
+      if (exposures.length > 0) archivedCards[id] = { exposures };
+      for (const exposure of exposures) greatestSessionId = Math.max(greatestSessionId, exposure.sessionId);
+    }
+  }
+  for (const [id, history] of Object.entries(orphanedCards)) {
+    archivedCards[id] = {
+      exposures: [...(archivedCards[id]?.exposures ?? []), ...history.exposures],
+    };
+  }
   if (isRecord(parsed.comics)) {
     for (const [comicId, rawProgress] of Object.entries(parsed.comics)) {
       if (!isRecord(rawProgress)) continue;
@@ -955,6 +1107,8 @@ function hydrateSchemaFive(parsed: Record<string, unknown>): SrsState {
       nonNegativeInteger(parsed.nextSessionId, 1),
     ),
     cards,
+    cardIdentityRevision: nonNegativeInteger(parsed.cardIdentityRevision, 0),
+    ...(Object.keys(archivedCards).length > 0 ? { archivedCards } : {}),
     comics,
     activeSession,
     lastCompletedComicId:
@@ -972,7 +1126,7 @@ export function hydrateSrsState(value: unknown, nowMs: number): SrsState {
     if (!isCurrentSrsSnapshot(parsed) || !isRecord(parsed)) {
       return createSrsState();
     }
-    return mergeAuthoredCardHistories(hydrateSchemaFive(parsed));
+    return migrateCardIdentities(hydrateSchemaFive(parsed));
   } catch {
     return createSrsState();
   }

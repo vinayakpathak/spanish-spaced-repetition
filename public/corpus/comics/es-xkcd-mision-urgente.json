@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-d286034362fb9c35",
+  "revision": "runtime-e1c5c46896e42255",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1708,17 +1708,15 @@
       "id": "word-del--from-time",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "from the (a time or period)",
-      "noteEn": "Del combines de and el. Here de marks a time or period as the source something comes from, rather than showing ownership.",
+      "answerEn": "from the; identifies the time or period something comes from",
+      "noteEn": "Del is the required combination of de and el. In this use, de gives a time of origin or a period something belongs to, rather than an owner. The expression may name a century, season, year, or the past or future.",
       "example": {
-        "es": "Recibimos una carta del pasado.",
-        "en": "We received a letter from the past."
+        "es": "Es una carta del pasado.",
+        "en": "It is a letter from the past."
       },
       "tags": [
         "word",
-        "contraction",
-        "time",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1753,8 +1751,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1844,18 +1841,19 @@
     {
       "id": "phrase-tratarse-de-tema",
       "kind": "phrase",
-      "promptEs": "tratarse de + tema · ¿de qué se trata?",
-      "questionEn": "How do you say what a situation is about, or ask what it is about?",
-      "answerEn": "Use se trata de before the topic; ask ¿de qué se trata? when the topic is unknown.",
-      "noteEn": "The plus sign means ‘followed by.’ In this expression, se and de stay fixed while trata can change for time, as in se trataba de for a past topic. The expression does not name a person who performs tratar.",
+      "promptEs": "se trata de + asunto o acción",
+      "questionEn": "How do you use se trata de to introduce what something involves or what the point is?",
+      "answerEn": "Use se trata de before the matter involved, or before an action in its dictionary form.",
+      "noteEn": "This expression has no named person or thing doing the verb; this is called an impersonal expression. Keep the verb singular even before plural things: se trata de dos problemas. It can change for time, as in se trataba de. An action keeps its -ar, -er, or -ir dictionary form. Ask ¿de qué se trata? when the matter is unknown. Do not add a subject such as la película to se trata de; a named film uses la película trata de without se.",
       "example": {
-        "es": "¿De qué se trata la película?",
-        "en": "What is the film about?"
+        "es": "Se trata de aprender, no de ganar.",
+        "en": "The point is to learn, not to win."
       },
       "tags": [
         "phrase",
+        "tratarse de",
         "topic",
-        "question",
+        "impersonal",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1870,8 +1868,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2036,6 +2038,7 @@
         "electric charge",
         "physics joke"
       ],
+      "questionEn": "Why would an electrical engineer want Franklin to reverse the names of electric charges?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2094,7 +2097,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -2301,11 +2304,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2716,7 +2722,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -2838,19 +2844,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2972,16 +2980,21 @@
       "id": "word-la--direct-object-feminine",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "her; it (a feminine thing)",
-      "noteEn": "",
+      "answerEn": "her; it; formal you, for one woman",
+      "noteEn": "La can replace a woman or a thing whose Spanish name is feminine when it directly receives an action. It can also address one woman formally as usted. It usually comes before a changed verb; it does not mean the article 'the' in this use.",
+      "example": {
+        "es": "Tengo una carta y la leo.",
+        "en": "I have a letter and I am reading it."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

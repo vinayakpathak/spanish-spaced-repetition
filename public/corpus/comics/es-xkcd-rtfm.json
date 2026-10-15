@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-0eb76f1f4c04da2f",
+  "revision": "runtime-564e3f6ecdbfcbc2",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -81,7 +81,7 @@
               }
             ],
             "cardIds": [
-              "word-el--numbered-service"
+              "word-el--before-named-item"
             ]
           },
           {
@@ -347,7 +347,7 @@
               }
             ],
             "cardIds": [
-              "word-me--affected-body-part-owner"
+              "word-me--affected-owner"
             ]
           },
           {
@@ -429,7 +429,7 @@
               }
             ],
             "cardIds": [
-              "word-la--body-part-article-after-me"
+              "word-la--affected-owner-article"
             ]
           },
           {
@@ -521,7 +521,7 @@
         ],
         "cardIds": [
           "word-hola",
-          "word-el--numbered-service",
+          "word-el--before-named-item",
           "word-acabo--recent-past",
           "grammar-acabar-de-infinitive",
           "word-de--fixed-acabar-de",
@@ -540,11 +540,11 @@
           "word-sacado--taken-out",
           "word-un--before-feminine-stressed-a",
           "word-arma",
-          "word-me--affected-body-part-owner",
+          "word-me--affected-owner",
           "word-la--direct-object-feminine",
           "word-clavado--stuck-into",
           "word-en",
-          "word-la--body-part-article-after-me",
+          "word-la--affected-owner-article",
           "word-cara"
         ]
       },
@@ -573,7 +573,7 @@
               }
             ],
             "cardIds": [
-              "word-se--completive-reading",
+              "word-se--completive",
               "grammar-completive-se-reading-consumption"
             ]
           },
@@ -751,7 +751,7 @@
           }
         ],
         "cardIds": [
-          "word-se--completive-reading",
+          "word-se--completive",
           "grammar-completive-se-reading-consumption",
           "word-ha",
           "grammar-present-perfect",
@@ -987,7 +987,7 @@
     ],
     "cardIds": [
       "word-hola",
-      "word-el--numbered-service",
+      "word-el--before-named-item",
       "word-acabo--recent-past",
       "grammar-acabar-de-infinitive",
       "word-de--fixed-acabar-de",
@@ -1006,13 +1006,13 @@
       "word-sacado--taken-out",
       "word-un--before-feminine-stressed-a",
       "word-arma",
-      "word-me--affected-body-part-owner",
+      "word-me--affected-owner",
       "word-la--direct-object-feminine",
       "word-clavado--stuck-into",
       "word-en",
-      "word-la--body-part-article-after-me",
+      "word-la--affected-owner-article",
       "word-cara",
-      "word-se--completive-reading",
+      "word-se--completive",
       "grammar-completive-se-reading-consumption",
       "word-leído",
       "word-primero--beforehand",
@@ -1057,25 +1057,24 @@
       }
     },
     {
-      "id": "word-el--numbered-service",
+      "id": "word-el--before-named-item",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "no separate English word here; introduces a numbered service",
-      "noteEn": "Spanish can use el before a number that names a masculine service or line. English often uses the number alone.",
+      "answerEn": "the; often omitted in English before a named item",
+      "noteEn": "Spanish can use el before the name or number of a masculine item, product, command, system, or service. An ordinary noun such as modelo or número may be understood rather than written. English often uses the name alone. El here is not accented él, 'he.'",
       "example": {
-        "es": "¿Es el 061?",
-        "en": "Is this 061?"
+        "es": "Compró el Toyota rojo.",
+        "en": "She bought the red Toyota."
       },
       "tags": [
         "word",
-        "numbered service",
-        "definite article"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-rtfm",
+        "ownerComicId": "es-xkcd-colecciones",
         "contextualSenseReviewed": true
       }
     },
@@ -1219,7 +1218,11 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "some; a bit of",
-      "noteEn": "",
+      "noteEn": "In algo de followed by a noun, algo gives an unspecified amount rather than naming an unspecified thing. Algo stays unchanged; de connects it to what there is some of.",
+      "example": {
+        "es": "Necesito algo de ayuda.",
+        "en": "I need some help."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1235,10 +1238,10 @@
     {
       "id": "grammar-algo-de-quantity",
       "kind": "grammar",
-      "promptEs": "algo de + sustantivo",
-      "questionEn": "How do you say “some” or “a bit of” a substance or uncounted thing?",
-      "answerEn": "Use algo de followed by the thing or substance.",
-      "noteEn": "Algo normally means “something,” but algo de before a noun describes an unspecified amount. It is especially common with substances and broad categories: algo de agua, algo de tiempo, algo de ayuda.",
+      "promptEs": "algo de + cosa o sustancia",
+      "questionEn": "How do you use algo de to mean 'some' or 'a bit of' a thing or substance?",
+      "answerEn": "Put algo de before the thing whose amount you leave unspecified.",
+      "noteEn": "Algo alone means 'something'; algo de before a noun means an unspecified amount of it. Both algo and de stay unchanged: algo de agua, algo de tiempo, algo de ayuda. The name after de tells you what the amount consists of. This is especially useful for substances, time, help, and other things treated as amounts rather than counted individuals.",
       "example": {
         "es": "Necesito algo de tiempo.",
         "en": "I need some time."
@@ -1246,7 +1249,7 @@
       "tags": [
         "grammar",
         "quantity",
-        "partitive",
+        "algo de",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1467,26 +1470,24 @@
       }
     },
     {
-      "id": "word-me--affected-body-part-owner",
+      "id": "word-me--affected-owner",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "marks me as the affected person; English often expresses this as “my”",
-      "noteEn": "Spanish often uses me for the affected person and el or la before that person's body part. English usually uses a possessive word instead: me duele la mano means “my hand hurts.”",
+      "answerEn": "marks me as the person whose body, possessions, or situation is affected",
+      "noteEn": "Spanish can use me for the affected owner and el or la before the thing involved. English often says 'my' or 'from me' instead. Me identifies the person; the article before the thing matches that thing, not its owner.",
       "example": {
-        "es": "Me duele la mano.",
-        "en": "My hand hurts."
+        "es": "Me quitaron el teléfono.",
+        "en": "They took my phone away."
       },
       "tags": [
         "word",
-        "affected person",
-        "body part",
-        "possession"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-rtfm",
+        "ownerComicId": "es-xkcd-diario-3",
         "contextualSenseReviewed": true
       }
     },
@@ -1494,16 +1495,21 @@
       "id": "word-la--direct-object-feminine",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "her; it (a feminine thing)",
-      "noteEn": "",
+      "answerEn": "her; it; formal you, for one woman",
+      "noteEn": "La can replace a woman or a thing whose Spanish name is feminine when it directly receives an action. It can also address one woman formally as usted. It usually comes before a changed verb; it does not mean the article 'the' in this use.",
+      "example": {
+        "es": "Tengo una carta y la leo.",
+        "en": "I have a letter and I am reading it."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1549,26 +1555,24 @@
       }
     },
     {
-      "id": "word-la--body-part-article-after-me",
+      "id": "word-la--affected-owner-article",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "the; used before my body part where English says “my”",
-      "noteEn": "When a sentence already identifies the affected person with me, Spanish normally uses el or la before that person's body part instead of mi. The same pattern can use te, le, nos, or les for other affected people.",
+      "answerEn": "the; English often uses my, your, or another owner's word",
+      "noteEn": "Spanish often uses la before a feminine singular body part or close possession when me, te, le, or the surrounding context already identifies the affected owner. La matches the thing, not the owner's gender. It does not itself specify whose it is.",
       "example": {
-        "es": "Me duele la mano.",
-        "en": "My hand hurts."
+        "es": "Me lavé la cara.",
+        "en": "I washed my face."
       },
       "tags": [
         "word",
-        "definite article",
-        "body part",
-        "possession"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-rtfm",
+        "ownerComicId": "es-xkcd-google-maps",
         "contextualSenseReviewed": true
       }
     },
@@ -1591,25 +1595,24 @@
       }
     },
     {
-      "id": "word-se--completive-reading",
+      "id": "word-se--completive",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; helps leerse mean “to read through”",
-      "noteEn": "With actions such as reading or eating, this small word can emphasize carrying the action through over a whole, clearly specified thing. Se is the form used with él, ella, usted, ellos, ellas, or ustedes.",
+      "answerEn": "no separate English word; can emphasize doing an action through or completely",
+      "noteEn": "With actions such as comer or leer, se can emphasize doing the action over a specified thing, as in eating something up or reading it through. It does not mean 'himself' here. Se goes with él, ella, usted, ellos, ellas, or ustedes; other people use matching words such as me or te.",
       "example": {
-        "es": "Marta se leyó el informe.",
-        "en": "Marta read through the report."
+        "es": "Clara se leyó el libro.",
+        "en": "Clara read through the book."
       },
       "tags": [
         "word",
-        "completion",
-        "leerse"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-rtfm",
+        "ownerComicId": "es-xkcd-diagramas-de-narrativa-de-peliculas",
         "contextualSenseReviewed": true
       }
     },
@@ -1716,6 +1719,7 @@
         "computing culture",
         "RTFM"
       ],
+      "questionEn": "What are man pages, and what does RTFM tell someone to do?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1791,8 +1795,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1911,11 +1914,11 @@
       "id": "word-quería--wanted-desire",
       "kind": "word",
       "promptEs": "quería",
-      "answerEn": "I wanted",
-      "noteEn": "Quería is a past form of querer used for a desire that existed at that past time. It does not say by itself whether the desire was fulfilled.",
+      "answerEn": "wanted; meant to",
+      "noteEn": "Quería is a past form of querer, “to want.” It describes a wish or intention at that past time without saying whether it was fulfilled. The same form can refer to I, he, she, or formal you; context identifies the person.",
       "example": {
-        "es": "Quería más tiempo.",
-        "en": "I wanted more time."
+        "es": "Quería comprar pan, pero la tienda estaba cerrada.",
+        "en": "I wanted to buy bread, but the shop was closed."
       },
       "tags": [
         "word",

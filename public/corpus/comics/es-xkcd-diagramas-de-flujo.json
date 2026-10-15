@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-67d8417a6c465f96",
+  "revision": "runtime-b0ba04f2c12fd292",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -149,7 +149,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-diagrama-de-flujo"
             ]
           },
@@ -205,7 +205,7 @@
           "word-diagramas",
           "phrase-diagrama-de-flujo",
           "concept-flowchart-decision-logic",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-flujo--process-sequence"
         ]
       },
@@ -284,7 +284,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-diagrama-de-flujo"
             ]
           },
@@ -327,7 +327,7 @@
           "word-diagrama",
           "phrase-diagrama-de-flujo",
           "concept-flowchart-decision-logic",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-flujo--process-sequence"
         ]
       },
@@ -441,7 +441,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-diagrama-de-flujo"
             ]
           },
@@ -484,7 +484,7 @@
           "word-diagramas",
           "phrase-diagrama-de-flujo",
           "concept-flowchart-decision-logic",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-flujo--process-sequence"
         ]
       },
@@ -1417,7 +1417,7 @@
               }
             ],
             "cardIds": [
-              "word-si--protest-after-pero",
+              "word-si--emphatic-objection",
               "phrase-pero-si--objection"
             ]
           },
@@ -1530,7 +1530,7 @@
         "cardIds": [
           "word-pero",
           "phrase-pero-si--objection",
-          "word-si--protest-after-pero",
+          "word-si--emphatic-objection",
           "word-las--direct-object-feminine-plural",
           "word-has",
           "grammar-present-perfect",
@@ -2020,7 +2020,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--echo-question",
+              "word-qué--interrogative",
               "question-words"
             ]
           },
@@ -2037,7 +2037,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--echo-question",
+              "word-qué--interrogative",
               "question-words"
             ]
           }
@@ -2056,7 +2056,7 @@
           }
         ],
         "cardIds": [
-          "word-qué--echo-question",
+          "word-qué--interrogative",
           "question-words"
         ]
       },
@@ -2220,7 +2220,7 @@
       "word-diagramas",
       "phrase-diagrama-de-flujo",
       "concept-flowchart-decision-logic",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-flujo--process-sequence",
       "word-presentada--presented-feminine",
       "word-como--role",
@@ -2262,7 +2262,7 @@
       "word-etiquetadas--labeled-ones",
       "word-pero",
       "phrase-pero-si--objection",
-      "word-si--protest-after-pero",
+      "word-si--emphatic-objection",
       "word-las--direct-object-feminine-plural",
       "word-has",
       "grammar-present-perfect",
@@ -2276,7 +2276,7 @@
       "phrase-que-le-den-a",
       "word-le--fixed-que-le-den",
       "word-den--fixed-que-le-den",
-      "word-qué--echo-question",
+      "word-qué--interrogative",
       "question-words",
       "word-escucha--command",
       "word-te--direct",
@@ -2353,19 +2353,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2476,26 +2478,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -2504,16 +2504,15 @@
       "kind": "word",
       "promptEs": "flujo",
       "answerEn": "flow; sequence through a process",
-      "noteEn": "Flujo can describe movement through a process. In diagrama de flujo, it refers to the routes that connect steps and decisions; this is broader than a stream of data or one program's control flow.",
+      "noteEn": "Flujo can describe the path and order followed by steps in a process, including the instructions in a program. This use is not a stream of data or the physical flow of a liquid.",
       "example": {
-        "es": "El diagrama muestra el flujo del trabajo.",
-        "en": "The diagram shows the workflow."
+        "es": "Una decisión cambia el flujo del trabajo.",
+        "en": "A decision changes the workflow."
       },
       "tags": [
         "word",
         "flowchart",
         "process",
-        "sense split",
         "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2553,17 +2552,15 @@
       "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (in the role or capacity of)",
-      "noteEn": "Unaccented como can introduce the role, identity, or point of view from which someone speaks or acts. This is different from cómo with an accent, which asks “how.”",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Como médico, recomiendo descansar.",
-        "en": "As a doctor, I recommend resting."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "role",
-        "point of view",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2753,7 +2750,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -2823,10 +2820,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3051,8 +3051,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3321,10 +3320,10 @@
     {
       "id": "grammar-article-adjective-omitted-noun",
       "kind": "grammar",
-      "promptEs": "el/la/los/las o un/una + adjetivo sin repetir el sustantivo",
-      "questionEn": "How do you say “the interesting one” or “a small one” without repeating the noun?",
-      "answerEn": "Keep the article and adjective, omit the repeated noun, and make both agree with that understood noun.",
-      "noteEn": "The article is a word such as el, la, un, or una. The adjective still changes to match the omitted noun: una pequeña can mean “a small feminine one,” while uno pequeño can mean “a small masculine one.” Context supplies the missing noun.",
+      "promptEs": "el, la, los, las, uno o una + descripción, sin repetir el nombre",
+      "questionEn": "How do you say 'the small one' or 'a small one' without repeating the thing's name?",
+      "answerEn": "Keep the word for 'the' or 'a' and the description, but omit the noun when it is already clear.",
+      "noteEn": "Put the description after the word for 'the' or 'a'. For 'the,' use el, la, los, or las to match the understood thing; for a singular 'a,' use uno for a masculine thing or una for a feminine thing when the noun is omitted. The describing word, called an adjective, still matches it: referring to a camisa, la pequeña means 'the small one.' Words such as más can qualify the description without requiring the noun to be repeated.",
       "example": {
         "es": "Quiero una taza; dame la pequeña.",
         "en": "I want a cup; give me the small one."
@@ -3332,7 +3331,7 @@
       "tags": [
         "grammar",
         "omitted noun",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -3391,7 +3390,7 @@
       "kind": "phrase",
       "promptEs": "¡pero si…! · objeción",
       "questionEn": "How can you object by pointing out a fact that contradicts what was just said?",
-      "answerEn": "Begin with ¡pero si…! and then state the overlooked fact.",
+      "answerEn": "Begin with pero si, then state the overlooked fact.",
       "noteEn": "Here si has no accent and does not mean ‘if.’ The pair pero si introduces surprised disagreement, often like English ‘but…!’ or ‘why, …!’ depending on context.",
       "example": {
         "es": "¡Pero si hoy es domingo!",
@@ -3413,27 +3412,24 @@
       }
     },
     {
-      "id": "word-si--protest-after-pero",
+      "id": "word-si--emphatic-objection",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "but; why, when…? (introducing a protest after pero)",
-      "noteEn": "Unaccented si does not always introduce an if-condition. After pero, it can open an objection by pointing to a fact the listener is overlooking: ¡Pero si ya lo sabes!",
+      "answerEn": "but; introduces an emphatic objection or reminder",
+      "noteEn": "Unaccented si can point to a fact the listener is overlooking, sometimes after pero. In this use it does not mean a conditional 'if,' and it is not accented sí, 'yes.' English may express the objection with 'but' or emphasis.",
       "example": {
-        "es": "¡Pero si la puerta está abierta!",
-        "en": "But the door is already open!"
+        "es": "¡Si ya te lo dije!",
+        "en": "But I already told you!"
       },
       "tags": [
         "word",
-        "si",
-        "objection",
-        "discourse",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-diagramas-de-flujo",
+        "ownerComicId": "es-xkcd-coche-nuevo",
         "contextualSenseReviewed": true
       }
     },
@@ -3665,7 +3661,7 @@
       "promptEs": "que le den (a + algo/alguien)",
       "questionEn": "How do you forcefully dismiss a person, thing, or idea in colloquial Spanish?",
       "answerEn": "Use que le den, optionally followed by a and the rejected target: “to hell with…” or “screw….”",
-      "noteEn": "This is a strong, rude dismissal, so it is unsuitable for polite settings. Name the rejected target after a, or leave it unstated when the situation already makes it obvious. A plus el contracts to al: que le den al plan. The expression should not be translated word by word.",
+      "noteEn": "This is a strong, rude dismissal, so it is unsuitable for polite settings. Name the rejected target after a, or leave it unstated when the situation already makes it obvious. A and el combine as al: que le den al plan. The expression should not be translated word by word.",
       "example": {
         "es": "¡Que le den al plan!",
         "en": "To hell with the plan!"
@@ -3734,27 +3730,24 @@
       }
     },
     {
-      "id": "word-qué--echo-question",
+      "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what? (echoing something surprising)",
-      "noteEn": "Qué keeps its written accent in a short echo question. The speaker repeats only the missing or unbelievable information instead of forming a longer question.",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
       "example": {
-        "es": "—Me voy mañana. —¿Qué?",
-        "en": "‘I'm leaving tomorrow.’ ‘What?’"
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
       },
       "tags": [
         "word",
-        "question",
-        "reaction",
-        "accent",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-scantron",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-6c02ad0e5c99ef0b",
+  "revision": "runtime-cdd8d2da262f0aa2",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1127,7 +1127,7 @@
               }
             ],
             "cardIds": [
-              "word-eh--hesitation"
+              "word-eh"
             ]
           }
         ],
@@ -1135,7 +1135,7 @@
         "applications": [],
         "cardIds": [
           "word-exactamente",
-          "word-eh--hesitation"
+          "word-eh"
         ]
       },
       {
@@ -1651,7 +1651,7 @@
               }
             ],
             "cardIds": [
-              "word-quiere--formal",
+              "word-quiere--wants",
               "grammar-formal-address"
             ]
           },
@@ -1754,6 +1754,15 @@
             ],
             "exampleEs": "QUIERE",
             "explanationEn": "Quiere uses the same singular form as él or ella while addressing the customer formally as usted."
+          },
+          {
+            "id": "es-xkcd-np-completo:fastest-route:review-word-word-07",
+            "cardId": "word-quiere--wants",
+            "participantWordIds": [
+              "es-xkcd-np-completo:fastest-route:word-07"
+            ],
+            "exampleEs": "QUIERE",
+            "explanationEn": "The speaker uses formal address for one listener, so this quiere naturally becomes “do you want?” or “would you like?” in English."
           }
         ],
         "cardIds": [
@@ -1766,7 +1775,7 @@
           "word-por--por-supuesto",
           "phrase-por-supuesto",
           "word-supuesto--por-supuesto",
-          "word-quiere--formal",
+          "word-quiere--wants",
           "grammar-formal-address",
           "word-algo",
           "word-sobre--about",
@@ -1815,7 +1824,7 @@
       "word-por--por-favor",
       "phrase-por-favor",
       "word-favor",
-      "word-eh--hesitation",
+      "word-eh",
       "word-tome--formal-command",
       "grammar-formal-command",
       "word-estos",
@@ -1844,7 +1853,7 @@
       "word-por--por-supuesto",
       "phrase-por-supuesto",
       "word-supuesto--por-supuesto",
-      "word-quiere--formal",
+      "word-quiere--wants",
       "grammar-formal-address",
       "word-algo",
       "word-viajante--salesperson"
@@ -1951,6 +1960,7 @@
         "complexity",
         "NP-complete"
       ],
+      "questionEn": "What does it mean for a problem to be NP-complete?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2011,7 +2021,7 @@
       "id": "word-al--time-clause",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "when; upon (al + infinitive)",
+      "answerEn": "when; upon doing something",
       "noteEn": "",
       "tags": [
         "word",
@@ -2030,7 +2040,7 @@
       "kind": "grammar",
       "promptEs": "al + infinitivo",
       "answerEn": "Use al followed by the action verb in its dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al + verb tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al followed by this verb form tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
       "tags": [
         "B1",
         "grammar",
@@ -2162,6 +2172,7 @@
         "subset sum",
         "joke concept"
       ],
+      "questionEn": "What computation is hidden in choosing items that add up to an exact total?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2496,7 +2507,7 @@
       "kind": "word",
       "promptEs": "sandwiches",
       "answerEn": "sandwiches (printed without the standard Spanish accent)",
-      "noteEn": "Standard Spanish spelling is sándwiches, with an accent on the first a. This printed menu omits that accent, so the card preserves the exact surface form while showing the usual spelling here.",
+      "noteEn": "Standard Spanish spelling is sándwiches, with an accent on the first a. The printed word omits that accent.",
       "example": {
         "es": "Pedimos dos sándwiches.",
         "en": "We ordered two sandwiches."
@@ -2680,25 +2691,23 @@
       }
     },
     {
-      "id": "word-eh--hesitation",
+      "id": "word-eh",
       "kind": "word",
       "promptEs": "eh",
-      "answerEn": "uh; um (hesitation)",
-      "noteEn": "Eh can fill a pause while a speaker thinks or reacts. Its tone and punctuation determine whether it sounds hesitant, surprised, or attention-getting.",
+      "answerEn": "uh; um",
+      "noteEn": "A hesitation sound used while the speaker pauses to think or find words. This is different from eh used to call for attention or ask for agreement.",
       "example": {
-        "es": "Eh... necesito pensarlo.",
-        "en": "Um... I need to think about it."
+        "es": "Eh... tengo otra pregunta.",
+        "en": "Um... I have another question."
       },
       "tags": [
-        "word",
-        "interjection",
-        "hesitation"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-np-completo",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2730,7 +2739,7 @@
       "kind": "grammar",
       "promptEs": "usted: hable / coma / escriba",
       "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
-      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir becoming diga.",
       "tags": [
         "A2",
         "grammar",
@@ -2963,7 +2972,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3059,6 +3068,7 @@
         "NP-complete",
         "joke concept"
       ],
+      "questionEn": "What route does the traveling-salesperson problem try to find?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3295,26 +3305,26 @@
       }
     },
     {
-      "id": "word-quiere--formal",
+      "id": "word-quiere--wants",
       "kind": "word",
       "promptEs": "quiere",
-      "answerEn": "do you want; would you like (formal singular)",
-      "noteEn": "Quiere is the present form used for usted, the formal singular “you.” The same written form can also mean “he or she wants”; context identifies the person.",
+      "answerEn": "wants; wants to",
+      "noteEn": "Quiere is a present form of querer, “to want.” It can describe he, she, or one person addressed formally as usted. With se, it can describe what people in general want. Before an action, use the action verb's unchanged dictionary form, such as descansar, “to rest.”",
       "example": {
-        "es": "¿Quiere ver el menú, señor?",
-        "en": "Would you like to see the menu, sir?"
+        "es": "¿Quiere descansar, señora?",
+        "en": "Would you like to rest, ma'am?"
       },
       "tags": [
         "word",
-        "formal address",
-        "wanting",
-        "question"
+        "querer",
+        "present",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-np-completo",
+        "ownerComicId": "es-xkcd-belleza",
         "contextualSenseReviewed": true
       }
     },
@@ -3348,10 +3358,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "reviewed-v1",
+  "revision": "reviewed-v4-20260907",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1217,7 +1217,7 @@
               }
             ],
             "cardIds": [
-              "word-te--indirect"
+              "word-te--experiencer"
             ]
           },
           {
@@ -1934,7 +1934,7 @@
               }
             ],
             "cardIds": [
-              "word-te--indirect",
+              "word-te--experiencer",
               "grammar-importar-indirect-object"
             ]
           },
@@ -2201,15 +2201,6 @@
             "explanationEn": "This is the two-word question form por qué, meaning “why.” The one-word answer form porque means “because.”"
           },
           {
-            "id": "experiences-incorrectly:word-te--indirect:word-2",
-            "cardId": "word-te--indirect",
-            "participantWordIds": [
-              "experiences-incorrectly-word-2"
-            ],
-            "exampleEs": "TE MOLESTA",
-            "explanationEn": "Here te marks “you” as the person affected by the verb rather than as its subject."
-          },
-          {
             "id": "experiences-incorrectly:word-qué--exclamative-degree:word-13",
             "cardId": "word-qué--exclamative-degree",
             "participantWordIds": [
@@ -2255,18 +2246,27 @@
             "explanationEn": "Here que connects the noun before it to a description of that noun."
           },
           {
-            "id": "experiences-incorrectly:word-te--indirect:word-46",
-            "cardId": "word-te--indirect",
+            "id": "experiences-incorrectly:review-word-experiences-incorrectly-word-2",
+            "cardId": "word-te--experiencer",
+            "participantWordIds": [
+              "experiences-incorrectly-word-2"
+            ],
+            "exampleEs": "TE MOLESTA",
+            "explanationEn": "Here te identifies the listener experiencing annoyance; the following situation is what causes that reaction."
+          },
+          {
+            "id": "experiences-incorrectly:review-word-experiences-incorrectly-word-46",
+            "cardId": "word-te--experiencer",
             "participantWordIds": [
               "experiences-incorrectly-word-46"
             ],
             "exampleEs": "TE IMPORTA",
-            "explanationEn": "Here te marks “you” as the person affected by the verb rather than as its subject."
+            "explanationEn": "Here te identifies the listener to whom something matters, rather than a recipient receiving something."
           }
         ],
         "cardIds": [
           "word-si",
-          "word-te--indirect",
+          "word-te--experiencer",
           "word-molesta",
           "grammar-subjunctive",
           "word-que--clause-link",
@@ -2286,6 +2286,7 @@
           "word-un",
           "word-desconocido",
           "word-condescendiente",
+          "word-te--indirect",
           "word-diga",
           "word-odia",
           "word-la--article",
@@ -2529,7 +2530,7 @@
       "grammar-al-infinitive",
       "word-intentar",
       "word-fotografiar",
-      "word-te--indirect",
+      "word-te--experiencer",
       "word-molesta",
       "word-otra",
       "word-tenga",
@@ -2545,6 +2546,7 @@
       "word-un",
       "word-desconocido",
       "word-condescendiente",
+      "word-te--indirect",
       "word-diga",
       "word-odia",
       "word-que--relative",
@@ -2632,20 +2634,20 @@
     {
       "id": "grammar-evaluative-subjunctive",
       "kind": "grammar",
-      "promptEs": "es + adjetivo de valoración + que + subjuntivo",
-      "answerEn": "Use the subjunctive for the situation being judged.",
-      "noteEn": "Phrases such as es importante, es bueno, and es raro express a judgment about what follows. Spanish marks the verb after que with the subjunctive. In the example, descansas—the ordinary statement form—changes to descanses.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "evaluation"
-      ],
-      "questionEn": "After “It is important/good/strange that…,” which form does the next Spanish verb take?",
+      "promptEs": "ser + valoración + que + acción",
+      "questionEn": "After es importante que or es mejor que, how do you express the action being judged?",
+      "answerEn": "Use a form of ser, the evaluation, que, and the action in its special subjunctive form.",
+      "noteEn": "Subjunctive is the name for the verb form used here because the action is being evaluated, not simply reported. Compare descansas ('you rest') with es importante que descanses ('it is important that you rest'): descansas changes to descanses. Ser can change for time, as in será mejor que llegues. This applies to judgments such as bueno, importante, raro, or mejor, not every adjective: es cierto que presents something as true and normally uses an ordinary statement form. For an activity in general without a separate person, use es importante descansar, with no que.",
       "example": {
-        "es": "Es importante que descanses.",
-        "en": "It is important that you rest."
+        "es": "Es mejor que descanses.",
+        "en": "It is better for you to rest."
       },
+      "tags": [
+        "grammar",
+        "evaluation",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2781,7 +2783,7 @@
       "kind": "phrase",
       "promptEs": "prestar atención",
       "answerEn": "Use prestar atención.",
-      "noteEn": "English uses “pay,” but Spanish uses prestar, a verb that by itself often means “to lend.” Add a before the person or thing receiving the attention: prestar atención a algo.",
+      "noteEn": "English uses “pay,” but Spanish uses prestar, a verb that by itself often means “to lend.” Add a before the person or thing receiving the attention.",
       "tags": [
         "A2",
         "expression",
@@ -2804,7 +2806,7 @@
       "id": "phrase-hacerle-una-foto",
       "kind": "phrase",
       "promptEs": "hacer una foto · hacerle una foto a alguien/algo",
-      "answerEn": "Use hacer una foto; to name what is photographed, use hacerle una foto a alguien or algo.",
+      "answerEn": "Use hacer una foto. To say what is photographed, use a form of hacerle, then una foto, then a before the person or thing in the picture.",
       "noteEn": "Hacer normally means “to make” or “to do,” but in this expression it corresponds to English “take.” Le and the words after a point to the person or thing in the photo. Tomar una foto is common in many other regions.",
       "tags": [
         "A2",
@@ -2854,7 +2856,7 @@
       "kind": "grammar",
       "promptEs": "al + infinitivo",
       "answerEn": "Use al followed by the action verb in its dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al + verb tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al followed by this verb form tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
       "tags": [
         "B1",
         "grammar",
@@ -2925,20 +2927,21 @@
     {
       "id": "grammar-importar-indirect-object",
       "kind": "grammar",
-      "promptEs": "me/te/le importa",
-      "answerEn": "The thing that matters chooses importa or importan; me, te, le, nos, or les says who cares.",
-      "noteEn": "Spanish builds this idea from the thing outward. Me importa el libro literally says “The book matters to me,” so the singular el libro uses importa. Me importan los libros says “Books matter to me,” so the plural los libros uses importan. The small word identifies the affected person: me means “to me,” te means “to you,” and le can mean “to him,” “to her,” or formal “to you.”",
-      "tags": [
-        "A2",
-        "grammar",
-        "indirect object",
-        "gustar-type verb"
-      ],
-      "questionEn": "Why does me importa work like “it matters to me” rather than “I care about it”?",
+      "promptEs": "importar con la persona a quien le importa",
+      "questionEn": "How do you use importar to say what matters and who cares about it?",
+      "answerEn": "Make importar match the thing or person that matters; use me, te, le, nos, os, or les to say who cares.",
+      "noteEn": "For one thing or a whole situation, use importa; for several things, use importan: me importa el precio, me importan los detalles. The short word names who cares: me is to me, te to familiar singular you, le to him/her/formal singular you, nos to us, os to familiar plural you mainly in Spain, and les to them or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. If I am the person who matters, use importo, as in le importo ('I matter to him or her'). You can omit the person when it is not needed: importa el resultado. No makes it negative and goes before the short word, if present: no me importa.",
       "example": {
-        "es": "Me importa tu opinión.",
-        "en": "Your opinion matters to me; I care about your opinion."
+        "es": "Me importan tus ideas.",
+        "en": "Your ideas matter to me."
       },
+      "tags": [
+        "grammar",
+        "importar",
+        "agreement",
+        "affected person",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2975,7 +2978,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -3011,7 +3014,7 @@
       "id": "word-al--time-clause",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "when; upon (al + infinitive)",
+      "answerEn": "when; upon doing something",
       "noteEn": "",
       "tags": [
         "word",
@@ -3030,10 +3033,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3376,10 +3382,13 @@
       "kind": "word",
       "promptEs": "eh",
       "answerEn": "uh; um",
-      "noteEn": "",
+      "noteEn": "A hesitation sound used while the speaker pauses to think or find words. This is different from eh used to call for attention or ask for agreement.",
+      "example": {
+        "es": "Eh... tengo otra pregunta.",
+        "en": "Um... I have another question."
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3447,8 +3456,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3742,8 +3755,7 @@
       "answerEn": "I try; I attempt",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3794,7 +3806,7 @@
       "kind": "word",
       "promptEs": "le",
       "answerEn": "to it (the thing receiving attention)",
-      "noteEn": "Here le points back to a thing and functions as an indirect-object pronoun with prestar atención. A fuller a + noun phrase can state what le refers to.",
+      "noteEn": "Le identifies the thing receiving someone's attention in prestar atención. A fuller phrase beginning with a can name that thing.",
       "example": {
         "es": "A esta cuestión le presto mucha atención.",
         "en": "I pay close attention to this issue."
@@ -3834,7 +3846,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3851,8 +3867,12 @@
       "id": "word-mayores",
       "kind": "word",
       "promptEs": "mayores",
-      "answerEn": "greatest; biggest; older",
-      "noteEn": "",
+      "answerEn": "greatest; biggest (plural)",
+      "noteEn": "Mayores is the plural of mayor when comparing scale or importance. In a group identified with las or a possessive word such as mis, it can identify the greatest ones. It has the same form for masculine and feminine nouns; the separate age meaning is “older.”",
+      "example": {
+        "es": "Esos fueron sus mayores logros.",
+        "en": "Those were their greatest achievements."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3926,8 +3946,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4111,8 +4130,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -4228,7 +4247,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -4266,8 +4289,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4299,11 +4321,11 @@
       "id": "word-te--indirect",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you",
-      "noteEn": "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+      "answerEn": "to you; for you, as the recipient",
+      "noteEn": "Te can identify one familiar listener as the person receiving something or benefiting from an action. It normally goes before the verb. English may say 'to you' or 'for you,' or simply place 'you' before what is given or said.",
       "example": {
         "es": "Te envío un mensaje.",
-        "en": "I’m sending you a message."
+        "en": "I send you a message."
       },
       "tags": [
         "word",
@@ -4557,6 +4579,28 @@
       "promptEs": "yo",
       "answerEn": "I",
       "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-te--experiencer",
+      "kind": "word",
+      "promptEs": "te",
+      "answerEn": "marks you as the person who feels, likes, or experiences something",
+      "noteEn": "Te identifies one familiar listener as the person having a feeling, impression, or preference. English often starts with 'you,' while Spanish builds the sentence around what produces the reaction: te gusta el libro, but te gustan los libros. Te stays the same.",
+      "example": {
+        "es": "Te gustan estas canciones.",
+        "en": "You like these songs."
+      },
       "tags": [
         "word",
         "contextual sense"

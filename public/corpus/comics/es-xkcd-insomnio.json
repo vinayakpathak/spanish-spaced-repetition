@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-6ae8cbf2951979a3",
+  "revision": "runtime-59b0c4a17df4fd32",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -430,7 +430,8 @@
             ],
             "cardIds": [
               "word-la--omitted-feminine-noun",
-              "grammar-article-mas-adjective-ellipsis"
+              "grammar-article-adjective-omitted-noun",
+              "grammar-relative-superlative"
             ]
           },
           {
@@ -447,7 +448,7 @@
             ],
             "cardIds": [
               "word-más--superlative",
-              "grammar-article-mas-adjective-ellipsis"
+              "grammar-relative-superlative"
             ]
           },
           {
@@ -464,22 +465,33 @@
             ],
             "cardIds": [
               "word-brillante--bright",
-              "grammar-article-mas-adjective-ellipsis"
+              "grammar-article-adjective-omitted-noun",
+              "grammar-relative-superlative"
             ]
           }
         ],
         "excludedUnits": [],
         "applications": [
           {
-            "id": "es-xkcd-insomnio:panel-1-lower:app-superlative-ellipsis",
-            "cardId": "grammar-article-mas-adjective-ellipsis",
+            "id": "es-xkcd-insomnio:panel-1-lower:app-omitted-noun",
+            "cardId": "grammar-article-adjective-omitted-noun",
+            "participantWordIds": [
+              "es-xkcd-insomnio:panel-1-lower:w04",
+              "es-xkcd-insomnio:panel-1-lower:w06"
+            ],
+            "exampleEs": "LA MÁS BRILLANTE",
+            "explanationEn": "La matches the understood feminine thing, a light, while brillante describes it without repeating its noun. The intervening más marks degree separately."
+          },
+          {
+            "id": "es-xkcd-insomnio:panel-1-lower:app-superlative",
+            "cardId": "grammar-relative-superlative",
             "participantWordIds": [
               "es-xkcd-insomnio:panel-1-lower:w04",
               "es-xkcd-insomnio:panel-1-lower:w05",
               "es-xkcd-insomnio:panel-1-lower:w06"
             ],
             "exampleEs": "LA MÁS BRILLANTE",
-            "explanationEn": "La stands for an understood feminine light, while más brillante marks it as having the highest brightness in the group."
+            "explanationEn": "La identifies one feminine thing from the understood group; más gives brillante its highest-degree reading."
           }
         ],
         "cardIds": [
@@ -487,7 +499,8 @@
           "word-despertador",
           "word-es",
           "word-la--omitted-feminine-noun",
-          "grammar-article-mas-adjective-ellipsis",
+          "grammar-article-adjective-omitted-noun",
+          "grammar-relative-superlative",
           "word-más--superlative",
           "word-brillante--bright"
         ]
@@ -1333,7 +1346,8 @@
       "word-despertador",
       "word-es",
       "word-la--omitted-feminine-noun",
-      "grammar-article-mas-adjective-ellipsis",
+      "grammar-article-adjective-omitted-noun",
+      "grammar-relative-superlative",
       "word-más--superlative",
       "word-brillante--bright",
       "word-no",
@@ -1658,7 +1672,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1775,8 +1793,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1814,27 +1836,52 @@
       }
     },
     {
-      "id": "grammar-article-mas-adjective-ellipsis",
+      "id": "grammar-article-adjective-omitted-noun",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + más + descripción (nombre ya entendido)",
-      "questionEn": "How do you say “the brightest one,” “the fastest ones,” or a similar highest-degree description without repeating the noun?",
-      "answerEn": "Use the matching form of el, then más, then the describing word; leave out the noun when it is already clear.",
-      "noteEn": "El, la, los, or las agrees with the understood person or thing. The describing word also agrees when it has different forms. For example, of several casas, la más pequeña means “the smallest one.”",
+      "promptEs": "el, la, los, las, uno o una + descripción, sin repetir el nombre",
+      "questionEn": "How do you say 'the small one' or 'a small one' without repeating the thing's name?",
+      "answerEn": "Keep the word for 'the' or 'a' and the description, but omit the noun when it is already clear.",
+      "noteEn": "Put the description after the word for 'the' or 'a'. For 'the,' use el, la, los, or las to match the understood thing; for a singular 'a,' use uno for a masculine thing or una for a feminine thing when the noun is omitted. The describing word, called an adjective, still matches it: referring to a camisa, la pequeña means 'the small one.' Words such as más can qualify the description without requiring the noun to be repeated.",
       "example": {
-        "es": "De todas las mesas, elegí la más pequeña.",
-        "en": "Of all the tables, I chose the smallest one."
+        "es": "Quiero una taza; dame la pequeña.",
+        "en": "I want a cup; give me the small one."
       },
       "tags": [
         "grammar",
-        "superlative",
-        "ellipsis",
+        "omitted noun",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-insomnio",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-relative-superlative",
+      "kind": "grammar",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
+      "example": {
+        "es": "Es la calle más larga.",
+        "en": "It is the longest street."
+      },
+      "tags": [
+        "grammar",
+        "superlative",
+        "comparison",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-pensamientos",
         "contextualSenseReviewed": true
       }
     },
@@ -1891,8 +1938,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2011,7 +2057,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2370,7 +2420,7 @@
       "promptEs": "deber de + infinitivo (deducción)",
       "questionEn": "How do you say that something must be true because the evidence makes it likely?",
       "answerEn": "Use a form of deber, then de, then the action verb in its unchanged dictionary form.",
-      "noteEn": "This pattern makes an inference or educated guess. Without de, deber plus an action verb more often expresses a duty or what someone should do.",
+      "noteEn": "This pattern makes an inference or educated guess. Without de, deber followed by an action verb more often expresses a duty or what someone should do.",
       "example": {
         "es": "Deben de estar en casa.",
         "en": "They must be at home."
@@ -2416,11 +2466,11 @@
       "id": "word-estar--state-infinitive",
       "kind": "word",
       "promptEs": "estar",
-      "answerEn": "to be (in a state or condition)",
-      "noteEn": "Estar is the unchanged dictionary form used for states, conditions, and locations. After another conjugated verb, estar itself remains unchanged.",
+      "answerEn": "to be (a place or condition)",
+      "noteEn": "Estar is the unchanged dictionary form used to describe a location or condition. In quiero estar, “I want to be,” quiero changes for the person and time, while estar stays unchanged.",
       "example": {
-        "es": "Quiero estar tranquilo.",
-        "en": "I want to be calm."
+        "es": "Quiero estar cerca de la ventana.",
+        "en": "I want to be near the window."
       },
       "tags": [
         "word",
@@ -2547,11 +2597,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

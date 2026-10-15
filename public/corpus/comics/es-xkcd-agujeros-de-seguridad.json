@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8346a0cbd4f96e9b",
+  "revision": "runtime-0df634f50c673c4d",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -467,7 +467,7 @@
               }
             ],
             "cardIds": [
-              "word-descubierto--haber-participle",
+              "word-descubierto",
               "grammar-present-perfect",
               "grammar-se-passive-unnamed-doer"
             ]
@@ -551,7 +551,7 @@
               }
             ],
             "cardIds": [
-              "word-de--security-domain",
+              "word-de--noun-classifier",
               "phrase-agujero-de-seguridad"
             ]
           },
@@ -638,6 +638,15 @@
             ],
             "exampleEs": "AGUJEROS DE SEGURIDAD",
             "explanationEn": "Agujeros is plural, de links the compound, and seguridad identifies the technical field in which the weaknesses exist."
+          },
+          {
+            "id": "es-xkcd-agujeros-de-seguridad:security-introduction:review-word-w11",
+            "cardId": "word-descubierto",
+            "participantWordIds": [
+              "es-xkcd-agujeros-de-seguridad:security-introduction:w11"
+            ],
+            "exampleEs": "HAN DESCUBIERTO",
+            "explanationEn": "After han, descubierto is the unchanged completed-action form of descubrir; it does not change to match the discovered thing."
           }
         ],
         "cardIds": [
@@ -654,12 +663,12 @@
           "grammar-se-passive-unnamed-doer",
           "word-han",
           "grammar-present-perfect",
-          "word-descubierto--haber-participle",
+          "word-descubierto",
           "word-una",
           "word-serie--group",
           "word-agujeros",
           "phrase-agujero-de-seguridad",
-          "word-de--security-domain",
+          "word-de--noun-classifier",
           "word-seguridad",
           "word-importantes"
         ]
@@ -784,7 +793,7 @@
               }
             ],
             "cardIds": [
-              "word-de--security-domain"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -808,7 +817,7 @@
         "applications": [],
         "cardIds": [
           "word-problema",
-          "word-de--security-domain",
+          "word-de--noun-classifier",
           "word-seguridad"
         ]
       },
@@ -1796,7 +1805,7 @@
               }
             ],
             "cardIds": [
-              "word-que--after-resulta",
+              "word-que--clause-link",
               "phrase-resulta-que"
             ]
           },
@@ -2062,7 +2071,7 @@
         "cardIds": [
           "word-resulta--turns-out",
           "phrase-resulta-que",
-          "word-que--after-resulta",
+          "word-que--clause-link",
           "word-esta--demonstrative",
           "word-distro",
           "concept-debian-openssl-security-hole-parody",
@@ -2101,12 +2110,12 @@
       "grammar-se-passive-unnamed-doer",
       "word-han",
       "grammar-present-perfect",
-      "word-descubierto--haber-participle",
+      "word-descubierto",
       "word-una",
       "word-serie--group",
       "word-agujeros",
       "phrase-agujero-de-seguridad",
-      "word-de--security-domain",
+      "word-de--noun-classifier",
       "word-seguridad",
       "word-importantes",
       "word-sistema",
@@ -2142,7 +2151,7 @@
       "word-élfico",
       "word-resulta--turns-out",
       "phrase-resulta-que",
-      "word-que--after-resulta",
+      "word-que--clause-link",
       "word-esta--demonstrative",
       "word-distro",
       "word-no",
@@ -2230,7 +2239,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -2282,6 +2291,7 @@
         "Linux",
         "joke reference"
       ],
+      "questionEn": "What real Debian security problem does this list of absurd vulnerabilities parody?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2495,17 +2505,15 @@
       "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks an action whose doer is not named",
-      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "Se encontraron varios errores.",
-        "en": "Several errors were found."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive se",
-        "unnamed agent",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2583,27 +2591,25 @@
       }
     },
     {
-      "id": "word-descubierto--haber-participle",
+      "id": "word-descubierto",
       "kind": "word",
       "promptEs": "descubierto",
-      "answerEn": "discovered; found (completed-action form used after haber)",
-      "noteEn": "Descubierto is the irregular completed-action form of descubrir. After a form of haber, it stays unchanged: he descubierto, han descubierto, and so on.",
+      "answerEn": "discovered; found",
+      "noteEn": "Descubierto is the irregular completed-action form of descubrir, “to discover”; it is not descubrido. After haber, the helping verb meaning “have” or “had,” it stays unchanged: han descubierto, “they have discovered.” With ser in a description meaning “was discovered,” it matches the thing: el lugar fue descubierto, but la isla fue descubierta.",
       "example": {
-        "es": "Han descubierto un error nuevo.",
-        "en": "They have discovered a new error."
+        "es": "Han descubierto una cueva.",
+        "en": "They have discovered a cave."
       },
       "tags": [
         "word",
-        "verb",
         "past participle",
-        "present perfect",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "ownerComicId": "es-xkcd-pico-de-ballmer",
         "contextualSenseReviewed": true
       }
     },
@@ -2692,27 +2698,24 @@
       }
     },
     {
-      "id": "word-de--security-domain",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links a hole or problem to the field of security",
-      "noteEn": "Spanish uses de in compounds such as agujero de seguridad and problema de seguridad. English normally puts ‘security’ directly before the other noun.",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Encontraron un problema de seguridad.",
-        "en": "They found a security problem."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun compound",
-        "security",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -2997,6 +3000,7 @@
         "cipher",
         "history"
       ],
+      "questionEn": "What is a Caesar cipher, and why is it easy to break?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3085,7 +3089,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3176,7 +3184,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3269,6 +3281,7 @@
         "PowerBook",
         "joke reference"
       ],
+      "questionEn": "Why are Jeff Goldblum and a PowerBook associated with defeating alien computers?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3281,8 +3294,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -3379,6 +3392,7 @@
         "password",
         "joke reference"
       ],
+      "questionEn": "Why does “speak friend and enter” suggest a fantasy password?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3505,26 +3519,24 @@
       }
     },
     {
-      "id": "word-que--after-resulta",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that; introduces what turns out to be true",
-      "noteEn": "After resulta, que opens the newly revealed statement. Learn resulta que together as ‘it turns out that.’",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
-        "es": "Resulta que tenías razón.",
-        "en": "It turns out that you were right."
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
       },
       "tags": [
         "word",
-        "clause link",
-        "discourse",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3578,8 +3590,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3618,8 +3629,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"

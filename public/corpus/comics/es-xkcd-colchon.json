@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e97366307208b978",
+  "revision": "runtime-de45f252b1eba781",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -278,7 +278,7 @@
               }
             ],
             "cardIds": [
-              "word-los--body-part-owner-our"
+              "word-los--affected-owner-article"
             ]
           },
           {
@@ -353,7 +353,7 @@
           "word-qué--interrogative",
           "word-hacer--do",
           "word-con",
-          "word-los--body-part-owner-our",
+          "word-los--affected-owner-article",
           "word-brazos",
           "word-inferiores--lower"
         ]
@@ -447,7 +447,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -474,7 +474,7 @@
           "word-solución",
           "word-el--article",
           "word-colchón",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-arrumacos"
         ]
       },
@@ -1496,14 +1496,14 @@
       "word-qué--interrogative",
       "word-hacer--do",
       "word-con",
-      "word-los--body-part-owner-our",
+      "word-los--affected-owner-article",
       "word-brazos",
       "word-inferiores--lower",
       "word-nuestra",
       "word-solución",
       "word-el--article",
       "word-colchón",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-sus",
       "word-entran--fit-opening",
       "word-en--into-opening",
@@ -1685,11 +1685,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1776,8 +1779,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1813,7 +1820,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1827,21 +1838,18 @@
       }
     },
     {
-      "id": "word-los--body-part-owner-our",
+      "id": "word-los--affected-owner-article",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "our here; Spanish uses los before a body part whose owner is already clear",
-      "noteEn": "Spanish often uses el, la, los, or las before a body part when the surrounding verb or context already identifies its owner. Natural English often supplies ‘my,’ ‘your,’ ‘our,’ or another possessive word instead.",
+      "answerEn": "the; English often uses my, your, our, or another owner's word",
+      "noteEn": "Spanish often uses los before masculine plural body parts or clothing when the verb, a word such as me or te, or the context already identifies the owner or wearer. Los matches the plural things, not the people they belong to.",
       "example": {
         "es": "Cruzamos los brazos.",
         "en": "We cross our arms."
       },
       "tags": [
         "word",
-        "definite article",
-        "body part",
-        "possession",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1876,7 +1884,11 @@
       "kind": "word",
       "promptEs": "inferiores",
       "answerEn": "lower (plural)",
-      "noteEn": "",
+      "noteEn": "Inferiores describes more than one thing as lower. With los or las and an understood noun, English may add “ones”: los inferiores means the lower ones. The describing word has the same form for masculine and feminine; inferior is singular.",
+      "example": {
+        "es": "Los estantes inferiores están vacíos.",
+        "en": "The lower shelves are empty."
+      },
       "tags": [
         "word",
         "position",
@@ -1967,26 +1979,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -2380,18 +2390,18 @@
     {
       "id": "grammar-quedarse-state",
       "kind": "grammar",
-      "promptEs": "quedarse + palabra de estado",
-      "questionEn": "How do you say that someone remains in, or ends up in, a particular state?",
-      "answerEn": "Use a form of quedarse followed by a word that names the resulting or continuing state.",
-      "noteEn": "The plus sign in the prompt means that the state word follows quedarse. Quedarse is pronominal: it comes with me, te, se, nos, or os even though no one literally remains themselves. Change quedar and its small marker to match the person and time. When another verb has already changed for the person, the marker may stand before that verb: se puede quedar.",
+      "promptEs": "quedarse + estado",
+      "questionEn": "How do you use quedarse to say that someone remains in or ends up in a state?",
+      "answerEn": "Use a matching form of quedarse, then the word or phrase naming the continuing or resulting state.",
+      "noteEn": "Change the short marker and quedar for the person and time: me quedo ('I stay'), te quedas ('you stay,' familiar singular), se quedó ('he/she stayed'), nos quedamos ('we stay' or 'we stayed'). The marker is part of this verb even when English has no separate word for it. A describing word matches the person: callado becomes callada for a woman and callados for a masculine or mixed group. Other state words, such as fuera ('outside'), stay unchanged. Context tells you whether the state continues or is a new result.",
       "example": {
-        "es": "Después de la noticia, Pablo se quedó callado.",
-        "en": "After the news, Pablo fell silent."
+        "es": "Pablo se quedó callado.",
+        "en": "Pablo fell silent."
       },
       "tags": [
         "grammar",
+        "quedarse",
         "states",
-        "pronominal verbs",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",

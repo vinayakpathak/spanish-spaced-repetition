@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-9c92eb664681694c",
+  "revision": "runtime-ab2333991f75e878",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -181,7 +181,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -337,7 +337,7 @@
           "word-mentalmente",
           "word-elaboradas",
           "word-escenas",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-lucha--combat",
           "word-con",
           "word-los",
@@ -746,7 +746,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-detras-de"
             ]
           },
@@ -810,7 +810,7 @@
           "phrase-detras-de",
           "word-de--fixed-detrás-de",
           "word-máquina",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-sellos--postage-stamps"
         ]
       },
@@ -872,7 +872,7 @@
               }
             ],
             "cardIds": [
-              "word-si--fixed-y-si",
+              "word-si",
               "phrase-y-si"
             ]
           },
@@ -1092,7 +1092,7 @@
           "word-pero",
           "word-y--fixed-y-si",
           "phrase-y-si",
-          "word-si--fixed-y-si",
+          "word-si",
           "word-la--article",
           "word-mujer",
           "word-de--located-by",
@@ -1197,7 +1197,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -1295,7 +1295,7 @@
               }
             ],
             "cardIds": [
-              "word-si--fixed-por-si-acaso",
+              "word-si--fixed-por-si",
               "phrase-por-si-acaso"
             ]
           },
@@ -1383,13 +1383,13 @@
           "word-el--article",
           "word-tema--musical-theme",
           "concept-kill-bill-fight-theme",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-lucha--combat",
           "word-de--from",
           "word-en",
           "word-por--fixed-por-si-acaso",
           "phrase-por-si-acaso",
-          "word-si--fixed-por-si-acaso",
+          "word-si--fixed-por-si",
           "word-acaso--fixed-por-si-acaso"
         ]
       }
@@ -1403,7 +1403,7 @@
       "word-mentalmente",
       "word-elaboradas",
       "word-escenas",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-lucha--combat",
       "word-con",
       "word-los",
@@ -1438,7 +1438,6 @@
       "word-pero",
       "word-y--fixed-y-si",
       "phrase-y-si",
-      "word-si--fixed-y-si",
       "word-mujer",
       "word-de--located-by",
       "word-puerta",
@@ -1456,7 +1455,7 @@
       "word-de--from",
       "word-por--fixed-por-si-acaso",
       "phrase-por-si-acaso",
-      "word-si--fixed-por-si-acaso",
+      "word-si--fixed-por-si",
       "word-acaso--fixed-por-si-acaso"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -1628,26 +1627,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -1676,7 +1673,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1841,7 +1842,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2341,7 +2346,7 @@
       "kind": "phrase",
       "promptEs": "¿y si + posibilidad?",
       "questionEn": "How do you ask someone to consider “what if” a possibility happens?",
-      "answerEn": "Begin with ¿y si...? and state the possibility with an ordinary verb form.",
+      "answerEn": "Begin with y si, then state the possibility with an ordinary verb form.",
       "noteEn": "The opening y does not merely mean ‘and’ here. Together with unaccented si, it presents a possible situation for consideration. It can introduce a suggestion or a worry.",
       "example": {
         "es": "¿Y si tomamos el tren?",
@@ -2351,30 +2356,6 @@
         "phrase",
         "possibility",
         "question",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-enfrentamiento-en-correos",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "word-si--fixed-y-si",
-      "kind": "word",
-      "promptEs": "si",
-      "answerEn": "if (completing ¿y si...?, ‘what if...?’)",
-      "noteEn": "Si has no accent when it introduces the possibility after y. Together, ¿y si...? asks someone to consider what might happen.",
-      "example": {
-        "es": "¿Y si esperamos?",
-        "en": "What if we wait?"
-      },
-      "tags": [
-        "word",
-        "fixed expression",
-        "possibility",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2668,6 +2649,7 @@
         "music",
         "Kill Bill"
       ],
+      "questionEn": "Which dramatic track does the imagined Kill Bill soundtrack refer to?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2724,7 +2706,7 @@
       "promptEs": "por si acaso",
       "questionEn": "How do you say that you take a precaution “just in case”?",
       "answerEn": "Use por si acaso after the precaution.",
-      "noteEn": "Por si acaso is a fixed expression for preparing for something uncertain. A shorter por si + clause can name the possibility directly, as in por si llueve, ‘in case it rains.’",
+      "noteEn": "Por si acaso is a fixed expression for preparing for something uncertain. The shorter por si, followed by a statement, can name the possibility directly, as in por si llueve, ‘in case it rains.’",
       "example": {
         "es": "Traigo dinero por si acaso.",
         "en": "I'm bringing money just in case."
@@ -2744,26 +2726,24 @@
       }
     },
     {
-      "id": "word-si--fixed-por-si-acaso",
+      "id": "word-si--fixed-por-si",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "no separate English word; middle of por si acaso, ‘just in case’",
-      "noteEn": "Si remains unaccented inside por si acaso. The whole expression introduces a precaution for an uncertain possibility.",
+      "answerEn": "no separate English word; part of por si, in case",
+      "noteEn": "Por si introduces a possibility someone is preparing for. Acaso can be added for 'just in case,' including on its own at the end. Si stays unaccented; it is not sí, 'yes.'",
       "example": {
-        "es": "Trae una chaqueta por si acaso.",
-        "en": "Bring a jacket just in case."
+        "es": "Lleva una chaqueta por si hace frío.",
+        "en": "Take a jacket in case it is cold."
       },
       "tags": [
         "word",
-        "fixed expression",
-        "precaution",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-enfrentamiento-en-correos",
+        "ownerComicId": "es-xkcd-voyeurismo-del-desastre",
         "contextualSenseReviewed": true
       }
     },

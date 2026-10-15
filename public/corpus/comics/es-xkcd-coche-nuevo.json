@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-77f23a8197f48cbf",
+  "revision": "runtime-44f13885f0ec9cbe",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -620,7 +620,7 @@
               "es-xkcd-coche-nuevo:refusal-question:w04"
             ],
             "exampleEs": "¿NO LO QUISIERON?",
-            "explanationEn": "Spanish keeps the ordinary no + object pronoun + verb order; question marks and intonation turn it into a negative yes-or-no question."
+            "explanationEn": "No comes first, followed by lo and the verb quisieron, just as in a negative statement. Question marks and intonation turn it into a yes-or-no question."
           },
           {
             "id": "es-xkcd-coche-nuevo:refusal-question:app-past",
@@ -1277,8 +1277,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1321,7 +1325,7 @@
       "promptEs": "de lo más + adjetivo",
       "questionEn": "How can you strongly raise the degree of a description, meaning ‘very’ or ‘extremely’?",
       "answerEn": "Use the fixed words de lo más, then the describing word.",
-      "noteEn": "The plus sign means ‘followed by.’ De lo más stays fixed and is translated as a unit. The following describing word can change in its ordinary way to match what it describes: curioso, curiosa, curiosos, curiosas.",
+      "noteEn": "De lo más stays fixed and is translated as a unit. The following describing word can change in its ordinary way to match what it describes: curioso, curiosa, curiosos, curiosas.",
       "example": {
         "es": "Las historias son de lo más curiosas.",
         "en": "The stories are extremely odd."
@@ -1417,11 +1421,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -1512,17 +1516,15 @@
       "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (in the role or capacity of)",
-      "noteEn": "Unaccented como can introduce the role, identity, or point of view from which someone speaks or acts. This is different from cómo with an accent, which asks “how.”",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Como médico, recomiendo descansar.",
-        "en": "As a doctor, I recommend resting."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "role",
-        "point of view",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1568,6 +1570,7 @@
         "advertising scam",
         "comic joke"
       ],
+      "questionEn": "Why is a flashing “millionth visitor” prize message suspicious?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1580,8 +1583,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -1752,8 +1755,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1971,17 +1973,15 @@
       "id": "word-si--emphatic-objection",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "but; after all (introduces an emphatic objection or reminder)",
-      "noteEn": "This is standard unaccented si at the start of an exclamation: it pushes back or reminds someone of an obvious fact. It is not accented sí, ‘yes,’ and it does not set a condition as in si llueve, ‘if it rains.’",
+      "answerEn": "but; introduces an emphatic objection or reminder",
+      "noteEn": "Unaccented si can point to a fact the listener is overlooking, sometimes after pero. In this use it does not mean a conditional 'if,' and it is not accented sí, 'yes.' English may express the objection with 'but' or emphasis.",
       "example": {
         "es": "¡Si ya te lo dije!",
         "en": "But I already told you!"
       },
       "tags": [
         "word",
-        "discourse",
-        "emphatic objection",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1995,11 +1995,11 @@
       "id": "word-estaba--progressive-auxiliary",
       "kind": "word",
       "promptEs": "estaba",
-      "answerEn": "was; forms an ongoing past action with an -ando or -iendo form",
-      "noteEn": "Estaba is a past form of estar for I, he, she, or one thing. Before an ongoing-action form such as parpadeando, it presents an action in progress in the past.",
+      "answerEn": "was; were (helping describe an action in progress in the past)",
+      "noteEn": "Estaba is a past form of estar for I, he, she, it, or formal you. Before an ongoing-action form, usually ending in -ando or -iendo, it presents an action as in progress at a past time.",
       "example": {
-        "es": "La luz estaba parpadeando.",
-        "en": "The light was flashing."
+        "es": "Ana estaba preparando té.",
+        "en": "Ana was making tea."
       },
       "tags": [
         "word",
@@ -2020,7 +2020,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

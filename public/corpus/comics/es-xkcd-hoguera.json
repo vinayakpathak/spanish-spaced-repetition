@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-745652b78fd01e26",
+  "revision": "runtime-6c9233f019305556",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -98,8 +98,7 @@
             ],
             "cardIds": [
               "word-averiguó--found-out",
-              "grammar-past-contrast",
-              "concept-private-ipv4-local-network-horror"
+              "grammar-past-contrast"
             ]
           },
           {
@@ -147,8 +146,7 @@
               }
             ],
             "cardIds": [
-              "word-asesino--killer-noun",
-              "concept-private-ipv4-local-network-horror"
+              "word-asesino--killer-noun"
             ]
           },
           {
@@ -289,7 +287,6 @@
           "word-cuando--when",
           "word-averiguó--found-out",
           "grammar-past-contrast",
-          "concept-private-ipv4-local-network-horror",
           "word-la--article",
           "word-del--of-the",
           "word-asesino--killer-noun",
@@ -297,7 +294,8 @@
           "grammar-ser-identity-estar-location",
           "word-en",
           "word-el--article",
-          "word-bloque--network-block"
+          "word-bloque--network-block",
+          "concept-private-ipv4-local-network-horror"
         ]
       },
       {
@@ -325,16 +323,14 @@
               }
             ],
             "cardIds": [
-              "word-glups--gulp-reaction",
-              "concept-private-ipv4-local-network-horror"
+              "word-glups--gulp-reaction"
             ]
           }
         ],
         "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-glups--gulp-reaction",
-          "concept-private-ipv4-local-network-horror"
+          "word-glups--gulp-reaction"
         ]
       }
     ],
@@ -343,7 +339,6 @@
       "word-cuando--when",
       "word-averiguó--found-out",
       "grammar-past-contrast",
-      "concept-private-ipv4-local-network-horror",
       "word-la--article",
       "word-del--of-the",
       "word-asesino--killer-noun",
@@ -352,6 +347,7 @@
       "word-en",
       "word-el--article",
       "word-bloque--network-block",
+      "concept-private-ipv4-local-network-horror",
       "word-glups--gulp-reaction"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -447,28 +443,6 @@
       }
     },
     {
-      "id": "concept-private-ipv4-local-network-horror",
-      "kind": "concept",
-      "promptEs": "asesino · bloque 192.168/16 · red local · IPv4",
-      "questionEn": "Why does the network prefix turn the campfire story into a technical horror joke?",
-      "answerEn": "192.168.0.0/16 is private IPv4 address space, so an address in that block suggests that the killer is on the same local network rather than somewhere remote.",
-      "noteEn": "The abbreviated prefix 192.168/16 denotes the private-use range from 192.168.0.0 through 192.168.255.255 reserved by RFC 1918. The listener's alarm treats local-network proximity like the classic horror reveal that danger is already inside. The title text adds a second programmer joke: a century later, continuing to use IPv4 would itself be frighteningly outdated.",
-      "tags": [
-        "concept",
-        "IPv4",
-        "private network",
-        "RFC 1918",
-        "horror joke"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-hoguera",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-la--article",
       "kind": "word",
       "promptEs": "la",
@@ -538,8 +512,12 @@
       "id": "word-estaba--state",
       "kind": "word",
       "promptEs": "estaba",
-      "answerEn": "it was; used to be (a past state)",
-      "noteEn": "",
+      "answerEn": "was (a past place, condition, or situation)",
+      "noteEn": "Estaba is a past form of estar. It describes a location or condition at a past time without by itself marking when that situation began or ended. The same form can refer to I, he, she, it, or formal you; the surrounding words identify who.",
+      "example": {
+        "es": "La tienda estaba cerrada.",
+        "en": "The shop was closed."
+      },
       "tags": [
         "word",
         "estar",
@@ -633,6 +611,25 @@
         "addresses",
         "technical",
         "B1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-hoguera",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-private-ipv4-local-network-horror",
+      "kind": "concept",
+      "promptEs": "direcciones IPv4 privadas",
+      "questionEn": "What does an address beginning with 192.168 tell a network user?",
+      "answerEn": "It belongs to a private IPv4 address range commonly used inside local networks, rather than a globally unique public address.",
+      "noteEn": "The range 192.168.0.0 through 192.168.255.255 is reserved for private use. Many unrelated networks reuse it, so the prefix alone does not prove that two devices share one network. The horror allusion depends on treating the address as a clue that the danger is already inside.",
+      "tags": [
+        "concept",
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

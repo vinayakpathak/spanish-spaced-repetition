@@ -161,7 +161,7 @@
       "promptEs": "sustantivo + que + infinitivo",
       "questionEn": "How can a noun name something available, pending, or necessary to do?",
       "answerEn": "Put que after the noun, then use the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus signs mean ‘followed by,’ sustantivo means a noun, and infinitivo means the unchanged -ar, -er, or -ir form. Common examples include trabajo que hacer, algo que leer, and nada que decir.",
+      "noteEn": "A noun is a naming word, such as trabajo ('work'). The following action stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir. Common examples include trabajo que hacer, algo que leer, and nada que decir.",
       "example": { "es": "Hay un informe que terminar.", "en": "There is a report to finish." },
       "tags": ["grammar", "noun", "infinitive", "pending action", "A2"]
     },
@@ -171,7 +171,7 @@
       "promptEs": "cumplir con + requisito o norma",
       "questionEn": "How do you say that something meets a requirement or standard?",
       "answerEn": "Use the matching form of cumplir, then con, then name the requirement or standard.",
-      "noteEn": "The plus sign means ‘followed by.’ Cumplir changes to match its subject, while con stays unchanged: cumple con for one thing and cumplen con for several things.",
+      "noteEn": "Cumplir changes to match the person or thing meeting the requirement, while con stays unchanged: cumple con for one thing and cumplen con for several things.",
       "example": { "es": "El diseño cumple con la norma.", "en": "The design meets the standard." },
       "tags": ["phrase", "cumplir", "requirements", "A2"]
     },
@@ -181,7 +181,13 @@
       "promptEs": "páginas · código HTML · haiku",
       "answerEn": "A haiku is a Japanese poetic form commonly taught outside Japan as three short lines following a 5–7–5 rhythm; the comic jokes that HTML markup can satisfy both code rules and poetic form.",
       "noteEn": "The title text adds that the count becomes harder when angle brackets are pronounced aloud, making the way code symbols are read part of the joke.",
-      "tags": ["concept", "haiku", "HTML", "programming joke"]
+      "tags": [
+        "concept",
+        "haiku",
+        "HTML",
+        "programming joke"
+      ],
+      "questionEn": "How does the comic connect HTML with a haiku?"
     }
   ],
   "regions": [
@@ -244,7 +250,7 @@
         { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w05", "text": "MI", "normalized": "mi", "explicitBounds": [{ "x": 6.2678, "y": 26.45, "width": 2.8490, "height": 5.70 }], "geometryRationale": "The tightened second-row box avoids the rows above and below.", "cardIds": ["word-mi"] },
         { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w06", "text": "ANTIGUA", "normalized": "antigua", "explicitBounds": [{ "x": 9.4017, "y": 26.45, "width": 8.2621, "height": 5.70 }], "geometryRationale": "The tightened second-row box avoids the rows above and below.", "cardIds": ["word-antigua--former"] },
         { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w07", "text": "VELOCIDAD", "normalized": "velocidad", "explicitBounds": [{ "x": 0.0000, "y": 33.45, "width": 11.1111, "height": 5.70 }], "geometryRationale": "The tightened third-row box avoids the adjacent handwritten rows.", "cardIds": ["word-velocidad"] },
-        { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w08", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 11.3960, "y": 33.45, "width": 2.8490, "height": 5.70 }], "geometryRationale": "The tightened third-row box avoids the adjacent handwritten rows.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w08", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 11.3960, "y": 33.45, "width": 2.8490, "height": 5.70 }], "geometryRationale": "The tightened third-row box avoids the adjacent handwritten rows.", "cardIds": ["word-de--property-source"] },
         { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w09", "text": "ESCRITURA", "normalized": "escritura", "explicitBounds": [{ "x": 14.5299, "y": 33.45, "width": 5.4131, "height": 5.70 }, { "x": 0.5698, "y": 40.45, "width": 4.8433, "height": 5.80 }], "geometryRationale": "The printed line break divides ESCRI- from TURA; two tight boxes keep the single word clickable, exclude the wrap hyphen, and replace OCR's over-tall final-row geometry.", "cardIds": ["word-escritura--typing"] },
         { "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:w10", "text": "EN", "normalized": "en", "explicitBounds": [{ "x": 6.0185, "y": 40.45, "width": 2.4217, "height": 5.80 }], "geometryRationale": "OCR made the entire last row far too tall; this measured box isolates EN.", "cardIds": ["word-en--keyboard-layout"] }
       ],
@@ -268,6 +274,15 @@
           ],
           "exampleEs": "HE RECUPERADO",
           "explanationEn": "He marks the speaker, and recuperado is the completed-action form that follows it."
+        },
+        {
+          "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:review-word-w08",
+          "cardId": "word-de--property-source",
+          "participantWordIds": [
+            "es-xkcd-insuficiente-trabajo:dvorak-typing:w08"
+          ],
+          "exampleEs": "VELOCIDAD DE ESCRITURA",
+          "explanationEn": "Here de connects a speed to the activity whose speed is measured."
         }
       ]
     },
@@ -315,7 +330,7 @@
       ],
       "words": [
         { "id": "es-xkcd-insuficiente-trabajo:just-in-case:w01", "text": "POR", "normalized": "por", "explicitBounds": [{ "x": 26.2108, "y": 42.20, "width": 4.5584, "height": 5.90 }], "geometryRationale": "The tightened row box isolates POR from nearby artwork.", "cardIds": ["word-por--fixed-por-si-acaso", "phrase-por-si-acaso"] },
-        { "id": "es-xkcd-insuficiente-trabajo:just-in-case:w02", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 31.0541, "y": 42.20, "width": 2.2792, "height": 5.90 }], "geometryRationale": "The tightened row box isolates SI from its neighbors.", "cardIds": ["word-si--fixed-por-si-acaso", "phrase-por-si-acaso"] },
+        { "id": "es-xkcd-insuficiente-trabajo:just-in-case:w02", "text": "SI", "normalized": "si", "explicitBounds": [{ "x": 31.0541, "y": 42.20, "width": 2.2792, "height": 5.90 }], "geometryRationale": "The tightened row box isolates SI from its neighbors.", "cardIds": ["word-si--fixed-por-si", "phrase-por-si-acaso"] },
         { "id": "es-xkcd-insuficiente-trabajo:just-in-case:w03", "text": "ACASO", "normalized": "acaso", "explicitBounds": [{ "x": 33.6182, "y": 42.20, "width": 6.8376, "height": 5.90 }], "geometryRationale": "The tightened row box isolates ACASO and its punctuation.", "cardIds": ["word-acaso--fixed-por-si-acaso", "phrase-por-si-acaso"] }
       ],
       "excludedUnits": [],

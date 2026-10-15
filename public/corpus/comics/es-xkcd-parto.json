@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-4f6e8a27a6f45b95",
+  "revision": "runtime-3527126751698fef",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -221,7 +221,7 @@
             "cardIds": [
               "word-arrastrándose--crawling",
               "grammar-estar-gerundio",
-              "grammar-gerund-attached-reflexive-pronoun",
+              "grammar-gerund-attached-pronominal-marker",
               "concept-groundhog-day-six-weeks-winter"
             ]
           },
@@ -331,12 +331,12 @@
           },
           {
             "id": "es-xkcd-parto:doctor-opening:app-attached-reflexive-se",
-            "cardId": "grammar-gerund-attached-reflexive-pronoun",
+            "cardId": "grammar-gerund-attached-pronominal-marker",
             "participantWordIds": [
               "es-xkcd-parto:doctor-opening:w10"
             ],
             "exampleEs": "ARRASTRÁNDOSE",
-            "explanationEn": "The matching self-directed word se is attached to arrastrando, and the written accent preserves the original stress."
+            "explanationEn": "Se is the matching marker from arrastrarse attached to arrastrando. The written accent keeps the original stress in arrastrándose."
           },
           {
             "id": "es-xkcd-parto:doctor-opening:app-back-to-womb",
@@ -363,7 +363,7 @@
           "word-espere--formal-command",
           "grammar-formal-command",
           "word-arrastrándose--crawling",
-          "grammar-gerund-attached-reflexive-pronoun",
+          "grammar-gerund-attached-pronominal-marker",
           "concept-groundhog-day-six-weeks-winter",
           "word-de--fixed-de-vuelta",
           "phrase-de-vuelta-a",
@@ -786,7 +786,7 @@
       "word-espere--formal-command",
       "grammar-formal-command",
       "word-arrastrándose--crawling",
-      "grammar-gerund-attached-reflexive-pronoun",
+      "grammar-gerund-attached-pronominal-marker",
       "concept-groundhog-day-six-weeks-winter",
       "word-de--fixed-de-vuelta",
       "phrase-de-vuelta-a",
@@ -840,11 +840,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -936,7 +939,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -1008,7 +1011,7 @@
       "kind": "grammar",
       "promptEs": "usted: hable / coma / escriba",
       "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
-      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir becoming diga.",
       "tags": [
         "A2",
         "grammar",
@@ -1054,28 +1057,28 @@
       }
     },
     {
-      "id": "grammar-gerund-attached-reflexive-pronoun",
+      "id": "grammar-gerund-attached-pronominal-marker",
       "kind": "grammar",
-      "promptEs": "gerundio + me/te/se/nos/os/se",
-      "questionEn": "How do you attach the matching self-directed word to an ongoing action?",
-      "answerEn": "Attach me, te, se, nos, os, or se to the action form ending in -ando or -iendo, and add a written accent when needed to keep the original stress.",
-      "noteEn": "An action form ending in -ando or -iendo is called a gerund and describes an action in progress. A verb such as lavarse uses a small matching word when people do the action to themselves: me means ‘myself,’ te means informal singular ‘yourself,’ se can mean ‘himself,’ ‘herself,’ formal ‘yourself,’ or ‘themselves,’ nos means ‘ourselves,’ and os means informal plural ‘yourselves’ mainly in Spain. When that word is attached, lavando becomes lavándome or lavándose so the voice still stresses the same syllable.",
+      "promptEs": "acción en -ando o -iendo con me, te, se, nos u os al final",
+      "questionEn": "How do you attach me, te, se, nos, or os to an action form such as preparando?",
+      "answerEn": "Join the matching short word to the end of the -ando or -iendo form, adding an accent when needed to keep the original stress.",
+      "noteEn": "Some verbs are learned with se, such as lavarse ('wash oneself') or prepararse ('get ready'). Choose me for I, te for familiar singular you, se for he/she/formal you or they, nos for we, and os for familiar plural you mainly in Spain. The marker may describe an action done to oneself, or be part of the verb's meaning without a separate English 'self.' An -ando or -iendo action form is called a gerund: preparando and me become preparándome; lavando and se become lavándose. This card teaches the attachment, not a different sense for every verb.",
       "example": {
-        "es": "Ana está lavándose las manos.",
-        "en": "Ana is washing her hands."
+        "es": "Estoy preparándome para salir.",
+        "en": "I am getting ready to leave."
       },
       "tags": [
         "grammar",
         "gerund",
-        "reflexive pronoun",
-        "attached pronoun",
+        "attached markers",
+        "spelling",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-parto",
+        "ownerComicId": "es-xkcd-gilipollas",
         "contextualSenseReviewed": true
       }
     },
@@ -1091,6 +1094,7 @@
         "cultural reference",
         "comic joke"
       ],
+      "questionEn": "Why does retreating from a shadow suggest six more weeks of winter?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1128,7 +1132,7 @@
       "promptEs": "de vuelta a + lugar",
       "questionEn": "How do you say that someone or something is going back to a place?",
       "answerEn": "Use de vuelta a before the destination or place.",
-      "noteEn": "De vuelta presents a return, and a introduces the place being returned to. If that place starts with el, a + el contracts to al: de vuelta al trabajo.",
+      "noteEn": "De vuelta presents a return, and a introduces the place being returned to. If that place starts with el, a and el combine as al: de vuelta al trabajo.",
       "example": {
         "es": "El autobús va de vuelta a la ciudad.",
         "en": "The bus is going back to the city."
@@ -1174,8 +1178,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -1216,8 +1220,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1252,8 +1260,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1269,19 +1281,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1410,8 +1422,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1497,7 +1509,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"

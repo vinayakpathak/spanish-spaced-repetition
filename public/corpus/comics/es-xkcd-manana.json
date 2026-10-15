@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-713f78a20db904e4",
+  "revision": "runtime-edc054671178bd17",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -65,7 +65,7 @@
               }
             ],
             "cardIds": [
-              "word-todos--all-of-us"
+              "word-todos--all-of-them"
             ]
           },
           {
@@ -131,10 +131,19 @@
             ],
             "exampleEs": "HEMOS VISTO",
             "explanationEn": "Hemos is the present helper for ‘we,’ and visto is the irregular completed-action form of ver."
+          },
+          {
+            "id": "es-xkcd-manana:matrix-opening:review-word-w01",
+            "cardId": "word-todos--all-of-them",
+            "participantWordIds": [
+              "es-xkcd-manana:matrix-opening:w01"
+            ],
+            "exampleEs": "TODOS HEMOS",
+            "explanationEn": "Hemos identifies a group including the speaker. Todos includes every member, so English uses “we all.”"
           }
         ],
         "cardIds": [
-          "word-todos--all-of-us",
+          "word-todos--all-of-them",
           "word-hemos",
           "grammar-present-perfect",
           "word-visto--seen",
@@ -167,7 +176,7 @@
               }
             ],
             "cardIds": [
-              "word-todos--all-of-us"
+              "word-todos--all-of-them"
             ]
           },
           {
@@ -372,10 +381,19 @@
             ],
             "exampleEs": "LO DE “¿QUÉ RESOLUCIÓN TIENE LA VIDA?”",
             "explanationEn": "Lo de introduces the quoted question as the topic being referred to; the quoted words fill the topic slot."
+          },
+          {
+            "id": "es-xkcd-manana:resolution-joke:review-word-w01",
+            "cardId": "word-todos--all-of-them",
+            "participantWordIds": [
+              "es-xkcd-manana:resolution-joke:w01"
+            ],
+            "exampleEs": "TODOS HEMOS",
+            "explanationEn": "Hemos identifies a group including the speaker. Todos includes every member, so English uses “we all.”"
           }
         ],
         "cardIds": [
-          "word-todos--all-of-us",
+          "word-todos--all-of-them",
           "word-hemos",
           "grammar-present-perfect",
           "word-bromeado",
@@ -447,7 +465,7 @@
               }
             ],
             "cardIds": [
-              "word-de--partitive"
+              "word-de--partitive-group"
             ]
           },
           {
@@ -651,7 +669,7 @@
         "cardIds": [
           "word-pero",
           "word-nada--none-of",
-          "word-de--partitive",
+          "word-de--partitive-group",
           "word-eso",
           "word-te--direct",
           "grammar-preparar-a-alguien-para-algo",
@@ -819,7 +837,7 @@
       }
     ],
     "cardIds": [
-      "word-todos--all-of-us",
+      "word-todos--all-of-them",
       "word-hemos",
       "grammar-present-perfect",
       "word-visto--seen",
@@ -837,7 +855,7 @@
       "word-vida",
       "word-pero",
       "word-nada--none-of",
-      "word-de--partitive",
+      "word-de--partitive-group",
       "word-eso",
       "word-te--direct",
       "grammar-preparar-a-alguien-para-algo",
@@ -866,26 +884,26 @@
   },
   "cards": [
     {
-      "id": "word-todos--all-of-us",
+      "id": "word-todos--all-of-them",
       "kind": "word",
       "promptEs": "todos",
-      "answerEn": "we all; all of us",
-      "noteEn": "Todos can stand on its own for a whole masculine or mixed group. With a first-person plural verb, it includes the speaker and naturally becomes “we all” or “all of us” in English.",
+      "answerEn": "all; everyone (the whole understood group)",
+      "noteEn": "Todos can stand for all the people or things in an understood group. Other words show whether English needs “all of us,” “all of them,” or “everyone.” Use todos for masculine or mixed groups and todas for an all-feminine group.",
       "example": {
-        "es": "Todos queremos descansar.",
-        "en": "We all want to rest."
+        "es": "Todos queremos una respuesta.",
+        "en": "We all want an answer."
       },
       "tags": [
         "word",
-        "group",
         "pronoun",
-        "first person plural"
+        "quantity",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-manana",
+        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
         "contextualSenseReviewed": true
       }
     },
@@ -986,6 +1004,7 @@
         "technology",
         "joke reference"
       ],
+      "questionEn": "What does The Matrix suggest about the world people perceive?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1023,7 +1042,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1103,8 +1126,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1237,21 +1264,24 @@
       }
     },
     {
-      "id": "word-de--partitive",
+      "id": "word-de--partitive-group",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "of (introducing what “none” applies to)",
-      "noteEn": "",
+      "answerEn": "of; identifies the larger group or whole",
+      "noteEn": "De links a selected amount or member to the group it comes from, as in uno de, algunos de, or la mayoría de. It also appears with nada de when none of the stated whole is included. De itself does not change.",
+      "example": {
+        "es": "Algunos de mis amigos viven aquí.",
+        "en": "Some of my friends live here."
+      },
       "tags": [
         "word",
-        "partitive",
-        "preposition"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pong",
+        "ownerComicId": "es-xkcd-baterias-de-litio",
         "contextualSenseReviewed": true
       }
     },
@@ -1454,7 +1484,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."

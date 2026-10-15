@@ -142,10 +142,13 @@
       "id": "word-si--fixed-por-si",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "no separate English word; completes por si, 'in case'",
-      "noteEn": "Si remains unaccented in por si and introduces the uncertain event for which someone prepares.",
-      "example": { "es": "Cierra la ventana por si llueve.", "en": "Close the window in case it rains." },
-      "tags": ["word", "fixed expression", "precaution", "A2"]
+      "answerEn": "no separate English word; part of por si, in case",
+      "noteEn": "Por si introduces a possibility someone is preparing for. Acaso can be added for 'just in case,' including on its own at the end. Si stays unaccented; it is not sí, 'yes.'",
+      "example": { "es": "Lleva una chaqueta por si hace frío.", "en": "Take a jacket in case it is cold." },
+      "tags": [
+        "word",
+        "contextual sense"
+      ]
     },
     { "id": "word-paciente", "kind": "word", "promptEs": "paciente", "answerEn": "patient", "noteEn": "Paciente has the same written form for a male or female patient.", "example": { "es": "La paciente espera al médico.", "en": "The patient is waiting for the doctor." }, "tags": ["word", "person", "medicine"] },
     { "id": "word-cosechan--harvest", "kind": "word", "promptEs": "cosechan", "answerEn": "they harvest", "noteEn": "Cosechar literally means gathering a crop and can extend to harvesting organs in medical language.", "example": { "es": "Cosechan las uvas en septiembre.", "en": "They harvest the grapes in September." }, "tags": ["word", "verb", "present", "plural"] },
@@ -580,20 +583,93 @@
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w07", "text": "CUENTA", "normalized": "cuenta", "explicitBounds": [{ "x": 90.8446, "y": 66.1157, "width": 7.5338, "height": 2.7 }], "geometryRationale": "Vision's original token height crosses into the next printed row; this checked box retains the word while stopping before that row.", "cardIds": ["word-cuenta--darse-cuenta", "phrase-darse-cuenta-de"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w08", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00157" }], "cardIds": ["word-de--darse-cuenta", "phrase-darse-cuenta-de"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w09", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00158" }], "cardIds": ["word-que--clause-link", "phrase-darse-cuenta-de"] },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10", "text": "ESTAMOS", "normalized": "estamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00159" }], "cardIds": ["word-estamos", "grammar-estar-gerundio"] },
+        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10", "text": "ESTAMOS", "normalized": "estamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00159" }], "cardIds": ["word-estamos--progressive-auxiliary", "grammar-estar-gerundio"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w11", "text": "MANTENIENDO", "normalized": "manteniendo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00160" }], "cardIds": ["word-manteniendo--conversation", "grammar-estar-gerundio", "phrase-mantener-conversacion"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w12", "text": "CONVERSACIONES", "normalized": "conversaciones", "explicitBounds": [{ "x": 66.7568, "y": 72.7273, "width": 14.3243, "height": 2.15 }], "geometryRationale": "Vision's original token height crosses into the next printed row; this checked box retains the word while stopping before that row.", "cardIds": ["word-conversaciones", "phrase-mantener-conversacion"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w13", "text": "COMPLETAMENTE", "normalized": "completamente", "explicitBounds": [{ "x": 81.3514, "y": 72.7273, "width": 15.1351, "height": 2.15 }], "geometryRationale": "Vision's original token height crosses into the next printed row; this checked box retains the word while stopping before that row.", "cardIds": ["word-completamente", "grammar-adverbs-mente"] },
         { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w14", "text": "DISTINTAS", "normalized": "distintas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-voyeurismo-del-desastre:ocr-token-00163" }], "cardIds": ["word-distintas"] }
       ],
       "applications": [
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-time-ago", "cardId": "grammar-hace-duration-ago", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w01", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w02", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w03"], "exampleEs": "HACE UN RATO", "explanationEn": "Hace comes before un rato to place the later realization a short while in the past." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-time-que", "cardId": "word-que--after-hace-time", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w04"], "exampleEs": "QUE", "explanationEn": "Here que connects the elapsed-time phrase to the event it dates; natural English usually restructures the wording rather than translating que alone." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-realize", "cardId": "phrase-darse-cuenta-de", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w05", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w06", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w07", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w08", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w09"], "exampleEs": "ME DI CUENTA DE QUE", "explanationEn": "Me matches the speaker, di supplies the completed-past form of dar, cuenta completes the expression, and de que introduces the fact noticed." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-completed-realization", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w06"], "exampleEs": "DI", "explanationEn": "Di uses the preterite because it presents the realization as one completed event in the past." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-progressive", "cardId": "grammar-estar-gerundio", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w11"], "exampleEs": "ESTAMOS MANTENIENDO", "explanationEn": "Estamos matches we, and manteniendo supplies the ongoing action with its -iendo ending." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-conversation", "cardId": "phrase-mantener-conversacion", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w11", "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w12"], "exampleEs": "MANTENIENDO CONVERSACIONES", "explanationEn": "Manteniendo is the ongoing form of mantener, and conversaciones is the plural exchange being carried on." },
-        { "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-completamente", "cardId": "grammar-adverbs-mente", "participantWordIds": ["es-xkcd-voyeurismo-del-desastre:panel-5-realization:w13"], "exampleEs": "COMPLETAMENTE", "explanationEn": "Completa takes -mente to form completamente, which intensifies how different the conversations are." }
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-time-ago",
+          "cardId": "grammar-hace-duration-ago",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w01",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w02",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w03"
+          ],
+          "exampleEs": "HACE UN RATO",
+          "explanationEn": "Hace comes before un rato to place the later realization a short while in the past."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-time-que",
+          "cardId": "word-que--after-hace-time",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w04"
+          ],
+          "exampleEs": "QUE",
+          "explanationEn": "Here que connects the elapsed-time phrase to the event it dates; natural English usually restructures the wording rather than translating que alone."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-realize",
+          "cardId": "phrase-darse-cuenta-de",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w05",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w06",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w07",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w08",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w09"
+          ],
+          "exampleEs": "ME DI CUENTA DE QUE",
+          "explanationEn": "Me matches the speaker, di supplies the completed-past form of dar, cuenta completes the expression, and de que introduces the fact noticed."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-completed-realization",
+          "cardId": "grammar-past-contrast",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w06"
+          ],
+          "exampleEs": "DI",
+          "explanationEn": "Di uses the preterite because it presents the realization as one completed event in the past."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-progressive",
+          "cardId": "grammar-estar-gerundio",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w11"
+          ],
+          "exampleEs": "ESTAMOS MANTENIENDO",
+          "explanationEn": "Estamos matches we, and manteniendo supplies the ongoing action with its -iendo ending."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-conversation",
+          "cardId": "phrase-mantener-conversacion",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w11",
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w12"
+          ],
+          "exampleEs": "MANTENIENDO CONVERSACIONES",
+          "explanationEn": "Manteniendo is the ongoing form of mantener, and conversaciones is the plural exchange being carried on."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:app-completamente",
+          "cardId": "grammar-adverbs-mente",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w13"
+          ],
+          "exampleEs": "COMPLETAMENTE",
+          "explanationEn": "Completa takes -mente to form completamente, which intensifies how different the conversations are."
+        },
+        {
+          "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:review-word-w10",
+          "cardId": "word-estamos--progressive-auxiliary",
+          "participantWordIds": [
+            "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10"
+          ],
+          "exampleEs": "ESTAMOS MANTENIENDO",
+          "explanationEn": "Estamos is the we-form helping the following action word describe something in progress."
+        }
       ]
     }
   ]

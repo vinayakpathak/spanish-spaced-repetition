@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-04c1353eee891a62",
+  "revision": "runtime-fd686fbae85922b1",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -275,8 +275,7 @@
               }
             ],
             "cardIds": [
-              "word-mi",
-              "concept-geography-example-map-home"
+              "word-mi"
             ]
           },
           {
@@ -292,8 +291,7 @@
               }
             ],
             "cardIds": [
-              "word-casa",
-              "concept-geography-example-map-home"
+              "word-casa"
             ]
           }
         ],
@@ -301,7 +299,6 @@
         "applications": [],
         "cardIds": [
           "word-mi",
-          "concept-geography-example-map-home",
           "word-casa"
         ]
       },
@@ -767,7 +764,7 @@
               }
             ],
             "cardIds": [
-              "word-dónde--indirect-question",
+              "word-dónde--direct-question",
               "question-words",
               "grammar-question-word-infinitive",
               "grammar-indirect-question-accent"
@@ -839,8 +836,7 @@
             ],
             "cardIds": [
               "word-mapa",
-              "grammar-relative-que",
-              "concept-geography-example-map-home"
+              "grammar-relative-que"
             ]
           },
           {
@@ -952,8 +948,7 @@
               }
             ],
             "cardIds": [
-              "word-geografía",
-              "concept-geography-example-map-home"
+              "word-geografía"
             ]
           },
           {
@@ -1194,7 +1189,7 @@
           "word-pudiera--hypothetical",
           "grammar-poder-infinitive",
           "word-elegir",
-          "word-dónde--indirect-question",
+          "word-dónde--direct-question",
           "question-words",
           "grammar-question-word-infinitive",
           "grammar-indirect-question-accent",
@@ -1204,7 +1199,6 @@
           "word-el--article",
           "word-mapa",
           "grammar-relative-que",
-          "concept-geography-example-map-home",
           "word-de--noun-classifier",
           "word-ejemplo",
           "word-de--from",
@@ -1230,7 +1224,6 @@
       "word-llanura",
       "word-isla",
       "word-mi",
-      "concept-geography-example-map-home",
       "word-casa",
       "word-delta--river-landform",
       "word-estrecho--strait",
@@ -1248,7 +1241,7 @@
       "word-pudiera--hypothetical",
       "grammar-poder-infinitive",
       "word-elegir",
-      "word-dónde--indirect-question",
+      "word-dónde--direct-question",
       "question-words",
       "grammar-question-word-infinitive",
       "grammar-indirect-question-accent",
@@ -1416,27 +1409,6 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "seed-curriculum",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "concept-geography-example-map-home",
-      "kind": "concept",
-      "promptEs": "mi casa · mapa de ejemplo de geografía",
-      "questionEn": "Why does the speaker want to live inside a textbook-style map?",
-      "answerEn": "The artificial example map puts nearly every major landform—and the speaker's house—conveniently together.",
-      "noteEn": "Geography diagrams often compress mountains, rivers, plains, islands, and other features into one implausibly tidy landscape so they can all be labeled. The joke treats that teaching diagram as a desirable real address.",
-      "tags": [
-        "concept",
-        "joke",
-        "geography",
-        "diagram"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-geografia",
         "contextualSenseReviewed": true
       }
     },
@@ -1698,7 +1670,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1810,25 +1786,26 @@
       }
     },
     {
-      "id": "word-dónde--indirect-question",
+      "id": "word-dónde--direct-question",
       "kind": "word",
       "promptEs": "dónde",
       "answerEn": "where",
-      "noteEn": "Dónde keeps its written accent in an indirect question: the location is being asked about even though the words do not stand alone as a direct question.",
+      "noteEn": "Dónde keeps its written accent when asking about a place, whether the question stands alone or sits inside another sentence: ¿Dónde vive Ana? and No sé dónde vive Ana. Unaccented donde connects to a place without asking a question.",
       "example": {
-        "es": "No sé dónde vive Ana.",
-        "en": "I don't know where Ana lives."
+        "es": "No recuerdo dónde dejé las llaves.",
+        "en": "I don't remember where I left the keys."
       },
       "tags": [
         "word",
         "question word",
-        "location"
+        "location",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "ownerComicId": "es-xkcd-partida-ultima",
         "contextualSenseReviewed": true
       }
     },
@@ -2041,17 +2018,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

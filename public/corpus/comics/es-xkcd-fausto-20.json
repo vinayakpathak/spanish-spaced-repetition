@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-d93bfd8e92dda69a",
+  "revision": "runtime-9fad05be644707aa",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -81,7 +81,7 @@
               }
             ],
             "cardIds": [
-              "word-te--recipient",
+              "word-te--indirect",
               "grammar-recipient-pronoun-before-conjugated-verb"
             ]
           },
@@ -166,7 +166,7 @@
         ],
         "cardIds": [
           "word-mortal--human",
-          "word-te--recipient",
+          "word-te--indirect",
           "grammar-recipient-pronoun-before-conjugated-verb",
           "word-traigo",
           "word-una",
@@ -986,7 +986,7 @@
     ],
     "cardIds": [
       "word-mortal--human",
-      "word-te--recipient",
+      "word-te--indirect",
       "grammar-recipient-pronoun-before-conjugated-verb",
       "word-traigo",
       "word-una",
@@ -1062,26 +1062,24 @@
       }
     },
     {
-      "id": "word-te--recipient",
+      "id": "word-te--indirect",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you; for you (one familiar person)",
-      "noteEn": "Te can identify one familiar listener as the person who receives something or benefits from an action. It normally comes before a verb that has changed for the person and time.",
+      "answerEn": "to you; for you, as the recipient",
+      "noteEn": "Te can identify one familiar listener as the person receiving something or benefiting from an action. It normally goes before the verb. English may say 'to you' or 'for you,' or simply place 'you' before what is given or said.",
       "example": {
-        "es": "Te llevo un café.",
-        "en": "I am bringing you a coffee."
+        "es": "Te envío un mensaje.",
+        "en": "I send you a message."
       },
       "tags": [
         "word",
-        "recipient",
-        "pronoun",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fausto-20",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1091,7 +1089,7 @@
       "promptEs": "me/te/le/nos/os/les delante del verbo que cambia",
       "questionEn": "Where do you put the short word that identifies who receives something?",
       "answerEn": "Put me, te, le, nos, os, or les before the first verb that changes for the person and time.",
-      "noteEn": "The slashes in the prompt mean to choose the one receiver word that fits. A verb that changes for the person and time is often called a conjugated verb: estoy rather than the dictionary form estar. In a multiword verb phrase, the receiver word goes before that changed verb, so les estoy enviando places les before estoy, not between estoy and enviando.",
+      "noteEn": "A verb that changes for the person and time is often called a conjugated verb: estoy rather than the dictionary form estar. In a multiword verb phrase, the receiver word goes before that changed verb, so les estoy enviando places les before estoy, not between estoy and enviando.",
       "example": {
         "es": "Les estoy enviando una foto.",
         "en": "I am sending them a photo."
@@ -1282,7 +1280,7 @@
       "id": "word-al--time-clause",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "when; upon (al + infinitive)",
+      "answerEn": "when; upon doing something",
       "noteEn": "",
       "tags": [
         "word",
@@ -1301,7 +1299,7 @@
       "kind": "grammar",
       "promptEs": "al + infinitivo",
       "answerEn": "Use al followed by the action verb in its dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al + verb tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al followed by this verb form tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
       "tags": [
         "B1",
         "grammar",
@@ -1425,7 +1423,7 @@
       "promptEs": "aceptar + verbo en forma de diccionario",
       "questionEn": "How do you say that someone accepts or agrees to do an action?",
       "answerEn": "Use a form of aceptar followed directly by the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus sign in the prompt shows the order of the two pieces. The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Aceptar changes for the person and time, while the action verb stays unchanged: acepto ayudar, acepta esperar, aceptaron pagar. Do not insert a or de between them.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Aceptar changes for the person and time, while the action verb stays unchanged: acepto ayudar, acepta esperar, aceptaron pagar. Do not insert a or de between them.",
       "example": {
         "es": "Lucía acepta ayudar.",
         "en": "Lucía agrees to help."
@@ -1467,11 +1465,11 @@
       "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal singular)",
-      "noteEn": "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Señora, aquí está su café.",
-        "en": "Ma’am, here is your coffee."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
@@ -1671,7 +1669,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1779,8 +1781,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

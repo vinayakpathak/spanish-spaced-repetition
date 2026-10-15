@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-d8fa3e656ab69d5f",
+  "revision": "runtime-75bc6ddb9b49cd46",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -308,7 +308,7 @@
               "es-xkcd-nspr:initial-bug-report:w04"
             ],
             "exampleEs": "DEL HABLA",
-            "explanationEn": "Habla is feminine but begins with a stressed a sound, so singular el is used and de + el contracts to del."
+            "explanationEn": "Habla is feminine but begins with a stressed a sound, so singular el is used; de and el combine into del."
           }
         ],
         "cardIds": [
@@ -1163,6 +1163,7 @@
         "wordplay",
         "comic joke"
       ],
+      "questionEn": "How does the joke use two meanings of “reproduce a bug”?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1199,7 +1200,7 @@
       "kind": "grammar",
       "promptEs": "el agua · el habla · del águila (nombres femeninos)",
       "questionEn": "Which singular article is used immediately before a feminine noun that begins with a stressed a sound?",
-      "answerEn": "Use el immediately before that singular noun; use del when de + el contracts.",
+      "answerEn": "Use el immediately before that singular noun; combine de and el as del when they come together.",
       "noteEn": "The noun remains feminine. Describing words still use feminine forms, and the plural uses las: el agua fría, las aguas frías. The rule applies only when the stressed a sound begins the noun.",
       "example": {
         "es": "El águila blanca voló sobre el agua fría.",
@@ -1273,7 +1274,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1527,7 +1532,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1552,7 +1557,7 @@
       "promptEs": "verbo en -ar/-er/-ir + me/te/se/nos/os + lo/la/los/las",
       "questionEn": "How do you attach both a person pronoun and a thing pronoun to an unchanged dictionary-form verb?",
       "answerEn": "Put the person pronoun first, the thing pronoun second, and attach both to the end of the verb.",
-      "noteEn": "The plus signs mean 'followed by.' Add a written accent when needed to keep the verb's original stressed syllable: explicar + me + lo becomes explicármelo. Before lo, la, los, or las, le and les change to se.",
+      "noteEn": "Add a written accent when needed to keep the verb's original stressed syllable: attaching me and then lo to explicar gives explicármelo. Before lo, la, los, or las, le and les change to se.",
       "example": {
         "es": "La profesora va a explicármelo.",
         "en": "The teacher is going to explain it to me."
@@ -1768,8 +1773,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1820,17 +1824,15 @@
       "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks an action whose doer is not named",
-      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "Se encontraron varios errores.",
-        "en": "Several errors were found."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive se",
-        "unnamed agent",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

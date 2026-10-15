@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-d31e877f1586f07c",
+  "revision": "runtime-103985f054b893c7",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -97,8 +97,7 @@
               }
             ],
             "cardIds": [
-              "word-simpatía--compassion",
-              "concept-relativity-causality-sympathy-joke"
+              "word-simpatía--compassion"
             ]
           },
           {
@@ -114,7 +113,7 @@
               }
             ],
             "cardIds": [
-              "word-para--for-person"
+              "word-para--intended-recipient"
             ]
           },
           {
@@ -146,19 +145,27 @@
               }
             ],
             "cardIds": [
-              "word-físicos--physicists",
-              "concept-relativity-causality-sympathy-joke"
+              "word-físicos--physicists"
             ]
           }
         ],
         "excludedUnits": [],
-        "applications": [],
+        "applications": [
+          {
+            "id": "es-xkcd-simpatia:heading:review-word-w04",
+            "cardId": "word-para--intended-recipient",
+            "participantWordIds": [
+              "es-xkcd-simpatia:heading:w04"
+            ],
+            "exampleEs": "PARA LOS FÍSICOS",
+            "explanationEn": "Here para identifies the intended audience for the advice."
+          }
+        ],
         "cardIds": [
           "word-consejos",
           "word-de--about-topic",
           "word-simpatía--compassion",
-          "concept-relativity-causality-sympathy-joke",
-          "word-para--for-person",
+          "word-para--intended-recipient",
           "word-los",
           "word-físicos--physicists"
         ]
@@ -1119,7 +1126,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-sistema-de-referencia"
             ]
           },
@@ -1385,8 +1392,7 @@
               "word-hermanos",
               "grammar-descriptive-adjective-after-noun",
               "grammar-adjective-gender-agreement",
-              "grammar-quedar-remaining-quantity",
-              "concept-relativity-causality-sympathy-joke"
+              "grammar-quedar-remaining-quantity"
             ]
           },
           {
@@ -1421,7 +1427,7 @@
               }
             ],
             "cardIds": [
-              "word-te--indirect"
+              "word-te--affected-person"
             ]
           },
           {
@@ -1437,7 +1443,7 @@
               }
             ],
             "cardIds": [
-              "word-quedan--left-to-someone",
+              "word-quedan--remaining",
               "grammar-quedar-remaining-quantity"
             ]
           }
@@ -1495,6 +1501,24 @@
             ],
             "exampleEs": "CUÁNTOS HERMANOS VIVOS TE QUEDAN",
             "explanationEn": "Quedan is plural because hermanos vivos names more than one possible remaining person, while cuántos asks for the quantity."
+          },
+          {
+            "id": "es-xkcd-simpatia:very-inappropriate-response:review-word-w30",
+            "cardId": "word-te--affected-person",
+            "participantWordIds": [
+              "es-xkcd-simpatia:very-inappropriate-response:w30"
+            ],
+            "exampleEs": "TE QUEDAN",
+            "explanationEn": "Here te identifies the person who has relatives remaining; it is not someone being given those relatives."
+          },
+          {
+            "id": "es-xkcd-simpatia:very-inappropriate-response:review-word-w31",
+            "cardId": "word-quedan--remaining",
+            "participantWordIds": [
+              "es-xkcd-simpatia:very-inappropriate-response:w31"
+            ],
+            "exampleEs": "TE QUEDAN",
+            "explanationEn": "Te identifies who has them left. The remaining things are plural, which selects quedan rather than queda."
           }
         ],
         "cardIds": [
@@ -1511,7 +1535,7 @@
           "word-sistemas",
           "phrase-sistema-de-referencia",
           "concept-relativity-causality-sympathy-joke",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-referencia--reference-frame",
           "word-en",
           "word-movimiento",
@@ -1532,8 +1556,8 @@
           "grammar-descriptive-adjective-after-noun",
           "grammar-adjective-gender-agreement",
           "word-vivos",
-          "word-te--indirect",
-          "word-quedan--left-to-someone"
+          "word-te--affected-person",
+          "word-quedan--remaining"
         ]
       }
     ],
@@ -1541,8 +1565,7 @@
       "word-consejos",
       "word-de--about-topic",
       "word-simpatía--compassion",
-      "concept-relativity-causality-sympathy-joke",
-      "word-para--for-person",
+      "word-para--intended-recipient",
       "word-los",
       "word-físicos--physicists",
       "word-en--time-point",
@@ -1579,6 +1602,7 @@
       "word-la--article",
       "phrase-velocidad-de-la-luz",
       "word-velocidad",
+      "concept-relativity-causality-sympathy-joke",
       "word-de--of",
       "word-luz",
       "word-muy",
@@ -1588,7 +1612,7 @@
       "word-disposición",
       "word-sistemas",
       "phrase-sistema-de-referencia",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-referencia--reference-frame",
       "word-movimiento",
       "word-podríamos--tentative-suggestion",
@@ -1604,8 +1628,8 @@
       "grammar-quedar-remaining-quantity",
       "word-hermanos",
       "word-vivos",
-      "word-te--indirect",
-      "word-quedan--left-to-someone"
+      "word-te--affected-person",
+      "word-quedan--remaining"
     ],
     "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
@@ -1679,32 +1703,15 @@
       }
     },
     {
-      "id": "concept-relativity-causality-sympathy-joke",
-      "kind": "concept",
-      "promptEs": "simpatía · relatividad · causalidad",
-      "questionEn": "Why is a physics discussion an especially inappropriate response to grief here?",
-      "answerEn": "The joke contrasts the empathy a grieving person needs with physicists who become absorbed in a relativity puzzle about faster-than-light information.",
-      "noteEn": "Special relativity treats the speed of light as a limit for transmitted information. If a signal were instantaneous in one reference frame, another moving frame could order the events differently, threatening ordinary cause-before-effect causality. The escalating technical excitement ignores the human loss; the official title text extends the absurdity by imagining a way to exploit the discovery.",
-      "tags": [
-        "concept",
-        "xkcd joke",
-        "physics",
-        "relativity"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-simpatia",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "word-para--for-person",
+      "id": "word-para--intended-recipient",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "for",
-      "noteEn": "",
+      "answerEn": "for; introduces an intended recipient, user, or audience",
+      "noteEn": "Para can identify who something is meant for, including a person, animal, or device. This differs from para before an action naming a purpose, and from describing the conditions something is suitable for.",
+      "example": {
+        "es": "Este regalo es para Ana.",
+        "en": "This gift is for Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1713,7 +1720,7 @@
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "ownerComicId": "es-xkcd-el-robo-de-los-reyes-magos",
         "contextualSenseReviewed": true
       }
     },
@@ -2161,19 +2168,20 @@
     {
       "id": "phrase-lo-siento",
       "kind": "phrase",
-      "promptEs": "Lo siento.",
-      "answerEn": "Lo siento means “I'm sorry.”",
-      "noteEn": "Use this fixed expression for an apology or when reacting sympathetically to bad news. Learn it as a complete expression instead of translating lo and siento separately.",
-      "tags": [
-        "A1",
-        "expression",
-        "politeness"
-      ],
-      "questionEn": "What is the standard way to say “I'm sorry” when apologizing or expressing sympathy?",
+      "promptEs": "lo siento o lo sentimos",
+      "questionEn": "How do you say 'I'm sorry' or 'we're sorry' with lo siento?",
+      "answerEn": "Use lo siento when speaking for yourself and lo sentimos when speaking for a group.",
+      "noteEn": "Use this conventional expression for an apology or for sympathy about bad news. Lo stays fixed, while sentir changes to siento for I and sentimos for we. Mucho can strengthen the apology: lo siento mucho. These are variations of the same expression, not separate meanings of apology.",
       "example": {
-        "es": "Lo siento. Fue un error.",
-        "en": "I'm sorry. It was a mistake."
+        "es": "Lo sentimos. Fue un error.",
+        "en": "We're sorry. It was a mistake."
       },
+      "tags": [
+        "phrase",
+        "apology",
+        "politeness",
+        "A1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2395,7 +2403,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2469,6 +2481,25 @@
       }
     },
     {
+      "id": "concept-relativity-causality-sympathy-joke",
+      "kind": "concept",
+      "promptEs": "señales superlumínicas y causalidad",
+      "questionEn": "Why can faster-than-light signals cause trouble for cause and effect?",
+      "answerEn": "In special relativity, events joined by a faster-than-light signal can be ordered differently by observers moving relative to each other.",
+      "noteEn": "An observer's reference frame is a way of assigning places and times to events. With suitably arranged faster-than-light signaling, one could construct a message exchange that returns information to before it was sent. That is the causality problem: an effect could precede its cause.",
+      "tags": [
+        "concept",
+        "background knowledge"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-simpatia",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
       "id": "word-de--of",
       "kind": "word",
       "promptEs": "de",
@@ -2527,7 +2558,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2640,26 +2675,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -2983,14 +3016,14 @@
       }
     },
     {
-      "id": "word-te--indirect",
+      "id": "word-te--affected-person",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you",
-      "noteEn": "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+      "answerEn": "to you; identifies the person something happens to",
+      "noteEn": "Te can identify one familiar listener as the person affected by an event or situation, even when nothing is given to them. With pasar it marks who something happens to; with quedar it can identify who has something remaining.",
       "example": {
-        "es": "Te envío un mensaje.",
-        "en": "I’m sending you a message."
+        "es": "¿Qué te pasó?",
+        "en": "What happened to you?"
       },
       "tags": [
         "word",
@@ -3000,31 +3033,32 @@
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-simpatia",
         "contextualSenseReviewed": true
       }
     },
     {
-      "id": "word-quedan--left-to-someone",
+      "id": "word-quedan--remaining",
       "kind": "word",
       "promptEs": "quedan",
-      "answerEn": "are left; remain available (plural)",
-      "noteEn": "With a short indirect word such as me, te, le, nos, or les, quedar can say what someone has left. The plural remaining thing controls quedan; one remaining thing uses queda.",
+      "answerEn": "remain; are left",
+      "noteEn": "Quedan says that several things remain. Use queda for one thing and quedan for more than one. A short word such as me, te, or les can identify who has them left; the number of remaining things, not the number of people, controls queda or quedan.",
       "example": {
-        "es": "Te quedan dos preguntas.",
-        "en": "You have two questions left."
+        "es": "Nos quedan dos entradas.",
+        "en": "We have two tickets left."
       },
       "tags": [
         "word",
         "quedar",
-        "remaining quantity",
+        "remaining",
+        "plural",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-simpatia",
+        "ownerComicId": "es-xkcd-aprender-a-cocinar",
         "contextualSenseReviewed": true
       }
     }

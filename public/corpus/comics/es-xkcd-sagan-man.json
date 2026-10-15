@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-2027e8bbd6b3c86d",
+  "revision": "runtime-ffd22146aeb709de",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -554,7 +554,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--echo-question",
+              "word-qué--interrogative",
               "question-words"
             ]
           }
@@ -572,7 +572,7 @@
           }
         ],
         "cardIds": [
-          "word-qué--echo-question",
+          "word-qué--interrogative",
           "question-words"
         ]
       },
@@ -601,7 +601,7 @@
               }
             ],
             "cardIds": [
-              "word-te--darse-cuenta",
+              "word-te--pronominal-marker",
               "phrase-darse-cuenta-de"
             ]
           },
@@ -722,7 +722,7 @@
               }
             ],
             "cardIds": [
-              "word-es--impersonal-evaluation",
+              "word-es",
               "grammar-lo-adjective-que-degree",
               "grammar-evaluative-subjunctive"
             ]
@@ -881,7 +881,7 @@
           }
         ],
         "cardIds": [
-          "word-te--darse-cuenta",
+          "word-te--pronominal-marker",
           "phrase-darse-cuenta-de",
           "word-das--darse-cuenta",
           "word-cuenta--darse-cuenta",
@@ -892,7 +892,7 @@
           "grammar-evaluative-subjunctive",
           "concept-sagan-man-science-distraction",
           "word-que--degree",
-          "word-es--impersonal-evaluation",
+          "word-es",
           "word-que--clause-link",
           "word-hayamos--present-perfect-subjunctive",
           "grammar-present-perfect-subjunctive",
@@ -927,9 +927,9 @@
       "word-oye--attention",
       "grammar-affirmative-tu-command",
       "word-tú",
-      "word-qué--echo-question",
+      "word-qué--interrogative",
       "question-words",
-      "word-te--darse-cuenta",
+      "word-te--pronominal-marker",
       "phrase-darse-cuenta-de",
       "word-das--darse-cuenta",
       "word-cuenta--darse-cuenta",
@@ -939,7 +939,7 @@
       "word-increíble",
       "grammar-evaluative-subjunctive",
       "word-que--degree",
-      "word-es--impersonal-evaluation",
+      "word-es",
       "word-que--clause-link",
       "word-hayamos--present-perfect-subjunctive",
       "grammar-present-perfect-subjunctive",
@@ -1439,27 +1439,24 @@
       }
     },
     {
-      "id": "word-qué--echo-question",
+      "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what? (echoing something surprising)",
-      "noteEn": "Qué keeps its written accent in a short echo question. The speaker repeats only the missing or unbelievable information instead of forming a longer question.",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
       "example": {
-        "es": "—Me voy mañana. —¿Qué?",
-        "en": "‘I'm leaving tomorrow.’ ‘What?’"
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
       },
       "tags": [
         "word",
-        "question",
-        "reaction",
-        "accent",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-scantron",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1489,26 +1486,24 @@
       }
     },
     {
-      "id": "word-te--darse-cuenta",
+      "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word; marks you in te das cuenta",
-      "noteEn": "Darse cuenta uses a matching small pronoun: me for I, te for familiar you, and se for he, she, or they.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "¿Te das cuenta del cambio?",
-        "en": "Do you notice the change?"
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "darse cuenta",
-        "pronoun",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sagan-man",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
         "contextualSenseReviewed": true
       }
     },
@@ -1631,7 +1626,7 @@
       "promptEs": "lo + adjetivo + que + verbo",
       "questionEn": "How do you express how strikingly good, difficult, large, or similar something is?",
       "answerEn": "Use lo, then the describing word, then que and a verb.",
-      "noteEn": "Each plus sign means “followed by.” Lo stays unchanged, while the adjective—the word that describes a person or thing—matches what it describes: lo bueno for masculine and lo buena for feminine. Que introduces the clause that identifies the person or thing.",
+      "noteEn": "Lo stays unchanged, while the adjective—the word that describes a person or thing—matches what it describes: lo bueno for masculine and lo buena for feminine. Que introduces the clause that identifies the person or thing.",
       "example": {
         "es": "No imaginas lo difícil que es.",
         "en": "You can't imagine how difficult it is."
@@ -1677,20 +1672,20 @@
     {
       "id": "grammar-evaluative-subjunctive",
       "kind": "grammar",
-      "promptEs": "es + adjetivo de valoración + que + subjuntivo",
-      "answerEn": "Use the subjunctive for the situation being judged.",
-      "noteEn": "Phrases such as es importante, es bueno, and es raro express a judgment about what follows. Spanish marks the verb after que with the subjunctive. In the example, descansas—the ordinary statement form—changes to descanses.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "evaluation"
-      ],
-      "questionEn": "After “It is important/good/strange that…,” which form does the next Spanish verb take?",
+      "promptEs": "ser + valoración + que + acción",
+      "questionEn": "After es importante que or es mejor que, how do you express the action being judged?",
+      "answerEn": "Use a form of ser, the evaluation, que, and the action in its special subjunctive form.",
+      "noteEn": "Subjunctive is the name for the verb form used here because the action is being evaluated, not simply reported. Compare descansas ('you rest') with es importante que descanses ('it is important that you rest'): descansas changes to descanses. Ser can change for time, as in será mejor que llegues. This applies to judgments such as bueno, importante, raro, or mejor, not every adjective: es cierto que presents something as true and normally uses an ordinary statement form. For an activity in general without a separate person, use es importante descansar, with no que.",
       "example": {
-        "es": "Es importante que descanses.",
-        "en": "It is important that you rest."
+        "es": "Es mejor que descanses.",
+        "en": "It is better for you to rest."
       },
+      "tags": [
+        "grammar",
+        "evaluation",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1718,27 +1713,24 @@
       }
     },
     {
-      "id": "word-es--impersonal-evaluation",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "it is (introducing an evaluation)",
-      "noteEn": "Spanish can begin an impersonal evaluation with es plus a describing word. English normally supplies an impersonal ‘it,’ but Spanish does not add a separate subject word.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "Es extraño que llueva.",
-        "en": "It is strange that it is raining."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "impersonal expression",
-        "evaluation",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1746,8 +1738,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1791,10 +1783,10 @@
     {
       "id": "grammar-present-perfect-subjunctive",
       "kind": "grammar",
-      "promptEs": "haya/hayas/haya/hayamos/hayáis/hayan + participio",
-      "questionEn": "How do you refer to an earlier completed event inside a clause that is evaluated, desired, doubted, or uncertain?",
-      "answerEn": "Use haya, hayas, haya, hayamos, hayáis, or hayan, then the verb's completed-action form.",
-      "noteEn": "This is called the present perfect subjunctive. “Subjunctive” means the special form used when the event is not simply stated as a fact; “completed-action form” means a participle such as llegado, comido, or estado. Haber changes for the person, while that completed-action form stays unchanged.",
+      "promptEs": "haya, hayas, hayamos, hayáis o hayan + acción completada",
+      "questionEn": "How do you use haya hablado and similar forms for an earlier event that is doubted, desired, or evaluated?",
+      "answerEn": "Use the matching form of haber—haya, hayas, hayamos, hayáis, or hayan—followed by the verb's completed-action form.",
+      "noteEn": "These haber forms are called subjunctive: they are used when the surrounding words frame an event through doubt, wishes, evaluation, or an unidentified person or thing, rather than simply reporting it. Compare han salido, 'they have left,' with dudo que hayan salido, 'I doubt that they have left.' Haya serves I, he, she, or formal singular you; hayas is familiar singular you, hayamos is we, hayáis is familiar plural you mainly in Spain, and hayan is they or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. The completed-action form stays unchanged: hablar becomes hablado, comer becomes comido, and hacer becomes hecho.",
       "example": {
         "es": "Dudo que hayan salido.",
         "en": "I doubt that they have left."

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-9691a8acfa245033",
+  "revision": "runtime-cb613b33ed49db0e",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -456,8 +456,7 @@
               }
             ],
             "cardIds": [
-              "word-tan",
-              "phrase-tan-lejos-de"
+              "word-tan"
             ]
           },
           {
@@ -659,13 +658,12 @@
             "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-far",
             "cardId": "phrase-tan-lejos-de",
             "participantWordIds": [
-              "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w04",
               "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w05",
               "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w06",
               "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w07"
             ],
-            "exampleEs": "TAN LEJOS DE CASA",
-            "explanationEn": "Tan intensifies the distance word lejos, and de introduces casa as the reference point."
+            "exampleEs": "LEJOS DE CASA",
+            "explanationEn": "Lejos de gives the distance relation, with casa as the reference point. The preceding tan only intensifies the distance."
           },
           {
             "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-purpose-clause",
@@ -716,8 +714,8 @@
           "concept-starlight-journey-relativity",
           "word-aquí",
           "word-tan",
-          "phrase-tan-lejos-de",
           "word-lejos",
+          "phrase-tan-lejos-de",
           "word-de--from",
           "word-casa",
           "word-sólo--only",
@@ -758,8 +756,8 @@
       "word-morir",
       "word-aquí",
       "word-tan",
-      "phrase-tan-lejos-de",
       "word-lejos",
+      "phrase-tan-lejos-de",
       "word-de--from",
       "word-casa",
       "word-sólo--only",
@@ -929,7 +927,7 @@
       "promptEs": "llegar a + destino",
       "questionEn": "How do you say that someone or something reaches a destination?",
       "answerEn": "Use the matching form of llegar, then a, then name the destination.",
-      "noteEn": "Llegar changes for the person and time, while a remains before the endpoint. A plus el contracts to al; a plus la, los, or las stays separate.",
+      "noteEn": "Llegar changes for the person and time, while a remains before the endpoint. A and el combine as al; a stays separate before la, los, or las.",
       "example": {
         "es": "La carta llegó a su destino.",
         "en": "The letter reached its destination."
@@ -1179,19 +1177,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1257,31 +1257,6 @@
       }
     },
     {
-      "id": "phrase-tan-lejos-de",
-      "kind": "phrase",
-      "promptEs": "tan lejos de + lugar o referencia",
-      "questionEn": "How do you say that something is so far from a place or reference point?",
-      "answerEn": "Use tan lejos de followed by the place or reference point.",
-      "noteEn": "Tan intensifies lejos, and de introduces the reference point. Change tan to muy for the ordinary statement ‘very far from.’",
-      "example": {
-        "es": "Nunca había estado tan lejos de casa.",
-        "en": "I had never been so far from home."
-      },
-      "tags": [
-        "phrase",
-        "distance",
-        "degree",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-la-luz-de-las-estrellas",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-lejos",
       "kind": "word",
       "promptEs": "lejos",
@@ -1302,6 +1277,31 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-pureza",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "phrase-tan-lejos-de",
+      "kind": "phrase",
+      "promptEs": "lejos de + lugar o referencia",
+      "questionEn": "How do you use lejos de to say that something is far from a place or reference point?",
+      "answerEn": "Use lejos de followed by the place or reference point.",
+      "noteEn": "Lejos de stays unchanged: lejos de casa, lejos del centro. Del combines de and el when the reference point starts with el. A word such as muy ('very') or tan ('so') can intensify the distance, but it is optional and not part of the fixed unit.",
+      "example": {
+        "es": "Vivimos lejos del centro.",
+        "en": "We live far from the center."
+      },
+      "tags": [
+        "phrase",
+        "distance",
+        "lejos de",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-la-luz-de-las-estrellas",
         "contextualSenseReviewed": true
       }
     },
@@ -1394,7 +1394,7 @@
       "promptEs": "para que + acción deseada",
       "questionEn": "How do you express a purpose when someone or something else carries out the desired result?",
       "answerEn": "Use para que, then put the result verb in the special form used for a purpose that is not yet a fact.",
-      "noteEn": "That special form is called the subjunctive. It appears because the second action is intended or desired, not presented as an established fact. For example, ordinary ve becomes vea, and ordinary viene becomes venga. Use para plus an unchanged action verb instead when the same person performs both actions.",
+      "noteEn": "That special form is called the subjunctive. It appears because the second action is intended or desired, not presented as an established fact. For example, ordinary ve becomes vea, and ordinary viene becomes venga. Use para followed by an unchanged action verb instead when the same person performs both actions.",
       "example": {
         "es": "Dejo una nota para que Ana la vea.",
         "en": "I leave a note so that Ana sees it."

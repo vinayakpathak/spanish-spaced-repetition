@@ -70,23 +70,6 @@
       ]
     },
     {
-      "id": "word-que--hacer-causative-complement",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "no separate English word; it links hacer to the caused action",
-      "noteEn": "After hacer que, the later action uses its special caused-action form.",
-      "example": {
-        "es": "La música hizo que bailaran.",
-        "en": "The music made them dance."
-      },
-      "tags": [
-        "word",
-        "connectors",
-        "causation",
-        "A2"
-      ]
-    },
-    {
       "id": "word-pierda--lose-subjunctive",
       "kind": "word",
       "promptEs": "pierda",
@@ -379,23 +362,6 @@
       ]
     },
     {
-      "id": "word-le--importar-experiencer",
-      "kind": "word",
-      "promptEs": "le",
-      "answerEn": "marks the person or thing that cares, or for whom something matters",
-      "noteEn": "The thing that matters controls the form of importar; le identifies the one who cares.",
-      "example": {
-        "es": "A Marta le importa el resultado.",
-        "en": "Marta cares about the result."
-      },
-      "tags": [
-        "word",
-        "pronouns",
-        "experiencer",
-        "A2"
-      ]
-    },
-    {
       "id": "word-importo--matter",
       "kind": "word",
       "promptEs": "importo",
@@ -482,13 +448,13 @@
     {
       "id": "grammar-acabar-gerundio",
       "kind": "grammar",
-      "promptEs": "acabar + acción en -ando/-iendo",
-      "questionEn": "How do you say that someone eventually ends up doing something?",
-      "answerEn": "Use a matching form of acabar followed by the action form ending in -ando or -iendo.",
-      "noteEn": "The plus sign means “followed by.” Acabar changes for the person and time; the following action expresses the eventual result: acaba aceptando, acabaron riendo.",
+      "promptEs": "acabar seguido de una acción en -ando o -iendo",
+      "questionEn": "How do you use acabar to say that someone ends up doing something?",
+      "answerEn": "Use a form of acabar followed by the action in its -ando or -iendo form.",
+      "noteEn": "Only acabar changes for the person and time: acaba hablando, acabaron hablando. The second form names the eventual action, which may be unintended. This form is called a gerund: hablar becomes hablando, comer becomes comiendo, and some verbs change their stem, as morir becomes muriendo. Do not add de: acabar de hablar means having just spoken, a different pattern.",
       "example": {
-        "es": "Siempre acaban hablando del trabajo.",
-        "en": "They always end up talking about work."
+        "es": "Después de discutir, acabamos riendo.",
+        "en": "After arguing, we ended up laughing."
       },
       "tags": [
         "grammar",
@@ -503,7 +469,7 @@
       "promptEs": "confundir X con Y",
       "questionEn": "How do you say that someone mistakes one thing for another?",
       "answerEn": "Use a matching form of confundir, name the first thing, add con, then name the second thing.",
-      "noteEn": "X and Y are placeholders for the two complete items being mixed up. The verb changes for the person and time, but con remains unchanged.",
+      "noteEn": "Confundir changes for the person and time, but con remains unchanged between the two people or things being mixed up.",
       "example": {
         "es": "Confundieron la entrada con la salida.",
         "en": "They mistook the entrance for the exit."
@@ -513,6 +479,21 @@
         "verb complement",
         "comparison",
         "A2"
+      ]
+    },
+    {
+      "id": "word-el--before-named-item",
+      "kind": "word",
+      "promptEs": "el",
+      "answerEn": "the; often omitted in English before a named item",
+      "noteEn": "Spanish can use el before the name or number of a masculine item, product, command, system, or service. An ordinary noun such as modelo or número may be understood rather than written. English often uses the name alone. El here is not accented él, 'he.'",
+      "example": {
+        "es": "Compró el Toyota rojo.",
+        "en": "She bought the red Toyota."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
       ]
     }
   ],
@@ -680,7 +661,7 @@
           "text": "EH",
           "normalized": "eh",
           "cardIds": [
-            "word-eh--hesitation"
+            "word-eh"
           ],
           "explicitBounds": [
             {
@@ -765,7 +746,7 @@
           "text": "EL",
           "normalized": "el",
           "cardIds": [
-            "word-el--before-product-name"
+            "word-el--before-named-item"
           ],
           "explicitBounds": [
             {
@@ -983,7 +964,7 @@
           "text": "EL",
           "normalized": "el",
           "cardIds": [
-            "word-el--before-technical-name"
+            "word-el--before-named-item"
           ],
           "explicitBounds": [
             {
@@ -1018,7 +999,7 @@
           "text": "QUE",
           "normalized": "que",
           "cardIds": [
-            "word-que--hacer-causative-complement",
+            "word-que--clause-link",
             "grammar-hacer-que-subjunctive"
           ],
           "explicitBounds": [
@@ -1350,7 +1331,7 @@
           "text": "HACIENDO",
           "normalized": "haciendo",
           "cardIds": [
-            "word-haciendo--by-doing",
+            "word-haciendo--making",
             "grammar-adverbial-gerund"
           ],
           "explicitBounds": [
@@ -1436,7 +1417,7 @@
           "text": "DE",
           "normalized": "de",
           "cardIds": [
-            "word-de--type-classifier"
+            "word-de--noun-classifier"
           ],
           "explicitBounds": [
             {
@@ -2080,7 +2061,7 @@
           "text": "LE",
           "normalized": "le",
           "cardIds": [
-            "word-le--importar-experiencer",
+            "word-le--experiencer",
             "grammar-importar-indirect-object"
           ],
           "explicitBounds": [

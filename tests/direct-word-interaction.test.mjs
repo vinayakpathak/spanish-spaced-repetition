@@ -160,17 +160,17 @@ test("a revealed answer expands inside its clicked flashcard", async () => {
   assert.match(page, /application\.cardId === card\.id/);
   assert.match(page, /application\.participantWordIds\.includes\(selectedWord\.id\)/);
   assert.match(page, /className="candidate-application"[\s\S]*lang="es"/);
-  assert.match(page, /card\.questionEn/);
+  assert.match(page, /cardTitle\(card\)/);
   assert.doesNotMatch(page, /card\.kind === "grammar" && card\.questionEn/);
-  assert.match(page, /SPANISH EXPRESSION/);
+  assert.doesNotMatch(page, /SPANISH EXPRESSION|SPANISH PATTERN|candidate-tags/);
   assert.match(page, /aria-controls=\{isSelected \? answerId : undefined\}/);
   assert.match(page, /DRAFT MEANING/);
   assert.match(page, /fallback draft still needs review/i);
   assert.match(page, /opening is recorded so it can participate in scheduling/);
   assert.doesNotMatch(page, /Preview only|Not scheduled · translation needs review/);
-  assert.match(
+  assert.doesNotMatch(
     page.slice(revealStart, cardEnd),
-    /candidate-pattern[\s\S]*card\.promptEs/,
+    /candidate-pattern|card\.promptEs|card\.tags/,
   );
 
   assert.match(
@@ -182,6 +182,6 @@ test("a revealed answer expands inside its clicked flashcard", async () => {
     /grid-template-columns:\s*minmax\(180px, 210px\) minmax\(400px, 1fr\) clamp\(315px, 34vw, 370px\)/,
   );
   assert.match(styles, /\.candidate-reveal\s*\{[\s\S]*animation: card-turn/);
-  assert.match(styles, /\.candidate-pattern\.is-expression/);
+  assert.doesNotMatch(styles, /\.candidate-pattern|\.candidate-tags/);
   assert.match(styles, /\.candidate-card\.is-provisional[\s\S]*border-color/);
 });

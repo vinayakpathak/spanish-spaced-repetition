@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-830041aab3964824",
+  "revision": "runtime-64a5207d4fbe3560",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -132,7 +132,7 @@
               }
             ],
             "cardIds": [
-              "word-se--passive-permission",
+              "word-se--passive-unnamed-doer",
               "grammar-se-puede-infinitive"
             ]
           },
@@ -214,7 +214,7 @@
           "word-es",
           "word-algo",
           "word-que--relative",
-          "word-se--passive-permission",
+          "word-se--passive-unnamed-doer",
           "grammar-se-puede-infinitive",
           "word-pueda--passive-possibility",
           "word-apagar"
@@ -1518,6 +1518,24 @@
             ],
             "exampleEs": "HABER SIDO",
             "explanationEn": "Haber stays unchanged, and sido is the completed-action form of ser."
+          },
+          {
+            "id": "es-xkcd-solo:deserve-you:review-word-w01",
+            "cardId": "word-hiciera--subjunctive",
+            "participantWordIds": [
+              "es-xkcd-solo:deserve-you:w01"
+            ],
+            "exampleEs": "HICIERA LO QUE HICIERA",
+            "explanationEn": "Repeating hiciera around lo que leaves the past action unspecified. Here the speaker is the person who did it."
+          },
+          {
+            "id": "es-xkcd-solo:deserve-you:review-word-w04",
+            "cardId": "word-hiciera--subjunctive",
+            "participantWordIds": [
+              "es-xkcd-solo:deserve-you:w04"
+            ],
+            "exampleEs": "HICIERA LO QUE HICIERA",
+            "explanationEn": "Repeating hiciera around lo que leaves the past action unspecified. Here the speaker is the person who did it."
           }
         ],
         "cardIds": [
@@ -1545,7 +1563,7 @@
       "word-es",
       "word-algo",
       "word-que--relative",
-      "word-se--passive-permission",
+      "word-se--passive-unnamed-doer",
       "grammar-se-puede-infinitive",
       "word-pueda--passive-possibility",
       "word-apagar",
@@ -1612,8 +1630,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1629,7 +1646,7 @@
       "promptEs": "antecedente negado + que + subjuntivo",
       "questionEn": "Which verb form follows que when you deny that a person or thing exists or has the described property?",
       "answerEn": "Use the special subjunctive form after que because the description is being denied, not stated as a fact.",
-      "noteEn": "An antecedent is the person or thing described by que; a negated antecedent is one the wording presents as absent or not fitting. The special verb form is called the subjunctive. Compare the ordinary statement vive in Conozco a alguien que vive aquí with viva in No conozco a nadie que viva aquí. The plus signs in the prompt mean “followed by.”",
+      "noteEn": "An antecedent is the person or thing described by que; a negated antecedent is one the wording presents as absent or not fitting. The special verb form is called the subjunctive. Compare the ordinary statement vive in Conozco a alguien que vive aquí with viva in No conozco a nadie que viva aquí.",
       "example": {
         "es": "No conozco a nadie que viva aquí.",
         "en": "I do not know anyone who lives here."
@@ -1653,8 +1670,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1672,10 +1693,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1708,42 +1732,42 @@
       }
     },
     {
-      "id": "word-se--passive-permission",
+      "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks something as receiving a possible action; the doer is not named",
-      "noteEn": "With a form of poder and an unchanged action verb, se shifts attention away from the person doing the action and toward the thing that can receive it.",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "La puerta se puede abrir.",
-        "en": "The door can be opened."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive construction"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
         "contextualSenseReviewed": true
       }
     },
     {
       "id": "grammar-se-puede-infinitive",
       "kind": "grammar",
-      "promptEs": "se + forma de poder + infinitivo",
-      "questionEn": "How do you say that an action can be done without naming who does it?",
-      "answerEn": "Use se, then the form of poder that fits the sentence, then the action verb in its unchanged dictionary form.",
-      "noteEn": "In a direct statement, one thing normally takes puede and several things take pueden. Other sentence types can require forms such as pueda. The final action verb stays unchanged, ending in -ar, -er, or -ir. Se keeps the person doing the action unnamed.",
+      "promptEs": "se + poder + acción en forma de diccionario",
+      "questionEn": "How do you use se and poder to say that something can be done without naming who does it?",
+      "answerEn": "Use se, a form of poder, and the action's dictionary form; se can instead attach to the end of that action.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and stays unchanged. When wording focuses on things receiving an action, poder matches them: la puerta se puede abrir, but las puertas se pueden abrir. The same order can be las puertas pueden abrirse. Other settings change puede to forms such as podía or pueda. Do not assume every se sentence has this agreement. Se puede caminar ('one can walk') talks about people acting in general, without a thing receiving the action to make poder plural, so use singular puede.",
       "example": {
-        "es": "La puerta se puede abrir.",
-        "en": "The door can be opened."
+        "es": "Las entradas pueden comprarse en línea.",
+        "en": "The tickets can be bought online."
       },
       "tags": [
         "grammar",
         "passive se",
-        "possibility",
+        "poder",
         "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1895,11 +1919,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1963,7 +1990,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -2131,11 +2158,11 @@
       "id": "word-estar--state-infinitive",
       "kind": "word",
       "promptEs": "estar",
-      "answerEn": "to be (in a state or condition)",
-      "noteEn": "Estar is the unchanged dictionary form used for states, conditions, and locations. After another conjugated verb, estar itself remains unchanged.",
+      "answerEn": "to be (a place or condition)",
+      "noteEn": "Estar is the unchanged dictionary form used to describe a location or condition. In quiero estar, “I want to be,” quiero changes for the person and time, while estar stays unchanged.",
       "example": {
-        "es": "Quiero estar tranquilo.",
-        "en": "I want to be calm."
+        "es": "Quiero estar cerca de la ventana.",
+        "en": "I want to be near the window."
       },
       "tags": [
         "word",
@@ -2156,7 +2183,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2389,6 +2420,7 @@
         "sequence",
         "Fibonacci"
       ],
+      "questionEn": "How is the Fibonacci sequence formed?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2503,16 +2535,15 @@
       "id": "word-hiciera--subjunctive",
       "kind": "word",
       "promptEs": "hiciera",
-      "answerEn": "I did (special past form used in “whatever I did”)",
-      "noteEn": "Hiciera is a special past form of hacer, “to do.” This form is called the imperfect subjunctive: it leaves possible past actions open rather than stating one as a fact. Repeating hiciera around lo que creates the reusable pattern hiciera lo que hiciera, “whatever I did.”",
+      "answerEn": "did; would do or make (a special past form of hacer)",
+      "noteEn": "Hiciera is a form of hacer, “to do or make.” Some expressions about a purpose or an open possibility require hiciera instead of the ordinary past forms hice or hizo. Hiciera can refer to I, he, she, or formal you; the surrounding words identify who. Its English wording depends on that surrounding expression.",
       "example": {
-        "es": "Hiciera lo que hiciera, el resultado era igual.",
-        "en": "Whatever I did, the result was the same."
+        "es": "Le di papel para que hiciera un dibujo.",
+        "en": "I gave him paper so that he could make a drawing."
       },
       "tags": [
         "word",
-        "hacer",
-        "past subjunctive"
+        "hacer"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2528,7 +2559,7 @@
       "promptEs": "verbo en subjuntivo + lo que + mismo verbo",
       "questionEn": "How can you say “whatever someone does” or “whatever happens” when the conclusion stays the same?",
       "answerEn": "Use the same special form of the verb before and after lo que.",
-      "noteEn": "This special form is called the subjunctive. It leaves every possible action open instead of stating one action as a fact. For present time, ordinary hace (“does”) changes to haga: haga lo que haga. In a past setting, hizo or hacía (“did” or “was doing”) can become hiciera: hiciera lo que hiciera. Both repeated forms must match. The plus signs in the prompt mean “followed by.”",
+      "noteEn": "This special form is called the subjunctive. It leaves every possible action open instead of stating one action as a fact. For present time, ordinary hace (“does”) changes to haga: haga lo que haga. In a past setting, hizo or hacía (“did” or “was doing”) can become hiciera: hiciera lo que hiciera. Both repeated forms must match.",
       "example": {
         "es": "Pase lo que pase, te llamaré.",
         "en": "Whatever happens, I will call you."
@@ -2612,19 +2643,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2663,7 +2696,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -2762,7 +2795,7 @@
       "promptEs": "haber + participio",
       "questionEn": "How do you refer to an action that was already completed after another verb such as poder, deber, or parecer?",
       "answerEn": "Use the unchanged helper haber followed by the completed-action form of the main verb.",
-      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged. The plus sign in the prompt means “followed by.”",
+      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged.",
       "example": {
         "es": "Parece haber terminado.",
         "en": "It seems to have ended."

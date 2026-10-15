@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-d776ca02f17feee3",
+  "revision": "runtime-0ade0d24bbd354d8",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -717,7 +717,7 @@
             "cardIds": [
               "word-tardará--take-time",
               "grammar-simple-future",
-              "phrase-tardar-tiempo-en-infinitive"
+              "grammar-tardar-en-infinitive"
             ]
           },
           {
@@ -734,7 +734,7 @@
             ],
             "cardIds": [
               "word-un",
-              "phrase-tardar-tiempo-en-infinitive"
+              "grammar-tardar-en-infinitive"
             ]
           },
           {
@@ -751,7 +751,7 @@
             ],
             "cardIds": [
               "word-rato--short-while",
-              "phrase-tardar-tiempo-en-infinitive"
+              "grammar-tardar-en-infinitive"
             ]
           },
           {
@@ -768,7 +768,7 @@
             ],
             "cardIds": [
               "word-en--time-to-action",
-              "phrase-tardar-tiempo-en-infinitive"
+              "grammar-tardar-en-infinitive"
             ]
           },
           {
@@ -785,7 +785,7 @@
             ],
             "cardIds": [
               "word-darse--realize",
-              "phrase-tardar-tiempo-en-infinitive",
+              "grammar-tardar-en-infinitive",
               "grammar-pronoun-attached-to-infinitive",
               "phrase-darse-cuenta-de"
             ]
@@ -973,7 +973,7 @@
           },
           {
             "id": "es-xkcd-diapositivas:narration:app-take-time",
-            "cardId": "phrase-tardar-tiempo-en-infinitive",
+            "cardId": "grammar-tardar-en-infinitive",
             "participantWordIds": [
               "es-xkcd-diapositivas:narration:w13",
               "es-xkcd-diapositivas:narration:w14",
@@ -1031,7 +1031,7 @@
               "es-xkcd-diapositivas:narration:w22"
             ],
             "exampleEs": "LES ESTÁS",
-            "explanationEn": "Les identifies the plural receivers and sits before estás, the first verb changed for the listener; the following ongoing-action form stays outside this placement pattern."
+            "explanationEn": "Les identifies the plural receivers and sits before estás, the first verb changed for the listener."
           },
           {
             "id": "es-xkcd-diapositivas:narration:app-progressive",
@@ -1061,7 +1061,7 @@
           "word-gente",
           "word-tardará--take-time",
           "grammar-simple-future",
-          "phrase-tardar-tiempo-en-infinitive",
+          "grammar-tardar-en-infinitive",
           "word-rato--short-while",
           "word-en--time-to-action",
           "word-darse--realize",
@@ -1112,7 +1112,7 @@
       "word-gente",
       "word-tardará--take-time",
       "grammar-simple-future",
-      "phrase-tardar-tiempo-en-infinitive",
+      "grammar-tardar-en-infinitive",
       "word-rato--short-while",
       "word-en--time-to-action",
       "word-darse--realize",
@@ -1310,7 +1310,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1329,7 +1333,7 @@
       "promptEs": "si me disculpa(n) un momento",
       "questionEn": "How can you politely ask one formal listener or several listeners to excuse a brief interruption?",
       "answerEn": "Say si me disculpa un momento to one formal listener, or si me disculpan un momento when addressing several people as ustedes.",
-      "noteEn": "Si means ‘if,’ me identifies the speaker asking to be excused, and un momento gives the brief time requested. Disculpa addresses one formal listener. Disculpan addresses any group in Latin America and a formal group in Spain; an informal group in Spain would use disculpáis. The parentheses in the prompt show that the final n is added only for the disculpan form.",
+      "noteEn": "Si means ‘if,’ me identifies the speaker asking to be excused, and un momento gives the brief time requested. Disculpa addresses one formal listener. Disculpan addresses any group in Latin America and a formal group in Spain; an informal group in Spain would use disculpáis.",
       "example": {
         "es": "Si me disculpa un momento, voy a buscar el informe.",
         "en": "If you'll excuse me for a moment, I am going to get the report."
@@ -1633,8 +1637,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1672,13 +1675,13 @@
     {
       "id": "grammar-parar-de-infinitive",
       "kind": "grammar",
-      "promptEs": "parar de + verbo en forma de diccionario",
-      "questionEn": "How do you say that someone stops doing an action?",
-      "answerEn": "Use a form of parar, then de, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus signs in the prompt show the order of the three pieces. The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Only parar changes for the person and time: paro de hablar, paras de hablar, pararon de hablar. De is required even though English does not translate it separately.",
+      "promptEs": "parar de + acción en forma de diccionario",
+      "questionEn": "How do you use parar de to say that someone stops doing an action?",
+      "answerEn": "Use a form of parar, then de, then the action verb in its dictionary form.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Only parar changes for the person and time: paro de hablar, paras de hablar, pararon de hablar. Keep de even though English does not translate it separately. Adding no makes the person not stop, often expressed in English as 'keep doing': no para de hablar. This is different from pararse a hablar, which means stopping in order to talk.",
       "example": {
-        "es": "Elena para de hablar.",
-        "en": "Elena stops talking."
+        "es": "Elena paró de hablar.",
+        "en": "Elena stopped talking."
       },
       "tags": [
         "grammar",
@@ -1699,16 +1702,14 @@
       "kind": "word",
       "promptEs": "de",
       "answerEn": "no separate English word; links parar to the action that stops",
-      "noteEn": "Spanish requires de between a form of parar and the following action verb. English does not translate this linking word separately.",
+      "noteEn": "Keep de between a form of parar and an action in its dictionary form: the unchanged form ending in -ar, -er, or -ir. Parar changes for the person and time; de and the next action form do not.",
       "example": {
         "es": "Paramos de correr.",
         "en": "We stop running."
       },
       "tags": [
         "word",
-        "linking word",
-        "stopping",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1784,7 +1785,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."
@@ -1803,26 +1804,28 @@
       }
     },
     {
-      "id": "phrase-tardar-tiempo-en-infinitive",
-      "kind": "phrase",
-      "promptEs": "tardar + tiempo + en + infinitivo",
-      "questionEn": "How do you say how long someone takes to do something?",
-      "answerEn": "Use a form of tardar, the amount of time, en, and the action verb in its dictionary form.",
-      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Tardar changes for who takes the time. En links the time to the action and normally has no separate English word in this pattern.",
+      "id": "grammar-tardar-en-infinitive",
+      "kind": "grammar",
+      "promptEs": "tardar + tiempo opcional + en + acción",
+      "questionEn": "How do you use tardar en to say how long someone takes to do something?",
+      "answerEn": "Use a form of tardar, optionally state the time taken, then en and the action in its dictionary form.",
+      "noteEn": "You can state the time taken or leave it unspecified. Tardar changes for who takes the time and when: tardo, tardan, tardaron. The final verb keeps its -ar, -er, or -ir dictionary form: tardan en llegar. Keep en even though English usually has no separate word for it. You can state a duration, use mucho ('a long time'), or ask cuánto ('how long').",
       "example": {
-        "es": "Tardo diez minutos en llegar.",
-        "en": "I take ten minutes to arrive."
+        "es": "Tardaron dos horas en llegar.",
+        "en": "They took two hours to arrive."
       },
       "tags": [
-        "phrase",
+        "grammar",
+        "tardar",
         "time",
+        "infinitive",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "es-xkcd-impostor",
         "contextualSenseReviewed": true
       }
     },
@@ -1854,10 +1857,15 @@
       "id": "word-en--time-to-action",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "no separate English word; links the time taken to the action",
-      "noteEn": "",
+      "answerEn": "no separate English word; links tardar to the action taking time",
+      "noteEn": "Tardar uses en before the action that takes time. That action stays in its dictionary form, such as llegar, 'to arrive.' A duration can appear between tardar and en; only tardar changes for the person and time.",
+      "example": {
+        "es": "Tardé diez minutos en llegar.",
+        "en": "I took ten minutes to arrive."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1897,7 +1905,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1991,8 +1999,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2040,7 +2048,7 @@
       "promptEs": "me/te/le/nos/os/les delante del verbo que cambia",
       "questionEn": "Where do you put the short word that identifies who receives something?",
       "answerEn": "Put me, te, le, nos, os, or les before the first verb that changes for the person and time.",
-      "noteEn": "The slashes in the prompt mean to choose the one receiver word that fits. A verb that changes for the person and time is often called a conjugated verb: estoy rather than the dictionary form estar. In a multiword verb phrase, the receiver word goes before that changed verb, so les estoy enviando places les before estoy, not between estoy and enviando.",
+      "noteEn": "A verb that changes for the person and time is often called a conjugated verb: estoy rather than the dictionary form estar. In a multiword verb phrase, the receiver word goes before that changed verb, so les estoy enviando places les before estoy, not between estoy and enviando.",
       "example": {
         "es": "Les estoy enviando una foto.",
         "en": "I am sending them a photo."
@@ -2082,7 +2090,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

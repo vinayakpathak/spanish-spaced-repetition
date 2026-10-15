@@ -11,6 +11,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import reusePolicy from "../data/authoring/card-reuse-policy.json" with { type: "json" };
 import {
   buildGeometryRegistry,
   compileManualAuthoringCorpus,
@@ -259,6 +260,7 @@ async function main(options) {
     seedCards: cards,
     sourceComics: source.comics,
     geometryByComicId,
+    reusePolicy,
   });
   process.stdout.write(
     `Validated ${compiled.comics.length} individually AI-authored/internal-QA comic file${compiled.comics.length === 1 ? "" : "s"}, ${compiled.cardCatalog.length} reachable cards, and ${compiled.bundles.reduce((sum, { bundle }) => sum + bundle.comic.regions.flatMap((region) => region.words).length, 0)} printed word occurrences.\n`,

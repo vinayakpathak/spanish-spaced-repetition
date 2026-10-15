@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-c06785d7e5f232a9",
+  "revision": "runtime-aa124ae8fca077dc",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -391,7 +391,7 @@
               }
             ],
             "cardIds": [
-              "word-el--owned-item-after-le",
+              "word-el--affected-owner-article",
               "grammar-affected-owner-definite-article"
             ]
           },
@@ -426,7 +426,7 @@
               }
             ],
             "cardIds": [
-              "word-de--noun-classifier",
+              "word-de--contents",
               "grammar-affected-owner-definite-article"
             ]
           },
@@ -487,12 +487,21 @@
           },
           {
             "id": "es-xkcd-plan-de-contingencia:father-answer:app-her-supply",
-            "cardId": "word-el--owned-item-after-le",
+            "cardId": "word-el--affected-owner-article",
             "participantWordIds": [
               "es-xkcd-plan-de-contingencia:father-answer:w09"
             ],
             "exampleEs": "EL",
             "explanationEn": "Because le has already identified the daughter, el introduces suministro as her supply while agreeing with that masculine singular noun."
+          },
+          {
+            "id": "es-xkcd-plan-de-contingencia:father-answer:review-word-w11",
+            "cardId": "word-de--contents",
+            "participantWordIds": [
+              "es-xkcd-plan-de-contingencia:father-answer:w11"
+            ],
+            "exampleEs": "SUMINISTRO DE INSULINA",
+            "explanationEn": "Here de names the substance supplied, not a general purpose or field."
           }
         ],
         "cardIds": [
@@ -508,9 +517,9 @@
           "grammar-affected-owner-definite-article",
           "word-cortamos--cut-off",
           "concept-jurassic-park-contingency-plan",
-          "word-el--owned-item-after-le",
+          "word-el--affected-owner-article",
           "word-suministro",
-          "word-de--noun-classifier",
+          "word-de--contents",
           "word-insulina"
         ]
       },
@@ -626,7 +635,7 @@
               }
             ],
             "cardIds": [
-              "word-de--paradigm-domain"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -671,7 +680,7 @@
           },
           {
             "id": "es-xkcd-plan-de-contingencia:caption:app-parenting-domain",
-            "cardId": "word-de--paradigm-domain",
+            "cardId": "word-de--noun-classifier",
             "participantWordIds": [
               "es-xkcd-plan-de-contingencia:caption:w06"
             ],
@@ -688,7 +697,7 @@
           "grammar-descriptive-adjective-after-noun",
           "grammar-adjective-gender-agreement",
           "word-jurasico",
-          "word-de--paradigm-domain",
+          "word-de--noun-classifier",
           "word-paternidad"
         ]
       }
@@ -716,16 +725,16 @@
       "word-le--affected-person",
       "grammar-affected-owner-definite-article",
       "word-cortamos--cut-off",
-      "word-el--owned-item-after-le",
+      "word-el--affected-owner-article",
       "word-suministro",
-      "word-de--noun-classifier",
+      "word-de--contents",
       "word-insulina",
       "word-uso--use",
       "word-el--article",
       "word-paradigma",
       "word-parque",
       "word-jurasico",
-      "word-de--paradigm-domain",
+      "word-de--noun-classifier",
       "word-paternidad"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -740,7 +749,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -933,7 +946,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1039,7 +1052,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1082,10 +1099,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1171,17 +1191,15 @@
       "id": "word-le--affected-person",
       "kind": "word",
       "promptEs": "le",
-      "answerEn": "her; marks the person affected by a situation or result",
-      "noteEn": "Le can identify one person affected by what happens even when natural English does not use ‘to.’ A phrase beginning with a can make that person explicit: se le queda a Ana.",
+      "answerEn": "marks one person or entity affected by what happens",
+      "noteEn": "Le can identify the person whose body, possessions, or situation is affected, even when nothing is literally given to them. It can refer to him, her, or formal you. English may use 'his,' 'her,' 'your,' or 'to' or 'with' that person; the surrounding words identify who is meant.",
       "example": {
-        "es": "A Laura se le quedó esa sensación.",
-        "en": "That feeling stayed with Laura."
+        "es": "Le lavé las manos al niño.",
+        "en": "I washed the child's hands."
       },
       "tags": [
         "word",
-        "indirect object",
-        "affected person",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1244,27 +1262,24 @@
       }
     },
     {
-      "id": "word-el--owned-item-after-le",
+      "id": "word-el--affected-owner-article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "the; English often uses a possessive because le already marks the affected owner",
-      "noteEn": "Spanish can use le for the affected owner and an ordinary article before that person's item or service. English often uses a possessive word instead. El matches a masculine singular item, not the owner's gender.",
+      "answerEn": "the; English often uses my, your, or another owner's word",
+      "noteEn": "Spanish often uses el before a masculine singular body part or close possession when me, te, le, or the surrounding context already identifies the affected owner. El matches the thing, not its owner's gender; it does not itself say whose it is.",
       "example": {
-        "es": "Le cancelaron el servicio a Laura.",
-        "en": "They canceled Laura's service."
+        "es": "Me quitaron el sombrero.",
+        "en": "They took my hat away."
       },
       "tags": [
         "word",
-        "article",
-        "possession",
-        "affected person",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-plan-de-contingencia",
+        "ownerComicId": "es-xkcd-diario-3",
         "contextualSenseReviewed": true
       }
     },
@@ -1288,26 +1303,24 @@
       }
     },
     {
-      "id": "word-de--noun-classifier",
+      "id": "word-de--contents",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "of; filled with or containing",
+      "noteEn": "De can connect a container, area, food, or supply to what it contains. It names the contents or ingredients, not the container's material or its owner. English may use 'of' or put the content word first.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Trajo una bolsa de caramelos.",
+        "en": "She brought a bag of sweets."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "ownerComicId": "es-xkcd-demasiado-lejos",
         "contextualSenseReviewed": true
       }
     },
@@ -1435,27 +1448,24 @@
       }
     },
     {
-      "id": "word-de--paradigm-domain",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "for; links a model or approach to its field",
-      "noteEn": "After words such as modelo, método, or paradigma, de can introduce the activity or field to which that approach belongs. English may use ‘for,’ ‘to,’ or a noun placed before another noun.",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Probamos un nuevo paradigma de enseñanza.",
-        "en": "We tried a new teaching paradigm."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "domain",
-        "noun phrase",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-plan-de-contingencia",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8361fd141b5c5166",
+  "revision": "runtime-7e10b1783b32f8c4",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -729,7 +729,7 @@
               }
             ],
             "cardIds": [
-              "word-a--dedicarse-complement",
+              "word-a--dedicar-target",
               "phrase-dedicarse-a"
             ]
           },
@@ -770,8 +770,7 @@
             ],
             "cardIds": [
               "word-experimentacion",
-              "phrase-dedicarse-a",
-              "concept-margarine-lubricant-joke"
+              "phrase-dedicarse-a"
             ]
           },
           {
@@ -788,8 +787,7 @@
             ],
             "cardIds": [
               "word-sexual",
-              "phrase-dedicarse-a",
-              "concept-margarine-lubricant-joke"
+              "phrase-dedicarse-a"
             ]
           }
         ],
@@ -934,10 +932,9 @@
           "word-omision--default",
           "word-dedicarse",
           "phrase-dedicarse-a",
-          "word-a--dedicarse-complement",
+          "word-a--dedicar-target",
           "word-la--article",
           "word-experimentacion",
-          "concept-margarine-lubricant-joke",
           "word-sexual"
         ]
       },
@@ -1307,10 +1304,9 @@
       "word-omision--default",
       "word-dedicarse",
       "phrase-dedicarse-a",
-      "word-a--dedicarse-complement",
+      "word-a--dedicar-target",
       "word-la--article",
       "word-experimentacion",
-      "concept-margarine-lubricant-joke",
       "word-sexual",
       "word-je--heh",
       "word-no",
@@ -1324,7 +1320,8 @@
       "phrase-ir-a-por",
       "word-a--fixed-ir-a-por",
       "word-por--fixed-ir-a-por",
-      "word-margarina"
+      "word-margarina",
+      "concept-margarine-lubricant-joke"
     ],
     "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
@@ -1355,8 +1352,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1593,8 +1594,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1616,7 +1617,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1752,7 +1757,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1863,7 +1872,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2200,26 +2213,24 @@
       }
     },
     {
-      "id": "word-a--dedicarse-complement",
+      "id": "word-a--dedicar-target",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to; introduces the activity after dedicarse",
-      "noteEn": "Dedicarse requires a before a noun or an action verb that names the activity.",
+      "answerEn": "to; introduces what time, effort, or activity is devoted to",
+      "noteEn": "Dedicar and dedicarse use a before the recipient, field, or activity receiving someone's time or effort. An action after a stays in its dictionary form, such as estudiar, 'to study.'",
       "example": {
-        "es": "Me dedico a escribir.",
-        "en": "I devote myself to writing."
+        "es": "Dedico una hora a estudiar.",
+        "en": "I devote an hour to studying."
       },
       "tags": [
         "word",
-        "required complement",
-        "dedicarse a",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-indecision",
+        "ownerComicId": "es-xkcd-monopatin-electrico-1",
         "contextualSenseReviewed": true
       }
     },
@@ -2251,26 +2262,6 @@
         "word",
         "noun",
         "B1"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-indecision",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "concept-margarine-lubricant-joke",
-      "kind": "concept",
-      "promptEs": "la margarina como lubricante improvisado",
-      "answerEn": "Margarine is greasy, so fetching it implies an immediate plan to use it as an improvised sexual lubricant.",
-      "noteEn": "The original English comic names Crisco, a brand of vegetable shortening, for the same implication. The Spanish version substitutes margarina. That unexpectedly practical response is the final escalation of the joke.",
-      "tags": [
-        "concept",
-        "joke",
-        "cultural adaptation",
-        "adult humor"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2330,8 +2321,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2498,7 +2488,7 @@
       "promptEs": "ir a por + cosa",
       "questionEn": "How do speakers in Spain commonly say that someone goes to get or fetch something?",
       "answerEn": "Use a form of ir, then a por, then the thing being fetched.",
-      "noteEn": "In this Spain usage, both a and por stay before the object: voy a por, fue a por, iremos a por. This is not the ir a plus action-verb pattern for “going to do” something. Speakers elsewhere often say ir por or ir a buscar instead.",
+      "noteEn": "In this Spain usage, both a and por stay before the object: voy a por, fue a por, iremos a por. This is not ir a followed by an action verb for “going to do” something. Speakers elsewhere often say ir por or ir a buscar instead.",
       "example": {
         "es": "Voy a por las llaves.",
         "en": "I am going to get the keys."
@@ -2577,6 +2567,25 @@
         "food",
         "feminine noun",
         "A1"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-indecision",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "concept-margarine-lubricant-joke",
+      "kind": "concept",
+      "promptEs": "doble sentido de la margarina",
+      "questionEn": "What sexual innuendo is attached to the margarine?",
+      "answerEn": "Its greasy texture makes fetching it suggest improvised sexual lubrication.",
+      "noteEn": "The word is carrying an innuendo, not naming a special Spanish idiom. This is an explanation of the joke, not a claim that margarine is a suitable or safe lubricant.",
+      "tags": [
+        "concept",
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

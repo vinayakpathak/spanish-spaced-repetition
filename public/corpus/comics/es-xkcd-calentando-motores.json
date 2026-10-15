@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-c7a18003ef8d6cbc",
+  "revision": "runtime-01006a030703bb01",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -285,7 +285,7 @@
               }
             ],
             "cardIds": [
-              "word-tierra",
+              "word-tierra--planet-earth",
               "concept-lhc-startup-cosmic-ray-safety"
             ]
           }
@@ -353,7 +353,7 @@
           "word-noche",
           "word-en",
           "word-la--article",
-          "word-tierra"
+          "word-tierra--planet-earth"
         ]
       },
       {
@@ -637,7 +637,7 @@
             "cardIds": [
               "word-hayan",
               "grammar-negated-relative-subjunctive",
-              "grammar-perfect-subjunctive"
+              "grammar-present-perfect-subjunctive"
             ]
           },
           {
@@ -654,7 +654,7 @@
             ],
             "cardIds": [
               "word-hecho--done",
-              "grammar-perfect-subjunctive"
+              "grammar-present-perfect-subjunctive"
             ]
           },
           {
@@ -790,7 +790,7 @@
           },
           {
             "id": "es-xkcd-calentando-motores:panel-2-dismissal:app-perfect-subjunctive",
-            "cardId": "grammar-perfect-subjunctive",
+            "cardId": "grammar-present-perfect-subjunctive",
             "participantWordIds": [
               "es-xkcd-calentando-motores:panel-2-dismissal:w16",
               "es-xkcd-calentando-motores:panel-2-dismissal:w17"
@@ -821,7 +821,7 @@
           "word-nada",
           "word-que--relative",
           "word-hayan",
-          "grammar-perfect-subjunctive",
+          "grammar-present-perfect-subjunctive",
           "word-hecho--done",
           "word-ya--already",
           "word-los",
@@ -1160,7 +1160,7 @@
               }
             ],
             "cardIds": [
-              "word-ir",
+              "word-ir--social-outing",
               "grammar-para-infinitive-purpose",
               "phrase-ir-de-marcha"
             ]
@@ -1222,6 +1222,15 @@
             ],
             "exampleEs": "IR DE MARCHA",
             "explanationEn": "Ir is the unchanged form required after para, while de marcha supplies the fixed partying meaning."
+          },
+          {
+            "id": "es-xkcd-calentando-motores:panel-3-party-excuse:review-word-w11",
+            "cardId": "word-ir--social-outing",
+            "participantWordIds": [
+              "es-xkcd-calentando-motores:panel-3-party-excuse:w11"
+            ],
+            "exampleEs": "IR DE MARCHA",
+            "explanationEn": "Ir names going out socially; de marcha specifies partying."
           }
         ],
         "cardIds": [
@@ -1235,7 +1244,7 @@
           "word-excusa",
           "word-para",
           "grammar-para-infinitive-purpose",
-          "word-ir",
+          "word-ir--social-outing",
           "phrase-ir-de-marcha",
           "word-de--fixed-ir-de-marcha",
           "word-marcha--partying"
@@ -1989,7 +1998,7 @@
       "word-noche",
       "word-en",
       "word-la--article",
-      "word-tierra",
+      "word-tierra--planet-earth",
       "word-no",
       "grammar-negative-tu-command",
       "phrase-no-fastidies",
@@ -2010,7 +2019,7 @@
       "word-nada",
       "word-que--relative",
       "word-hayan",
-      "grammar-perfect-subjunctive",
+      "grammar-present-perfect-subjunctive",
       "word-hecho--done",
       "word-ya--already",
       "word-los",
@@ -2030,7 +2039,7 @@
       "word-excusa",
       "word-para",
       "grammar-para-infinitive-purpose",
-      "word-ir",
+      "word-ir--social-outing",
       "phrase-ir-de-marcha",
       "word-de--fixed-ir-de-marcha",
       "word-marcha--partying",
@@ -2140,22 +2149,21 @@
       "id": "word-se--intransitive-change",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; presents the thing as changing",
-      "noteEn": "With verbs such as reducir and ampliar, se lets Spanish describe a change without naming anyone who causes it. English often uses a simple verb such as “shrinks” or “widens.”",
+      "answerEn": "no separate English word; presents something as undergoing a change",
+      "noteEn": "With some verbs, se makes the named thing the one that changes, rather than the thing someone changes. Compare Marta abre la puerta with la puerta se abre. The verb still changes for the thing and time; se does not say that it deliberately acts on itself.",
       "example": {
-        "es": "La mancha se reduce.",
-        "en": "The stain shrinks."
+        "es": "La taza se rompió.",
+        "en": "The cup broke."
       },
       "tags": [
         "word",
-        "pronoun",
-        "change of state"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2197,6 +2205,7 @@
         "cosmic rays",
         "xkcd joke"
       ],
+      "questionEn": "Why are natural cosmic rays relevant to fears about starting the Large Hadron Collider?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2405,19 +2414,23 @@
       }
     },
     {
-      "id": "word-tierra",
+      "id": "word-tierra--planet-earth",
       "kind": "word",
       "promptEs": "tierra",
-      "answerEn": "Earth; land",
+      "answerEn": "Earth; the planet Earth",
       "noteEn": "",
       "tags": [
-        "word"
+        "word",
+        "noun",
+        "planet",
+        "astronomy",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-teorias-de-la-conspiracion",
+        "ownerComicId": "es-xkcd-corriente-inducida",
         "contextualSenseReviewed": true
       }
     },
@@ -2428,8 +2441,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2658,7 +2670,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2733,7 +2749,7 @@
       "promptEs": "antecedente negado + que + subjuntivo",
       "questionEn": "Which verb form follows que when you deny that a person or thing exists or has the described property?",
       "answerEn": "Use the special subjunctive form after que because the description is being denied, not stated as a fact.",
-      "noteEn": "An antecedent is the person or thing described by que; a negated antecedent is one the wording presents as absent or not fitting. The special verb form is called the subjunctive. Compare the ordinary statement vive in Conozco a alguien que vive aquí with viva in No conozco a nadie que viva aquí. The plus signs in the prompt mean “followed by.”",
+      "noteEn": "An antecedent is the person or thing described by que; a negated antecedent is one the wording presents as absent or not fitting. The special verb form is called the subjunctive. Compare the ordinary statement vive in Conozco a alguien que vive aquí with viva in No conozco a nadie que viva aquí.",
       "example": {
         "es": "No conozco a nadie que viva aquí.",
         "en": "I do not know anyone who lives here."
@@ -2784,7 +2800,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."
@@ -2865,28 +2881,27 @@
       }
     },
     {
-      "id": "grammar-perfect-subjunctive",
+      "id": "grammar-present-perfect-subjunctive",
       "kind": "grammar",
-      "promptEs": "haya/hayas/haya/hayamos/hayáis/hayan + participio",
-      "questionEn": "How do you refer to a completed action when the surrounding sentence treats it as uncertain, denied, desired, or otherwise not simply stated as fact?",
-      "answerEn": "Use the matching special form of haber—haya, hayas, hayamos, hayáis, or hayan—then the action verb's completed-action form.",
-      "noteEn": "These special haber forms belong to what is called the subjunctive, used when a clause is framed through uncertainty, denial, wishes, or similar attitudes rather than asserted directly. The completed-action form, called the past participle, stays unchanged: haya hablado, hayas comido, hayan vivido. Only haber changes for the person or group.",
+      "promptEs": "haya, hayas, hayamos, hayáis o hayan + acción completada",
+      "questionEn": "How do you use haya hablado and similar forms for an earlier event that is doubted, desired, or evaluated?",
+      "answerEn": "Use the matching form of haber—haya, hayas, hayamos, hayáis, or hayan—followed by the verb's completed-action form.",
+      "noteEn": "These haber forms are called subjunctive: they are used when the surrounding words frame an event through doubt, wishes, evaluation, or an unidentified person or thing, rather than simply reporting it. Compare han salido, 'they have left,' with dudo que hayan salido, 'I doubt that they have left.' Haya serves I, he, she, or formal singular you; hayas is familiar singular you, hayamos is we, hayáis is familiar plural you mainly in Spain, and hayan is they or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. The completed-action form stays unchanged: hablar becomes hablado, comer becomes comido, and hacer becomes hecho.",
       "example": {
-        "es": "No conozco a nadie que haya visitado Perú.",
-        "en": "I do not know anyone who has visited Peru."
+        "es": "Dudo que hayan salido.",
+        "en": "I doubt that they have left."
       },
       "tags": [
         "grammar",
+        "completed event",
         "subjunctive",
-        "perfect",
-        "completed action",
         "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-calentando-motores",
+        "ownerComicId": "es-xkcd-sagan-man",
         "contextualSenseReviewed": true
       }
     },
@@ -2918,8 +2933,12 @@
       "id": "word-ya--already",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "already",
-      "noteEn": "",
+      "answerEn": "already; by now, often yet in a question",
+      "noteEn": "Ya marks that an expected action or state has been reached by the time being discussed. English usually says 'already' in a statement, but often 'yet' in a question about whether it has happened.",
+      "example": {
+        "es": "¿Ya llegó el tren?",
+        "en": "Has the train arrived yet?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3062,8 +3081,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3127,17 +3146,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3269,19 +3286,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3291,24 +3310,25 @@
       }
     },
     {
-      "id": "word-ir",
+      "id": "word-ir--social-outing",
       "kind": "word",
       "promptEs": "ir",
-      "answerEn": "to go; to work or run",
-      "noteEn": "Ir normally means “to go.” In ir bien or ir mal, it describes how something works or is going: va bien means “it works” or “it’s going well.”",
+      "answerEn": "to go out (socially)",
+      "noteEn": "Ir can refer to a social outing in expressions such as ir de marcha, going out to party, or ir de copas, going out for drinks. Ir is the unchanged dictionary form; changed forms include voy, “I go,” and vamos, “we go.”",
       "example": {
-        "es": "La aplicación va bien.",
-        "en": "The app is working well."
+        "es": "Queremos ir de copas el viernes.",
+        "en": "We want to go out for drinks on Friday."
       },
       "tags": [
         "word",
-        "contextual sense"
+        "ir",
+        "social outing"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-calentando-motores",
         "contextualSenseReviewed": true
       }
     },
@@ -3407,17 +3427,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3433,7 +3451,7 @@
       "promptEs": "apuntarse a + plan o actividad",
       "questionEn": "How do you say that someone signs up for, joins, or is willing to take part in a plan?",
       "answerEn": "Use the matching small pronoun and form of apuntarse, then a and the plan or activity.",
-      "noteEn": "The small pronoun changes with the person: me apunto, te apuntas, se apunta, nos apuntamos. The a introduces what that person joins. The plus sign in the prompt means “followed by,” and the rest of the prompt names the plan or activity that fills that slot.",
+      "noteEn": "The small pronoun changes with the person: me apunto, te apuntas, se apunta, nos apuntamos. The a introduces what that person joins.",
       "example": {
         "es": "Me apunto a la excursión.",
         "en": "I am joining the excursion."
@@ -3515,6 +3533,7 @@
         "wordplay",
         "xkcd joke"
       ],
+      "questionEn": "How does the flirtation carry its top-and-bottom wordplay into ordering drinks?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3820,7 +3839,7 @@
       "promptEs": "invitar a alguien a algo",
       "questionEn": "How do you say that someone invites a person to an event or treats them to food or a drink?",
       "answerEn": "Use invitar for the invitation, identify the invited person, then use a before the event, activity, food, or drink.",
-      "noteEn": "Alguien means the person invited and algo means what they are invited to; they are placeholders, not words that must appear literally. A name often has a before it: invito a Marta. An object pronoun can replace the person: te invito. The second a introduces the invitation or treat.",
+      "noteEn": "A name often has a before it: invito a Marta. A short word can replace the person: te invito. The second a introduces the event, activity, food, or drink offered.",
       "example": {
         "es": "Te invito a un café.",
         "en": "I will treat you to a coffee."

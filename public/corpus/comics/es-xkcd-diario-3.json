@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-39f9f3dd85135526",
+  "revision": "runtime-71df485f2941a364",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -735,7 +735,7 @@
               }
             ],
             "cardIds": [
-              "word-lo--fixed-ponerlo-facil",
+              "word-lo--object-pronoun",
               "phrase-ponerselo-facil-a-alguien"
             ]
           },
@@ -823,7 +823,7 @@
           "word-no",
           "word-me--recipient-ponerlo-facil",
           "phrase-ponerselo-facil-a-alguien",
-          "word-lo--fixed-ponerlo-facil",
+          "word-lo--object-pronoun",
           "word-has",
           "grammar-present-perfect",
           "word-puesto--made-easy",
@@ -1313,7 +1313,7 @@
               }
             ],
             "cardIds": [
-              "word-me--gustar-experiencer",
+              "word-me--experiencer",
               "grammar-gustar-with-noun"
             ]
           },
@@ -1382,10 +1382,19 @@
             ],
             "exampleEs": "ME GUSTA MI SOMBRERO",
             "explanationEn": "Me identifies the speaker as the person experiencing the liking, while gusta stays singular because mi sombrero is one liked thing."
+          },
+          {
+            "id": "es-xkcd-diario-3:likes-hat:review-word-w02",
+            "cardId": "word-gusta--i-like",
+            "participantWordIds": [
+              "es-xkcd-diario-3:likes-hat:w02"
+            ],
+            "exampleEs": "ME GUSTA",
+            "explanationEn": "Me identifies the speaker as the one who likes it. Gusta supplies the liking meaning; this marker does not create a new sense of gusta."
           }
         ],
         "cardIds": [
-          "word-me--gustar-experiencer",
+          "word-me--experiencer",
           "grammar-gustar-with-noun",
           "word-gusta--i-like",
           "word-mi",
@@ -1417,7 +1426,7 @@
               }
             ],
             "cardIds": [
-              "word-me--person-losing-thing",
+              "word-me--affected-owner",
               "grammar-quitarle-algo-a-alguien"
             ]
           },
@@ -1457,7 +1466,7 @@
               }
             ],
             "cardIds": [
-              "word-el--owned-item-after-person-pronoun",
+              "word-el--affected-owner-article",
               "grammar-quitarle-algo-a-alguien"
             ]
           },
@@ -1495,10 +1504,10 @@
           }
         ],
         "cardIds": [
-          "word-me--person-losing-thing",
+          "word-me--affected-owner",
           "grammar-quitarle-algo-a-alguien",
           "word-quitaste--took-away",
-          "word-el--owned-item-after-person-pronoun",
+          "word-el--affected-owner-article",
           "word-sombrero"
         ]
       }
@@ -1533,7 +1542,7 @@
       "word-no",
       "word-me--recipient-ponerlo-facil",
       "phrase-ponerselo-facil-a-alguien",
-      "word-lo--fixed-ponerlo-facil",
+      "word-lo--object-pronoun",
       "word-puesto--made-easy",
       "word-fácil",
       "word-penetraste--entered",
@@ -1557,13 +1566,13 @@
       "phrase-cometer-un-error",
       "word-un",
       "word-error--mistake",
-      "word-me--gustar-experiencer",
+      "word-me--experiencer",
       "grammar-gustar-with-noun",
       "word-gusta--i-like",
-      "word-me--person-losing-thing",
+      "word-me--affected-owner",
       "grammar-quitarle-algo-a-alguien",
       "word-quitaste--took-away",
-      "word-el--owned-item-after-person-pronoun"
+      "word-el--affected-owner-article"
     ],
     "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
@@ -1645,7 +1654,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1854,8 +1867,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2112,8 +2129,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2150,13 +2166,13 @@
     {
       "id": "phrase-ponerselo-facil-a-alguien",
       "kind": "phrase",
-      "promptEs": "ponérselo fácil a alguien",
-      "questionEn": "How do you say that someone makes a situation easy for another person?",
-      "answerEn": "Use a short person word, lo, a form of poner, and fácil: me lo pones fácil, nos lo puso fácil, and so on.",
-      "noteEn": "The short person word identifies who benefits: me, te, le, nos, os, or les. Lo stands for the situation, poner changes for person and time, and fácil describes the resulting difficulty. With haber, use the irregular completed-action form puesto.",
+      "promptEs": "ponérselo fácil o difícil a alguien",
+      "questionEn": "How do you use poner with lo to say that someone makes things easy or difficult for another person?",
+      "answerEn": "Use a short word for the affected person, lo, a form of poner, then fácil or difícil.",
+      "noteEn": "Lo stands for the situation. The person word comes first: me lo pones fácil ('you make it easy for me'), nos lo ponen difícil ('they make it difficult for us'). Use me, te, nos, or os as needed; le and les change to se immediately before lo, giving se lo, not le lo or les lo. Poner changes for who causes the situation and for the time: pones, puso; with haber, its completed-action form is puesto, as in me lo has puesto fácil. Fácil and difícil describe the difficulty of the situation, not the person's gender.",
       "example": {
-        "es": "Nos lo pusieron fácil.",
-        "en": "They made it easy for us."
+        "es": "Nos lo pusieron difícil.",
+        "en": "They made it difficult for us."
       },
       "tags": [
         "phrase",
@@ -2174,26 +2190,24 @@
       }
     },
     {
-      "id": "word-lo--fixed-ponerlo-facil",
+      "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "no separate English word; completes ponerlo fácil",
-      "noteEn": "In ponerlo fácil, lo stands for the situation being made easy. Natural English normally expresses this as “make it easy” without translating lo separately.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
-        "es": "El profesor nos lo puso fácil.",
-        "en": "The teacher made it easy for us."
+        "es": "Tengo el libro y lo leo.",
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
-        "pronoun",
-        "idiom",
-        "poner"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-diario-3",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2377,10 +2391,10 @@
     {
       "id": "grammar-lo-adjective-as-noun",
       "kind": "grammar",
-      "promptEs": "lo + adjetivo",
-      "questionEn": "How do you refer to “what is important,” “the difficult part,” or another general quality without naming a noun?",
-      "answerEn": "Put the unchanged word lo before a masculine-singular adjective: lo importante, lo difícil, lo bueno.",
-      "noteEn": "Here lo does not stand for a masculine object. It turns the quality into a general idea or aspect, such as lo importante, “what is important.” The adjective stays in its masculine singular form because there is no named noun for it to match.",
+      "promptEs": "lo + palabra descriptiva",
+      "questionEn": "How do you use lo to mean 'the good part,' 'what is important,' or another general quality?",
+      "answerEn": "Put lo before the masculine singular form of a describing word, without adding a noun.",
+      "noteEn": "A describing word is called an adjective: bueno means good and difícil means difficult. Lo turns that quality into a general thing or aspect, as in lo bueno ('the good part') and lo difícil ('what is difficult'). It does not refer to a masculine object. Keep the describing word masculine singular: lo bueno, not lo buena or lo buenos. Lo mejor likewise means the best thing or part; mejor itself supplies 'best.'",
       "example": {
         "es": "Lo difícil es empezar.",
         "en": "The difficult part is starting."
@@ -2388,7 +2402,7 @@
       "tags": [
         "grammar",
         "neutral lo",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2445,7 +2459,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2698,7 +2716,7 @@
       "kind": "word",
       "promptEs": "error",
       "answerEn": "mistake; error",
-      "noteEn": "Error can describe a mistaken action, judgment, or result. In computing it can also mean an error or bug, but this card teaches the ordinary mistake sense.",
+      "noteEn": "Error can describe a mistaken action, judgment, or result. In computing, it can also mean an error or bug.",
       "example": {
         "es": "Fue un error sincero.",
         "en": "It was an honest mistake."
@@ -2717,27 +2735,24 @@
       }
     },
     {
-      "id": "word-me--gustar-experiencer",
+      "id": "word-me--experiencer",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "marks me as the person who likes something",
-      "noteEn": "With gustar, Spanish presents the liked thing as pleasing to a person. Me identifies the speaker as that person; it does not become a separate English word when the natural translation uses “I.”",
+      "answerEn": "marks me as the person who feels, likes, or experiences something",
+      "noteEn": "Me identifies the speaker as the person having a feeling, impression, preference, or difficulty. English often makes this person 'I,' while Spanish builds its wording around what produces the reaction. Compare me gusta el libro with me gustan los libros: me stays the same.",
       "example": {
-        "es": "Me gusta el café.",
-        "en": "I like coffee."
+        "es": "Me gustan estas canciones.",
+        "en": "I like these songs."
       },
       "tags": [
         "word",
-        "gustar",
-        "experiencer",
-        "pronoun",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pareja",
+        "ownerComicId": "es-xkcd-ancho-fijo",
         "contextualSenseReviewed": true
       }
     },
@@ -2770,11 +2785,11 @@
       "id": "word-gusta--i-like",
       "kind": "word",
       "promptEs": "gusta",
-      "answerEn": "I like; is pleasing to me",
-      "noteEn": "With me before it, gusta expresses that one thing or situation is pleasing to the speaker. The liked thing controls the verb: use gusta for one thing and gustan for more than one.",
+      "answerEn": "is pleasing; like(s)",
+      "noteEn": "Gusta expresses liking, but the thing or activity that is liked controls its form. Use gusta for one thing or an activity, and gustan for several things. A short word identifies who likes it: me means to me, te to you, and le or les to another person or people.",
       "example": {
-        "es": "Me gusta este libro.",
-        "en": "I like this book."
+        "es": "A mis vecinos les gusta caminar.",
+        "en": "My neighbors like walking."
       },
       "tags": [
         "word",
@@ -2792,20 +2807,18 @@
       }
     },
     {
-      "id": "word-me--person-losing-thing",
+      "id": "word-me--affected-owner",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "from me; marks me as the person who loses the thing",
-      "noteEn": "With quitar, me identifies the speaker as the person something is taken away from. Natural English often uses “from me” or a possessive such as “my.”",
+      "answerEn": "marks me as the person whose body, possessions, or situation is affected",
+      "noteEn": "Spanish can use me for the affected owner and el or la before the thing involved. English often says 'my' or 'from me' instead. Me identifies the person; the article before the thing matches that thing, not its owner.",
       "example": {
         "es": "Me quitaron el teléfono.",
         "en": "They took my phone away."
       },
       "tags": [
         "word",
-        "pronoun",
-        "affected person",
-        "quitar"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2821,7 +2834,7 @@
       "promptEs": "me/te/le/nos/os/les + quitar + cosa (+ a alguien o algo)",
       "questionEn": "How do you say that someone takes one thing away from another person or thing?",
       "answerEn": "Use a short word such as me or le with quitar, then name the thing taken away. You can add a followed by the person or thing that is deprived of it.",
-      "noteEn": "Quitar changes for the person and time. The short word identifies the person or thing that loses something: me, te, le, nos, os, or les. With an unchanged dictionary-form verb, attach it as in quitarle; with a changed verb, place it before, as in le quita or me quitaste. Spanish can repeat or clarify the affected entity after a, even though English uses ‘from’ or a possessive. In the prompt, each plus sign means ‘followed by,’ and the parentheses mark the optional clarifying phrase.",
+      "noteEn": "Quitar changes for the person and time. The short word identifies the person or thing that loses something: me, te, le, nos, os, or les. With an unchanged dictionary-form verb, attach it as in quitarle; with a changed verb, place it before, as in le quita or me quitaste. Spanish can repeat or clarify the affected entity after a, even though English uses ‘from’ or a possessive.",
       "example": {
         "es": "Ana le quita el juguete a Luis.",
         "en": "Ana takes the toy away from Luis."
@@ -2865,20 +2878,18 @@
       }
     },
     {
-      "id": "word-el--owned-item-after-person-pronoun",
+      "id": "word-el--affected-owner-article",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "my here; Spanish uses el because me already marks the affected owner",
-      "noteEn": "Spanish often uses the definite article before an owned item when a short word such as me, te, or le already identifies the affected owner. English commonly uses a possessive instead.",
+      "answerEn": "the; English often uses my, your, or another owner's word",
+      "noteEn": "Spanish often uses el before a masculine singular body part or close possession when me, te, le, or the surrounding context already identifies the affected owner. El matches the thing, not its owner's gender; it does not itself say whose it is.",
       "example": {
-        "es": "Me rompieron el teléfono.",
-        "en": "They broke my phone."
+        "es": "Me quitaron el sombrero.",
+        "en": "They took my hat away."
       },
       "tags": [
         "word",
-        "article",
-        "possession",
-        "affected person"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

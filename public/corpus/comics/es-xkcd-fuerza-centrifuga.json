@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-c6702645559df0f8",
+  "revision": "runtime-0456a47aee3c12af",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -2051,8 +2051,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2068,18 +2072,18 @@
     {
       "id": "phrase-que-le-parece",
       "kind": "phrase",
-      "promptEs": "¿Qué le parece algo?",
-      "questionEn": "How can you politely ask what someone thinks of or how they like something?",
-      "answerEn": "Ask ¿Qué le parece…? and then name the thing being evaluated.",
-      "noteEn": "Parecer means “to seem.” Le marks the person receiving the impression, so the construction literally asks how something seems to that person. Use le for one person addressed formally or for a third person.",
+      "promptEs": "¿Qué te, le, os o les parece?",
+      "questionEn": "How do you use ¿qué te parece? and similar questions to ask someone's opinion?",
+      "answerEn": "Use qué te parece with a familiar listener, then name what you want an opinion about. Change te to le, os, or les for the person or people whose opinion you want.",
+      "noteEn": "Parecer means 'seem': the question asks how something seems to someone. Te is familiar singular you; le is him, her, or formal singular you; os is familiar plural you mainly in Spain; les is them or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. The thing being judged controls parece or parecen: ¿qué te parecen estas ideas? uses plural parecen for ideas.",
       "example": {
-        "es": "¿Qué le parece este plan?",
+        "es": "¿Qué te parece este plan?",
         "en": "What do you think of this plan?"
       },
       "tags": [
         "phrase",
         "opinions",
-        "formal address",
+        "parecer",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2221,6 +2225,7 @@
         "James Bond",
         "joke context"
       ],
+      "questionEn": "Which James Bond scene does the villain's expectation of death echo?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2370,7 +2375,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."
@@ -2479,6 +2484,7 @@
         "reference frames",
         "joke context"
       ],
+      "questionEn": "How do centripetal and centrifugal force differ?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2599,11 +2605,11 @@
       "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal singular)",
-      "noteEn": "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Señora, aquí está su café.",
-        "en": "Ma’am, here is your coffee."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
@@ -2746,8 +2752,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2979,7 +2984,7 @@
       "kind": "grammar",
       "promptEs": "usted: hable / coma / escriba",
       "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
-      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir becoming diga.",
       "tags": [
         "A2",
         "grammar",
@@ -3508,8 +3513,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3679,8 +3684,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

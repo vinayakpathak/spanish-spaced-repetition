@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-4704552e401e1f40",
+  "revision": "runtime-0e641f4bcc8bf21b",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -452,7 +452,7 @@
               }
             ],
             "cardIds": [
-              "word-del--from-the-period"
+              "word-del--from-time"
             ]
           },
           {
@@ -518,7 +518,7 @@
           "word-reliquia--heirloom",
           "phrase-reliquia-familiar",
           "word-familiar--family",
-          "word-del--from-the-period",
+          "word-del--from-time",
           "word-siglo",
           "grammar-siglo-roman-numeral"
         ]
@@ -829,7 +829,7 @@
       "word-reliquia--heirloom",
       "phrase-reliquia-familiar",
       "word-familiar--family",
-      "word-del--from-the-period",
+      "word-del--from-time",
       "word-siglo",
       "grammar-siglo-roman-numeral",
       "word-parece",
@@ -963,8 +963,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1054,6 +1054,7 @@
         "image manipulation",
         "joke"
       ],
+      "questionEn": "What does it mean to say an image has been Photoshopped?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1084,8 +1085,12 @@
       "id": "word-estan--location",
       "kind": "word",
       "promptEs": "están",
-      "answerEn": "they are (in a place or state)",
-      "noteEn": "",
+      "answerEn": "are (a place or condition)",
+      "noteEn": "Están is a form of estar for they or plural you, ustedes. It describes where people or things are, or their condition. Spanish often leaves out the separate word for they or you because the context identifies them. Before another verb's ongoing-action form, están has a different helping-verb use.",
+      "example": {
+        "es": "Las maletas están junto a la puerta.",
+        "en": "The suitcases are beside the door."
+      },
       "tags": [
         "word",
         "estar",
@@ -1155,7 +1160,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1233,8 +1242,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1340,26 +1353,24 @@
       }
     },
     {
-      "id": "word-del--from-the-period",
+      "id": "word-del--from-time",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "from the (a historical period)",
-      "noteEn": "Del is the required single-word contraction of de followed by el. Before a century, it dates an object or event to that period.",
+      "answerEn": "from the; identifies the time or period something comes from",
+      "noteEn": "Del is the required combination of de and el. In this use, de gives a time of origin or a period something belongs to, rather than an owner. The expression may name a century, season, year, or the past or future.",
       "example": {
-        "es": "Es una casa del siglo XX.",
-        "en": "It is a house from the twentieth century."
+        "es": "Es una carta del pasado.",
+        "en": "It is a letter from the past."
       },
       "tags": [
         "word",
-        "contraction",
-        "historical period",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-photoshops",
+        "ownerComicId": "es-xkcd-mision-urgente",
         "contextualSenseReviewed": true
       }
     },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-0f31bb7af8967b1b",
+  "revision": "runtime-0fbe72749c16c588",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -65,7 +65,7 @@
               }
             ],
             "cardIds": [
-              "word-se--romperse",
+              "word-se--intransitive-change",
               "phrase-romperse-change-state",
               "grammar-yes-no-question"
             ]
@@ -121,7 +121,7 @@
               }
             ],
             "cardIds": [
-              "word-algo--anything-question",
+              "word-algo",
               "grammar-yes-no-question"
             ]
           }
@@ -163,13 +163,13 @@
           }
         ],
         "cardIds": [
-          "word-se--romperse",
+          "word-se--intransitive-change",
           "phrase-romperse-change-state",
           "grammar-yes-no-question",
           "word-ha",
           "grammar-present-perfect",
           "word-roto",
-          "word-algo--anything-question"
+          "word-algo"
         ]
       },
       {
@@ -544,7 +544,7 @@
               }
             ],
             "cardIds": [
-              "word-es--classification"
+              "word-es"
             ]
           },
           {
@@ -581,7 +581,7 @@
           "word-no",
           "word-espera--wait-command",
           "grammar-affirmative-tu-command",
-          "word-es--classification",
+          "word-es",
           "word-sangre",
           "concept-water-wine-blood-higgs-joke"
         ]
@@ -698,7 +698,7 @@
               }
             ],
             "cardIds": [
-              "word-los--body-part-owner-our",
+              "word-los--affected-owner-article",
               "phrase-tocarle-los-cojones-a-alguien"
             ]
           },
@@ -774,7 +774,7 @@
           "word-tocarnos--annoy-us",
           "grammar-pronoun-attached-to-infinitive",
           "phrase-tocarle-los-cojones-a-alguien",
-          "word-los--body-part-owner-our",
+          "word-los--affected-owner-article",
           "word-cojones--vulgar-idiom"
         ]
       },
@@ -1008,13 +1008,13 @@
       }
     ],
     "cardIds": [
-      "word-se--romperse",
+      "word-se--intransitive-change",
       "phrase-romperse-change-state",
       "grammar-yes-no-question",
       "word-ha",
       "grammar-present-perfect",
       "word-roto",
-      "word-algo--anything-question",
+      "word-algo",
       "word-no",
       "word-pero",
       "word-el--article",
@@ -1032,7 +1032,7 @@
       "word-raro--strange",
       "word-espera--wait-command",
       "grammar-affirmative-tu-command",
-      "word-es--classification",
+      "word-es",
       "word-sangre",
       "word-vale",
       "word-física",
@@ -1042,7 +1042,7 @@
       "word-tocarnos--annoy-us",
       "grammar-pronoun-attached-to-infinitive",
       "phrase-tocarle-los-cojones-a-alguien",
-      "word-los--body-part-owner-our",
+      "word-los--affected-owner-article",
       "word-cojones--vulgar-idiom",
       "word-dejad--stop-doing",
       "grammar-vosotros-affirmative-command",
@@ -1062,26 +1062,24 @@
   },
   "cards": [
     {
-      "id": "word-se--romperse",
+      "id": "word-se--intransitive-change",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; makes romper mean that something breaks",
-      "noteEn": "With romper, se presents the named thing as becoming broken, without naming a person who breaks it. The form of romper still changes for the thing and time.",
+      "answerEn": "no separate English word; presents something as undergoing a change",
+      "noteEn": "With some verbs, se makes the named thing the one that changes, rather than the thing someone changes. Compare Marta abre la puerta with la puerta se abre. The verb still changes for the thing and time; se does not say that it deliberately acts on itself.",
       "example": {
-        "es": "La taza se rompió al caer.",
-        "en": "The cup broke when it fell."
+        "es": "La taza se rompió.",
+        "en": "The cup broke."
       },
       "tags": [
         "word",
-        "romperse",
-        "change of state",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-vaso",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1182,7 +1180,11 @@
       "kind": "word",
       "promptEs": "roto",
       "answerEn": "broken",
-      "noteEn": "",
+      "noteEn": "Romper means “to break.” Its completed-action form is irregular: romper becomes roto, not rompido. After a helper such as ha, roto stays unchanged: ha roto, “has broken.” When it describes a broken thing, its ending matches that thing: un vaso roto, una taza rota.",
+      "example": {
+        "es": "Se ha roto un plato.",
+        "en": "A plate has broken."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1196,26 +1198,23 @@
       }
     },
     {
-      "id": "word-algo--anything-question",
+      "id": "word-algo",
       "kind": "word",
       "promptEs": "algo",
-      "answerEn": "anything; any way (in a question)",
-      "noteEn": "Algo refers to an unspecified thing. In a question, natural English often uses ‘anything’; after en, en algo can mean ‘in any way.’",
+      "answerEn": "something; anything",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
       "example": {
-        "es": "¿Necesitas algo?",
-        "en": "Do you need anything?"
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
       },
       "tags": [
-        "word",
-        "indefinite",
-        "question",
-        "A1"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-scantron",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1226,8 +1225,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1278,7 +1276,7 @@
       "kind": "grammar",
       "promptEs": "el agua · el habla · del águila (nombres femeninos)",
       "questionEn": "Which singular article is used immediately before a feminine noun that begins with a stressed a sound?",
-      "answerEn": "Use el immediately before that singular noun; use del when de + el contracts.",
+      "answerEn": "Use el immediately before that singular noun; combine de and el as del when they come together.",
       "noteEn": "The noun remains feminine. Describing words still use feminine forms, and the plural uses las: el agua fría, las aguas frías. The rule applies only when the stressed a sound begins the noun.",
       "example": {
         "es": "El águila blanca voló sobre el agua fría.",
@@ -1344,7 +1342,7 @@
       "id": "word-del--located-in",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "in the; de + el identifying something by its location",
+      "answerEn": "in the; identifies something by its location",
       "noteEn": "Del combines de and el. After an object, it can identify which one by naming the room or place associated with it, where natural English often says “in” or puts the location before the object name.",
       "example": {
         "es": "Usamos la mesa del patio.",
@@ -1465,17 +1463,15 @@
       "id": "word-en--change-result",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "into; introduces the result after convertirse",
-      "noteEn": "After convertirse, en links the changing person or thing to what it becomes. Keep en even though English may simply use become before a noun.",
+      "answerEn": "into; introduces what something becomes",
+      "noteEn": "With a change verb such as convertirse or degenerar, en introduces the resulting thing or situation. The verb supplies the kind of change; en itself does not mean that the result is good or bad.",
       "example": {
         "es": "El agua se convierte en hielo.",
         "en": "Water turns into ice."
       },
       "tags": [
         "word",
-        "preposition",
-        "change",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1595,26 +1591,24 @@
       }
     },
     {
-      "id": "word-es--classification",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is; belongs to the stated category",
-      "noteEn": "Es is the present form of ser used for one person or thing. Between two naming words, it identifies or classifies the first as the second.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "El ajedrez es un juego.",
-        "en": "Chess is a game."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "classification",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-demasiado-viejo-para-esta-mierda",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1704,7 +1698,7 @@
       "kind": "phrase",
       "promptEs": "dejar de + infinitivo",
       "answerEn": "Use a form of dejar, then de, then the action verb in its dictionary form.",
-      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de + action means to stop doing that action.",
+      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de followed by an action verb means to stop doing that action.",
       "tags": [
         "A2",
         "verb pattern",
@@ -1776,7 +1770,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1822,21 +1816,18 @@
       }
     },
     {
-      "id": "word-los--body-part-owner-our",
+      "id": "word-los--affected-owner-article",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "our here; Spanish uses los before a body part whose owner is already clear",
-      "noteEn": "Spanish often uses el, la, los, or las before a body part when the surrounding verb or context already identifies its owner. Natural English often supplies ‘my,’ ‘your,’ ‘our,’ or another possessive word instead.",
+      "answerEn": "the; English often uses my, your, our, or another owner's word",
+      "noteEn": "Spanish often uses los before masculine plural body parts or clothing when the verb, a word such as me or te, or the context already identifies the owner or wearer. Los matches the plural things, not the people they belong to.",
       "example": {
         "es": "Cruzamos los brazos.",
         "en": "We cross our arms."
       },
       "tags": [
         "word",
-        "definite article",
-        "body part",
-        "possession",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1903,7 +1894,7 @@
       "promptEs": "orden afirmativa para vosotros: hablad, comed, escribid",
       "questionEn": "How do you tell several people informally to do something in Spain?",
       "answerEn": "For most verbs, remove the final -r from the verb's dictionary form and add -d: hablar becomes hablad.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If a short object word such as me is included, attach it to the end: ayudad + me becomes ayudadme.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If you include a small word naming who or what receives the action, such as me, attach it to the end: ayudad and me become ayudadme.",
       "example": {
         "es": "Abrid los libros.",
         "en": "Open your books."

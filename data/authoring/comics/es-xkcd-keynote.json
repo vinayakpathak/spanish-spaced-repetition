@@ -288,7 +288,7 @@
         { "id": "es-xkcd-keynote:marketing-reply:w02", "text": "PENA", "normalized": "pena", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00022" }], "cardIds": ["word-pena--shame"] },
         { "id": "es-xkcd-keynote:marketing-reply:w03", "text": "SEGURO", "normalized": "seguro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00023" }], "cardIds": ["word-seguro--fixed-seguro-que", "phrase-seguro-que"] },
         { "id": "es-xkcd-keynote:marketing-reply:w04", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00024" }], "cardIds": ["word-que--clause-link", "phrase-seguro-que"] },
-        { "id": "es-xkcd-keynote:marketing-reply:w05", "text": "ESTABA", "normalized": "estaba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00026" }], "cardIds": ["word-estaba--state", "grammar-estar-deseando-infinitive", "grammar-past-contrast"] },
+        { "id": "es-xkcd-keynote:marketing-reply:w05", "text": "ESTABA", "normalized": "estaba", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00026" }], "cardIds": ["word-estaba--progressive-auxiliary", "grammar-estar-deseando-infinitive", "grammar-past-contrast"] },
         { "id": "es-xkcd-keynote:marketing-reply:w06", "text": "DESEANDO", "normalized": "deseando", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00027" }], "cardIds": ["word-deseando--eager-to", "grammar-estar-deseando-infinitive"] },
         { "id": "es-xkcd-keynote:marketing-reply:w07", "text": "PRESENTAR", "normalized": "presentar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00028" }], "cardIds": ["word-presentar--introduce-unveil", "grammar-estar-deseando-infinitive", "concept-apple-thinnest-lightest-marketing"] },
         { "id": "es-xkcd-keynote:marketing-reply:w08", "text": "AL", "normalized": "al", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-keynote:ocr-token-00029" }], "cardIds": ["word-al--personal-a-contraction", "grammar-personal-a", "grammar-relative-superlative"] },
@@ -319,51 +319,82 @@
         {
           "id": "es-xkcd-keynote:marketing-reply:app-certainty-opener",
           "cardId": "phrase-seguro-que",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w03", "es-xkcd-keynote:marketing-reply:w04"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w03",
+            "es-xkcd-keynote:marketing-reply:w04"
+          ],
           "exampleEs": "SEGURO QUE",
           "explanationEn": "Seguro que opens the speaker's strongly expected claim."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-eager-to-present",
           "cardId": "grammar-estar-deseando-infinitive",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w05", "es-xkcd-keynote:marketing-reply:w06", "es-xkcd-keynote:marketing-reply:w07"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w05",
+            "es-xkcd-keynote:marketing-reply:w06",
+            "es-xkcd-keynote:marketing-reply:w07"
+          ],
           "exampleEs": "ESTABA DESEANDO PRESENTAR",
           "explanationEn": "Estaba places the eagerness in an ongoing past state, deseando supplies the strong desire, and presentar stays in its unchanged dictionary form."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-past-state",
           "cardId": "grammar-past-contrast",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w05"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w05"
+          ],
           "exampleEs": "ESTABA",
           "explanationEn": "Estaba uses the imperfect because the eagerness is presented as an ongoing past state."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-personal-a",
           "cardId": "grammar-personal-a",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w08"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w08"
+          ],
           "exampleEs": "AL CEO",
           "explanationEn": "Al combines the personal a with el before the specific person identified by the adjacent title."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-superlative",
           "cardId": "grammar-relative-superlative",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w08", "es-xkcd-keynote:marketing-reply:w09", "es-xkcd-keynote:marketing-reply:w10", "es-xkcd-keynote:marketing-reply:w11", "es-xkcd-keynote:marketing-reply:w12"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w08",
+            "es-xkcd-keynote:marketing-reply:w09",
+            "es-xkcd-keynote:marketing-reply:w10",
+            "es-xkcd-keynote:marketing-reply:w11",
+            "es-xkcd-keynote:marketing-reply:w12"
+          ],
           "exampleEs": "AL CEO MÁS DELGADO Y LIGERO",
           "explanationEn": "Al contains the matching article el, más marks the highest degree, and delgado y ligero supplies two coordinated descriptions of the same person."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-description-agreement",
           "cardId": "grammar-adjective-gender-agreement",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w10", "es-xkcd-keynote:marketing-reply:w12"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w10",
+            "es-xkcd-keynote:marketing-reply:w12"
+          ],
           "exampleEs": "CEO MÁS DELGADO Y LIGERO",
           "explanationEn": "Delgado and ligero use masculine singular -o because both describe one male person."
         },
         {
           "id": "es-xkcd-keynote:marketing-reply:app-world-comparison",
           "cardId": "word-del--superlative-group",
-          "participantWordIds": ["es-xkcd-keynote:marketing-reply:w13"],
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w13"
+          ],
           "exampleEs": "DEL MUNDO",
           "explanationEn": "Del introduces mundo as the larger group within which the comparison is made."
+        },
+        {
+          "id": "es-xkcd-keynote:marketing-reply:review-word-w05",
+          "cardId": "word-estaba--progressive-auxiliary",
+          "participantWordIds": [
+            "es-xkcd-keynote:marketing-reply:w05"
+          ],
+          "exampleEs": "ESTABA DESEANDO",
+          "explanationEn": "Estaba helps deseando describe an ongoing desire at that past time."
         }
       ]
     }

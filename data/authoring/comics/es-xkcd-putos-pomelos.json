@@ -42,7 +42,20 @@
     { "id": "word-tomates", "kind": "word", "promptEs": "tomates", "answerEn": "tomatoes", "noteEn": "", "tags": ["word", "food", "plural", "A1"] },
     { "id": "word-pomelos", "kind": "word", "promptEs": "pomelos", "answerEn": "grapefruits", "noteEn": "Pomelo is the usual word for grapefruit in Spain. Toronja is common in many parts of Latin America.", "example": { "es": "Los pomelos pueden ser amargos.", "en": "Grapefruits can be bitter." }, "tags": ["word", "fruit", "plural", "regional usage", "A1"] },
     { "id": "word-limones", "kind": "word", "promptEs": "limones", "answerEn": "lemons", "noteEn": "The singular is limón, with an accent; the plural limones does not keep that written accent.", "example": { "es": "Necesito tres limones.", "en": "I need three lemons." }, "tags": ["word", "fruit", "plural", "A1"] },
-    { "id": "word-mala--bad", "kind": "word", "promptEs": "mala", "answerEn": "bad (feminine singular)", "noteEn": "Mala is the feminine singular form of malo. Here it labels the bad-tasting end of the vertical scale.", "example": { "es": "Fue una mala idea.", "en": "It was a bad idea." }, "tags": ["word", "adjective", "evaluation", "agreement", "A1"] }
+    {
+      "id": "word-mala--bad",
+      "kind": "word",
+      "promptEs": "mala",
+      "answerEn": "bad (feminine singular)",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "adjective",
+        "evaluation",
+        "agreement",
+        "A1"
+      ]
+    }
   ],
   "regions": [
     {
@@ -222,7 +235,17 @@
       "labelEs": "MALA",
       "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-putos-pomelos:ocr-line-0022" }],
       "words": [{ "id": "es-xkcd-putos-pomelos:axis-bad:w01", "text": "MALA", "normalized": "mala", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-putos-pomelos:ocr-token-00024" }], "cardIds": ["word-mala--bad"] }],
-      "applications": []
+      "applications": [
+        {
+          "id": "es-xkcd-putos-pomelos:axis-bad:review-word-w01",
+          "cardId": "word-mala--bad",
+          "participantWordIds": [
+            "es-xkcd-putos-pomelos:axis-bad:w01"
+          ],
+          "exampleEs": "MALA",
+          "explanationEn": "Mala labels the bad-tasting end of the vertical scale."
+        }
+      ]
     }
   ]
 }

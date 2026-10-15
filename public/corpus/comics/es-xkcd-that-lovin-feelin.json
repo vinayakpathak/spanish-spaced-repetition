@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-b9ab919caf77f335",
+  "revision": "runtime-1198b7d46239b2b3",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -119,7 +119,7 @@
               }
             ],
             "cardIds": [
-              "word-los--body-part-owner-clear",
+              "word-los--affected-owner-article",
               "grammar-definite-article-body-part-owner-clear"
             ]
           },
@@ -250,7 +250,7 @@
           "grammar-e-ie-stem-change-present",
           "grammar-definite-article-body-part-owner-clear",
           "concept-youve-lost-that-lovin-feelin",
-          "word-los--body-part-owner-clear",
+          "word-los--affected-owner-article",
           "word-ojos",
           "word-cuando--when",
           "word-beso--kiss-verb",
@@ -350,7 +350,7 @@
               }
             ],
             "cardIds": [
-              "word-habia--there-was",
+              "word-había--existential",
               "grammar-relative-que",
               "grammar-impersonal-habia-existence"
             ]
@@ -564,7 +564,7 @@
           "grammar-relative-que",
           "concept-youve-lost-that-lovin-feelin",
           "word-que--relative",
-          "word-habia--there-was",
+          "word-había--existential",
           "grammar-impersonal-habia-existence",
           "word-en",
           "word-las",
@@ -753,7 +753,7 @@
       "grammar-e-ie-stem-change-present",
       "grammar-definite-article-body-part-owner-clear",
       "concept-youve-lost-that-lovin-feelin",
-      "word-los--body-part-owner-clear",
+      "word-los--affected-owner-article",
       "word-ojos",
       "word-cuando--when",
       "word-beso--kiss-verb",
@@ -764,7 +764,7 @@
       "word-ternura",
       "grammar-relative-que",
       "word-que--relative",
-      "word-habia--there-was",
+      "word-había--existential",
       "grammar-impersonal-habia-existence",
       "word-en",
       "word-las",
@@ -794,17 +794,15 @@
       "id": "word-ya--no-longer",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "anymore; no longer (together with no)",
-      "noteEn": "Ya often means “already” or “now.” Before no, it instead marks a change from an earlier situation: ya no means “no longer” or “not anymore.”",
+      "answerEn": "anymore; no longer, with a negative expression",
+      "noteEn": "Ya with a negative expression marks a change from what was true before. Ya no means 'no longer'; with ni siquiera, the sense is 'not even ... anymore.' Ya itself stays unchanged.",
       "example": {
         "es": "Ya no trabajo allí.",
         "en": "I no longer work there."
       },
       "tags": [
         "word",
-        "time",
-        "fixed expression",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -846,8 +844,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -955,27 +952,24 @@
       }
     },
     {
-      "id": "word-los--body-part-owner-clear",
+      "id": "word-los--affected-owner-article",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "your here; Spanish uses los before a body part whose owner is already clear",
-      "noteEn": "Spanish often uses el, la, los, or las before a body part when the context already makes its owner clear. The verb or another short word can identify the owner. Los is used before a masculine plural body-part word, as in los brazos, where English may naturally say “your arms.”",
+      "answerEn": "the; English often uses my, your, our, or another owner's word",
+      "noteEn": "Spanish often uses los before masculine plural body parts or clothing when the verb, a word such as me or te, or the context already identifies the owner or wearer. Los matches the plural things, not the people they belong to.",
       "example": {
-        "es": "Levantas los brazos.",
-        "en": "You raise your arms."
+        "es": "Cruzamos los brazos.",
+        "en": "We cross our arms."
       },
       "tags": [
         "word",
-        "definite article",
-        "body part",
-        "possession",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "ownerComicId": "es-xkcd-colchon",
         "contextualSenseReviewed": true
       }
     },
@@ -1181,26 +1175,27 @@
       }
     },
     {
-      "id": "word-habia--there-was",
+      "id": "word-había--existential",
       "kind": "word",
       "promptEs": "había",
       "answerEn": "there was; there were",
-      "noteEn": "Había is the past form used to say that something existed or was present. In standard Spanish it stays singular even when the thing mentioned is plural.",
+      "noteEn": "Había says that something existed or was present in a past setting. It stays the same before one thing or several: había una silla, había dos sillas. This is different from había meaning “had” before another verb's completed-action form.",
       "example": {
-        "es": "Había tres sillas en la sala.",
-        "en": "There were three chairs in the room."
+        "es": "Había tres bicicletas fuera.",
+        "en": "There were three bicycles outside."
       },
       "tags": [
         "word",
         "haber",
+        "existence",
         "past",
-        "existence"
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-that-lovin-feelin",
+        "ownerComicId": "es-xkcd-volver-casa-por-navidad",
         "contextualSenseReviewed": true
       }
     },
@@ -1355,11 +1350,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

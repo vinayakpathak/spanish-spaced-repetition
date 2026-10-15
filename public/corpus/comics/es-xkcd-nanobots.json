@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8f39ec931f21596f",
+  "revision": "runtime-e5d8f24efa7ef6fe",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -471,7 +471,8 @@
             ],
             "cardIds": [
               "word-han",
-              "grammar-present-perfect"
+              "grammar-present-perfect",
+              "grammar-quedarse-state"
             ]
           },
           {
@@ -578,11 +579,12 @@
             "cardId": "grammar-quedarse-state",
             "participantWordIds": [
               "es-xkcd-nanobots:destruction-report:w11",
+              "es-xkcd-nanobots:destruction-report:w12",
               "es-xkcd-nanobots:destruction-report:w13",
               "es-xkcd-nanobots:destruction-report:w15"
             ],
             "exampleEs": "SE HAN QUEDADO AHÍ QUIETOS",
-            "explanationEn": "Se and quedado form quedarse, and quietos names the resulting still state."
+            "explanationEn": "Se han quedado is the complete changed form of quedarse, and quietos names the plural resulting state. Ahí supplies the location."
           }
         ],
         "cardIds": [
@@ -797,7 +799,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--which-before-noun",
+              "word-qué--interrogative",
               "question-words"
             ]
           },
@@ -910,7 +912,7 @@
           "phrase-a-menos-que",
           "word-menos--fixed-a-menos-que",
           "word-que--fixed-a-menos-que",
-          "word-qué--which-before-noun",
+          "word-qué--interrogative",
           "question-words",
           "word-volumen--physical-space",
           "word-tiene",
@@ -1219,7 +1221,7 @@
               }
             ],
             "cardIds": [
-              "word-algo"
+              "word-algo--some-amount"
             ]
           },
           {
@@ -1305,6 +1307,15 @@
             ],
             "exampleEs": "GANAR ALGO DE TIEMPO",
             "explanationEn": "Ganar and tiempo form the conventional expression for obtaining extra time."
+          },
+          {
+            "id": "es-xkcd-nanobots:time-claim:review-word-w09",
+            "cardId": "word-algo--some-amount",
+            "participantWordIds": [
+              "es-xkcd-nanobots:time-claim:w09"
+            ],
+            "exampleEs": "ALGO DE TIEMPO",
+            "explanationEn": "Algo gives an unspecified amount of time, with de connecting it to tiempo."
           }
         ],
         "cardIds": [
@@ -1320,7 +1331,7 @@
           "word-hecho--causative-made",
           "word-ganar--gain-time",
           "phrase-ganar-tiempo",
-          "word-algo",
+          "word-algo--some-amount",
           "word-de--of",
           "word-tiempo"
         ]
@@ -1814,7 +1825,7 @@
       "phrase-a-menos-que",
       "word-menos--fixed-a-menos-que",
       "word-que--fixed-a-menos-que",
-      "word-qué--which-before-noun",
+      "word-qué--interrogative",
       "question-words",
       "word-volumen--physical-space",
       "word-tiene",
@@ -1836,11 +1847,10 @@
       "word-hecho--causative-made",
       "word-ganar--gain-time",
       "phrase-ganar-tiempo",
-      "word-algo",
+      "word-algo--some-amount",
       "word-tiempo",
       "word-en",
       "word-enjambre",
-      "word-qué--interrogative",
       "word-quieres",
       "phrase-querer-decir",
       "word-decir",
@@ -1913,7 +1923,7 @@
       "kind": "grammar",
       "promptEs": "usted: hable / coma / escriba",
       "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
-      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir becoming diga.",
       "tags": [
         "A2",
         "grammar",
@@ -2045,6 +2055,7 @@
         "networking",
         "joke"
       ],
+      "questionEn": "Why would a swarm of nanobots need IPv6 addresses?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2219,11 +2230,7 @@
       "kind": "word",
       "promptEs": "tierra",
       "answerEn": "Earth; the planet Earth",
-      "noteEn": "This sense names the planet rather than land or soil.",
-      "example": {
-        "es": "La Tierra gira alrededor del Sol.",
-        "en": "Earth revolves around the Sun."
-      },
+      "noteEn": "",
       "tags": [
         "word",
         "noun",
@@ -2326,18 +2333,18 @@
     {
       "id": "grammar-quedarse-state",
       "kind": "grammar",
-      "promptEs": "quedarse + palabra de estado",
-      "questionEn": "How do you say that someone remains in, or ends up in, a particular state?",
-      "answerEn": "Use a form of quedarse followed by a word that names the resulting or continuing state.",
-      "noteEn": "The plus sign in the prompt means that the state word follows quedarse. Quedarse is pronominal: it comes with me, te, se, nos, or os even though no one literally remains themselves. Change quedar and its small marker to match the person and time. When another verb has already changed for the person, the marker may stand before that verb: se puede quedar.",
+      "promptEs": "quedarse + estado",
+      "questionEn": "How do you use quedarse to say that someone remains in or ends up in a state?",
+      "answerEn": "Use a matching form of quedarse, then the word or phrase naming the continuing or resulting state.",
+      "noteEn": "Change the short marker and quedar for the person and time: me quedo ('I stay'), te quedas ('you stay,' familiar singular), se quedó ('he/she stayed'), nos quedamos ('we stay' or 'we stayed'). The marker is part of this verb even when English has no separate word for it. A describing word matches the person: callado becomes callada for a woman and callados for a masculine or mixed group. Other state words, such as fuera ('outside'), stay unchanged. Context tells you whether the state continues or is a new result.",
       "example": {
-        "es": "Después de la noticia, Pablo se quedó callado.",
-        "en": "After the news, Pablo fell silent."
+        "es": "Pablo se quedó callado.",
+        "en": "Pablo fell silent."
       },
       "tags": [
         "grammar",
+        "quedarse",
         "states",
-        "pronominal verbs",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2484,8 +2491,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2630,26 +2641,24 @@
       }
     },
     {
-      "id": "word-qué--which-before-noun",
+      "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "which; what (selecting before a noun)",
-      "noteEn": "Qué goes directly before a noun when asking which member or type is meant. It keeps the written accent in a direct question and in an embedded question inside a larger statement.",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
       "example": {
         "es": "No sé qué ruta elegir.",
         "en": "I do not know which route to choose."
       },
       "tags": [
         "word",
-        "question word",
-        "selection",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-trimestre",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2938,8 +2947,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2997,10 +3006,10 @@
     {
       "id": "grammar-hacer-person-infinitive-causative",
       "kind": "grammar",
-      "promptEs": "hacer + persona + verbo en forma de diccionario",
-      "questionEn": "How do you say that someone or something makes a person do an action?",
-      "answerEn": "Use a matching form of hacer, then the affected person, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The unchanged dictionary form ends in -ar, -er, or -ir. Only hacer changes for the person and time. A short word such as me, te, or nos usually marks who is made to act; in a compound form such as ha hecho, that short word comes before the helper ha.",
+      "promptEs": "hacer + persona + acción en forma de diccionario",
+      "questionEn": "How do you use hacer with a dictionary-form verb to say that something makes someone act?",
+      "answerEn": "Use a form of hacer and the action in its dictionary form, with a word identifying who is made to act.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and stays unchanged. Hacer changes for what causes the action and when it happens: hace, hacen, hizo. Short affected-person words such as me, te, or nos go before the changed verb: me hace reír. If hacer uses the helper haber, put the short word before that helper: nos ha hecho reír. This construction describes causing an action, not making someone have a quality such as feliz ('happy').",
       "example": {
         "es": "La noticia nos hizo sonreír.",
         "en": "The news made us smile."
@@ -3111,11 +3120,15 @@
       }
     },
     {
-      "id": "word-algo",
+      "id": "word-algo--some-amount",
       "kind": "word",
       "promptEs": "algo",
-      "answerEn": "something; anything",
-      "noteEn": "",
+      "answerEn": "some; a bit of",
+      "noteEn": "In algo de followed by a noun, algo gives an unspecified amount rather than naming an unspecified thing. Algo stays unchanged; de connects it to what there is some of.",
+      "example": {
+        "es": "Necesito algo de ayuda.",
+        "en": "I need some help."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3124,7 +3137,7 @@
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-conocimiento-musical",
         "contextualSenseReviewed": true
       }
     },
@@ -3184,24 +3197,6 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-nanobots",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "word-qué--interrogative",
-      "kind": "word",
-      "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
-      "tags": [
-        "word",
-        "contextual sense"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3464,7 +3459,7 @@
       "promptEs": "haber + participio",
       "questionEn": "How do you refer to an action that was already completed after another verb such as poder, deber, or parecer?",
       "answerEn": "Use the unchanged helper haber followed by the completed-action form of the main verb.",
-      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged. The plus sign in the prompt means “followed by.”",
+      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged.",
       "example": {
         "es": "Parece haber terminado.",
         "en": "It seems to have ended."
@@ -3552,10 +3547,10 @@
     {
       "id": "grammar-hace-duration-ago",
       "kind": "grammar",
-      "promptEs": "hace + cantidad de tiempo",
-      "questionEn": "How do you say how long ago a past event happened?",
-      "answerEn": "Put hace before the length of time.",
-      "noteEn": "Spanish places hace before a duration: hace dos semanas means “two weeks ago.” The verb that describes the event itself is normally in a past form.",
+      "promptEs": "hace + tiempo transcurrido",
+      "questionEn": "How do you use hace to say how long ago something happened?",
+      "answerEn": "Put hace before the amount of time between now and the past event.",
+      "noteEn": "Hace stays singular and comes before the duration: hace dos años means 'two years ago.' The amount can be vague: hace un tiempo means 'a while ago,' and hace mucho means 'a long time ago.' The event itself is normally expressed in a past form. This card covers when a past event happened, not the different pattern hace dos años que vivo aquí for something continuing until now.",
       "example": {
         "es": "Nos conocimos hace tres meses.",
         "en": "We met three months ago."

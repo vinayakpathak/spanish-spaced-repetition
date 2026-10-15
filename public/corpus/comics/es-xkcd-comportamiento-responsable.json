@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a4eb410de7cb4bb0",
+  "revision": "runtime-e775682f2a264ac2",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -384,7 +384,7 @@
               }
             ],
             "cardIds": [
-              "word-qué--fixed-qué-tal-result",
+              "word-qué--fixed-qué-tal",
               "phrase-que-tal-went",
               "question-words"
             ]
@@ -448,7 +448,7 @@
           }
         ],
         "cardIds": [
-          "word-qué--fixed-qué-tal-result",
+          "word-qué--fixed-qué-tal",
           "phrase-que-tal-went",
           "question-words",
           "word-tal--fixed-qué-tal-result",
@@ -905,7 +905,7 @@
               }
             ],
             "cardIds": [
-              "word-su--her"
+              "word-su"
             ]
           },
           {
@@ -937,7 +937,7 @@
               }
             ],
             "cardIds": [
-              "word-estaba--i-was-state",
+              "word-estaba--state",
               "grammar-demasiado-para-que-result"
             ]
           },
@@ -1128,9 +1128,9 @@
           "phrase-ni-siquiera",
           "word-siquiera--fixed-ni-siquiera",
           "word-sé",
-          "word-su--her",
+          "word-su",
           "word-nombre",
-          "word-estaba--i-was-state",
+          "word-estaba--state",
           "grammar-demasiado-para-que-result",
           "word-demasiado",
           "word-borracho",
@@ -1527,7 +1527,7 @@
       "word-gente",
       "word-del--of-the",
       "word-sí",
-      "word-qué--fixed-qué-tal-result",
+      "word-qué--fixed-qué-tal",
       "phrase-que-tal-went",
       "question-words",
       "word-tal--fixed-qué-tal-result",
@@ -1557,9 +1557,9 @@
       "phrase-ni-siquiera",
       "word-siquiera--fixed-ni-siquiera",
       "word-sé",
-      "word-su--her",
+      "word-su",
       "word-nombre",
-      "word-estaba--i-was-state",
+      "word-estaba--state",
       "grammar-demasiado-para-que-result",
       "word-demasiado",
       "word-borracho",
@@ -1802,6 +1802,7 @@
         "key signing",
         "web of trust"
       ],
+      "questionEn": "What do people verify at a public-key signing party?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1912,26 +1913,24 @@
       }
     },
     {
-      "id": "word-qué--fixed-qué-tal-result",
+      "id": "word-qué--fixed-qué-tal",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "how (as part of asking qué tal about an experience)",
-      "noteEn": "Qué keeps its written accent inside the fixed question qué tal. When the question includes fue or ha ido, it asks how an event or experience went.",
+      "answerEn": "how; part of qué tal",
+      "noteEn": "Qué tal asks for an opinion, how someone or something is doing, or how an experience went. It can also suggest an option: 'How about ...?' Qué keeps its accent, and the two words work together.",
       "example": {
         "es": "¿Qué tal fue la reunión?",
         "en": "How did the meeting go?"
       },
       "tags": [
         "word",
-        "fixed question",
-        "experience",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-comportamiento-responsable",
+        "ownerComicId": "es-xkcd-equipos-para-ir-a-comprar",
         "contextualSenseReviewed": true
       }
     },
@@ -1940,8 +1939,8 @@
       "kind": "phrase",
       "promptEs": "¿qué tal fue…? / ¿qué tal ha ido…?",
       "questionEn": "How do you ask how an event or experience went?",
-      "answerEn": "Ask ¿qué tal fue...? for a finished past event, or ¿qué tal ha ido...? for one viewed as connected to now.",
-      "noteEn": "Qué tal works as one fixed question expression. Fue is a simple completed-past form of ser used to evaluate a finished event. Ha ido combines ha with ido, the completed-action form of ir, and is common when asking about a recent experience. The slash in the prompt separates these two alternatives; it does not belong in a Spanish sentence.",
+      "answerEn": "Begin with qué tal fue for a finished past event, or qué tal ha ido for one viewed as connected to now. Name the event if it is not already clear.",
+      "noteEn": "Qué tal works as one fixed question expression. Fue is a simple completed-past form of ser used to evaluate a finished event. Ha ido combines ha with ido, the completed-action form of ir, and is common when asking about a recent experience.",
       "example": {
         "es": "¿Qué tal fue el concierto?",
         "en": "How did the concert go?"
@@ -2214,8 +2213,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2276,10 +2279,10 @@
       "kind": "word",
       "promptEs": "había",
       "answerEn": "there was; there were",
-      "noteEn": "This past form of hay presents something as existing in a past setting. In this use, había stays singular even before a plural noun: había una silla and había dos sillas.",
+      "noteEn": "Había says that something existed or was present in a past setting. It stays the same before one thing or several: había una silla, había dos sillas. This is different from había meaning “had” before another verb's completed-action form.",
       "example": {
-        "es": "Había dos cartas en la mesa.",
-        "en": "There were two letters on the table."
+        "es": "Había tres bicicletas fuera.",
+        "en": "There were three bicycles outside."
       },
       "tags": [
         "word",
@@ -2588,26 +2591,24 @@
       }
     },
     {
-      "id": "word-su--her",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "her (before one thing)",
-      "noteEn": "Su comes before the singular thing that belongs to someone. Spanish does not mark the owner's gender in su; the surrounding context identifies a female owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Ana perdió su teléfono.",
-        "en": "Ana lost her phone."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
-        "possessive",
-        "female owner",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-comportamiento-responsable",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2630,26 +2631,27 @@
       }
     },
     {
-      "id": "word-estaba--i-was-state",
+      "id": "word-estaba--state",
       "kind": "word",
       "promptEs": "estaba",
-      "answerEn": "I was (in a past state)",
-      "noteEn": "Estaba is a background-past form of estar. The subject can be I, he, she, or one formal you; here the unstated subject is the speaker.",
+      "answerEn": "was (a past place, condition, or situation)",
+      "noteEn": "Estaba is a past form of estar. It describes a location or condition at a past time without by itself marking when that situation began or ended. The same form can refer to I, he, she, it, or formal you; the surrounding words identify who.",
       "example": {
-        "es": "Estaba cansado después del viaje.",
-        "en": "I was tired after the trip."
+        "es": "La tienda estaba cerrada.",
+        "en": "The shop was closed."
       },
       "tags": [
         "word",
         "estar",
-        "past state",
+        "imperfect",
+        "past",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-comportamiento-responsable",
+        "ownerComicId": "es-xkcd-exito",
         "contextualSenseReviewed": true
       }
     },
@@ -2659,7 +2661,7 @@
       "promptEs": "estar demasiado + descripción + para que + resultado",
       "questionEn": "How do you say that someone or something is too much a certain way for a separate result to happen or matter?",
       "answerEn": "Use a form of estar, demasiado, the description, then para que and the separate result in its special non-factual form.",
-      "noteEn": "Demasiado marks the excessive condition. Para que introduces a result with its own subject and verb, and that result uses a form called the subjunctive because it is blocked rather than stated as a fact. For a past setting, ordinary importaba becomes importara and ordinary oía becomes oyera. When the same person performs the following action, Spanish can instead use para plus the verb's unchanged dictionary form: estaba demasiado cansado para seguir.",
+      "noteEn": "Demasiado marks the excessive condition. Para que introduces a result with its own subject and verb, and that result uses a form called the subjunctive because it is blocked rather than stated as a fact. For a past setting, ordinary importaba becomes importara and ordinary oía becomes oyera. When the same person performs the following action, Spanish can instead use para followed by the verb's unchanged dictionary form: estaba demasiado cansado para seguir.",
       "example": {
         "es": "Estaba demasiado lejos para que me oyera.",
         "en": "I was too far away for her to hear me."
@@ -2861,17 +2863,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2936,7 +2936,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2980,8 +2984,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

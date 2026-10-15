@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8b82fcefe200d356",
+  "revision": "runtime-f1573b2e11296257",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -596,7 +596,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -721,7 +721,7 @@
           "word-de--fixed-en-lugar-de",
           "word-una",
           "word-silla",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-oficina",
           "word-el--article",
           "word-paquete--parcel",
@@ -872,7 +872,7 @@
       "word-de--fixed-en-lugar-de",
       "word-una",
       "word-silla",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-oficina",
       "word-el--article",
       "word-paquete--parcel",
@@ -896,8 +896,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -983,7 +987,7 @@
       "promptEs": "hacer de + cosa/persona + resultado",
       "questionEn": "How can you say that someone makes or turns a person or thing into a new result?",
       "answerEn": "Use hacer, then de before the thing being changed, and then name the resulting role, state, or description.",
-      "noteEn": "When the thing begins with el, de + el contracts to del. Hacer changes for the person and time; the result can be a noun phrase or a description. This is a different use from ordinary hacer meaning simply ‘to do’ or ‘to make.’",
+      "noteEn": "When the thing begins with el, combine de and el as del. Hacer changes for the person and time; the result can be a noun phrase or a description. This is a different use from ordinary hacer meaning simply ‘to do’ or ‘to make.’",
       "example": {
         "es": "La experiencia hizo de Ana una gran médica.",
         "en": "The experience made Ana a great doctor."
@@ -1085,7 +1089,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1236,6 +1244,7 @@
         "feedback",
         "joke"
       ],
+      "questionEn": "How do public ratings and reviews work on an online marketplace?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1462,26 +1471,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -1591,8 +1598,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

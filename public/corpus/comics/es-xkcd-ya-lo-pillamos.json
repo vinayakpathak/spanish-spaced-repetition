@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-6f935783306f9cfc",
+  "revision": "runtime-e6aed37e1f20e22e",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -591,7 +591,7 @@
               }
             ],
             "cardIds": [
-              "word-a--personal-a-person-denoting",
+              "word-a--personal-a",
               "grammar-personal-a"
             ]
           },
@@ -748,7 +748,7 @@
           "word-a--tener-derecho-complement",
           "word-apuñalaros",
           "grammar-pronoun-attached-to-infinitive",
-          "word-a--personal-a-person-denoting",
+          "word-a--personal-a",
           "grammar-personal-a",
           "word-los",
           "word-dos"
@@ -963,7 +963,7 @@
               }
             ],
             "cardIds": [
-              "word-con--verse-complement",
+              "word-con",
               "phrase-verse-con-alguien--dating",
               "grammar-yes-no-question"
             ]
@@ -1067,7 +1067,7 @@
           "word-viéndome--dating",
           "grammar-gerund-attached-pronominal-marker",
           "phrase-verse-con-alguien--dating",
-          "word-con--verse-complement",
+          "word-con",
           "word-alguien"
         ]
       }
@@ -1107,7 +1107,7 @@
       "word-a--tener-derecho-complement",
       "word-apuñalaros",
       "grammar-pronoun-attached-to-infinitive",
-      "word-a--personal-a-person-denoting",
+      "word-a--personal-a",
       "grammar-personal-a",
       "word-los",
       "word-dos",
@@ -1124,7 +1124,6 @@
       "word-viéndome--dating",
       "grammar-gerund-attached-pronominal-marker",
       "phrase-verse-con-alguien--dating",
-      "word-con--verse-complement",
       "word-alguien"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -1156,16 +1155,21 @@
       "id": "word-la--direct-object-feminine",
       "kind": "word",
       "promptEs": "la",
-      "answerEn": "her; it (a feminine thing)",
-      "noteEn": "",
+      "answerEn": "her; it; formal you, for one woman",
+      "noteEn": "La can replace a woman or a thing whose Spanish name is feminine when it directly receives an action. It can also address one woman formally as usted. It usually comes before a changed verb; it does not mean the article 'the' in this use.",
+      "example": {
+        "es": "Tengo una carta y la leo.",
+        "en": "I have a letter and I am reading it."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1239,18 +1243,17 @@
     {
       "id": "phrase-la-semana-pasada",
       "kind": "phrase",
-      "promptEs": "la semana pasada",
-      "questionEn": "How do you say ‘last week’ when referring to the most recent completed week?",
-      "answerEn": "Use la semana pasada.",
-      "noteEn": "The article la and the adjective pasada both match the feminine noun semana. Spanish normally places pasada after the time noun in this expression.",
+      "promptEs": "el mes pasado, la semana pasada o el año pasado",
+      "questionEn": "How do you use pasado or pasada to say 'last week,' 'last month,' or 'last year'?",
+      "answerEn": "Name the time period with el or la, then add pasado or pasada to mean the most recent completed one.",
+      "noteEn": "Use la semana pasada, el mes pasado, or el año pasado. The describing word follows the time word and matches it: semana is feminine, so use pasada; mes and año are masculine, so use pasado. This names the preceding calendar period, not merely any time in the past.",
       "example": {
-        "es": "Fuimos al museo la semana pasada.",
-        "en": "We went to the museum last week."
+        "es": "Nos mudamos el mes pasado.",
+        "en": "We moved last month."
       },
       "tags": [
         "phrase",
-        "time",
-        "past",
+        "previous time period",
         "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1308,7 +1311,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1410,7 +1417,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1606,7 +1617,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1858,7 +1873,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1878,26 +1893,24 @@
       }
     },
     {
-      "id": "word-a--personal-a-person-denoting",
+      "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a person-denoting object",
-      "noteEn": "The personal a also appears before words such as alguien (“someone”) and nadie (“nobody”) when they directly receive an action, even though they do not identify one specific individual.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "No vi a nadie.",
-        "en": "I did not see anyone."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
-        "personal a",
-        "indefinite person",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fotos-porfa",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1907,7 +1920,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -1965,8 +1978,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2116,8 +2133,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2157,7 +2174,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -2204,10 +2221,10 @@
     {
       "id": "grammar-gerund-attached-pronominal-marker",
       "kind": "grammar",
-      "promptEs": "verbo pronominal en -ando/-iendo + me/te/se/nos/os/se",
-      "questionEn": "How do you attach the matching marker of a pronominal verb to an ongoing-action form?",
-      "answerEn": "Join me, te, se, nos, os, or se to the end of the -ando or -iendo form, adding a written accent when needed to preserve the original stress.",
-      "noteEn": "A pronominal verb is learned with se, such as verse or prepararse. Its short marker changes with the person. When the marker follows an ongoing-action form as one word, spelling may need an accent: viendo + me becomes viéndome, and preparando + se becomes preparándose.",
+      "promptEs": "acción en -ando o -iendo con me, te, se, nos u os al final",
+      "questionEn": "How do you attach me, te, se, nos, or os to an action form such as preparando?",
+      "answerEn": "Join the matching short word to the end of the -ando or -iendo form, adding an accent when needed to keep the original stress.",
+      "noteEn": "Some verbs are learned with se, such as lavarse ('wash oneself') or prepararse ('get ready'). Choose me for I, te for familiar singular you, se for he/she/formal you or they, nos for we, and os for familiar plural you mainly in Spain. The marker may describe an action done to oneself, or be part of the verb's meaning without a separate English 'self.' An -ando or -iendo action form is called a gerund: preparando and me become preparándome; lavando and se become lavándose. This card teaches the attachment, not a different sense for every verb.",
       "example": {
         "es": "Estoy preparándome para salir.",
         "en": "I am getting ready to leave."
@@ -2215,7 +2232,7 @@
       "tags": [
         "grammar",
         "gerund",
-        "pronominal verb",
+        "attached markers",
         "spelling",
         "A2"
       ],
@@ -2243,30 +2260,6 @@
         "dating",
         "pronominal verb",
         "B1"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-ya-lo-pillamos",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "word-con--verse-complement",
-      "kind": "word",
-      "promptEs": "con",
-      "answerEn": "with; required after verse before the other person",
-      "noteEn": "Verse con introduces the person someone meets, sees, or dates. Con stays the same for every person and time.",
-      "example": {
-        "es": "Marta se ve con Luis los viernes.",
-        "en": "Marta sees Luis on Fridays."
-      },
-      "tags": [
-        "word",
-        "preposition",
-        "verb complement",
-        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

@@ -21,18 +21,6 @@
   },
   "cardDefinitions": [
     {
-      "id": "word-es--impersonal-evaluation",
-      "kind": "word",
-      "promptEs": "es",
-      "answerEn": "it is (introducing an evaluation)",
-      "noteEn": "Spanish can begin an impersonal evaluation with es plus a describing word. English normally supplies an impersonal ‘it,’ but Spanish does not add a separate subject word.",
-      "example": {
-        "es": "Es extraño que llueva.",
-        "en": "It is strange that it is raining."
-      },
-      "tags": ["word", "ser", "impersonal expression", "evaluation", "A2"]
-    },
-    {
       "id": "word-increíble",
       "kind": "word",
       "promptEs": "increíble",
@@ -42,19 +30,12 @@
         "es": "La vista es increíble.",
         "en": "The view is amazing."
       },
-      "tags": ["word", "adjective", "evaluation", "A2"]
-    },
-    {
-      "id": "word-tengas--subjunctive-evaluation",
-      "kind": "word",
-      "promptEs": "tengas",
-      "answerEn": "you have (special form after an evaluation)",
-      "noteEn": "Tengas is a special form of tener for familiar singular ‘you.’ After an impersonal judgment such as es increíble que, Spanish normally changes the ordinary tienes to tengas.",
-      "example": {
-        "es": "Es bueno que tengas tiempo.",
-        "en": "It is good that you have time."
-      },
-      "tags": ["word", "tener", "subjunctive", "evaluation", "B1"]
+      "tags": [
+        "word",
+        "adjective",
+        "evaluation",
+        "A2"
+      ]
     },
     {
       "id": "word-fábrica",
@@ -66,19 +47,13 @@
         "es": "La fábrica produce bicicletas.",
         "en": "The factory produces bicycles."
       },
-      "tags": ["word", "noun", "manufacturing", "accent", "A2"]
-    },
-    {
-      "id": "word-más--more-ones",
-      "kind": "word",
-      "promptEs": "más",
-      "answerEn": "more; more people or things (with the noun understood)",
-      "noteEn": "Más can stand without a following noun when the context already makes clear what ‘more’ refers to. The accent distinguishes más, ‘more,’ from mas, a literary word for ‘but.’",
-      "example": {
-        "es": "Necesitamos más como estas.",
-        "en": "We need more like these."
-      },
-      "tags": ["word", "quantity", "ellipsis", "accent", "A2"]
+      "tags": [
+        "word",
+        "noun",
+        "manufacturing",
+        "accent",
+        "A2"
+      ]
     },
     {
       "id": "concept-von-neumann-self-replicating-machine",
@@ -86,7 +61,14 @@
       "promptEs": "máquina autorreplicante de Von Neumann",
       "answerEn": "a theoretical machine that can construct another machine from a description and pass that description to the result",
       "noteEn": "John von Neumann's self-reproduction model combines a universal constructor with a copied description of the machine. The comic loosely treats the human reproductive system as an internal ‘factory’ that makes more people; humans are not literal copies of one another or implementations of the formal machine.",
-      "tags": ["concept", "computer science", "self-replication", "John von Neumann", "joke"]
+      "tags": [
+        "concept",
+        "computer science",
+        "self-replication",
+        "John von Neumann",
+        "joke"
+      ],
+      "questionEn": "What is von Neumann's idea of a self-replicating machine?"
     }
   ],
   "regions": [
@@ -105,7 +87,7 @@
           "text": "ES",
           "normalized": "es",
           "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tecnologia-avanzada:ocr-token-00001" }],
-          "cardIds": ["word-es--impersonal-evaluation", "grammar-evaluative-subjunctive"]
+          "cardIds": ["word-es", "grammar-evaluative-subjunctive"]
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:w02",
@@ -126,21 +108,26 @@
           "text": "TENGAS",
           "normalized": "tengas",
           "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tecnologia-avanzada:ocr-token-00004" }],
-          "cardIds": ["word-tengas--subjunctive-evaluation", "grammar-evaluative-subjunctive", "concept-von-neumann-self-replicating-machine"]
+          "cardIds": ["word-tengas--possibility-subjunctive", "grammar-evaluative-subjunctive", "concept-von-neumann-self-replicating-machine"]
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:w05",
           "text": "UNA",
           "normalized": "una",
           "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tecnologia-avanzada:ocr-token-00005" }],
-          "cardIds": ["word-una", "grammar-evaluative-subjunctive"]
+          "cardIds": [
+            "word-una"
+          ]
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:w06",
           "text": "FÁBRICA",
           "normalized": "fábrica",
           "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tecnologia-avanzada:ocr-token-00006" }],
-          "cardIds": ["word-fábrica", "grammar-evaluative-subjunctive", "concept-von-neumann-self-replicating-machine"]
+          "cardIds": [
+            "word-fábrica",
+            "concept-von-neumann-self-replicating-machine"
+          ]
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:w07",
@@ -161,7 +148,7 @@
           "text": "MÁS",
           "normalized": "más",
           "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-tecnologia-avanzada:ocr-token-00009" }],
-          "cardIds": ["word-más--more-ones", "concept-von-neumann-self-replicating-machine"]
+          "cardIds": ["word-más--more", "concept-von-neumann-self-replicating-machine"]
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:w10",
@@ -186,12 +173,10 @@
             "es-xkcd-tecnologia-avanzada:bubble:w01",
             "es-xkcd-tecnologia-avanzada:bubble:w02",
             "es-xkcd-tecnologia-avanzada:bubble:w03",
-            "es-xkcd-tecnologia-avanzada:bubble:w04",
-            "es-xkcd-tecnologia-avanzada:bubble:w05",
-            "es-xkcd-tecnologia-avanzada:bubble:w06"
+            "es-xkcd-tecnologia-avanzada:bubble:w04"
           ],
-          "exampleEs": "ES INCREÍBLE QUE TENGAS UNA FÁBRICA",
-          "explanationEn": "Es increíble gives the speaker's evaluation, que introduces the situation being judged, and tengas is the special form of tener used in that evaluated situation."
+          "exampleEs": "ES INCREÍBLE QUE TENGAS",
+          "explanationEn": "Es increíble supplies the evaluation, que introduces what is judged, and ordinary tienes changes to tengas in that evaluated setting."
         },
         {
           "id": "es-xkcd-tecnologia-avanzada:bubble:app-purpose",
@@ -202,6 +187,15 @@
           ],
           "exampleEs": "PARA HACER",
           "explanationEn": "Para introduces the purpose, and hacer remains in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-tecnologia-avanzada:bubble:review-word-w04",
+          "cardId": "word-tengas--possibility-subjunctive",
+          "participantWordIds": [
+            "es-xkcd-tecnologia-avanzada:bubble:w04"
+          ],
+          "exampleEs": "QUE TENGAS",
+          "explanationEn": "The evaluation es increíble que calls for tengas instead of tienes. It still refers to what one familiar listener has."
         }
       ]
     }

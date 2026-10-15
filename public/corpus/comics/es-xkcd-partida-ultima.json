@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-4029c802ac9fa83d",
+  "revision": "runtime-8d4e095e035b0b08",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -831,7 +831,7 @@
               }
             ],
             "cardIds": [
-              "word-su--third-person-possessive"
+              "word-su"
             ]
           },
           {
@@ -890,7 +890,7 @@
           "word-juego",
           "concept-gary-gygax-dnd",
           "word-por--at-stake",
-          "word-su--third-person-possessive",
+          "word-su",
           "word-alma"
         ]
       },
@@ -1121,7 +1121,7 @@
               }
             ],
             "cardIds": [
-              "word-tipo",
+              "word-tipo--guy",
               "phrase-contar-con"
             ]
           },
@@ -1243,7 +1243,7 @@
           "phrase-contar-con",
           "word-con--contar-con",
           "word-este",
-          "word-tipo",
+          "word-tipo--guy",
           "word-puede--possibility",
           "grammar-puede-que-subjunctive",
           "word-que--puede-que",
@@ -1616,7 +1616,7 @@
       "word-juego",
       "concept-gary-gygax-dnd",
       "word-por--at-stake",
-      "word-su--third-person-possessive",
+      "word-su",
       "word-alma",
       "word-claro",
       "word-es",
@@ -1628,7 +1628,7 @@
       "phrase-contar-con",
       "word-con--contar-con",
       "word-este",
-      "word-tipo",
+      "word-tipo--guy",
       "word-puede--possibility",
       "grammar-puede-que-subjunctive",
       "word-que--puede-que",
@@ -1811,10 +1811,10 @@
       "kind": "word",
       "promptEs": "dónde",
       "answerEn": "where",
-      "noteEn": "Dónde carries a written accent when it directly or indirectly asks about a location. In a direct question, Spanish also uses the opening question mark ¿.",
+      "noteEn": "Dónde keeps its written accent when asking about a place, whether the question stands alone or sits inside another sentence: ¿Dónde vive Ana? and No sé dónde vive Ana. Unaccented donde connects to a place without asking a question.",
       "example": {
-        "es": "¿Dónde está la estación?",
-        "en": "Where is the station?"
+        "es": "No recuerdo dónde dejé las llaves.",
+        "en": "I don't remember where I left the keys."
       },
       "tags": [
         "word",
@@ -1878,7 +1878,7 @@
       "promptEs": "hace + período + que + situación",
       "questionEn": "How do you say that a situation started an amount of time ago and is still continuing?",
       "answerEn": "Use hace, then the amount of time, then que and the continuing situation.",
-      "noteEn": "Hace stays unchanged and measures the elapsed period. Que connects that period to a situation that continues through now. This differs from hace + time used with a finished event: Llegó hace dos días means ‘She arrived two days ago,’ while Hace dos días que está aquí means ‘She has been here for two days.’",
+      "noteEn": "Hace stays unchanged and measures the elapsed period. Que connects that period to a situation that continues through now. This differs from hace followed by an amount of time with a finished event: Llegó hace dos días means ‘She arrived two days ago,’ while Hace dos días que está aquí means ‘She has been here for two days.’",
       "example": {
         "es": "Hace dos meses que trabajo aquí.",
         "en": "I have worked here for two months."
@@ -1921,7 +1921,7 @@
       "kind": "word",
       "promptEs": "que",
       "answerEn": "no separate English word; connects an elapsed period to a situation still continuing",
-      "noteEn": "In hace + amount of time + que + situation, que connects the measured time to what has continued through the present. Natural English usually expresses the connection with ‘for.’",
+      "noteEn": "After hace and an amount of time, que introduces a situation that has continued through the present. Natural English usually expresses this connection with ‘for.’",
       "example": {
         "es": "Hace tres días que llueve.",
         "en": "It has been raining for three days."
@@ -1948,8 +1948,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2151,8 +2150,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2255,8 +2258,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2378,7 +2381,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -2496,6 +2499,7 @@
         "tabletop role-playing game",
         "xkcd joke"
       ],
+      "questionEn": "Who was Gary Gygax, and why are role-playing rules part of the joke?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2530,19 +2534,24 @@
       }
     },
     {
-      "id": "word-su--third-person-possessive",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "his; her; its; their",
-      "noteEn": "",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
+      "example": {
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2587,8 +2596,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2775,20 +2788,26 @@
       }
     },
     {
-      "id": "word-tipo",
+      "id": "word-tipo--guy",
       "kind": "word",
       "promptEs": "tipo",
-      "answerEn": "guy; type",
-      "noteEn": "",
+      "answerEn": "guy; man",
+      "noteEn": "In informal speech, tipo can refer to a man as “guy.” In other contexts, it can instead mean a type or kind.",
+      "example": {
+        "es": "Ese tipo vive cerca.",
+        "en": "That guy lives nearby."
+      },
       "tags": [
         "word",
-        "contextual sense"
+        "person",
+        "informal",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-conduccion-agresiva",
         "contextualSenseReviewed": true
       }
     },
@@ -2922,16 +2941,15 @@
       "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
-      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "answerEn": "the; combines a and el before a person or animal directly affected by the action",
+      "noteEn": "Al combines a and el. This a marks a person, animal, or person-like target directly affected by the verb; it does not itself mean 'to' a recipient. El means 'the,' or helps identify 'the one' when no noun is stated. Keep al separate from accented él, 'he.'",
       "example": {
         "es": "Veo al profesor.",
         "en": "I see the teacher."
       },
       "tags": [
         "word",
-        "contraction",
-        "personal a"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2947,7 +2965,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -3140,7 +3158,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

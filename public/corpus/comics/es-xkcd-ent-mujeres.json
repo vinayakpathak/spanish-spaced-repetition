@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-98def216979b4677",
+  "revision": "runtime-fccac41dedaeae91",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -550,7 +550,6 @@
             ],
             "cardIds": [
               "word-misma--same",
-              "grammar-mismo-before-noun-agreement",
               "concept-entwives-lord-of-the-rings-joke"
             ]
           },
@@ -568,7 +567,6 @@
             ],
             "cardIds": [
               "word-historia",
-              "grammar-mismo-before-noun-agreement",
               "concept-entwives-lord-of-the-rings-joke"
             ]
           },
@@ -590,21 +588,9 @@
           }
         ],
         "excludedUnits": [],
-        "applications": [
-          {
-            "id": "es-xkcd-ent-mujeres:same-story:app-same",
-            "cardId": "grammar-mismo-before-noun-agreement",
-            "participantWordIds": [
-              "es-xkcd-ent-mujeres:same-story:w01",
-              "es-xkcd-ent-mujeres:same-story:w02"
-            ],
-            "exampleEs": "MISMA HISTORIA",
-            "explanationEn": "Misma appears before historia and uses feminine singular -a to match that noun."
-          }
-        ],
+        "applications": [],
         "cardIds": [
           "word-misma--same",
-          "grammar-mismo-before-noun-agreement",
           "concept-entwives-lord-of-the-rings-joke",
           "word-historia",
           "word-supongo"
@@ -702,7 +688,7 @@
               }
             ],
             "cardIds": [
-              "word-te--referirse",
+              "word-te--pronominal-marker",
               "phrase-referirse-a"
             ]
           },
@@ -756,7 +742,7 @@
           "phrase-referirse-a",
           "word-qué--interrogative",
           "question-words",
-          "word-te--referirse",
+          "word-te--pronominal-marker",
           "word-refieres--refer-to",
           "concept-entwives-lord-of-the-rings-joke"
         ]
@@ -786,7 +772,6 @@
       "word-vosotros",
       "grammar-vosotros-informal-plural",
       "word-misma--same",
-      "grammar-mismo-before-noun-agreement",
       "word-historia",
       "word-supongo",
       "word-eh--confusion",
@@ -794,7 +779,7 @@
       "phrase-referirse-a",
       "word-qué--interrogative",
       "question-words",
-      "word-te--referirse",
+      "word-te--pronominal-marker",
       "word-refieres--refer-to"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -835,8 +820,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -851,7 +835,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1125,19 +1113,20 @@
     {
       "id": "phrase-lo-siento",
       "kind": "phrase",
-      "promptEs": "Lo siento.",
-      "answerEn": "Lo siento means “I'm sorry.”",
-      "noteEn": "Use this fixed expression for an apology or when reacting sympathetically to bad news. Learn it as a complete expression instead of translating lo and siento separately.",
-      "tags": [
-        "A1",
-        "expression",
-        "politeness"
-      ],
-      "questionEn": "What is the standard way to say “I'm sorry” when apologizing or expressing sympathy?",
+      "promptEs": "lo siento o lo sentimos",
+      "questionEn": "How do you say 'I'm sorry' or 'we're sorry' with lo siento?",
+      "answerEn": "Use lo siento when speaking for yourself and lo sentimos when speaking for a group.",
+      "noteEn": "Use this conventional expression for an apology or for sympathy about bad news. Lo stays fixed, while sentir changes to siento for I and sentimos for we. Mucho can strengthen the apology: lo siento mucho. These are variations of the same expression, not separate meanings of apology.",
       "example": {
-        "es": "Lo siento. Fue un error.",
-        "en": "I'm sorry. It was a mistake."
+        "es": "Lo sentimos. Fue un error.",
+        "en": "We're sorry. It was a mistake."
       },
+      "tags": [
+        "phrase",
+        "apology",
+        "politeness",
+        "A1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1265,8 +1254,8 @@
       "id": "word-misma--same",
       "kind": "word",
       "promptEs": "misma",
-      "answerEn": "same (feminine singular)",
-      "noteEn": "Before a noun, misma says that it is the identical one rather than a different one. It uses the feminine singular ending because it describes a feminine singular noun.",
+      "answerEn": "same",
+      "noteEn": "Misma identifies the identical one, not a different one. Its ending matches a noun that uses la: la misma ruta. A noun that uses el instead takes mismo: el mismo camino. For more than one, add s: las mismas rutas.",
       "example": {
         "es": "Tomamos la misma ruta.",
         "en": "We take the same route."
@@ -1283,31 +1272,6 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-teleportacion-cuantica",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "grammar-mismo-before-noun-agreement",
-      "kind": "grammar",
-      "promptEs": "mismo/misma/mismos/mismas + sustantivo",
-      "questionEn": "How do you say “the same” before a noun?",
-      "answerEn": "Put mismo before the noun and change its ending to match that noun: mismo, misma, mismos, or mismas.",
-      "noteEn": "Use mismo with one masculine noun, misma with one feminine noun, mismos with a masculine or mixed plural, and mismas with a feminine plural. The noun normally follows immediately.",
-      "example": {
-        "es": "Tomamos la misma ruta.",
-        "en": "We took the same route."
-      },
-      "tags": [
-        "grammar",
-        "agreement",
-        "same",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-ent-mujeres",
         "contextualSenseReviewed": true
       }
     },
@@ -1422,8 +1386,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1462,26 +1430,24 @@
       }
     },
     {
-      "id": "word-te--referirse",
+      "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word; marks referirse for one familiar listener",
-      "noteEn": "Referirse is a pronominal verb: its small marker changes with the person. Use me refiero for “I refer,” te refieres for “you refer,” and se refiere for “he, she, or it refers.”",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "¿Te refieres al informe?",
-        "en": "Are you referring to the report?"
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronominal verb",
-        "referirse",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-ent-mujeres",
+        "ownerComicId": "es-xkcd-elecciones-parte-4",
         "contextualSenseReviewed": true
       }
     },

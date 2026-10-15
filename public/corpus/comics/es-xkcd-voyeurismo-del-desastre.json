@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e60f0d287f9755e8",
+  "revision": "runtime-a1096be3178a17f6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -3262,7 +3262,7 @@
               }
             ],
             "cardIds": [
-              "word-estamos",
+              "word-estamos--progressive-auxiliary",
               "grammar-estar-gerundio"
             ]
           },
@@ -3407,6 +3407,15 @@
             ],
             "exampleEs": "COMPLETAMENTE",
             "explanationEn": "Completa takes -mente to form completamente, which intensifies how different the conversations are."
+          },
+          {
+            "id": "es-xkcd-voyeurismo-del-desastre:panel-5-realization:review-word-w10",
+            "cardId": "word-estamos--progressive-auxiliary",
+            "participantWordIds": [
+              "es-xkcd-voyeurismo-del-desastre:panel-5-realization:w10"
+            ],
+            "exampleEs": "ESTAMOS MANTENIENDO",
+            "explanationEn": "Estamos is the we-form helping the following action word describe something in progress."
           }
         ],
         "cardIds": [
@@ -3422,7 +3431,7 @@
           "word-cuenta--darse-cuenta",
           "word-de--darse-cuenta",
           "word-que--clause-link",
-          "word-estamos",
+          "word-estamos--progressive-auxiliary",
           "grammar-estar-gerundio",
           "word-manteniendo--conversation",
           "phrase-mantener-conversacion",
@@ -3586,7 +3595,7 @@
       "word-rato--short-while",
       "word-que--after-hace-time",
       "word-di--darse-cuenta",
-      "word-estamos",
+      "word-estamos--progressive-auxiliary",
       "grammar-estar-gerundio",
       "word-manteniendo--conversation",
       "phrase-mantener-conversacion",
@@ -3766,8 +3775,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3856,11 +3865,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -3880,7 +3889,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -4000,7 +4009,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -4100,18 +4113,18 @@
     {
       "id": "grammar-hacerse-adjective-change",
       "kind": "grammar",
-      "promptEs": "hacerse + descripción",
-      "questionEn": "How can you say that a person or thing becomes or gradually grows a certain way?",
-      "answerEn": "Use the matching form of hacerse followed by the word that describes the new state.",
-      "noteEn": "The short marker and hacer form change with the subject: me hago, te haces, se hace, nos hacemos, and so on. The describing word matches the person or thing in number and, when its form changes, gender.",
+      "promptEs": "hacerse + descripción del nuevo estado",
+      "questionEn": "How do you use hacerse to say that someone or something becomes a certain way?",
+      "answerEn": "Use the matching form of hacerse followed by the word describing the new state.",
+      "noteEn": "The short marker and hacer change together: me hago ('I become'), te haces ('you become,' familiar singular), se hace ('he/she becomes'), nos hacemos ('we become'). This often describes development or a change over time, including getting older: hacerse mayor. The describing word matches the person or thing when its ending allows it: mayor becomes mayores for a group; rico becomes rica for a woman. Not every English 'become' uses hacerse: sudden temporary feelings and changes of identity can use other Spanish verbs.",
       "example": {
         "es": "Las tardes se hacen más cortas.",
         "en": "The afternoons are getting shorter."
       },
       "tags": [
         "grammar",
-        "change of state",
         "hacerse",
+        "change of state",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -4153,7 +4166,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."
@@ -4332,8 +4345,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4612,8 +4624,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -4980,17 +4996,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -5195,7 +5209,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -5218,17 +5232,15 @@
       "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (in the role or capacity of)",
-      "noteEn": "Unaccented como can introduce the role, identity, or point of view from which someone speaks or acts. This is different from cómo with an accent, which asks “how.”",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Como médico, recomiendo descansar.",
-        "en": "As a doctor, I recommend resting."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "role",
-        "point of view",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -5278,19 +5290,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -5396,17 +5410,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -5493,17 +5505,15 @@
       "id": "word-si--fixed-por-si",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "no separate English word; completes por si, 'in case'",
-      "noteEn": "Si remains unaccented in por si and introduces the uncertain event for which someone prepares.",
+      "answerEn": "no separate English word; part of por si, in case",
+      "noteEn": "Por si introduces a possibility someone is preparing for. Acaso can be added for 'just in case,' including on its own at the end. Si stays unaccented; it is not sí, 'yes.'",
       "example": {
-        "es": "Cierra la ventana por si llueve.",
-        "en": "Close the window in case it rains."
+        "es": "Lleva una chaqueta por si hace frío.",
+        "en": "Take a jacket in case it is cold."
       },
       "tags": [
         "word",
-        "fixed expression",
-        "precaution",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -6237,7 +6247,7 @@
       "promptEs": "empezar a + infinitivo",
       "questionEn": "How do you say that someone starts doing an action?",
       "answerEn": "Use a form of empezar, then a, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus sign means “followed by.” The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
+      "noteEn": "The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
       "example": {
         "es": "Lucía empieza a leer.",
         "en": "Lucía starts to read."
@@ -6762,10 +6772,10 @@
     {
       "id": "grammar-hace-duration-ago",
       "kind": "grammar",
-      "promptEs": "hace + cantidad de tiempo",
-      "questionEn": "How do you say how long ago a past event happened?",
-      "answerEn": "Put hace before the length of time.",
-      "noteEn": "Spanish places hace before a duration: hace dos semanas means “two weeks ago.” The verb that describes the event itself is normally in a past form.",
+      "promptEs": "hace + tiempo transcurrido",
+      "questionEn": "How do you use hace to say how long ago something happened?",
+      "answerEn": "Put hace before the amount of time between now and the past event.",
+      "noteEn": "Hace stays singular and comes before the duration: hace dos años means 'two years ago.' The amount can be vague: hace un tiempo means 'a while ago,' and hace mucho means 'a long time ago.' The event itself is normally expressed in a past form. This card covers when a past event happened, not the different pattern hace dos años que vivo aquí for something continuing until now.",
       "example": {
         "es": "Nos conocimos hace tres meses.",
         "en": "We met three months ago."
@@ -6882,14 +6892,20 @@
       }
     },
     {
-      "id": "word-estamos",
+      "id": "word-estamos--progressive-auxiliary",
       "kind": "word",
       "promptEs": "estamos",
-      "answerEn": "we are",
-      "noteEn": "",
+      "answerEn": "we are (helping describe an action in progress)",
+      "noteEn": "Estamos is the form of estar for nosotros, “we.” Before an ongoing-action form, usually ending in -ando or -iendo, it says that the group is doing that action now or during the period being discussed.",
+      "example": {
+        "es": "Estamos preparando la comida.",
+        "en": "We are preparing the meal."
+      },
       "tags": [
         "word",
-        "contextual sense"
+        "estar",
+        "progressive",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -6904,7 +6920,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

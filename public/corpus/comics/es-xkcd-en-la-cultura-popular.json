@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-ca6e78bdfe956d6c",
+  "revision": "runtime-aff416526fec63c5",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -2386,8 +2386,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2710,17 +2714,15 @@
       "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks an action whose doer is not named",
-      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "Se encontraron varios errores.",
-        "en": "Several errors were found."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive se",
-        "unnamed agent",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2889,7 +2891,7 @@
       "promptEs": "tanto X como Y",
       "questionEn": "How do you link two items with the meaning ‘both one and the other’?",
       "answerEn": "Put tanto before the first item and como before the second item.",
-      "noteEn": "The letters X and Y stand for the two parallel items being linked. Each item can itself begin with a preposition such as para, de, or como, so repeated words are possible. The two items should play the same grammatical role.",
+      "noteEn": "Each item can itself begin with a preposition such as para, de, or como, so repeated words are possible. The two items should play the same grammatical role.",
       "example": {
         "es": "Usamos la mesa tanto para comer como para trabajar.",
         "en": "We use the table both for eating and for working."
@@ -2912,17 +2914,15 @@
       "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (in the role or capacity of)",
-      "noteEn": "Unaccented como can introduce the role, identity, or point of view from which someone speaks or acts. This is different from cómo with an accent, which asks “how.”",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Como médico, recomiendo descansar.",
-        "en": "As a doctor, I recommend resting."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "role",
-        "point of view",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3009,17 +3009,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3152,6 +3150,7 @@
         "internet culture",
         "comic joke"
       ],
+      "questionEn": "What encyclopedia convention does the “In popular culture” list parody?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3538,7 +3537,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -3600,11 +3599,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3620,7 +3622,7 @@
       "promptEs": "estar hecho/a de + material",
       "questionEn": "How do you say what material something is made from?",
       "answerEn": "Use a form of estar, then hecho, hecha, hechos, or hechas to match the thing, then de and the material.",
-      "noteEn": "Estar changes for the thing and the time: está or estaba, for example. Hecho is the completed-action form of hacer, ‘to make,’ and changes to hecha, hechos, or hechas to match the thing described. De introduces the material; the plus sign in the prompt means that the material comes next.",
+      "noteEn": "Estar changes for the thing and the time: está or estaba, for example. Hecho is the completed-action form of hacer, ‘to make,’ and changes to hecha, hechos, or hechas to match the thing described. De introduces the material.",
       "example": {
         "es": "La mesa está hecha de metal.",
         "en": "The table is made of metal."
@@ -3809,7 +3811,7 @@
       "promptEs": "ser de + material",
       "questionEn": "How can you state simply what material something is made of?",
       "answerEn": "Use the matching form of ser, then de, then the material.",
-      "noteEn": "English normally says ‘is made of,’ but Spanish can omit a separate word for ‘made’: la taza es de vidrio. Only ser changes for the thing or time; de stays unchanged, and the plus sign in the prompt means that the material comes next.",
+      "noteEn": "English normally says ‘is made of,’ but Spanish can omit a separate word for ‘made’: la taza es de vidrio. Only ser changes for the thing or time; de stays unchanged and comes directly before the material.",
       "example": {
         "es": "Las llaves son de metal.",
         "en": "The keys are made of metal."

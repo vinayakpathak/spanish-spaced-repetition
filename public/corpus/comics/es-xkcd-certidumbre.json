@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-33c45bc8b0eb42d0",
+  "revision": "runtime-716663adcafec1e9",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -839,7 +839,7 @@
               }
             ],
             "cardIds": [
-              "word-que--clause-link",
+              "word-que--result-link",
               "grammar-tan-adjective-que-result"
             ]
           },
@@ -1314,6 +1314,15 @@
             ],
             "exampleEs": "CONFIAR EN SABER",
             "explanationEn": "Confiar requires en before the trusted action, and saber remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-certidumbre:panel-2-bubble-1:review-word-word-6",
+            "cardId": "word-que--result-link",
+            "participantWordIds": [
+              "es-xkcd-certidumbre:panel-2-bubble-1:word-6"
+            ],
+            "exampleEs": "TAN COMPLICADO QUE",
+            "explanationEn": "Here que introduces the result of the degree marked by tan, rather than the content of thinking or speaking."
           }
         ],
         "cardIds": [
@@ -1323,7 +1332,7 @@
           "word-tan",
           "grammar-tan-adjective-que-result",
           "word-complicado",
-          "word-que--clause-link",
+          "word-que--result-link",
           "word-cuanto--correlative",
           "grammar-cuanto-mas-menos",
           "word-más--more",
@@ -2231,7 +2240,7 @@
       "word-tan",
       "grammar-tan-adjective-que-result",
       "word-complicado",
-      "word-que--clause-link",
+      "word-que--result-link",
       "word-cuanto--correlative",
       "grammar-cuanto-mas-menos",
       "word-más--more",
@@ -2273,6 +2282,7 @@
       "word-enseñando",
       "grammar-adverbial-gerund",
       "word-supongo",
+      "word-que--clause-link",
       "word-tan--tan-solo",
       "phrase-tan-solo",
       "word-solo",
@@ -2363,7 +2373,7 @@
       "kind": "phrase",
       "promptEs": "meter a alguien en algo",
       "questionEn": "How do you say that someone gets or draws another person into a situation?",
-      "answerEn": "Use meter a alguien en algo, changing meter for the person and time.",
+      "answerEn": "Use a form of meter, put a before the person drawn in, and put en before the situation.",
       "noteEn": "Meter literally means “to put.” A introduces the person affected, and en introduces the situation. With a problem, conflict, or activity, the whole pattern can mean to get or drag someone into it.",
       "example": {
         "es": "No metas a Leo en el problema.",
@@ -2526,10 +2536,13 @@
       "kind": "word",
       "promptEs": "eh",
       "answerEn": "uh; um",
-      "noteEn": "",
+      "noteEn": "A hesitation sound used while the speaker pauses to think or find words. This is different from eh used to call for attention or ask for agreement.",
+      "example": {
+        "es": "Eh... tengo otra pregunta.",
+        "en": "Um... I have another question."
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2779,7 +2792,7 @@
       "promptEs": "lo + adjetivo + que + verbo",
       "questionEn": "How do you express how strikingly good, difficult, large, or similar something is?",
       "answerEn": "Use lo, then the describing word, then que and a verb.",
-      "noteEn": "Each plus sign means “followed by.” Lo stays unchanged, while the adjective—the word that describes a person or thing—matches what it describes: lo bueno for masculine and lo buena for feminine. Que introduces the clause that identifies the person or thing.",
+      "noteEn": "Lo stays unchanged, while the adjective—the word that describes a person or thing—matches what it describes: lo bueno for masculine and lo buena for feminine. Que introduces the clause that identifies the person or thing.",
       "example": {
         "es": "No imaginas lo difícil que es.",
         "en": "You can't imagine how difficult it is."
@@ -2839,8 +2852,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3074,7 +3091,7 @@
       "promptEs": "tan + adjetivo + que + resultado",
       "questionEn": "How do you say that something is so strongly one way that a result follows?",
       "answerEn": "Use tan before the describing word, then que before the result.",
-      "noteEn": "Each plus sign means “followed by.” Tan gives the degree, the adjective describes the person or thing, and que introduces what follows because of that degree.",
+      "noteEn": "Tan gives the degree, the adjective describes the person or thing, and que introduces what follows because of that degree.",
       "example": {
         "es": "La caja es tan pesada que no puedo moverla.",
         "en": "The box is so heavy that I can't move it."
@@ -3112,24 +3129,19 @@
       }
     },
     {
-      "id": "word-que--clause-link",
+      "id": "word-que--result-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
-      "example": {
-        "es": "Creo que Ana viene.",
-        "en": "I think that Ana is coming."
-      },
+      "answerEn": "no separate English word; part of a result connector",
+      "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-sustituto",
         "contextualSenseReviewed": true
       }
     },
@@ -3180,7 +3192,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3253,7 +3269,7 @@
       "kind": "phrase",
       "promptEs": "tener algo claro",
       "questionEn": "How do you say that you clearly understand or feel sure about something?",
-      "answerEn": "Use tener algo claro.",
+      "answerEn": "Use a form of tener with the thing you understand and a matching form of claro.",
       "noteEn": "Tener literally means “to have,” but this pattern says that an idea is clear in someone's mind. Claro can match a named feminine or plural thing: tengo clara la fecha and tengo claras las reglas.",
       "example": {
         "es": "Tengo clara la fecha de la reunión.",
@@ -3276,11 +3292,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -3335,7 +3351,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3545,7 +3565,7 @@
       "promptEs": "confiar en + nombre o infinitivo",
       "questionEn": "What word follows confiar before the person, thing, or action that is trusted?",
       "answerEn": "Use en after confiar.",
-      "noteEn": "The plus sign means “followed by.” En can introduce a person or thing, or an action verb in its unchanged dictionary form. That unchanged form is called the infinitive and ends in -ar, -er, or -ir.",
+      "noteEn": "En can introduce a person or thing, or an action verb in its unchanged dictionary form. That unchanged form is called the infinitive and ends in -ar, -er, or -ir.",
       "example": {
         "es": "Confío en terminar hoy.",
         "en": "I trust that I can finish today."
@@ -3568,12 +3588,15 @@
       "id": "word-en--trust-complement",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; required after confiar before what is trusted",
-      "noteEn": "",
+      "answerEn": "in; introduces who or what is trusted",
+      "noteEn": "Confiar and confianza use en before the person, thing, or ability being trusted. Keep en even when natural English chooses a verb such as 'trust' without a separate 'in.'",
+      "example": {
+        "es": "Tengo confianza en Clara.",
+        "en": "I have confidence in Clara."
+      },
       "tags": [
         "word",
-        "verb complement",
-        "trust"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3677,7 +3700,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3799,8 +3826,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3819,7 +3850,7 @@
       "promptEs": "palabra de pregunta + demonios",
       "questionEn": "How can you add exasperation or disbelief to a question?",
       "answerEn": "Put demonios after qué, dónde, cómo, or another question word.",
-      "noteEn": "The plus sign means “followed by.” Demonios is not literal here; it adds an informal force similar to “on earth” or, more strongly, “the hell.”",
+      "noteEn": "Demonios is not literal here; it adds an informal force similar to “on earth” or, more strongly, “the hell.”",
       "example": {
         "es": "¿Dónde demonios están mis llaves?",
         "en": "Where on earth are my keys?"
@@ -3900,7 +3931,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -3933,6 +3964,28 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-certidumbre",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-que--clause-link",
+      "kind": "word",
+      "promptEs": "que",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
+      "example": {
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3985,8 +4038,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4042,7 +4094,7 @@
       "promptEs": "lo mejor que + poder",
       "questionEn": "How do you say that someone does something as well as they can?",
       "answerEn": "Use lo mejor que followed by a form of poder that matches the person and time.",
-      "noteEn": "The plus sign means “followed by.” Lo and mejor stay fixed. Poder changes: puedo for “I can,” puedes for “you can,” and podemos for “we can.”",
+      "noteEn": "Lo and mejor stay fixed. Poder changes: puedo for “I can,” puedes for “you can,” and podemos for “we can.”",
       "example": {
         "es": "Cocinamos lo mejor que podemos.",
         "en": "We cook as well as we can."

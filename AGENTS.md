@@ -56,6 +56,7 @@ When an exact sentence contains a useful pattern, generalize it. For example, pr
 
 - Use a canonical, generalized Spanish prompt.
 - For every reusable grammar or expression card, add a plain-English question that makes sense to a learner with no prior Spanish grammar vocabulary. The question—not unexplained notation—should be the card front.
+- Give concept cards a meaningful plain-English question too. Keep canonical Spanish patterns and classification tags internal: do not show a separate “Spanish pattern”/“Spanish expression” box or raw pattern titles in card lists, previews, or summaries. Word-card titles remain the Spanish word being learned.
 - Give a concise English answer, followed by a jargon-free explanation of how the rule works. Define any unavoidable grammar term in plain language.
 - Give every grammar or expression card a short, invented Spanish example and an English translation. The example must be generic and reusable, not copied from a comic.
 - Keep reusable grammar and expression explanations occurrence-independent. Never put “Comic example” text, a strip title, a bubble translation, or another comic-specific detail in those `LearningCard` records. A deliberately joke-specific concept card may explain the joke it represents, but it must not masquerade as a reusable language rule.
@@ -79,7 +80,9 @@ Treat the learner as a complete beginner:
 - Prefer ordinary descriptions such as “the verb's dictionary form” before introducing a label such as “infinitive.”
 - Whenever a term such as *infinitive*, *subjunctive*, *preterite*, *imperfect*, *participle*, *conditional*, *pronoun*, *subject*, *object*, or *conjugate* is unavoidable, define it on that card and show a concrete Spanish form change.
 - Never use a grammar term as its own explanation. For example, “use the subjunctive” is incomplete unless the card also explains why that form appears here and shows how an ordinary verb form changes.
-- Explain notation in words. A learner should understand every `+`, arrow, slash, abbreviation, and placeholder used in the Spanish pattern after reading the card.
+- Teach the useful meaning first, using short Spanish examples with English translations. Avoid vague labels such as “other linking uses”; say what the words mean or do in a concrete example.
+- Do not introduce an exception or reassurance such as “even without question marks” before teaching the rule it qualifies. Include a contrast only when it helps with this card's meaning; do not add unrelated spelling or grammar caveats to an ordinary word card.
+- Write English instructions that stand alone without the internal Spanish pattern. Do not add sentences explaining its plus signs, arrows, slashes, or placeholders. Use concrete Spanish forms and bilingual examples; explain notation only when it is itself necessary material being taught, such as a mathematical symbol in a concept example.
 - Keep one card focused on one decision or reusable pattern. If the explanation needs two unrelated rules, split the card.
 - Keep the answer short enough to recall; put teaching detail in the explanation rather than compressing it into dense jargon on the answer line.
 

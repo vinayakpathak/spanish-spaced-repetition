@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-ff46543c6d357e13",
+  "revision": "runtime-e7720cf8037f958f",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -400,7 +400,7 @@
               }
             ],
             "cardIds": [
-              "word-con--jugar-experiment",
+              "word-con",
               "phrase-jugar-con-algo--experiment"
             ]
           },
@@ -452,7 +452,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-jugar-con-algo--experiment"
             ]
           },
@@ -621,9 +621,9 @@
           "word-y",
           "word-jugar--experiment",
           "phrase-jugar-con-algo--experiment",
-          "word-con--jugar-experiment",
+          "word-con",
           "word-ajuste--setting",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-tinte--hue",
           "word-del--of-the",
           "word-photoshop--software"
@@ -740,9 +740,9 @@
       "word-y",
       "word-jugar--experiment",
       "phrase-jugar-con-algo--experiment",
-      "word-con--jugar-experiment",
+      "word-con",
       "word-ajuste--setting",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-tinte--hue",
       "word-del--of-the",
       "word-photoshop--software",
@@ -909,7 +909,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1140,7 +1140,7 @@
       "promptEs": "haber + participio",
       "questionEn": "How do you refer to an action that was already completed after another verb such as poder, deber, or parecer?",
       "answerEn": "Use the unchanged helper haber followed by the completed-action form of the main verb.",
-      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged. The plus sign in the prompt means “followed by.”",
+      "noteEn": "The completed-action form is often called a participle: terminar becomes terminado, hacer becomes hecho, and ser becomes sido. After another verb, haber stays unchanged.",
       "example": {
         "es": "Parece haber terminado.",
         "en": "It seems to have ended."
@@ -1257,6 +1257,7 @@
         "image manipulation",
         "joke"
       ],
+      "questionEn": "What does it mean to say an image has been Photoshopped?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1269,17 +1270,15 @@
       "id": "word-del--from-time",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "from the (a time or period)",
-      "noteEn": "Del combines de and el. Here de marks a time or period as the source something comes from, rather than showing ownership.",
+      "answerEn": "from the; identifies the time or period something comes from",
+      "noteEn": "Del is the required combination of de and el. In this use, de gives a time of origin or a period something belongs to, rather than an owner. The expression may name a century, season, year, or the past or future.",
       "example": {
-        "es": "Recibimos una carta del pasado.",
-        "en": "We received a letter from the past."
+        "es": "Es una carta del pasado.",
+        "en": "It is a letter from the past."
       },
       "tags": [
         "word",
-        "contraction",
-        "time",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1375,26 +1374,24 @@
       }
     },
     {
-      "id": "word-con--jugar-experiment",
+      "id": "word-con",
       "kind": "word",
       "promptEs": "con",
-      "answerEn": "with; introduces what someone experiments with",
-      "noteEn": "In jugar con, con introduces the control, tool, or idea being tried in different ways.",
+      "answerEn": "with",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
       "example": {
-        "es": "Juega con la iluminación.",
-        "en": "Experiment with the lighting."
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
       },
       "tags": [
         "word",
-        "preposition",
-        "jugar con",
-        "experiment"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-follaje-otonal",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1423,26 +1420,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },

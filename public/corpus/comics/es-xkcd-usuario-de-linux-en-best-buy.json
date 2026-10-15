@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-176da13a7d61c01d",
+  "revision": "runtime-ffdbd4e5a1f05bea",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -64,7 +64,7 @@
               }
             ],
             "cardIds": [
-              "word-está--formal-state",
+              "word-está",
               "grammar-estar-interesado-en",
               "grammar-formal-address"
             ]
@@ -99,7 +99,7 @@
               }
             ],
             "cardIds": [
-              "word-en--interesado-complement",
+              "word-en--interest-complement",
               "grammar-estar-interesado-en"
             ]
           },
@@ -165,7 +165,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -208,18 +208,27 @@
             ],
             "exampleEs": "ESTÁ",
             "explanationEn": "The sales clerk addresses one customer as unspoken formal usted, so está uses the same singular form used with él or ella."
+          },
+          {
+            "id": "es-xkcd-usuario-de-linux-en-best-buy:sales-question:review-word-word-01",
+            "cardId": "word-está",
+            "participantWordIds": [
+              "es-xkcd-usuario-de-linux-en-best-buy:sales-question:word-01"
+            ],
+            "exampleEs": "ESTÁ INTERESADO",
+            "explanationEn": "The speaker addresses one listener formally as usted, so está naturally means “you are” in this description."
           }
         ],
         "cardIds": [
-          "word-está--formal-state",
+          "word-está",
           "grammar-estar-interesado-en",
           "grammar-formal-address",
           "word-interesado--interested",
-          "word-en--interesado-complement",
+          "word-en--interest-complement",
           "word-actualizar--update",
           "word-su",
           "word-software",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-antivirus",
           "concept-linux-consumer-antivirus"
         ]
@@ -334,7 +343,7 @@
               }
             ],
             "cardIds": [
-              "word-de--partitive"
+              "word-de--partitive-group"
             ]
           },
           {
@@ -386,7 +395,7 @@
           "grammar-negative-concord",
           "word-necesito--need",
           "word-nada",
-          "word-de--partitive",
+          "word-de--partitive-group",
           "word-eso"
         ]
       },
@@ -499,15 +508,15 @@
       }
     ],
     "cardIds": [
-      "word-está--formal-state",
+      "word-está",
       "grammar-estar-interesado-en",
       "grammar-formal-address",
       "word-interesado--interested",
-      "word-en--interesado-complement",
+      "word-en--interest-complement",
       "word-actualizar--update",
       "word-su",
       "word-software",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-antivirus",
       "concept-linux-consumer-antivirus",
       "word-oh",
@@ -517,7 +526,7 @@
       "grammar-negative-concord",
       "word-necesito--need",
       "word-nada",
-      "word-de--partitive",
+      "word-de--partitive-group",
       "word-eso",
       "word-uso--use",
       "word-linux--operating-system",
@@ -531,22 +540,23 @@
   },
   "cards": [
     {
-      "id": "word-está--formal-state",
+      "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "you are (formal singular; a state or condition)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "verbs",
-        "formal address",
-        "A2"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -621,22 +631,24 @@
       }
     },
     {
-      "id": "word-en--interesado-complement",
+      "id": "word-en--interest-complement",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "in; required after interesado before the activity",
-      "noteEn": "",
+      "answerEn": "in; introduces what someone is interested in",
+      "noteEn": "Use en with interesarse or interesado to name the interest. Interesado can change to interesada, interesados, or interesadas to match the person or people; en does not change.",
+      "example": {
+        "es": "Clara está interesada en la música.",
+        "en": "Clara is interested in music."
+      },
       "tags": [
         "word",
-        "prepositions",
-        "interest",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-ejercicio",
         "contextualSenseReviewed": true
       }
     },
@@ -664,11 +676,11 @@
       "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal singular)",
-      "noteEn": "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Señora, aquí está su café.",
-        "en": "Ma’am, here is your coffee."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
@@ -702,26 +714,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -757,6 +767,7 @@
         "Linux",
         "security"
       ],
+      "questionEn": "Why might a Linux user reject a retail antivirus sales pitch?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -833,8 +844,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -910,21 +920,24 @@
       }
     },
     {
-      "id": "word-de--partitive",
+      "id": "word-de--partitive-group",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "of (introducing what “none” applies to)",
-      "noteEn": "",
+      "answerEn": "of; identifies the larger group or whole",
+      "noteEn": "De links a selected amount or member to the group it comes from, as in uno de, algunos de, or la mayoría de. It also appears with nada de when none of the stated whole is included. De itself does not change.",
+      "example": {
+        "es": "Algunos de mis amigos viven aquí.",
+        "en": "Some of my friends live here."
+      },
       "tags": [
         "word",
-        "partitive",
-        "preposition"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pong",
+        "ownerComicId": "es-xkcd-baterias-de-litio",
         "contextualSenseReviewed": true
       }
     },

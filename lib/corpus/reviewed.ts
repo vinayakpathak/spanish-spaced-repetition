@@ -5,6 +5,7 @@ import {
   type LearningCard,
 } from "../content";
 import { rankComicsByCardGraph } from "../comic-importance";
+import { SEED_CURRICULUM_REVISION } from "../seed-corrections.js";
 import {
   IMPORTANCE_TARGET_CARD_SCOPE,
   IMPORTANCE_TARGET_EDGE_POLICY,
@@ -19,7 +20,7 @@ import {
   type CorpusManifestEntry,
 } from "./types";
 
-const REVIEWED_REVISION = "reviewed-v1";
+const REVIEWED_REVISION = SEED_CURRICULUM_REVISION;
 const INTERNAL_QA_STATUS = "ai-authored-internal-qa" as const;
 
 /**

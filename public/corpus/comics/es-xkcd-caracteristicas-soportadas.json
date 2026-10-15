@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-64c429694be66b85",
+  "revision": "runtime-ef17a72f428b3900",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -183,7 +183,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -462,7 +462,7 @@
           "grammar-ordinal-before-noun-agreement",
           "word-parche--software-update",
           "concept-linux-processor-scaling-vs-flash-video",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-linux--operating-system",
           "word-añade",
           "word-soporte--technical-compatibility",
@@ -520,7 +520,7 @@
               }
             ],
             "cardIds": [
-              "word-ya--yet-question"
+              "word-ya--already"
             ]
           },
           {
@@ -736,7 +736,7 @@
           },
           {
             "id": "es-xkcd-caracteristicas-soportadas:flash-question:app-ya-yet",
-            "cardId": "word-ya--yet-question",
+            "cardId": "word-ya--already",
             "participantWordIds": [
               "es-xkcd-caracteristicas-soportadas:flash-question:w02"
             ],
@@ -820,7 +820,7 @@
         "cardIds": [
           "word-tenéis--vosotros",
           "grammar-vosotros-informal-plural",
-          "word-ya--yet-question",
+          "word-ya--already",
           "word-soporte--technical-compatibility",
           "phrase-soporte-para",
           "concept-linux-processor-scaling-vs-flash-video",
@@ -971,7 +971,7 @@
       "grammar-ordinal-before-noun-agreement",
       "word-parche--software-update",
       "concept-linux-processor-scaling-vs-flash-video",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-linux--operating-system",
       "word-añade",
       "word-soporte--technical-compatibility",
@@ -987,7 +987,7 @@
       "word-de--of",
       "word-tenéis--vosotros",
       "grammar-vosotros-informal-plural",
-      "word-ya--yet-question",
+      "word-ya--already",
       "word-reproducir--play-media",
       "word-vídeos",
       "word-flash--adobe-platform",
@@ -1239,26 +1239,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -1400,7 +1398,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1591,26 +1593,24 @@
       }
     },
     {
-      "id": "word-ya--yet-question",
+      "id": "word-ya--already",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "yet; by now (in a question)",
-      "noteEn": "Ya often means ‘already.’ In a question about an expected change, natural English commonly uses ‘yet’ or ‘by now.’",
+      "answerEn": "already; by now, often yet in a question",
+      "noteEn": "Ya marks that an expected action or state has been reached by the time being discussed. English usually says 'already' in a statement, but often 'yet' in a question about whether it has happened.",
       "example": {
-        "es": "¿Ya funciona la impresora?",
-        "en": "Does the printer work yet?"
+        "es": "¿Ya llegó el tren?",
+        "en": "Has the train arrived yet?"
       },
       "tags": [
         "word",
-        "time",
-        "question",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-caracteristicas-soportadas",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1924,8 +1924,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

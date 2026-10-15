@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-aeec910795bf85ea",
+  "revision": "runtime-67989de78cbb8927",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -204,7 +204,7 @@
               }
             ],
             "cardIds": [
-              "word-todos--everyone",
+              "word-todos--all-of-them",
               "grammar-ser-identity-estar-location",
               "concept-wikileaks-anonymous-identity-leak"
             ]
@@ -276,6 +276,15 @@
             ],
             "exampleEs": "SOMOS TODOS",
             "explanationEn": "Somos introduces the collective identity, and standalone todos refers to everyone."
+          },
+          {
+            "id": "es-xkcd-wikileaks:manifesto:review-word-w09",
+            "cardId": "word-todos--all-of-them",
+            "participantWordIds": [
+              "es-xkcd-wikileaks:manifesto:w09"
+            ],
+            "exampleEs": "SOMOS TODOS",
+            "explanationEn": "Somos includes the speaker's group; todos means every member of the wider group, not a separately expressed “us.”"
           }
         ],
         "cardIds": [
@@ -287,7 +296,7 @@
           "grammar-negative-concord",
           "word-nadie",
           "word-y",
-          "word-todos--everyone"
+          "word-todos--all-of-them"
         ]
       },
       {
@@ -896,7 +905,7 @@
             ],
             "cardIds": [
               "word-bajar--download",
-              "grammar-infinitive-interface-command"
+              "grammar-bare-infinitive-diagram-label"
             ]
           },
           {
@@ -935,7 +944,7 @@
         "applications": [
           {
             "id": "es-xkcd-wikileaks:download-area:app-interface-infinitive",
-            "cardId": "grammar-infinitive-interface-command",
+            "cardId": "grammar-bare-infinitive-diagram-label",
             "participantWordIds": [
               "es-xkcd-wikileaks:download-area:w01"
             ],
@@ -945,7 +954,7 @@
         ],
         "cardIds": [
           "word-bajar--download",
-          "grammar-infinitive-interface-command",
+          "grammar-bare-infinitive-diagram-label",
           "word-ahora"
         ]
       },
@@ -1056,7 +1065,7 @@
       "grammar-negative-concord",
       "word-nadie",
       "word-y",
-      "word-todos--everyone",
+      "word-todos--all-of-them",
       "word-estamos--location",
       "word-aquí",
       "word-para",
@@ -1079,7 +1088,7 @@
       "word-la--article",
       "word-gente",
       "word-bajar--download",
-      "grammar-infinitive-interface-command",
+      "grammar-bare-infinitive-diagram-label",
       "word-ahora",
       "word-maldita--exclamation",
       "phrase-maldita-sea",
@@ -1197,8 +1206,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1273,27 +1281,26 @@
       }
     },
     {
-      "id": "word-todos--everyone",
+      "id": "word-todos--all-of-them",
       "kind": "word",
       "promptEs": "todos",
-      "answerEn": "everyone; everybody",
-      "noteEn": "Standalone todos can refer to all the people in a group. It is masculine plural for an all-male or mixed group; todas is used for an all-female group.",
+      "answerEn": "all; everyone (the whole understood group)",
+      "noteEn": "Todos can stand for all the people or things in an understood group. Other words show whether English needs “all of us,” “all of them,” or “everyone.” Use todos for masculine or mixed groups and todas for an all-feminine group.",
       "example": {
-        "es": "Todos entendieron el aviso.",
-        "en": "Everyone understood the warning."
+        "es": "Todos queremos una respuesta.",
+        "en": "We all want an answer."
       },
       "tags": [
         "word",
-        "people",
         "pronoun",
-        "plural",
-        "A1"
+        "quantity",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-wikileaks",
+        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
         "contextualSenseReviewed": true
       }
     },
@@ -1301,11 +1308,11 @@
       "id": "word-estamos--location",
       "kind": "word",
       "promptEs": "estamos",
-      "answerEn": "we are (at a place or location)",
-      "noteEn": "Estamos is the form of estar used with nosotros, ‘we.’ Use it for where a group is; somos instead gives an identity or defining description.",
+      "answerEn": "we are (in a place or time)",
+      "noteEn": "Estamos is the form of estar for nosotros, “we.” It can place the group somewhere, as in estamos aquí, or place us in a period, as in estamos en junio. This is different from estamos helping another verb describe an action in progress.",
       "example": {
-        "es": "Estamos aquí desde temprano.",
-        "en": "We have been here since early."
+        "es": "Estamos en otoño.",
+        "en": "It's autumn."
       },
       "tags": [
         "word",
@@ -1361,19 +1368,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1405,19 +1414,19 @@
     {
       "id": "phrase-luchar-por-causa",
       "kind": "phrase",
-      "promptEs": "luchar por + causa, persona u objetivo",
-      "questionEn": "How do you say that someone fights for or works hard in support of a cause or goal?",
-      "answerEn": "Use a matching form of luchar, then por, then name the cause, person, or goal.",
-      "noteEn": "Por introduces what the effort supports or seeks to defend. If the goal is an action, luchar por can instead be followed by the action verb in its unchanged dictionary form.",
+      "promptEs": "luchar por + causa u objetivo",
+      "questionEn": "How do you use luchar por to say what someone fights for or strives to achieve?",
+      "answerEn": "Use a form of luchar, then por, then the cause, person, or goal the effort supports.",
+      "noteEn": "Luchar changes for the person and time: lucho, luchan, luchamos. Por stays fixed. A noun can name the cause, as in luchar por la libertad. If the goal is an action, leave that action in its -ar, -er, or -ir dictionary form: luchar por mejorar. The effort may be literal fighting or determined work toward a goal.",
       "example": {
-        "es": "Luchan por la libertad de expresión.",
-        "en": "They fight for freedom of expression."
+        "es": "Luchamos por mejorar nuestras condiciones.",
+        "en": "We strive to improve our conditions."
       },
       "tags": [
         "phrase",
         "luchar",
-        "support",
-        "cause",
+        "effort",
+        "goals",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1644,17 +1653,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1786,28 +1793,27 @@
       }
     },
     {
-      "id": "grammar-infinitive-interface-command",
+      "id": "grammar-bare-infinitive-diagram-label",
       "kind": "grammar",
-      "promptEs": "guardar · enviar · bajar (botón o menú)",
-      "questionEn": "Why can a button or menu item use an unchanged dictionary-form verb as an instruction?",
-      "answerEn": "Spanish interfaces often use a verb's unchanged dictionary form to name the action the control performs.",
-      "noteEn": "This unchanged form is called the infinitive and usually ends in -ar, -er, or -ir. It is not addressed to tú or usted here; it functions as a short action label, especially on buttons, menus, notices, and lists of instructions.",
+      "promptEs": "verbo en forma de diccionario como etiqueta o instrucción",
+      "questionEn": "Why can abrir ('to open') mean 'Open!' on a sign or button?",
+      "answerEn": "Spanish can use a verb's dictionary form to label an action or give a short written instruction. English often translates it without 'to.'",
+      "noteEn": "The dictionary form is called the infinitive. It ends in -ar, -er, or -ir, as in cerrar ('to close'), comer ('to eat'), and abrir ('to open'). Buttons, signs, diagrams, and written steps can keep it unchanged to name an action without addressing a particular person. When speaking directly to one person informally, a command usually has a different form: abrir becomes abre. The example is a written instruction.",
       "example": {
-        "es": "Pulsa «Enviar» para mandar el mensaje.",
-        "en": "Press 'Send' to send the message."
+        "es": "Cerrar la puerta.",
+        "en": "Close the door."
       },
       "tags": [
         "grammar",
-        "infinitive",
-        "interface",
-        "instruction",
+        "infinitives",
+        "instructions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-wikileaks",
+        "ownerComicId": "es-xkcd-el-collar-de-cristal",
         "contextualSenseReviewed": true
       }
     },

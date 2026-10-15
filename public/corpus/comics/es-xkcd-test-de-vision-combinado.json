@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-f837970186ae3ca9",
+  "revision": "runtime-bb3644522b369690",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -635,17 +635,13 @@
     {
       "id": "concept-combination-vision-test-42",
       "kind": "concept",
-      "promptEs": "test de visión combinado · número 42 · sinestesia · daltonismo",
-      "questionEn": "Why does this single number picture claim to test two unrelated kinds of perception at once?",
-      "answerEn": "It combines an Ishihara-style color-vision plate with a number whose large shapes are themselves made from many smaller numbers.",
-      "noteEn": "Ishihara plates normally use colored dots to test color discrimination. Here the large 4 is drawn mainly from small 2s, the large 2 mainly from small 4s, and the surrounding field from other digits. The caption jokingly diagnoses color blindness if only one large figure is seen and synesthesia if the viewer treats the small numbers as creating the larger forms. The title text extends the mock diagnosis with diplopia and myopia under still more contrived viewing conditions.",
+      "promptEs": "test de visión ficticio",
+      "questionEn": "What background does the comic's pretend vision test rely on?",
+      "answerEn": "It combines the idea of a color-vision test with large figures made from many small digits.",
+      "noteEn": "Real color-vision plates use differences in color to make a shape stand out. Some forms of synesthesia associate digits with colors. This black-and-white number puzzle borrows those ideas for a joke; the caption's combined diagnosis is fictional, not a valid way to assess either condition.",
       "tags": [
         "concept",
-        "vision",
-        "Ishihara test",
-        "synesthesia",
-        "42",
-        "joke"
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -659,17 +655,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -731,7 +725,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -915,8 +913,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -947,10 +944,10 @@
     {
       "id": "grammar-article-adjective-omitted-noun",
       "kind": "grammar",
-      "promptEs": "el/la/los/las o un/una + adjetivo sin repetir el sustantivo",
-      "questionEn": "How do you say “the interesting one” or “a small one” without repeating the noun?",
-      "answerEn": "Keep the article and adjective, omit the repeated noun, and make both agree with that understood noun.",
-      "noteEn": "The article is a word such as el, la, un, or una. The adjective still changes to match the omitted noun: una pequeña can mean “a small feminine one,” while uno pequeño can mean “a small masculine one.” Context supplies the missing noun.",
+      "promptEs": "el, la, los, las, uno o una + descripción, sin repetir el nombre",
+      "questionEn": "How do you say 'the small one' or 'a small one' without repeating the thing's name?",
+      "answerEn": "Keep the word for 'the' or 'a' and the description, but omit the noun when it is already clear.",
+      "noteEn": "Put the description after the word for 'the' or 'a'. For 'the,' use el, la, los, or las to match the understood thing; for a singular 'a,' use uno for a masculine thing or una for a feminine thing when the noun is omitted. The describing word, called an adjective, still matches it: referring to a camisa, la pequeña means 'the small one.' Words such as más can qualify the description without requiring the noun to be repeated.",
       "example": {
         "es": "Quiero una taza; dame la pequeña.",
         "en": "I want a cup; give me the small one."
@@ -958,7 +955,7 @@
       "tags": [
         "grammar",
         "omitted noun",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",

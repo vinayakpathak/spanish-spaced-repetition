@@ -49,7 +49,7 @@
       "words": [
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w01", "text": "ESTE", "normalized": "este", "explicitBounds": [{ "x": 5.0186, "y": 20.5128, "width": 8.9219, "height": 8.547 }], "geometryRationale": "OCR included the opening exclamation mark; this source-measured box isolates ESTE.", "cardIds": ["word-este"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w02", "text": "TIPO", "normalized": "tipo", "explicitBounds": [{ "x": 15.4275, "y": 20.5128, "width": 7.2491, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the TIPO letters.", "cardIds": ["word-tipo--kind"] },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 24.3494, "y": 20.5128, "width": 3.5316, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the DE letters.", "cardIds": ["word-de--noun-classifier"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w03", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 24.3494, "y": 20.5128, "width": 3.5316, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the DE letters.", "cardIds": ["word-de--of"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w04", "text": "FICHERO", "normalized": "fichero", "explicitBounds": [{ "x": 29.368, "y": 20.5128, "width": 12.6394, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the FICHERO letters.", "cardIds": ["word-fichero--computer-file", "concept-suspicious-file-extension-salad-warning"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w05", "text": "PUEDE", "normalized": "puede", "explicitBounds": [{ "x": 43.6803, "y": 20.5128, "width": 9.6654, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the PUEDE letters.", "cardIds": ["word-puede--may", "grammar-poder-infinitive"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w06", "text": "DAÑAR", "normalized": "dañar", "explicitBounds": [{ "x": 55.0186, "y": 20.5128, "width": 9.4796, "height": 8.547 }], "geometryRationale": "This source-measured box follows only the DAÑAR letters.", "cardIds": ["word-dañar", "grammar-poder-infinitive", "concept-suspicious-file-extension-salad-warning"] },
@@ -58,7 +58,25 @@
       ],
       "excludedUnits": [],
       "applications": [
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:app-poder", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w05", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w06"], "exampleEs": "PUEDE DAÑAR", "explanationEn": "Puede changes for the singular file type, and dañar stays in its unchanged dictionary form." }
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:app-poder",
+          "cardId": "grammar-poder-infinitive",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w05",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w06"
+          ],
+          "exampleEs": "PUEDE DAÑAR",
+          "explanationEn": "Puede changes for the singular file type, and dañar stays in its unchanged dictionary form."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:review-word-w03",
+          "cardId": "word-de--of",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:damage-warning:w03"
+          ],
+          "exampleEs": "TIPO DE FICHERO",
+          "explanationEn": "Here de links the type to the thing being classified; English uses 'type of file.'"
+        }
       ]
     },
     {
@@ -66,7 +84,7 @@
       "labelEs": "ESTÁ SEGURO DE QUERER DESCARGAR",
       "geometryRefs": [{ "source": "ocr-line", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-line-0003" }],
       "words": [
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "text": "ESTÁ", "normalized": "está", "explicitBounds": [{ "x": 6.1338, "y": 30.7692, "width": 8.5502, "height": 8.547 }], "geometryRationale": "OCR included the opening question mark; this source-measured box isolates ESTÁ.", "cardIds": ["word-está--formal-state", "grammar-yes-no-question", "grammar-formal-address", "grammar-estar-adjective-state", "phrase-estar-seguro-de"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "text": "ESTÁ", "normalized": "está", "explicitBounds": [{ "x": 6.1338, "y": 30.7692, "width": 8.5502, "height": 8.547 }], "geometryRationale": "OCR included the opening question mark; this source-measured box isolates ESTÁ.", "cardIds": ["word-está", "grammar-yes-no-question", "grammar-formal-address", "grammar-estar-adjective-state", "phrase-estar-seguro-de"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02", "text": "SEGURO", "normalized": "seguro", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00011" }], "cardIds": ["word-seguro--certain", "grammar-estar-adjective-state", "phrase-estar-seguro-de"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w03", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00012" }], "cardIds": ["word-de--seguro-complement", "phrase-estar-seguro-de"] },
         { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04", "text": "QUERER", "normalized": "querer", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00013" }], "cardIds": ["word-querer", "phrase-estar-seguro-de", "grammar-querer-infinitive"] },
@@ -74,11 +92,65 @@
       ],
       "excludedUnits": [],
       "applications": [
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-question", "cardId": "grammar-yes-no-question", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"], "exampleEs": "ESTÁ", "explanationEn": "The opening question punctuation and intonation turn the finite form está into a yes-or-no question frame." },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-formal", "cardId": "grammar-formal-address", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"], "exampleEs": "ESTÁ", "explanationEn": "The interface uses the same singular verb form as él or ella to address one user formally; usted is understood." },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-state", "cardId": "grammar-estar-adjective-state", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02"], "exampleEs": "ESTÁ SEGURO", "explanationEn": "Está presents the user's current state, and seguro names that state as being certain." },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-sure", "cardId": "phrase-estar-seguro-de", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w03", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04"], "exampleEs": "ESTÁ SEGURO DE QUERER", "explanationEn": "Está and seguro express certainty, de introduces what the user is sure about, and querer begins that complement." },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-want", "cardId": "grammar-querer-infinitive", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04", "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w05"], "exampleEs": "QUERER DESCARGAR", "explanationEn": "Querer expresses wanting, and descargar remains in its unchanged dictionary form as the desired action." }
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-question",
+          "cardId": "grammar-yes-no-question",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"
+          ],
+          "exampleEs": "ESTÁ",
+          "explanationEn": "The opening question punctuation and intonation turn the finite form está into a yes-or-no question frame."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-formal",
+          "cardId": "grammar-formal-address",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"
+          ],
+          "exampleEs": "ESTÁ",
+          "explanationEn": "The interface uses the same singular verb form as él or ella to address one user formally; usted is understood."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-state",
+          "cardId": "grammar-estar-adjective-state",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02"
+          ],
+          "exampleEs": "ESTÁ SEGURO",
+          "explanationEn": "Está presents the user's current state, and seguro names that state as being certain."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-sure",
+          "cardId": "phrase-estar-seguro-de",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w02",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w03",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04"
+          ],
+          "exampleEs": "ESTÁ SEGURO DE QUERER",
+          "explanationEn": "Está and seguro express certainty, de introduces what the user is sure about, and querer begins that complement."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:app-want",
+          "cardId": "grammar-querer-infinitive",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w04",
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w05"
+          ],
+          "exampleEs": "QUERER DESCARGAR",
+          "explanationEn": "Querer expresses wanting, and descargar remains in its unchanged dictionary form as the desired action."
+        },
+        {
+          "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:review-word-w01",
+          "cardId": "word-está",
+          "participantWordIds": [
+            "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:confirmation:w01"
+          ],
+          "exampleEs": "ESTÁ SEGURO",
+          "explanationEn": "The speaker addresses one listener formally as usted, so está naturally means “you are” in this description."
+        }
       ]
     },
     {
@@ -98,13 +170,13 @@
       "explicitBounds": [{ "x": 50.5, "y": 79.5, "width": 47.2, "height": 14 }],
       "geometryRationale": "This source-measured region contains both interface buttons and their labels.",
       "words": [
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01", "text": "CANCELAR", "normalized": "cancelar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00074" }], "cardIds": ["word-cancelar", "grammar-infinitive-interface-command", "concept-suspicious-file-extension-salad-warning"] },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02", "text": "GUARDAR", "normalized": "guardar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00075" }], "cardIds": ["word-guardar--save-file", "grammar-infinitive-interface-command", "concept-suspicious-file-extension-salad-warning"] }
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01", "text": "CANCELAR", "normalized": "cancelar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00074" }], "cardIds": ["word-cancelar", "grammar-bare-infinitive-diagram-label", "concept-suspicious-file-extension-salad-warning"] },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02", "text": "GUARDAR", "normalized": "guardar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:ocr-token-00075" }], "cardIds": ["word-guardar--save-file", "grammar-bare-infinitive-diagram-label", "concept-suspicious-file-extension-salad-warning"] }
       ],
       "excludedUnits": [],
       "applications": [
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-cancel", "cardId": "grammar-infinitive-interface-command", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01"], "exampleEs": "CANCELAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." },
-        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-save", "cardId": "grammar-infinitive-interface-command", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02"], "exampleEs": "GUARDAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." }
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-cancel", "cardId": "grammar-bare-infinitive-diagram-label", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w01"], "exampleEs": "CANCELAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." },
+        { "id": "es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:app-save", "cardId": "grammar-bare-infinitive-diagram-label", "participantWordIds": ["es-xkcd-la-madre-de-todos-los-ficheros-sospechosos:buttons:w02"], "exampleEs": "GUARDAR", "explanationEn": "The unchanged dictionary form serves as a neutral button command." }
       ]
     }
   ]

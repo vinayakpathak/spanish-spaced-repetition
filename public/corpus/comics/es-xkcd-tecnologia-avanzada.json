@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-57c5f04a26fbda05",
+  "revision": "runtime-3201318aaaf91d85",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -65,7 +65,7 @@
               }
             ],
             "cardIds": [
-              "word-es--impersonal-evaluation",
+              "word-es",
               "grammar-evaluative-subjunctive"
             ]
           },
@@ -116,7 +116,7 @@
               }
             ],
             "cardIds": [
-              "word-tengas--subjunctive-evaluation",
+              "word-tengas--possibility-subjunctive",
               "grammar-evaluative-subjunctive",
               "concept-von-neumann-self-replicating-machine"
             ]
@@ -134,8 +134,7 @@
               }
             ],
             "cardIds": [
-              "word-una",
-              "grammar-evaluative-subjunctive"
+              "word-una"
             ]
           },
           {
@@ -152,7 +151,6 @@
             ],
             "cardIds": [
               "word-fábrica",
-              "grammar-evaluative-subjunctive",
               "concept-von-neumann-self-replicating-machine"
             ]
           },
@@ -204,7 +202,7 @@
               }
             ],
             "cardIds": [
-              "word-más--more-ones",
+              "word-más--more",
               "concept-von-neumann-self-replicating-machine"
             ]
           },
@@ -252,12 +250,10 @@
               "es-xkcd-tecnologia-avanzada:bubble:w01",
               "es-xkcd-tecnologia-avanzada:bubble:w02",
               "es-xkcd-tecnologia-avanzada:bubble:w03",
-              "es-xkcd-tecnologia-avanzada:bubble:w04",
-              "es-xkcd-tecnologia-avanzada:bubble:w05",
-              "es-xkcd-tecnologia-avanzada:bubble:w06"
+              "es-xkcd-tecnologia-avanzada:bubble:w04"
             ],
-            "exampleEs": "ES INCREÍBLE QUE TENGAS UNA FÁBRICA",
-            "explanationEn": "Es increíble gives the speaker's evaluation, que introduces the situation being judged, and tengas is the special form of tener used in that evaluated situation."
+            "exampleEs": "ES INCREÍBLE QUE TENGAS",
+            "explanationEn": "Es increíble supplies the evaluation, que introduces what is judged, and ordinary tienes changes to tengas in that evaluated setting."
           },
           {
             "id": "es-xkcd-tecnologia-avanzada:bubble:app-purpose",
@@ -268,39 +264,48 @@
             ],
             "exampleEs": "PARA HACER",
             "explanationEn": "Para introduces the purpose, and hacer remains in its unchanged dictionary form."
+          },
+          {
+            "id": "es-xkcd-tecnologia-avanzada:bubble:review-word-w04",
+            "cardId": "word-tengas--possibility-subjunctive",
+            "participantWordIds": [
+              "es-xkcd-tecnologia-avanzada:bubble:w04"
+            ],
+            "exampleEs": "QUE TENGAS",
+            "explanationEn": "The evaluation es increíble que calls for tengas instead of tienes. It still refers to what one familiar listener has."
           }
         ],
         "cardIds": [
-          "word-es--impersonal-evaluation",
+          "word-es",
           "grammar-evaluative-subjunctive",
           "word-increíble",
           "word-que--clause-link",
-          "word-tengas--subjunctive-evaluation",
+          "word-tengas--possibility-subjunctive",
           "concept-von-neumann-self-replicating-machine",
           "word-una",
           "word-fábrica",
           "word-para",
           "grammar-para-infinitive-purpose",
           "word-hacer--make",
-          "word-más--more-ones",
+          "word-más--more",
           "word-como--comparison",
           "word-tú"
         ]
       }
     ],
     "cardIds": [
-      "word-es--impersonal-evaluation",
+      "word-es",
       "grammar-evaluative-subjunctive",
       "word-increíble",
       "word-que--clause-link",
-      "word-tengas--subjunctive-evaluation",
+      "word-tengas--possibility-subjunctive",
       "concept-von-neumann-self-replicating-machine",
       "word-una",
       "word-fábrica",
       "word-para",
       "grammar-para-infinitive-purpose",
       "word-hacer--make",
-      "word-más--more-ones",
+      "word-más--more",
       "word-como--comparison",
       "word-tú"
     ],
@@ -312,47 +317,44 @@
   },
   "cards": [
     {
-      "id": "word-es--impersonal-evaluation",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "it is (introducing an evaluation)",
-      "noteEn": "Spanish can begin an impersonal evaluation with es plus a describing word. English normally supplies an impersonal ‘it,’ but Spanish does not add a separate subject word.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "Es extraño que llueva.",
-        "en": "It is strange that it is raining."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "impersonal expression",
-        "evaluation",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
     {
       "id": "grammar-evaluative-subjunctive",
       "kind": "grammar",
-      "promptEs": "es + adjetivo de valoración + que + subjuntivo",
-      "answerEn": "Use the subjunctive for the situation being judged.",
-      "noteEn": "Phrases such as es importante, es bueno, and es raro express a judgment about what follows. Spanish marks the verb after que with the subjunctive. In the example, descansas—the ordinary statement form—changes to descanses.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "evaluation"
-      ],
-      "questionEn": "After “It is important/good/strange that…,” which form does the next Spanish verb take?",
+      "promptEs": "ser + valoración + que + acción",
+      "questionEn": "After es importante que or es mejor que, how do you express the action being judged?",
+      "answerEn": "Use a form of ser, the evaluation, que, and the action in its special subjunctive form.",
+      "noteEn": "Subjunctive is the name for the verb form used here because the action is being evaluated, not simply reported. Compare descansas ('you rest') with es importante que descanses ('it is important that you rest'): descansas changes to descanses. Ser can change for time, as in será mejor que llegues. This applies to judgments such as bueno, importante, raro, or mejor, not every adjective: es cierto que presents something as true and normally uses an ordinary statement form. For an activity in general without a separate person, use es importante descansar, with no que.",
       "example": {
-        "es": "Es importante que descanses.",
-        "en": "It is important that you rest."
+        "es": "Es mejor que descanses.",
+        "en": "It is better for you to rest."
       },
+      "tags": [
+        "grammar",
+        "evaluation",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -389,8 +391,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -408,27 +410,27 @@
       }
     },
     {
-      "id": "word-tengas--subjunctive-evaluation",
+      "id": "word-tengas--possibility-subjunctive",
       "kind": "word",
       "promptEs": "tengas",
-      "answerEn": "you have (special form after an evaluation)",
-      "noteEn": "Tengas is a special form of tener for familiar singular ‘you.’ After an impersonal judgment such as es increíble que, Spanish normally changes the ordinary tienes to tengas.",
+      "answerEn": "you have (a special form of tener)",
+      "noteEn": "Tengas is a form of tener, “to have,” for tú, one familiar person. Certain surrounding expressions require tengas instead of the ordinary tienes: puede que tengas presents a possibility, and es bueno que tengas gives an evaluation.",
       "example": {
-        "es": "Es bueno que tengas tiempo.",
-        "en": "It is good that you have time."
+        "es": "Puede que tengas otra llave.",
+        "en": "You may have another key."
       },
       "tags": [
         "word",
         "tener",
+        "possibility",
         "subjunctive",
-        "evaluation",
-        "B1"
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "ownerComicId": "es-xkcd-convincente",
         "contextualSenseReviewed": true
       }
     },
@@ -445,6 +447,7 @@
         "John von Neumann",
         "joke"
       ],
+      "questionEn": "What is von Neumann's idea of a self-replicating machine?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -517,19 +520,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -563,27 +568,24 @@
       }
     },
     {
-      "id": "word-más--more-ones",
+      "id": "word-más--more",
       "kind": "word",
       "promptEs": "más",
-      "answerEn": "more; more people or things (with the noun understood)",
-      "noteEn": "Más can stand without a following noun when the context already makes clear what ‘more’ refers to. The accent distinguishes más, ‘more,’ from mas, a literary word for ‘but.’",
+      "answerEn": "more",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
       "example": {
-        "es": "Necesitamos más como estas.",
-        "en": "We need more like these."
+        "es": "Necesito más.",
+        "en": "I need more."
       },
       "tags": [
         "word",
-        "quantity",
-        "ellipsis",
-        "accent",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

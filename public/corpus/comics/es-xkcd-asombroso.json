@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e16709e3a0700bfc",
+  "revision": "runtime-5126fc53bbfba15b",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -230,7 +230,7 @@
               }
             ],
             "cardIds": [
-              "word-estamos"
+              "word-estamos--location"
             ]
           },
           {
@@ -308,11 +308,20 @@
             ],
             "exampleEs": "SIGLO XXI",
             "explanationEn": "Siglo comes before the Roman numeral XXI, which is read veintiuno when naming the twenty-first century."
+          },
+          {
+            "id": "es-xkcd-asombroso:exclamation:review-word-w02",
+            "cardId": "word-estamos--location",
+            "participantWordIds": [
+              "es-xkcd-asombroso:exclamation:w02"
+            ],
+            "exampleEs": "ESTAMOS EN",
+            "explanationEn": "Estamos places the speaker's group in the stated period; English often uses “it is” when giving the date."
           }
         ],
         "cardIds": [
           "word-joder--exclamation",
-          "word-estamos",
+          "word-estamos--location",
           "word-en",
           "word-el--article",
           "word-siglo",
@@ -330,7 +339,7 @@
       "word-pocos--few",
       "word-meses",
       "word-joder--exclamation",
-      "word-estamos",
+      "word-estamos--location",
       "word-en",
       "word-el--article",
       "word-siglo",
@@ -386,7 +395,7 @@
       "promptEs": "pasarle algo a alguien",
       "questionEn": "How do you say that something happens to a particular person?",
       "answerEn": "Name what happens, and put me, te, le, nos, os, or les before a changed form of pasar to identify the affected person. You may also name that person after the Spanish word a.",
-      "noteEn": "Pasar changes to match the thing or event that happens, not the affected person: esto me pasa but estas cosas me pasan. With the verb's unchanged dictionary form, attach the short pronoun to the end: pasarle. In the prompt, algo stands for what happens and alguien for the affected person; those words do not have to appear literally. Spanish may repeat the affected person after a, a word often translated as ‘to,’ for clarity or emphasis, while English normally states the person once.",
+      "noteEn": "Pasar changes to match the thing or event that happens, not the affected person: esto me pasa but estas cosas me pasan. With the verb's unchanged dictionary form, attach the short pronoun to the end: pasarle. Spanish may repeat the affected person after a, a word often translated as ‘to,’ for clarity or emphasis, while English normally states the person once.",
       "example": {
         "es": "Eso me pasó a mí ayer.",
         "en": "That happened to me yesterday."
@@ -534,20 +543,27 @@
       }
     },
     {
-      "id": "word-estamos",
+      "id": "word-estamos--location",
       "kind": "word",
       "promptEs": "estamos",
-      "answerEn": "we are",
-      "noteEn": "",
+      "answerEn": "we are (in a place or time)",
+      "noteEn": "Estamos is the form of estar for nosotros, “we.” It can place the group somewhere, as in estamos aquí, or place us in a period, as in estamos en junio. This is different from estamos helping another verb describe an action in progress.",
+      "example": {
+        "es": "Estamos en otoño.",
+        "en": "It's autumn."
+      },
       "tags": [
         "word",
-        "contextual sense"
+        "estar",
+        "location",
+        "first-person plural",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
+        "ownerComicId": "es-xkcd-wikileaks",
         "contextualSenseReviewed": true
       }
     },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-40eab7616d9156fb",
+  "revision": "runtime-52d6ce814c04159e",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -82,8 +82,7 @@
               }
             ],
             "cardIds": [
-              "word-tocar--play-music",
-              "grammar-hacer-target-description"
+              "word-tocar--play-music"
             ]
           },
           {
@@ -100,7 +99,6 @@
             ],
             "cardIds": [
               "word-eso",
-              "grammar-hacer-target-description",
               "concept-rock-band-rhythm-game"
             ]
           },
@@ -134,7 +132,7 @@
             ],
             "cardIds": [
               "word-os--recipient",
-              "grammar-hacer-target-description",
+              "grammar-hacer-object-adjective",
               "grammar-vosotros-informal-plural"
             ]
           },
@@ -152,7 +150,7 @@
             ],
             "cardIds": [
               "word-hace--makes-state",
-              "grammar-hacer-target-description"
+              "grammar-hacer-object-adjective"
             ]
           },
           {
@@ -169,7 +167,7 @@
             ],
             "cardIds": [
               "word-guays--cool",
-              "grammar-hacer-target-description"
+              "grammar-hacer-object-adjective"
             ]
           },
           {
@@ -233,7 +231,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -300,16 +298,14 @@
           },
           {
             "id": "es-xkcd-grupo-de-rock:opening-criticism:app-make-description",
-            "cardId": "grammar-hacer-target-description",
+            "cardId": "grammar-hacer-object-adjective",
             "participantWordIds": [
-              "es-xkcd-grupo-de-rock:opening-criticism:w02",
-              "es-xkcd-grupo-de-rock:opening-criticism:w03",
               "es-xkcd-grupo-de-rock:opening-criticism:w05",
               "es-xkcd-grupo-de-rock:opening-criticism:w06",
               "es-xkcd-grupo-de-rock:opening-criticism:w07"
             ],
-            "exampleEs": "TOCAR ESO NO OS HACE GUAYS",
-            "explanationEn": "Tocar eso supplies the cause, os identifies the affected group, hace carries the causative meaning, and guays is the plural description of that group."
+            "exampleEs": "OS HACE GUAYS",
+            "explanationEn": "Os identifies the affected group, hace gives the causing action, and guays describes the resulting quality in a plural form."
           },
           {
             "id": "es-xkcd-grupo-de-rock:opening-criticism:app-vosotros-os",
@@ -335,17 +331,17 @@
           "word-sabéis--you-know-discourse",
           "grammar-vosotros-informal-plural",
           "word-tocar--play-music",
-          "grammar-hacer-target-description",
           "word-eso",
           "concept-rock-band-rhythm-game",
           "word-no",
           "word-os--recipient",
+          "grammar-hacer-object-adjective",
           "word-hace--makes-state",
           "word-guays--cool",
           "word-como--comparison",
           "word-un",
           "word-grupo--band",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-rock",
           "word-de--fixed-de-verdad-genuine",
           "phrase-de-verdad--genuine",
@@ -652,17 +648,17 @@
       "word-sabéis--you-know-discourse",
       "grammar-vosotros-informal-plural",
       "word-tocar--play-music",
-      "grammar-hacer-target-description",
       "word-eso",
       "concept-rock-band-rhythm-game",
       "word-no",
       "word-os--recipient",
+      "grammar-hacer-object-adjective",
       "word-hace--makes-state",
       "word-guays--cool",
       "word-como--comparison",
       "word-un",
       "word-grupo--band",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-rock",
       "word-de--fixed-de-verdad-genuine",
       "phrase-de-verdad--genuine",
@@ -757,32 +753,6 @@
       }
     },
     {
-      "id": "grammar-hacer-target-description",
-      "kind": "grammar",
-      "promptEs": "causa + hacer + persona o cosa + descripción",
-      "questionEn": "How do you say that one thing makes someone or something have a certain quality?",
-      "answerEn": "Use a form of hacer with the affected person or thing and a word that describes the resulting quality.",
-      "noteEn": "Hacer changes for the cause and time. A short affected-person word such as me, te, nos, or os stands before hacer: nos hace felices means ‘it makes us happy.’ The describing word matches the affected person or thing in singular or plural and, when its ending allows it, masculine or feminine.",
-      "example": {
-        "es": "La música nos hace felices.",
-        "en": "Music makes us happy."
-      },
-      "tags": [
-        "grammar",
-        "hacer",
-        "causation",
-        "description",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-grupo-de-rock",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-eso",
       "kind": "word",
       "promptEs": "eso",
@@ -812,6 +782,7 @@
         "music",
         "Rock Band"
       ],
+      "questionEn": "What is Rock Band, and how do its controllers work?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -827,8 +798,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -859,6 +829,32 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-tcmp",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-hacer-object-adjective",
+      "kind": "grammar",
+      "promptEs": "hacer + persona o cosa + descripción",
+      "questionEn": "How do you use hacer to say that something makes a person or thing a certain way?",
+      "answerEn": "Use hacer with the affected person or thing and a word describing the resulting quality.",
+      "noteEn": "A short word for the affected person or thing goes before the changed verb: me hace feliz ('it makes me happy'), los hace fuertes ('it makes them strong'). Hacer changes for what causes the result and for the time: hace, hacen, hizo. The describing word matches what is affected: contento becomes contenta for a woman and contentos for a masculine or mixed group. This pattern describes a quality, not a separate action someone is made to do.",
+      "example": {
+        "es": "La noticia nos hizo felices.",
+        "en": "The news made us happy."
+      },
+      "tags": [
+        "grammar",
+        "hacer",
+        "causation",
+        "description",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-belleza",
         "contextualSenseReviewed": true
       }
     },
@@ -965,26 +961,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -1225,7 +1219,7 @@
       "kind": "phrase",
       "promptEs": "dejar de + infinitivo",
       "answerEn": "Use a form of dejar, then de, then the action verb in its dictionary form.",
-      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de + action means to stop doing that action.",
+      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de followed by an action verb means to stop doing that action.",
       "tags": [
         "A2",
         "verb pattern",
@@ -1250,7 +1244,7 @@
       "promptEs": "orden afirmativa para vosotros: hablad, comed, escribid",
       "questionEn": "How do you tell several people informally to do something in Spain?",
       "answerEn": "For most verbs, remove the final -r from the verb's dictionary form and add -d: hablar becomes hablad.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If a short object word such as me is included, attach it to the end: ayudad + me becomes ayudadme.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If you include a small word naming who or what receives the action, such as me, attach it to the end: ayudad and me become ayudadme.",
       "example": {
         "es": "Abrid los libros.",
         "en": "Open your books."

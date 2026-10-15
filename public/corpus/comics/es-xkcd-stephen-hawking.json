@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-14872a0d5618344d",
+  "revision": "runtime-41560a97623b70c6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -694,7 +694,7 @@
               }
             ],
             "cardIds": [
-              "word-es--classification"
+              "word-es"
             ]
           },
           {
@@ -734,7 +734,7 @@
         "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-es--classification",
+          "word-es",
           "word-un",
           "word-aviso--warning",
           "concept-stephen-hawking-media-authority-joke"
@@ -769,7 +769,7 @@
       "word-hombre--man",
       "word-más--superlative",
       "word-listo--smart",
-      "word-es--classification",
+      "word-es",
       "word-un",
       "word-aviso--warning"
     ],
@@ -873,8 +873,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1007,8 +1007,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -1167,7 +1167,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1203,8 +1207,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1295,19 +1303,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1391,26 +1399,24 @@
       }
     },
     {
-      "id": "word-es--classification",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is; belongs to the stated category",
-      "noteEn": "Es is the present form of ser used for one person or thing. Between two naming words, it identifies or classifies the first as the second.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "El ajedrez es un juego.",
-        "en": "Chess is a game."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "classification",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-demasiado-viejo-para-esta-mierda",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

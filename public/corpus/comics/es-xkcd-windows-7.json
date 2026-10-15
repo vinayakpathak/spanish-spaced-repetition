@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-3f3044f371f91efb",
+  "revision": "runtime-426d037f71259189",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -471,7 +471,7 @@
               }
             ],
             "cardIds": [
-              "word-que--conseguir-complement",
+              "word-que--clause-link",
               "grammar-conseguir-que-subjunctive"
             ]
           },
@@ -565,7 +565,7 @@
           "word-sé",
           "word-consigo--manage",
           "grammar-conseguir-que-subjunctive",
-          "word-que--conseguir-complement",
+          "word-que--clause-link",
           "word-haga",
           "word-otra",
           "word-cosa"
@@ -1140,14 +1140,14 @@
               }
             ],
             "cardIds": [
-              "word-cierto--agreement"
+              "word-cierto--true-predicate"
             ]
           }
         ],
         "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-cierto--agreement"
+          "word-cierto--true-predicate"
         ]
       }
     ],
@@ -1172,7 +1172,7 @@
       "word-sé",
       "word-consigo--manage",
       "grammar-conseguir-que-subjunctive",
-      "word-que--conseguir-complement",
+      "word-que--clause-link",
       "word-haga",
       "word-otra",
       "word-cosa",
@@ -1195,7 +1195,7 @@
       "word-mejor--better",
       "grammar-mejor-que",
       "word-que--comparison",
-      "word-cierto--agreement"
+      "word-cierto--true-predicate"
     ],
     "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
@@ -1208,8 +1208,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1495,8 +1499,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1510,11 +1513,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -1623,26 +1626,24 @@
       }
     },
     {
-      "id": "word-que--conseguir-complement",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "no separate English word; links conseguir to an action by another actor",
-      "noteEn": "After conseguir, que introduces the action that the person or thing manages to bring about. English often expresses the same link with ‘get ... to’ rather than translating que as a separate word.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
-        "es": "Consigo que Marta venga.",
-        "en": "I manage to get Marta to come."
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
       },
       "tags": [
         "word",
-        "clause link",
-        "conseguir",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-windows-7",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1774,8 +1775,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2022,8 +2022,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2103,26 +2107,26 @@
       }
     },
     {
-      "id": "word-cierto--agreement",
+      "id": "word-cierto--true-predicate",
       "kind": "word",
       "promptEs": "cierto",
-      "answerEn": "true; right (showing agreement)",
-      "noteEn": "Used as a brief response, cierto confirms that the preceding point is correct. This differs from cierto before a noun, where it can mean “a certain.”",
+      "answerEn": "true; correct",
+      "noteEn": "Cierto can describe a claim as true or stand alone as a short response agreeing with it. This differs from cierto before a noun meaning “a certain.”",
       "example": {
-        "es": "—Es difícil. —Cierto.",
-        "en": "—It's difficult. —True."
+        "es": "—La tienda cierra pronto. —Cierto.",
+        "en": "—The shop closes soon. —True."
       },
       "tags": [
         "word",
-        "conversation",
-        "agreement",
-        "A2"
+        "truth",
+        "adjective",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-huelga-de-guionistas",
+        "ownerComicId": "es-xkcd-viaje-en-el-tiempo",
         "contextualSenseReviewed": true
       }
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a97821e79dd9c890",
+  "revision": "runtime-60eafe3b1fc64694",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -501,7 +501,7 @@
               }
             ],
             "cardIds": [
-              "word-como--naming"
+              "word-como--role"
             ]
           },
           {
@@ -1075,11 +1075,20 @@
             ],
             "exampleEs": "DE ALGUNA MANERA",
             "explanationEn": "The three words work together to leave the mechanism unspecified."
+          },
+          {
+            "id": "es-xkcd-pico-de-ballmer:presenter-first-panel:review-word-w06",
+            "cardId": "word-descubierto",
+            "participantWordIds": [
+              "es-xkcd-pico-de-ballmer:presenter-first-panel:w06"
+            ],
+            "exampleEs": "FUE DESCUBIERTO",
+            "explanationEn": "After fue, descubierto describes what was discovered and matches the masculine singular thing named."
           }
         ],
         "cardIds": [
           "word-conocido",
-          "word-como--naming",
+          "word-como--role",
           "word-pico--peak",
           "concept-ballmer-peak",
           "word-de--named-after",
@@ -1646,7 +1655,7 @@
               }
             ],
             "cardIds": [
-              "word-que--reported-instruction",
+              "word-que--clause-link",
               "grammar-decir-recipient-que-subjunctive"
             ]
           },
@@ -1822,7 +1831,7 @@
           "word-y",
           "word-decirles",
           "grammar-decir-recipient-que-subjunctive",
-          "word-que--reported-instruction",
+          "word-que--clause-link",
           "word-se--ponerse-a",
           "grammar-ponerse-a-infinitive",
           "word-pongan--start-action",
@@ -2001,7 +2010,7 @@
               }
             ],
             "cardIds": [
-              "word-el--before-product-name",
+              "word-el--before-named-item",
               "concept-windows-me-reputation"
             ]
           }
@@ -2031,7 +2040,7 @@
         "applications": [],
         "cardIds": [
           "word-recuerda--formal-present",
-          "word-el--before-product-name",
+          "word-el--before-named-item",
           "concept-windows-me-reputation"
         ]
       },
@@ -2110,7 +2119,7 @@
       "word-en",
       "word-sangre",
       "word-conocido",
-      "word-como--naming",
+      "word-como--role",
       "word-pico--peak",
       "concept-ballmer-peak",
       "word-de--named-after",
@@ -2163,7 +2172,7 @@
       "word-programadores",
       "word-decirles",
       "grammar-decir-recipient-que-subjunctive",
-      "word-que--reported-instruction",
+      "word-que--clause-link",
       "word-se--ponerse-a",
       "grammar-ponerse-a-infinitive",
       "word-pongan--start-action",
@@ -2177,7 +2186,7 @@
       "phrase-alguna-vez",
       "word-vez",
       "word-recuerda--formal-present",
-      "word-el--before-product-name",
+      "word-el--before-named-item",
       "concept-windows-me-reputation",
       "word-lo--object-pronoun",
       "word-sabía--knew",
@@ -2364,26 +2373,24 @@
       }
     },
     {
-      "id": "word-como--naming",
+      "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (introducing a name or label)",
-      "noteEn": "After words such as conocido, llamado, or descrito, unaccented como introduces the name, title, or label by which something is known.",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Es conocido como el padre de la medicina.",
-        "en": "He is known as the father of medicine."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "naming",
-        "label",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "ownerComicId": "es-xkcd-fotos-porfa",
         "contextualSenseReviewed": true
       }
     },
@@ -2418,6 +2425,7 @@
         "programming",
         "Microsoft"
       ],
+      "questionEn": "What is the fictional Ballmer Peak?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2496,11 +2504,11 @@
       "id": "word-descubierto",
       "kind": "word",
       "promptEs": "descubierto",
-      "answerEn": "discovered (masculine singular)",
-      "noteEn": "Descubierto is the irregular completed-action form of descubrir, “to discover”; Spanish does not use the expected form descubrido. In a passive description it changes to match what was discovered: descubierto, descubierta, descubiertos, or descubiertas.",
+      "answerEn": "discovered; found",
+      "noteEn": "Descubierto is the irregular completed-action form of descubrir, “to discover”; it is not descubrido. After haber, the helping verb meaning “have” or “had,” it stays unchanged: han descubierto, “they have discovered.” With ser in a description meaning “was discovered,” it matches the thing: el lugar fue descubierto, but la isla fue descubierta.",
       "example": {
-        "es": "La isla fue descubierta por una exploradora.",
-        "en": "The island was discovered by an explorer."
+        "es": "Han descubierto una cueva.",
+        "en": "They have discovered a cave."
       },
       "tags": [
         "word",
@@ -2687,8 +2695,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3126,8 +3138,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3184,7 +3195,7 @@
       "promptEs": "le/les + verbo … a + receptor explícito",
       "questionEn": "Why can Spanish use le or les with a verb and then still name the receiver with a phrase beginning with a?",
       "answerEn": "Use le or les with the verb, then use a phrase beginning with the word a to identify the receiver explicitly.",
-      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a conjugated verb, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once. In the prompt, the slash means that le and les are alternatives, each plus sign means “followed by,” and the dots mean that other words may appear between the verb and the named receiver.",
+      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a verb changed for the person and time, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once.",
       "example": {
         "es": "Le di agua al perro.",
         "en": "I gave the dog water."
@@ -3458,26 +3469,24 @@
       }
     },
     {
-      "id": "word-que--reported-instruction",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "no separate English word; introduces the action someone is told to do",
-      "noteEn": "After decir used to give an instruction, que links the instruction to the person receiving it. Natural English often uses “to” before the action instead of translating que as “that.”",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
-        "es": "Le digo que espere.",
-        "en": "I tell her to wait."
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
       },
       "tags": [
         "word",
-        "reported instruction",
-        "connector",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3767,26 +3776,24 @@
       }
     },
     {
-      "id": "word-el--before-product-name",
+      "id": "word-el--before-named-item",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "no separate English word; article used before a product or software name",
-      "noteEn": "Spanish can put el before the name of software, a vehicle model, or another product when a masculine noun such as sistema or modelo is understood. English often uses the product name without an article.",
+      "answerEn": "the; often omitted in English before a named item",
+      "noteEn": "Spanish can use el before the name or number of a masculine item, product, command, system, or service. An ordinary noun such as modelo or número may be understood rather than written. English often uses the name alone. El here is not accented él, 'he.'",
       "example": {
         "es": "Compró el Toyota rojo.",
         "en": "She bought the red Toyota."
       },
       "tags": [
         "word",
-        "article",
-        "product name",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "ownerComicId": "es-xkcd-colecciones",
         "contextualSenseReviewed": true
       }
     },
@@ -3802,6 +3809,7 @@
         "computing history",
         "xkcd joke"
       ],
+      "questionEn": "Why is Windows ME a punchline about software quality?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3814,11 +3822,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",

@@ -223,8 +223,8 @@ test("runtime assembly prefers authored, then reviewed seed, then OCR fallback",
     ["individually-authored", "reviewed-seed", "ocr-fallback"],
   );
   assert.equal(manifest.comics[0].title, "Authored authored");
-  assert.equal(manifest.comics[1].revision, "reviewed-v1");
-  assert.equal(bundles[1].bundle.revision, "reviewed-v1");
+  assert.equal(manifest.comics[1].revision, "reviewed-v4-20260907");
+  assert.equal(bundles[1].bundle.revision, "reviewed-v4-20260907");
   assert.equal(bundles[2].bundle, fallback);
   assert.equal(manifest.cardCatalog.filter((card) => card.id === "word-compartida").length, 1);
   assert.equal(

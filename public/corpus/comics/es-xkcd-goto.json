@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e37e728323727cca",
+  "revision": "runtime-28ef61ea3c0d24d9",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -115,7 +115,7 @@
               }
             ],
             "cardIds": [
-              "word-flujo--program-control",
+              "word-flujo--process-sequence",
               "concept-goto-control-flow"
             ]
           },
@@ -171,7 +171,7 @@
           "grammar-poder-infinitive",
           "word-reestructurar",
           "word-el--article",
-          "word-flujo--program-control",
+          "word-flujo--process-sequence",
           "concept-goto-control-flow",
           "word-del--of-the",
           "word-programa--computer-program"
@@ -562,7 +562,7 @@
               "es-xkcd-goto:dismiss-good-practice:w07"
             ],
             "exampleEs": "QUE LE DEN A LA BUENA PRÁCTICA",
-            "explanationEn": "Que le den a supplies the fixed dismissal, and la buena práctica fills the slot naming its target."
+            "explanationEn": "Que le den a expresses dismissal, aimed here at la buena práctica."
           },
           {
             "id": "es-xkcd-goto:dismiss-good-practice:app-gender-agreement",
@@ -594,7 +594,7 @@
               "es-xkcd-goto:dismiss-good-practice:w12"
             ],
             "exampleEs": "QUÉ PUEDE TENER DE MALO",
-            "explanationEn": "The reusable evaluation frame is qué … tener de malo. Puede appears between qué and tener and is taught separately by the poder plus dictionary-form card."
+            "explanationEn": "Qué asks what negative quality something could have; tener de malo supplies that evaluation, and puede adds the possibility."
           }
         ],
         "cardIds": [
@@ -689,7 +689,7 @@
       "grammar-poder-infinitive",
       "word-reestructurar",
       "word-el--article",
-      "word-flujo--program-control",
+      "word-flujo--process-sequence",
       "concept-goto-control-flow",
       "word-del--of-the",
       "word-programa--computer-program",
@@ -812,25 +812,26 @@
       }
     },
     {
-      "id": "word-flujo--program-control",
+      "id": "word-flujo--process-sequence",
       "kind": "word",
       "promptEs": "flujo",
-      "answerEn": "flow; order in which a program runs",
-      "noteEn": "In computing, flujo can describe the path and order that program instructions follow. This is distinct from a stream of data.",
+      "answerEn": "flow; sequence through a process",
+      "noteEn": "Flujo can describe the path and order followed by steps in a process, including the instructions in a program. This use is not a stream of data or the physical flow of a liquid.",
       "example": {
-        "es": "El bucle cambia el flujo del programa.",
-        "en": "The loop changes the program's flow."
+        "es": "Una decisión cambia el flujo del trabajo.",
+        "en": "A decision changes the workflow."
       },
       "tags": [
         "word",
-        "computing",
-        "control flow"
+        "flowchart",
+        "process",
+        "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-goto",
+        "ownerComicId": "es-xkcd-diagramas-de-flujo",
         "contextualSenseReviewed": true
       }
     },
@@ -847,6 +848,7 @@
         "GOTO",
         "software design"
       ],
+      "questionEn": "What does GOTO do, and why can it make code harder to follow?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1070,7 +1072,7 @@
       "promptEs": "que le den (a + algo/alguien)",
       "questionEn": "How do you forcefully dismiss a person, thing, or idea in colloquial Spanish?",
       "answerEn": "Use que le den, optionally followed by a and the rejected target: “to hell with…” or “screw….”",
-      "noteEn": "This is a strong, rude dismissal, so it is unsuitable for polite settings. Name the rejected target after a, or leave it unstated when the situation already makes it obvious. A plus el contracts to al: que le den al plan. The expression should not be translated word by word.",
+      "noteEn": "This is a strong, rude dismissal, so it is unsuitable for polite settings. Name the rejected target after a, or leave it unstated when the situation already makes it obvious. A and el combine as al: que le den al plan. The expression should not be translated word by word.",
       "example": {
         "es": "¡Que le den al plan!",
         "en": "To hell with the plan!"
@@ -1185,10 +1187,10 @@
       "kind": "word",
       "promptEs": "buena",
       "answerEn": "good (feminine singular)",
-      "noteEn": "Buena is the feminine singular form of bueno. It is used before or after a feminine singular noun, such as práctica or decisión.",
+      "noteEn": "Buena is the feminine form of bueno, “good.” Use it for one feminine noun: una buena pregunta; for more than one, use buenas preguntas.",
       "example": {
-        "es": "Esa es una buena decisión.",
-        "en": "That is a good decision."
+        "es": "La biblioteca tiene una buena colección.",
+        "en": "The library has a good collection."
       },
       "tags": [
         "word",
@@ -1256,8 +1258,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"

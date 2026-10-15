@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-2d7a564e9f61ba44",
+  "revision": "runtime-805e61db582e8ac3",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -2431,8 +2431,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2527,10 +2527,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2667,8 +2670,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3071,6 +3078,7 @@
         "Python",
         "xkcd joke"
       ],
+      "questionEn": "How does Python hide more computer details than C or assembly?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3124,8 +3132,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3139,17 +3146,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3483,17 +3488,15 @@
       "id": "word-ya--no-longer",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "anymore; no longer (together with no)",
-      "noteEn": "Ya often means “already” or “now.” Before no, it instead marks a change from an earlier situation: ya no means “no longer” or “not anymore.”",
+      "answerEn": "anymore; no longer, with a negative expression",
+      "noteEn": "Ya with a negative expression marks a change from what was true before. Ya no means 'no longer'; with ni siquiera, the sense is 'not even ... anymore.' Ya itself stays unchanged.",
       "example": {
         "es": "Ya no trabajo allí.",
         "en": "I no longer work there."
       },
       "tags": [
         "word",
-        "time",
-        "fixed expression",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3553,7 +3556,7 @@
       "promptEs": "tener que + verbo en forma de diccionario",
       "questionEn": "How do you say that someone has to do something?",
       "answerEn": "Use a form of tener, then que, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Only tener changes for the person and time: tengo que, tienes que, tiene que, and so on. The final action keeps its -ar, -er, or -ir ending.",
+      "noteEn": "The dictionary form is the verb's basic, unchanged form ending in -ar, -er, or -ir: hablar means 'to speak,' comer means 'to eat,' and salir means 'to leave.' Only tener changes for the person and time. Tengo que means 'I have to,' tienes que means 'you have to' for one familiar person, and tiene que means 'he or she has to' or formal 'you have to.' Que and the final action verb stay unchanged: tengo que salir, tienes que salir, tiene que salir.",
       "example": {
         "es": "Tengo que salir temprano.",
         "en": "I have to leave early."
@@ -3620,7 +3623,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3994,17 +3997,15 @@
       "id": "word-a--dedicar-target",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to; introduces what time, effort, or a life is devoted to",
-      "noteEn": "Dedicar links the thing being devoted to its purpose or recipient with a. In a question, that a can move to the front with qué.",
+      "answerEn": "to; introduces what time, effort, or activity is devoted to",
+      "noteEn": "Dedicar and dedicarse use a before the recipient, field, or activity receiving someone's time or effort. An action after a stays in its dictionary form, such as estudiar, 'to study.'",
       "example": {
-        "es": "Dedico una hora a la lectura.",
-        "en": "I devote an hour to reading."
+        "es": "Dedico una hora a estudiar.",
+        "en": "I devote an hour to studying."
       },
       "tags": [
         "word",
-        "dedicar",
-        "verb complement",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4018,8 +4019,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a4c2dabc5d2db985",
+  "revision": "runtime-5b02d9a8cee9ff19",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -927,7 +927,7 @@
               "es-xkcd-diario:eye-contact-routine:w10"
             ],
             "exampleEs": "CONTACTO VISUAL",
-            "explanationEn": "Contacto and visual form the conventional two-word expression taught by this card."
+            "explanationEn": "Contacto and visual work together to mean ‘eye contact.’"
           },
           {
             "id": "es-xkcd-diario:eye-contact-routine:app-lower-gaze",
@@ -2551,8 +2551,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3116,7 +3116,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3153,7 +3157,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3293,7 +3301,7 @@
       "promptEs": "empezar a + infinitivo",
       "questionEn": "How do you say that someone starts doing an action?",
       "answerEn": "Use a form of empezar, then a, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus sign means “followed by.” The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
+      "noteEn": "The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
       "example": {
         "es": "Lucía empieza a leer.",
         "en": "Lucía starts to read."
@@ -3359,7 +3367,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3689,17 +3697,15 @@
       "id": "word-le--affected-person",
       "kind": "word",
       "promptEs": "le",
-      "answerEn": "her; marks the person affected by a situation or result",
-      "noteEn": "Le can identify one person affected by what happens even when natural English does not use ‘to.’ A phrase beginning with a can make that person explicit: se le queda a Ana.",
+      "answerEn": "marks one person or entity affected by what happens",
+      "noteEn": "Le can identify the person whose body, possessions, or situation is affected, even when nothing is literally given to them. It can refer to him, her, or formal you. English may use 'his,' 'her,' 'your,' or 'to' or 'with' that person; the surrounding words identify who is meant.",
       "example": {
-        "es": "A Laura se le quedó esa sensación.",
-        "en": "That feeling stayed with Laura."
+        "es": "Le lavé las manos al niño.",
+        "en": "I washed the child's hands."
       },
       "tags": [
         "word",
-        "indirect object",
-        "affected person",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3817,8 +3823,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3891,8 +3901,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3948,8 +3962,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4141,7 +4154,7 @@
       "promptEs": "me/te/le/nos/os/les + quitar + cosa (+ a alguien o algo)",
       "questionEn": "How do you say that someone takes one thing away from another person or thing?",
       "answerEn": "Use a short word such as me or le with quitar, then name the thing taken away. You can add a followed by the person or thing that is deprived of it.",
-      "noteEn": "Quitar changes for the person and time. The short word identifies the person or thing that loses something: me, te, le, nos, os, or les. With an unchanged dictionary-form verb, attach it as in quitarle; with a changed verb, place it before, as in le quita or me quitaste. Spanish can repeat or clarify the affected entity after a, even though English uses ‘from’ or a possessive. In the prompt, each plus sign means ‘followed by,’ and the parentheses mark the optional clarifying phrase.",
+      "noteEn": "Quitar changes for the person and time. The short word identifies the person or thing that loses something: me, te, le, nos, os, or les. With an unchanged dictionary-form verb, attach it as in quitarle; with a changed verb, place it before, as in le quita or me quitaste. Spanish can repeat or clarify the affected entity after a, even though English uses ‘from’ or a possessive.",
       "example": {
         "es": "Ana le quita el juguete a Luis.",
         "en": "Ana takes the toy away from Luis."

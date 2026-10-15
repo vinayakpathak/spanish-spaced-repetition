@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-ca9a54f8559cca46",
+  "revision": "runtime-1a476b982afaf299",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -633,7 +633,7 @@
               }
             ],
             "cardIds": [
-              "word-le--apetecer-experiencer",
+              "word-le--experiencer",
               "grammar-apetecerle-algo-a-alguien"
             ]
           },
@@ -831,7 +831,7 @@
           "word-a--apetecer-experiencer",
           "grammar-apetecerle-algo-a-alguien",
           "word-alguien",
-          "word-le--apetecer-experiencer",
+          "word-le--experiencer",
           "word-apetece--feel-like",
           "word-un",
           "word-luego"
@@ -862,7 +862,7 @@
       "word-a--apetecer-experiencer",
       "grammar-apetecerle-algo-a-alguien",
       "word-alguien",
-      "word-le--apetecer-experiencer",
+      "word-le--experiencer",
       "word-apetece--feel-like",
       "word-un",
       "word-luego"
@@ -1039,8 +1039,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1059,7 +1063,7 @@
       "promptEs": "por + verbo en forma de diccionario (motivo)",
       "questionEn": "How do you give an action as the reason something happens?",
       "answerEn": "Use por, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as llegar, perder, or salir. A small attached word may remain on that form, as in por quejarme. Por presents the action as the cause or reason; para plus the same kind of verb normally presents an intended purpose instead.",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as llegar, perder, or salir. A small attached word may remain on that form, as in por quejarme. Por presents the action as the cause or reason; para followed by the same kind of verb normally presents an intended purpose instead.",
       "example": {
         "es": "Llegó tarde por perder el autobús.",
         "en": "He arrived late because he missed the bus."
@@ -1110,7 +1114,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1255,8 +1259,12 @@
       "id": "word-estan--location",
       "kind": "word",
       "promptEs": "están",
-      "answerEn": "they are (in a place or state)",
-      "noteEn": "",
+      "answerEn": "are (a place or condition)",
+      "noteEn": "Están is a form of estar for they or plural you, ustedes. It describes where people or things are, or their condition. Spanish often leaves out the separate word for they or you because the context identifies them. Before another verb's ongoing-action form, están has a different helping-verb use.",
+      "example": {
+        "es": "Las maletas están junto a la puerta.",
+        "en": "The suitcases are beside the door."
+      },
       "tags": [
         "word",
         "estar",
@@ -1342,7 +1350,7 @@
       "kind": "grammar",
       "promptEs": "a alguien le apetece algo",
       "questionEn": "How do you say that someone feels like having or doing something?",
-      "answerEn": "Put me, te, le, nos, os, or les before apetecer for the person, then name the desired thing or action. You can add a plus the person for clarity.",
+      "answerEn": "Put me, te, le, nos, os, or les before apetecer for the person, then name the desired thing or action. For clarity, you can also put the Spanish word a before the person's name.",
       "noteEn": "Spanish builds this from the desired thing's point of view: le apetece un té is literally structured like ‘a tea appeals to that person.’ Use apetece for one thing or an action in its unchanged dictionary form, and apetecen for several things: le apetece bailar but le apetecen unas tapas. The opening a phrase can name or emphasize the person: a Marta le apetece un té.",
       "example": {
         "es": "A Marta le apetece un té.",
@@ -1382,27 +1390,24 @@
       }
     },
     {
-      "id": "word-le--apetecer-experiencer",
+      "id": "word-le--experiencer",
       "kind": "word",
       "promptEs": "le",
-      "answerEn": "marks that person as the one who feels like something",
-      "noteEn": "Before apetecer, le identifies one person who has the desire. Natural English usually puts that person first and does not translate le as a separate word.",
+      "answerEn": "marks one person or entity as the one having a feeling, preference, or impression",
+      "noteEn": "Le can identify him, her, formal you, or another singular person or entity experiencing a reaction. What causes the reaction controls the verb: le gusta el libro, but le gustan los libros. Le stays the same; a phrase such as a Ana can clarify who it refers to.",
       "example": {
-        "es": "A Leo le apetece descansar.",
-        "en": "Leo feels like resting."
+        "es": "A Ana le gustan los trenes.",
+        "en": "Ana likes trains."
       },
       "tags": [
         "word",
-        "pronoun",
-        "apetecer",
-        "experiencer",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-el-final-esta-lejos",
+        "ownerComicId": "es-xkcd-1337-parte-2",
         "contextualSenseReviewed": true
       }
     },

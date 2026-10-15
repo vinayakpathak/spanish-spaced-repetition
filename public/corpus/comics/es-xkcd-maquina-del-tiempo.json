@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-b7dbedc962df13dc",
+  "revision": "runtime-29adcd2c8d416a57",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -858,7 +858,7 @@
               }
             ],
             "cardIds": [
-              "word-una--one-time",
+              "word-una--one-quantity",
               "grammar-una-vez-al-periodo",
               "concept-time-machine-self-intervention-loop"
             ]
@@ -955,7 +955,7 @@
           "phrase-mas-o-menos",
           "word-o--fixed-mas-o-menos",
           "word-menos--fixed-mas-o-menos",
-          "word-una--one-time",
+          "word-una--one-quantity",
           "grammar-una-vez-al-periodo",
           "word-vez",
           "word-al--frequency-period",
@@ -1002,7 +1002,7 @@
       "phrase-mas-o-menos",
       "word-o--fixed-mas-o-menos",
       "word-menos--fixed-mas-o-menos",
-      "word-una--one-time",
+      "word-una--one-quantity",
       "grammar-una-vez-al-periodo",
       "word-vez",
       "word-al--frequency-period",
@@ -1215,7 +1215,7 @@
       "promptEs": "estar a punto de + verbo en forma de diccionario",
       "questionEn": "How do you say that an action is just about to happen?",
       "answerEn": "Use the matching form of estar, then a punto de, then the action verb in its unchanged -ar, -er, or -ir form.",
-      "noteEn": "Only estar changes for the person and time: estoy, estás, está, and so on. A punto de stays together, and the following action verb remains unchanged. The plus sign means ‘followed by.’",
+      "noteEn": "Only estar changes for the person and time: estoy, estás, está, and so on. A punto de stays together, and the following action verb remains unchanged.",
       "example": {
         "es": "La película está a punto de empezar.",
         "en": "The film is about to start."
@@ -1549,8 +1549,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1729,8 +1733,8 @@
       "id": "word-algún",
       "kind": "word",
       "promptEs": "algún",
-      "answerEn": "some; some day/time (before a masculine noun)",
-      "noteEn": "Alguno shortens to algún directly before a masculine singular noun: algún día, algún libro.",
+      "answerEn": "some; an unspecified one",
+      "noteEn": "Alguno loses its final o directly before a noun for one thing that uses el, such as libro: alguno becomes algún libro. This shortened form keeps its stress on the final syllable, written with an accent on ú. It does not identify which particular person or thing.",
       "example": {
         "es": "Algún vecino tendrá la llave.",
         "en": "Some neighbor will have the key."
@@ -1865,25 +1869,26 @@
       }
     },
     {
-      "id": "word-una--one-time",
+      "id": "word-una--one-quantity",
       "kind": "word",
       "promptEs": "una",
-      "answerEn": "one (before the feminine noun vez)",
-      "noteEn": "Here una gives the number of occasions rather than introducing an unspecified thing.",
+      "answerEn": "one (feminine)",
+      "noteEn": "Una counts one feminine thing or occasion. Use un before a masculine noun and una before a feminine noun: un libro, una página. In una vez, una still gives the number one; vez supplies “time” or “occasion.”",
       "example": {
-        "es": "Lo intenté una vez.",
-        "en": "I tried it once."
+        "es": "Necesito una moneda más.",
+        "en": "I need one more coin."
       },
       "tags": [
         "word",
         "number",
+        "feminine singular",
         "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "ownerComicId": "es-xkcd-juegos-flash",
         "contextualSenseReviewed": true
       }
     },
@@ -1893,7 +1898,7 @@
       "promptEs": "una vez al + período de tiempo",
       "questionEn": "How do you say that something happens once in each stated time period?",
       "answerEn": "Use una vez al before a masculine time period, such as día, mes, or año.",
-      "noteEn": "Una vez supplies ‘once.’ Al is a + el and introduces the repeating period. With a feminine period, use a la instead, as in una vez a la semana.",
+      "noteEn": "Una vez supplies ‘once.’ Al combines a and el and introduces the repeating period. With a feminine period, use a la instead, as in una vez a la semana.",
       "example": {
         "es": "La reunión ocurre una vez al año.",
         "en": "The meeting happens once a year."
@@ -1934,7 +1939,7 @@
       "kind": "word",
       "promptEs": "al",
       "answerEn": "per; each (before a time period)",
-      "noteEn": "In a frequency expression, al combines a + el before a masculine time period: una vez al mes means ‘once per month.’",
+      "noteEn": "In a frequency expression, al combines a and el before a masculine time period: una vez al mes means ‘once per month.’",
       "example": {
         "es": "Voy al médico dos veces al año.",
         "en": "I go to the doctor twice a year."

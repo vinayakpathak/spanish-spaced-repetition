@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-04b42f00053df009",
+  "revision": "runtime-522eca30c0883d3a",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -785,7 +785,7 @@
               }
             ],
             "cardIds": [
-              "word-de--noun-classifier"
+              "word-de--of"
             ]
           },
           {
@@ -1024,13 +1024,22 @@
             ],
             "exampleEs": "LO QUE QUIERES HACER",
             "explanationEn": "Lo que introduces the unnamed activity, and quieres hacer fills in what that activity is."
+          },
+          {
+            "id": "es-xkcd-chuleta-para-el-soporte-informatico:find-control-decision:review-word-w04",
+            "cardId": "word-de--of",
+            "participantWordIds": [
+              "es-xkcd-chuleta-para-el-soporte-informatico:find-control-decision:w04"
+            ],
+            "exampleEs": "OPCIÓN DE MENÚ",
+            "explanationEn": "Here de relates an option to the menu it belongs to."
           }
         ],
         "cardIds": [
           "word-buscar",
           "word-una",
           "word-opción",
-          "word-de--noun-classifier",
+          "word-de--of",
           "word-menú",
           "word-o",
           "word-botón",
@@ -1336,6 +1345,15 @@
             ],
             "exampleEs": "PROBADO CON TODOS",
             "explanationEn": "Probado supplies the trying action, con introduces the chosen options, and todos stands for all of those options."
+          },
+          {
+            "id": "es-xkcd-chuleta-para-el-soporte-informatico:tried-all-route:review-word-w04",
+            "cardId": "word-todos--all-of-them",
+            "participantWordIds": [
+              "es-xkcd-chuleta-para-el-soporte-informatico:tried-all-route:w04"
+            ],
+            "exampleEs": "CON TODOS",
+            "explanationEn": "Todos refers to all the previously understood options, not only to people."
           }
         ],
         "cardIds": [
@@ -1654,7 +1672,7 @@
               }
             ],
             "cardIds": [
-              "word-con--fixed-junto-con",
+              "word-con",
               "phrase-junto-con"
             ]
           },
@@ -1798,7 +1816,7 @@
               }
             ],
             "cardIds": [
-              "word-quiere--impersonal",
+              "word-quiere--wants",
               "grammar-se-impersonal",
               "grammar-lo-que",
               "phrase-relacionado-con"
@@ -1959,6 +1977,15 @@
             ],
             "exampleEs": "SE QUIERE HACER",
             "explanationEn": "Se leaves the person unspecified, quiere stays third-person singular, and hacer names the desired action."
+          },
+          {
+            "id": "es-xkcd-chuleta-para-el-soporte-informatico:google-node:review-word-w16",
+            "cardId": "word-quiere--wants",
+            "participantWordIds": [
+              "es-xkcd-chuleta-para-el-soporte-informatico:google-node:w16"
+            ],
+            "exampleEs": "SE QUIERE",
+            "explanationEn": "Se leaves the person unspecified: quiere describes what someone or people in general want."
           }
         ],
         "cardIds": [
@@ -1970,7 +1997,7 @@
           "word-programa--computer-program",
           "word-junto--together",
           "phrase-junto-con",
-          "word-con--fixed-junto-con",
+          "word-con",
           "word-algunas",
           "word-palabras",
           "grammar-descriptive-adjective-after-noun",
@@ -1983,7 +2010,7 @@
           "word-que--neutral-relative",
           "word-se--impersonal",
           "grammar-se-impersonal",
-          "word-quiere--impersonal",
+          "word-quiere--wants",
           "word-hacer--do",
           "word-seguir",
           "word-las",
@@ -3058,6 +3085,7 @@
       "word-buscar",
       "word-una",
       "word-opción",
+      "word-de--of",
       "word-menú",
       "word-o",
       "word-botón",
@@ -3095,13 +3123,12 @@
       "word-del--of-the",
       "word-junto--together",
       "phrase-junto-con",
-      "word-con--fixed-junto-con",
       "word-algunas",
       "word-palabras",
       "word-relacionadas",
       "word-se--impersonal",
       "grammar-se-impersonal",
-      "word-quiere--impersonal",
+      "word-quiere--wants",
       "word-seguir",
       "word-las",
       "word-instrucciones",
@@ -3270,17 +3297,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3470,8 +3495,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3634,7 +3658,7 @@
       "promptEs": "cualquier + sustantivo singular",
       "questionEn": "How do you say “any” before one singular thing?",
       "answerEn": "Put cualquier before a singular noun: cualquier libro, cualquier opción.",
-      "noteEn": "A noun is a naming word such as libro or opción. Before a noun, cualquiera shortens to cualquier. The noun stays singular even when the meaning is any one out of many. The plus sign in the Spanish prompt means “followed by.”",
+      "noteEn": "A noun is a naming word such as libro or opción. Before a noun, cualquiera shortens to cualquier. The noun stays singular even when the meaning is any one out of many.",
       "example": {
         "es": "Puedes elegir cualquier asiento.",
         "en": "You can choose any seat."
@@ -3675,7 +3699,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3866,10 +3894,10 @@
     {
       "id": "grammar-lo-adjective-as-noun",
       "kind": "grammar",
-      "promptEs": "lo + adjetivo",
-      "questionEn": "How do you refer to “what is important,” “the difficult part,” or another general quality without naming a noun?",
-      "answerEn": "Put the unchanged word lo before a masculine-singular adjective: lo importante, lo difícil, lo bueno.",
-      "noteEn": "Here lo does not stand for a masculine object. It turns the quality into a general idea or aspect, such as lo importante, “what is important.” The adjective stays in its masculine singular form because there is no named noun for it to match.",
+      "promptEs": "lo + palabra descriptiva",
+      "questionEn": "How do you use lo to mean 'the good part,' 'what is important,' or another general quality?",
+      "answerEn": "Put lo before the masculine singular form of a describing word, without adding a noun.",
+      "noteEn": "A describing word is called an adjective: bueno means good and difícil means difficult. Lo turns that quality into a general thing or aspect, as in lo bueno ('the good part') and lo difícil ('what is difficult'). It does not refer to a masculine object. Keep the describing word masculine singular: lo bueno, not lo buena or lo buenos. Lo mejor likewise means the best thing or part; mejor itself supplies 'best.'",
       "example": {
         "es": "Lo difícil es empezar.",
         "en": "The difficult part is starting."
@@ -3877,7 +3905,7 @@
       "tags": [
         "grammar",
         "neutral lo",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -3987,6 +4015,24 @@
       }
     },
     {
+      "id": "word-de--of",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
       "id": "word-menú",
       "kind": "word",
       "promptEs": "menú",
@@ -4049,20 +4095,20 @@
     {
       "id": "grammar-indefinite-relative-subjunctive",
       "kind": "grammar",
-      "promptEs": "alguien/algo que + subjuntivo",
-      "answerEn": "Use the subjunctive after que when describing that unknown person or thing.",
-      "noteEn": "Spanish treats a known person differently from one you are still trying to find. Conozco a alguien que habla inglés means “I know someone who speaks English.” Busco a alguien que hable inglés uses hable because no particular person has been identified.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "relative clauses"
-      ],
-      "questionEn": "Which verb form do you use when you are looking for a person or thing that has not been identified—and may not exist?",
+      "promptEs": "persona o cosa no identificada + que + descripción",
+      "questionEn": "How do you choose the verb after que when describing someone or something that has not been identified?",
+      "answerEn": "Use the special subjunctive form when you want any suitable person or thing, or are not treating its existence as established.",
+      "noteEn": "Name the person or thing, add que ('who' or 'that'), then describe it. Subjunctive is the name for verb forms used here for a wanted or possible description rather than a known example. Compare conozco a alguien que habla inglés, 'I know someone who speaks English,' with busco a alguien que hable inglés, 'I am looking for someone who speaks English.' Habla changes to hable because no particular suitable person is identified. Similar choices occur after cualquier ('any') or when a suitable thing may not exist; the word que alone does not force this form.",
       "example": {
-        "es": "Busco a alguien que hable inglés.",
-        "en": "I am looking for someone who speaks English."
+        "es": "Necesito un libro que explique esto.",
+        "en": "I need a book that explains this."
       },
+      "tags": [
+        "grammar",
+        "relative descriptions",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4170,17 +4216,15 @@
       "id": "word-con--relacionado-complement",
       "kind": "word",
       "promptEs": "con",
-      "answerEn": "to; with (required after relacionado or relacionada)",
-      "noteEn": "Spanish uses relacionado con where English usually says ‘related to.’",
+      "answerEn": "to; with; connects related things",
+      "noteEn": "Relación and relacionado use con to introduce what something is connected or related to. Relacionado may change to relacionada, relacionados, or relacionadas; con stays unchanged. English commonly uses 'to' in 'related to.'",
       "example": {
-        "es": "La noticia está relacionada con el clima.",
-        "en": "The news is related to the climate."
+        "es": "El cambio no tiene relación con el precio.",
+        "en": "The change is not related to the price."
       },
       "tags": [
         "word",
-        "prepositions",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4587,11 +4631,11 @@
       "id": "word-todos--all-of-them",
       "kind": "word",
       "promptEs": "todos",
-      "answerEn": "all of them (masculine or mixed plural)",
-      "noteEn": "Here todos stands alone for all the previously understood options.",
+      "answerEn": "all; everyone (the whole understood group)",
+      "noteEn": "Todos can stand for all the people or things in an understood group. Other words show whether English needs “all of us,” “all of them,” or “everyone.” Use todos for masculine or mixed groups and todas for an all-feminine group.",
       "example": {
-        "es": "He probado todos.",
-        "en": "I have tried all of them."
+        "es": "Todos queremos una respuesta.",
+        "en": "We all want an answer."
       },
       "tags": [
         "word",
@@ -4678,20 +4722,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4825,30 +4869,6 @@
       }
     },
     {
-      "id": "word-con--fixed-junto-con",
-      "kind": "word",
-      "promptEs": "con",
-      "answerEn": "with; completes junto con, ‘together with’",
-      "noteEn": "Con remains unchanged in the expression junto con.",
-      "example": {
-        "es": "Envió la carta junto con una foto.",
-        "en": "She sent the letter together with a photo."
-      },
-      "tags": [
-        "word",
-        "fixed expression",
-        "preposition",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-algunas",
       "kind": "word",
       "promptEs": "algunas",
@@ -4956,26 +4976,26 @@
       }
     },
     {
-      "id": "word-quiere--impersonal",
+      "id": "word-quiere--wants",
       "kind": "word",
       "promptEs": "quiere",
-      "answerEn": "one wants; people want (after impersonal se)",
-      "noteEn": "Quiere is third-person singular because impersonal se leaves the person unspecified.",
+      "answerEn": "wants; wants to",
+      "noteEn": "Quiere is a present form of querer, “to want.” It can describe he, she, or one person addressed formally as usted. With se, it can describe what people in general want. Before an action, use the action verb's unchanged dictionary form, such as descansar, “to rest.”",
       "example": {
-        "es": "Cuando se quiere aprender, hay que practicar.",
-        "en": "When one wants to learn, one has to practice."
+        "es": "¿Quiere descansar, señora?",
+        "en": "Would you like to rest, ma'am?"
       },
       "tags": [
         "word",
-        "verbs",
-        "impersonal",
-        "B1"
+        "querer",
+        "present",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
+        "ownerComicId": "es-xkcd-belleza",
         "contextualSenseReviewed": true
       }
     },
@@ -5134,7 +5154,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -5400,7 +5424,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -5533,7 +5557,7 @@
       "promptEs": "orden afirmativa para vosotros: hablad, comed, escribid",
       "questionEn": "How do you tell several people informally to do something in Spain?",
       "answerEn": "For most verbs, remove the final -r from the verb's dictionary form and add -d: hablar becomes hablad.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If a short object word such as me is included, attach it to the end: ayudad + me becomes ayudadme.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If you include a small word naming who or what receives the action, such as me, attach it to the end: ayudad and me become ayudadme.",
       "example": {
         "es": "Abrid los libros.",
         "en": "Open your books."
@@ -5626,16 +5650,15 @@
       "kind": "word",
       "promptEs": "flujo",
       "answerEn": "flow; sequence through a process",
-      "noteEn": "Flujo can describe movement through a process. In diagrama de flujo, it refers to the routes that connect steps and decisions; this is broader than a stream of data or one program's control flow.",
+      "noteEn": "Flujo can describe the path and order followed by steps in a process, including the instructions in a program. This use is not a stream of data or the physical flow of a liquid.",
       "example": {
-        "es": "El diagrama muestra el flujo del trabajo.",
-        "en": "The diagram shows the workflow."
+        "es": "Una decisión cambia el flujo del trabajo.",
+        "en": "A decision changes the workflow."
       },
       "tags": [
         "word",
         "flowchart",
         "process",
-        "sense split",
         "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -5695,7 +5718,7 @@
       "promptEs": "cerca de + persona, lugar o cosa",
       "questionEn": "How do you say that someone or something is near a person, place, or thing?",
       "answerEn": "Use cerca de, followed by the nearby person, place, or thing.",
-      "noteEn": "Cerca is followed by de in this pattern. When el follows, de + el contracts to del: cerca del parque.",
+      "noteEn": "Cerca is followed by de in this pattern. When el follows, de and el combine as del: cerca del parque.",
       "example": {
         "es": "Vivimos cerca de la estación.",
         "en": "We live near the station."

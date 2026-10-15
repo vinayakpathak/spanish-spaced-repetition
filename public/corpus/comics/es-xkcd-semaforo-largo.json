@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-67925c847a3427d4",
+  "revision": "runtime-88016203f0ca90af",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -715,8 +715,7 @@
               }
             ],
             "cardIds": [
-              "word-no",
-              "phrase-no-importar"
+              "word-no"
             ]
           },
           {
@@ -733,7 +732,7 @@
             ],
             "cardIds": [
               "word-importan--matter",
-              "phrase-no-importar"
+              "grammar-importar-indirect-object"
             ]
           },
           {
@@ -749,7 +748,8 @@
               }
             ],
             "cardIds": [
-              "word-las"
+              "word-las",
+              "grammar-importar-indirect-object"
             ]
           },
           {
@@ -765,7 +765,8 @@
               }
             ],
             "cardIds": [
-              "word-horas"
+              "word-horas",
+              "grammar-importar-indirect-object"
             ]
           },
           {
@@ -913,7 +914,6 @@
             ],
             "cardIds": [
               "word-no",
-              "phrase-no-importar",
               "grammar-no-importa-que-subjunctive"
             ]
           },
@@ -931,7 +931,7 @@
             ],
             "cardIds": [
               "word-importa",
-              "phrase-no-importar",
+              "grammar-importar-indirect-object",
               "grammar-no-importa-que-subjunctive"
             ]
           },
@@ -1389,13 +1389,14 @@
           },
           {
             "id": "es-xkcd-semaforo-largo:engineer-explanation:app-no-matter-plural",
-            "cardId": "phrase-no-importar",
+            "cardId": "grammar-importar-indirect-object",
             "participantWordIds": [
-              "es-xkcd-semaforo-largo:engineer-explanation:w08",
-              "es-xkcd-semaforo-largo:engineer-explanation:w09"
+              "es-xkcd-semaforo-largo:engineer-explanation:w09",
+              "es-xkcd-semaforo-largo:engineer-explanation:w10",
+              "es-xkcd-semaforo-largo:engineer-explanation:w11"
             ],
-            "exampleEs": "NO IMPORTAN",
-            "explanationEn": "No negates importar, and the plural form importan agrees with the later plural subject horas."
+            "exampleEs": "IMPORTAN LAS HORAS",
+            "explanationEn": "Plural importan agrees with horas, the things that matter. No person who cares is stated; the preceding no makes this negative."
           },
           {
             "id": "es-xkcd-semaforo-largo:engineer-explanation:app-carry-out",
@@ -1410,13 +1411,12 @@
           },
           {
             "id": "es-xkcd-semaforo-largo:engineer-explanation:app-no-matter-clause",
-            "cardId": "phrase-no-importar",
+            "cardId": "grammar-importar-indirect-object",
             "participantWordIds": [
-              "es-xkcd-semaforo-largo:engineer-explanation:w20",
               "es-xkcd-semaforo-largo:engineer-explanation:w21"
             ],
-            "exampleEs": "NO IMPORTA",
-            "explanationEn": "No importa treats the following situation as the single thing being dismissed, so importar remains singular."
+            "exampleEs": "IMPORTA",
+            "explanationEn": "Importa stays singular because the following situation is treated as one thing that matters. The person who cares is unstated, and preceding no makes it negative."
           },
           {
             "id": "es-xkcd-semaforo-largo:engineer-explanation:app-no-matter-subjunctive",
@@ -1479,8 +1479,8 @@
           "word-semáforo",
           "concept-coordinated-traffic-signals",
           "word-no",
-          "phrase-no-importar",
           "word-importan--matter",
+          "grammar-importar-indirect-object",
           "word-las",
           "word-horas",
           "word-de--of",
@@ -2030,7 +2030,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-que",
+              "word-de--after-antes",
               "grammar-antes-de-que-subjunctive"
             ]
           },
@@ -2211,7 +2211,7 @@
           "word-capó",
           "word-antes--before-event",
           "grammar-antes-de-que-subjunctive",
-          "word-de--fixed-antes-de-que",
+          "word-de--after-antes",
           "word-que--fixed-antes-de-que",
           "word-arranque--start-driving-subjunctive",
           "word-y",
@@ -2537,8 +2537,8 @@
       "word-el--article",
       "concept-coordinated-traffic-signals",
       "word-no",
-      "phrase-no-importar",
       "word-importan--matter",
+      "grammar-importar-indirect-object",
       "word-las",
       "word-horas",
       "word-de--of",
@@ -2593,7 +2593,7 @@
       "word-capó",
       "word-antes--before-event",
       "grammar-antes-de-que-subjunctive",
-      "word-de--fixed-antes-de-que",
+      "word-de--after-antes",
       "word-que--fixed-antes-de-que",
       "word-arranque--start-driving-subjunctive",
       "word-te--direct",
@@ -2858,16 +2858,15 @@
       "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
-      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "answerEn": "the; combines a and el before a person or animal directly affected by the action",
+      "noteEn": "Al combines a and el. This a marks a person, animal, or person-like target directly affected by the verb; it does not itself mean 'to' a recipient. El means 'the,' or helps identify 'the one' when no noun is stated. Keep al separate from accented él, 'he.'",
       "example": {
         "es": "Veo al profesor.",
         "en": "I see the teacher."
       },
       "tags": [
         "word",
-        "contraction",
-        "personal a"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2883,7 +2882,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -3331,6 +3330,7 @@
         "signal coordination",
         "systems"
       ],
+      "questionEn": "Why can shortening one red light make traffic worse elsewhere?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3346,39 +3346,13 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "seed-curriculum",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "phrase-no-importar",
-      "kind": "phrase",
-      "promptEs": "no importa / no importan",
-      "questionEn": "How do you say that something does not matter, or dismiss it with “never mind”?",
-      "answerEn": "Put no before importa for one thing or a whole situation, and before importan for plural things.",
-      "noteEn": "The thing that does not matter controls the verb: no importa el precio uses singular importa, while no importan los detalles uses plural importan. A following clause normally begins with que. Tone and context decide whether English uses “it doesn't matter” or “never mind.”",
-      "example": {
-        "es": "No importan los errores pequeños.",
-        "en": "The small mistakes don't matter."
-      },
-      "tags": [
-        "phrase",
-        "importance",
-        "agreement",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-semaforo-largo",
         "contextualSenseReviewed": true
       }
     },
@@ -3403,6 +3377,32 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-semaforo-largo",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-importar-indirect-object",
+      "kind": "grammar",
+      "promptEs": "importar con la persona a quien le importa",
+      "questionEn": "How do you use importar to say what matters and who cares about it?",
+      "answerEn": "Make importar match the thing or person that matters; use me, te, le, nos, os, or les to say who cares.",
+      "noteEn": "For one thing or a whole situation, use importa; for several things, use importan: me importa el precio, me importan los detalles. The short word names who cares: me is to me, te to familiar singular you, le to him/her/formal singular you, nos to us, os to familiar plural you mainly in Spain, and les to them or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. If I am the person who matters, use importo, as in le importo ('I matter to him or her'). You can omit the person when it is not needed: importa el resultado. No makes it negative and goes before the short word, if present: no me importa.",
+      "example": {
+        "es": "Me importan tus ideas.",
+        "en": "Your ideas matter to me."
+      },
+      "tags": [
+        "grammar",
+        "importar",
+        "agreement",
+        "affected person",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3615,7 +3615,7 @@
       "promptEs": "no importa que + subjuntivo",
       "questionEn": "How do you say that a situation does not matter?",
       "answerEn": "Use no importa que, then put the situation's verb in the subjunctive form.",
-      "noteEn": "No importa presents a reaction to the situation rather than asserting that situation as the main point. Que introduces it, and the following verb takes a special form called the subjunctive. A present-looking -ar verb normally changes to an e ending, as in interactuar → interactúe; a past-looking event can use an -ara or -iera form, as in llevar → llevara.",
+      "noteEn": "No importa presents a reaction to the situation rather than asserting that situation as the main point. Que introduces it, and the following verb takes a special form called the subjunctive. A present-looking -ar verb normally changes to an e ending, as when interactuar becomes interactúe; a past-looking event can use an -ara or -iera form, as when llevar becomes llevara.",
       "example": {
         "es": "No importa que llegues tarde.",
         "en": "It does not matter if you arrive late."
@@ -3656,8 +3656,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3703,7 +3703,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3915,20 +3919,20 @@
     {
       "id": "grammar-indefinite-relative-subjunctive",
       "kind": "grammar",
-      "promptEs": "alguien/algo que + subjuntivo",
-      "answerEn": "Use the subjunctive after que when describing that unknown person or thing.",
-      "noteEn": "Spanish treats a known person differently from one you are still trying to find. Conozco a alguien que habla inglés means “I know someone who speaks English.” Busco a alguien que hable inglés uses hable because no particular person has been identified.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "relative clauses"
-      ],
-      "questionEn": "Which verb form do you use when you are looking for a person or thing that has not been identified—and may not exist?",
+      "promptEs": "persona o cosa no identificada + que + descripción",
+      "questionEn": "How do you choose the verb after que when describing someone or something that has not been identified?",
+      "answerEn": "Use the special subjunctive form when you want any suitable person or thing, or are not treating its existence as established.",
+      "noteEn": "Name the person or thing, add que ('who' or 'that'), then describe it. Subjunctive is the name for verb forms used here for a wanted or possible description rather than a known example. Compare conozco a alguien que habla inglés, 'I know someone who speaks English,' with busco a alguien que hable inglés, 'I am looking for someone who speaks English.' Habla changes to hable because no particular suitable person is identified. Similar choices occur after cualquier ('any') or when a suitable thing may not exist; the word que alone does not force this form.",
       "example": {
-        "es": "Busco a alguien que hable inglés.",
-        "en": "I am looking for someone who speaks English."
+        "es": "Necesito un libro que explique esto.",
+        "en": "I need a book that explains this."
       },
+      "tags": [
+        "grammar",
+        "relative descriptions",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4047,11 +4051,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4300,7 +4307,7 @@
       "kind": "grammar",
       "promptEs": "usted: hable / coma / escriba",
       "answerEn": "Use the usted command form: regular -ar verbs end in -e, while regular -er and -ir verbs end in -a.",
-      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir → diga.",
+      "noteEn": "Usted is the polite or formal singular “you.” Hablar becomes hable, comer becomes coma, and escribir becomes escriba. Usted is usually left out because the command ending already shows formal address. Some common verbs are irregular, such as decir becoming diga.",
       "tags": [
         "A2",
         "grammar",
@@ -4324,11 +4331,11 @@
       "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal singular)",
-      "noteEn": "With formal usted, su can mean “your.” The same form can also mean “his,” “her,” or “their,” so context identifies the owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Señora, aquí está su café.",
-        "en": "Ma’am, here is your coffee."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
@@ -4549,7 +4556,7 @@
       "promptEs": "antes de que + subjuntivo",
       "questionEn": "How do you connect one event to a later event that has not happened yet?",
       "answerEn": "Use antes de que, then put the pending event's verb in the subjunctive form.",
-      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de plus the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
+      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de followed by the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
       "example": {
         "es": "Sal antes de que llueva.",
         "en": "Leave before it rains."
@@ -4569,25 +4576,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-que",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; part of antes de que (“before”)",
-      "noteEn": "De is a required middle piece when antes introduces a full event with que. Translate antes de que as one connector.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Volvamos antes de que oscurezca.",
-        "en": "Let's return before it gets dark."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "fixed connector",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-semaforo-largo",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -4867,7 +4873,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."

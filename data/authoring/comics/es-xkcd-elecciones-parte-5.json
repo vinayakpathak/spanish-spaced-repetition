@@ -20,9 +20,27 @@
     "noteEn": "The title text treats the awkward social experiment as a question that could be tested scientifically."
   },
   "cardDefinitions": [
-    { "id": "word-gusta--you-like", "kind": "word", "promptEs": "gusta", "answerEn": "you like; is pleasing to you", "noteEn": "", "tags": ["word", "verb", "gustar"] },
-    { "id": "word-volar", "kind": "word", "promptEs": "volar", "answerEn": "to fly", "noteEn": "", "tags": ["word", "verb"] },
-    { "id": "word-cometas--kites", "kind": "word", "promptEs": "cometas", "answerEn": "kites", "noteEn": "", "tags": ["word"] },
+    {
+      "id": "word-volar",
+      "kind": "word",
+      "promptEs": "volar",
+      "answerEn": "to fly",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "verb"
+      ]
+    },
+    {
+      "id": "word-cometas--kites",
+      "kind": "word",
+      "promptEs": "cometas",
+      "answerEn": "kites",
+      "noteEn": "",
+      "tags": [
+        "word"
+      ]
+    },
     {
       "id": "phrase-perdona-si",
       "kind": "phrase",
@@ -30,28 +48,33 @@
       "questionEn": "How do you politely acknowledge that what you are about to say may be awkward or inconvenient?",
       "answerEn": "Use perdona si followed by the situation.",
       "noteEn": "Perdona is an informal singular request for forgiveness. Si introduces the condition the speaker is apologizing for, such as si esto es raro (“if this is weird”).",
-      "example": { "es": "Perdona si llego tarde.", "en": "Sorry if I arrive late." },
-      "tags": ["A2", "phrase", "politeness"]
+      "example": {
+        "es": "Perdona si llego tarde.",
+        "en": "Sorry if I arrive late."
+      },
+      "tags": [
+        "A2",
+        "phrase",
+        "politeness"
+      ]
     },
     {
       "id": "grammar-gustar-infinitive",
       "kind": "grammar",
-      "promptEs": "me/te/le gusta + infinitivo",
-      "questionEn": "How do you say that someone likes doing an activity?",
-      "answerEn": "Use me, te, or le for the person, then gusta, then the action verb in its basic form.",
-      "noteEn": "Spanish builds this idea as the activity being pleasing to someone. The action verb stays in its dictionary form ending in -ar, -er, or -ir, and gusta remains singular for one whole activity.",
-      "example": { "es": "Me gusta leer.", "en": "I like reading." },
-      "tags": ["A1", "grammar", "gustar", "verb pattern"]
-    },
-    {
-      "id": "phrase-volar-cometas",
-      "kind": "phrase",
-      "promptEs": "volar cometas",
-      "questionEn": "How do you say “to fly kites”?",
-      "answerEn": "Use volar cometas.",
-      "noteEn": "Cometa can mean either a kite or a comet. With volar and an activity context, volar cometas means making kites fly.",
-      "example": { "es": "Los niños salen a volar cometas.", "en": "The children go out to fly kites." },
-      "tags": ["A2", "phrase", "activity"]
+      "promptEs": "me, te, le, nos, os o les + gusta + actividad",
+      "questionEn": "How do you use gusta to say that someone likes doing an activity?",
+      "answerEn": "Choose the short word for the person, add gusta, then name the activity with the verb's dictionary form.",
+      "noteEn": "Use me for me, te for familiar singular you, le for him/her/formal singular you, nos for us, os for familiar plural you mainly in Spain, and les for them or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. The activity is what pleases that person, so gusta stays singular for one activity even with les. Its action verb keeps its -ar, -er, or -ir dictionary form. To name or emphasize the people, add a before their name or group: a mis amigos les gusta leer. No before the short word makes it negative.",
+      "example": {
+        "es": "A mis vecinos les gusta cocinar.",
+        "en": "My neighbors like cooking."
+      },
+      "tags": [
+        "grammar",
+        "gustar",
+        "activities",
+        "A1"
+      ]
     }
   ],
   "regions": [
@@ -102,14 +125,46 @@
         { "source": "ocr-line", "id": "es-xkcd-elecciones-parte-5:ocr-line-0007" }
       ],
       "words": [
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:w01", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00008" }], "cardIds": ["word-te--indirect", "grammar-gustar-infinitive"] },
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:w02", "text": "GUSTA", "normalized": "gusta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00009" }], "cardIds": ["word-gusta--you-like", "grammar-gustar-infinitive"] },
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:w03", "text": "VOLAR", "normalized": "volar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00010" }], "cardIds": ["word-volar", "grammar-gustar-infinitive", "phrase-volar-cometas"] },
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:w04", "text": "COMETAS", "normalized": "cometas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00013" }], "cardIds": ["word-cometas--kites", "phrase-volar-cometas"] }
+        { "id": "es-xkcd-elecciones-parte-5:kite-question:w01", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00008" }], "cardIds": ["word-te--experiencer", "grammar-gustar-infinitive"] },
+        { "id": "es-xkcd-elecciones-parte-5:kite-question:w02", "text": "GUSTA", "normalized": "gusta", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00009" }], "cardIds": ["word-gusta--i-like", "grammar-gustar-infinitive"] },
+        { "id": "es-xkcd-elecciones-parte-5:kite-question:w03", "text": "VOLAR", "normalized": "volar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00010" }], "cardIds": [
+          "word-volar",
+          "grammar-gustar-infinitive"
+        ] },
+        { "id": "es-xkcd-elecciones-parte-5:kite-question:w04", "text": "COMETAS", "normalized": "cometas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-elecciones-parte-5:ocr-token-00013" }], "cardIds": [
+          "word-cometas--kites"
+        ] }
       ],
       "applications": [
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:app-like-doing", "cardId": "grammar-gustar-infinitive", "participantWordIds": ["es-xkcd-elecciones-parte-5:kite-question:w01", "es-xkcd-elecciones-parte-5:kite-question:w02", "es-xkcd-elecciones-parte-5:kite-question:w03"], "exampleEs": "TE GUSTA VOLAR", "explanationEn": "Te names the person, gusta presents the activity as pleasing, and volar stays in its basic form." },
-        { "id": "es-xkcd-elecciones-parte-5:kite-question:app-fly-kites", "cardId": "phrase-volar-cometas", "participantWordIds": ["es-xkcd-elecciones-parte-5:kite-question:w03", "es-xkcd-elecciones-parte-5:kite-question:w04"], "exampleEs": "VOLAR COMETAS", "explanationEn": "With cometas as the object, volar describes flying kites rather than flying through the air oneself." }
+        {
+          "id": "es-xkcd-elecciones-parte-5:kite-question:app-like-doing",
+          "cardId": "grammar-gustar-infinitive",
+          "participantWordIds": [
+            "es-xkcd-elecciones-parte-5:kite-question:w01",
+            "es-xkcd-elecciones-parte-5:kite-question:w02",
+            "es-xkcd-elecciones-parte-5:kite-question:w03"
+          ],
+          "exampleEs": "TE GUSTA VOLAR",
+          "explanationEn": "Te names the person, gusta presents the activity as pleasing, and volar stays in its basic form."
+        },
+        {
+          "id": "es-xkcd-elecciones-parte-5:kite-question:review-word-w01",
+          "cardId": "word-te--experiencer",
+          "participantWordIds": [
+            "es-xkcd-elecciones-parte-5:kite-question:w01"
+          ],
+          "exampleEs": "TE GUSTA",
+          "explanationEn": "Here te identifies the listener who has the liking; the liked activity is what gustar is built around."
+        },
+        {
+          "id": "es-xkcd-elecciones-parte-5:kite-question:review-word-w02",
+          "cardId": "word-gusta--i-like",
+          "participantWordIds": [
+            "es-xkcd-elecciones-parte-5:kite-question:w02"
+          ],
+          "exampleEs": "TE GUSTA",
+          "explanationEn": "Te identifies one familiar listener as the one who likes it. Gusta supplies the liking meaning; this marker does not create a new sense of gusta."
+        }
       ]
     }
   ]

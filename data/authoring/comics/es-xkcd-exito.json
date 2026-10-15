@@ -95,13 +95,30 @@
       "example": { "es": "Voy a dejar la puerta abierta.", "en": "I'm going to leave the door open." },
       "tags": ["word", "verb", "state", "A2"]
     },
-    { "id": "word-estaba--state", "kind": "word", "promptEs": "estaba", "answerEn": "it was; used to be (a past state)", "noteEn": "", "tags": ["word", "estar", "imperfect", "past", "A2"] },
+    {
+      "id": "word-estaba--state",
+      "kind": "word",
+      "promptEs": "estaba",
+      "answerEn": "was (a past place, condition, or situation)",
+      "noteEn": "Estaba is a past form of estar. It describes a location or condition at a past time without by itself marking when that situation began or ended. The same form can refer to I, he, she, it, or formal you; the surrounding words identify who.",
+      "example": {
+        "es": "La tienda estaba cerrada.",
+        "en": "The shop was closed."
+      },
+      "tags": [
+        "word",
+        "estar",
+        "imperfect",
+        "past",
+        "A2"
+      ]
+    },
     {
       "id": "word-al--fixed-al-principio",
       "kind": "word",
       "promptEs": "al",
       "answerEn": "at the; begins al principio, ‘at the beginning’",
-      "noteEn": "Al is the required contraction of a + el. With principio it locates something at the beginning of a process or period.",
+      "noteEn": "Al combines a and el into one word. With principio, it locates something at the beginning of a process or period.",
       "example": { "es": "Al principio fue difícil.", "en": "At the beginning it was difficult." },
       "tags": ["word", "contraction", "time", "A2"]
     },
@@ -198,7 +215,7 @@
       "id": "word-volverás--repeat-action",
       "kind": "word",
       "promptEs": "volverás",
-      "answerEn": "you will do again (with a + action)",
+      "answerEn": "you will do again (followed by a and the repeated action)",
       "noteEn": "Volverás is the future form for informal singular you. Followed by a and an unchanged action verb, it says that the action will happen again.",
       "example": { "es": "Volverás a intentarlo.", "en": "You will try again." },
       "tags": ["word", "verb", "future", "repetition", "A2"]
@@ -215,12 +232,12 @@
     {
       "id": "grammar-hacerse-adjective-change",
       "kind": "grammar",
-      "promptEs": "hacerse + descripción",
-      "questionEn": "How can you say that a person or thing becomes or gradually grows a certain way?",
-      "answerEn": "Use the matching form of hacerse followed by the word that describes the new state.",
-      "noteEn": "The short marker and hacer form change with the subject: me hago, te haces, se hace, nos hacemos, and so on. The describing word matches the person or thing in number and, when its form changes, gender.",
+      "promptEs": "hacerse + descripción del nuevo estado",
+      "questionEn": "How do you use hacerse to say that someone or something becomes a certain way?",
+      "answerEn": "Use the matching form of hacerse followed by the word describing the new state.",
+      "noteEn": "The short marker and hacer change together: me hago ('I become'), te haces ('you become,' familiar singular), se hace ('he/she becomes'), nos hacemos ('we become'). This often describes development or a change over time, including getting older: hacerse mayor. The describing word matches the person or thing when its ending allows it: mayor becomes mayores for a group; rico becomes rica for a woman. Not every English 'become' uses hacerse: sudden temporary feelings and changes of identity can use other Spanish verbs.",
       "example": { "es": "Las tardes se hacen más cortas.", "en": "The afternoons are getting shorter." },
-      "tags": ["grammar", "change of state", "hacerse", "A2"]
+      "tags": ["grammar", "hacerse", "change of state", "A2"]
     },
     {
       "id": "grammar-cada-vez-mas-description",
@@ -248,7 +265,7 @@
       "promptEs": "al principio",
       "questionEn": "How do you say “at the beginning” or “at first”?",
       "answerEn": "Use al principio.",
-      "noteEn": "Al combines a + el. Al principio can locate something at the beginning of a process, or contrast an initial situation with what happened later.",
+      "noteEn": "Al combines a and el. Al principio can locate something at the beginning of a process, or contrast an initial situation with what happened later.",
       "example": { "es": "Al principio todo parecía sencillo.", "en": "At first everything seemed simple." },
       "tags": ["phrase", "time", "sequence", "A2"]
     },
@@ -308,7 +325,14 @@
       "promptEs": "OpenBSD · seguridad · ataque de tiburones",
       "answerEn": "OpenBSD is an operating system known for emphasizing security; the comic invents shark attacks as its absurd remaining security problem.",
       "noteEn": "The worsening computer repair ends with the characters in shark-filled water. The title text pretends that 40% of OpenBSD installations cause shark attacks and calls that the system's only standing security issue.",
-      "tags": ["concept", "OpenBSD", "computing", "security", "joke"]
+      "tags": [
+        "concept",
+        "OpenBSD",
+        "computing",
+        "security",
+        "joke"
+      ],
+      "questionEn": "Why is a shark attack presented as an OpenBSD security problem?"
     }
   ],
   "regions": [
@@ -428,7 +452,7 @@
         { "id": "es-xkcd-exito:six-hours-goal:app-poder-dejar", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w05", "es-xkcd-exito:six-hours-goal:w06"], "exampleEs": "PUEDO DEJAR", "explanationEn": "Puedo changes for the speaker, while dejar stays in its unchanged dictionary form." },
         { "id": "es-xkcd-exito:six-hours-goal:app-tal-y-como", "cardId": "phrase-tal-y-como", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w09", "es-xkcd-exito:six-hours-goal:w10", "es-xkcd-exito:six-hours-goal:w11", "es-xkcd-exito:six-hours-goal:w12", "es-xkcd-exito:six-hours-goal:w13", "es-xkcd-exito:six-hours-goal:w14"], "exampleEs": "TAL Y COMO ESTABA AL PRINCIPIO", "explanationEn": "Tal y como introduces the exact earlier state, and estaba al principio supplies that complete comparison." },
         { "id": "es-xkcd-exito:six-hours-goal:app-past-state", "cardId": "grammar-past-contrast", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w12"], "exampleEs": "ESTABA", "explanationEn": "Estaba uses the imperfect because it presents the system's earlier condition as a continuing background state." },
-        { "id": "es-xkcd-exito:six-hours-goal:app-at-first", "cardId": "phrase-al-principio", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w13", "es-xkcd-exito:six-hours-goal:w14"], "exampleEs": "AL PRINCIPIO", "explanationEn": "Al is a + el, and principio names the initial point of the repair process." }
+        { "id": "es-xkcd-exito:six-hours-goal:app-at-first", "cardId": "phrase-al-principio", "participantWordIds": ["es-xkcd-exito:six-hours-goal:w13", "es-xkcd-exito:six-hours-goal:w14"], "exampleEs": "AL PRINCIPIO", "explanationEn": "Al combines a and el, and principio names the initial point of the repair process." }
       ]
     },
     {

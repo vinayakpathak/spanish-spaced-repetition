@@ -266,17 +266,19 @@
       "tags": ["phrase", "door", "fixed expression", "A2"]
     },
     {
-      "id": "phrase-haber-tiempo-para-infinitive",
-      "kind": "phrase",
-      "promptEs": "hay tiempo para + verbo en forma de diccionario",
-      "questionEn": "How do you say that there is time available to do something?",
-      "answerEn": "Use hay tiempo para, then put the action verb in its unchanged dictionary form.",
-      "noteEn": "Hay says that something exists and does not change for one thing or several. Tiempo names the available time, and para introduces its use. The following action stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir. Other times can use había tiempo or habrá tiempo.",
+      "id": "word-de--after-antes",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Hay tiempo para descansar.",
-        "en": "There is time to rest."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
-      "tags": ["phrase", "time", "infinitive", "A2"]
+      "tags": [
+        "word",
+        "contextual sense"
+      ]
     }
   ],
   "regions": [
@@ -560,7 +562,7 @@
         { "id": "es-xkcd-diario-5:moved-mines:w06", "text": "TU", "normalized": "tu", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00044" }], "cardIds": ["word-tu"] },
         { "id": "es-xkcd-diario-5:moved-mines:w07", "text": "GARAJE", "normalized": "garaje", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00045" }], "cardIds": ["word-garaje"] },
         { "id": "es-xkcd-diario-5:moved-mines:w08", "text": "ANTES", "normalized": "antes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00046" }], "cardIds": ["word-antes--before-event", "grammar-antes-de-infinitive"] },
-        { "id": "es-xkcd-diario-5:moved-mines:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00047" }], "cardIds": ["word-de--fixed-antes-de-infinitive", "grammar-antes-de-infinitive"] },
+        { "id": "es-xkcd-diario-5:moved-mines:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00047" }], "cardIds": ["word-de--after-antes", "grammar-antes-de-infinitive"] },
         { "id": "es-xkcd-diario-5:moved-mines:w10", "text": "LLAMAR", "normalized": "llamar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00048" }], "cardIds": ["word-llamar--knock", "grammar-antes-de-infinitive", "phrase-llamar-a-la-puerta"] },
         { "id": "es-xkcd-diario-5:moved-mines:w11", "text": "A", "normalized": "a", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00049" }], "cardIds": ["word-a--fixed-llamar-a-la-puerta", "phrase-llamar-a-la-puerta"] },
         { "id": "es-xkcd-diario-5:moved-mines:w12", "text": "LA", "normalized": "la", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00050" }], "cardIds": ["word-la--article", "phrase-llamar-a-la-puerta"] },
@@ -642,12 +644,19 @@
       "geometryRationale": "The OCR token edges extend fractionally beyond their line boxes, so this measured region encloses all five handwritten lines.",
       "words": [
         { "id": "es-xkcd-diario-5:time-to-leave:w01", "text": "TODAVÍA", "normalized": "todavía", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00052" }], "cardIds": ["word-todavía--still"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w02", "text": "HAY", "normalized": "hay", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00053" }], "cardIds": ["word-hay", "phrase-haber-tiempo-para-infinitive"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w03", "text": "TIEMPO", "normalized": "tiempo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00054" }], "cardIds": ["word-tiempo", "phrase-haber-tiempo-para-infinitive"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w04", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00055" }], "cardIds": ["word-para--available-action", "phrase-haber-tiempo-para-infinitive"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w05", "text": "IRTE", "normalized": "irte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00056" }], "cardIds": ["word-irte--leave", "phrase-haber-tiempo-para-infinitive", "grammar-pronoun-attached-to-infinitive"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w06", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00057" }], "cardIds": ["word-y"] },
-        { "id": "es-xkcd-diario-5:time-to-leave:w07", "text": "BUSCAR", "normalized": "buscar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00058" }], "cardIds": ["word-buscar", "phrase-haber-tiempo-para-infinitive"] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w02", "text": "HAY", "normalized": "hay", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00053" }], "cardIds": [
+          "word-hay"
+        ] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w03", "text": "TIEMPO", "normalized": "tiempo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00054" }], "cardIds": [
+          "word-tiempo"
+        ] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w04", "text": "PARA", "normalized": "para", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00055" }], "cardIds": ["word-para--available-action", "grammar-para-infinitive-purpose"] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w05", "text": "IRTE", "normalized": "irte", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00056" }], "cardIds": ["word-irte--leave", "grammar-para-infinitive-purpose", "grammar-pronoun-attached-to-infinitive"] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w06", "text": "Y", "normalized": "y", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00057" }], "cardIds": [
+          "word-y",
+          "grammar-para-infinitive-purpose"
+        ] },
+        { "id": "es-xkcd-diario-5:time-to-leave:w07", "text": "BUSCAR", "normalized": "buscar", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00058" }], "cardIds": ["word-buscar", "grammar-para-infinitive-purpose"] },
         { "id": "es-xkcd-diario-5:time-to-leave:w08", "text": "UNA", "normalized": "una", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00059" }], "cardIds": ["word-una"] },
         { "id": "es-xkcd-diario-5:time-to-leave:w09", "text": "CHICA", "normalized": "chica", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00060" }], "cardIds": ["word-chica--potential-partner", "grammar-descriptive-adjective-after-noun", "grammar-adjective-gender-agreement"] },
         { "id": "es-xkcd-diario-5:time-to-leave:w10", "text": "NO", "normalized": "no", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-diario-5:ocr-token-00061" }], "cardIds": ["word-no"] },
@@ -655,23 +664,21 @@
       ],
       "applications": [
         {
-          "id": "es-xkcd-diario-5:time-to-leave:app-time-available",
-          "cardId": "phrase-haber-tiempo-para-infinitive",
-          "participantWordIds": ["es-xkcd-diario-5:time-to-leave:w02", "es-xkcd-diario-5:time-to-leave:w03", "es-xkcd-diario-5:time-to-leave:w04", "es-xkcd-diario-5:time-to-leave:w05", "es-xkcd-diario-5:time-to-leave:w07"],
-          "exampleEs": "HAY TIEMPO PARA IRTE Y BUSCAR",
-          "explanationEn": "Hay tiempo para introduces available time, and irte and buscar are the two coordinated actions kept in their dictionary forms."
-        },
-        {
           "id": "es-xkcd-diario-5:time-to-leave:app-attached-te",
           "cardId": "grammar-pronoun-attached-to-infinitive",
-          "participantWordIds": ["es-xkcd-diario-5:time-to-leave:w05"],
+          "participantWordIds": [
+            "es-xkcd-diario-5:time-to-leave:w05"
+          ],
           "exampleEs": "IRTE",
           "explanationEn": "Te is attached directly to the unchanged verb ir, making the one-word form irte."
         },
         {
           "id": "es-xkcd-diario-5:time-to-leave:app-adjective-order",
           "cardId": "grammar-descriptive-adjective-after-noun",
-          "participantWordIds": ["es-xkcd-diario-5:time-to-leave:w09", "es-xkcd-diario-5:time-to-leave:w11"],
+          "participantWordIds": [
+            "es-xkcd-diario-5:time-to-leave:w09",
+            "es-xkcd-diario-5:time-to-leave:w11"
+          ],
           "exampleEs": "CHICA NO LOCA",
           "explanationEn": "Chica names the person, while the descriptive word loca follows it; no negates that description without changing the order."
         },
@@ -681,6 +688,18 @@
           "participantWordIds": ["es-xkcd-diario-5:time-to-leave:w09", "es-xkcd-diario-5:time-to-leave:w11"],
           "exampleEs": "CHICA NO LOCA",
           "explanationEn": "Loca ends in -a to match the feminine singular noun chica; no does not change."
+        },
+        {
+          "id": "es-xkcd-diario-5:time-to-leave:app-para-available-actions",
+          "cardId": "grammar-para-infinitive-purpose",
+          "exampleEs": "PARA IRTE Y BUSCAR",
+          "explanationEn": "Para introduces what the available time is for. Irte and buscar keep their dictionary forms and share that one para; y joins the two actions.",
+          "participantWordIds": [
+            "es-xkcd-diario-5:time-to-leave:w04",
+            "es-xkcd-diario-5:time-to-leave:w05",
+            "es-xkcd-diario-5:time-to-leave:w06",
+            "es-xkcd-diario-5:time-to-leave:w07"
+          ]
         }
       ]
     },

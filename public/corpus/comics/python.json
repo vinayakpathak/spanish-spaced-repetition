@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "reviewed-v1",
+  "revision": "reviewed-v4-20260907",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -173,16 +173,14 @@
               }
             ],
             "cardIds": [
-              "word-python",
-              "concept-python"
+              "word-python"
             ]
           }
         ],
         "applications": [],
         "cardIds": [
           "word-es",
-          "word-python",
-          "concept-python"
+          "word-python"
         ]
       },
       {
@@ -849,7 +847,7 @@
               "dynamic-typing-join-us-word-12"
             ],
             "exampleEs": "VUELVE A SER",
-            "explanationEn": "Here volver + a + the unchanged action verb says that the action happens again."
+            "explanationEn": "Vuelve is followed by a and the unchanged action verb ser, showing that the action happens again."
           },
           {
             "id": "dynamic-typing-join-us:grammar-estar-gerundio:19",
@@ -1327,8 +1325,7 @@
               }
             ],
             "cardIds": [
-              "word-python",
-              "concept-python"
+              "word-python"
             ]
           }
         ],
@@ -1419,8 +1416,7 @@
           "word-esto",
           "word-es",
           "word-por--cause",
-          "word-python",
-          "concept-python"
+          "word-python"
         ]
       }
     ],
@@ -1432,7 +1428,6 @@
       "question-words",
       "word-es",
       "word-python",
-      "concept-python",
       "word-lo--object-pronoun",
       "word-aprendí",
       "grammar-past-contrast",
@@ -1501,7 +1496,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -1547,20 +1542,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1645,36 +1640,20 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "concept-python",
-      "kind": "concept",
-      "promptEs": "Python",
-      "answerEn": "the Python programming language",
-      "noteEn": "The joke exaggerates the freedom and delight people can feel when using readable, approachable code.",
       "tags": [
-        "technology",
-        "programming"
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1694,6 +1673,7 @@
         "technology",
         "programming culture"
       ],
+      "questionEn": "Why do programming tutorials often begin with “Hello, World”?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1706,12 +1686,12 @@
       "id": "concept-dynamic-typing",
       "kind": "concept",
       "promptEs": "tipado dinámico",
-      "answerEn": "dynamic typing",
-      "noteEn": "Python checks and associates value types at runtime.",
+      "questionEn": "What does dynamic typing mean in programming?",
+      "answerEn": "The running program keeps track of the kind of value being used, such as a number or text, without requiring a fixed type declaration for every variable.",
+      "noteEn": "A variable is a name used to refer to a value. In Python, that name can first refer to a number and later to text; the values still have types, and an operation can fail if their types do not fit. Dynamic typing does not mean that types or type errors disappear.",
       "tags": [
-        "technology",
-        "programming",
-        "type systems"
+        "concept",
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1732,6 +1712,7 @@
         "programming",
         "syntax"
       ],
+      "questionEn": "Why does indentation matter in Python code?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1751,6 +1732,7 @@
         "programming",
         "reference"
       ],
+      "questionEn": "What does importing antigravity do in Python?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2001,8 +1983,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2037,11 +2023,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2096,7 +2085,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2189,11 +2182,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -2232,8 +2225,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2319,8 +2311,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2431,8 +2427,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."

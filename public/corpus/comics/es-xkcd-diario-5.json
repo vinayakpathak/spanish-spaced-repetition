@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-ff62e3d6aa6135cc",
+  "revision": "runtime-01896db33fe84619",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1103,7 +1103,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-infinitive",
+              "word-de--after-antes",
               "grammar-antes-de-infinitive"
             ]
           },
@@ -1234,7 +1234,7 @@
           "word-garaje",
           "word-antes--before-event",
           "grammar-antes-de-infinitive",
-          "word-de--fixed-antes-de-infinitive",
+          "word-de--after-antes",
           "word-llamar--knock",
           "phrase-llamar-a-la-puerta",
           "word-a--fixed-llamar-a-la-puerta",
@@ -1454,8 +1454,7 @@
               }
             ],
             "cardIds": [
-              "word-hay",
-              "phrase-haber-tiempo-para-infinitive"
+              "word-hay"
             ]
           },
           {
@@ -1471,8 +1470,7 @@
               }
             ],
             "cardIds": [
-              "word-tiempo",
-              "phrase-haber-tiempo-para-infinitive"
+              "word-tiempo"
             ]
           },
           {
@@ -1489,7 +1487,7 @@
             ],
             "cardIds": [
               "word-para--available-action",
-              "phrase-haber-tiempo-para-infinitive"
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
@@ -1506,7 +1504,7 @@
             ],
             "cardIds": [
               "word-irte--leave",
-              "phrase-haber-tiempo-para-infinitive",
+              "grammar-para-infinitive-purpose",
               "grammar-pronoun-attached-to-infinitive"
             ]
           },
@@ -1523,7 +1521,8 @@
               }
             ],
             "cardIds": [
-              "word-y"
+              "word-y",
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
@@ -1540,7 +1539,7 @@
             ],
             "cardIds": [
               "word-buscar",
-              "phrase-haber-tiempo-para-infinitive"
+              "grammar-para-infinitive-purpose"
             ]
           },
           {
@@ -1615,19 +1614,6 @@
         "excludedUnits": [],
         "applications": [
           {
-            "id": "es-xkcd-diario-5:time-to-leave:app-time-available",
-            "cardId": "phrase-haber-tiempo-para-infinitive",
-            "participantWordIds": [
-              "es-xkcd-diario-5:time-to-leave:w02",
-              "es-xkcd-diario-5:time-to-leave:w03",
-              "es-xkcd-diario-5:time-to-leave:w04",
-              "es-xkcd-diario-5:time-to-leave:w05",
-              "es-xkcd-diario-5:time-to-leave:w07"
-            ],
-            "exampleEs": "HAY TIEMPO PARA IRTE Y BUSCAR",
-            "explanationEn": "Hay tiempo para introduces available time, and irte and buscar are the two coordinated actions kept in their dictionary forms."
-          },
-          {
             "id": "es-xkcd-diario-5:time-to-leave:app-attached-te",
             "cardId": "grammar-pronoun-attached-to-infinitive",
             "participantWordIds": [
@@ -1655,14 +1641,26 @@
             ],
             "exampleEs": "CHICA NO LOCA",
             "explanationEn": "Loca ends in -a to match the feminine singular noun chica; no does not change."
+          },
+          {
+            "id": "es-xkcd-diario-5:time-to-leave:app-para-available-actions",
+            "cardId": "grammar-para-infinitive-purpose",
+            "participantWordIds": [
+              "es-xkcd-diario-5:time-to-leave:w04",
+              "es-xkcd-diario-5:time-to-leave:w05",
+              "es-xkcd-diario-5:time-to-leave:w06",
+              "es-xkcd-diario-5:time-to-leave:w07"
+            ],
+            "exampleEs": "PARA IRTE Y BUSCAR",
+            "explanationEn": "Para introduces what the available time is for. Irte and buscar keep their dictionary forms and share that one para; y joins the two actions."
           }
         ],
         "cardIds": [
           "word-todavía--still",
           "word-hay",
-          "phrase-haber-tiempo-para-infinitive",
           "word-tiempo",
           "word-para--available-action",
+          "grammar-para-infinitive-purpose",
           "word-irte--leave",
           "grammar-pronoun-attached-to-infinitive",
           "word-y",
@@ -1795,7 +1793,7 @@
       "word-garaje",
       "word-antes--before-event",
       "grammar-antes-de-infinitive",
-      "word-de--fixed-antes-de-infinitive",
+      "word-de--after-antes",
       "word-llamar--knock",
       "phrase-llamar-a-la-puerta",
       "word-a--fixed-llamar-a-la-puerta",
@@ -1811,9 +1809,9 @@
       "word-difícil",
       "word-todavía--still",
       "word-hay",
-      "phrase-haber-tiempo-para-infinitive",
       "word-tiempo",
       "word-para--available-action",
+      "grammar-para-infinitive-purpose",
       "word-irte--leave",
       "grammar-pronoun-attached-to-infinitive",
       "word-y",
@@ -1997,7 +1995,7 @@
       "promptEs": "tener que + verbo en forma de diccionario",
       "questionEn": "How do you say that someone has to do something?",
       "answerEn": "Use a form of tener, then que, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Only tener changes for the person and time: tengo que, tienes que, tiene que, and so on. The final action keeps its -ar, -er, or -ir ending.",
+      "noteEn": "The dictionary form is the verb's basic, unchanged form ending in -ar, -er, or -ir: hablar means 'to speak,' comer means 'to eat,' and salir means 'to leave.' Only tener changes for the person and time. Tengo que means 'I have to,' tienes que means 'you have to' for one familiar person, and tiene que means 'he or she has to' or formal 'you have to.' Que and the final action verb stay unchanged: tengo que salir, tienes que salir, tiene que salir.",
       "example": {
         "es": "Tengo que salir temprano.",
         "en": "I have to leave early."
@@ -2227,8 +2225,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -2271,8 +2269,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2430,8 +2427,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2865,26 +2866,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-infinitive",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links antes to the following action",
-      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Lávate las manos antes de comer.",
-        "en": "Wash your hands before eating."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "time",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -3110,7 +3109,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -3190,7 +3189,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3200,31 +3203,6 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "seed-curriculum",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "phrase-haber-tiempo-para-infinitive",
-      "kind": "phrase",
-      "promptEs": "hay tiempo para + verbo en forma de diccionario",
-      "questionEn": "How do you say that there is time available to do something?",
-      "answerEn": "Use hay tiempo para, then put the action verb in its unchanged dictionary form.",
-      "noteEn": "Hay says that something exists and does not change for one thing or several. Tiempo names the available time, and para introduces its use. The following action stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir. Other times can use había tiempo or habrá tiempo.",
-      "example": {
-        "es": "Hay tiempo para descansar.",
-        "en": "There is time to rest."
-      },
-      "tags": [
-        "phrase",
-        "time",
-        "infinitive",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -3270,6 +3248,32 @@
       }
     },
     {
+      "id": "grammar-para-infinitive-purpose",
+      "kind": "grammar",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
+      "example": {
+        "es": "Estudio para aprender.",
+        "en": "I study in order to learn."
+      },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
       "id": "word-irte--leave",
       "kind": "word",
       "promptEs": "irte",
@@ -3299,7 +3303,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."

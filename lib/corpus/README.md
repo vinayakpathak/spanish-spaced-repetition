@@ -37,11 +37,33 @@ Each comic's `cardIds` is its complete de-duplicated schedulable SRS index.
 the card library can initialize without fetching every comic. Repeated card IDs
 must have byte-equivalent definitions.
 
-The current catalog has 6,465 cards. The three former ordinary `bien` IDs are
+The current catalog has 6,232 cards. The three former ordinary `bien` IDs are
 consolidated into seed-owned `word-bien--well`, used in four comics; the other
 six `bien` senses remain separate. Native complete schema-v5 histories migrate
 those reviewed IDs before curriculum reconciliation, including active-session
 card/open summaries. This is separate from the analytics namespace below.
+
+The September 7 rare-card correction ledger additionally defines reviewed
+aliases, removals, and per-comic mixed-sense routes. Aliases from the same comic
+session coalesce without losing their timestamp audit trail; ambiguous old
+evidence is archived, never copied to multiple meanings. Removed and archived
+cards do not affect scheduling. See `lib/card-identity-migrations.generated.js`
+and `data/review/curriculum-fixes-2026-09-07.json`.
+
+The later Google+/Facebook trivia-card removal is recorded separately in
+`data/review/google-plus-card-removal-2026-09-07.json`. The authored runtime
+revision changes, and ordinary curriculum reconciliation archives that card's
+history without changing the identity migration or seed copy revision.
+
+The later `grammar-como-ser-description` lesson adds one exact language target,
+linked to the two participating words in Google+'s `CÓMO ES`. Reconciliation
+creates one pending exposure for this new card when resuming an active comic;
+it does not copy earlier word-card openings or repeat completed comics.
+
+Programmatic seed fixes live in `data/authoring/seed-corrections.json` as exact
+card, word-link, and application replacements. Their shared browser/compiler
+revision is `reviewed-v4-20260907`; bump `SEED_CURRICULUM_REVISION` whenever seed
+content changes, since lazy bundle requests use `force-cache`.
 
 `importanceTargetIds` is a separate analytics namespace. Every schedulable
 card maps reversibly to `card:${encodeURIComponent(card.id)}`. One comic has at

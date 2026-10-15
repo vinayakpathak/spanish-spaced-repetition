@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e65d67486280d2e7",
+  "revision": "runtime-6f8428f9eb09c91b",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1853,17 +1853,15 @@
       "id": "word-para--intended-recipient",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "for (an intended recipient or user)",
-      "noteEn": "Para can introduce the person, animal, or thing that something is meant for. This differs from para before an action verb, where it expresses a purpose such as “in order to.”",
+      "answerEn": "for; introduces an intended recipient, user, or audience",
+      "noteEn": "Para can identify who something is meant for, including a person, animal, or device. This differs from para before an action naming a purpose, and from describing the conditions something is suitable for.",
       "example": {
         "es": "Este regalo es para Ana.",
         "en": "This gift is for Ana."
       },
       "tags": [
         "word",
-        "preposition",
-        "recipient",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1945,8 +1943,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2006,8 +2008,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2086,7 +2092,7 @@
       "promptEs": "acceso a + recurso",
       "questionEn": "How do you connect acceso to the place, service, or resource that can be reached or used?",
       "answerEn": "Use acceso followed by a, then name the place, service, or resource.",
-      "noteEn": "The plus sign means “followed by,” and recurso means the thing available for use. Keep a after acceso: acceso a internet, acceso a la cuenta, or acceso al edificio. Al is the combined form of a + el.",
+      "noteEn": "Keep a after acceso: acceso a internet, acceso a la cuenta, or acceso al edificio. Al is the combined form of a and el.",
       "example": {
         "es": "Los estudiantes tienen acceso al laboratorio.",
         "en": "The students have access to the laboratory."
@@ -2294,7 +2300,7 @@
       "promptEs": "aunque + presente de subjuntivo para una posibilidad incierta",
       "questionEn": "How do you say “even if” when the condition is possible but not being stated as a fact?",
       "answerEn": "Use aunque, then put the uncertain action in its special subjunctive form.",
-      "noteEn": "The plus sign means “followed by.” The subjunctive is a special verb form used when the speaker does not present the condition as an established fact. For example, ordinary llueve becomes llueva, and paso can become pase. Use an ordinary form after aunque when you mean “although” and treat the event as a fact.",
+      "noteEn": "The subjunctive is a special verb form used when the speaker does not present the condition as an established fact. For example, ordinary llueve becomes llueva, and paso can become pase. Use an ordinary form after aunque when you mean “although” and treat the event as a fact.",
       "example": {
         "es": "Aunque llueva, saldremos.",
         "en": "Even if it rains, we will go out."
@@ -2344,7 +2350,7 @@
       "promptEs": "pasarse + período + estado",
       "questionEn": "How do you say that someone spends a length of time in a certain state?",
       "answerEn": "Use the matching form of pasarse, state the duration, then add the word describing the person's condition.",
-      "noteEn": "The plus signs mean “followed by,” período means the length of time, and estado means the condition. Pasarse uses me, te, se, nos, or os to match the person; only the verb changes for time and person. A describing adjective also matches that person when its form changes.",
+      "noteEn": "Pasarse uses me, te, se, nos, or os to match the person; only the verb changes for time and person. A describing adjective also matches that person when its form changes.",
       "example": {
         "es": "Ana se pasó dos días enferma.",
         "en": "Ana spent two days sick."
@@ -2622,7 +2628,7 @@
       "promptEs": "infinitivo + terminación de futuro",
       "questionEn": "How do you say what someone will do in Spanish?",
       "answerEn": "Keep the action verb in its dictionary form and add a future ending such as -é, -ás, -á, -emos, -éis, or -án.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: sentir plus -á gives sentirá, and ver plus -á gives verá. A few common verbs change their stem, but use the same endings.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. The ending identifies the person: adding -á to sentir gives sentirá, and adding -á to ver gives verá. A few common verbs change their stem, but use the same endings.",
       "example": {
         "es": "Marta llamará mañana.",
         "en": "Marta will call tomorrow."
@@ -2748,19 +2754,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2799,7 +2807,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -2824,7 +2832,7 @@
       "promptEs": "enterarse de + información",
       "questionEn": "How do you say that someone finds out about or learns something?",
       "answerEn": "Use a matching form of enterarse, then de, then state the information or subject learned.",
-      "noteEn": "The plus sign means “followed by.” Enterarse is used with a short person marker: me entero, te enteras, se entera, nos enteramos, os enteráis, or se enteran. Keep de before the fact, news, event, or topic, even where English simply says find out.",
+      "noteEn": "Enterarse is used with a short person marker: me entero, te enteras, se entera, nos enteramos, os enteráis, or se enteran. Keep de before the fact, news, event, or topic, even where English simply says find out.",
       "example": {
         "es": "Nos enteramos de la noticia ayer.",
         "en": "We found out about the news yesterday."
@@ -3015,7 +3023,7 @@
       "promptEs": "algo + me/te/le/nos/os/les suena",
       "questionEn": "How do you say that something sounds familiar to someone?",
       "answerEn": "Name the thing, use me, te, le, nos, os, or les for the person, then use the matching form of sonar.",
-      "noteEn": "The plus signs mean “used together,” algo stands for the familiar thing, and the slash marks a choice among the short person words. The thing controls the verb: ese nombre me suena, but esos nombres me suenan. Spanish can also put the thing after the verb.",
+      "noteEn": "The thing controls the verb: ese nombre me suena, but esos nombres me suenan. Spanish can also put the thing after the verb.",
       "example": {
         "es": "Esa canción me suena.",
         "en": "That song sounds familiar to me."
@@ -3128,20 +3136,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3187,6 +3195,7 @@
         "technology",
         "comic joke"
       ],
+      "questionEn": "Which fictional device does the scratched Kindle reveal?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {

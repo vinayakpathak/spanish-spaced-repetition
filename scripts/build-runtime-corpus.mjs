@@ -27,6 +27,8 @@ import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import reusePolicy from "../data/authoring/card-reuse-policy.json" with { type: "json" };
+import { SEED_CURRICULUM_REVISION } from "../lib/seed-corrections.js";
 import { rankComicsByCardGraph } from "../lib/comic-importance.ts";
 import {
   IMPORTANCE_TARGET_CARD_SCOPE,
@@ -827,7 +829,7 @@ function seedBundle(seedComic, seedCardCatalog) {
       cards,
     },
     "reviewed-seed",
-    "reviewed-v1",
+    SEED_CURRICULUM_REVISION,
   );
 }
 
@@ -1440,8 +1442,8 @@ async function validateOutput(outputDir, expectedCount) {
       authoredComicCount += 1;
     } else if (entry.provenance?.sourceKind === "reviewed-seed") {
       reviewedSeedComicCount += 1;
-      if (entry.revision !== "reviewed-v1") {
-        fail(`${entry.id} reviewed seed revision must remain reviewed-v1`);
+      if (entry.revision !== SEED_CURRICULUM_REVISION) {
+        fail(`${entry.id} reviewed seed revision must match ${SEED_CURRICULUM_REVISION}`);
       }
     } else {
       fail(`${entry.id} has unknown reviewed source provenance`);
@@ -1532,6 +1534,7 @@ async function build(options) {
     seedCards: reviewed.cards,
     sourceComics: source.comics,
     geometryByComicId,
+    reusePolicy,
   });
   const authoredIds = new Set(
     authoredCompiled.bundles.map(({ id }) => id),

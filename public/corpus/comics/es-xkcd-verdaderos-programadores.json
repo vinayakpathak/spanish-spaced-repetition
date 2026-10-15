@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-cc3967d011f1b475",
+  "revision": "runtime-85e6e265187d8305",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1012,7 +1012,7 @@
               }
             ],
             "cardIds": [
-              "word-que--dejar-complement",
+              "word-que--clause-link",
               "grammar-dejar-que-subjunctive"
             ]
           },
@@ -1098,7 +1098,7 @@
               }
             ],
             "cardIds": [
-              "word-una--one-time"
+              "word-una--one-quantity"
             ]
           },
           {
@@ -1142,13 +1142,13 @@
           "word-y",
           "word-dejan--allow",
           "grammar-dejar-que-subjunctive",
-          "word-que--dejar-complement",
+          "word-que--clause-link",
           "word-bata--flap-subjunctive",
           "word-sus--its",
           "word-delicadas",
           "word-alas",
           "concept-butterfly-effect",
-          "word-una--one-time",
+          "word-una--one-quantity",
           "word-vez"
         ]
       },
@@ -2113,7 +2113,7 @@
               }
             ],
             "cardIds": [
-              "word-bonito--nice-reaction"
+              "word-bonito--lovely"
             ]
           },
           {
@@ -2291,10 +2291,19 @@
             ],
             "exampleEs": "PARA HACER",
             "explanationEn": "Para introduces the purpose, and hacer remains in its unchanged -er dictionary form."
+          },
+          {
+            "id": "es-xkcd-verdaderos-programadores:emacs-response:review-word-w01",
+            "cardId": "word-bonito--lovely",
+            "participantWordIds": [
+              "es-xkcd-verdaderos-programadores:emacs-response:w01"
+            ],
+            "exampleEs": "BONITO",
+            "explanationEn": "Bonito stands alone as a short approving reaction; it does not need a named masculine noun here."
           }
         ],
         "cardIds": [
-          "word-bonito--nice-reaction",
+          "word-bonito--lovely",
           "word-por--por-supuesto",
           "phrase-por-supuesto",
           "word-supuesto--por-supuesto",
@@ -2348,7 +2357,7 @@
               }
             ],
             "cardIds": [
-              "word-el--before-command-name"
+              "word-el--before-named-item"
             ]
           },
           {
@@ -2399,7 +2408,7 @@
         "applications": [],
         "cardIds": [
           "word-sí",
-          "word-el--before-command-name",
+          "word-el--before-named-item",
           "word-viejo--good-old"
         ]
       },
@@ -2477,12 +2486,12 @@
       "word-la--article",
       "word-dejan--allow",
       "grammar-dejar-que-subjunctive",
-      "word-que--dejar-complement",
+      "word-que--clause-link",
       "word-bata--flap-subjunctive",
       "word-sus--its",
       "word-delicadas",
       "word-alas",
-      "word-una--one-time",
+      "word-una--one-quantity",
       "word-vez",
       "word-perturbación",
       "word-se--propagarse",
@@ -2524,7 +2533,7 @@
       "word-cambien--flip-subjunctive",
       "word-bit",
       "word-deseado",
-      "word-bonito--nice-reaction",
+      "word-bonito--lovely",
       "word-por--por-supuesto",
       "phrase-por-supuesto",
       "word-supuesto--por-supuesto",
@@ -2536,7 +2545,7 @@
       "word-hacer--do",
       "word-eso",
       "word-sí",
-      "word-el--before-command-name",
+      "word-el--before-named-item",
       "word-viejo--good-old",
       "word-maldito--damned"
     ],
@@ -2601,6 +2610,7 @@
         "computing culture",
         "xkcd joke"
       ],
+      "questionEn": "Why do the programmers compete to name increasingly bare-bones editing tools?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2694,8 +2704,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2891,6 +2900,7 @@
         "weather",
         "butterfly effect"
       ],
+      "questionEn": "What does the butterfly effect mean?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2977,26 +2987,24 @@
       }
     },
     {
-      "id": "word-que--dejar-complement",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "no separate English word; links dejar to the allowed action",
-      "noteEn": "After a form of dejar meaning “let” or “allow,” que introduces the allowed action. The person doing that action may be stated after que or understood from the situation and the verb form.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
-        "es": "Dejamos que Ana elija.",
-        "en": "We let Ana choose."
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
       },
       "tags": [
         "word",
-        "clause link",
-        "permission",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-huelga-de-guionistas",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3082,25 +3090,26 @@
       }
     },
     {
-      "id": "word-una--one-time",
+      "id": "word-una--one-quantity",
       "kind": "word",
       "promptEs": "una",
-      "answerEn": "one (before the feminine noun vez)",
-      "noteEn": "Here una gives the number of occasions rather than introducing an unspecified thing.",
+      "answerEn": "one (feminine)",
+      "noteEn": "Una counts one feminine thing or occasion. Use un before a masculine noun and una before a feminine noun: un libro, una página. In una vez, una still gives the number one; vez supplies “time” or “occasion.”",
       "example": {
-        "es": "Lo intenté una vez.",
-        "en": "I tried it once."
+        "es": "Necesito una moneda más.",
+        "en": "I need one more coin."
       },
       "tags": [
         "word",
         "number",
+        "feminine singular",
         "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "ownerComicId": "es-xkcd-juegos-flash",
         "contextualSenseReviewed": true
       }
     },
@@ -3633,6 +3642,7 @@
         "computer hardware",
         "xkcd joke"
       ],
+      "questionEn": "How can radiation accidentally change data in a computer?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3718,7 +3728,7 @@
       "promptEs": "para que + acción deseada",
       "questionEn": "How do you express a purpose when someone or something else carries out the desired result?",
       "answerEn": "Use para que, then put the result verb in the special form used for a purpose that is not yet a fact.",
-      "noteEn": "That special form is called the subjunctive. It appears because the second action is intended or desired, not presented as an established fact. For example, ordinary ve becomes vea, and ordinary viene becomes venga. Use para plus an unchanged action verb instead when the same person performs both actions.",
+      "noteEn": "That special form is called the subjunctive. It appears because the second action is intended or desired, not presented as an established fact. For example, ordinary ve becomes vea, and ordinary viene becomes venga. Use para followed by an unchanged action verb instead when the same person performs both actions.",
       "example": {
         "es": "Dejo una nota para que Ana la vea.",
         "en": "I leave a note so that Ana sees it."
@@ -3917,25 +3927,27 @@
       }
     },
     {
-      "id": "word-bonito--nice-reaction",
+      "id": "word-bonito--lovely",
       "kind": "word",
       "promptEs": "bonito",
-      "answerEn": "nice; neat (an approving reaction)",
-      "noteEn": "Used by itself as a reaction, bonito can approve something as pleasing or impressive rather than describe a specific masculine noun.",
+      "answerEn": "nice; lovely; neat",
+      "noteEn": "Bonito gives a positive evaluation of something pleasing or impressive. It can describe a noun or stand alone as an approving reaction. When it describes a noun, its ending matches: bonito, bonita, bonitos, bonitas.",
       "example": {
-        "es": "—Mira mi dibujo. —Bonito.",
-        "en": "—Look at my drawing. —Nice."
+        "es": "Es un bonito gesto.",
+        "en": "It's a lovely gesture."
       },
       "tags": [
         "word",
-        "reaction",
-        "contextual sense"
+        "evaluation",
+        "adjective",
+        "agreement",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "ownerComicId": "es-xkcd-papyrus",
         "contextualSenseReviewed": true
       }
     },
@@ -4074,19 +4086,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4150,26 +4164,24 @@
       }
     },
     {
-      "id": "word-el--before-command-name",
+      "id": "word-el--before-named-item",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "no separate English word here; article before the name of a command",
-      "noteEn": "A masculine noun such as comando can remain understood before its specific name, while el still appears. Natural English often gives the command name directly without “the.”",
+      "answerEn": "the; often omitted in English before a named item",
+      "noteEn": "Spanish can use el before the name or number of a masculine item, product, command, system, or service. An ordinary noun such as modelo or número may be understood rather than written. English often uses the name alone. El here is not accented él, 'he.'",
       "example": {
-        "es": "Usa el comando Guardar.",
-        "en": "Use the Save command."
+        "es": "Compró el Toyota rojo.",
+        "en": "She bought the red Toyota."
       },
       "tags": [
         "word",
-        "article",
-        "computing",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-verdaderos-programadores",
+        "ownerComicId": "es-xkcd-colecciones",
         "contextualSenseReviewed": true
       }
     },

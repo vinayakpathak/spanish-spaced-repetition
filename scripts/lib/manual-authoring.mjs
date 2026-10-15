@@ -1,5 +1,8 @@
 import { createHash } from "node:crypto";
 
+import { validateCardReusePolicy } from "./card-reuse-policy.mjs";
+import { hiddenPatternInstructionFields } from "./learner-copy.mjs";
+
 export const AUTHORING_SCHEMA_VERSION = 1;
 export const EDITORIAL_STATUS = "ai-authored";
 export const QUALITY_STATUS = "internal-qa";
@@ -251,10 +254,13 @@ function validateCardDefinition(card, label, errors) {
   if (!CARD_KINDS.has(card.kind)) {
     errors.push(`${label}.kind must be word, grammar, phrase, or concept`);
   } else if (nonEmptyString(card.id)) {
-    const expectedPrefix = card.kind === "grammar" ? "grammar-" : `${card.kind}-`;
+    // Grammar and expression cards share the same teaching requirements. A
+    // presentation reclassification must not force a new scheduled identity.
+    const expectedPrefixes = LANGUAGE_CARD_KINDS.has(card.kind)
+      ? ["grammar-", "phrase-"] : [`${card.kind}-`];
     const acceptedGrammarAlias = card.kind === "grammar" && card.id === "question-words";
-    if (!card.id.startsWith(expectedPrefix) && !acceptedGrammarAlias) {
-      errors.push(`${label}.id must start with ${expectedPrefix}`);
+    if (!expectedPrefixes.some((prefix) => card.id.startsWith(prefix)) && !acceptedGrammarAlias) {
+      errors.push(`${label}.id must start with ${expectedPrefixes.join(" or ")}`);
     }
   }
   validateSemanticText(card.promptEs, `${label}.promptEs`, errors);
@@ -270,15 +276,21 @@ function validateCardDefinition(card, label, errors) {
 
   if (card.kind === "word") {
     if (card.questionEn !== undefined) {
-      errors.push(`${label}.questionEn is reserved for reusable grammar/expression cards`);
+      errors.push(`${label}.questionEn is reserved for grammar, expression, and concept cards`);
     }
     if (Boolean(card.noteEn?.trim()) !== Boolean(card.example)) {
       errors.push(`${label} expanded word cards need both noteEn and an invented bilingual example`);
     }
   }
 
-  if (LANGUAGE_CARD_KINDS.has(card.kind)) {
+  if (CARD_KINDS.has(card.kind) && card.kind !== "word") {
     validateSemanticText(card.questionEn, `${label}.questionEn`, errors);
+  }
+  for (const field of hiddenPatternInstructionFields(card)) {
+    errors.push(`${label}.${field} explains hidden curriculum notation; teach the construction directly in English`);
+  }
+
+  if (LANGUAGE_CARD_KINDS.has(card.kind)) {
     if (!nonEmptyString(card.noteEn)) {
       errors.push(`${label}.noteEn must explain the reusable target for a complete beginner`);
     }
@@ -877,6 +889,7 @@ export function validateManualAuthoringCorpus({
   artifacts,
   seedCards,
   sourceComics,
+  reusePolicy,
 }) {
   const errors = [];
   if (!Array.isArray(artifacts) || artifacts.length === 0) {
@@ -894,6 +907,7 @@ export function validateManualAuthoringCorpus({
     if (isRecord(artifact)) validateArtifactAgainstSource(artifact, sourcesById.get(artifact.id), errors);
   }
   const registry = buildCardRegistry(seedCards, artifacts, errors);
+  if (reusePolicy) errors.push(...validateCardReusePolicy([...registry.values()].map(({ card }) => card), reusePolicy));
   validateCardLinks(artifacts, registry, errors);
   return errors;
 }
@@ -1150,11 +1164,13 @@ export function compileManualAuthoringCorpus({
   seedCards,
   sourceComics,
   geometryByComicId,
+  reusePolicy,
 }) {
   const validationErrors = validateManualAuthoringCorpus({
     artifacts,
     seedCards,
     sourceComics,
+    reusePolicy,
   });
   if (validationErrors.length > 0) throw new ManualAuthoringError(validationErrors);
   const errors = [];

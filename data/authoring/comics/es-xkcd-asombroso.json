@@ -103,7 +103,7 @@
       ],
       "words": [
         { "id": "es-xkcd-asombroso:exclamation:w01", "text": "JODER", "normalized": "joder", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00007" }], "cardIds": ["word-joder--exclamation"] },
-        { "id": "es-xkcd-asombroso:exclamation:w02", "text": "ESTAMOS", "normalized": "estamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00008" }], "cardIds": ["word-estamos"] },
+        { "id": "es-xkcd-asombroso:exclamation:w02", "text": "ESTAMOS", "normalized": "estamos", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00008" }], "cardIds": ["word-estamos--location"] },
         { "id": "es-xkcd-asombroso:exclamation:w03", "text": "EN", "normalized": "en", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00009" }], "cardIds": ["word-en"] },
         { "id": "es-xkcd-asombroso:exclamation:w04", "text": "EL", "normalized": "el", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00010" }], "cardIds": ["word-el--article"] },
         { "id": "es-xkcd-asombroso:exclamation:w05", "text": "SIGLO", "normalized": "siglo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-asombroso:ocr-token-00011" }], "cardIds": ["word-siglo", "grammar-siglo-roman-numeral"] }
@@ -121,9 +121,20 @@
         {
           "id": "es-xkcd-asombroso:exclamation:app-century-number",
           "cardId": "grammar-siglo-roman-numeral",
-          "participantWordIds": ["es-xkcd-asombroso:exclamation:w05"],
+          "participantWordIds": [
+            "es-xkcd-asombroso:exclamation:w05"
+          ],
           "exampleEs": "SIGLO XXI",
           "explanationEn": "Siglo comes before the Roman numeral XXI, which is read veintiuno when naming the twenty-first century."
+        },
+        {
+          "id": "es-xkcd-asombroso:exclamation:review-word-w02",
+          "cardId": "word-estamos--location",
+          "participantWordIds": [
+            "es-xkcd-asombroso:exclamation:w02"
+          ],
+          "exampleEs": "ESTAMOS EN",
+          "explanationEn": "Estamos places the speaker's group in the stated period; English often uses “it is” when giving the date."
         }
       ]
     }

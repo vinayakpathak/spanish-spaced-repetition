@@ -207,17 +207,15 @@
       "id": "word-con--relacionado-complement",
       "kind": "word",
       "promptEs": "con",
-      "answerEn": "to; with (required after relacionado or relacionada)",
-      "noteEn": "Spanish uses relacionado con where English usually says ‘related to.’",
+      "answerEn": "to; with; connects related things",
+      "noteEn": "Relación and relacionado use con to introduce what something is connected or related to. Relacionado may change to relacionada, relacionados, or relacionadas; con stays unchanged. English commonly uses 'to' in 'related to.'",
       "example": {
-        "es": "La noticia está relacionada con el clima.",
-        "en": "The news is related to the climate."
+        "es": "El cambio no tiene relación con el precio.",
+        "en": "The change is not related to the price."
       },
       "tags": [
         "word",
-        "prepositions",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ]
     },
     {
@@ -273,11 +271,11 @@
       "id": "word-todos--all-of-them",
       "kind": "word",
       "promptEs": "todos",
-      "answerEn": "all of them (masculine or mixed plural)",
-      "noteEn": "Here todos stands alone for all the previously understood options.",
+      "answerEn": "all; everyone (the whole understood group)",
+      "noteEn": "Todos can stand for all the people or things in an understood group. Other words show whether English needs “all of us,” “all of them,” or “everyone.” Use todos for masculine or mixed groups and todas for an all-feminine group.",
       "example": {
-        "es": "He probado todos.",
-        "en": "I have tried all of them."
+        "es": "Todos queremos una respuesta.",
+        "en": "We all want an answer."
       },
       "tags": [
         "word",
@@ -321,23 +319,6 @@
       ]
     },
     {
-      "id": "word-con--fixed-junto-con",
-      "kind": "word",
-      "promptEs": "con",
-      "answerEn": "with; completes junto con, ‘together with’",
-      "noteEn": "Con remains unchanged in the expression junto con.",
-      "example": {
-        "es": "Envió la carta junto con una foto.",
-        "en": "She sent the letter together with a photo."
-      },
-      "tags": [
-        "word",
-        "fixed expression",
-        "preposition",
-        "A2"
-      ]
-    },
-    {
       "id": "word-relacionadas",
       "kind": "word",
       "promptEs": "relacionadas",
@@ -367,23 +348,6 @@
       "tags": [
         "word",
         "impersonal se",
-        "B1"
-      ]
-    },
-    {
-      "id": "word-quiere--impersonal",
-      "kind": "word",
-      "promptEs": "quiere",
-      "answerEn": "one wants; people want (after impersonal se)",
-      "noteEn": "Quiere is third-person singular because impersonal se leaves the person unspecified.",
-      "example": {
-        "es": "Cuando se quiere aprender, hay que practicar.",
-        "en": "When one wants to learn, one has to practice."
-      },
-      "tags": [
-        "word",
-        "verbs",
-        "impersonal",
         "B1"
       ]
     },
@@ -701,7 +665,7 @@
       "promptEs": "cerca de + persona, lugar o cosa",
       "questionEn": "How do you say that someone or something is near a person, place, or thing?",
       "answerEn": "Use cerca de, followed by the nearby person, place, or thing.",
-      "noteEn": "Cerca is followed by de in this pattern. When el follows, de + el contracts to del: cerca del parque.",
+      "noteEn": "Cerca is followed by de in this pattern. When el follows, de and el combine as del: cerca del parque.",
       "example": {
         "es": "Vivimos cerca de la estación.",
         "en": "We live near the station."
@@ -1463,7 +1427,7 @@
           "text": "DE",
           "normalized": "de",
           "cardIds": [
-            "word-de--noun-classifier"
+            "word-de--of"
           ],
           "explicitBounds": [
             {
@@ -1721,6 +1685,15 @@
           ],
           "exampleEs": "LO QUE QUIERES HACER",
           "explanationEn": "Lo que introduces the unnamed activity, and quieres hacer fills in what that activity is."
+        },
+        {
+          "id": "es-xkcd-chuleta-para-el-soporte-informatico:find-control-decision:review-word-w04",
+          "cardId": "word-de--of",
+          "participantWordIds": [
+            "es-xkcd-chuleta-para-el-soporte-informatico:find-control-decision:w04"
+          ],
+          "exampleEs": "OPCIÓN DE MENÚ",
+          "explanationEn": "Here de relates an option to the menu it belongs to."
         }
       ]
     },
@@ -2018,6 +1991,15 @@
           ],
           "exampleEs": "PROBADO CON TODOS",
           "explanationEn": "Probado supplies the trying action, con introduces the chosen options, and todos stands for all of those options."
+        },
+        {
+          "id": "es-xkcd-chuleta-para-el-soporte-informatico:tried-all-route:review-word-w04",
+          "cardId": "word-todos--all-of-them",
+          "participantWordIds": [
+            "es-xkcd-chuleta-para-el-soporte-informatico:tried-all-route:w04"
+          ],
+          "exampleEs": "CON TODOS",
+          "explanationEn": "Todos refers to all the previously understood options, not only to people."
         }
       ]
     },
@@ -2309,7 +2291,7 @@
           "text": "CON",
           "normalized": "con",
           "cardIds": [
-            "word-con--fixed-junto-con",
+            "word-con",
             "phrase-junto-con"
           ],
           "explicitBounds": [
@@ -2461,7 +2443,7 @@
           "text": "QUIERE",
           "normalized": "quiere",
           "cardIds": [
-            "word-quiere--impersonal",
+            "word-quiere--wants",
             "grammar-se-impersonal",
             "grammar-lo-que",
             "phrase-relacionado-con"
@@ -2636,6 +2618,15 @@
           ],
           "exampleEs": "SE QUIERE HACER",
           "explanationEn": "Se leaves the person unspecified, quiere stays third-person singular, and hacer names the desired action."
+        },
+        {
+          "id": "es-xkcd-chuleta-para-el-soporte-informatico:google-node:review-word-w16",
+          "cardId": "word-quiere--wants",
+          "participantWordIds": [
+            "es-xkcd-chuleta-para-el-soporte-informatico:google-node:w16"
+          ],
+          "exampleEs": "SE QUIERE",
+          "explanationEn": "Se leaves the person unspecified: quiere describes what someone or people in general want."
         }
       ]
     },

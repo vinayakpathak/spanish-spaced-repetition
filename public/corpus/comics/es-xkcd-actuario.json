@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-2bf748b8bf841e32",
+  "revision": "runtime-ccfcc4b06baf0eb6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1092,7 +1092,7 @@
               }
             ],
             "cardIds": [
-              "word-su--his",
+              "word-su",
               "grammar-indirect-question-accent",
               "grammar-reported-future-conditional"
             ]
@@ -1262,7 +1262,7 @@
           "word-todos",
           "word-los",
           "word-héroes",
-          "word-su--his",
+          "word-su",
           "word-infancia"
         ]
       },
@@ -1759,7 +1759,7 @@
       "word-todos",
       "word-los",
       "word-héroes",
-      "word-su--his",
+      "word-su",
       "word-infancia",
       "word-recuérdame--remind-me",
       "grammar-affirmative-tu-command",
@@ -1808,8 +1808,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1833,8 +1833,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1954,16 +1953,15 @@
       "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
-      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "answerEn": "the; combines a and el before a person or animal directly affected by the action",
+      "noteEn": "Al combines a and el. This a marks a person, animal, or person-like target directly affected by the verb; it does not itself mean 'to' a recipient. El means 'the,' or helps identify 'the one' when no noun is stated. Keep al separate from accented él, 'he.'",
       "example": {
         "es": "Veo al profesor.",
         "en": "I see the teacher."
       },
       "tags": [
         "word",
-        "contraction",
-        "personal a"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1979,7 +1977,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -2033,6 +2031,7 @@
         "internet culture",
         "comic joke"
       ],
+      "questionEn": "Why is a comment saying only “first post” an internet cliché?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2063,10 +2062,15 @@
       "id": "word-es--fixed-es-que",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "no separate English word; part of es que",
-      "noteEn": "",
+      "answerEn": "is; part of es que, an explanation opener",
+      "noteEn": "Es que is a conversational lead-in used to give a reason, correction, or excuse. English may say 'it's that' or 'the thing is.' This is different from ordinary es after a stated subject, as in el problema es que...",
+      "example": {
+        "es": "No salgo; es que estoy cansada.",
+        "en": "I am not going out; the thing is, I am tired."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2104,10 +2108,15 @@
       "id": "word-que--fixed-es-que",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "no separate English word; part of es que",
-      "noteEn": "",
+      "answerEn": "part of es que, an explanation opener",
+      "noteEn": "Que joins es in the conversational expression es que, used to introduce a reason, correction, or excuse. English often reorganizes the expression as 'the thing is.' Que stays unaccented; ordinary que after el problema es... instead introduces what the problem is.",
+      "example": {
+        "es": "Es que no tengo tiempo.",
+        "en": "The thing is, I do not have time."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2207,7 +2216,7 @@
       "promptEs": "verbo + tanto que + resultado",
       "questionEn": "How do you say that someone does an action so much that a particular result follows?",
       "answerEn": "Use the action verb, then tanto, then que before the result.",
-      "noteEn": "The plus signs in the prompt mean “followed by.” The action verb changes for the person and time, while tanto stays unchanged when it describes the degree of an action. Que introduces the consequence. This differs from tan, which normally comes before a describing word such as difícil.",
+      "noteEn": "The action verb changes for the person and time, while tanto stays unchanged when it describes the degree of an action. Que introduces the consequence. This differs from tan, which normally comes before a describing word such as difícil.",
       "example": {
         "es": "Trabajó tanto que se quedó dormido.",
         "en": "He worked so much that he fell asleep."
@@ -2389,9 +2398,9 @@
       "id": "phrase-a-mi-tambien",
       "kind": "phrase",
       "promptEs": "a mí también",
-      "questionEn": "How do you say “me too” when the same statement applies to you?",
-      "answerEn": "Use a mí también.",
-      "noteEn": "Mí is the stressed form of “me” used after a, and it carries a written accent. The complete expression can stand alone as a reply or be followed by a repeated verb. The a has no separate English word in the natural reply “me too.”",
+      "questionEn": "When do you reply a mí también to mean 'me too'?",
+      "answerEn": "Use a mí también when the same experience or feeling applies to you in a pattern such as me gusta or me pasa.",
+      "noteEn": "Mí is the emphasized form of 'me' after a and needs its accent. Keep a because you are the person to whom something is pleasing or happening: you can answer me gusta el jazz with a mí también. This is not the reply for every English 'me too.' When you are simply doing the same action, use yo también: you can answer trabajo aquí with yo también. También is for an affirmative agreement; a negative agreement uses tampoco.",
       "example": {
         "es": "—Me gusta el jazz. —A mí también.",
         "en": "—I like jazz. —Me too."
@@ -2750,6 +2759,7 @@
         "mortality",
         "xkcd joke"
       ],
+      "questionEn": "What can mortality tables predict about how long people live?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3182,26 +3192,24 @@
       }
     },
     {
-      "id": "word-su--his",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "his",
-      "noteEn": "Su agrees with the possessed thing, not with the owner. The same Spanish form can mean his, her, its, their, or formal your; the surrounding context identifies the owner.",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
       "example": {
-        "es": "Carlos abre su portátil.",
-        "en": "Carlos opens his laptop."
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
       },
       "tags": [
         "word",
-        "possessive",
-        "third person",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-conduccion-agresiva",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3229,7 +3237,7 @@
       "kind": "word",
       "promptEs": "recuérdame",
       "answerEn": "remind me",
-      "noteEn": "Recuerda is the positive command of recordar for one familiar listener. Me attaches to the end, and the written accent keeps the original stress: recuerda + me becomes recuérdame.",
+      "noteEn": "Recuerda is the positive command of recordar for one familiar listener. Adding me to the end gives recuérdame; the written accent keeps the original stress.",
       "example": {
         "es": "Recuérdame la cita.",
         "en": "Remind me about the appointment."
@@ -3276,20 +3284,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {

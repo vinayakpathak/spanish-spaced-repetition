@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-25d0a8631c224de1",
+  "revision": "runtime-8c689b53ffcfdbcd",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -448,7 +448,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -569,7 +569,7 @@
           "word-comprar",
           "word-este",
           "word-arnés",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-combate",
           "word-para--intended-recipient",
           "word-mi"
@@ -662,7 +662,7 @@
       "word-yo",
       "word-este",
       "word-arnés",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-combate",
       "word-para--intended-recipient",
       "word-mi",
@@ -832,19 +832,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -990,26 +992,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -1036,17 +1036,15 @@
       "id": "word-para--intended-recipient",
       "kind": "word",
       "promptEs": "para",
-      "answerEn": "for (an intended recipient or user)",
-      "noteEn": "Para can introduce the person, animal, or thing that something is meant for. This differs from para before an action verb, where it expresses a purpose such as “in order to.”",
+      "answerEn": "for; introduces an intended recipient, user, or audience",
+      "noteEn": "Para can identify who something is meant for, including a person, animal, or device. This differs from para before an action naming a purpose, and from describing the conditions something is suitable for.",
       "example": {
         "es": "Este regalo es para Ana.",
         "en": "This gift is for Ana."
       },
       "tags": [
         "word",
-        "preposition",
-        "recipient",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

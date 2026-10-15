@@ -176,6 +176,47 @@ function validInputs() {
   };
 }
 
+test("authoring rejects instructions about hidden patterns and requires English concept fronts", () => {
+  const notation = validInputs();
+  notation.artifacts[0].cardDefinitions.find((card) => card.kind === "grammar").noteEn =
+    "The plus sign in the prompt means followed by.";
+  assert.ok(validateManualAuthoringCorpus(notation).some((error) => /hidden curriculum notation/.test(error)));
+
+  const concept = validInputs();
+  const card = concept.artifacts[0].cardDefinitions.find((card) => card.kind === "grammar");
+  const oldId = card.id;
+  card.id = "concept-rain";
+  card.kind = "concept";
+  delete card.questionEn;
+  for (const artifact of concept.artifacts) for (const region of artifact.regions) {
+    for (const word of region.words) word.cardIds = word.cardIds.map((id) => id === oldId ? card.id : id);
+    region.applications = region.applications.filter((app) => app.cardId !== oldId);
+  }
+  assert.ok(validateManualAuthoringCorpus(concept).some((error) => /questionEn/.test(error)));
+});
+
+test("grammar and expression reclassification retains IDs without weakening card requirements", () => {
+  for (const [kind, prefix] of [["phrase", "grammar-"], ["grammar", "phrase-"]]) {
+    const inputs = validInputs();
+    const card = inputs.artifacts[0].cardDefinitions.find((card) => card.kind === "grammar");
+    const oldId = card.id;
+    card.id = `${prefix}si-real-condition`;
+    card.kind = kind;
+    for (const artifact of inputs.artifacts) for (const region of artifact.regions) {
+      for (const word of region.words) word.cardIds = word.cardIds.map((id) => id === oldId ? card.id : id);
+      for (const app of region.applications) if (app.cardId === oldId) app.cardId = card.id;
+    }
+    assert.deepEqual(validateManualAuthoringCorpus(inputs), []);
+    card.noteEn = "";
+    assert.ok(validateManualAuthoringCorpus(inputs).some((error) => /noteEn must explain/.test(error)));
+  }
+  for (const kind of ["word", "concept"]) {
+    const inputs = validInputs();
+    inputs.artifacts[0].cardDefinitions.find((card) => card.kind === "grammar").kind = kind;
+    assert.ok(validateManualAuthoringCorpus(inputs).some((error) => error.includes(`id must start with ${kind}-`)));
+  }
+});
+
 test("letter-by-letter display text remains one clickable lexical unit", () => {
   assert.deepEqual(
     tokenizeAuthoredSpanish("L-O-S V-I-D-E-N-T-E-S NP-COMPLETOS"),

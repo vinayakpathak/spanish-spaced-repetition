@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-031a82b93e73426b",
+  "revision": "runtime-676d5cebeda04c31",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -911,7 +911,7 @@
               }
             ],
             "cardIds": [
-              "word-en--degenerar-result",
+              "word-en--change-result",
               "phrase-degenerar-en"
             ]
           },
@@ -963,7 +963,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--named-after",
               "phrase-degenerar-en"
             ]
           }
@@ -1021,6 +1021,15 @@
             ],
             "exampleEs": "DEGENERAN EN HACER CUADROS DE PUNNETT",
             "explanationEn": "Degeneran names the deterioration, en introduces the result, and hacer cuadros de Punnett supplies the resulting activity."
+          },
+          {
+            "id": "es-xkcd-cita:caption:review-word-w13",
+            "cardId": "word-de--named-after",
+            "participantWordIds": [
+              "es-xkcd-cita:caption:w13"
+            ],
+            "exampleEs": "CUADROS DE PUNNETT",
+            "explanationEn": "Here de connects the diagrams to the name they bear, rather than a material or general subject."
           }
         ],
         "cardIds": [
@@ -1036,10 +1045,10 @@
           "concept-punnett-square-genetic-inheritance",
           "word-degeneran--turn-into",
           "phrase-degenerar-en",
-          "word-en--degenerar-result",
+          "word-en--change-result",
           "word-hacer--make",
           "word-cuadros--punnett-squares",
-          "word-de--type-classifier"
+          "word-de--named-after"
         ]
       }
     ],
@@ -1091,10 +1100,10 @@
       "word-biólogos",
       "word-degeneran--turn-into",
       "phrase-degenerar-en",
-      "word-en--degenerar-result",
+      "word-en--change-result",
       "word-hacer--make",
       "word-cuadros--punnett-squares",
-      "word-de--type-classifier"
+      "word-de--named-after"
     ],
     "reviewStatus": "ai-authored-internal-qa",
     "provenance": {
@@ -1310,7 +1319,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1371,7 +1384,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1678,8 +1695,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1718,17 +1734,15 @@
       "id": "word-te--pronominal-marker",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "no separate English word here; marks a “you” verb used with te",
-      "noteEn": "Some Spanish verbs use te when the person affected is the informal listener. The meaning belongs to the whole verb pattern, so English may not translate te separately.",
+      "answerEn": "no separate English word; accompanies a verb used with tú",
+      "noteEn": "Some verbs conventionally use a matching small word: me with 'I,' te with one familiar 'you,' and se with 'he,' 'she,' or formal 'you.' Te is part of that verb's use even when nobody literally acts on themselves. Its contribution often has no separate English translation.",
       "example": {
-        "es": "Te quedas aquí.",
-        "en": "You stay here."
+        "es": "Te quejas del ruido.",
+        "en": "You complain about the noise."
       },
       "tags": [
         "word",
-        "pronoun",
-        "pronominal verb",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1769,7 +1783,7 @@
       "promptEs": "me/te/se/nos/os + lo/la/los/las + verbo conjugado",
       "questionEn": "How do you order a person pronoun and a thing pronoun before a verb that changes for person and time?",
       "answerEn": "Put the person pronoun first, the thing pronoun second, and both before the changed verb.",
-      "noteEn": "The slashes mean to choose one item, and the plus signs show the order. For example, nos la mandará places nos for the recipients before la for the feminine thing. Before lo, la, los, or las, le and les change to se.",
+      "noteEn": "For example, nos la mandará places nos for the recipients before la for the feminine thing. Before lo, la, los, or las, le and les change to se.",
       "example": {
         "es": "Nos la enviarán mañana.",
         "en": "They will send it to us tomorrow."
@@ -1793,11 +1807,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -2130,26 +2144,24 @@
       }
     },
     {
-      "id": "word-en--degenerar-result",
+      "id": "word-en--change-result",
       "kind": "word",
       "promptEs": "en",
-      "answerEn": "into; introduces the result after degenerar",
-      "noteEn": "Degenerar en presents what a situation deteriorates or turns into.",
+      "answerEn": "into; introduces what something becomes",
+      "noteEn": "With a change verb such as convertirse or degenerar, en introduces the resulting thing or situation. The verb supplies the kind of change; en itself does not mean that the result is good or bad.",
       "example": {
-        "es": "La charla degeneró en una pelea.",
-        "en": "The conversation degenerated into a fight."
+        "es": "El agua se convierte en hielo.",
+        "en": "Water turns into ice."
       },
       "tags": [
         "word",
-        "preposition",
-        "change",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-cita",
+        "ownerComicId": "es-xkcd-subjetividad",
         "contextualSenseReviewed": true
       }
     },
@@ -2203,26 +2215,25 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--named-after",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "of; named after",
+      "noteEn": "De can join an invention, theorem, or named object to the person whose name it bears. English may instead use an adjective based on that name.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Estudiamos las leyes de Newton.",
+        "en": "We study Newton's laws."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "preposition",
+        "names"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
         "contextualSenseReviewed": true
       }
     }

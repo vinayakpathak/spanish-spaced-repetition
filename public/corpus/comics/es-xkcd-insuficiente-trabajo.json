@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-e9ff6894effef6a9",
+  "revision": "runtime-3d0498b111fb83da",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -417,7 +417,7 @@
               }
             ],
             "cardIds": [
-              "word-de--noun-classifier"
+              "word-de--property-source"
             ]
           },
           {
@@ -485,6 +485,15 @@
             ],
             "exampleEs": "HE RECUPERADO",
             "explanationEn": "He marks the speaker, and recuperado is the completed-action form that follows it."
+          },
+          {
+            "id": "es-xkcd-insuficiente-trabajo:dvorak-typing:review-word-w08",
+            "cardId": "word-de--property-source",
+            "participantWordIds": [
+              "es-xkcd-insuficiente-trabajo:dvorak-typing:w08"
+            ],
+            "exampleEs": "VELOCIDAD DE ESCRITURA",
+            "explanationEn": "Here de connects a speed to the activity whose speed is measured."
           }
         ],
         "cardIds": [
@@ -496,7 +505,7 @@
           "word-mi",
           "word-antigua--former",
           "word-velocidad",
-          "word-de--noun-classifier",
+          "word-de--property-source",
           "word-escritura--typing",
           "word-en--keyboard-layout"
         ]
@@ -658,7 +667,7 @@
               }
             ],
             "cardIds": [
-              "word-si--fixed-por-si-acaso",
+              "word-si--fixed-por-si",
               "phrase-por-si-acaso"
             ]
           },
@@ -697,7 +706,7 @@
         "cardIds": [
           "word-por--fixed-por-si-acaso",
           "phrase-por-si-acaso",
-          "word-si--fixed-por-si-acaso",
+          "word-si--fixed-por-si",
           "word-acaso--fixed-por-si-acaso"
         ]
       },
@@ -1158,7 +1167,7 @@
       "word-mi",
       "word-antigua--former",
       "word-velocidad",
-      "word-de--noun-classifier",
+      "word-de--property-source",
       "word-escritura--typing",
       "word-en--keyboard-layout",
       "word-nuestros",
@@ -1167,7 +1176,7 @@
       "word-soportan--technical-compatibility",
       "word-por--fixed-por-si-acaso",
       "phrase-por-si-acaso",
-      "word-si--fixed-por-si-acaso",
+      "word-si--fixed-por-si",
       "word-acaso--fixed-por-si-acaso",
       "word-nuestras",
       "word-páginas--web-pages",
@@ -1243,8 +1252,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1330,8 +1339,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1402,7 +1410,7 @@
       "promptEs": "sustantivo + que + infinitivo",
       "questionEn": "How can a noun name something available, pending, or necessary to do?",
       "answerEn": "Put que after the noun, then use the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus signs mean ‘followed by,’ sustantivo means a noun, and infinitivo means the unchanged -ar, -er, or -ir form. Common examples include trabajo que hacer, algo que leer, and nada que decir.",
+      "noteEn": "A noun is a naming word, such as trabajo ('work'). The following action stays in its dictionary form, the unchanged form ending in -ar, -er, or -ir. Common examples include trabajo que hacer, algo que leer, and nada que decir.",
       "example": {
         "es": "Hay un informe que terminar.",
         "en": "There is a report to finish."
@@ -1632,26 +1640,27 @@
       }
     },
     {
-      "id": "word-de--noun-classifier",
+      "id": "word-de--property-source",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "of; links a quality or effect to what has or causes it",
+      "noteEn": "De can connect a quality, feature, or effect to the thing it comes from. English usually keeps “of” or uses a possessive form.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Me sorprende la fuerza de este viento.",
+        "en": "This wind's force surprises me."
       },
       "tags": [
         "word",
         "preposition",
-        "noun modifier",
+        "quality",
+        "source",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-en-la-cultura-popular",
+        "ownerComicId": "es-xkcd-juegos-flash",
         "contextualSenseReviewed": true
       }
     },
@@ -1832,7 +1841,7 @@
       "promptEs": "por si acaso",
       "questionEn": "How do you say that you take a precaution “just in case”?",
       "answerEn": "Use por si acaso after the precaution.",
-      "noteEn": "Por si acaso is a fixed expression for preparing for something uncertain. A shorter por si + clause can name the possibility directly, as in por si llueve, ‘in case it rains.’",
+      "noteEn": "Por si acaso is a fixed expression for preparing for something uncertain. The shorter por si, followed by a statement, can name the possibility directly, as in por si llueve, ‘in case it rains.’",
       "example": {
         "es": "Traigo dinero por si acaso.",
         "en": "I'm bringing money just in case."
@@ -1852,26 +1861,24 @@
       }
     },
     {
-      "id": "word-si--fixed-por-si-acaso",
+      "id": "word-si--fixed-por-si",
       "kind": "word",
       "promptEs": "si",
-      "answerEn": "no separate English word; middle of por si acaso, ‘just in case’",
-      "noteEn": "Si remains unaccented inside por si acaso. The whole expression introduces a precaution for an uncertain possibility.",
+      "answerEn": "no separate English word; part of por si, in case",
+      "noteEn": "Por si introduces a possibility someone is preparing for. Acaso can be added for 'just in case,' including on its own at the end. Si stays unaccented; it is not sí, 'yes.'",
       "example": {
-        "es": "Trae una chaqueta por si acaso.",
-        "en": "Bring a jacket just in case."
+        "es": "Lleva una chaqueta por si hace frío.",
+        "en": "Take a jacket in case it is cold."
       },
       "tags": [
         "word",
-        "fixed expression",
-        "precaution",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-enfrentamiento-en-correos",
+        "ownerComicId": "es-xkcd-voyeurismo-del-desastre",
         "contextualSenseReviewed": true
       }
     },
@@ -1950,6 +1957,7 @@
         "HTML",
         "programming joke"
       ],
+      "questionEn": "How does the comic connect HTML with a haiku?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1988,7 +1996,7 @@
       "promptEs": "cumplir con + requisito o norma",
       "questionEn": "How do you say that something meets a requirement or standard?",
       "answerEn": "Use the matching form of cumplir, then con, then name the requirement or standard.",
-      "noteEn": "The plus sign means ‘followed by.’ Cumplir changes to match its subject, while con stays unchanged: cumple con for one thing and cumplen con for several things.",
+      "noteEn": "Cumplir changes to match the person or thing meeting the requirement, while con stays unchanged: cumple con for one thing and cumplen con for several things.",
       "example": {
         "es": "El diseño cumple con la norma.",
         "en": "The design meets the standard."

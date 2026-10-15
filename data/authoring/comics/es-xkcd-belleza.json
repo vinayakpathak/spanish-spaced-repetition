@@ -405,10 +405,10 @@
       "kind": "word",
       "promptEs": "quiere",
       "answerEn": "wants; wants to",
-      "noteEn": "Quiere is the present form of querer for one person or thing. Before another verb in its dictionary form, it expresses what that subject wants to do.",
+      "noteEn": "Quiere is a present form of querer, “to want.” It can describe he, she, or one person addressed formally as usted. With se, it can describe what people in general want. Before an action, use the action verb's unchanged dictionary form, such as descansar, “to rest.”",
       "example": {
-        "es": "Marta quiere descansar.",
-        "en": "Marta wants to rest."
+        "es": "¿Quiere descansar, señora?",
+        "en": "Would you like to rest, ma'am?"
       },
       "tags": [
         "word",
@@ -435,24 +435,6 @@
       ]
     },
     {
-      "id": "phrase-el-problema-es-que",
-      "kind": "phrase",
-      "promptEs": "el problema es que",
-      "questionEn": "How do you introduce the situation that is causing a problem?",
-      "answerEn": "the problem is that…",
-      "noteEn": "El problema names the difficulty, es identifies it, and que introduces the situation that follows. A de phrase may be inserted after problema to say whose problem it is.",
-      "example": {
-        "es": "El problema es que no tenemos tiempo.",
-        "en": "The problem is that we do not have time."
-      },
-      "tags": [
-        "phrase",
-        "discussion",
-        "connector",
-        "A2"
-      ]
-    },
-    {
       "id": "phrase-moho-mucilaginoso",
       "kind": "phrase",
       "promptEs": "moho mucilaginoso",
@@ -474,18 +456,19 @@
       "id": "grammar-hacer-object-adjective",
       "kind": "grammar",
       "promptEs": "hacer + persona o cosa + descripción",
-      "questionEn": "How do you say that something makes a person or thing become a certain way?",
-      "answerEn": "Use a matching form of hacer, then the affected person or thing, then the word that describes the resulting quality.",
-      "noteEn": "Hacer changes for the person and time. The affected person or thing can be a noun or a short object word such as me, te, lo, la, los, or las. The final describing word agrees with what it describes: resistente becomes resistentes for a plural object.",
+      "questionEn": "How do you use hacer to say that something makes a person or thing a certain way?",
+      "answerEn": "Use hacer with the affected person or thing and a word describing the resulting quality.",
+      "noteEn": "A short word for the affected person or thing goes before the changed verb: me hace feliz ('it makes me happy'), los hace fuertes ('it makes them strong'). Hacer changes for what causes the result and for the time: hace, hacen, hizo. The describing word matches what is affected: contento becomes contenta for a woman and contentos for a masculine or mixed group. This pattern describes a quality, not a separate action someone is made to do.",
       "example": {
-        "es": "El ejercicio los hace fuertes.",
-        "en": "Exercise makes them strong."
+        "es": "La noticia nos hizo felices.",
+        "en": "The news made us happy."
       },
       "tags": [
         "grammar",
         "hacer",
-        "result",
-        "B1"
+        "causation",
+        "description",
+        "A2"
       ]
     },
     {
@@ -505,19 +488,6 @@
         "perceived quality",
         "B1"
       ]
-    },
-    {
-      "id": "concept-slime-mold-beauty-dog-vomit-hug",
-      "kind": "concept",
-      "promptEs": "moho mucilaginoso · vómito de perro · abrazo",
-      "answerEn": "The characters admire a slime mold until its dog-vomit nickname and autonomous movement make the encounter grotesquely affectionate.",
-      "noteEn": "The organism is discussed with genuine scientific enthusiasm and claims about pigment and zinc resistance. The joke repeatedly collides that analytical wonder with its appearance, its crude nickname, and the final suggestion that the moving blob wants a hug.",
-      "tags": [
-        "concept",
-        "biology",
-        "slime mold",
-        "joke"
-      ]
     }
   ],
   "regions": [
@@ -530,8 +500,7 @@
           "text": "EL",
           "normalized": "el",
           "cardIds": [
-            "word-el--article",
-            "phrase-el-problema-es-que"
+            "word-el--article"
           ],
           "explicitBounds": [
             {
@@ -548,8 +517,7 @@
           "text": "PROBLEMA",
           "normalized": "problema",
           "cardIds": [
-            "word-problema",
-            "phrase-el-problema-es-que"
+            "word-problema"
           ],
           "explicitBounds": [
             {
@@ -623,8 +591,7 @@
           "text": "ES",
           "normalized": "es",
           "cardIds": [
-            "word-es--fixed-es-que",
-            "phrase-el-problema-es-que"
+            "word-es"
           ],
           "explicitBounds": [
             {
@@ -641,8 +608,7 @@
           "text": "QUE",
           "normalized": "que",
           "cardIds": [
-            "word-que--fixed-es-que",
-            "phrase-el-problema-es-que"
+            "word-que--clause-link"
           ],
           "explicitBounds": [
             {
@@ -715,8 +681,7 @@
           "normalized": "maravilla",
           "cardIds": [
             "word-maravilla",
-            "grammar-quitarle-algo-a-alguien",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-quitarle-algo-a-alguien"
           ],
           "explicitBounds": [
             {
@@ -770,8 +735,7 @@
           "normalized": "belleza",
           "cardIds": [
             "word-belleza",
-            "grammar-quitarle-algo-a-alguien",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-quitarle-algo-a-alguien"
           ],
           "explicitBounds": [
             {
@@ -914,18 +878,6 @@
       ],
       "applications": [
         {
-          "id": "es-xkcd-belleza:scientist-complaint:app-problem",
-          "cardId": "phrase-el-problema-es-que",
-          "participantWordIds": [
-            "es-xkcd-belleza:scientist-complaint:w01",
-            "es-xkcd-belleza:scientist-complaint:w02",
-            "es-xkcd-belleza:scientist-complaint:w06",
-            "es-xkcd-belleza:scientist-complaint:w07"
-          ],
-          "exampleEs": "EL PROBLEMA DE LOS CIENTÍFICOS ES QUE",
-          "explanationEn": "El problema opens the frame, the de phrase identifies whose problem it is, and es que introduces the situation."
-        },
-        {
           "id": "es-xkcd-belleza:scientist-complaint:app-vosotros-quitais",
           "cardId": "grammar-vosotros-informal-plural",
           "participantWordIds": [
@@ -981,6 +933,24 @@
           ],
           "exampleEs": "ANALIZARLAS",
           "explanationEn": "Las attaches to analizar and stands for the feminine plural things being analyzed."
+        },
+        {
+          "id": "es-xkcd-belleza:scientist-complaint:review-word-w06",
+          "cardId": "word-es",
+          "participantWordIds": [
+            "es-xkcd-belleza:scientist-complaint:w06"
+          ],
+          "exampleEs": "ES",
+          "explanationEn": "Here es links the stated subject el problema to what the problem is. It is ordinary 'is,' not the conversational opener es que."
+        },
+        {
+          "id": "es-xkcd-belleza:scientist-complaint:review-word-w07",
+          "cardId": "word-que--clause-link",
+          "participantWordIds": [
+            "es-xkcd-belleza:scientist-complaint:w07"
+          ],
+          "exampleEs": "QUE",
+          "explanationEn": "Here que introduces the content identifying the problem after ordinary es."
         }
       ],
       "explicitBounds": [
@@ -1052,8 +1022,7 @@
           "text": "PLASMODIOS",
           "normalized": "plasmodios",
           "cardIds": [
-            "word-plasmodios",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "word-plasmodios"
           ],
           "explicitBounds": [
             {
@@ -1090,8 +1059,7 @@
             "word-moho",
             "phrase-moho-mucilaginoso",
             "grammar-descriptive-adjective-after-noun",
-            "grammar-adjective-gender-agreement",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-adjective-gender-agreement"
           ],
           "explicitBounds": [
             {
@@ -1581,8 +1549,7 @@
           "text": "VÓMITO",
           "normalized": "vómito",
           "cardIds": [
-            "word-vómito",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "word-vómito"
           ],
           "explicitBounds": [
             {
@@ -1633,8 +1600,7 @@
           "text": "PERRO",
           "normalized": "perro",
           "cardIds": [
-            "word-perro",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "word-perro"
           ],
           "explicitBounds": [
             {
@@ -1788,8 +1754,7 @@
           "normalized": "vómito",
           "cardIds": [
             "word-vómito",
-            "grammar-ser-identity-estar-location",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-ser-identity-estar-location"
           ],
           "explicitBounds": [
             {
@@ -1825,8 +1790,7 @@
           "normalized": "perro",
           "cardIds": [
             "word-perro",
-            "grammar-ser-identity-estar-location",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-ser-identity-estar-location"
           ],
           "explicitBounds": [
             {
@@ -1966,8 +1930,7 @@
           "text": "EL",
           "normalized": "el",
           "cardIds": [
-            "word-el--article",
-            "phrase-el-problema-es-que"
+            "word-el--article"
           ],
           "explicitBounds": [
             {
@@ -1984,8 +1947,7 @@
           "text": "PROBLEMA",
           "normalized": "problema",
           "cardIds": [
-            "word-problema",
-            "phrase-el-problema-es-que"
+            "word-problema"
           ],
           "explicitBounds": [
             {
@@ -2065,8 +2027,7 @@
           "text": "ES",
           "normalized": "es",
           "cardIds": [
-            "word-es--fixed-es-que",
-            "phrase-el-problema-es-que"
+            "word-es"
           ],
           "explicitBounds": [
             {
@@ -2083,8 +2044,7 @@
           "text": "QUE",
           "normalized": "que",
           "cardIds": [
-            "word-que--fixed-es-que",
-            "phrase-el-problema-es-que"
+            "word-que--clause-link"
           ],
           "explicitBounds": [
             {
@@ -2157,8 +2117,7 @@
           "normalized": "maravilla",
           "cardIds": [
             "word-maravilla",
-            "grammar-verle-cualidad-a-entidad",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-verle-cualidad-a-entidad"
           ],
           "explicitBounds": [
             {
@@ -2212,8 +2171,7 @@
           "normalized": "belleza",
           "cardIds": [
             "word-belleza",
-            "grammar-verle-cualidad-a-entidad",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-verle-cualidad-a-entidad"
           ],
           "explicitBounds": [
             {
@@ -2291,18 +2249,6 @@
           "explanationEn": "Lo attaches to the affirmative tú command olvida, and the written accent preserves the original stress."
         },
         {
-          "id": "es-xkcd-belleza:restated-problem:app-problem",
-          "cardId": "phrase-el-problema-es-que",
-          "participantWordIds": [
-            "es-xkcd-belleza:restated-problem:w03",
-            "es-xkcd-belleza:restated-problem:w04",
-            "es-xkcd-belleza:restated-problem:w08",
-            "es-xkcd-belleza:restated-problem:w09"
-          ],
-          "exampleEs": "EL PROBLEMA DE LOS CIENTÍFICOS ES QUE",
-          "explanationEn": "El problema opens the frame, the de phrase identifies whose problem it is, and es que introduces the situation."
-        },
-        {
           "id": "es-xkcd-belleza:restated-problem:app-vosotros-veis",
           "cardId": "grammar-vosotros-informal-plural",
           "participantWordIds": [
@@ -2327,6 +2273,24 @@
           ],
           "exampleEs": "LE VEIS LA MARAVILLA Y LA BELLEZA A TODO",
           "explanationEn": "Le marks the perceived entity before veis; maravilla and belleza name the qualities, and a todo makes that entity explicit."
+        },
+        {
+          "id": "es-xkcd-belleza:restated-problem:review-word-w08",
+          "cardId": "word-es",
+          "participantWordIds": [
+            "es-xkcd-belleza:restated-problem:w08"
+          ],
+          "exampleEs": "ES",
+          "explanationEn": "Here es again links the stated subject el problema to what the problem is."
+        },
+        {
+          "id": "es-xkcd-belleza:restated-problem:review-word-w09",
+          "cardId": "word-que--clause-link",
+          "participantWordIds": [
+            "es-xkcd-belleza:restated-problem:w09"
+          ],
+          "exampleEs": "QUE",
+          "explanationEn": "Here que introduces the content identifying the problem, not a separate conversational explanation opener."
         }
       ],
       "explicitBounds": [
@@ -2399,8 +2363,7 @@
           "text": "MUEVE",
           "normalized": "mueve",
           "cardIds": [
-            "word-mueve",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "word-mueve"
           ],
           "explicitBounds": [
             {
@@ -2463,8 +2426,7 @@
           "cardIds": [
             "word-abrazarte",
             "grammar-querer-infinitive",
-            "grammar-pronoun-attached-to-infinitive",
-            "concept-slime-mold-beauty-dog-vomit-hug"
+            "grammar-pronoun-attached-to-infinitive"
           ],
           "explicitBounds": [
             {

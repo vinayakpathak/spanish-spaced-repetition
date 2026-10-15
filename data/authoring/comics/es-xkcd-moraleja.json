@@ -130,10 +130,14 @@
     {
       "id": "concept-linux-learning-escalation",
       "kind": "concept",
-      "promptEs": "de instalar Linux a compilar el kernel",
-      "answerEn": "The comic compresses a Linux learner's rapid progress from a basic installation request to reading Unix manuals, switching distributions, and building a custom kernel.",
-      "noteEn": "Xorg is a display system; Ubuntu, Debian, and Gentoo are Linux distributions; and the kernel is the operating system's core. Moving through those topics in a few weeks signals increasingly advanced and obsessive involvement. The final warning copies the tone of a parental public-service announcement for the joke.",
-      "tags": ["concept", "Linux", "Unix", "operating systems", "xkcd joke"]
+      "promptEs": "distribución de Linux y kernel",
+      "questionEn": "How does a Linux distribution differ from its kernel?",
+      "answerEn": "The kernel is the operating system's core; a Linux distribution packages that core with other software into a usable system.",
+      "noteEn": "Ubuntu, Debian, and Gentoo are different Linux distributions. Switching distributions changes the surrounding package and its choices. Compiling the kernel means turning its source code into an executable core, rather than merely installing an application.",
+      "tags": [
+        "concept",
+        "background knowledge"
+      ]
     }
   ],
   "regions": [
@@ -239,7 +243,10 @@
         { "id": "es-xkcd-moraleja:week-2-error:w02", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00018" }], "cardIds": ["word-que--clause-link"] },
         { "id": "es-xkcd-moraleja:week-2-error:w03", "text": "MI", "normalized": "mi", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00019" }], "cardIds": ["word-mi"] },
         { "id": "es-xkcd-moraleja:week-2-error:w04", "text": "ESTÁ", "normalized": "está", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00030" }], "cardIds": ["word-está", "grammar-estar-adjective-state"] },
-        { "id": "es-xkcd-moraleja:week-2-error:w05", "text": "ROTO", "normalized": "roto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00031" }], "cardIds": ["word-roto", "grammar-estar-adjective-state", "grammar-roto-participle"] },
+        { "id": "es-xkcd-moraleja:week-2-error:w05", "text": "ROTO", "normalized": "roto", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00031" }], "cardIds": [
+          "word-roto",
+          "grammar-estar-adjective-state"
+        ] },
         { "id": "es-xkcd-moraleja:week-2-error:w06", "text": "QUÉ", "normalized": "qué", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00032" }], "cardIds": ["word-qué--interrogative", "question-words"] },
         { "id": "es-xkcd-moraleja:week-2-error:w07", "text": "ES", "normalized": "es", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00035" }], "cardIds": ["word-es"] },
         { "id": "es-xkcd-moraleja:week-2-error:w08", "text": "UN", "normalized": "un", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00036" }], "cardIds": ["word-un"] },
@@ -252,12 +259,53 @@
         { "id": "es-xkcd-moraleja:week-2-error:excluded-xorg-2", "text": "XORG", "occurrence": 2, "reason": "non-spanish-text", "rationale": "This repeated Xorg label is the unchanged proper name of software, not Spanish vocabulary.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00037" }] }
       ],
       "applications": [
-        { "id": "es-xkcd-moraleja:week-2-error:app-state", "cardId": "grammar-estar-adjective-state", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w04", "es-xkcd-moraleja:week-2-error:w05"], "exampleEs": "ESTÁ ROTO", "explanationEn": "Está presents the current condition, and roto is the masculine singular describing form used for the software system." },
-        { "id": "es-xkcd-moraleja:week-2-error:app-irregular-roto", "cardId": "grammar-roto-participle", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w05"], "exampleEs": "ROTO", "explanationEn": "Roto is romper's irregular completed-action form; the regular-looking form rompido is not used." },
-        { "id": "es-xkcd-moraleja:week-2-error:app-question-what", "cardId": "question-words", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w06"], "exampleEs": "¿QUÉ", "explanationEn": "Qué carries a written accent because it directly asks what something is." },
-        { "id": "es-xkcd-moraleja:week-2-error:app-question-where", "cardId": "question-words", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w09"], "exampleEs": "¿DÓNDE", "explanationEn": "Dónde carries a written accent because it directly asks for a place or source." },
-        { "id": "es-xkcd-moraleja:week-2-error:app-can-search", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w10", "es-xkcd-moraleja:week-2-error:w11"], "exampleEs": "PUEDO BUSCARLO", "explanationEn": "Puedo changes for the speaker, while buscar stays in its unchanged dictionary form inside buscarlo." },
-        { "id": "es-xkcd-moraleja:week-2-error:app-attached-lo", "cardId": "grammar-pronoun-attached-to-infinitive", "participantWordIds": ["es-xkcd-moraleja:week-2-error:w11"], "exampleEs": "BUSCARLO", "explanationEn": "Lo attaches directly to buscar and stands for the masculine technical item being looked up." }
+        {
+          "id": "es-xkcd-moraleja:week-2-error:app-state",
+          "cardId": "grammar-estar-adjective-state",
+          "participantWordIds": [
+            "es-xkcd-moraleja:week-2-error:w04",
+            "es-xkcd-moraleja:week-2-error:w05"
+          ],
+          "exampleEs": "ESTÁ ROTO",
+          "explanationEn": "Está presents the current condition, and roto is the masculine singular describing form used for the software system."
+        },
+        {
+          "id": "es-xkcd-moraleja:week-2-error:app-question-what",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-moraleja:week-2-error:w06"
+          ],
+          "exampleEs": "¿QUÉ",
+          "explanationEn": "Qué carries a written accent because it directly asks what something is."
+        },
+        {
+          "id": "es-xkcd-moraleja:week-2-error:app-question-where",
+          "cardId": "question-words",
+          "participantWordIds": [
+            "es-xkcd-moraleja:week-2-error:w09"
+          ],
+          "exampleEs": "¿DÓNDE",
+          "explanationEn": "Dónde carries a written accent because it directly asks for a place or source."
+        },
+        {
+          "id": "es-xkcd-moraleja:week-2-error:app-can-search",
+          "cardId": "grammar-poder-infinitive",
+          "participantWordIds": [
+            "es-xkcd-moraleja:week-2-error:w10",
+            "es-xkcd-moraleja:week-2-error:w11"
+          ],
+          "exampleEs": "PUEDO BUSCARLO",
+          "explanationEn": "Puedo changes for the speaker, while buscar stays in its unchanged dictionary form inside buscarlo."
+        },
+        {
+          "id": "es-xkcd-moraleja:week-2-error:app-attached-lo",
+          "cardId": "grammar-pronoun-attached-to-infinitive",
+          "participantWordIds": [
+            "es-xkcd-moraleja:week-2-error:w11"
+          ],
+          "exampleEs": "BUSCARLO",
+          "explanationEn": "Lo attaches directly to buscar and stands for the masculine technical item being looked up."
+        }
       ]
     },
     {
@@ -273,11 +321,15 @@
       "words": [
         { "id": "es-xkcd-moraleja:week-2-reply:w01", "text": "MMM", "normalized": "mmm", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00073" }], "cardIds": ["word-mmm--hesitation"] },
         { "id": "es-xkcd-moraleja:week-2-reply:w02", "text": "DEJA", "normalized": "deja", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00074" }], "cardIds": ["word-deja--let-command", "grammar-affirmative-tu-command", "grammar-dejar-que-subjunctive"] },
-        { "id": "es-xkcd-moraleja:week-2-reply:w03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00075" }], "cardIds": ["word-que--dejar-complement", "grammar-dejar-que-subjunctive"] },
+        { "id": "es-xkcd-moraleja:week-2-reply:w03", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00075" }], "cardIds": ["word-que--clause-link", "grammar-dejar-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:week-2-reply:w04", "text": "TE", "normalized": "te", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00078" }], "cardIds": ["word-te--indirect", "grammar-dejar-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:week-2-reply:w05", "text": "ENSEÑE", "normalized": "enseñe", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00079" }, { "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00082" }], "cardIds": ["word-enseñe--show-subjunctive", "grammar-dejar-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:week-2-reply:w06", "text": "LAS", "normalized": "las", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00083" }], "cardIds": ["word-las", "grammar-dejar-que-subjunctive"] },
-        { "id": "es-xkcd-moraleja:week-2-reply:w07", "text": "PÁGINAS", "normalized": "páginas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00084" }, { "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00088" }], "cardIds": ["word-páginas--manual-pages", "grammar-dejar-que-subjunctive", "concept-rtfm-man-pages", "concept-linux-learning-escalation"] }
+        { "id": "es-xkcd-moraleja:week-2-reply:w07", "text": "PÁGINAS", "normalized": "páginas", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00084" }, { "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00088" }], "cardIds": [
+          "word-páginas--manual-pages",
+          "grammar-dejar-que-subjunctive",
+          "concept-rtfm-man-pages"
+        ] }
       ],
       "excludedUnits": [
         { "id": "es-xkcd-moraleja:week-2-reply:excluded-man", "text": "MAN", "reason": "non-spanish-text", "rationale": "man is the Unix command and borrowed technical label for a manual page, not a Spanish lexical word.", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00089" }] }
@@ -437,7 +489,7 @@
         { "id": "es-xkcd-moraleja:parental-warning:w06", "text": "SOBRE", "normalized": "sobre", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00096" }], "cardIds": ["word-sobre--about"] },
         { "id": "es-xkcd-moraleja:parental-warning:w07", "text": "LINUX", "normalized": "linux", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00097" }], "cardIds": ["word-linux--operating-system", "concept-linux-learning-escalation"] },
         { "id": "es-xkcd-moraleja:parental-warning:w08", "text": "ANTES", "normalized": "antes", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00098" }], "cardIds": ["word-antes--before-event", "grammar-antes-de-que-subjunctive"] },
-        { "id": "es-xkcd-moraleja:parental-warning:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00099" }], "cardIds": ["word-de--fixed-antes-de-que", "grammar-antes-de-que-subjunctive"] },
+        { "id": "es-xkcd-moraleja:parental-warning:w09", "text": "DE", "normalized": "de", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00099" }], "cardIds": ["word-de--after-antes", "grammar-antes-de-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:parental-warning:w10", "text": "QUE", "normalized": "que", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00100" }], "cardIds": ["word-que--fixed-antes-de-que", "grammar-antes-de-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:parental-warning:w11", "text": "LO", "normalized": "lo", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00101" }], "cardIds": ["word-lo--object-pronoun", "grammar-antes-de-que-subjunctive"] },
         { "id": "es-xkcd-moraleja:parental-warning:w12", "text": "HAGA", "normalized": "haga", "geometryRefs": [{ "source": "ocr-token", "id": "es-xkcd-moraleja:ocr-token-00102" }], "cardIds": ["word-haga", "grammar-antes-de-que-subjunctive"] },

@@ -214,6 +214,32 @@ comic. A card ID has exactly one owner:
 Definitions use the core `LearningCard` fields only. Status and provenance are
 compiler-owned metadata, so authors cannot accidentally claim human review.
 
+For new cards, use the kind's normal ID prefix. When an existing language
+target is reclassified between grammar and expression, retain its stable ID:
+both kinds accept `grammar-` and `phrase-` prefixes and require the same full
+teaching structure. A presentation label must not split the learner's history.
+Word and concept cards still require their own prefixes.
+
+Every grammar, expression, and concept card needs a meaningful English
+`questionEn`. This question is its title everywhere learners see it, including
+the card library and previews; only word cards use the Spanish word as the
+title. Keep `promptEs` as a canonical internal target and `tags` as internal
+classification metadata. Neither is shown in a separate pattern box or badge.
+
+Answers and explanations must stand alone in English. Describe how to combine
+concrete Spanish forms in ordinary words, and retain invented bilingual
+examples. Do not add instructions for decoding the hidden template's plus
+signs, arrows, slashes, or placeholders. Notation that is itself the material
+being taught, such as a mathematical symbol in a concept lesson, may remain
+with an English explanation. The automated copy guard catches common hidden
+template references; it does not replace an individual readability review.
+
+Teach the meaning before discussing exceptions. A beginner should not need to
+guess what a label such as “other linking uses” means, or why an explanation
+says “even without question marks.” Prefer a concrete Spanish example and its
+English translation. Include a contrast only when the card has taught the
+necessary background and the contrast helps explain its learning target.
+
 ```json
 {
   "id": "grammar-hacer-si-condition",
@@ -258,10 +284,44 @@ After rebuilding the runtime, inspect reuse with
 `npm run corpus:audit-word-reuse -- --surface bien`. It lists meanings, review
 status, and the comics that use each exact ID. `--check` rejects newly introduced
 identical teaching content under different IDs; `--json` reports all shared-form
-candidates. The existing `intento` duplicate pair is explicitly recorded in
-`data/review/word-card-reuse-baseline.json` pending a separate semantic and
-history-migration review. Text matching supplements individual sense review;
+candidates. The `intento` pair was consolidated in the September 7 review;
+`data/review/word-card-reuse-baseline.json` now has no exceptions.
+Text matching supplements individual sense review;
 it cannot decide whether differently worded lessons teach the same meaning.
+
+### Reuse-review gate
+
+Both the authoring compiler and runtime builder enforce
+`data/authoring/card-reuse-policy.json`. Its baseline records existing IDs, not
+a claim that every translation is verified. Do not extend that baseline to
+bypass a new-card review. Retired IDs are rejected even if present in a baseline.
+
+Before adding another contextual sense for an existing written word, or any
+new grammar, expression, or concept card, search related targets and add a
+review entry. Explain the distinct learning decision, not merely why the new
+comic or English wording differs. List every exact same-form/target peer;
+grammar and expression comparisons cross their stored kinds.
+
+```json
+{
+  "cardId": "word-banco--financial-institution",
+  "decision": "distinct-target",
+  "comparedCardIds": ["word-banco--bench"],
+  "searchQueries": ["banco", "bank", "bench"],
+  "distinctionEn": "A financial institution is a different meaning from a seat; a comic-specific application of the bench meaning cannot teach it."
+}
+```
+
+An ordinary first occurrence of a new written word still requires a word card.
+The gate never merges spellings automatically, and it does not replace semantic
+review. Preserve accents and inflections. Prefer reusing an existing card with
+an exact `CardApplication` when only the local example differs.
+
+Exact corrections to the older programmatic seed lessons are stored in
+`data/authoring/seed-corrections.json`; a target needed by a seed comic is owned
+there and referenced, not redefined, by authored comics. Bump the shared seed
+revision in `lib/seed-corrections.js` when these lessons change, rebuild the
+runtime, and update the reviewed identity migration if scheduled IDs change.
 
 ### Occurrence applications
 
@@ -327,6 +387,8 @@ Validation rejects, among other failures:
   copy;
 - incomplete beginner-facing grammar/expression cards or comic-derived
   reusable examples;
+- missing English questions on grammar, expression, or concept cards, and
+  common instructions about hidden pattern symbols;
 - duplicate card owners, unknown references, unreachable definitions, and
   application/link asymmetry;
 - missing semantic-QA checks or any claim of human verification.

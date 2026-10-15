@@ -30,7 +30,7 @@ test("difficult word forms teach the construction while simple words stay compac
   const joiner = CARD_BY_ID.get("word-a--join-complement");
   const simpleNoun = CARD_BY_ID.get("word-cama");
 
-  assert.equal(taughtWordCards.length, 30);
+  assert.equal(taughtWordCards.length, 48);
   assert.equal(
     joiner?.answerEn,
     "links unirse to the person or group being joined",
@@ -45,7 +45,7 @@ test("difficult word forms teach the construction while simple words stay compac
   assert.equal(simpleNoun?.example, undefined);
   for (const card of CARDS.filter((candidate) => candidate.kind === "word")) {
     assert.doesNotMatch(
-      card.noteEn,
+      card.noteEn ?? "",
       /this card tracks|this exact surface form|comic context/i,
     );
   }
@@ -183,7 +183,7 @@ test("sentence-shaped and redundant legacy cards are not schedulable", () => {
   );
   assert.equal(
     CARD_BY_ID.get("grammar-importar-indirect-object")?.promptEs,
-    "me/te/le importa",
+    "importar con la persona a quien le importa",
   );
 });
 
@@ -192,9 +192,9 @@ test("all grammar and expression cards teach complete beginners", () => {
   const phraseCards = CARDS.filter((card) => card.kind === "phrase");
   const languageCards = [...grammarCards, ...phraseCards];
 
-  assert.equal(grammarCards.length, 25);
+  assert.equal(grammarCards.length, 24);
   assert.equal(phraseCards.length, 23);
-  assert.equal(languageCards.length, 48);
+  assert.equal(languageCards.length, 47);
   for (const card of languageCards) {
     assert.ok(card.questionEn?.trim(), `${card.id} has a plain-English question`);
     assert.ok(card.noteEn.trim(), `${card.id} explains how the rule works`);
@@ -237,8 +237,8 @@ test("all grammar and expression cards teach complete beginners", () => {
     en: "Marta calls again.",
   });
   assert.match(
-    CARD_BY_ID.get("grammar-hypothetical")?.noteEn ?? "",
-    /imperfect subjunctive[\s\S]*conditional/i,
+    CARD_BY_ID.get("grammar-aunque-imperfect-subjunctive-counterfactual")?.noteEn ?? "",
+    /imperfect subjunctive[\s\S]*tiene[\s\S]*tuviera[\s\S]*would-form/i,
   );
   assert.match(
     CARD_BY_ID.get("grammar-se-lo-pronouns")?.noteEn ?? "",
@@ -246,7 +246,7 @@ test("all grammar and expression cards teach complete beginners", () => {
   );
   assert.match(
     CARD_BY_ID.get("grammar-importar-indirect-object")?.noteEn ?? "",
-    /the book matters to me/i,
+    /me importa el precio, me importan los detalles/i,
   );
 });
 
@@ -258,13 +258,13 @@ test("comic applications stay separate from shared language cards", () => {
     applications.filter(
       (application) => CARD_BY_ID.get(application.cardId)?.kind === "word",
     ).length,
-    26,
+    27,
   );
   assert.equal(
     applications.filter(
       (application) => CARD_BY_ID.get(application.cardId)?.kind === "grammar",
     ).length,
-    55,
+    54,
   );
   assert.equal(
     applications.filter(
@@ -367,15 +367,13 @@ test("comic applications stay separate from shared language cards", () => {
   const personalAApplications = applications.filter(
     (application) => application.cardId === "word-a--personal-a",
   );
-  assert.equal(personalAApplications.length, 2);
-  assert.equal(
-    CARD_BY_ID.get(personalAApplications[0].cardId),
-    CARD_BY_ID.get(personalAApplications[1].cardId),
-  );
-  assert.notEqual(
-    personalAApplications[0].exampleEs,
-    personalAApplications[1].exampleEs,
-  );
+  assert.equal(personalAApplications.length, 1);
+  const bobbyA = regions.find((region) => region.id === "bobby-tables").words
+    .find((word) => word.id === "bobby-tables-word-4");
+  assert.equal(bobbyA.cardIds[0], "word-a--recipient");
+  const recipientApplication = applications.find((application) =>
+    application.cardId === "word-a--recipient" && application.participantWordIds.includes(bobbyA.id));
+  assert.equal(recipientApplication.cardId, "word-a--recipient");
 
   const repeatApplications = applications.filter(
     (application) => application.cardId === "phrase-volver-a-infinitive",
@@ -438,9 +436,9 @@ test("all curriculum cards are reachable and content validation is clean", () =>
     ),
   );
 
-  assert.equal(CARDS.length, 403);
-  assert.equal(CARDS.filter((card) => card.kind === "word").length, 342);
-  assert.equal(CARDS.filter((card) => card.kind !== "word").length, 61);
+  assert.equal(CARDS.length, 400);
+  assert.equal(CARDS.filter((card) => card.kind === "word").length, 343);
+  assert.equal(CARDS.filter((card) => card.kind !== "word").length, 57);
   assert.equal(usedCardIds.size, CARDS.length);
   assert.deepEqual(validateContent(), []);
 });

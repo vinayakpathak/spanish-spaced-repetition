@@ -71,19 +71,19 @@
       "promptEs": "llegar a + destino",
       "questionEn": "How do you say that someone or something reaches a destination?",
       "answerEn": "Use the matching form of llegar, then a, then name the destination.",
-      "noteEn": "Llegar changes for the person and time, while a remains before the endpoint. A plus el contracts to al; a plus la, los, or las stays separate.",
+      "noteEn": "Llegar changes for the person and time, while a remains before the endpoint. A and el combine as al; a stays separate before la, los, or las.",
       "example": { "es": "La carta llegó a su destino.", "en": "The letter reached its destination." },
       "tags": ["phrase", "arrival", "destination", "A2"]
     },
     {
       "id": "phrase-tan-lejos-de",
       "kind": "phrase",
-      "promptEs": "tan lejos de + lugar o referencia",
-      "questionEn": "How do you say that something is so far from a place or reference point?",
-      "answerEn": "Use tan lejos de followed by the place or reference point.",
-      "noteEn": "Tan intensifies lejos, and de introduces the reference point. Change tan to muy for the ordinary statement ‘very far from.’",
-      "example": { "es": "Nunca había estado tan lejos de casa.", "en": "I had never been so far from home." },
-      "tags": ["phrase", "distance", "degree", "A2"]
+      "promptEs": "lejos de + lugar o referencia",
+      "questionEn": "How do you use lejos de to say that something is far from a place or reference point?",
+      "answerEn": "Use lejos de followed by the place or reference point.",
+      "noteEn": "Lejos de stays unchanged: lejos de casa, lejos del centro. Del combines de and el when the reference point starts with el. A word such as muy ('very') or tan ('so') can intensify the distance, but it is optional and not part of the fixed unit.",
+      "example": { "es": "Vivimos lejos del centro.", "en": "We live far from the center." },
+      "tags": ["phrase", "distance", "lejos de", "A2"]
     },
     {
       "id": "concept-starlight-journey-relativity",
@@ -134,7 +134,9 @@
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w01", "text": "PARA", "normalized": "para", "explicitBounds": [{ "x": 20.5405, "y": 1.626, "width": 4.5946, "height": 5.5 }], "geometryRationale": "The OCR row reaches the line below; this shorter box isolates PARA.", "cardIds": ["word-para", "grammar-para-infinitive-purpose"] },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w02", "text": "MORIR", "normalized": "morir", "explicitBounds": [{ "x": 25.4054, "y": 1.626, "width": 5.9459, "height": 5.5 }], "geometryRationale": "The OCR row reaches the line below; this shorter box isolates MORIR.", "cardIds": ["word-morir", "grammar-para-infinitive-purpose", "concept-starlight-journey-relativity"] },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w03", "text": "AQUÍ", "normalized": "aquí", "explicitBounds": [{ "x": 31.6216, "y": 1.626, "width": 4.8649, "height": 5.5 }], "geometryRationale": "The OCR row reaches the line below; this shorter box isolates AQUÍ.", "cardIds": ["word-aquí"] },
-        { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w04", "text": "TAN", "normalized": "tan", "explicitBounds": [{ "x": 20.5405, "y": 7.3171, "width": 3.6486, "height": 4.7 }], "geometryRationale": "The OCR row overlaps the line below; this measured height isolates TAN.", "cardIds": ["word-tan", "phrase-tan-lejos-de"] },
+        { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w04", "text": "TAN", "normalized": "tan", "explicitBounds": [{ "x": 20.5405, "y": 7.3171, "width": 3.6486, "height": 4.7 }], "geometryRationale": "The OCR row overlaps the line below; this measured height isolates TAN.", "cardIds": [
+          "word-tan"
+        ] },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w05", "text": "LEJOS", "normalized": "lejos", "explicitBounds": [{ "x": 24.4932, "y": 7.3171, "width": 5.777, "height": 4.7 }], "geometryRationale": "The OCR row overlaps the line below; this measured height isolates LEJOS.", "cardIds": ["word-lejos", "phrase-tan-lejos-de", "concept-starlight-journey-relativity"] },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w06", "text": "DE", "normalized": "de", "explicitBounds": [{ "x": 30.5743, "y": 7.3171, "width": 2.4324, "height": 4.7 }], "geometryRationale": "The OCR row overlaps the line below; this measured height isolates DE.", "cardIds": ["word-de--from", "phrase-tan-lejos-de"] },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w07", "text": "CASA", "normalized": "casa", "explicitBounds": [{ "x": 33.3108, "y": 7.3171, "width": 5.0676, "height": 4.7 }], "geometryRationale": "The OCR row overlaps the line below; this measured height isolates CASA.", "cardIds": ["word-casa", "phrase-tan-lejos-de"] },
@@ -149,7 +151,11 @@
       "excludedUnits": [],
       "applications": [
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-die-purpose", "cardId": "grammar-para-infinitive-purpose", "participantWordIds": ["es-xkcd-la-luz-de-las-estrellas:poetic-reply:w01", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w02"], "exampleEs": "PARA MORIR", "explanationEn": "Para introduces the poetic purpose, and morir stays in its unchanged -ir form." },
-        { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-far", "cardId": "phrase-tan-lejos-de", "participantWordIds": ["es-xkcd-la-luz-de-las-estrellas:poetic-reply:w04", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w05", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w06", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w07"], "exampleEs": "TAN LEJOS DE CASA", "explanationEn": "Tan intensifies the distance word lejos, and de introduces casa as the reference point." },
+        { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-far", "cardId": "phrase-tan-lejos-de", "participantWordIds": [
+          "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w05",
+          "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w06",
+          "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w07"
+        ], "exampleEs": "LEJOS DE CASA", "explanationEn": "Lejos de gives the distance relation, with casa as the reference point. The preceding tan only intensifies the distance." },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-purpose-clause", "cardId": "grammar-para-que-subjunctive-purpose", "participantWordIds": ["es-xkcd-la-luz-de-las-estrellas:poetic-reply:w09", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w10", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w11"], "exampleEs": "PARA QUE PODAMOS", "explanationEn": "Para que introduces the intended result, and podamos is the special non-factual form used because that result is a purpose." },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-can-see", "cardId": "grammar-poder-infinitive", "participantWordIds": ["es-xkcd-la-luz-de-las-estrellas:poetic-reply:w11", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w12"], "exampleEs": "PODAMOS VER", "explanationEn": "Podamos supplies the changed form of poder, while ver stays in its unchanged -er form." },
         { "id": "es-xkcd-la-luz-de-las-estrellas:poetic-reply:app-dots-order", "cardId": "grammar-descriptive-adjective-after-noun", "participantWordIds": ["es-xkcd-la-luz-de-las-estrellas:poetic-reply:w13", "es-xkcd-la-luz-de-las-estrellas:poetic-reply:w14"], "exampleEs": "PUNTOS BONITOS", "explanationEn": "Bonitos follows puntos and describes their appearance." },

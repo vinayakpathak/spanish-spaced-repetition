@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-2ac0ad38f240e00f",
+  "revision": "runtime-0be07897c371646a",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -513,7 +513,7 @@
               }
             ],
             "cardIds": [
-              "word-ya--anymore-ni-siquiera"
+              "word-ya--no-longer"
             ]
           },
           {
@@ -694,7 +694,7 @@
           "word-buenos",
           "word-yo",
           "grammar-explicit-subject-pronoun",
-          "word-ya--anymore-ni-siquiera",
+          "word-ya--no-longer",
           "word-ni--fixed-ni-siquiera",
           "phrase-ni-siquiera",
           "word-siquiera--fixed-ni-siquiera",
@@ -734,7 +734,7 @@
       "word-bastante--degree",
       "word-buenos",
       "word-yo",
-      "word-ya--anymore-ni-siquiera",
+      "word-ya--no-longer",
       "word-ni--fixed-ni-siquiera",
       "phrase-ni-siquiera",
       "word-siquiera--fixed-ni-siquiera",
@@ -869,6 +869,7 @@
         "Turing test",
         "joke"
       ],
+      "questionEn": "What is a Turing test?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -952,16 +953,15 @@
       "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
-      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "answerEn": "the; combines a and el before a person or animal directly affected by the action",
+      "noteEn": "Al combines a and el. This a marks a person, animal, or person-like target directly affected by the verb; it does not itself mean 'to' a recipient. El means 'the,' or helps identify 'the one' when no noun is stated. Keep al separate from accented él, 'he.'",
       "example": {
         "es": "Veo al profesor.",
         "en": "I see the teacher."
       },
       "tags": [
         "word",
-        "contraction",
-        "personal a"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -977,7 +977,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -1018,8 +1018,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1088,8 +1088,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1290,26 +1294,24 @@
       }
     },
     {
-      "id": "word-ya--anymore-ni-siquiera",
+      "id": "word-ya--no-longer",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "anymore; by now (before ni siquiera)",
-      "noteEn": "Ya often means ‘already’ or ‘now.’ Before a negative expression such as ni siquiera, it marks a change from the past and is naturally translated as ‘anymore’ or ‘no longer.’",
+      "answerEn": "anymore; no longer, with a negative expression",
+      "noteEn": "Ya with a negative expression marks a change from what was true before. Ya no means 'no longer'; with ni siquiera, the sense is 'not even ... anymore.' Ya itself stays unchanged.",
       "example": {
-        "es": "Ya ni siquiera llama.",
-        "en": "He does not even call anymore."
+        "es": "Ya no trabajo allí.",
+        "en": "I no longer work there."
       },
       "tags": [
         "word",
-        "time",
-        "negative context",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-test-de-turing",
+        "ownerComicId": "es-xkcd-that-lovin-feelin",
         "contextualSenseReviewed": true
       }
     },
@@ -1410,7 +1412,7 @@
       "promptEs": "estar seguro/segura de + cosa o pregunta",
       "questionEn": "How do you say what someone is sure or certain about?",
       "answerEn": "Use a form of estar, seguro or segura, then de before what follows.",
-      "noteEn": "Seguro changes to match the person being described: seguro for masculine singular and segura for feminine singular. De is required before a noun, before que plus a statement, and before an embedded question such as de quién or de si.",
+      "noteEn": "Seguro changes to match the person being described: seguro for masculine singular and segura for feminine singular. De is required before a noun, before que followed by a statement, and before a question within a statement, such as de quién or de si.",
       "example": {
         "es": "Ana está segura de la respuesta.",
         "en": "Ana is sure of the answer."

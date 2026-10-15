@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-69a1088ddcbf63a8",
+  "revision": "runtime-fe40a4cc7accb684",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -436,7 +436,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "phrase-funcion-de-aptitud"
             ]
           },
@@ -519,7 +519,7 @@
           "word-tu",
           "word-función--mathematical",
           "phrase-funcion-de-aptitud",
-          "word-de--type-classifier",
+          "word-de--noun-classifier",
           "word-aptitud--fitness"
         ]
       }
@@ -541,7 +541,7 @@
       "word-tu",
       "word-función--mathematical",
       "phrase-funcion-de-aptitud",
-      "word-de--type-classifier",
+      "word-de--noun-classifier",
       "word-aptitud--fitness"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -695,17 +695,13 @@
     {
       "id": "concept-genetic-algorithm-skynet-cost",
       "kind": "concept",
-      "promptEs": "algoritmos genéticos · función de aptitud",
-      "questionEn": "Why does the enormous cost assigned to becoming Skynet matter to the joke?",
-      "answerEn": "A genetic algorithm searches for good candidate solutions by optimizing a fitness or cost function, so a huge cost can make an unwanted outcome extremely unattractive when the program minimizes cost.",
-      "noteEn": "Skynet is the hostile artificial intelligence in the Terminator stories. The code treats an AI takeover as just another outcome to penalize. The title-text warning completes the joke: if the program maximized this cost instead, the enormous number would encourage precisely that outcome.",
+      "promptEs": "minimizar o maximizar una función de coste",
+      "questionEn": "Why does it matter whether a program minimizes or maximizes a score?",
+      "answerEn": "Minimizing prefers smaller scores; maximizing prefers larger ones. Adding a large positive cost discourages an outcome when minimizing, but favors it when maximizing.",
+      "noteEn": "A genetic algorithm repeatedly tests and selects candidate solutions using a score. A cost function assigns numbers to their outcomes. Skynet is the hostile AI from the Terminator stories; understanding the fictional name and the direction of optimization is enough to interpret the code's warning.",
       "tags": [
         "concept",
-        "genetic algorithm",
-        "fitness function",
-        "Skynet",
-        "optimization",
-        "humor"
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -910,26 +906,24 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },

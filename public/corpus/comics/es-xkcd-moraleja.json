@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8833c67db3165a0c",
+  "revision": "runtime-288c338493814173",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -761,8 +761,7 @@
             ],
             "cardIds": [
               "word-roto",
-              "grammar-estar-adjective-state",
-              "grammar-roto-participle"
+              "grammar-estar-adjective-state"
             ]
           },
           {
@@ -909,15 +908,6 @@
             "explanationEn": "Está presents the current condition, and roto is the masculine singular describing form used for the software system."
           },
           {
-            "id": "es-xkcd-moraleja:week-2-error:app-irregular-roto",
-            "cardId": "grammar-roto-participle",
-            "participantWordIds": [
-              "es-xkcd-moraleja:week-2-error:w05"
-            ],
-            "exampleEs": "ROTO",
-            "explanationEn": "Roto is romper's irregular completed-action form; the regular-looking form rompido is not used."
-          },
-          {
             "id": "es-xkcd-moraleja:week-2-error:app-question-what",
             "cardId": "question-words",
             "participantWordIds": [
@@ -962,7 +952,6 @@
           "word-está",
           "grammar-estar-adjective-state",
           "word-roto",
-          "grammar-roto-participle",
           "word-qué--interrogative",
           "question-words",
           "word-es",
@@ -1033,7 +1022,7 @@
               }
             ],
             "cardIds": [
-              "word-que--dejar-complement",
+              "word-que--clause-link",
               "grammar-dejar-que-subjunctive"
             ]
           },
@@ -1115,8 +1104,7 @@
             "cardIds": [
               "word-páginas--manual-pages",
               "grammar-dejar-que-subjunctive",
-              "concept-rtfm-man-pages",
-              "concept-linux-learning-escalation"
+              "concept-rtfm-man-pages"
             ]
           }
         ],
@@ -1166,13 +1154,12 @@
           "word-deja--let-command",
           "grammar-affirmative-tu-command",
           "grammar-dejar-que-subjunctive",
-          "word-que--dejar-complement",
+          "word-que--clause-link",
           "word-te--indirect",
           "word-enseñe--show-subjunctive",
           "word-las",
           "word-páginas--manual-pages",
-          "concept-rtfm-man-pages",
-          "concept-linux-learning-escalation"
+          "concept-rtfm-man-pages"
         ]
       },
       {
@@ -2206,7 +2193,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-que",
+              "word-de--after-antes",
               "grammar-antes-de-que-subjunctive"
             ]
           },
@@ -2328,7 +2315,7 @@
           "concept-linux-learning-escalation",
           "word-antes--before-event",
           "grammar-antes-de-que-subjunctive",
-          "word-de--fixed-antes-de-que",
+          "word-de--after-antes",
           "word-que--fixed-antes-de-que",
           "word-lo--object-pronoun",
           "word-haga",
@@ -2370,7 +2357,6 @@
       "word-está",
       "grammar-estar-adjective-state",
       "word-roto",
-      "grammar-roto-participle",
       "word-qué--interrogative",
       "question-words",
       "word-es",
@@ -2381,7 +2367,6 @@
       "word-deja--let-command",
       "grammar-affirmative-tu-command",
       "grammar-dejar-que-subjunctive",
-      "word-que--dejar-complement",
       "word-te--indirect",
       "word-enseñe--show-subjunctive",
       "word-las",
@@ -2424,7 +2409,7 @@
       "word-sobre--about",
       "word-antes--before-event",
       "grammar-antes-de-que-subjunctive",
-      "word-de--fixed-antes-de-que",
+      "word-de--after-antes",
       "word-que--fixed-antes-de-que",
       "word-lo--object-pronoun",
       "word-haga",
@@ -2459,15 +2444,13 @@
     {
       "id": "concept-linux-learning-escalation",
       "kind": "concept",
-      "promptEs": "de instalar Linux a compilar el kernel",
-      "answerEn": "The comic compresses a Linux learner's rapid progress from a basic installation request to reading Unix manuals, switching distributions, and building a custom kernel.",
-      "noteEn": "Xorg is a display system; Ubuntu, Debian, and Gentoo are Linux distributions; and the kernel is the operating system's core. Moving through those topics in a few weeks signals increasingly advanced and obsessive involvement. The final warning copies the tone of a parental public-service announcement for the joke.",
+      "promptEs": "distribución de Linux y kernel",
+      "questionEn": "How does a Linux distribution differ from its kernel?",
+      "answerEn": "The kernel is the operating system's core; a Linux distribution packages that core with other software into a usable system.",
+      "noteEn": "Ubuntu, Debian, and Gentoo are different Linux distributions. Switching distributions changes the surrounding package and its choices. Compiling the kernel means turning its source code into an executable core, rather than merely installing an application.",
       "tags": [
         "concept",
-        "Linux",
-        "Unix",
-        "operating systems",
-        "xkcd joke"
+        "background knowledge"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2770,8 +2753,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2899,7 +2881,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3002,8 +2984,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3042,11 +3024,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3087,7 +3072,11 @@
       "kind": "word",
       "promptEs": "roto",
       "answerEn": "broken",
-      "noteEn": "",
+      "noteEn": "Romper means “to break.” Its completed-action form is irregular: romper becomes roto, not rompido. After a helper such as ha, roto stays unchanged: ha roto, “has broken.” When it describes a broken thing, its ending matches that thing: un vaso roto, una taza rota.",
+      "example": {
+        "es": "Se ha roto un plato.",
+        "en": "A plate has broken."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3101,35 +3090,15 @@
       }
     },
     {
-      "id": "grammar-roto-participle",
-      "kind": "grammar",
-      "promptEs": "romper → roto",
-      "answerEn": "Romper changes irregularly to roto.",
-      "noteEn": "Roto is the form used after haber in phrases such as he roto (“I have broken”). This kind of form is called a past participle. It can also describe a noun; then its ending matches that noun: un vaso roto but una ventana rota.",
-      "tags": [
-        "A2",
-        "grammar",
-        "irregular participle"
-      ],
-      "questionEn": "What special form of romper (“to break”) means “broken”?",
-      "example": {
-        "es": "He roto el vaso.",
-        "en": "I have broken the glass."
-      },
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "seed-curriculum",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3171,8 +3140,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3190,10 +3163,10 @@
       "kind": "word",
       "promptEs": "dónde",
       "answerEn": "where",
-      "noteEn": "Dónde carries a written accent when it directly or indirectly asks about a location. In a direct question, Spanish also uses the opening question mark ¿.",
+      "noteEn": "Dónde keeps its written accent when asking about a place, whether the question stands alone or sits inside another sentence: ¿Dónde vive Ana? and No sé dónde vive Ana. Unaccented donde connects to a place without asking a question.",
       "example": {
-        "es": "¿Dónde está la estación?",
-        "en": "Where is the station?"
+        "es": "No recuerdo dónde dejé las llaves.",
+        "en": "I don't remember where I left the keys."
       },
       "tags": [
         "word",
@@ -3350,38 +3323,14 @@
       }
     },
     {
-      "id": "word-que--dejar-complement",
-      "kind": "word",
-      "promptEs": "que",
-      "answerEn": "no separate English word; links dejar to the allowed action",
-      "noteEn": "After a form of dejar meaning “let” or “allow,” que introduces the allowed action. The person doing that action may be stated after que or understood from the situation and the verb form.",
-      "example": {
-        "es": "Dejamos que Ana elija.",
-        "en": "We let Ana choose."
-      },
-      "tags": [
-        "word",
-        "clause link",
-        "permission",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-huelga-de-guionistas",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-te--indirect",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you",
-      "noteEn": "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+      "answerEn": "to you; for you, as the recipient",
+      "noteEn": "Te can identify one familiar listener as the person receiving something or benefiting from an action. It normally goes before the verb. English may say 'to you' or 'for you,' or simply place 'you' before what is given or said.",
       "example": {
         "es": "Te envío un mensaje.",
-        "en": "I’m sending you a message."
+        "en": "I send you a message."
       },
       "tags": [
         "word",
@@ -3476,6 +3425,7 @@
         "computing culture",
         "RTFM"
       ],
+      "questionEn": "What are man pages, and what does RTFM tell someone to do?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3488,8 +3438,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3525,7 +3479,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3608,7 +3566,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -3775,7 +3733,7 @@
       "promptEs": "hace + período + que + situación",
       "questionEn": "How do you say that a situation started an amount of time ago and is still continuing?",
       "answerEn": "Use hace, then the amount of time, then que and the continuing situation.",
-      "noteEn": "Hace stays unchanged and measures the elapsed period. Que connects that period to a situation that continues through now. This differs from hace + time used with a finished event: Llegó hace dos días means ‘She arrived two days ago,’ while Hace dos días que está aquí means ‘She has been here for two days.’",
+      "noteEn": "Hace stays unchanged and measures the elapsed period. Que connects that period to a situation that continues through now. This differs from hace followed by an amount of time with a finished event: Llegó hace dos días means ‘She arrived two days ago,’ while Hace dos días que está aquí means ‘She has been here for two days.’",
       "example": {
         "es": "Hace dos meses que trabajo aquí.",
         "en": "I have worked here for two months."
@@ -3819,7 +3777,7 @@
       "kind": "word",
       "promptEs": "que",
       "answerEn": "no separate English word; connects an elapsed period to a situation still continuing",
-      "noteEn": "In hace + amount of time + que + situation, que connects the measured time to what has continued through the present. Natural English usually expresses the connection with ‘for.’",
+      "noteEn": "After hace and an amount of time, que introduces a situation that has continued through the present. Natural English usually expresses this connection with ‘for.’",
       "example": {
         "es": "Hace tres días que llueve.",
         "en": "It has been raining for three days."
@@ -4124,7 +4082,7 @@
       "promptEs": "orden afirmativa para vosotros: hablad, comed, escribid",
       "questionEn": "How do you tell several people informally to do something in Spain?",
       "answerEn": "For most verbs, remove the final -r from the verb's dictionary form and add -d: hablar becomes hablad.",
-      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If a short object word such as me is included, attach it to the end: ayudad + me becomes ayudadme.",
+      "noteEn": "The dictionary form is the unchanged form ending in -ar, -er, or -ir. This positive command is used with vosotros or vosotras, mainly in Spain. If you include a small word naming who or what receives the action, such as me, attach it to the end: ayudad and me become ayudadme.",
       "example": {
         "es": "Abrid los libros.",
         "en": "Open your books."
@@ -4257,7 +4215,7 @@
       "promptEs": "antes de que + subjuntivo",
       "questionEn": "How do you connect one event to a later event that has not happened yet?",
       "answerEn": "Use antes de que, then put the pending event's verb in the subjunctive form.",
-      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de plus the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
+      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de followed by the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
       "example": {
         "es": "Sal antes de que llueva.",
         "en": "Leave before it rains."
@@ -4277,25 +4235,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-que",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; part of antes de que (“before”)",
-      "noteEn": "De is a required middle piece when antes introduces a full event with que. Translate antes de que as one connector.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Volvamos antes de que oscurezca.",
-        "en": "Let's return before it gets dark."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "fixed connector",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-semaforo-largo",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -4327,11 +4284,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",

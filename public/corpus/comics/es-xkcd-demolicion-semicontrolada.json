@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-54afea13ec84ee7c",
+  "revision": "runtime-c64185f3a2a87091",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -608,7 +608,7 @@
               }
             ],
             "cardIds": [
-              "word-con--relacion-complement",
+              "word-con--relacionado-complement",
               "phrase-sin-relacion-con"
             ]
           },
@@ -769,7 +769,7 @@
               "es-xkcd-demolicion-semicontrolada:second-claim:w13"
             ],
             "exampleEs": "SIN RELACIÓN CON EL PRIMERO",
-            "explanationEn": "Sin relación con supplies the reusable expression, and el primero fills its required target slot."
+            "explanationEn": "Sin relación con expresses a lack of connection; el primero names what there is no connection with."
           },
           {
             "id": "es-xkcd-demolicion-semicontrolada:second-claim:app-first-one",
@@ -817,7 +817,7 @@
           "phrase-sin-relacion-con",
           "concept-semicontrolled-demolition-false-compromise",
           "word-relación",
-          "word-con--relacion-complement",
+          "word-con--relacionado-complement",
           "word-el--omitted-masculine-noun",
           "grammar-article-adjective-omitted-noun",
           "word-primero--first-one",
@@ -854,7 +854,7 @@
               }
             ],
             "cardIds": [
-              "word-los--the-ones-before-de",
+              "word-los--omitted-noun",
               "grammar-article-de-phrase-omitted-noun"
             ]
           },
@@ -1137,7 +1137,7 @@
               "es-xkcd-demolicion-semicontrolada:caption:w14"
             ],
             "exampleEs": "REACCIONARON TIBIAMENTE A MI TEORÍA DE COMPROMISO",
-            "explanationEn": "Reaccionaron a supplies the reusable pattern, and mi teoría de compromiso fills its required target slot; tibiamente separately describes the manner of the reaction."
+            "explanationEn": "Reaccionaron a introduces what prompted the reaction, mi teoría de compromiso; tibiamente separately describes the manner of that reaction."
           },
           {
             "id": "es-xkcd-demolicion-semicontrolada:caption:app-mente",
@@ -1150,7 +1150,7 @@
           }
         ],
         "cardIds": [
-          "word-los--the-ones-before-de",
+          "word-los--omitted-noun",
           "grammar-article-de-phrase-omitted-noun",
           "word-del--of-the",
           "word-movimiento",
@@ -1205,7 +1205,7 @@
       "word-sin",
       "phrase-sin-relacion-con",
       "word-relación",
-      "word-con--relacion-complement",
+      "word-con--relacionado-complement",
       "word-el--omitted-masculine-noun",
       "grammar-article-adjective-omitted-noun",
       "word-primero--first-one",
@@ -1215,7 +1215,7 @@
       "word-por--passive-agent",
       "word-verdaderos",
       "word-terroristas",
-      "word-los--the-ones-before-de",
+      "word-los--omitted-noun",
       "grammar-article-de-phrase-omitted-noun",
       "word-movimiento",
       "word-por--supported-cause",
@@ -1326,8 +1326,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1418,6 +1418,7 @@
         "false balance",
         "joke"
       ],
+      "questionEn": "Why is splitting the difference between two incompatible explanations not evidence?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1591,7 +1592,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1850,26 +1855,24 @@
       }
     },
     {
-      "id": "word-con--relacion-complement",
+      "id": "word-con--relacionado-complement",
       "kind": "word",
       "promptEs": "con",
-      "answerEn": "to; required after relación before what is connected",
-      "noteEn": "In tener relación con or sin relación con, con introduces what something is or is not connected to.",
+      "answerEn": "to; with; connects related things",
+      "noteEn": "Relación and relacionado use con to introduce what something is connected or related to. Relacionado may change to relacionada, relacionados, or relacionadas; con stays unchanged. English commonly uses 'to' in 'related to.'",
       "example": {
         "es": "El cambio no tiene relación con el precio.",
         "en": "The change is not related to the price."
       },
       "tags": [
         "word",
-        "preposition",
-        "connection",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-demolicion-semicontrolada",
+        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
         "contextualSenseReviewed": true
       }
     },
@@ -1877,16 +1880,15 @@
       "id": "word-el--omitted-masculine-noun",
       "kind": "word",
       "promptEs": "el",
-      "answerEn": "the one (masculine singular)",
-      "noteEn": "Spanish can leave out a masculine noun that is already understood and keep el before the words that distinguish it. English often supplies “the one.”",
+      "answerEn": "the one; replaces an understood masculine singular noun",
+      "noteEn": "El can remain when an already understood masculine noun is left out. The following words identify which one, for example de color azul or que llegó primero. English often supplies 'the one.' Do not confuse this unaccented el with él, 'he.'",
       "example": {
         "es": "Prefiero el de color azul.",
         "en": "I prefer the blue one."
       },
       "tags": [
         "word",
-        "article",
-        "noun omission"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1899,10 +1901,10 @@
     {
       "id": "grammar-article-adjective-omitted-noun",
       "kind": "grammar",
-      "promptEs": "el/la/los/las o un/una + adjetivo sin repetir el sustantivo",
-      "questionEn": "How do you say “the interesting one” or “a small one” without repeating the noun?",
-      "answerEn": "Keep the article and adjective, omit the repeated noun, and make both agree with that understood noun.",
-      "noteEn": "The article is a word such as el, la, un, or una. The adjective still changes to match the omitted noun: una pequeña can mean “a small feminine one,” while uno pequeño can mean “a small masculine one.” Context supplies the missing noun.",
+      "promptEs": "el, la, los, las, uno o una + descripción, sin repetir el nombre",
+      "questionEn": "How do you say 'the small one' or 'a small one' without repeating the thing's name?",
+      "answerEn": "Keep the word for 'the' or 'a' and the description, but omit the noun when it is already clear.",
+      "noteEn": "Put the description after the word for 'the' or 'a'. For 'the,' use el, la, los, or las to match the understood thing; for a singular 'a,' use uno for a masculine thing or una for a feminine thing when the noun is omitted. The describing word, called an adjective, still matches it: referring to a camisa, la pequeña means 'the small one.' Words such as más can qualify the description without requiring the noun to be repeated.",
       "example": {
         "es": "Quiero una taza; dame la pequeña.",
         "en": "I want a cup; give me the small one."
@@ -1910,7 +1912,7 @@
       "tags": [
         "grammar",
         "omitted noun",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2068,26 +2070,24 @@
       }
     },
     {
-      "id": "word-los--the-ones-before-de",
+      "id": "word-los--omitted-noun",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "the ones; the people",
-      "noteEn": "Before a de phrase, los can stand on its own for an understood masculine or mixed plural group instead of introducing a stated noun.",
+      "answerEn": "the ones; the people, with an understood noun",
+      "noteEn": "Los can stand for an unstated masculine or mixed plural group. Words after it identify which group: los de la oficina or los que llegaron. English often supplies 'the people,' 'the ones,' or 'those.'",
       "example": {
         "es": "Los de la oficina ya llegaron.",
         "en": "The people from the office have already arrived."
       },
       "tags": [
         "word",
-        "articles",
-        "omitted noun",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-demolicion-semicontrolada",
+        "ownerComicId": "es-xkcd-con-permiso-de-robert-frost",
         "contextualSenseReviewed": true
       }
     },
@@ -2095,7 +2095,7 @@
       "id": "grammar-article-de-phrase-omitted-noun",
       "kind": "grammar",
       "promptEs": "el/la/los/las + de + grupo o lugar, sin sustantivo expreso",
-      "questionEn": "How can el, la, los, or las plus a de phrase identify people or things without repeating their name?",
+      "questionEn": "How can el, la, los, or las followed by de identify people or things without repeating their name?",
       "answerEn": "Use el, la, los, or las on its own, followed by de and the identifying group, place, or source.",
       "noteEn": "Choose el, la, los, or las to match the single item or group understood from context. Its name is left out because the context makes it clear; the following de phrase identifies which one or ones are meant.",
       "example": {
@@ -2179,7 +2179,7 @@
       "id": "word-del--topic",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "about the (de + el, introducing a topic)",
+      "answerEn": "about the; introduces a topic",
       "noteEn": "Del combines de and el. After an expression that introduces a subject of discussion, de can mean “about,” so del introduces a masculine topic.",
       "example": {
         "es": "Hablamos del nuevo proyecto.",
@@ -2228,6 +2228,7 @@
         "culture",
         "history"
       ],
+      "questionEn": "What does 11-S refer to in Spanish?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2401,17 +2402,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

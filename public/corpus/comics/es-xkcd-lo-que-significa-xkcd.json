@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-19fe04f57fc9db4c",
+  "revision": "runtime-6655515b0a7034b6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -241,8 +241,7 @@
               }
             ],
             "cardIds": [
-              "word-semáforo",
-              "phrase-semáforo-en-rojo"
+              "word-semáforo"
             ]
           },
           {
@@ -292,7 +291,7 @@
               }
             ],
             "cardIds": [
-              "word-haciendo--by-doing",
+              "word-haciendo--making",
               "grammar-adverbial-gerund"
             ]
           },
@@ -393,12 +392,11 @@
             "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:app-red-light",
             "cardId": "phrase-semáforo-en-rojo",
             "participantWordIds": [
-              "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-7",
               "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-8",
               "es-xkcd-lo-que-significa-xkcd:panel-1-caption:word-9"
             ],
-            "exampleEs": "SEMÁFORO EN ROJO",
-            "explanationEn": "Semáforo names the traffic light, while en rojo gives its current signal color."
+            "exampleEs": "EN ROJO",
+            "explanationEn": "En rojo gives the traffic signal's current color state rather than the color of its paint."
           },
           {
             "id": "es-xkcd-lo-que-significa-xkcd:panel-1-caption:app-method-gerund",
@@ -419,10 +417,10 @@
           "word-en--at-location",
           "word-un",
           "word-semáforo",
-          "phrase-semáforo-en-rojo",
           "word-en--signal-state",
+          "phrase-semáforo-en-rojo",
           "word-rojo--traffic-signal",
-          "word-haciendo--by-doing",
+          "word-haciendo--making",
           "grammar-adverbial-gerund",
           "word-maniobras",
           "word-elaboradas",
@@ -654,7 +652,7 @@
               }
             ],
             "cardIds": [
-              "word-dónde--indirect-question",
+              "word-dónde--direct-question",
               "question-words"
             ]
           },
@@ -732,7 +730,7 @@
           "word-para",
           "grammar-para-infinitive-purpose",
           "word-averiguar",
-          "word-dónde--indirect-question",
+          "word-dónde--direct-question",
           "question-words",
           "word-está"
         ]
@@ -1353,7 +1351,7 @@
               }
             ],
             "cardIds": [
-              "word-se--passive-permission",
+              "word-se--passive-unnamed-doer",
               "grammar-se-puede-infinitive"
             ]
           },
@@ -1529,7 +1527,7 @@
           "word-qué--interrogative",
           "question-words",
           "word-baldosas",
-          "word-se--passive-permission",
+          "word-se--passive-unnamed-doer",
           "grammar-se-puede-infinitive",
           "word-pueden",
           "word-pisar",
@@ -1827,10 +1825,10 @@
       "word-en--at-location",
       "word-un",
       "word-semáforo",
-      "phrase-semáforo-en-rojo",
       "word-en--signal-state",
+      "phrase-semáforo-en-rojo",
       "word-rojo--traffic-signal",
-      "word-haciendo--by-doing",
+      "word-haciendo--making",
       "grammar-adverbial-gerund",
       "word-maniobras",
       "word-elaboradas",
@@ -1848,7 +1846,7 @@
       "word-para",
       "grammar-para-infinitive-purpose",
       "word-averiguar",
-      "word-dónde--indirect-question",
+      "word-dónde--direct-question",
       "word-está",
       "word-llamar--invoke-function",
       "word-a--function-call",
@@ -1871,7 +1869,7 @@
       "word-reglas",
       "word-sobre--about",
       "word-baldosas",
-      "word-se--passive-permission",
+      "word-se--passive-unnamed-doer",
       "grammar-se-puede-infinitive",
       "word-pueden",
       "word-pisar",
@@ -1898,8 +1896,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1961,7 +1963,7 @@
       "promptEs": "significar + infinitivo",
       "questionEn": "How do you say that something means doing an action?",
       "answerEn": "Use a form of significar followed by the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus sign means “followed by.” The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Spanish uses that unchanged form where English often uses an -ing form after “mean.”",
+      "noteEn": "The dictionary form is the unchanged verb ending in -ar, -er, or -ir. Spanish uses that unchanged form where English often uses an -ing form after “mean.”",
       "example": {
         "es": "Ser voluntario significa ayudar.",
         "en": "Being a volunteer means helping."
@@ -2089,20 +2091,15 @@
       }
     },
     {
-      "id": "phrase-semáforo-en-rojo",
-      "kind": "phrase",
-      "promptEs": "semáforo en rojo",
-      "questionEn": "How do you describe a traffic light that is showing red?",
-      "answerEn": "Say semáforo en rojo.",
-      "noteEn": "Spanish commonly uses en plus the color to name the signal's current state. Semáforo names the traffic light, en introduces its state, and rojo names the color.",
-      "example": {
-        "es": "Esperamos ante un semáforo en rojo.",
-        "en": "We wait at a red light."
-      },
+      "id": "word-en--signal-state",
+      "kind": "word",
+      "promptEs": "en",
+      "answerEn": "on; showing (a signal state)",
+      "noteEn": "",
       "tags": [
-        "phrase",
-        "traffic",
-        "A2"
+        "word",
+        "contextual sense",
+        "traffic"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2113,15 +2110,21 @@
       }
     },
     {
-      "id": "word-en--signal-state",
-      "kind": "word",
-      "promptEs": "en",
-      "answerEn": "on; showing (a signal state)",
-      "noteEn": "",
+      "id": "phrase-semáforo-en-rojo",
+      "kind": "phrase",
+      "promptEs": "en rojo, en verde o en ámbar",
+      "questionEn": "How do you use en and a color to describe a traffic signal's current state?",
+      "answerEn": "Put en before the color the signal is showing: en rojo, en verde, or en ámbar.",
+      "noteEn": "This describes the signal's current operating state, not the paint color of the object. The expression stays unchanged even with several signals: semáforos en rojo. You can name the signal before it or use estar, as in el semáforo está en verde. Rojo is one current state, not a different language pattern from verde or ámbar.",
+      "example": {
+        "es": "El semáforo está en verde.",
+        "en": "The traffic light is green."
+      },
       "tags": [
-        "word",
-        "contextual sense",
-        "traffic"
+        "phrase",
+        "signal state",
+        "en",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2151,25 +2154,25 @@
       }
     },
     {
-      "id": "word-haciendo--by-doing",
+      "id": "word-haciendo--making",
       "kind": "word",
       "promptEs": "haciendo",
-      "answerEn": "doing; making; by doing",
-      "noteEn": "Haciendo is the -iendo form of hacer. Without a form of estar, it can describe how another action happens or what someone does at the same time.",
+      "answerEn": "doing; making",
+      "noteEn": "Haciendo is the unchanged -iendo action form of hacer, “to do or make.” With a form of estar, it describes an action in progress. Without estar, it can describe how another action happens or an activity happening at the same time. The surrounding construction supplies meanings such as English “by.”",
       "example": {
-        "es": "Aprendemos haciendo preguntas.",
-        "en": "We learn by asking questions."
+        "es": "Aprendo haciendo preguntas.",
+        "en": "I learn by asking questions."
       },
       "tags": [
         "word",
-        "verb form",
-        "manner"
+        "hacer",
+        "action form"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "ownerComicId": "es-xkcd-fondo-de-solteros",
         "contextualSenseReviewed": true
       }
     },
@@ -2179,7 +2182,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -2317,7 +2320,7 @@
       "promptEs": "hacer que + acción causada",
       "questionEn": "How do you say that someone makes or gets another person to do something?",
       "answerEn": "Use a form of hacer, then que, then the person and the action in a special caused-action form.",
-      "noteEn": "The plus sign means “followed by.” Hacer changes for who causes the action. The later verb uses a special form called the subjunctive because that action is being caused rather than simply reported: llama becomes llame, and cierra becomes cierre.",
+      "noteEn": "Hacer changes for who causes the action. The later verb uses a special form called the subjunctive because that action is being caused rather than simply reported: llama becomes llame, and cierra becomes cierre.",
       "example": {
         "es": "Hago que Ana cierre la puerta.",
         "en": "I make Ana close the door."
@@ -2340,8 +2343,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2421,8 +2424,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -2483,19 +2486,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2523,25 +2528,26 @@
       }
     },
     {
-      "id": "word-dónde--indirect-question",
+      "id": "word-dónde--direct-question",
       "kind": "word",
       "promptEs": "dónde",
       "answerEn": "where",
-      "noteEn": "Dónde keeps its written accent in an indirect question: the location is being asked about even though the words do not stand alone as a direct question.",
+      "noteEn": "Dónde keeps its written accent when asking about a place, whether the question stands alone or sits inside another sentence: ¿Dónde vive Ana? and No sé dónde vive Ana. Unaccented donde connects to a place without asking a question.",
       "example": {
-        "es": "No sé dónde vive Ana.",
-        "en": "I don't know where Ana lives."
+        "es": "No recuerdo dónde dejé las llaves.",
+        "en": "I don't remember where I left the keys."
       },
       "tags": [
         "word",
         "question word",
-        "location"
+        "location",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "ownerComicId": "es-xkcd-partida-ultima",
         "contextualSenseReviewed": true
       }
     },
@@ -2549,11 +2555,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2648,6 +2657,7 @@
         "mathematics",
         "humor"
       ],
+      "questionEn": "Why is putting Graham's number into the Ackermann function an absurd calculation?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2679,7 +2689,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2814,11 +2828,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -2961,42 +2975,42 @@
       }
     },
     {
-      "id": "word-se--passive-permission",
+      "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks something as receiving a possible action; the doer is not named",
-      "noteEn": "With a form of poder and an unchanged action verb, se shifts attention away from the person doing the action and toward the thing that can receive it.",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "La puerta se puede abrir.",
-        "en": "The door can be opened."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive construction"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
+        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
         "contextualSenseReviewed": true
       }
     },
     {
       "id": "grammar-se-puede-infinitive",
       "kind": "grammar",
-      "promptEs": "se + forma de poder + infinitivo",
-      "questionEn": "How do you say that an action can be done without naming who does it?",
-      "answerEn": "Use se, then the form of poder that fits the sentence, then the action verb in its unchanged dictionary form.",
-      "noteEn": "In a direct statement, one thing normally takes puede and several things take pueden. Other sentence types can require forms such as pueda. The final action verb stays unchanged, ending in -ar, -er, or -ir. Se keeps the person doing the action unnamed.",
+      "promptEs": "se + poder + acción en forma de diccionario",
+      "questionEn": "How do you use se and poder to say that something can be done without naming who does it?",
+      "answerEn": "Use se, a form of poder, and the action's dictionary form; se can instead attach to the end of that action.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and stays unchanged. When wording focuses on things receiving an action, poder matches them: la puerta se puede abrir, but las puertas se pueden abrir. The same order can be las puertas pueden abrirse. Other settings change puede to forms such as podía or pueda. Do not assume every se sentence has this agreement. Se puede caminar ('one can walk') talks about people acting in general, without a thing receiving the action to make poder plural, so use singular puede.",
       "example": {
-        "es": "La puerta se puede abrir.",
-        "en": "The door can be opened."
+        "es": "Las entradas pueden comprarse en línea.",
+        "en": "The tickets can be bought online."
       },
       "tags": [
         "grammar",
         "passive se",
-        "possibility",
+        "poder",
         "B1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -3066,7 +3080,7 @@
       "promptEs": "empezar a + infinitivo",
       "questionEn": "How do you say that someone starts doing an action?",
       "answerEn": "Use a form of empezar, then a, then the action verb in its unchanged dictionary form.",
-      "noteEn": "The plus sign means “followed by.” The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
+      "noteEn": "The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Empezar changes for the person and time; a stays fixed, and the action verb stays unchanged.",
       "example": {
         "es": "Lucía empieza a leer.",
         "en": "Lucía starts to read."
@@ -3245,8 +3259,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-bc0cd3b95e1aa612",
+  "revision": "runtime-77ee6ef71b8f54b0",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -327,7 +327,7 @@
               }
             ],
             "cardIds": [
-              "word-le--gustar-experiencer",
+              "word-le--experiencer",
               "phrase-irle-la-marcha-a-alguien"
             ]
           },
@@ -404,7 +404,7 @@
           "word-al--contraction",
           "phrase-irle-la-marcha-a-alguien",
           "word-admin--administrator",
-          "word-le--gustar-experiencer",
+          "word-le--experiencer",
           "word-va--appeals",
           "word-la--article",
           "word-marcha--excitement"
@@ -603,7 +603,7 @@
               }
             ],
             "cardIds": [
-              "word-vaya--surprise"
+              "word-vaya"
             ]
           },
           {
@@ -721,7 +721,7 @@
               }
             ],
             "cardIds": [
-              "word-intento--try",
+              "word-intento",
               "phrase-en-cuanto-action",
               "grammar-intentar-infinitive"
             ]
@@ -851,7 +851,7 @@
           }
         ],
         "cardIds": [
-          "word-vaya--surprise",
+          "word-vaya",
           "word-mis",
           "word-conexiones--network",
           "phrase-caerse-conexion",
@@ -861,7 +861,7 @@
           "word-en--fixed-en-cuanto",
           "phrase-en-cuanto-action",
           "word-cuanto--fixed-en-cuanto",
-          "word-intento--try",
+          "word-intento",
           "grammar-intentar-infinitive",
           "word-pasar--send-through",
           "word-algo",
@@ -2285,7 +2285,7 @@
       "word-al--contraction",
       "phrase-irle-la-marcha-a-alguien",
       "word-admin--administrator",
-      "word-le--gustar-experiencer",
+      "word-le--experiencer",
       "word-va--appeals",
       "word-marcha--excitement",
       "phrase-no-hay-problema",
@@ -2295,7 +2295,7 @@
       "word-pondré--set-up",
       "word-una",
       "word-segura--secure",
-      "word-vaya--surprise",
+      "word-vaya",
       "word-mis",
       "word-conexiones--network",
       "phrase-caerse-conexion",
@@ -2305,7 +2305,7 @@
       "word-en--fixed-en-cuanto",
       "phrase-en-cuanto-action",
       "word-cuanto--fixed-en-cuanto",
-      "word-intento--try",
+      "word-intento",
       "grammar-intentar-infinitive",
       "word-pasar--send-through",
       "word-algo",
@@ -2385,8 +2385,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2617,8 +2616,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -2685,26 +2684,24 @@
       }
     },
     {
-      "id": "word-le--gustar-experiencer",
+      "id": "word-le--experiencer",
       "kind": "word",
       "promptEs": "le",
-      "answerEn": "marks the person whose preference or reaction is described",
-      "noteEn": "With gustar and similar preference expressions, le identifies the person experiencing the liking, appeal, or reaction. The thing that causes that reaction controls whether the verb is singular or plural, while le stays the same.",
+      "answerEn": "marks one person or entity as the one having a feeling, preference, or impression",
+      "noteEn": "Le can identify him, her, formal you, or another singular person or entity experiencing a reaction. What causes the reaction controls the verb: le gusta el libro, but le gustan los libros. Le stays the same; a phrase such as a Ana can clarify who it refers to.",
       "example": {
-        "es": "A Luis le gustan los trenes.",
-        "en": "Luis likes trains."
+        "es": "A Ana le gustan los trenes.",
+        "en": "Ana likes trains."
       },
       "tags": [
         "word",
-        "gustar",
-        "indirect object",
-        "experiencer"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fotos-porfa",
+        "ownerComicId": "es-xkcd-1337-parte-2",
         "contextualSenseReviewed": true
       }
     },
@@ -2786,7 +2783,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2899,26 +2900,23 @@
       }
     },
     {
-      "id": "word-vaya--surprise",
+      "id": "word-vaya",
       "kind": "word",
       "promptEs": "vaya",
-      "answerEn": "wow; whoa",
-      "noteEn": "Used on its own as an exclamation, vaya can express surprise, admiration, or annoyance. This conversational use is distinct from vaya as a form of the verb ir, 'to go.'",
+      "answerEn": "wow; oh my",
+      "noteEn": "As an exclamation, vaya can express surprise, admiration, or annoyance. This use is separate from vaya as a form of ir, “to go.”",
       "example": {
-        "es": "¡Vaya, qué sorpresa!",
-        "en": "Wow, what a surprise!"
+        "es": "¡Vaya, qué rápido has llegado!",
+        "en": "Wow, you got here quickly!"
       },
       "tags": [
-        "word",
-        "exclamation",
-        "conversation",
-        "A2"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-133t-parte-1",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2997,6 +2995,7 @@
         "comic joke",
         "technology"
       ],
+      "questionEn": "What happens in a man-in-the-middle network attack?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3119,22 +3118,19 @@
       }
     },
     {
-      "id": "word-intento--try",
+      "id": "word-intento",
       "kind": "word",
       "promptEs": "intento",
       "answerEn": "I try; I attempt",
       "noteEn": "",
       "tags": [
-        "word",
-        "verb",
-        "present",
-        "A1"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-133t-parte-1",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3188,10 +3184,13 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3380,7 +3379,7 @@
       "kind": "phrase",
       "promptEs": "dejar de + infinitivo",
       "answerEn": "Use a form of dejar, then de, then the action verb in its dictionary form.",
-      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de + action means to stop doing that action.",
+      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de followed by an action verb means to stop doing that action.",
       "tags": [
         "A2",
         "verb pattern",
@@ -3475,7 +3474,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3565,7 +3564,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -3867,8 +3866,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -4191,10 +4194,10 @@
     {
       "id": "phrase-ser-capaz-de-infinitive",
       "kind": "phrase",
-      "promptEs": "ser capaz de + infinitivo",
-      "questionEn": "How do you say that someone is able to do something?",
+      "promptEs": "ser capaz de + acción",
+      "questionEn": "How do you use ser capaz de to say that someone is able to do something?",
       "answerEn": "Use a form of ser, then capaz de, then the action verb in its dictionary form.",
-      "noteEn": "The dictionary form, also called the infinitive, is the unchanged form ending in -ar, -er, or -ir. Ser changes for the person and time, and capaz becomes capaces for more than one person. Keep de before the final action verb, which remains unchanged.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and stays unchanged. Ser changes for the person and time, and capaz becomes capaces for more than one person. Keep de when stating the action: somos capaces de nadar. The action can be left out when it is already clear. No before ser makes it negative; context can turn 'you are not capable' into a challenge about what someone would dare do.",
       "example": {
         "es": "Lucía es capaz de nadar.",
         "en": "Lucía is able to swim."
@@ -4255,7 +4258,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-bbd72c8d8e16a7be",
+  "revision": "runtime-a246debd969d96d0",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1294,7 +1294,7 @@
             "cardIds": [
               "word-llamemos--lets-call",
               "grammar-nosotros-command",
-              "grammar-llamar-nombre-a-cosa",
+              "phrase-llamar-a-alguien",
               "concept-ice-age-unit-climate-warming-scale"
             ]
           },
@@ -1312,7 +1312,7 @@
             ],
             "cardIds": [
               "word-unidad--measurement-unit",
-              "grammar-llamar-nombre-a-cosa",
+              "phrase-llamar-a-alguien",
               "concept-ice-age-unit-climate-warming-scale"
             ]
           },
@@ -1330,7 +1330,7 @@
             ],
             "cardIds": [
               "word-de--noun-classifier",
-              "grammar-llamar-nombre-a-cosa"
+              "phrase-llamar-a-alguien"
             ]
           },
           {
@@ -1347,7 +1347,7 @@
             ],
             "cardIds": [
               "word-edad",
-              "grammar-llamar-nombre-a-cosa"
+              "phrase-llamar-a-alguien"
             ]
           },
           {
@@ -1364,7 +1364,7 @@
             ],
             "cardIds": [
               "word-de--of",
-              "grammar-llamar-nombre-a-cosa"
+              "phrase-llamar-a-alguien"
             ]
           },
           {
@@ -1381,7 +1381,7 @@
             ],
             "cardIds": [
               "word-hielo",
-              "grammar-llamar-nombre-a-cosa",
+              "phrase-llamar-a-alguien",
               "concept-ice-age-unit-climate-warming-scale"
             ]
           },
@@ -1399,7 +1399,7 @@
             ],
             "cardIds": [
               "word-a--naming-target",
-              "grammar-llamar-nombre-a-cosa"
+              "phrase-llamar-a-alguien"
             ]
           },
           {
@@ -1415,7 +1415,8 @@
               }
             ],
             "cardIds": [
-              "word-una"
+              "word-una",
+              "phrase-llamar-a-alguien"
             ]
           },
           {
@@ -1432,7 +1433,7 @@
             ],
             "cardIds": [
               "word-diferencia",
-              "grammar-llamar-nombre-a-cosa",
+              "phrase-llamar-a-alguien",
               "concept-ice-age-unit-climate-warming-scale"
             ]
           },
@@ -1481,7 +1482,7 @@
           },
           {
             "id": "es-xkcd-4-5-grados:unit-definition:app-naming",
-            "cardId": "grammar-llamar-nombre-a-cosa",
+            "cardId": "phrase-llamar-a-alguien",
             "participantWordIds": [
               "es-xkcd-4-5-grados:unit-definition:w01",
               "es-xkcd-4-5-grados:unit-definition:w02",
@@ -1490,6 +1491,7 @@
               "es-xkcd-4-5-grados:unit-definition:w05",
               "es-xkcd-4-5-grados:unit-definition:w06",
               "es-xkcd-4-5-grados:unit-definition:w07",
+              "es-xkcd-4-5-grados:unit-definition:w08",
               "es-xkcd-4-5-grados:unit-definition:w09"
             ],
             "exampleEs": "LLAMEMOS UNIDAD DE EDAD DE HIELO A UNA DIFERENCIA",
@@ -1499,7 +1501,7 @@
         "cardIds": [
           "word-llamemos--lets-call",
           "grammar-nosotros-command",
-          "grammar-llamar-nombre-a-cosa",
+          "phrase-llamar-a-alguien",
           "concept-ice-age-unit-climate-warming-scale",
           "word-unidad--measurement-unit",
           "word-de--noun-classifier",
@@ -2694,7 +2696,7 @@
       "word-del",
       "word-llamemos--lets-call",
       "grammar-nosotros-command",
-      "grammar-llamar-nombre-a-cosa",
+      "phrase-llamar-a-alguien",
       "word-unidad--measurement-unit",
       "word-de--noun-classifier",
       "word-a--naming-target",
@@ -2740,7 +2742,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2785,8 +2791,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3030,6 +3035,7 @@
         "temperature",
         "comic explanation"
       ],
+      "questionEn": "Why measure projected warming in units based on an ice age?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3194,11 +3200,7 @@
       "kind": "word",
       "promptEs": "tierra",
       "answerEn": "Earth; the planet Earth",
-      "noteEn": "This sense names the planet rather than land or soil.",
-      "example": {
-        "es": "La Tierra gira alrededor del Sol.",
-        "en": "Earth revolves around the Sun."
-      },
+      "noteEn": "",
       "tags": [
         "word",
         "noun",
@@ -3218,22 +3220,21 @@
       "id": "word-se--intransitive-change",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; presents the thing as changing",
-      "noteEn": "With verbs such as reducir and ampliar, se lets Spanish describe a change without naming anyone who causes it. English often uses a simple verb such as “shrinks” or “widens.”",
+      "answerEn": "no separate English word; presents something as undergoing a change",
+      "noteEn": "With some verbs, se makes the named thing the one that changes, rather than the thing someone changes. Compare Marta abre la puerta with la puerta se abre. The verb still changes for the thing and time; se does not say that it deliberately acts on itself.",
       "example": {
-        "es": "La mancha se reduce.",
-        "en": "The stain shrinks."
+        "es": "La taza se rompió.",
+        "en": "The cup broke."
       },
       "tags": [
         "word",
-        "pronoun",
-        "change of state"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3509,8 +3510,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3586,19 +3591,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3830,7 +3835,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3937,7 +3946,7 @@
       "kind": "word",
       "promptEs": "del",
       "answerEn": "of the; from the",
-      "noteEn": "Del is the required contraction of de + el. It can mean “of the” or “from the,” depending on context.",
+      "noteEn": "Del combines de and el into one word. It can mean “of the” or “from the,” depending on context.",
       "example": {
         "es": "Vengo del mercado.",
         "en": "I’m coming from the market."
@@ -4004,27 +4013,27 @@
       }
     },
     {
-      "id": "grammar-llamar-nombre-a-cosa",
-      "kind": "grammar",
-      "promptEs": "llamar + nombre + a + cosa",
-      "questionEn": "How do you assign a proposed name to a person or thing?",
-      "answerEn": "Use a form of llamar, state the name, and introduce the thing receiving it with a.",
-      "noteEn": "The name comes directly after llamar. The a-phrase identifies what receives that label; in English the same relation is often expressed with ‘call’ and no separate equivalent of a.",
+      "id": "phrase-llamar-a-alguien",
+      "kind": "phrase",
+      "promptEs": "llamar a una persona o cosa por un nombre",
+      "questionEn": "How do you use llamar to say what name or label someone gives a person or thing?",
+      "answerEn": "Use a form of llamar with the person or thing being named and the name or label.",
+      "noteEn": "Here llamar means 'call by a name,' not 'telephone.' The order can vary: llamamos Nena a Elena puts the label first, while a Elena la llaman Nena names the person first and repeats her with la. A short word such as lo, la, or—in common Spanish usage for a male person—le can represent the person. Llamar changes for who uses the name and for the time: llamamos, llamaban. The same naming pattern can label things: llamamos refugio a este lugar.",
       "example": {
-        "es": "Llamamos zona segura a este espacio.",
-        "en": "We call this space a safe zone."
+        "es": "A Elena la llaman Nena.",
+        "en": "People call Elena Nena."
       },
       "tags": [
-        "grammar",
+        "phrase",
         "naming",
-        "preposition",
-        "B1"
+        "llamar",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-4-5-grados",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -4056,17 +4065,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4253,10 +4260,10 @@
     {
       "id": "grammar-hace-duration-ago",
       "kind": "grammar",
-      "promptEs": "hace + cantidad de tiempo",
-      "questionEn": "How do you say how long ago a past event happened?",
-      "answerEn": "Put hace before the length of time.",
-      "noteEn": "Spanish places hace before a duration: hace dos semanas means “two weeks ago.” The verb that describes the event itself is normally in a past form.",
+      "promptEs": "hace + tiempo transcurrido",
+      "questionEn": "How do you use hace to say how long ago something happened?",
+      "answerEn": "Put hace before the amount of time between now and the past event.",
+      "noteEn": "Hace stays singular and comes before the duration: hace dos años means 'two years ago.' The amount can be vague: hace un tiempo means 'a while ago,' and hace mucho means 'a long time ago.' The event itself is normally expressed in a past form. This card covers when a past event happened, not the different pattern hace dos años que vivo aquí for something continuing until now.",
       "example": {
         "es": "Nos conocimos hace tres meses.",
         "en": "We met three months ago."

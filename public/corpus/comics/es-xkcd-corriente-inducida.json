@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-3b7629fd6bdd9333",
+  "revision": "runtime-d62dbf5ebdaaa026",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1144,7 +1144,7 @@
               }
             ],
             "cardIds": [
-              "word-todos--all-of-us",
+              "word-todos--all-of-them",
               "grammar-direct-object-pronoun-plus-a-clarifier"
             ]
           }
@@ -1328,6 +1328,15 @@
             ],
             "exampleEs": "MATARNOS A TODOS",
             "explanationEn": "Nos inside matarnos marks the speaker's group, while a todos repeats and emphasizes that the group includes everyone."
+          },
+          {
+            "id": "es-xkcd-corriente-inducida:technical-explanation:review-word-w40",
+            "cardId": "word-todos--all-of-them",
+            "participantWordIds": [
+              "es-xkcd-corriente-inducida:technical-explanation:w40"
+            ],
+            "exampleEs": "MATARNOS A TODOS",
+            "explanationEn": "The ending -nos includes the speaker's group. Todos includes every member of that group."
           }
         ],
         "cardIds": [
@@ -1376,7 +1385,7 @@
           "grammar-pronoun-attached-to-infinitive",
           "grammar-direct-object-pronoun-plus-a-clarifier",
           "word-a--emphatic-object-pronoun",
-          "word-todos--all-of-us"
+          "word-todos--all-of-them"
         ]
       },
       {
@@ -2131,7 +2140,7 @@
       "grammar-pronoun-attached-to-infinitive",
       "grammar-direct-object-pronoun-plus-a-clarifier",
       "word-a--emphatic-object-pronoun",
-      "word-todos--all-of-us",
+      "word-todos--all-of-them",
       "word-en--fixed-en-serio",
       "phrase-en-serio",
       "word-serio",
@@ -2254,18 +2263,19 @@
     {
       "id": "phrase-por-aquí",
       "kind": "phrase",
-      "promptEs": "por aquí",
-      "questionEn": "How do you point out something nearby as “around here,” “over here,” or “this way”?",
-      "answerEn": "Use por aquí.",
-      "noteEn": "The exact English wording changes with the situation. A guide can use por aquí while indicating an area or leading someone in a direction.",
+      "promptEs": "por aquí, por ahí o por allí",
+      "questionEn": "How do por aquí, por ahí, and por allí point to an approximate area or route?",
+      "answerEn": "Put por before aquí, ahí, or allí to mean around here, around there, or this/that way.",
+      "noteEn": "Por makes the place or route approximate rather than a single exact point. Aquí points near the speaker, ahí generally points away from the speaker, and allí points farther away. The words stay unchanged. With movement, por ahí can also mean being out and about rather than going to a precise named destination.",
       "example": {
         "es": "La salida está por aquí.",
         "en": "The exit is around here."
       },
       "tags": [
-        "A1",
-        "expression",
-        "location"
+        "phrase",
+        "approximate place",
+        "direction",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2339,8 +2349,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2577,10 +2586,10 @@
       "kind": "word",
       "promptEs": "gran",
       "answerEn": "large; big (before a singular noun)",
-      "noteEn": "Grande shortens to gran when it appears directly before a singular noun. With an amount such as a budget, gran describes large size.",
+      "noteEn": "Grande shortens to gran before one masculine or feminine noun. In this size meaning, gran describes a large amount or scale. This is separate from using gran as praise, such as “excellent.”",
       "example": {
-        "es": "El proyecto necesita un gran presupuesto.",
-        "en": "The project needs a large budget."
+        "es": "Cayó una gran cantidad de nieve.",
+        "en": "A large amount of snow fell."
       },
       "tags": [
         "word",
@@ -2784,11 +2793,7 @@
       "kind": "word",
       "promptEs": "tierra",
       "answerEn": "Earth; the planet Earth",
-      "noteEn": "This sense names the planet rather than land or soil.",
-      "example": {
-        "es": "La Tierra gira alrededor del Sol.",
-        "en": "Earth revolves around the Sun."
-      },
+      "noteEn": "",
       "tags": [
         "word",
         "noun",
@@ -2995,7 +3000,7 @@
       "promptEs": "cualquier + sustantivo singular",
       "questionEn": "How do you say “any” before one singular thing?",
       "answerEn": "Put cualquier before a singular noun: cualquier libro, cualquier opción.",
-      "noteEn": "A noun is a naming word such as libro or opción. Before a noun, cualquiera shortens to cualquier. The noun stays singular even when the meaning is any one out of many. The plus sign in the Spanish prompt means “followed by.”",
+      "noteEn": "A noun is a naming word such as libro or opción. Before a noun, cualquiera shortens to cualquier. The noun stays singular even when the meaning is any one out of many.",
       "example": {
         "es": "Puedes elegir cualquier asiento.",
         "en": "You can choose any seat."
@@ -3089,7 +3094,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -3200,7 +3205,7 @@
       "id": "word-al--time-clause",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "when; upon (al + infinitive)",
+      "answerEn": "when; upon doing something",
       "noteEn": "",
       "tags": [
         "word",
@@ -3219,7 +3224,7 @@
       "kind": "grammar",
       "promptEs": "al + infinitivo",
       "answerEn": "Use al followed by the action verb in its dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al + verb tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Al followed by this verb form tells when the main action happens. Translate it naturally as “when,” “on,” or “upon”: al llegar means “when arriving” or simply “when someone arrives.”",
       "tags": [
         "B1",
         "grammar",
@@ -3351,7 +3356,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3376,7 +3381,7 @@
       "promptEs": "me/te/lo/la/nos/os/los/las + verbo … a + forma enfática",
       "questionEn": "Why can Spanish mark who or what is directly affected by an action with a short word and then emphasize that same target again after a?",
       "answerEn": "Put the short object word with the verb. To clarify or contrast the same target, add a stressed form beginning with a, such as a mí or a todos.",
-      "noteEn": "Me, te, lo, la, nos, os, los, and las can identify who or what the verb acts on. Spanish can repeat that target with an emphasized clarifier beginning with a, especially a stressed form such as a mí, a ti, or a todos. With an unchanged dictionary-form verb, the short marker attaches to the end, as in invitarnos or verlos. In the prompt, the slashes list alternatives, each plus sign means “followed by,” and the dots mean that other words may appear between the verb and its clarifier.",
+      "noteEn": "Me, te, lo, la, nos, os, los, and las can identify who or what the verb acts on. Spanish can repeat that target with an emphasized clarifier beginning with a, especially a stressed form such as a mí, a ti, or a todos. With an unchanged dictionary-form verb, the short marker attaches to the end, as in invitarnos or verlos.",
       "example": {
         "es": "Nos invitaron a todos.",
         "en": "They invited all of us."
@@ -3421,26 +3426,26 @@
       }
     },
     {
-      "id": "word-todos--all-of-us",
+      "id": "word-todos--all-of-them",
       "kind": "word",
       "promptEs": "todos",
-      "answerEn": "we all; all of us",
-      "noteEn": "Todos can stand on its own for a whole masculine or mixed group. With a first-person plural verb, it includes the speaker and naturally becomes “we all” or “all of us” in English.",
+      "answerEn": "all; everyone (the whole understood group)",
+      "noteEn": "Todos can stand for all the people or things in an understood group. Other words show whether English needs “all of us,” “all of them,” or “everyone.” Use todos for masculine or mixed groups and todas for an all-feminine group.",
       "example": {
-        "es": "Todos queremos descansar.",
-        "en": "We all want to rest."
+        "es": "Todos queremos una respuesta.",
+        "en": "We all want an answer."
       },
       "tags": [
         "word",
-        "group",
         "pronoun",
-        "first person plural"
+        "quantity",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-manana",
+        "ownerComicId": "es-xkcd-chuleta-para-el-soporte-informatico",
         "contextualSenseReviewed": true
       }
     },
@@ -3557,11 +3562,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -3762,7 +3767,7 @@
       "promptEs": "tener que + verbo en forma de diccionario",
       "questionEn": "How do you say that someone has to do something?",
       "answerEn": "Use a form of tener, then que, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Only tener changes for the person and time: tengo que, tienes que, tiene que, and so on. The final action keeps its -ar, -er, or -ir ending.",
+      "noteEn": "The dictionary form is the verb's basic, unchanged form ending in -ar, -er, or -ir: hablar means 'to speak,' comer means 'to eat,' and salir means 'to leave.' Only tener changes for the person and time. Tengo que means 'I have to,' tienes que means 'you have to' for one familiar person, and tiene que means 'he or she has to' or formal 'you have to.' Que and the final action verb stay unchanged: tengo que salir, tienes que salir, tiene que salir.",
       "example": {
         "es": "Tengo que salir temprano.",
         "en": "I have to leave early."
@@ -3829,7 +3834,7 @@
       "promptEs": "le/les + verbo … a + receptor explícito",
       "questionEn": "Why can Spanish use le or les with a verb and then still name the receiver with a phrase beginning with a?",
       "answerEn": "Use le or les with the verb, then use a phrase beginning with the word a to identify the receiver explicitly.",
-      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a conjugated verb, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once. In the prompt, the slash means that le and les are alternatives, each plus sign means “followed by,” and the dots mean that other words may appear between the verb and the named receiver.",
+      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a verb changed for the person and time, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once.",
       "example": {
         "es": "Le di agua al perro.",
         "en": "I gave the dog water."
@@ -4009,11 +4014,11 @@
       "id": "word-estar--state-infinitive",
       "kind": "word",
       "promptEs": "estar",
-      "answerEn": "to be (in a state or condition)",
-      "noteEn": "Estar is the unchanged dictionary form used for states, conditions, and locations. After another conjugated verb, estar itself remains unchanged.",
+      "answerEn": "to be (a place or condition)",
+      "noteEn": "Estar is the unchanged dictionary form used to describe a location or condition. In quiero estar, “I want to be,” quiero changes for the person and time, while estar stays unchanged.",
       "example": {
-        "es": "Quiero estar tranquilo.",
-        "en": "I want to be calm."
+        "es": "Quiero estar cerca de la ventana.",
+        "en": "I want to be near the window."
       },
       "tags": [
         "word",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-5b2888d9a1a71532",
+  "revision": "runtime-b84b90ec54f74ef6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -607,7 +607,7 @@
               }
             ],
             "cardIds": [
-              "word-estaba--state",
+              "word-estaba--progressive-auxiliary",
               "grammar-estar-deseando-infinitive",
               "grammar-past-contrast"
             ]
@@ -871,6 +871,15 @@
             ],
             "exampleEs": "DEL MUNDO",
             "explanationEn": "Del introduces mundo as the larger group within which the comparison is made."
+          },
+          {
+            "id": "es-xkcd-keynote:marketing-reply:review-word-w05",
+            "cardId": "word-estaba--progressive-auxiliary",
+            "participantWordIds": [
+              "es-xkcd-keynote:marketing-reply:w05"
+            ],
+            "exampleEs": "ESTABA DESEANDO",
+            "explanationEn": "Estaba helps deseando describe an ongoing desire at that past time."
           }
         ],
         "cardIds": [
@@ -879,7 +888,7 @@
           "word-seguro--fixed-seguro-que",
           "phrase-seguro-que",
           "word-que--clause-link",
-          "word-estaba--state",
+          "word-estaba--progressive-auxiliary",
           "grammar-estar-deseando-infinitive",
           "grammar-past-contrast",
           "word-deseando--eager-to",
@@ -930,7 +939,7 @@
       "word-seguro--fixed-seguro-que",
       "phrase-seguro-que",
       "word-que--clause-link",
-      "word-estaba--state",
+      "word-estaba--progressive-auxiliary",
       "grammar-estar-deseando-infinitive",
       "grammar-past-contrast",
       "word-deseando--eager-to",
@@ -982,8 +991,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1197,7 +1205,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -1613,8 +1621,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1632,23 +1640,26 @@
       }
     },
     {
-      "id": "word-estaba--state",
+      "id": "word-estaba--progressive-auxiliary",
       "kind": "word",
       "promptEs": "estaba",
-      "answerEn": "it was; used to be (a past state)",
-      "noteEn": "",
+      "answerEn": "was; were (helping describe an action in progress in the past)",
+      "noteEn": "Estaba is a past form of estar for I, he, she, it, or formal you. Before an ongoing-action form, usually ending in -ando or -iendo, it presents an action as in progress at a past time.",
+      "example": {
+        "es": "Ana estaba preparando té.",
+        "en": "Ana was making tea."
+      },
       "tags": [
         "word",
         "estar",
-        "imperfect",
-        "past",
+        "past progressive",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-exito",
+        "ownerComicId": "es-xkcd-coche-nuevo",
         "contextualSenseReviewed": true
       }
     },
@@ -1753,16 +1764,15 @@
       "id": "word-al--personal-a-contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "a + el before a specific person; often “the” or “to the” in English",
-      "noteEn": "Spanish contracts a + el to al. The personal a can mark a specific person who receives or is affected by an action; English may use “the,” “to the,” or no separate preposition, depending on the verb.",
+      "answerEn": "the; combines a and el before a person or animal directly affected by the action",
+      "noteEn": "Al combines a and el. This a marks a person, animal, or person-like target directly affected by the verb; it does not itself mean 'to' a recipient. El means 'the,' or helps identify 'the one' when no noun is stated. Keep al separate from accented él, 'he.'",
       "example": {
         "es": "Veo al profesor.",
         "en": "I see the teacher."
       },
       "tags": [
         "word",
-        "contraction",
-        "personal a"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1778,7 +1788,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -1799,19 +1809,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

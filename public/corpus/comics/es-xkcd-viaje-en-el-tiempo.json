@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-793f5686477733cc",
+  "revision": "runtime-1b3b120bbb622c51",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -182,7 +182,6 @@
             ],
             "cardIds": [
               "word-algún--any-question",
-              "grammar-alguno-to-algun-before-masculine-noun",
               "grammar-quedar-remaining-quantity",
               "grammar-yes-no-question"
             ]
@@ -201,7 +200,6 @@
             ],
             "cardIds": [
               "word-donut",
-              "grammar-alguno-to-algun-before-masculine-noun",
               "grammar-quedar-remaining-quantity",
               "grammar-yes-no-question"
             ]
@@ -246,16 +244,6 @@
             "explanationEn": "Queda is singular because the possible remaining item is one donut, and algún leaves its existence open."
           },
           {
-            "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-algun",
-            "cardId": "grammar-alguno-to-algun-before-masculine-noun",
-            "participantWordIds": [
-              "es-xkcd-viaje-en-el-tiempo:traveler-question:w08",
-              "es-xkcd-viaje-en-el-tiempo:traveler-question:w09"
-            ],
-            "exampleEs": "ALGÚN DONUT",
-            "explanationEn": "Algún is the shortened form used directly before the masculine singular noun donut."
-          },
-          {
             "id": "es-xkcd-viaje-en-el-tiempo:traveler-question:app-yes-no",
             "cardId": "grammar-yes-no-question",
             "participantWordIds": [
@@ -279,7 +267,6 @@
           "grammar-quedar-remaining-quantity",
           "grammar-yes-no-question",
           "word-algún--any-question",
-          "grammar-alguno-to-algun-before-masculine-noun",
           "word-donut"
         ]
       },
@@ -496,7 +483,7 @@
               }
             ],
             "cardIds": [
-              "word-de--after-antes-noun"
+              "word-de--after-antes"
             ]
           },
           {
@@ -620,7 +607,7 @@
           "word-decir",
           "word-eso",
           "word-antes--before-event",
-          "word-de--after-antes-noun",
+          "word-de--after-antes",
           "word-todas",
           "word-sus--her",
           "word-frases"
@@ -639,7 +626,6 @@
       "grammar-quedar-remaining-quantity",
       "grammar-yes-no-question",
       "word-algún--any-question",
-      "grammar-alguno-to-algun-before-masculine-noun",
       "word-donut",
       "word-aunque",
       "grammar-aunque-indicative-known-fact",
@@ -656,7 +642,7 @@
       "word-de--fixed-dejar-de",
       "word-eso",
       "word-antes--before-event",
-      "word-de--after-antes-noun",
+      "word-de--after-antes",
       "word-todas",
       "word-sus--her",
       "word-frases"
@@ -697,17 +683,15 @@
       "id": "word-del--from-time",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "from the (a time or period)",
-      "noteEn": "Del combines de and el. Here de marks a time or period as the source something comes from, rather than showing ownership.",
+      "answerEn": "from the; identifies the time or period something comes from",
+      "noteEn": "Del is the required combination of de and el. In this use, de gives a time of origin or a period something belongs to, rather than an owner. The expression may name a century, season, year, or the past or future.",
       "example": {
-        "es": "Recibimos una carta del pasado.",
-        "en": "We received a letter from the past."
+        "es": "Es una carta del pasado.",
+        "en": "It is a letter from the past."
       },
       "tags": [
         "word",
-        "contraction",
-        "time",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -756,19 +740,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -897,8 +883,8 @@
       "id": "word-algún--any-question",
       "kind": "word",
       "promptEs": "algún",
-      "answerEn": "any (before a masculine singular noun in a question)",
-      "noteEn": "Algún is the shortened form of alguno used directly before a masculine singular noun. In a question, natural English often uses “any.”",
+      "answerEn": "any; an unspecified one (in a question)",
+      "noteEn": "Alguno loses its final o directly before a noun for one thing that uses el, such as problema: alguno becomes algún problema. The accent on ú keeps the stress on the final syllable. In a question about whether one exists, English often uses “any.”",
       "example": {
         "es": "¿Hay algún problema?",
         "en": "Is there any problem?"
@@ -907,31 +893,6 @@
         "word",
         "indefinite",
         "question",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-viaje-en-el-tiempo",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "grammar-alguno-to-algun-before-masculine-noun",
-      "kind": "grammar",
-      "promptEs": "alguno → algún + nombre masculino singular",
-      "questionEn": "What happens to alguno when it comes directly before one masculine noun?",
-      "answerEn": "Shorten alguno to algún directly before a masculine singular noun.",
-      "noteEn": "The final -o disappears and the written accent remains: alguno can stand alone, but algún día and algún libro place the shortened form before a masculine singular noun. Feminine alguna does not shorten.",
-      "example": {
-        "es": "Necesito algún consejo.",
-        "en": "I need some advice."
-      },
-      "tags": [
-        "grammar",
-        "indefinite",
-        "shortened adjective",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1014,8 +975,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1083,10 +1048,10 @@
       "kind": "word",
       "promptEs": "cierto",
       "answerEn": "true; correct",
-      "noteEn": "After es, cierto describes a statement or claim as true.",
+      "noteEn": "Cierto can describe a claim as true or stand alone as a short response agreeing with it. This differs from cierto before a noun meaning “a certain.”",
       "example": {
-        "es": "Eso es cierto.",
-        "en": "That is true."
+        "es": "—La tienda cierra pronto. —Cierto.",
+        "en": "—The shop closes soon. —True."
       },
       "tags": [
         "word",
@@ -1182,8 +1147,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1230,7 +1195,7 @@
       "kind": "phrase",
       "promptEs": "dejar de + infinitivo",
       "answerEn": "Use a form of dejar, then de, then the action verb in its dictionary form.",
-      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de + action means to stop doing that action.",
+      "noteEn": "The dictionary form of a verb is called the infinitive. It usually ends in -ar, -er, or -ir. Only dejar changes to show who acts and when; the final verb stays in its dictionary form. Keep de in this pattern: dejar alone usually means “to leave” or “to let,” while dejar de followed by an action verb means to stop doing that action.",
       "tags": [
         "A2",
         "verb pattern",
@@ -1315,26 +1280,24 @@
       }
     },
     {
-      "id": "word-de--after-antes-noun",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "before; required after antes when a noun follows",
-      "noteEn": "Antes de comes before a noun or an unchanged action verb. The two Spanish words often correspond to the single English word “before.”",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Llegué antes de la cena.",
-        "en": "I arrived before dinner."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "time",
-        "antes de",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-viaje-en-el-tiempo",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },

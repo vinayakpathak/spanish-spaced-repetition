@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8169625bc5bcfeee",
+  "revision": "runtime-aa2841d17e392d5b",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -556,7 +556,7 @@
               }
             ],
             "cardIds": [
-              "word-a--conectarse",
+              "word-a--connect-target",
               "phrase-conectarse-a-internet"
             ]
           },
@@ -774,7 +774,7 @@
           "word-conectarnos",
           "grammar-pronoun-attached-to-infinitive",
           "phrase-conectarse-a-internet",
-          "word-a--conectarse",
+          "word-a--connect-target",
           "word-wifi--wireless-network",
           "word-del--from-the-location",
           "phrase-el-otro-lado-de",
@@ -1198,7 +1198,7 @@
       "word-conectarnos",
       "grammar-pronoun-attached-to-infinitive",
       "phrase-conectarse-a-internet",
-      "word-a--conectarse",
+      "word-a--connect-target",
       "word-wifi--wireless-network",
       "word-del--from-the-location",
       "phrase-el-otro-lado-de",
@@ -1238,7 +1238,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1319,7 +1323,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1872,7 +1880,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1917,25 +1925,24 @@
       }
     },
     {
-      "id": "word-a--conectarse",
+      "id": "word-a--connect-target",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to; required before what someone connects to",
-      "noteEn": "Conectarse normally takes a before the network, service, or device being joined.",
+      "answerEn": "to; introduces the endpoint of a connection",
+      "noteEn": "Use a after conectar or conectarse to name what the connection reaches. The connecting verb can change for the person and time, but a stays the same.",
       "example": {
-        "es": "Me conecto a la red.",
-        "en": "I connect to the network."
+        "es": "Conecta el cable a la batería.",
+        "en": "Connect the cable to the battery."
       },
       "tags": [
         "word",
-        "verb complement",
-        "internet"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fotos-porfa",
+        "ownerComicId": "es-xkcd-cirugia",
         "contextualSenseReviewed": true
       }
     },
@@ -1967,7 +1974,7 @@
       "id": "word-del--from-the-location",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "from the (de + el, identifying a source or location)",
+      "answerEn": "from the; identifies a source or location",
       "noteEn": "Del combines de and el. When something comes from a place or side, de can mean “from.”",
       "example": {
         "es": "Oigo música del otro cuarto.",
@@ -1993,7 +2000,7 @@
       "promptEs": "el otro lado de + lugar",
       "questionEn": "How do you identify the opposite side of a place, street, or object?",
       "answerEn": "Use el otro lado de, then name the place or object.",
-      "noteEn": "Al otro lado de often describes where something is; del otro lado de can identify something coming from that opposite side. Al combines a + el, and del combines de + el.",
+      "noteEn": "Al otro lado de often describes where something is; del otro lado de can identify something coming from that opposite side. Al combines a and el, and del combines de and el.",
       "example": {
         "es": "La farmacia está al otro lado de la plaza.",
         "en": "The pharmacy is on the other side of the square."
@@ -2157,8 +2164,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2208,8 +2214,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -2272,7 +2278,7 @@
       "id": "word-del--service-classifier",
       "kind": "word",
       "promptEs": "del",
-      "answerEn": "no separate English word; de + el links a worker to a service",
+      "answerEn": "no separate English word; links a worker to a service",
       "noteEn": "Spanish can use de after a job title to identify the service or area involved. Del combines de and el; English often places that service directly before the job title.",
       "example": {
         "es": "Llamé al técnico del teléfono.",
@@ -2368,7 +2374,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -2412,7 +2418,7 @@
       "promptEs": "le/les + verbo … a + receptor explícito",
       "questionEn": "Why can Spanish use le or les with a verb and then still name the receiver with a phrase beginning with a?",
       "answerEn": "Use le or les with the verb, then use a phrase beginning with the word a to identify the receiver explicitly.",
-      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a conjugated verb, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once. In the prompt, the slash means that le and les are alternatives, each plus sign means “followed by,” and the dots mean that other words may appear between the verb and the named receiver.",
+      "noteEn": "Le is for one receiver and les for more than one. It normally appears before a verb changed for the person and time, but it can attach to an unchanged verb form, as in darle. The later a phrase clarifies who or what the short marker refers to; Spanish often keeps both pieces even though natural English states the receiver only once.",
       "example": {
         "es": "Le di agua al perro.",
         "en": "I gave the dog water."

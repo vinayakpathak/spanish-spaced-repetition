@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-331e9718df84540e",
+  "revision": "runtime-bfe1adc8386c118f",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -260,7 +260,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-infinitive",
+              "word-de--after-antes",
               "grammar-antes-de-infinitive"
             ]
           },
@@ -485,7 +485,7 @@
           "word-rato--short-while",
           "word-antes--before-event",
           "grammar-antes-de-infinitive",
-          "word-de--fixed-antes-de-infinitive",
+          "word-de--after-antes",
           "word-darme--darse-cuenta",
           "grammar-pronoun-attached-to-infinitive",
           "phrase-darse-cuenta-de",
@@ -672,7 +672,7 @@
               }
             ],
             "cardIds": [
-              "word-eh--hesitation"
+              "word-eh"
             ]
           },
           {
@@ -711,7 +711,7 @@
         "excludedUnits": [],
         "applications": [],
         "cardIds": [
-          "word-eh--hesitation",
+          "word-eh",
           "word-no",
           "word-mucho--standalone-amount"
         ]
@@ -1256,7 +1256,7 @@
       "word-rato--short-while",
       "word-antes--before-event",
       "grammar-antes-de-infinitive",
-      "word-de--fixed-antes-de-infinitive",
+      "word-de--after-antes",
       "word-darme--darse-cuenta",
       "grammar-pronoun-attached-to-infinitive",
       "phrase-darse-cuenta-de",
@@ -1274,7 +1274,7 @@
       "question-words",
       "phrase-que-hay--greeting",
       "word-hay--que-hay-greeting",
-      "word-eh--hesitation",
+      "word-eh",
       "word-no",
       "word-mucho--standalone-amount",
       "word-mierda",
@@ -1416,7 +1416,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1618,26 +1622,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-infinitive",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links antes to the following action",
-      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Lávate las manos antes de comer.",
-        "en": "Wash your hands before eating."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "time",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -1672,7 +1674,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1766,8 +1768,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1813,7 +1815,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -1861,7 +1863,7 @@
       "promptEs": "hablar por teléfono",
       "questionEn": "How do you say that someone talks to another person on the phone?",
       "answerEn": "Use the matching form of hablar followed by por teléfono.",
-      "noteEn": "Hablar changes for the person and time. Por teléfono stays together to name the communication channel; Spanish uses por here where natural English normally says ‘on the phone.’ Add con plus a person when you want to name the other participant.",
+      "noteEn": "Hablar changes for the person and time. Por teléfono stays together to name the communication channel; Spanish uses por here where natural English normally says ‘on the phone.’ Add con before the person's name when you want to name the other participant.",
       "example": {
         "es": "Lucía habla por teléfono con su hermano.",
         "en": "Lucía talks with her brother on the phone."
@@ -1950,8 +1952,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2041,25 +2047,23 @@
       }
     },
     {
-      "id": "word-eh--hesitation",
+      "id": "word-eh",
       "kind": "word",
       "promptEs": "eh",
-      "answerEn": "uh; um (hesitation)",
-      "noteEn": "Eh can fill a pause while a speaker thinks or reacts. Its tone and punctuation determine whether it sounds hesitant, surprised, or attention-getting.",
+      "answerEn": "uh; um",
+      "noteEn": "A hesitation sound used while the speaker pauses to think or find words. This is different from eh used to call for attention or ask for agreement.",
       "example": {
-        "es": "Eh... necesito pensarlo.",
-        "en": "Um... I need to think about it."
+        "es": "Eh... tengo otra pregunta.",
+        "en": "Um... I have another question."
       },
       "tags": [
-        "word",
-        "interjection",
-        "hesitation"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-np-completo",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2070,8 +2074,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

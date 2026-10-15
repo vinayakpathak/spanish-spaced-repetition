@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-cb43ccfdc78fa1c2",
+  "revision": "runtime-fe8ca51828250548",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -450,7 +450,7 @@
             "cardIds": [
               "word-pueden",
               "grammar-poder-infinitive",
-              "grammar-passive-se-with-poder"
+              "grammar-se-puede-infinitive"
             ]
           },
           {
@@ -468,7 +468,7 @@
             "cardIds": [
               "word-copiarse--be-copied",
               "grammar-poder-infinitive",
-              "grammar-passive-se-with-poder",
+              "grammar-se-puede-infinitive",
               "concept-digital-data-copy-survival-meme-decay"
             ]
           },
@@ -569,7 +569,7 @@
           },
           {
             "id": "es-xkcd-datos-digitales:panel-2:app-passive-copy",
-            "cardId": "grammar-passive-se-with-poder",
+            "cardId": "grammar-se-puede-infinitive",
             "participantWordIds": [
               "es-xkcd-datos-digitales:panel-2:w09",
               "es-xkcd-datos-digitales:panel-2:w10"
@@ -611,7 +611,7 @@
           "word-bits",
           "word-pueden",
           "grammar-poder-infinitive",
-          "grammar-passive-se-with-poder",
+          "grammar-se-puede-infinitive",
           "word-copiarse--be-copied",
           "concept-digital-data-copy-survival-meme-decay",
           "word-sin",
@@ -1489,7 +1489,7 @@
       "word-bits",
       "word-pueden",
       "grammar-poder-infinitive",
-      "grammar-passive-se-with-poder",
+      "grammar-se-puede-infinitive",
       "word-copiarse--be-copied",
       "word-sin",
       "phrase-sin-perdida",
@@ -1558,10 +1558,10 @@
     {
       "id": "grammar-lo-adjective-as-noun",
       "kind": "grammar",
-      "promptEs": "lo + adjetivo",
-      "questionEn": "How do you refer to “what is important,” “the difficult part,” or another general quality without naming a noun?",
-      "answerEn": "Put the unchanged word lo before a masculine-singular adjective: lo importante, lo difícil, lo bueno.",
-      "noteEn": "Here lo does not stand for a masculine object. It turns the quality into a general idea or aspect, such as lo importante, “what is important.” The adjective stays in its masculine singular form because there is no named noun for it to match.",
+      "promptEs": "lo + palabra descriptiva",
+      "questionEn": "How do you use lo to mean 'the good part,' 'what is important,' or another general quality?",
+      "answerEn": "Put lo before the masculine singular form of a describing word, without adding a noun.",
+      "noteEn": "A describing word is called an adjective: bueno means good and difícil means difficult. Lo turns that quality into a general thing or aspect, as in lo bueno ('the good part') and lo difícil ('what is difficult'). It does not refer to a masculine object. Keep the describing word masculine singular: lo bueno, not lo buena or lo buenos. Lo mejor likewise means the best thing or part; mejor itself supplies 'best.'",
       "example": {
         "es": "Lo difícil es empezar.",
         "en": "The difficult part is starting."
@@ -1569,7 +1569,7 @@
       "tags": [
         "grammar",
         "neutral lo",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -1752,8 +1752,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1770,8 +1774,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1810,22 +1814,21 @@
       "id": "word-se--intransitive-change",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "no separate English word; presents the thing as changing",
-      "noteEn": "With verbs such as reducir and ampliar, se lets Spanish describe a change without naming anyone who causes it. English often uses a simple verb such as “shrinks” or “widens.”",
+      "answerEn": "no separate English word; presents something as undergoing a change",
+      "noteEn": "With some verbs, se makes the named thing the one that changes, rather than the thing someone changes. Compare Marta abre la puerta with la puerta se abre. The verb still changes for the thing and time; se does not say that it deliberately acts on itself.",
       "example": {
-        "es": "La mancha se reduce.",
-        "en": "The stain shrinks."
+        "es": "La taza se rompió.",
+        "en": "The cup broke."
       },
       "tags": [
         "word",
-        "pronoun",
-        "change of state"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -2069,12 +2072,12 @@
       }
     },
     {
-      "id": "grammar-passive-se-with-poder",
+      "id": "grammar-se-puede-infinitive",
       "kind": "grammar",
-      "promptEs": "poder + acción + se / se + poder + acción",
-      "questionEn": "How can you say that something can be done without naming who does it?",
-      "answerEn": "Use se with a form of poder and the action verb; se can come before the changed verb or attach to the unchanged action verb.",
-      "noteEn": "Only poder changes for number and time. The action stays in its dictionary form ending in -ar, -er, or -ir. Both los archivos se pueden copiar and los archivos pueden copiarse mean that the files can be copied, without naming a copier.",
+      "promptEs": "se + poder + acción en forma de diccionario",
+      "questionEn": "How do you use se and poder to say that something can be done without naming who does it?",
+      "answerEn": "Use se, a form of poder, and the action's dictionary form; se can instead attach to the end of that action.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and stays unchanged. When wording focuses on things receiving an action, poder matches them: la puerta se puede abrir, but las puertas se pueden abrir. The same order can be las puertas pueden abrirse. Other settings change puede to forms such as podía or pueda. Do not assume every se sentence has this agreement. Se puede caminar ('one can walk') talks about people acting in general, without a thing receiving the action to make poder plural, so use singular puede.",
       "example": {
         "es": "Las entradas pueden comprarse en línea.",
         "en": "The tickets can be bought online."
@@ -2089,7 +2092,7 @@
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-datos-digitales",
+        "ownerComicId": "es-xkcd-lo-que-significa-xkcd",
         "contextualSenseReviewed": true
       }
     },
@@ -2515,8 +2518,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -2558,7 +2561,11 @@
       "kind": "word",
       "promptEs": "si",
       "answerEn": "if",
-      "noteEn": "",
+      "noteEn": "Unaccented si introduces a condition or possibility. With an opening y in a question, ¿y si...? invites someone to consider 'what if ...?' This differs from accented sí, 'yes.'",
+      "example": {
+        "es": "¿Y si esperamos?",
+        "en": "What if we wait?"
+      },
       "tags": [
         "word",
         "contextual sense"

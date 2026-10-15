@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-5e7d66ddd8fa8a7d",
+  "revision": "runtime-80a95096e393038b",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -248,7 +248,7 @@
               }
             ],
             "cardIds": [
-              "word-de--partitive-some",
+              "word-de--partitive-group",
               "grammar-algunos-de-grupo"
             ]
           },
@@ -383,7 +383,7 @@
               }
             ],
             "cardIds": [
-              "word-es--impersonal-evaluation",
+              "word-es",
               "phrase-es-un-honor-infinitive"
             ]
           },
@@ -627,7 +627,7 @@
           },
           {
             "id": "es-xkcd-conferencia-ted:audience-address:app-partitive-de",
-            "cardId": "word-de--partitive-some",
+            "cardId": "word-de--partitive-group",
             "participantWordIds": [
               "es-xkcd-conferencia-ted:audience-address:w03"
             ],
@@ -720,7 +720,7 @@
           "grammar-vosotros-informal-plural",
           "word-algunos",
           "grammar-algunos-de-grupo",
-          "word-de--partitive-some",
+          "word-de--partitive-group",
           "word-los",
           "grammar-relative-superlative",
           "word-innovadores",
@@ -729,7 +729,7 @@
           "word-de--from",
           "word-muchos",
           "word-campos--academic-fields",
-          "word-es--impersonal-evaluation",
+          "word-es",
           "phrase-es-un-honor-infinitive",
           "word-un",
           "word-honor",
@@ -1092,7 +1092,7 @@
               "es-xkcd-conferencia-ted:no-solution:w07"
             ],
             "exampleEs": "SE ME OCURRE UNA BUENA FORMA",
-            "explanationEn": "Se marks the come-to-mind pattern, me identifies the person receiving the idea, ocurre agrees with one idea, and una buena forma fills that idea slot."
+            "explanationEn": "Se marks the come-to-mind meaning, me identifies the person receiving the idea, ocurre agrees with one idea, and una buena forma names that idea."
           }
         ],
         "cardIds": [
@@ -2496,7 +2496,7 @@
       "grammar-vosotros-informal-plural",
       "word-algunos",
       "grammar-algunos-de-grupo",
-      "word-de--partitive-some",
+      "word-de--partitive-group",
       "word-los",
       "grammar-relative-superlative",
       "word-innovadores",
@@ -2505,7 +2505,7 @@
       "word-de--from",
       "word-muchos",
       "word-campos--academic-fields",
-      "word-es--impersonal-evaluation",
+      "word-es",
       "phrase-es-un-honor-infinitive",
       "word-un",
       "word-honor",
@@ -2796,26 +2796,24 @@
       }
     },
     {
-      "id": "word-de--partitive-some",
+      "id": "word-de--partitive-group",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "of; links ‘some’ to the larger group",
-      "noteEn": "After algunos or algunas, de introduces the group from which the smaller set is chosen. Spanish normally keeps the matching article before that group: algunos de los, algunas de las.",
+      "answerEn": "of; identifies the larger group or whole",
+      "noteEn": "De links a selected amount or member to the group it comes from, as in uno de, algunos de, or la mayoría de. It also appears with nada de when none of the stated whole is included. De itself does not change.",
       "example": {
-        "es": "Algunas de las ventanas están abiertas.",
-        "en": "Some of the windows are open."
+        "es": "Algunos de mis amigos viven aquí.",
+        "en": "Some of my friends live here."
       },
       "tags": [
         "word",
-        "preposition",
-        "partitive",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-conferencia-ted",
+        "ownerComicId": "es-xkcd-baterias-de-litio",
         "contextualSenseReviewed": true
       }
     },
@@ -2840,19 +2838,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2991,27 +2989,24 @@
       }
     },
     {
-      "id": "word-es--impersonal-evaluation",
+      "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "it is (introducing an evaluation)",
-      "noteEn": "Spanish can begin an impersonal evaluation with es plus a describing word. English normally supplies an impersonal ‘it,’ but Spanish does not add a separate subject word.",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
       "example": {
-        "es": "Es extraño que llueva.",
-        "en": "It is strange that it is raining."
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
       },
       "tags": [
         "word",
-        "ser",
-        "impersonal expression",
-        "evaluation",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-tecnologia-avanzada",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3108,7 +3103,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -3411,7 +3406,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3560,8 +3559,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3687,10 +3685,10 @@
       "kind": "word",
       "promptEs": "buena",
       "answerEn": "good (feminine singular)",
-      "noteEn": "Buena is the feminine singular form of bueno. It is used before or after a feminine singular noun, such as práctica or decisión.",
+      "noteEn": "Buena is the feminine form of bueno, “good.” Use it for one feminine noun: una buena pregunta; for more than one, use buenas preguntas.",
       "example": {
-        "es": "Esa es una buena decisión.",
-        "en": "That is a good decision."
+        "es": "La biblioteca tiene una buena colección.",
+        "en": "The library has a good collection."
       },
       "tags": [
         "word",
@@ -4190,17 +4188,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,

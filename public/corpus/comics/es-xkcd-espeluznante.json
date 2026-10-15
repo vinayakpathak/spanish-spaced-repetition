@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-1a845ee070095169",
+  "revision": "runtime-48f1b0ae3aac90fb",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -647,7 +647,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-que",
+              "word-de--after-antes",
               "grammar-antes-de-que-subjunctive"
             ]
           },
@@ -767,7 +767,6 @@
             ],
             "cardIds": [
               "word-tengo--age",
-              "phrase-tener-edad-suficiente-para-infinitive",
               "concept-september-11-generation-gap"
             ]
           },
@@ -785,7 +784,7 @@
             ],
             "cardIds": [
               "word-edad",
-              "phrase-tener-edad-suficiente-para-infinitive",
+              "grammar-suficiente-para-infinitive",
               "concept-september-11-generation-gap"
             ]
           },
@@ -803,7 +802,7 @@
             ],
             "cardIds": [
               "word-suficiente",
-              "phrase-tener-edad-suficiente-para-infinitive"
+              "grammar-suficiente-para-infinitive"
             ]
           },
           {
@@ -820,7 +819,7 @@
             ],
             "cardIds": [
               "word-para--enough-result",
-              "phrase-tener-edad-suficiente-para-infinitive"
+              "grammar-suficiente-para-infinitive"
             ]
           },
           {
@@ -843,7 +842,7 @@
             ],
             "cardIds": [
               "word-mantener--conversation",
-              "phrase-tener-edad-suficiente-para-infinitive",
+              "grammar-suficiente-para-infinitive",
               "phrase-mantener-conversacion"
             ]
           },
@@ -941,16 +940,15 @@
           },
           {
             "id": "es-xkcd-espeluznante:generation-scare:app-old-enough",
-            "cardId": "phrase-tener-edad-suficiente-para-infinitive",
+            "cardId": "grammar-suficiente-para-infinitive",
             "participantWordIds": [
-              "es-xkcd-espeluznante:generation-scare:w11",
               "es-xkcd-espeluznante:generation-scare:w12",
               "es-xkcd-espeluznante:generation-scare:w13",
               "es-xkcd-espeluznante:generation-scare:w14",
               "es-xkcd-espeluznante:generation-scare:w15"
             ],
-            "exampleEs": "TENGO EDAD SUFICIENTE PARA MANTENER",
-            "explanationEn": "Tengo matches the speaker, edad suficiente para expresses being old enough, and mantener stays in its unchanged dictionary form for the resulting action."
+            "exampleEs": "EDAD SUFICIENTE PARA MANTENER",
+            "explanationEn": "Edad fills the amount slot, suficiente describes it as enough, and para introduces mantener in its unchanged dictionary form. The earlier tengo supplies possession separately."
           },
           {
             "id": "es-xkcd-espeluznante:generation-scare:app-conversation",
@@ -969,7 +967,7 @@
           "concept-september-11-generation-gap",
           "word-antes--before-event",
           "grammar-antes-de-que-subjunctive",
-          "word-de--fixed-antes-de-que",
+          "word-de--after-antes",
           "word-que--fixed-antes-de-que",
           "word-yo",
           "word-naciera",
@@ -978,8 +976,8 @@
           "phrase-sin-embargo",
           "word-embargo--sin-embargo",
           "word-tengo--age",
-          "phrase-tener-edad-suficiente-para-infinitive",
           "word-edad",
+          "grammar-suficiente-para-infinitive",
           "word-suficiente",
           "word-para--enough-result",
           "word-mantener--conversation",
@@ -1022,7 +1020,7 @@
       "concept-september-11-generation-gap",
       "word-antes--before-event",
       "grammar-antes-de-que-subjunctive",
-      "word-de--fixed-antes-de-que",
+      "word-de--after-antes",
       "word-que--fixed-antes-de-que",
       "word-yo",
       "word-naciera",
@@ -1030,8 +1028,8 @@
       "phrase-sin-embargo",
       "word-embargo--sin-embargo",
       "word-tengo--age",
-      "phrase-tener-edad-suficiente-para-infinitive",
       "word-edad",
+      "grammar-suficiente-para-infinitive",
       "word-suficiente",
       "word-para--enough-result",
       "word-mantener--conversation",
@@ -1372,20 +1370,20 @@
     {
       "id": "grammar-indefinite-relative-subjunctive",
       "kind": "grammar",
-      "promptEs": "alguien/algo que + subjuntivo",
-      "answerEn": "Use the subjunctive after que when describing that unknown person or thing.",
-      "noteEn": "Spanish treats a known person differently from one you are still trying to find. Conozco a alguien que habla inglés means “I know someone who speaks English.” Busco a alguien que hable inglés uses hable because no particular person has been identified.",
-      "tags": [
-        "B1",
-        "grammar",
-        "subjunctive",
-        "relative clauses"
-      ],
-      "questionEn": "Which verb form do you use when you are looking for a person or thing that has not been identified—and may not exist?",
+      "promptEs": "persona o cosa no identificada + que + descripción",
+      "questionEn": "How do you choose the verb after que when describing someone or something that has not been identified?",
+      "answerEn": "Use the special subjunctive form when you want any suitable person or thing, or are not treating its existence as established.",
+      "noteEn": "Name the person or thing, add que ('who' or 'that'), then describe it. Subjunctive is the name for verb forms used here for a wanted or possible description rather than a known example. Compare conozco a alguien que habla inglés, 'I know someone who speaks English,' with busco a alguien que hable inglés, 'I am looking for someone who speaks English.' Habla changes to hable because no particular suitable person is identified. Similar choices occur after cualquier ('any') or when a suitable thing may not exist; the word que alone does not force this form.",
       "example": {
-        "es": "Busco a alguien que hable inglés.",
-        "en": "I am looking for someone who speaks English."
+        "es": "Necesito un libro que explique esto.",
+        "en": "I need a book that explains this."
       },
+      "tags": [
+        "grammar",
+        "relative descriptions",
+        "subjunctive",
+        "B1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1470,7 +1468,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1569,20 +1571,20 @@
     {
       "id": "grammar-informal-command",
       "kind": "grammar",
-      "promptEs": "imperativo afirmativo de tú + pronombre al final",
-      "answerEn": "Attach it to the end of the command and write the result as one word.",
-      "noteEn": "A positive command tells someone to do something, rather than not to do it. With one informal listener, sienta + te becomes siéntate. A written accent may be added so the combined word keeps the original stress. In a negative command, the short word goes before the verb instead: no te sientes.",
+      "promptEs": "orden afirmativa con una palabra corta al final",
+      "questionEn": "Where do te ('yourself'), lo ('it'), and similar short words go with a command to do something?",
+      "answerEn": "Attach them to the end of an affirmative command and write the result as one word.",
+      "noteEn": "An affirmative command tells someone to do something, rather than not to do it. This attachment works with both familiar and formal commands: sienta and te form siéntate; envíe and lo form envíelo. The short words stand for a person or thing involved in the action; they are called pronouns. A written accent may be needed to preserve the command's original stress. With a negative command, put these words before the verb instead: no te sientes. Choosing the correct command ending is a separate step.",
+      "example": {
+        "es": "Envíelo mañana.",
+        "en": "Send it tomorrow."
+      },
       "tags": [
-        "A2",
         "grammar",
         "commands",
-        "informal"
+        "attached pronouns",
+        "A2"
       ],
-      "questionEn": "If a positive command includes a short word such as te (“yourself”) or lo (“it”), where does that word go?",
-      "example": {
-        "es": "¡Siéntate aquí!",
-        "en": "Sit down here!"
-      },
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1645,6 +1647,7 @@
         "generation gap",
         "comic joke"
       ],
+      "questionEn": "Why does a child's birth date make the September 11 reference unsettling?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1682,7 +1685,7 @@
       "promptEs": "antes de que + subjuntivo",
       "questionEn": "How do you connect one event to a later event that has not happened yet?",
       "answerEn": "Use antes de que, then put the pending event's verb in the subjunctive form.",
-      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de plus the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
+      "noteEn": "The subjunctive is a special verb form used after this connector because the later event has not happened yet. For regular -ar verbs, this form uses an e ending: lanzar becomes lance. If one person performs both actions, Spanish often uses antes de followed by the second verb's unchanged dictionary form instead: como antes de salir means “I eat before leaving.”",
       "example": {
         "es": "Sal antes de que llueva.",
         "en": "Leave before it rains."
@@ -1702,25 +1705,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-que",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; part of antes de que (“before”)",
-      "noteEn": "De is a required middle piece when antes introduces a full event with que. Translate antes de que as one connector.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Volvamos antes de que oscurezca.",
-        "en": "Let's return before it gets dark."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "fixed connector",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-semaforo-largo",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -1886,31 +1888,6 @@
       }
     },
     {
-      "id": "phrase-tener-edad-suficiente-para-infinitive",
-      "kind": "phrase",
-      "promptEs": "tener edad suficiente para + infinitivo",
-      "questionEn": "How do you say that someone is old enough to do something?",
-      "answerEn": "Use a matching form of tener, then edad suficiente para and the action in its unchanged dictionary form.",
-      "noteEn": "Tener changes for the person: tengo, tienes, tiene, and so on. Edad suficiente para stays together, and the following -ar, -er, or -ir verb does not change.",
-      "example": {
-        "es": "Ya tiene edad suficiente para viajar solo.",
-        "en": "He is old enough to travel alone now."
-      },
-      "tags": [
-        "phrase",
-        "age",
-        "suficiente para",
-        "infinitive"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-espeluznante",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-edad",
       "kind": "word",
       "promptEs": "edad",
@@ -1926,6 +1903,31 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-fondo-de-solteros",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "grammar-suficiente-para-infinitive",
+      "kind": "grammar",
+      "promptEs": "cantidad suficiente + para + acción",
+      "questionEn": "How do you use suficiente para to say that an amount is enough to do something?",
+      "answerEn": "Describe the amount with suficiente, then use para and the action verb in its dictionary form.",
+      "noteEn": "Suficiente can come before or after the noun: suficiente comida or comida suficiente. It becomes suficientes with a plural noun, as in suficientes personas. The action after para keeps its -ar, -er, or -ir dictionary form. This describes the result the amount makes possible, including enough time, food, money, or age; the surrounding verb is not part of the fixed pattern.",
+      "example": {
+        "es": "Hay comida suficiente para alimentar a todos.",
+        "en": "There is enough food to feed everyone."
+      },
+      "tags": [
+        "grammar",
+        "sufficient amount",
+        "result",
+        "A2"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-monstruo",
         "contextualSenseReviewed": true
       }
     },

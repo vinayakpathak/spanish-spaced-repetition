@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-c937bd45e051923e",
+  "revision": "runtime-6d7f9186dd11a309",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -656,7 +656,7 @@
               }
             ],
             "cardIds": [
-              "word-de--fixed-antes-de-infinitive",
+              "word-de--after-antes",
               "grammar-antes-de-infinitive"
             ]
           },
@@ -817,7 +817,7 @@
           "word-cerdo--meat",
           "word-antes--before-event",
           "grammar-antes-de-infinitive",
-          "word-de--fixed-antes-de-infinitive",
+          "word-de--after-antes",
           "word-saber",
           "word-nada",
           "word-sobre--about",
@@ -1168,7 +1168,7 @@
               }
             ],
             "cardIds": [
-              "word-salir--go-outside",
+              "word-salir--come-out",
               "grammar-sin-infinitive"
             ]
           },
@@ -1302,7 +1302,7 @@
           "word-conseguirla--obtain-it",
           "grammar-pronoun-attached-to-infinitive",
           "grammar-sin-infinitive",
-          "word-salir--go-outside",
+          "word-salir--come-out",
           "word-fuera--outside",
           "word-ayuda--plea"
         ]
@@ -3741,7 +3741,7 @@
       "word-cerdo--meat",
       "word-antes--before-event",
       "grammar-antes-de-infinitive",
-      "word-de--fixed-antes-de-infinitive",
+      "word-de--after-antes",
       "word-saber",
       "word-nada",
       "word-sobre--about",
@@ -3760,7 +3760,7 @@
       "word-conseguirla--obtain-it",
       "grammar-pronoun-attached-to-infinitive",
       "grammar-sin-infinitive",
-      "word-salir--go-outside",
+      "word-salir--come-out",
       "word-fuera--outside",
       "word-ayuda--plea",
       "word-cuánto",
@@ -3848,8 +3848,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3901,19 +3905,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4133,6 +4139,7 @@
         "misinformation",
         "comic joke"
       ],
+      "questionEn": "Why does the swine-flu joke focus on Twitter searches?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -4297,7 +4304,7 @@
       "kind": "word",
       "promptEs": "cerdo",
       "answerEn": "pork; pig meat",
-      "noteEn": "Cerdo can name the animal or its meat. This card is for the food meaning.",
+      "noteEn": "Cerdo can name the animal or its meat; in a food context, it means pork.",
       "example": {
         "es": "No como cerdo.",
         "en": "I do not eat pork."
@@ -4365,26 +4372,24 @@
       }
     },
     {
-      "id": "word-de--fixed-antes-de-infinitive",
+      "id": "word-de--after-antes",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links antes to the following action",
-      "noteEn": "Keep de after antes when the next action stays in its unchanged dictionary form: antes de salir. English expresses the sequence with 'before' and does not translate de separately.",
+      "answerEn": "no separate English word; links antes to what happens later",
+      "noteEn": "Antes de means 'before.' De stays after antes before a noun, an action's dictionary form, or que followed by an event. The dictionary form is the unchanged verb ending in -ar, -er, or -ir, such as salir.",
       "example": {
-        "es": "Lávate las manos antes de comer.",
-        "en": "Wash your hands before eating."
+        "es": "Llego antes de la cena.",
+        "en": "I arrive before dinner."
       },
       "tags": [
         "word",
-        "time",
-        "verb pattern",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-queja-del-compilador",
+        "ownerComicId": "es-xkcd-diario-5",
         "contextualSenseReviewed": true
       }
     },
@@ -4558,8 +4563,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4722,7 +4726,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -4766,21 +4770,26 @@
       }
     },
     {
-      "id": "word-salir--go-outside",
+      "id": "word-salir--come-out",
       "kind": "word",
       "promptEs": "salir",
-      "answerEn": "to go out; to go outside",
-      "noteEn": "",
+      "answerEn": "to go out; to come out; to exit",
+      "noteEn": "Salir describes movement from inside to outside. English chooses “come out” or “go out” according to the speaker's viewpoint.",
+      "example": {
+        "es": "El perro quiere salir del coche.",
+        "en": "The dog wants to get out of the car."
+      },
       "tags": [
         "word",
         "movement",
+        "infinitive",
         "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-gripe-porcina",
+        "ownerComicId": "es-xkcd-trimestre",
         "contextualSenseReviewed": true
       }
     },
@@ -4862,7 +4871,7 @@
       "promptEs": "quedarle tiempo a alguien",
       "questionEn": "How do you say how much time someone has left?",
       "answerEn": "Put me, te, le, nos, os, or les before quedar, and make quedar singular or plural to match the time amount that remains.",
-      "noteEn": "Spanish presents the time as remaining to the person. Use queda with one remaining unit and quedan with plural units: me queda una hora, but me quedan dos horas. The small word before quedar identifies who has that time left. You may add a + a name or person to clarify who: A Marta le quedan dos horas.",
+      "noteEn": "Spanish presents the time as remaining to the person. Use queda with one remaining unit and quedan with plural units: me queda una hora, but me quedan dos horas. The small word before quedar identifies who has that time left. You may put a before a name or person to clarify who: A Marta le quedan dos horas.",
       "example": {
         "es": "A Marta le quedan dos horas.",
         "en": "Marta has two hours left."
@@ -5097,8 +5106,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -5369,17 +5382,15 @@
       "id": "word-se--passive-unnamed-doer",
       "kind": "word",
       "promptEs": "se",
-      "answerEn": "marks an action whose doer is not named",
-      "noteEn": "Before a third-person verb, se can focus on what happens rather than who does it. English often uses a passive form such as ‘is requested’ or ‘have been discovered.’",
+      "answerEn": "no separate English word; focuses on what receives an action, without naming the doer",
+      "noteEn": "Se can present the thing acted on without naming who acts. The verb normally matches that thing: se vende una casa, but se venden dos casas. English often uses 'is' or 'are' plus a form such as 'sold.' Adding poder expresses possibility without changing se's role.",
       "example": {
-        "es": "Se encontraron varios errores.",
-        "en": "Several errors were found."
+        "es": "Se venden dos bicicletas.",
+        "en": "Two bicycles are for sale."
       },
       "tags": [
         "word",
-        "passive se",
-        "unnamed agent",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -5499,7 +5510,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -5826,8 +5841,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -5863,8 +5882,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -5928,7 +5947,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -5946,7 +5969,7 @@
       "kind": "word",
       "promptEs": "cerdo",
       "answerEn": "pig",
-      "noteEn": "This card is for the animal, not pork as food.",
+      "noteEn": "Cerdo can name either the animal or its meat. English distinguishes pig from pork.",
       "example": {
         "es": "El cerdo duerme en el establo.",
         "en": "The pig sleeps in the barn."
@@ -6032,6 +6055,7 @@
         "misinformation",
         "comic joke"
       ],
+      "questionEn": "Does the claim that vaccines cause autism have scientific support?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -6044,8 +6068,12 @@
       "id": "word-estan--location",
       "kind": "word",
       "promptEs": "están",
-      "answerEn": "they are (in a place or state)",
-      "noteEn": "",
+      "answerEn": "are (a place or condition)",
+      "noteEn": "Están is a form of estar for they or plural you, ustedes. It describes where people or things are, or their condition. Spanish often leaves out the separate word for they or you because the context identifies them. Before another verb's ongoing-action form, están has a different helping-verb use.",
+      "example": {
+        "es": "Las maletas están junto a la puerta.",
+        "en": "The suitcases are beside the door."
+      },
       "tags": [
         "word",
         "estar",
@@ -6112,8 +6140,8 @@
       "id": "word-al--contraction",
       "kind": "word",
       "promptEs": "al",
-      "answerEn": "to the (a + el)",
-      "noteEn": "Al is the required contraction of a + el. Spanish writes them as one word whenever both occur together.",
+      "answerEn": "to the",
+      "noteEn": "Al combines a and el into one word. Spanish requires this combined form when the two occur together.",
       "example": {
         "es": "Voy al mercado.",
         "en": "I’m going to the market."
@@ -6230,7 +6258,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

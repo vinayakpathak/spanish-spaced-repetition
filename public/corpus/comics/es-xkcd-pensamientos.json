@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-80a1f6eca18e1099",
+  "revision": "runtime-ee822c33a744203d",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -610,7 +610,7 @@
               }
             ],
             "cardIds": [
-              "word-le--external-possession"
+              "word-le--affected-person"
             ]
           },
           {
@@ -708,7 +708,7 @@
               }
             ],
             "cardIds": [
-              "word-su--your-formal-or-plural"
+              "word-su"
             ]
           },
           {
@@ -732,7 +732,7 @@
         "applications": [
           {
             "id": "es-xkcd-pensamientos:suppressed-thought:app-le-external-possession",
-            "cardId": "word-le--external-possession",
+            "cardId": "word-le--affected-person",
             "participantWordIds": [
               "es-xkcd-pensamientos:suppressed-thought:word-01"
             ],
@@ -751,14 +751,14 @@
           }
         ],
         "cardIds": [
-          "word-le--external-possession",
+          "word-le--affected-person",
           "word-he",
           "grammar-present-perfect",
           "word-chupado",
           "word-los",
           "word-pezones",
           "word-a--recipient",
-          "word-su--your-formal-or-plural",
+          "word-su",
           "word-hija"
         ]
       }
@@ -792,13 +792,13 @@
       "word-al--fixed-al-fin",
       "phrase-al-fin",
       "word-fin--al-fin",
-      "word-le--external-possession",
+      "word-le--affected-person",
       "word-he",
       "grammar-present-perfect",
       "word-chupado",
       "word-pezones",
       "word-a--recipient",
-      "word-su--your-formal-or-plural",
+      "word-su",
       "word-hija"
     ],
     "reviewStatus": "ai-authored-internal-qa",
@@ -848,11 +848,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -872,7 +872,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -1004,7 +1004,7 @@
       "promptEs": "tener que + verbo en forma de diccionario",
       "questionEn": "How do you say that someone has to do something?",
       "answerEn": "Use a form of tener, then que, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Only tener changes for the person and time: tengo que, tienes que, tiene que, and so on. The final action keeps its -ar, -er, or -ir ending.",
+      "noteEn": "The dictionary form is the verb's basic, unchanged form ending in -ar, -er, or -ir: hablar means 'to speak,' comer means 'to eat,' and salir means 'to leave.' Only tener changes for the person and time. Tengo que means 'I have to,' tienes que means 'you have to' for one familiar person, and tiene que means 'he or she has to' or formal 'you have to.' Que and the final action verb stay unchanged: tengo que salir, tienes que salir, tiene que salir.",
       "example": {
         "es": "Tengo que salir temprano.",
         "en": "I have to leave early."
@@ -1062,19 +1062,19 @@
     {
       "id": "grammar-relative-superlative",
       "kind": "grammar",
-      "promptEs": "el/la/los/las + sustantivo + más + adjetivo",
-      "questionEn": "How do you describe someone or something as the most of a quality?",
-      "answerEn": "Use the matching form of “the,” name the person or thing, then add más plus the describing word.",
-      "noteEn": "The opening el, la, los, or las agrees with the noun. Más stays unchanged, while the final adjective changes when Spanish normally requires agreement.",
+      "promptEs": "el, la, los o las + nombre opcional + más + descripción",
+      "questionEn": "How do you use el más or la más to say that something has the most of a quality?",
+      "answerEn": "Use the matching word for 'the,' name the thing if needed, then add más and the describing word.",
+      "noteEn": "You may leave out the noun, the name of the person or thing, when it is already clear. El, la, los, or las matches the thing, and the describing word also matches when its form changes: la calle más larga, or la más larga when calle is understood. Más stays unchanged and marks the highest degree within the relevant group. The grammar name for this highest-degree description is a superlative.",
       "example": {
         "es": "Es la calle más larga.",
         "en": "It is the longest street."
       },
       "tags": [
-        "A2",
         "grammar",
         "superlative",
-        "comparison"
+        "comparison",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1107,7 +1107,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1160,8 +1164,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1177,19 +1185,19 @@
     {
       "id": "grammar-es-adjective-infinitive",
       "kind": "grammar",
-      "promptEs": "es + adjetivo + verbo en forma de diccionario",
-      "questionEn": "How do you say that doing an activity is great, difficult, useful, or another quality?",
-      "answerEn": "Use es, add the describing word, and put the activity verb in its unchanged dictionary form.",
-      "noteEn": "This pattern evaluates an activity in general. The final verb keeps its -ar, -er, or -ir ending because no particular person is stated as its subject.",
+      "promptEs": "es + descripción + verbo en forma de diccionario",
+      "questionEn": "How do you use es to say that an activity is easy, difficult, useful, or similar?",
+      "answerEn": "Use es, then a describing word, then the activity verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir: esperar, aprender, salir. It names the activity in general rather than saying who does it. Spanish needs no separate word for the English it in 'It is difficult to wait.' For a past evaluation, es can change to era or fue; the activity still keeps its dictionary form.",
       "example": {
         "es": "Es difícil esperar.",
-        "en": "Waiting is difficult."
+        "en": "It is difficult to wait."
       },
       "tags": [
-        "A2",
         "grammar",
         "evaluation",
-        "infinitive"
+        "infinitive",
+        "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1290,7 +1298,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1371,25 +1379,24 @@
       }
     },
     {
-      "id": "word-le--external-possession",
+      "id": "word-le--affected-person",
       "kind": "word",
       "promptEs": "le",
-      "answerEn": "her; marks the person whose body part is affected",
-      "noteEn": "Spanish often identifies the owner of a body part with me, te, le, nos, or les instead of putting a possessive word before the body part. A later a + person phrase can clarify who le refers to.",
+      "answerEn": "marks one person or entity affected by what happens",
+      "noteEn": "Le can identify the person whose body, possessions, or situation is affected, even when nothing is literally given to them. It can refer to him, her, or formal you. English may use 'his,' 'her,' 'your,' or 'to' or 'with' that person; the surrounding words identify who is meant.",
       "example": {
         "es": "Le lavé las manos al niño.",
         "en": "I washed the child's hands."
       },
       "tags": [
         "word",
-        "indirect object",
-        "body parts"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pensamientos",
+        "ownerComicId": "es-xkcd-diario",
         "contextualSenseReviewed": true
       }
     },
@@ -1491,21 +1498,24 @@
       }
     },
     {
-      "id": "word-su--your-formal-or-plural",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "your (formal or plural, before one thing)",
-      "noteEn": "",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
+      "example": {
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
+      },
       "tags": [
         "word",
-        "possessive",
-        "formal address"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pensamientos",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

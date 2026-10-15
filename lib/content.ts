@@ -1,4 +1,5 @@
 import { WORD_BOUNDS_BY_REGION } from "./word-bounds.generated.js";
+import { correctedSeedCards, correctedSeedComic } from "./seed-corrections.js";
 
 /**
  * Curated, non-commercial seed content for an English speaker learning Spanish.
@@ -2487,10 +2488,10 @@ const REUSABLE_CURATED_CARDS: readonly LearningCard[] =
     ] ?? {}),
   }));
 
-export const CARDS: readonly LearningCard[] = [
+export const CARDS: readonly LearningCard[] = correctedSeedCards([
   ...REUSABLE_CURATED_CARDS,
   ...WORD_CARDS,
-];
+]) as readonly LearningCard[];
 
 export type CardId = CuratedCardId | WordCardId;
 
@@ -3967,7 +3968,7 @@ const COMIC_SEEDS = [
   },
 ] as const satisfies readonly ComicSeed[];
 
-export const COMICS: readonly Comic[] = COMIC_SEEDS.map(defineComic);
+export const COMICS: readonly Comic[] = COMIC_SEEDS.map(defineComic).map(correctedSeedComic) as readonly Comic[];
 
 export const CARD_BY_ID: ReadonlyMap<CardId, LearningCard> = new Map(
   CARDS.map((card) => [card.id as CardId, card]),
@@ -4229,7 +4230,7 @@ export function validateContent(): string[] {
         ).length;
         const expectsWordApplication =
           meaningCardId in WORD_APPLICATION_EXPLANATIONS;
-        if (wordApplicationCount !== (expectsWordApplication ? 1 : 0)) {
+        if (wordApplicationCount > 1 || (expectsWordApplication && wordApplicationCount !== 1)) {
           errors.push(
             `Word meaning application mismatch in ${comic.id}/${region.id}/${word.id}: ${meaningCardId}`,
           );

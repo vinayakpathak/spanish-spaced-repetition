@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a772bfe26b28d042",
+  "revision": "runtime-60c3855e52f14316",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1240,7 +1240,7 @@
               }
             ],
             "cardIds": [
-              "word-me--experiencer-doler",
+              "word-me--experiencer",
               "grammar-doler-experiencer"
             ]
           },
@@ -1388,7 +1388,7 @@
           "word-lo--lo-que-intensity",
           "grammar-lo-que-intensity",
           "word-que--lo-que-intensity",
-          "word-me--experiencer-doler",
+          "word-me--experiencer",
           "grammar-doler-experiencer",
           "word-ha",
           "grammar-present-perfect",
@@ -1604,7 +1604,7 @@
               }
             ],
             "cardIds": [
-              "word-quería--intention"
+              "word-quería--wanted-desire"
             ]
           },
           {
@@ -1687,7 +1687,7 @@
           }
         ],
         "cardIds": [
-          "word-quería--intention",
+          "word-quería--wanted-desire",
           "word-escribir",
           "word-te--direct",
           "phrase-te-quiero",
@@ -2226,7 +2226,7 @@
       "word-lo--lo-que-intensity",
       "grammar-lo-que-intensity",
       "word-que--lo-que-intensity",
-      "word-me--experiencer-doler",
+      "word-me--experiencer",
       "grammar-doler-experiencer",
       "word-ha",
       "word-dolido--hurt",
@@ -2239,7 +2239,7 @@
       "word-lo--apology",
       "phrase-lo-siento",
       "word-siento",
-      "word-quería--intention",
+      "word-quería--wanted-desire",
       "word-escribir",
       "word-te--direct",
       "phrase-te-quiero",
@@ -2292,8 +2292,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2493,10 +2497,10 @@
     {
       "id": "grammar-article-adjective-omitted-noun",
       "kind": "grammar",
-      "promptEs": "el/la/los/las o un/una + adjetivo sin repetir el sustantivo",
-      "questionEn": "How do you say “the interesting one” or “a small one” without repeating the noun?",
-      "answerEn": "Keep the article and adjective, omit the repeated noun, and make both agree with that understood noun.",
-      "noteEn": "The article is a word such as el, la, un, or una. The adjective still changes to match the omitted noun: una pequeña can mean “a small feminine one,” while uno pequeño can mean “a small masculine one.” Context supplies the missing noun.",
+      "promptEs": "el, la, los, las, uno o una + descripción, sin repetir el nombre",
+      "questionEn": "How do you say 'the small one' or 'a small one' without repeating the thing's name?",
+      "answerEn": "Keep the word for 'the' or 'a' and the description, but omit the noun when it is already clear.",
+      "noteEn": "Put the description after the word for 'the' or 'a'. For 'the,' use el, la, los, or las to match the understood thing; for a singular 'a,' use uno for a masculine thing or una for a feminine thing when the noun is omitted. The describing word, called an adjective, still matches it: referring to a camisa, la pequeña means 'the small one.' Words such as más can qualify the description without requiring the noun to be repeated.",
       "example": {
         "es": "Quiero una taza; dame la pequeña.",
         "en": "I want a cup; give me the small one."
@@ -2504,7 +2508,7 @@
       "tags": [
         "grammar",
         "omitted noun",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2701,7 +2705,7 @@
       "promptEs": "tener que + verbo en forma de diccionario",
       "questionEn": "How do you say that someone has to do something?",
       "answerEn": "Use a form of tener, then que, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Only tener changes for the person and time: tengo que, tienes que, tiene que, and so on. The final action keeps its -ar, -er, or -ir ending.",
+      "noteEn": "The dictionary form is the verb's basic, unchanged form ending in -ar, -er, or -ir: hablar means 'to speak,' comer means 'to eat,' and salir means 'to leave.' Only tener changes for the person and time. Tengo que means 'I have to,' tienes que means 'you have to' for one familiar person, and tiene que means 'he or she has to' or formal 'you have to.' Que and the final action verb stay unchanged: tengo que salir, tienes que salir, tiene que salir.",
       "example": {
         "es": "Tengo que salir temprano.",
         "en": "I have to leave early."
@@ -2902,8 +2906,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2917,8 +2920,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2935,8 +2942,12 @@
       "id": "word-por--cause",
       "kind": "word",
       "promptEs": "por",
-      "answerEn": "because of; due to",
-      "noteEn": "",
+      "answerEn": "because of; for a reason",
+      "noteEn": "Por can introduce the cause or reason for something, before a noun or an action in its dictionary form. It explains why something happens, not the goal someone wants to achieve.",
+      "example": {
+        "es": "Cerraron la calle por la nieve.",
+        "en": "They closed the street because of the snow."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3053,8 +3064,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3155,20 +3165,18 @@
       }
     },
     {
-      "id": "word-me--experiencer-doler",
+      "id": "word-me--experiencer",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "to me; marks the person who feels the pain",
-      "noteEn": "Doler is organized differently from English “hurt”: the painful thing controls the verb, while me, te, or le identifies who feels it.",
+      "answerEn": "marks me as the person who feels, likes, or experiences something",
+      "noteEn": "Me identifies the speaker as the person having a feeling, impression, preference, or difficulty. English often makes this person 'I,' while Spanish builds its wording around what produces the reaction. Compare me gusta el libro with me gustan los libros: me stays the same.",
       "example": {
-        "es": "Me duele la espalda.",
-        "en": "My back hurts."
+        "es": "Me gustan estas canciones.",
+        "en": "I like these songs."
       },
       "tags": [
         "word",
-        "doler",
-        "experiencer",
-        "pain"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3323,7 +3331,7 @@
       "id": "word-a--near-future",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "to (part of ir a + infinitive, going to do something)",
+      "answerEn": "to; connects a form of ir to the action someone is going to do",
       "noteEn": "",
       "tags": [
         "word",
@@ -3377,19 +3385,20 @@
     {
       "id": "phrase-lo-siento",
       "kind": "phrase",
-      "promptEs": "Lo siento.",
-      "answerEn": "Lo siento means “I'm sorry.”",
-      "noteEn": "Use this fixed expression for an apology or when reacting sympathetically to bad news. Learn it as a complete expression instead of translating lo and siento separately.",
-      "tags": [
-        "A1",
-        "expression",
-        "politeness"
-      ],
-      "questionEn": "What is the standard way to say “I'm sorry” when apologizing or expressing sympathy?",
+      "promptEs": "lo siento o lo sentimos",
+      "questionEn": "How do you say 'I'm sorry' or 'we're sorry' with lo siento?",
+      "answerEn": "Use lo siento when speaking for yourself and lo sentimos when speaking for a group.",
+      "noteEn": "Use this conventional expression for an apology or for sympathy about bad news. Lo stays fixed, while sentir changes to siento for I and sentimos for we. Mucho can strengthen the apology: lo siento mucho. These are variations of the same expression, not separate meanings of apology.",
       "example": {
-        "es": "Lo siento. Fue un error.",
-        "en": "I'm sorry. It was a mistake."
+        "es": "Lo sentimos. Fue un error.",
+        "en": "We're sorry. It was a mistake."
       },
+      "tags": [
+        "phrase",
+        "apology",
+        "politeness",
+        "A1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3417,25 +3426,25 @@
       }
     },
     {
-      "id": "word-quería--intention",
+      "id": "word-quería--wanted-desire",
       "kind": "word",
       "promptEs": "quería",
-      "answerEn": "I wanted; I meant to",
-      "noteEn": "Quería is a past-background form of querer. Before another action verb, it can describe an intended action that may not have happened.",
+      "answerEn": "wanted; meant to",
+      "noteEn": "Quería is a past form of querer, “to want.” It describes a wish or intention at that past time without saying whether it was fulfilled. The same form can refer to I, he, she, or formal you; context identifies the person.",
       "example": {
-        "es": "Quería llamarte ayer.",
-        "en": "I wanted to call you yesterday."
+        "es": "Quería comprar pan, pero la tienda estaba cerrada.",
+        "en": "I wanted to buy bread, but the shop was closed."
       },
       "tags": [
         "word",
-        "intention",
-        "past background"
+        "desire",
+        "past"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-ancho-fijo",
+        "ownerComicId": "es-xkcd-rtfm",
         "contextualSenseReviewed": true
       }
     },
@@ -3590,6 +3599,7 @@
         "monospace",
         "joke concept"
       ],
+      "questionEn": "What makes a font fixed-width or monospaced?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3807,7 +3817,11 @@
       "kind": "word",
       "promptEs": "roto",
       "answerEn": "broken",
-      "noteEn": "",
+      "noteEn": "Romper means “to break.” Its completed-action form is irregular: romper becomes roto, not rompido. After a helper such as ha, roto stays unchanged: ha roto, “has broken.” When it describes a broken thing, its ending matches that thing: un vaso roto, una taza rota.",
+      "example": {
+        "es": "Se ha roto un plato.",
+        "en": "A plate has broken."
+      },
       "tags": [
         "word",
         "contextual sense"

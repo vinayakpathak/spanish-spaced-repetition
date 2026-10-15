@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-c6eb65511761ed9e",
+  "revision": "runtime-876a1315eb3809fc",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -245,7 +245,7 @@
               }
             ],
             "cardIds": [
-              "word-me--gustar-experiencer",
+              "word-me--experiencer",
               "grammar-gustar-with-noun"
             ]
           },
@@ -400,6 +400,15 @@
             ],
             "exampleEs": "LO SÉ",
             "explanationEn": "The repeated lo again occupies the normal position directly before the conjugated verb sé."
+          },
+          {
+            "id": "es-xkcd-pareja:uncertain-reply:review-word-w05",
+            "cardId": "word-gusta--i-like",
+            "participantWordIds": [
+              "es-xkcd-pareja:uncertain-reply:w05"
+            ],
+            "exampleEs": "ME GUSTA",
+            "explanationEn": "Me identifies the speaker as the one who likes it. Gusta supplies the liking meaning; this marker does not create a new sense of gusta."
           }
         ],
         "cardIds": [
@@ -407,7 +416,7 @@
           "word-lo--object-pronoun",
           "grammar-direct-object-pronoun-before-finite-verb",
           "word-sé",
-          "word-me--gustar-experiencer",
+          "word-me--experiencer",
           "grammar-gustar-with-noun",
           "word-gusta--i-like",
           "word-esto",
@@ -579,7 +588,7 @@
       "word-lo--object-pronoun",
       "grammar-direct-object-pronoun-before-finite-verb",
       "word-sé",
-      "word-me--gustar-experiencer",
+      "word-me--experiencer",
       "grammar-gustar-with-noun",
       "word-gusta--i-like",
       "word-esto",
@@ -662,11 +671,14 @@
       "id": "word-está",
       "kind": "word",
       "promptEs": "está",
-      "answerEn": "is (a state or location)",
-      "noteEn": "",
+      "answerEn": "is; are (a place or condition)",
+      "noteEn": "Está is a form of estar for he, she, it, or one person addressed formally as usted. It describes where someone or something is, or their condition. The surrounding words identify the person; Spanish need not add a separate word for he, she, it, or formal you.",
+      "example": {
+        "es": "¿Está cómoda, señora?",
+        "en": "Are you comfortable, ma'am?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -758,8 +770,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -773,11 +784,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -835,27 +846,24 @@
       }
     },
     {
-      "id": "word-me--gustar-experiencer",
+      "id": "word-me--experiencer",
       "kind": "word",
       "promptEs": "me",
-      "answerEn": "marks me as the person who likes something",
-      "noteEn": "With gustar, Spanish presents the liked thing as pleasing to a person. Me identifies the speaker as that person; it does not become a separate English word when the natural translation uses “I.”",
+      "answerEn": "marks me as the person who feels, likes, or experiences something",
+      "noteEn": "Me identifies the speaker as the person having a feeling, impression, preference, or difficulty. English often makes this person 'I,' while Spanish builds its wording around what produces the reaction. Compare me gusta el libro with me gustan los libros: me stays the same.",
       "example": {
-        "es": "Me gusta el café.",
-        "en": "I like coffee."
+        "es": "Me gustan estas canciones.",
+        "en": "I like these songs."
       },
       "tags": [
         "word",
-        "gustar",
-        "experiencer",
-        "pronoun",
-        "A1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pareja",
+        "ownerComicId": "es-xkcd-ancho-fijo",
         "contextualSenseReviewed": true
       }
     },
@@ -888,11 +896,11 @@
       "id": "word-gusta--i-like",
       "kind": "word",
       "promptEs": "gusta",
-      "answerEn": "I like; is pleasing to me",
-      "noteEn": "With me before it, gusta expresses that one thing or situation is pleasing to the speaker. The liked thing controls the verb: use gusta for one thing and gustan for more than one.",
+      "answerEn": "is pleasing; like(s)",
+      "noteEn": "Gusta expresses liking, but the thing or activity that is liked controls its form. Use gusta for one thing or an activity, and gustan for several things. A short word identifies who likes it: me means to me, te to you, and le or les to another person or people.",
       "example": {
-        "es": "Me gusta este libro.",
-        "en": "I like this book."
+        "es": "A mis vecinos les gusta caminar.",
+        "en": "My neighbors like walking."
       },
       "tags": [
         "word",

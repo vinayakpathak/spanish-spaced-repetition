@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-f25c9df462602058",
+  "revision": "runtime-7e735533a63f0818",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -1045,7 +1045,7 @@
             ],
             "cardIds": [
               "word-lo--apology",
-              "phrase-lo-sentimos"
+              "phrase-lo-siento"
             ]
           },
           {
@@ -1062,7 +1062,7 @@
             ],
             "cardIds": [
               "word-sentimos--apology",
-              "phrase-lo-sentimos"
+              "phrase-lo-siento"
             ]
           },
           {
@@ -1198,7 +1198,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--property-source"
             ]
           },
           {
@@ -1223,7 +1223,7 @@
         "applications": [
           {
             "id": "es-xkcd-al-oeste:panel-5-message:app-lo-sentimos",
-            "cardId": "phrase-lo-sentimos",
+            "cardId": "phrase-lo-siento",
             "participantWordIds": [
               "es-xkcd-al-oeste:panel-5-message:w01",
               "es-xkcd-al-oeste:panel-5-message:w02"
@@ -1239,11 +1239,20 @@
             ],
             "exampleEs": "LO SENTIMOS",
             "explanationEn": "Lo fills the same fixed apology slot as in lo siento; the plural sentimos changes the speakers, not lo's role."
+          },
+          {
+            "id": "es-xkcd-al-oeste:panel-5-message:review-word-w10",
+            "cardId": "word-de--property-source",
+            "participantWordIds": [
+              "es-xkcd-al-oeste:panel-5-message:w10"
+            ],
+            "exampleEs": "NIVEL DE ZOOM",
+            "explanationEn": "Here de connects the measured level to the zoom setting whose degree is being described."
           }
         ],
         "cardIds": [
           "word-lo--apology",
-          "phrase-lo-sentimos",
+          "phrase-lo-siento",
           "word-sentimos--apology",
           "word-pero",
           "word-no",
@@ -1253,7 +1262,7 @@
           "word-para--availability-level",
           "word-este",
           "word-nivel--degree",
-          "word-de--type-classifier",
+          "word-de--property-source",
           "word-zoom"
         ]
       },
@@ -1392,14 +1401,13 @@
       "word-más--more",
       "word-profundo--adverbially-deep",
       "concept-google-maps-deep-zoom-joke",
-      "phrase-lo-sentimos",
       "word-sentimos--apology",
       "word-tenemos",
       "word-imágenes",
       "word-para--availability-level",
       "word-este",
       "word-nivel--degree",
-      "word-de--type-classifier",
+      "word-de--property-source",
       "word-zoom",
       "word-ya--realization",
       "word-ya--already",
@@ -1434,19 +1442,20 @@
     {
       "id": "phrase-lo-siento",
       "kind": "phrase",
-      "promptEs": "Lo siento.",
-      "answerEn": "Lo siento means “I'm sorry.”",
-      "noteEn": "Use this fixed expression for an apology or when reacting sympathetically to bad news. Learn it as a complete expression instead of translating lo and siento separately.",
-      "tags": [
-        "A1",
-        "expression",
-        "politeness"
-      ],
-      "questionEn": "What is the standard way to say “I'm sorry” when apologizing or expressing sympathy?",
+      "promptEs": "lo siento o lo sentimos",
+      "questionEn": "How do you say 'I'm sorry' or 'we're sorry' with lo siento?",
+      "answerEn": "Use lo siento when speaking for yourself and lo sentimos when speaking for a group.",
+      "noteEn": "Use this conventional expression for an apology or for sympathy about bad news. Lo stays fixed, while sentir changes to siento for I and sentimos for we. Mucho can strengthen the apology: lo siento mucho. These are variations of the same expression, not separate meanings of apology.",
       "example": {
-        "es": "Lo siento. Fue un error.",
-        "en": "I'm sorry. It was a mistake."
+        "es": "Lo sentimos. Fue un error.",
+        "en": "We're sorry. It was a mistake."
       },
+      "tags": [
+        "phrase",
+        "apology",
+        "politeness",
+        "A1"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -1661,8 +1670,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1746,7 +1754,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -1841,8 +1849,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1863,8 +1871,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2088,10 +2100,10 @@
     {
       "id": "grammar-lo-adjective-as-noun",
       "kind": "grammar",
-      "promptEs": "lo + adjetivo",
-      "questionEn": "How do you refer to “what is important,” “the difficult part,” or another general quality without naming a noun?",
-      "answerEn": "Put the unchanged word lo before a masculine-singular adjective: lo importante, lo difícil, lo bueno.",
-      "noteEn": "Here lo does not stand for a masculine object. It turns the quality into a general idea or aspect, such as lo importante, “what is important.” The adjective stays in its masculine singular form because there is no named noun for it to match.",
+      "promptEs": "lo + palabra descriptiva",
+      "questionEn": "How do you use lo to mean 'the good part,' 'what is important,' or another general quality?",
+      "answerEn": "Put lo before the masculine singular form of a describing word, without adding a noun.",
+      "noteEn": "A describing word is called an adjective: bueno means good and difícil means difficult. Lo turns that quality into a general thing or aspect, as in lo bueno ('the good part') and lo difícil ('what is difficult'). It does not refer to a masculine object. Keep the describing word masculine singular: lo bueno, not lo buena or lo buenos. Lo mejor likewise means the best thing or part; mejor itself supplies 'best.'",
       "example": {
         "es": "Lo difícil es empezar.",
         "en": "The difficult part is starting."
@@ -2099,7 +2111,7 @@
       "tags": [
         "grammar",
         "neutral lo",
-        "adjectives",
+        "descriptions",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
@@ -2309,7 +2321,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2362,31 +2378,6 @@
         "Google Maps",
         "zoom",
         "visual joke"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-al-oeste",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "phrase-lo-sentimos",
-      "kind": "phrase",
-      "promptEs": "lo sentimos",
-      "questionEn": "How does a group or organization say “we're sorry” in Spanish?",
-      "answerEn": "Use lo sentimos for “we're sorry.”",
-      "noteEn": "This is the plural counterpart of lo siento. Lo stays fixed, while siento changes to sentimos because the speakers are saying “we feel.” Learn the two words together as an apology rather than translating them literally.",
-      "example": {
-        "es": "Lo sentimos por la confusión.",
-        "en": "We're sorry for the confusion."
-      },
-      "tags": [
-        "phrase",
-        "apology",
-        "politeness",
-        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2519,26 +2510,27 @@
       }
     },
     {
-      "id": "word-de--type-classifier",
+      "id": "word-de--property-source",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "no separate English word; links an item to its type",
-      "noteEn": "Spanish often uses de between an item and the noun that identifies its type. English often puts the type noun first instead: libro de historia becomes “history book.”",
+      "answerEn": "of; links a quality or effect to what has or causes it",
+      "noteEn": "De can connect a quality, feature, or effect to the thing it comes from. English usually keeps “of” or uses a possessive form.",
       "example": {
-        "es": "Compré un libro de historia.",
-        "en": "I bought a history book."
+        "es": "Me sorprende la fuerza de este viento.",
+        "en": "This wind's force surprises me."
       },
       "tags": [
         "word",
-        "noun phrases",
-        "classification",
+        "preposition",
+        "quality",
+        "source",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-usuario-de-linux-en-best-buy",
+        "ownerComicId": "es-xkcd-juegos-flash",
         "contextualSenseReviewed": true
       }
     },
@@ -2594,8 +2586,12 @@
       "id": "word-ya--already",
       "kind": "word",
       "promptEs": "ya",
-      "answerEn": "already",
-      "noteEn": "",
+      "answerEn": "already; by now, often yet in a question",
+      "noteEn": "Ya marks that an expected action or state has been reached by the time being discussed. English usually says 'already' in a statement, but often 'yet' in a question about whether it has happened.",
+      "example": {
+        "es": "¿Ya llegó el tren?",
+        "en": "Has the train arrived yet?"
+      },
       "tags": [
         "word",
         "contextual sense"

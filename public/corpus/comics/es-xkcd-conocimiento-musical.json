@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-8d292125cd7279a6",
+  "revision": "runtime-8cda17e902ba9708",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -228,7 +228,7 @@
             ],
             "cardIds": [
               "word-algo--some-amount",
-              "phrase-algo-de"
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -245,7 +245,7 @@
             ],
             "cardIds": [
               "word-de--of",
-              "phrase-algo-de"
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -261,7 +261,8 @@
               }
             ],
             "cardIds": [
-              "word-rock"
+              "word-rock",
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -277,7 +278,8 @@
               }
             ],
             "cardIds": [
-              "word-clásico"
+              "word-clásico",
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -468,13 +470,15 @@
         "applications": [
           {
             "id": "es-xkcd-conocimiento-musical:bubble-2:app-some",
-            "cardId": "phrase-algo-de",
+            "cardId": "grammar-algo-de-quantity",
             "participantWordIds": [
               "es-xkcd-conocimiento-musical:bubble-2:word-4",
-              "es-xkcd-conocimiento-musical:bubble-2:word-5"
+              "es-xkcd-conocimiento-musical:bubble-2:word-5",
+              "es-xkcd-conocimiento-musical:bubble-2:word-6",
+              "es-xkcd-conocimiento-musical:bubble-2:word-7"
             ],
-            "exampleEs": "ALGO DE",
-            "explanationEn": "Algo de introduces an unspecified amount before the music style that follows."
+            "exampleEs": "ALGO DE ROCK CLÁSICO",
+            "explanationEn": "Algo de gives an unspecified amount, and rock clásico names the kind of music being quantified."
           },
           {
             "id": "es-xkcd-conocimiento-musical:bubble-2:app-of-course",
@@ -492,7 +496,7 @@
           "word-mucha",
           "word-variedad",
           "word-algo--some-amount",
-          "phrase-algo-de",
+          "grammar-algo-de-quantity",
           "word-de--of",
           "word-rock",
           "word-clásico",
@@ -1732,7 +1736,7 @@
             ],
             "cardIds": [
               "word-algo--some-amount",
-              "phrase-algo-de"
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -1749,7 +1753,7 @@
             ],
             "cardIds": [
               "word-de--of",
-              "phrase-algo-de"
+              "grammar-algo-de-quantity"
             ]
           },
           {
@@ -1766,7 +1770,8 @@
             ],
             "cardIds": [
               "word-metallica--band",
-              "concept-guitar-hero-band-list"
+              "concept-guitar-hero-band-list",
+              "grammar-algo-de-quantity"
             ]
           }
         ],
@@ -1815,13 +1820,14 @@
           },
           {
             "id": "es-xkcd-conocimiento-musical:bubble-7:app-some",
-            "cardId": "phrase-algo-de",
+            "cardId": "grammar-algo-de-quantity",
             "participantWordIds": [
               "es-xkcd-conocimiento-musical:bubble-7:word-18",
-              "es-xkcd-conocimiento-musical:bubble-7:word-19"
+              "es-xkcd-conocimiento-musical:bubble-7:word-19",
+              "es-xkcd-conocimiento-musical:bubble-7:word-20"
             ],
-            "exampleEs": "ALGO DE",
-            "explanationEn": "Algo de introduces an unspecified amount before the band name that follows."
+            "exampleEs": "ALGO DE METALLICA",
+            "explanationEn": "Algo de gives an unspecified amount; Metallica stands here for the band's music."
           }
         ],
         "cardIds": [
@@ -1847,7 +1853,7 @@
           "word-caña--dar-caña",
           "word-con",
           "word-algo--some-amount",
-          "phrase-algo-de",
+          "grammar-algo-de-quantity",
           "word-de--of",
           "word-metallica--band",
           "concept-guitar-hero-band-list"
@@ -2378,7 +2384,7 @@
       "word-mucha",
       "word-variedad",
       "word-algo--some-amount",
-      "phrase-algo-de",
+      "grammar-algo-de-quantity",
       "word-rock",
       "word-clásico",
       "word-como",
@@ -2482,8 +2488,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2657,7 +2667,11 @@
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "some; a bit of",
-      "noteEn": "",
+      "noteEn": "In algo de followed by a noun, algo gives an unspecified amount rather than naming an unspecified thing. Algo stays unchanged; de connects it to what there is some of.",
+      "example": {
+        "es": "Necesito algo de ayuda.",
+        "en": "I need some help."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2671,26 +2685,27 @@
       }
     },
     {
-      "id": "phrase-algo-de",
-      "kind": "phrase",
-      "promptEs": "algo de + nombre",
-      "questionEn": "How do you say “some” or “a bit of” before a thing or substance?",
-      "answerEn": "Use algo de before the noun.",
-      "noteEn": "Algo stays unchanged, and de connects it to what the unspecified amount consists of.",
+      "id": "grammar-algo-de-quantity",
+      "kind": "grammar",
+      "promptEs": "algo de + cosa o sustancia",
+      "questionEn": "How do you use algo de to mean 'some' or 'a bit of' a thing or substance?",
+      "answerEn": "Put algo de before the thing whose amount you leave unspecified.",
+      "noteEn": "Algo alone means 'something'; algo de before a noun means an unspecified amount of it. Both algo and de stay unchanged: algo de agua, algo de tiempo, algo de ayuda. The name after de tells you what the amount consists of. This is especially useful for substances, time, help, and other things treated as amounts rather than counted individuals.",
       "example": {
-        "es": "Quiero algo de pan.",
-        "en": "I want some bread."
+        "es": "Necesito algo de tiempo.",
+        "en": "I need some time."
       },
       "tags": [
-        "phrase",
-        "amounts",
+        "grammar",
+        "quantity",
+        "algo de",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-conocimiento-musical",
+        "ownerComicId": "es-xkcd-rtfm",
         "contextualSenseReviewed": true
       }
     },
@@ -2779,6 +2794,7 @@
         "music",
         "humor"
       ],
+      "questionEn": "How could Guitar Hero supply someone's knowledge of rock bands?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3060,7 +3076,11 @@
       "kind": "word",
       "promptEs": "más",
       "answerEn": "more",
-      "noteEn": "",
+      "noteEn": "Más can describe a greater amount or degree, or stand alone when the missing person or thing is clear. It keeps its written accent; mas without an accent is a different, literary word meaning 'but.'",
+      "example": {
+        "es": "Necesito más.",
+        "en": "I need more."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3114,7 +3134,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3518,7 +3542,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3671,11 +3699,11 @@
       "id": "word-te--indirect",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you",
-      "noteEn": "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+      "answerEn": "to you; for you, as the recipient",
+      "noteEn": "Te can identify one familiar listener as the person receiving something or benefiting from an action. It normally goes before the verb. English may say 'to you' or 'for you,' or simply place 'you' before what is given or said.",
       "example": {
         "es": "Te envío un mensaje.",
-        "en": "I’m sending you a message."
+        "en": "I send you a message."
       },
       "tags": [
         "word",
@@ -3875,7 +3903,7 @@
       "id": "phrase-parece-que",
       "kind": "phrase",
       "promptEs": "parece que…",
-      "answerEn": "Parece que… means “It seems that…” or “It looks as though…”",
+      "answerEn": "Use parece que before a complete statement to mean “it seems that” or “it looks as though.”",
       "noteEn": "Put a complete statement after que. Use this pattern when the available evidence points toward a conclusion, but you are not presenting that conclusion as completely certain.",
       "tags": [
         "A2",
@@ -3899,8 +3927,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -4298,8 +4326,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -4332,7 +4359,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",

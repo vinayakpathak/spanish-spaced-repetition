@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-fcf127f5aea2f4d9",
+  "revision": "runtime-657c83697df918fc",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -408,7 +408,7 @@
             ],
             "cardIds": [
               "word-a--gustar-experiencer",
-              "grammar-a-group-les-gusta-infinitive"
+              "grammar-gustar-infinitive"
             ]
           },
           {
@@ -425,7 +425,7 @@
             ],
             "cardIds": [
               "word-los",
-              "grammar-a-group-les-gusta-infinitive"
+              "grammar-gustar-infinitive"
             ]
           },
           {
@@ -442,7 +442,7 @@
             ],
             "cardIds": [
               "word-profesores",
-              "grammar-a-group-les-gusta-infinitive",
+              "grammar-gustar-infinitive",
               "concept-idealized-frictionless-vacuum-experiment"
             ]
           },
@@ -492,8 +492,7 @@
               }
             ],
             "cardIds": [
-              "word-no",
-              "grammar-a-group-les-gusta-infinitive"
+              "word-no"
             ]
           },
           {
@@ -510,7 +509,7 @@
             ],
             "cardIds": [
               "word-les--gustar-experiencer",
-              "grammar-a-group-les-gusta-infinitive"
+              "grammar-gustar-infinitive"
             ]
           },
           {
@@ -526,8 +525,8 @@
               }
             ],
             "cardIds": [
-              "word-gusta--plural-group-likes",
-              "grammar-a-group-les-gusta-infinitive"
+              "word-gusta--i-like",
+              "grammar-gustar-infinitive"
             ]
           },
           {
@@ -544,7 +543,7 @@
             ],
             "cardIds": [
               "word-trabajar",
-              "grammar-a-group-les-gusta-infinitive"
+              "grammar-gustar-infinitive"
             ]
           },
           {
@@ -717,18 +716,17 @@
           },
           {
             "id": "es-xkcd-experimento:professors-comment:app-group-dislikes-activity",
-            "cardId": "grammar-a-group-les-gusta-infinitive",
+            "cardId": "grammar-gustar-infinitive",
             "participantWordIds": [
               "es-xkcd-experimento:professors-comment:w04",
               "es-xkcd-experimento:professors-comment:w05",
               "es-xkcd-experimento:professors-comment:w06",
-              "es-xkcd-experimento:professors-comment:w09",
               "es-xkcd-experimento:professors-comment:w10",
               "es-xkcd-experimento:professors-comment:w11",
               "es-xkcd-experimento:professors-comment:w12"
             ],
             "exampleEs": "A LOS PROFESORES DE FÍSICA NO LES GUSTA TRABAJAR",
-            "explanationEn": "A los profesores names the plural group, no makes the preference negative, les points back to that group, and trabajar remains in its unchanged -ar dictionary form."
+            "explanationEn": "A los profesores names the group and les points back to it. Gusta remains singular because trabajar names one activity, even though the people liking it are plural. No makes the preference negative."
           },
           {
             "id": "es-xkcd-experimento:professors-comment:app-after-all",
@@ -740,6 +738,15 @@
             ],
             "exampleEs": "DESPUÉS DE TODO",
             "explanationEn": "The three words work together as a final reconsidering expression rather than a literal sequence in time."
+          },
+          {
+            "id": "es-xkcd-experimento:professors-comment:review-word-w11",
+            "cardId": "word-gusta--i-like",
+            "participantWordIds": [
+              "es-xkcd-experimento:professors-comment:w11"
+            ],
+            "exampleEs": "LES GUSTA",
+            "explanationEn": "Les identifies the people being discussed as the ones who like it. Gusta supplies the liking meaning; this marker does not create a new sense of gusta."
           }
         ],
         "cardIds": [
@@ -748,7 +755,7 @@
           "phrase-parece-que",
           "word-que--clause-link",
           "word-a--gustar-experiencer",
-          "grammar-a-group-les-gusta-infinitive",
+          "grammar-gustar-infinitive",
           "word-los",
           "word-profesores",
           "concept-idealized-frictionless-vacuum-experiment",
@@ -756,7 +763,7 @@
           "word-física",
           "word-no",
           "word-les--gustar-experiencer",
-          "word-gusta--plural-group-likes",
+          "word-gusta--i-like",
           "word-trabajar",
           "word-en",
           "word-el--article",
@@ -832,7 +839,7 @@
       "phrase-parece-que",
       "word-que--clause-link",
       "word-a--gustar-experiencer",
-      "grammar-a-group-les-gusta-infinitive",
+      "grammar-gustar-infinitive",
       "word-los",
       "word-profesores",
       "concept-idealized-frictionless-vacuum-experiment",
@@ -840,7 +847,7 @@
       "word-física",
       "word-no",
       "word-les--gustar-experiencer",
-      "word-gusta--plural-group-likes",
+      "word-gusta--i-like",
       "word-trabajar",
       "word-en",
       "word-el--article",
@@ -883,8 +890,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -994,10 +1005,10 @@
       "kind": "word",
       "promptEs": "dónde",
       "answerEn": "where",
-      "noteEn": "Dónde carries a written accent when it directly or indirectly asks about a location. In a direct question, Spanish also uses the opening question mark ¿.",
+      "noteEn": "Dónde keeps its written accent when asking about a place, whether the question stands alone or sits inside another sentence: ¿Dónde vive Ana? and No sé dónde vive Ana. Unaccented donde connects to a place without asking a question.",
       "example": {
-        "es": "¿Dónde está la estación?",
-        "en": "Where is the station?"
+        "es": "No recuerdo dónde dejé las llaves.",
+        "en": "I don't remember where I left the keys."
       },
       "tags": [
         "word",
@@ -1161,7 +1172,7 @@
       "id": "phrase-parece-que",
       "kind": "phrase",
       "promptEs": "parece que…",
-      "answerEn": "Parece que… means “It seems that…” or “It looks as though…”",
+      "answerEn": "Use parece que before a complete statement to mean “it seems that” or “it looks as though.”",
       "noteEn": "Put a complete statement after que. Use this pattern when the available evidence points toward a conclusion, but you are not presenting that conclusion as completely certain.",
       "tags": [
         "A2",
@@ -1185,8 +1196,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1228,27 +1239,27 @@
       }
     },
     {
-      "id": "grammar-a-group-les-gusta-infinitive",
+      "id": "grammar-gustar-infinitive",
       "kind": "grammar",
-      "promptEs": "a + grupo + (no) les gusta + infinitivo",
-      "questionEn": "How do you say that a named group of people likes or dislikes doing an activity?",
-      "answerEn": "Name the group after a, use les, then gusta, then the activity verb in its unchanged dictionary form; put no before les to make it negative.",
-      "noteEn": "Les points back to the named group. Gusta stays singular because an activity is treated as one liked thing, and the activity verb remains in its dictionary form ending in -ar, -er, or -ir. Spanish therefore says a mis amigos les gusta correr, even though the friends are plural.",
+      "promptEs": "me, te, le, nos, os o les + gusta + actividad",
+      "questionEn": "How do you use gusta to say that someone likes doing an activity?",
+      "answerEn": "Choose the short word for the person, add gusta, then name the activity with the verb's dictionary form.",
+      "noteEn": "Use me for me, te for familiar singular you, le for him/her/formal singular you, nos for us, os for familiar plural you mainly in Spain, and les for them or plural you with ustedes. Ustedes is the usual plural you in Latin America and formal plural you in most of Spain. The activity is what pleases that person, so gusta stays singular for one activity even with les. Its action verb keeps its -ar, -er, or -ir dictionary form. To name or emphasize the people, add a before their name or group: a mis amigos les gusta leer. No before the short word makes it negative.",
       "example": {
-        "es": "A mis vecinos no les gusta madrugar.",
-        "en": "My neighbors do not like getting up early."
+        "es": "A mis vecinos les gusta cocinar.",
+        "en": "My neighbors like cooking."
       },
       "tags": [
         "grammar",
         "gustar",
-        "plural experiencer",
-        "A2"
+        "activities",
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-experimento",
+        "ownerComicId": "es-xkcd-elecciones-parte-5",
         "contextualSenseReviewed": true
       }
     },
@@ -1354,8 +1365,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1390,26 +1400,27 @@
       }
     },
     {
-      "id": "word-gusta--plural-group-likes",
+      "id": "word-gusta--i-like",
       "kind": "word",
       "promptEs": "gusta",
-      "answerEn": "they like; is pleasing to them",
-      "noteEn": "Gusta remains singular when what is liked is one activity in its unchanged dictionary form, even when the people who like it are plural.",
+      "answerEn": "is pleasing; like(s)",
+      "noteEn": "Gusta expresses liking, but the thing or activity that is liked controls its form. Use gusta for one thing or an activity, and gustan for several things. A short word identifies who likes it: me means to me, te to you, and le or les to another person or people.",
       "example": {
-        "es": "A ellas les gusta leer.",
-        "en": "They like reading."
+        "es": "A mis vecinos les gusta caminar.",
+        "en": "My neighbors like walking."
       },
       "tags": [
         "word",
         "gustar",
+        "singular",
         "present",
-        "A2"
+        "A1"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-experimento",
+        "ownerComicId": "es-xkcd-pareja",
         "contextualSenseReviewed": true
       }
     },

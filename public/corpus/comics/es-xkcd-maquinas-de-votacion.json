@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a2ddb0abf806820f",
+  "revision": "runtime-45d79cdea4140287",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -99,7 +99,7 @@
               }
             ],
             "cardIds": [
-              "word-como--naming",
+              "word-como--role",
               "phrase-antes-conocido-como"
             ]
           },
@@ -493,7 +493,7 @@
           "word-antes--formerly",
           "phrase-antes-conocido-como",
           "word-conocida--known-feminine",
-          "word-como--naming",
+          "word-como--role",
           "word-ha",
           "grammar-present-perfect",
           "word-achacado--attributed-blamed",
@@ -1810,7 +1810,7 @@
               }
             ],
             "cardIds": [
-              "word-su--third-person-possessive"
+              "word-su"
             ]
           },
           {
@@ -1909,7 +1909,7 @@
           "word-está--progressive-auxiliary",
           "grammar-estar-gerundio",
           "word-haciendo--making",
-          "word-su--third-person-possessive",
+          "word-su",
           "word-trabajo--work",
           "concept-voting-machine-antivirus-analogy",
           "word-terriblemente",
@@ -1922,7 +1922,7 @@
       "word-antes--formerly",
       "phrase-antes-conocido-como",
       "word-conocida--known-feminine",
-      "word-como--naming",
+      "word-como--role",
       "word-ha",
       "grammar-present-perfect",
       "word-achacado--attributed-blamed",
@@ -1994,7 +1994,7 @@
       "word-hay",
       "word-alguien",
       "word-que--relative",
-      "word-su--third-person-possessive",
+      "word-su",
       "word-trabajo--work",
       "word-terriblemente",
       "grammar-adverbs-mente"
@@ -2036,7 +2036,7 @@
       "promptEs": "antes conocido/a como + nombre",
       "questionEn": "How do you say that a person, company, or thing used to be known by another name?",
       "answerEn": "Use antes, then conocido or conocida to match the thing, then como and the former name.",
-      "noteEn": "Antes means ‘formerly’ here. Conocido changes to conocida, conocidos, or conocidas to match what is being described; como introduces the old name. The plus sign in the prompt means that the former name comes next.",
+      "noteEn": "Antes means ‘formerly’ here. Conocido changes to conocida, conocidos, or conocidas to match what is being described; como introduces the old name.",
       "example": {
         "es": "La empresa antes conocida como Sol cambió de nombre.",
         "en": "The company formerly known as Sol changed its name."
@@ -2080,26 +2080,24 @@
       }
     },
     {
-      "id": "word-como--naming",
+      "id": "word-como--role",
       "kind": "word",
       "promptEs": "como",
-      "answerEn": "as (introducing a name or label)",
-      "noteEn": "After words such as conocido, llamado, or descrito, unaccented como introduces the name, title, or label by which something is known.",
+      "answerEn": "as; introduces a role, label, or assigned category",
+      "noteEn": "Unaccented como can identify the capacity in which someone acts, what a thing is used as, or the name or category assigned to it. This differs from comparing how similar things are, and from accented cómo, which asks 'how.'",
       "example": {
-        "es": "Es conocido como el padre de la medicina.",
-        "en": "He is known as the father of medicine."
+        "es": "Trabaja como profesor.",
+        "en": "He works as a teacher."
       },
       "tags": [
         "word",
-        "naming",
-        "label",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-pico-de-ballmer",
+        "ownerComicId": "es-xkcd-fotos-porfa",
         "contextualSenseReviewed": true
       }
     },
@@ -2301,6 +2299,7 @@
         "analogy",
         "comic joke"
       ],
+      "questionEn": "How can a safety precaution also reveal a deeper design problem?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2313,17 +2312,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2418,7 +2415,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2536,11 +2537,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -2584,7 +2585,7 @@
       "kind": "grammar",
       "promptEs": "estar + gerundio (-ando/-iendo)",
       "answerEn": "Use a form of estar followed by an action word ending in -ando or -iendo.",
-      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando (hablar → hablando) and replace -er or -ir with -iendo (comer → comiendo, vivir → viviendo). This is similar to English “am/is/are doing.”",
+      "noteEn": "Estar changes to show who is doing the action: estoy, estás, está, and so on. For most verbs, replace -ar with -ando: hablar becomes hablando. Replace -er or -ir with -iendo: comer becomes comiendo, and vivir becomes viviendo. This is similar to English “am doing,” “is doing,” or “are doing.”",
       "tags": [
         "A2",
         "grammar",
@@ -2607,11 +2608,11 @@
       "id": "word-haciendo--making",
       "kind": "word",
       "promptEs": "haciendo",
-      "answerEn": "making; doing",
-      "noteEn": "Haciendo is the -iendo action form of hacer. It can name an activity happening during the time described.",
+      "answerEn": "doing; making",
+      "noteEn": "Haciendo is the unchanged -iendo action form of hacer, “to do or make.” With a form of estar, it describes an action in progress. Without estar, it can describe how another action happens or an activity happening at the same time. The surrounding construction supplies meanings such as English “by.”",
       "example": {
-        "es": "Pasó la tarde haciendo una mesa.",
-        "en": "He spent the afternoon making a table."
+        "es": "Aprendo haciendo preguntas.",
+        "en": "I learn by asking questions."
       },
       "tags": [
         "word",
@@ -2776,8 +2777,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2795,10 +2800,10 @@
       "kind": "word",
       "promptEs": "buena",
       "answerEn": "good (feminine singular)",
-      "noteEn": "Buena is the feminine singular form of bueno. It is used before or after a feminine singular noun, such as práctica or decisión.",
+      "noteEn": "Buena is the feminine form of bueno, “good.” Use it for one feminine noun: una buena pregunta; for more than one, use buenas preguntas.",
       "example": {
-        "es": "Esa es una buena decisión.",
-        "en": "That is a good decision."
+        "es": "La biblioteca tiene una buena colección.",
+        "en": "The library has a good collection."
       },
       "tags": [
         "word",
@@ -2896,8 +2901,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3052,11 +3057,11 @@
       "id": "word-te--indirect",
       "kind": "word",
       "promptEs": "te",
-      "answerEn": "to you",
-      "noteEn": "Te can mean “to you” when you are the recipient or the person affected by an action. It normally appears before a conjugated verb.",
+      "answerEn": "to you; for you, as the recipient",
+      "noteEn": "Te can identify one familiar listener as the person receiving something or benefiting from an action. It normally goes before the verb. English may say 'to you' or 'for you,' or simply place 'you' before what is given or said.",
       "example": {
         "es": "Te envío un mensaje.",
-        "en": "I’m sending you a message."
+        "en": "I send you a message."
       },
       "tags": [
         "word",
@@ -3541,7 +3546,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3595,19 +3604,24 @@
       }
     },
     {
-      "id": "word-su--third-person-possessive",
+      "id": "word-su",
       "kind": "word",
       "promptEs": "su",
-      "answerEn": "his; her; its; their",
-      "noteEn": "",
+      "answerEn": "his; her; its; their; your, with usted or ustedes",
+      "noteEn": "Su comes before one possessed thing. It does not show the owner's gender or number: context tells you whose it is. Use sus when the possessed things are plural, even if there is only one owner: su libro, but sus libros. Formal usted and plural ustedes also use su for 'your.'",
+      "example": {
+        "es": "Ana abre su libro; los niños abren su caja.",
+        "en": "Ana opens her book; the children open their box."
+      },
       "tags": [
-        "word"
+        "word",
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-sustituto",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

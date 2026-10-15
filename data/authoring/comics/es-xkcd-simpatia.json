@@ -301,23 +301,6 @@
       ]
     },
     {
-      "id": "word-quedan--left-to-someone",
-      "kind": "word",
-      "promptEs": "quedan",
-      "answerEn": "are left; remain available (plural)",
-      "noteEn": "With a short indirect word such as me, te, le, nos, or les, quedar can say what someone has left. The plural remaining thing controls quedan; one remaining thing uses queda.",
-      "example": {
-        "es": "Te quedan dos preguntas.",
-        "en": "You have two questions left."
-      },
-      "tags": [
-        "word",
-        "quedar",
-        "remaining quantity",
-        "A2"
-      ]
-    },
-    {
       "id": "phrase-en-el-momento-en-que",
       "kind": "phrase",
       "promptEs": "en el momento en que + hecho",
@@ -390,15 +373,28 @@
     {
       "id": "concept-relativity-causality-sympathy-joke",
       "kind": "concept",
-      "promptEs": "simpatía · relatividad · causalidad",
-      "questionEn": "Why is a physics discussion an especially inappropriate response to grief here?",
-      "answerEn": "The joke contrasts the empathy a grieving person needs with physicists who become absorbed in a relativity puzzle about faster-than-light information.",
-      "noteEn": "Special relativity treats the speed of light as a limit for transmitted information. If a signal were instantaneous in one reference frame, another moving frame could order the events differently, threatening ordinary cause-before-effect causality. The escalating technical excitement ignores the human loss; the official title text extends the absurdity by imagining a way to exploit the discovery.",
+      "promptEs": "señales superlumínicas y causalidad",
+      "questionEn": "Why can faster-than-light signals cause trouble for cause and effect?",
+      "answerEn": "In special relativity, events joined by a faster-than-light signal can be ordered differently by observers moving relative to each other.",
+      "noteEn": "An observer's reference frame is a way of assigning places and times to events. With suitably arranged faster-than-light signaling, one could construct a message exchange that returns information to before it was sent. That is the causality problem: an effect could precede its cause.",
       "tags": [
         "concept",
-        "xkcd joke",
-        "physics",
-        "relativity"
+        "background knowledge"
+      ]
+    },
+    {
+      "id": "word-te--affected-person",
+      "kind": "word",
+      "promptEs": "te",
+      "answerEn": "to you; identifies the person something happens to",
+      "noteEn": "Te can identify one familiar listener as the person affected by an event or situation, even when nothing is given to them. With pasar it marks who something happens to; with quedar it can identify who has something remaining.",
+      "example": {
+        "es": "¿Qué te pasó?",
+        "en": "What happened to you?"
+      },
+      "tags": [
+        "word",
+        "contextual sense"
       ]
     }
   ],
@@ -464,8 +460,7 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-simpatía--compassion",
-            "concept-relativity-causality-sympathy-joke"
+            "word-simpatía--compassion"
           ]
         },
         {
@@ -482,7 +477,7 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-para--for-person"
+            "word-para--intended-recipient"
           ]
         },
         {
@@ -516,13 +511,22 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-físicos--physicists",
-            "concept-relativity-causality-sympathy-joke"
+            "word-físicos--physicists"
           ]
         }
       ],
       "excludedUnits": [],
-      "applications": []
+      "applications": [
+        {
+          "id": "es-xkcd-simpatia:heading:review-word-w04",
+          "cardId": "word-para--intended-recipient",
+          "participantWordIds": [
+            "es-xkcd-simpatia:heading:w04"
+          ],
+          "exampleEs": "PARA LOS FÍSICOS",
+          "explanationEn": "Here para identifies the intended audience for the advice."
+        }
+      ]
     },
     {
       "id": "es-xkcd-simpatia:grief",
@@ -1483,7 +1487,7 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-de--type-classifier",
+            "word-de--noun-classifier",
             "phrase-sistema-de-referencia"
           ]
         },
@@ -1765,8 +1769,7 @@
             "word-hermanos",
             "grammar-descriptive-adjective-after-noun",
             "grammar-adjective-gender-agreement",
-            "grammar-quedar-remaining-quantity",
-            "concept-relativity-causality-sympathy-joke"
+            "grammar-quedar-remaining-quantity"
           ]
         },
         {
@@ -1803,7 +1806,7 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-te--indirect"
+            "word-te--affected-person"
           ]
         },
         {
@@ -1820,7 +1823,7 @@
           ],
           "geometryRationale": "The source OCR rectangle was missing, fused, or taller than the printed row; this checked box isolates only the visible lexical unit and does not cross another hotspot.",
           "cardIds": [
-            "word-quedan--left-to-someone",
+            "word-quedan--remaining",
             "grammar-quedar-remaining-quantity"
           ]
         }
@@ -1878,6 +1881,24 @@
           ],
           "exampleEs": "CUÁNTOS HERMANOS VIVOS TE QUEDAN",
           "explanationEn": "Quedan is plural because hermanos vivos names more than one possible remaining person, while cuántos asks for the quantity."
+        },
+        {
+          "id": "es-xkcd-simpatia:very-inappropriate-response:review-word-w30",
+          "cardId": "word-te--affected-person",
+          "participantWordIds": [
+            "es-xkcd-simpatia:very-inappropriate-response:w30"
+          ],
+          "exampleEs": "TE QUEDAN",
+          "explanationEn": "Here te identifies the person who has relatives remaining; it is not someone being given those relatives."
+        },
+        {
+          "id": "es-xkcd-simpatia:very-inappropriate-response:review-word-w31",
+          "cardId": "word-quedan--remaining",
+          "participantWordIds": [
+            "es-xkcd-simpatia:very-inappropriate-response:w31"
+          ],
+          "exampleEs": "TE QUEDAN",
+          "explanationEn": "Te identifies who has them left. The remaining things are plural, which selects quedan rather than queda."
         }
       ]
     }

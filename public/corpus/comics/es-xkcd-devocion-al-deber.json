@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-a7bb5a031ba3b36d",
+  "revision": "runtime-e3eccd2614b0e42e",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -285,8 +285,7 @@
               }
             ],
             "cardIds": [
-              "word-como--comparison",
-              "phrase-como-dijiste"
+              "word-como--comparison"
             ]
           },
           {
@@ -303,7 +302,6 @@
             ],
             "cardIds": [
               "word-dijiste",
-              "phrase-como-dijiste",
               "grammar-past-contrast"
             ]
           }
@@ -361,16 +359,6 @@
             "explanationEn": "Cortado supplies the completed action, and las comunicaciones names the links or systems that were cut off."
           },
           {
-            "id": "es-xkcd-devocion-al-deber:hostage-report:app-as-said",
-            "cardId": "phrase-como-dijiste",
-            "participantWordIds": [
-              "es-xkcd-devocion-al-deber:hostage-report:w13",
-              "es-xkcd-devocion-al-deber:hostage-report:w14"
-            ],
-            "exampleEs": "COMO DIJISTE",
-            "explanationEn": "Como refers back to the earlier instruction, and dijiste identifies what one familiar listener said."
-          },
-          {
             "id": "es-xkcd-devocion-al-deber:hostage-report:app-past",
             "cardId": "grammar-past-contrast",
             "participantWordIds": [
@@ -397,7 +385,6 @@
           "word-las",
           "word-comunicaciones",
           "word-como--comparison",
-          "phrase-como-dijiste",
           "word-dijiste",
           "grammar-past-contrast"
         ]
@@ -759,7 +746,7 @@
               }
             ],
             "cardIds": [
-              "word-los--those-who",
+              "word-los--omitted-noun",
               "grammar-personal-a",
               "grammar-relative-que",
               "grammar-el-la-los-las-que-the-one"
@@ -1005,7 +992,7 @@
           "grammar-personal-a",
           "word-todos",
           "grammar-relative-que",
-          "word-los--those-who",
+          "word-los--omitted-noun",
           "grammar-el-la-los-las-que-the-one",
           "word-que--relative",
           "word-enviamos--sent",
@@ -1367,8 +1354,7 @@
             ],
             "cardIds": [
               "word-murmurando",
-              "grammar-adverbial-gerund",
-              "phrase-murmurar-sobre"
+              "grammar-adverbial-gerund"
             ]
           },
           {
@@ -1384,8 +1370,7 @@
               }
             ],
             "cardIds": [
-              "word-algo",
-              "phrase-murmurar-sobre"
+              "word-algo"
             ]
           },
           {
@@ -1401,8 +1386,7 @@
               }
             ],
             "cardIds": [
-              "word-sobre--about",
-              "phrase-murmurar-sobre"
+              "word-sobre--about"
             ]
           },
           {
@@ -1418,8 +1402,7 @@
               }
             ],
             "cardIds": [
-              "word-el--article",
-              "phrase-murmurar-sobre"
+              "word-el--article"
             ]
           },
           {
@@ -1436,7 +1419,6 @@
             ],
             "cardIds": [
               "word-uptime--system-availability",
-              "phrase-murmurar-sobre",
               "concept-sysadmin-uptime-duty"
             ]
           }
@@ -1472,19 +1454,6 @@
             ],
             "exampleEs": "MURMURANDO",
             "explanationEn": "Murmurando adds the quiet speech happening while the person reconnects the cables."
-          },
-          {
-            "id": "es-xkcd-devocion-al-deber:uptime-report:app-murmur",
-            "cardId": "phrase-murmurar-sobre",
-            "participantWordIds": [
-              "es-xkcd-devocion-al-deber:uptime-report:w10",
-              "es-xkcd-devocion-al-deber:uptime-report:w11",
-              "es-xkcd-devocion-al-deber:uptime-report:w12",
-              "es-xkcd-devocion-al-deber:uptime-report:w13",
-              "es-xkcd-devocion-al-deber:uptime-report:w14"
-            ],
-            "exampleEs": "MURMURANDO ALGO SOBRE EL UPTIME",
-            "explanationEn": "Murmurando supplies the quiet speech, algo leaves its content vague, and sobre el uptime fills the topic slot."
           },
           {
             "id": "es-xkcd-devocion-al-deber:uptime-report:app-past-ignored",
@@ -1530,7 +1499,6 @@
           "word-cortamos--cut-off",
           "word-murmurando",
           "grammar-adverbial-gerund",
-          "phrase-murmurar-sobre",
           "word-algo",
           "word-sobre--about",
           "word-el--article",
@@ -1684,7 +1652,6 @@
       "word-las",
       "word-comunicaciones",
       "word-como--comparison",
-      "phrase-como-dijiste",
       "word-dijiste",
       "grammar-past-contrast",
       "word-excelente--approval",
@@ -1708,7 +1675,7 @@
       "grammar-adverbial-gerund",
       "word-todos",
       "grammar-relative-que",
-      "word-los--those-who",
+      "word-los--omitted-noun",
       "grammar-el-la-los-las-que-the-one",
       "word-que--relative",
       "word-enviamos--sent",
@@ -1729,7 +1696,6 @@
       "word-cables",
       "word-cortamos--cut-off",
       "word-murmurando",
-      "phrase-murmurar-sobre",
       "word-algo",
       "word-sobre--about",
       "word-uptime--system-availability",
@@ -1817,11 +1783,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -1841,7 +1807,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -2089,31 +2055,6 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-dia-de-28-horas",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
-      "id": "phrase-como-dijiste",
-      "kind": "phrase",
-      "promptEs": "como dijiste",
-      "questionEn": "How can you refer back to something one familiar listener said?",
-      "answerEn": "Say como dijiste, meaning ‘as you said.’",
-      "noteEn": "Como introduces the comparison with the earlier words, and dijiste is the completed-past tú form of decir. Other people require a different form: como dije, como dijo, como dijimos.",
-      "example": {
-        "es": "Lo hice como dijiste.",
-        "en": "I did it as you said."
-      },
-      "tags": [
-        "phrase",
-        "conversation",
-        "decir",
-        "A2"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-devocion-al-deber",
         "contextualSenseReviewed": true
       }
     },
@@ -2393,17 +2334,15 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
       "example": {
-        "es": "Necesito una taza de café.",
-        "en": "I need a coffee cup."
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
       },
       "tags": [
         "word",
-        "preposition",
-        "noun modifier",
-        "A2"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2589,7 +2528,7 @@
       "promptEs": "-ando / -iendo para una acción simultánea o un medio",
       "questionEn": "How can you add an action that happens at the same time or explains how something is done?",
       "answerEn": "Use the action form ending in -ando or -iendo, such as hablando or corriendo.",
-      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar plus the same form, which focuses on an action in progress.",
+      "noteEn": "Spanish calls this form the gerund. It does not change for the person. Used on its own, it can describe a simultaneous action or the means used: Entró corriendo means the person entered by running. This differs from estar followed by the same form, which focuses on an action in progress.",
       "example": {
         "es": "Entró corriendo.",
         "en": "She came in running."
@@ -2651,20 +2590,18 @@
       }
     },
     {
-      "id": "word-los--those-who",
+      "id": "word-los--omitted-noun",
       "kind": "word",
       "promptEs": "los",
-      "answerEn": "those; the ones (as part of los que)",
-      "noteEn": "Los normally means “the” before a masculine plural noun. In los que followed by a description, the noun is left unstated and los identifies a masculine or mixed group: los que llegaron means “those who arrived.”",
+      "answerEn": "the ones; the people, with an understood noun",
+      "noteEn": "Los can stand for an unstated masculine or mixed plural group. Words after it identify which group: los de la oficina or los que llegaron. English often supplies 'the people,' 'the ones,' or 'those.'",
       "example": {
-        "es": "Conozco a los que viven aquí.",
-        "en": "I know those who live here."
+        "es": "Los de la oficina ya llegaron.",
+        "en": "The people from the office have already arrived."
       },
       "tags": [
         "word",
-        "los que",
-        "people",
-        "omitted noun"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2680,7 +2617,7 @@
       "promptEs": "el/la/los/las + que + descripción",
       "questionEn": "How do you say ‘the one who…’ or ‘the ones that…’ without repeating the noun?",
       "answerEn": "Use el que, la que, los que, or las que to match the unnamed person or thing, then add what identifies it.",
-      "noteEn": "Choose el, la, los, or las to show whether the omitted person or thing is masculine or feminine, singular or plural. Que stays unchanged and introduces the identifying description, which normally contains a verb. Each plus sign in the prompt means ‘followed by.’",
+      "noteEn": "Choose el, la, los, or las to show whether the omitted person or thing is masculine or feminine, singular or plural. Que stays unchanged and introduces the identifying description, which normally contains a verb.",
       "example": {
         "es": "Ana es la que prepara el café.",
         "en": "Ana is the one who makes the coffee."
@@ -2766,19 +2703,21 @@
     {
       "id": "grammar-para-infinitive-purpose",
       "kind": "grammar",
-      "promptEs": "para + infinitivo",
-      "answerEn": "Use para followed by the verb’s dictionary form.",
-      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is called the infinitive. Use para + verb when the same person or thing performs both actions: in estudio para aprender, I both study and learn. When someone else performs the second action, Spanish needs the different pattern para que.",
-      "tags": [
-        "A2",
-        "grammar",
-        "purpose"
-      ],
-      "questionEn": "How do you say “in order to do something” in Spanish?",
+      "promptEs": "para + acción en forma de diccionario",
+      "questionEn": "How do you use para to explain a purpose or what something can be used for?",
+      "answerEn": "Use para followed by the action verb in its unchanged dictionary form.",
+      "noteEn": "The dictionary form ends in -ar, -er, or -ir and is also called the infinitive. It names an intended action: estudio para aprender ('I study to learn') or tiempo para leer ('time for reading'). After para, that action has no separate verb ending for a new person; its doer is understood from context. To give the intended action its own explicitly stated person and changed verb, use the different para que pattern, as in para que Ana aprenda.",
       "example": {
         "es": "Estudio para aprender.",
         "en": "I study in order to learn."
       },
+      "tags": [
+        "grammar",
+        "purpose",
+        "intended use",
+        "infinitive",
+        "A2"
+      ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2817,7 +2756,7 @@
       "promptEs": "verbo en forma de diccionario + pronombre unido",
       "questionEn": "Where can a short object word such as me, te, lo, or la go with an unchanged action verb?",
       "answerEn": "Attach it to the end of the verb and write the result as one word.",
-      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Short object words can attach directly: conocer + te becomes conocerte, and ayudar + me becomes ayudarme.",
+      "noteEn": "An unchanged dictionary-form verb ends in -ar, -er, or -ir. Small words naming who or what receives the action can attach directly: conocer and te become conocerte, and ayudar and me become ayudarme.",
       "example": {
         "es": "Quiero ayudarte.",
         "en": "I want to help you."
@@ -2915,6 +2854,7 @@
         "system administration",
         "joke"
       ],
+      "questionEn": "Why would a system administrator care so much about uptime?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2930,8 +2870,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3014,8 +2953,7 @@
       "answerEn": "only; just",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3121,39 +3059,17 @@
       }
     },
     {
-      "id": "phrase-murmurar-sobre",
-      "kind": "phrase",
-      "promptEs": "murmurar algo sobre + tema",
-      "questionEn": "How do you say that someone quietly mutters something about a topic?",
-      "answerEn": "Use a matching form of murmurar, optionally add algo, then use sobre before the topic.",
-      "noteEn": "Murmurar changes for the person and time. Sobre introduces what the quiet remark concerns.",
-      "example": {
-        "es": "Murmuró algo sobre el horario.",
-        "en": "She muttered something about the schedule."
-      },
-      "tags": [
-        "phrase",
-        "speech",
-        "verb complement",
-        "B1"
-      ],
-      "reviewStatus": "ai-authored-internal-qa",
-      "schedulable": true,
-      "provenance": {
-        "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-devocion-al-deber",
-        "contextualSenseReviewed": true
-      }
-    },
-    {
       "id": "word-algo",
       "kind": "word",
       "promptEs": "algo",
       "answerEn": "something; anything",
-      "noteEn": "",
+      "noteEn": "Algo refers to an unspecified thing. English often uses “anything” in a question even though Spanish still uses algo. It does not change for the thing's gender or number.",
+      "example": {
+        "es": "¿Has encontrado algo?",
+        "en": "Have you found anything?"
+      },
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -3278,7 +3194,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"

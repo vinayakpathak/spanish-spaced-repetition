@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-32b3f06b453997ed",
+  "revision": "runtime-f18f667f3643aec6",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -663,7 +663,7 @@
               }
             ],
             "cardIds": [
-              "word-eh--hesitation"
+              "word-eh"
             ]
           },
           {
@@ -689,7 +689,7 @@
           "word-sí",
           "word-aunque",
           "word-la--article",
-          "word-eh--hesitation",
+          "word-eh",
           "word-qué--interrogative"
         ]
       },
@@ -735,7 +735,7 @@
               }
             ],
             "cardIds": [
-              "word-que--after-resulta",
+              "word-que--clause-link",
               "phrase-resulta-que"
             ]
           },
@@ -959,7 +959,7 @@
         "cardIds": [
           "word-resulta--turns-out",
           "phrase-resulta-que",
-          "word-que--after-resulta",
+          "word-que--clause-link",
           "word-soy--identity",
           "word-todavía--even-comparative",
           "word-peor",
@@ -997,11 +997,11 @@
       "word-es",
       "word-muy",
       "word-raro--strange",
-      "word-eh--hesitation",
+      "word-eh",
       "word-qué--interrogative",
       "word-resulta--turns-out",
       "phrase-resulta-que",
-      "word-que--after-resulta",
+      "word-que--clause-link",
       "word-soy--identity",
       "word-todavía--even-comparative",
       "word-peor",
@@ -1142,7 +1142,7 @@
       "promptEs": "estar bien + verbo en forma de diccionario",
       "questionEn": "How do you say that an action or state is good, nice, fine, or acceptable?",
       "answerEn": "Use a matching form of estar followed by bien, then put the verb that names the action or state in its unchanged dictionary form.",
-      "noteEn": "The plus sign in the prompt means “followed by.” The form of estar can change with time or uncertainty: está bien, estaría bien, or puede que estuviera bien. Spanish does not need a separate subject meaning “it” in this general evaluation. The following verb remains in the unchanged form ending in -ar, -er, or -ir: preguntar, ser, or salir.",
+      "noteEn": "The form of estar can change with time or uncertainty: está bien, estaría bien, or puede que estuviera bien. Spanish does not need a separate subject meaning “it” in this general evaluation. The following verb remains in the unchanged form ending in -ar, -er, or -ir: preguntar, ser, or salir.",
       "example": {
         "es": "Está bien cambiar de opinión.",
         "en": "It is fine to change your mind."
@@ -1382,8 +1382,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1434,25 +1438,23 @@
       }
     },
     {
-      "id": "word-eh--hesitation",
+      "id": "word-eh",
       "kind": "word",
       "promptEs": "eh",
-      "answerEn": "uh; um (hesitation)",
-      "noteEn": "Eh can fill a pause while a speaker thinks or reacts. Its tone and punctuation determine whether it sounds hesitant, surprised, or attention-getting.",
+      "answerEn": "uh; um",
+      "noteEn": "A hesitation sound used while the speaker pauses to think or find words. This is different from eh used to call for attention or ask for agreement.",
       "example": {
-        "es": "Eh... necesito pensarlo.",
-        "en": "Um... I need to think about it."
+        "es": "Eh... tengo otra pregunta.",
+        "en": "Um... I have another question."
       },
       "tags": [
-        "word",
-        "interjection",
-        "hesitation"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-np-completo",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -1460,8 +1462,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -1525,26 +1531,24 @@
       }
     },
     {
-      "id": "word-que--after-resulta",
+      "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that; introduces what turns out to be true",
-      "noteEn": "After resulta, que opens the newly revealed statement. Learn resulta que together as ‘it turns out that.’",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
-        "es": "Resulta que tenías razón.",
-        "en": "It turns out that you were right."
+        "es": "Creo que Ana viene.",
+        "en": "I think that Ana is coming."
       },
       "tags": [
         "word",
-        "clause link",
-        "discourse",
-        "B1"
+        "contextual sense"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-agujeros-de-seguridad",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },

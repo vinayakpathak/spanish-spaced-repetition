@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-b71031b1bd8e48a3",
+  "revision": "runtime-e785642d2d8d85f2",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -374,7 +374,7 @@
             ],
             "cardIds": [
               "word-se--fixed-se-trata-de",
-              "phrase-se-trata-de-infinitivo"
+              "phrase-tratarse-de-tema"
             ]
           },
           {
@@ -391,7 +391,7 @@
             ],
             "cardIds": [
               "word-trata--fixed-se-trata-de",
-              "phrase-se-trata-de-infinitivo"
+              "phrase-tratarse-de-tema"
             ]
           },
           {
@@ -408,7 +408,7 @@
             ],
             "cardIds": [
               "word-de--fixed-se-trata-de",
-              "phrase-se-trata-de-infinitivo"
+              "phrase-tratarse-de-tema"
             ]
           },
           {
@@ -425,7 +425,7 @@
             ],
             "cardIds": [
               "word-perder",
-              "phrase-se-trata-de-infinitivo",
+              "phrase-tratarse-de-tema",
               "phrase-perder-el-miedo-a-infinitivo"
             ]
           },
@@ -634,7 +634,7 @@
         "applications": [
           {
             "id": "es-xkcd-compromiso:central-point:app-se-trata-de",
-            "cardId": "phrase-se-trata-de-infinitivo",
+            "cardId": "phrase-tratarse-de-tema",
             "participantWordIds": [
               "es-xkcd-compromiso:central-point:w01",
               "es-xkcd-compromiso:central-point:w02",
@@ -680,7 +680,7 @@
         ],
         "cardIds": [
           "word-se--fixed-se-trata-de",
-          "phrase-se-trata-de-infinitivo",
+          "phrase-tratarse-de-tema",
           "word-trata--fixed-se-trata-de",
           "word-de--fixed-se-trata-de",
           "word-perder",
@@ -897,7 +897,7 @@
       "word-de--of",
       "word-ángeles",
       "word-se--fixed-se-trata-de",
-      "phrase-se-trata-de-infinitivo",
+      "phrase-tratarse-de-tema",
       "word-trata--fixed-se-trata-de",
       "word-de--fixed-se-trata-de",
       "word-perder",
@@ -948,11 +948,11 @@
       "id": "word-lo--object-pronoun",
       "kind": "word",
       "promptEs": "lo",
-      "answerEn": "it (direct-object pronoun)",
-      "noteEn": "Lo replaces a masculine singular thing, or sometimes a whole idea, as the direct object. It normally appears before a conjugated verb.",
+      "answerEn": "it; that, as the thing or idea acted on",
+      "noteEn": "Lo can replace a masculine singular thing or a whole idea that receives an action. It usually comes before the verb and does not name who performs the action. English often uses 'it' or 'that'; with todo, lo can refer to everything being acted on.",
       "example": {
         "es": "Tengo el libro y lo leo.",
-        "en": "I have the book and I’m reading it."
+        "en": "I have the book and I am reading it."
       },
       "tags": [
         "word",
@@ -1031,11 +1031,11 @@
       "id": "word-a--personal-a",
       "kind": "word",
       "promptEs": "a",
-      "answerEn": "no separate English word; marks a specific person as the object",
-      "noteEn": "Spanish generally places a before a specific person who receives a verb’s action. This “personal a” is not translated as a separate English word.",
+      "answerEn": "no separate English word; marks a person or animate target directly acted on",
+      "noteEn": "Spanish usually puts a before a known person directly affected by a verb, and before person words such as alguien or nadie. Animals and things treated as person-like can also take it. This does not mean movement 'to' someone or giving something to a recipient.",
       "example": {
-        "es": "Veo a Marta.",
-        "en": "I see Marta."
+        "es": "Veo a Marta, pero no veo a su perro.",
+        "en": "I see Marta, but I do not see her dog."
       },
       "tags": [
         "word",
@@ -1055,7 +1055,7 @@
       "promptEs": "a + persona o expresión que se refiere a una persona",
       "questionEn": "Why does Spanish sometimes put a before the person affected by an action?",
       "answerEn": "Put a before a person—or a word such as alguien or nadie—when that person directly receives the action.",
-      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. Before the masculine article el, a + el contracts to al.",
+      "noteEn": "This a is called the personal a. It is common before a named or specific person, but person-denoting words such as alguien (“someone”) and nadie (“nobody”) also take it. English usually has no separate word for it. When a comes directly before the masculine article el, combine the two words as al.",
       "example": {
         "es": "Conozco a Marta.",
         "en": "I know Marta."
@@ -1140,8 +1140,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -1274,28 +1273,28 @@
       }
     },
     {
-      "id": "phrase-se-trata-de-infinitivo",
+      "id": "phrase-tratarse-de-tema",
       "kind": "phrase",
-      "promptEs": "se trata de + verbo en forma de diccionario",
-      "questionEn": "How do you say that something is about doing an action?",
-      "answerEn": "Use se trata de, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Se trata de is a fixed impersonal expression: it introduces the topic or central point without naming a person who does tratar. The action after de stays in its dictionary form, the form ending in -ar, -er, or -ir. The plus sign in the prompt means “followed by.”",
+      "promptEs": "se trata de + asunto o acción",
+      "questionEn": "How do you use se trata de to introduce what something involves or what the point is?",
+      "answerEn": "Use se trata de before the matter involved, or before an action in its dictionary form.",
+      "noteEn": "This expression has no named person or thing doing the verb; this is called an impersonal expression. Keep the verb singular even before plural things: se trata de dos problemas. It can change for time, as in se trataba de. An action keeps its -ar, -er, or -ir dictionary form. Ask ¿de qué se trata? when the matter is unknown. Do not add a subject such as la película to se trata de; a named film uses la película trata de without se.",
       "example": {
-        "es": "Se trata de aprender juntos.",
-        "en": "It is about learning together."
+        "es": "Se trata de aprender, no de ganar.",
+        "en": "The point is to learn, not to win."
       },
       "tags": [
         "phrase",
-        "fixed expression",
+        "tratarse de",
         "topic",
-        "infinitive",
+        "impersonal",
         "A2"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-compromiso",
+        "ownerComicId": "es-xkcd-mision-urgente",
         "contextualSenseReviewed": true
       }
     },
@@ -1372,7 +1371,7 @@
       "promptEs": "perder el miedo a + verbo en forma de diccionario",
       "questionEn": "How do you say that someone stops being afraid to do something?",
       "answerEn": "Use a form of perder, then el miedo a, then the action verb in its unchanged dictionary form.",
-      "noteEn": "Perder changes to show who stops being afraid and when; for example, perdió refers to a completed past event. El miedo a stays together, and the following action keeps its dictionary form ending in -ar, -er, or -ir. The plus sign in the prompt means “followed by.”",
+      "noteEn": "Perder changes to show who stops being afraid and when; for example, perdió refers to a completed past event. El miedo a stays together, and the following action keeps its dictionary form ending in -ar, -er, or -ir.",
       "example": {
         "es": "Lucía perdió el miedo a preguntar.",
         "en": "Lucía stopped being afraid to ask."
@@ -1473,8 +1472,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -1583,8 +1582,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"

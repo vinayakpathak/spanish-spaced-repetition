@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "revision": "runtime-49c1ec2ea18eb26d",
+  "revision": "runtime-72bc19d4a7b2c3fa",
   "reviewStatus": "ai-authored-internal-qa",
   "provenance": {
     "method": "ai-authored-internal-qa",
@@ -608,7 +608,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--noun-classifier",
               "grammar-tener-object-participle"
             ]
           },
@@ -889,6 +889,7 @@
           "word-tienen",
           "word-ningún",
           "word-parche--software-update",
+          "word-de--noun-classifier",
           "word-seguridad",
           "word-instalado",
           "word-entre",
@@ -1024,7 +1025,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier",
+              "word-de--of",
               "phrase-todo-tipo-de"
             ]
           },
@@ -1130,7 +1131,7 @@
               }
             ],
             "cardIds": [
-              "word-de--type-classifier"
+              "word-de--noun-classifier"
             ]
           },
           {
@@ -1482,6 +1483,15 @@
             ],
             "exampleEs": "AL AZAR",
             "explanationEn": "Al azar says the adding and removing follow no deliberate selection pattern."
+          },
+          {
+            "id": "es-xkcd-red:malware-description:review-word-w07",
+            "cardId": "word-de--of",
+            "participantWordIds": [
+              "es-xkcd-red:malware-description:w07"
+            ],
+            "exampleEs": "TIPO DE CÓDIGO",
+            "explanationEn": "Here de links tipo to the thing being divided into types; English keeps 'of' in 'type of code.'"
           }
         ],
         "cardIds": [
@@ -1493,12 +1503,13 @@
           "word-todo",
           "phrase-todo-tipo-de",
           "word-tipo--kind",
-          "word-de--type-classifier",
+          "word-de--of",
           "word-codigo--computer-code",
           "word-polimórfico--malware",
           "word-exótico",
           "word-un",
           "word-sistema",
+          "word-de--noun-classifier",
           "word-monitorización",
           "word-añade",
           "word-quita--removes",
@@ -1608,7 +1619,7 @@
               }
             ],
             "cardIds": [
-              "word-normal--ordinary"
+              "word-normal"
             ]
           },
           {
@@ -1652,7 +1663,7 @@
           "word-que--clause-link",
           "word-la--article",
           "word-gente",
-          "word-normal--ordinary",
+          "word-normal",
           "word-tiene",
           "word-acuarios",
           "concept-virtual-malware-aquarium"
@@ -2052,6 +2063,7 @@
       "word-tienen",
       "word-ningún",
       "word-parche--software-update",
+      "word-de--noun-classifier",
       "word-seguridad",
       "word-instalado",
       "word-entre",
@@ -2068,6 +2080,7 @@
       "word-todo",
       "phrase-todo-tipo-de",
       "word-tipo--kind",
+      "word-de--of",
       "word-codigo--computer-code",
       "word-polimórfico--malware",
       "word-exótico",
@@ -2088,7 +2101,7 @@
       "word-sabes",
       "word-que--clause-link",
       "word-gente",
-      "word-normal--ordinary",
+      "word-normal",
       "word-tiene",
       "word-acuarios",
       "word-buenos--fixed-buenos-dias",
@@ -2163,8 +2176,12 @@
       "id": "word-qué--interrogative",
       "kind": "word",
       "promptEs": "qué",
-      "answerEn": "what",
-      "noteEn": "",
+      "answerEn": "what; which",
+      "noteEn": "Qué means “what” in ¿Qué quieres? (“What do you want?”) and “which” in ¿Qué libro quieres? (“Which book do you want?”). You can also use it to say what you do not know: No sé qué elegir means “I do not know what to choose.”",
+      "example": {
+        "es": "No sé qué ruta elegir.",
+        "en": "I do not know which route to choose."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2181,8 +2198,12 @@
       "id": "word-es",
       "kind": "word",
       "promptEs": "es",
-      "answerEn": "is",
-      "noteEn": "",
+      "answerEn": "is; are (formal singular you)",
+      "noteEn": "Es is a present form of ser for one person or thing, including usted, the formal way to address one person as 'you.' It can identify, classify, describe, evaluate, or state a time. Spanish can leave the person or thing understood, where English supplies 'he,' 'she,' or 'it.' Compare es with eres for familiar 'you' and son for several people or things.",
+      "example": {
+        "es": "Es una buena idea.",
+        "en": "It is a good idea."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2361,6 +2382,7 @@
         "personification",
         "joke"
       ],
+      "questionEn": "How does the virtual network turn malware infections into an aquarium?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -2394,7 +2416,11 @@
       "kind": "word",
       "promptEs": "con",
       "answerEn": "with",
-      "noteEn": "",
+      "noteEn": "Con introduces someone or something accompanying, involved in, or used for an action. It does not change for the person or time. Some verbs require it, as in hablar con alguien, 'to talk with someone.'",
+      "example": {
+        "es": "Hablo con Ana.",
+        "en": "I talk with Ana."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -2682,8 +2708,7 @@
       "answerEn": "no; not",
       "noteEn": "",
       "tags": [
-        "word",
-        "contextual sense"
+        "word"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
@@ -2723,7 +2748,7 @@
       "promptEs": "tener + objeto + participio que describe su estado",
       "questionEn": "How do you say that you have a person or thing in an assigned, prepared, closed, or other resulting state?",
       "answerEn": "Use a form of tener, name or replace the object, and add its completed-action form as a description.",
-      "noteEn": "The completed-action form is often called a past participle. Here it behaves like a describing word and matches the object: tengo la puerta cerrada, but tengo los documentos preparados. This differs from haber plus a participle, where the participle does not change.",
+      "noteEn": "The completed-action form is often called a past participle. Here it behaves like a describing word and matches the thing being described: tengo la puerta cerrada, but tengo los documentos preparados. This differs from haber followed by a participle, where the participle does not change.",
       "example": {
         "es": "Tengo las mesas reservadas.",
         "en": "I have the tables reserved."
@@ -2807,6 +2832,28 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-red",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--noun-classifier",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
+      "example": {
+        "es": "Compré una silla de oficina.",
+        "en": "I bought an office chair."
+      },
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "es-xkcd-en-la-cultura-popular",
         "contextualSenseReviewed": true
       }
     },
@@ -2995,7 +3042,11 @@
       "kind": "word",
       "promptEs": "hay",
       "answerEn": "there is; there are",
-      "noteEn": "",
+      "noteEn": "Hay introduces what exists, is present, or is available. It stays unchanged for one thing or several: hay una tienda, hay dos tiendas. English changes 'there is' to 'there are,' but Spanish does not change hay. The English 'there' in this pattern does not point to a place. Inside a description such as la tienda que hay aquí, English can instead say 'the shop that is here'; Spanish hay still introduces what is present.",
+      "example": {
+        "es": "Hay dos sillas.",
+        "en": "There are two chairs."
+      },
       "tags": [
         "word",
         "contextual sense"
@@ -3068,6 +3119,7 @@
         "malware",
         "Warhol worm"
       ],
+      "questionEn": "What is a Warhol worm?",
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
@@ -3134,6 +3186,24 @@
       "provenance": {
         "method": "ai-authored-internal-qa",
         "ownerComicId": "es-xkcd-conocimiento-musical",
+        "contextualSenseReviewed": true
+      }
+    },
+    {
+      "id": "word-de--of",
+      "kind": "word",
+      "promptEs": "de",
+      "answerEn": "of",
+      "noteEn": "",
+      "tags": [
+        "word",
+        "contextual sense"
+      ],
+      "reviewStatus": "ai-authored-internal-qa",
+      "schedulable": true,
+      "provenance": {
+        "method": "ai-authored-internal-qa",
+        "ownerComicId": "seed-curriculum",
         "contextualSenseReviewed": true
       }
     },
@@ -3515,8 +3585,8 @@
       "id": "word-que--clause-link",
       "kind": "word",
       "promptEs": "que",
-      "answerEn": "that (introducing a clause)",
-      "noteEn": "Que introduces a clause after verbs such as creer, saber, esperar, or decir. English often uses “that,” but may leave it unstated.",
+      "answerEn": "that; links an expression to its content or an outcome",
+      "noteEn": "Que can introduce what someone thinks, says, wants, causes, or allows, or what an evaluation is about. English may use 'that,' omit it, or reorganize the sentence with 'to' or 'for.' Que stays unaccented; the following verb form depends on the surrounding expression.",
       "example": {
         "es": "Creo que Ana viene.",
         "en": "I think that Ana is coming."
@@ -3552,21 +3622,20 @@
       }
     },
     {
-      "id": "word-normal--ordinary",
+      "id": "word-normal",
       "kind": "word",
       "promptEs": "normal",
-      "answerEn": "regular; ordinary",
+      "answerEn": "normal; usual; ordinary",
       "noteEn": "",
       "tags": [
         "word",
-        "adjective",
-        "A1"
+        "adjective"
       ],
       "reviewStatus": "ai-authored-internal-qa",
       "schedulable": true,
       "provenance": {
         "method": "ai-authored-internal-qa",
-        "ownerComicId": "es-xkcd-braille",
+        "ownerComicId": "es-xkcd-dia-de-28-horas",
         "contextualSenseReviewed": true
       }
     },

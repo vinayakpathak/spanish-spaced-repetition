@@ -100,10 +100,13 @@
       "id": "word-de--noun-classifier",
       "kind": "word",
       "promptEs": "de",
-      "answerEn": "often no separate English word; links a noun to another noun that names its type or use",
-      "noteEn": "Spanish often uses de between two nouns where English uses a noun directly before another noun. For example, una taza de café is ‘a coffee cup,’ and material de oficina is ‘office material.’",
-      "example": { "es": "Necesito una taza de café.", "en": "I need a coffee cup." },
-      "tags": ["word", "preposition", "noun modifier", "A2"]
+      "answerEn": "often no separate English word; links a noun to its type, purpose, or field",
+      "noteEn": "Spanish often puts de between two nouns where English puts the describing noun first. In una silla de oficina, oficina tells you the chair's intended use. This is different from de naming an owner, material, contents, or a part's larger whole.",
+      "example": { "es": "Compré una silla de oficina.", "en": "I bought an office chair." },
+      "tags": [
+        "word",
+        "contextual sense"
+      ]
     },
     { "id": "word-construcción", "kind": "word", "promptEs": "construcción", "answerEn": "construction; building", "noteEn": "", "tags": ["word", "building", "noun", "A2"] },
     {
@@ -225,7 +228,7 @@
       "promptEs": "tanto X como Y",
       "questionEn": "How do you link two items with the meaning ‘both one and the other’?",
       "answerEn": "Put tanto before the first item and como before the second item.",
-      "noteEn": "The letters X and Y stand for the two parallel items being linked. Each item can itself begin with a preposition such as para, de, or como, so repeated words are possible. The two items should play the same grammatical role.",
+      "noteEn": "Each item can itself begin with a preposition such as para, de, or como, so repeated words are possible. The two items should play the same grammatical role.",
       "example": { "es": "Usamos la mesa tanto para comer como para trabajar.", "en": "We use the table both for eating and for working." },
       "tags": ["grammar", "correlative", "both and", "A2"]
     },
@@ -255,7 +258,7 @@
       "promptEs": "estar hecho/a de + material",
       "questionEn": "How do you say what material something is made from?",
       "answerEn": "Use a form of estar, then hecho, hecha, hechos, or hechas to match the thing, then de and the material.",
-      "noteEn": "Estar changes for the thing and the time: está or estaba, for example. Hecho is the completed-action form of hacer, ‘to make,’ and changes to hecha, hechos, or hechas to match the thing described. De introduces the material; the plus sign in the prompt means that the material comes next.",
+      "noteEn": "Estar changes for the thing and the time: está or estaba, for example. Hecho is the completed-action form of hacer, ‘to make,’ and changes to hecha, hechos, or hechas to match the thing described. De introduces the material.",
       "example": { "es": "La mesa está hecha de metal.", "en": "The table is made of metal." },
       "tags": ["phrase", "material", "agreement", "A2"]
     },
@@ -265,7 +268,7 @@
       "promptEs": "ser de + material",
       "questionEn": "How can you state simply what material something is made of?",
       "answerEn": "Use the matching form of ser, then de, then the material.",
-      "noteEn": "English normally says ‘is made of,’ but Spanish can omit a separate word for ‘made’: la taza es de vidrio. Only ser changes for the thing or time; de stays unchanged, and the plus sign in the prompt means that the material comes next.",
+      "noteEn": "English normally says ‘is made of,’ but Spanish can omit a separate word for ‘made’: la taza es de vidrio. Only ser changes for the thing or time; de stays unchanged and comes directly before the material.",
       "example": { "es": "Las llaves son de metal.", "en": "The keys are made of metal." },
       "tags": ["grammar", "material", "ser", "A2"]
     },
@@ -275,7 +278,13 @@
       "promptEs": "Wikipedia · sección «En la cultura popular»",
       "answerEn": "the joke parodies encyclopedia sections that collect every passing reference to a subject in entertainment",
       "noteEn": "Wikipedia articles have often included ‘In popular culture’ sections listing appearances in films, television, books, and games. The comic applies that format to an extremely ordinary substance and fills it with trivial examples, while the recursive title text imagines the section itself receiving the same treatment.",
-      "tags": ["concept", "Wikipedia", "internet culture", "comic joke"]
+      "tags": [
+        "concept",
+        "Wikipedia",
+        "internet culture",
+        "comic joke"
+      ],
+      "questionEn": "What encyclopedia convention does the “In popular culture” list parody?"
     }
   ],
   "regions": [
